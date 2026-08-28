@@ -1,6 +1,6 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 接单 / 绘画 / Grok',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配，换个词再试',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search gigs / art / Grok',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 接单 / 采集 / Grok',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配，换个词再试',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search gigs / capture / Grok',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
   ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['绘画','Image'],['视频','Video'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['社区','Community'],['开店','Shop'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books']
@@ -35,7 +35,7 @@ function applyChrome(){
 themeBtn.onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n);applyChrome()};
 langBtn.onclick=()=>{lang=lang==='zh'?'en':'zh';localStorage.setItem('lang',lang);applyChrome();renderSide();render()};
 function hostOf(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
-function esc(s){return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>').replace(/"/g,'"')}
+function esc(s){return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>')}
 function iconTag(url,letter){
   const h=hostOf(url); const L=(letter||'?').slice(0,1);
   if(!h) return L;
@@ -50,7 +50,7 @@ function matchOne(t0,c){
   if(c==='接单')return t0.cat==='接单'||t0.pack==='接单'||/接单|威客|约稿|Upwork|Fiverr|Freelancer|猪八戒|电鸭/.test((t0.name||'')+(t0.desc||'')+(t0.pack||''));
   if(c==='社区')return t0.cat==='社区'||/社区|Discord|Reddit|Hugging Face|V2EX/.test((t0.name||'')+(t0.desc||''));
   if(c==='开店')return t0.cat==='开店'||/Shopify|WooCommerce|淘宝|拼多多|小店|Gumroad|Etsy/.test((t0.name||'')+(t0.desc||''));
-  if(c==='采集')return t0.cat==='采集'||/OBS|Streamlabs|ShareX|Loom|录屏/.test((t0.name||'')+(t0.desc||''));
+  if(c==='采集')return t0.cat==='采集'||/OBS|Streamlabs|ShareX|Loom|录屏|采集/.test((t0.name||'')+(t0.desc||'')+(t0.cat||''));
   if(c==='接口')return t0.cat==='接口'||/API|Inference/.test((t0.name||'')+(t0.desc||'')+(t0.desc_en||''));
   if(c==='机器人')return t0.cat==='机器人'||/ROS|Unitree|Optimus|Gazebo|Isaac|机器人/.test((t0.name||'')+(t0.desc||''));
   if(c==='图书')return t0.cat==='图书'||/读书|听书|Kindle|Gutenberg|图书/.test((t0.name||'')+(t0.desc||''));
@@ -67,7 +67,7 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=60;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=80;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
