@@ -1,16 +1,27 @@
 html,body{width:100%;max-width:100%;overflow-x:hidden}
-:root,html[data-theme="light"]{--bg:#eef4ff;--card:#fff;--line:#d7e2f2;--txt:#111827;--muted:#5b6b82;--acc:#2563eb;--soft:#eef2f8;--chip:#dbeafe;--chip-t:#1d4ed8}
-html[data-theme="dark"]{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3;--muted:#8b949e;--acc:#58a6ff;--soft:#21262d;--chip:#1f3a5f;--chip-t:#79c0ff}
+:root,html[data-theme="light"]{--bg:#eef4ff;--card:rgba(255,255,255,.82);--line:#d7e2f2;--txt:#111827;--muted:#5b6b82;--acc:#2563eb;--soft:rgba(238,242,248,.86);--chip:#dbeafe;--chip-t:#1d4ed8}
+html[data-theme="dark"]{--bg:#0d1117;--card:rgba(22,27,34,.82);--line:#30363d;--txt:#e6edf3;--muted:#8b949e;--acc:#58a6ff;--soft:rgba(33,38,45,.82);--chip:#1f3a5f;--chip-t:#79c0ff}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{min-height:100%;background:var(--bg);color:var(--txt)}
-body{font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;padding:0 12px 80px}
-.hero{display:block;width:calc(100% + 24px);margin:0 -12px 10px;height:72vh;object-fit:cover;object-position:center 12%;background:#1a1216}
+html,body{min-height:100%;color:var(--txt)}
+body{
+  font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;
+  padding:12px 12px 80px;
+  background-color:var(--bg);
+  background-image:linear-gradient(rgba(238,244,255,.55),rgba(238,244,255,.72)),url("IMG_7049.jpeg");
+  background-size:cover;
+  background-position:center top;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+}
+html[data-theme="dark"] body{
+  background-image:linear-gradient(rgba(13,17,23,.62),rgba(13,17,23,.78)),url("IMG_7049.jpeg");
+}
 .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px}
 .acts{display:flex;gap:6px;flex:none}
 h1{font-size:18px}
 .sub{color:var(--muted);font-size:12px;margin-top:2px}
 #theme,#lang{border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:999px;padding:7px 10px}
-.search{position:sticky;top:0;z-index:20;display:flex;gap:8px;margin:0 0 10px;padding:6px 0;background:var(--bg)}
+.search{position:sticky;top:0;z-index:20;display:flex;gap:8px;margin:0 0 10px;padding:6px 0;background:transparent}
 #q{flex:1;min-width:0;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:14px;padding:11px 12px;font-size:16px}
 #go{width:42px;min-width:42px;height:42px;flex:none;border:0;border-radius:50%;background:var(--acc);color:#fff}
 .block{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px;margin-bottom:10px;width:100%}
