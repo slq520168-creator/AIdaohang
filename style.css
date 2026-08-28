@@ -1,25 +1,24 @@
-html,body{width:100%;max-width:100%;overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
+html,body{width:100%;max-width:100%;overflow-x:hidden;overscroll-behavior-x:none}
 :root,html[data-theme="light"]{--bg:#eef4ff;--card:#fff;--line:#d7e2f2;--txt:#111827;--muted:#5b6b82;--acc:#2563eb;--soft:#eef2f8;--chip:#dbeafe;--chip-t:#1d4ed8}
 html[data-theme="dark"]{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3;--muted:#8b949e;--acc:#58a6ff;--soft:#21262d;--chip:#1f3a5f;--chip-t:#79c0ff}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%;background:var(--bg);color:var(--txt)}
-body{font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;padding:12px 12px 96px;position:relative}
+body{font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;padding:12px 12px 96px}
 html[data-theme="light"] body{background-image:radial-gradient(ellipse 80% 42% at 50% -8%,rgba(59,130,246,.18),transparent 55%)}
 .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:8px}
-.acts{display:flex;gap:6px;align-items:center;flex:none}
+.acts{display:flex;gap:6px;flex:none}
 h1{font-size:20px;color:var(--txt);line-height:1.2}
 .sub{color:var(--muted);font-size:12px;margin-top:4px}
-#theme,#lang{border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:999px;padding:8px 10px;flex:none}
-.search{position:sticky;top:0;z-index:20;display:flex;gap:8px;margin:0 0 12px;padding:8px 0;background:var(--bg);width:100%}
-#q{flex:1;min-width:0;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:16px;padding:12px;font-size:16px;caret-color:var(--acc)}
+#theme,#lang{border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:999px;padding:8px 10px}
+.search{position:sticky;top:0;z-index:20;display:flex;gap:8px;margin:0 0 12px;padding:8px 0;background:var(--bg)}
+#q{flex:1;min-width:0;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:16px;padding:12px;font-size:16px}
 #q::placeholder{color:var(--muted)}
 #go{width:44px;min-width:44px;height:44px;flex:none;border:0;border-radius:50%;background:var(--acc);color:#fff;font-size:18px}
-.block{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px;margin-bottom:12px;overflow:hidden;width:100%}
+.block{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px;margin-bottom:12px;overflow-x:hidden;width:100%}
 .block-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:8px}
-.block-h h2{font-size:16px;color:var(--txt)}
+.block-h h2{font-size:16px}
 .rank{list-style:none}
-.rank a{display:flex;gap:10px;align-items:flex-start;padding:9px 0;color:var(--txt);text-decoration:none;font-size:14px;line-height:1.45;border-bottom:1px solid var(--line)}
-.rank span{min-width:0;overflow:hidden}
+.rank a{display:flex;gap:10px;padding:9px 0;color:var(--txt);text-decoration:none;font-size:14px;border-bottom:1px solid var(--line)}
 .rank li:last-child a{border-bottom:0}
 .rank i{width:18px;flex:none;font-style:normal;font-weight:700}
 .rank li:nth-child(-n+3) i{color:#f85149}
@@ -27,19 +26,16 @@ h1{font-size:20px;color:var(--txt);line-height:1.2}
 .cats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
 .cats button{border:1px solid var(--line);background:var(--soft);color:var(--txt);border-radius:10px;padding:7px 10px;font-size:13px}
 .cats button.on{background:var(--chip);color:var(--chip-t);font-weight:600;border-color:transparent}
-.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;width:100%;overflow:hidden}
-.card{display:block;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:10px 8px;text-decoration:none;color:var(--txt);min-width:0;overflow:hidden}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;width:100%}
+.card{display:block;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:10px 8px;text-decoration:none;color:var(--txt);min-width:0}
 .card .row{display:flex;gap:8px;align-items:center;min-width:0}
 .card .row>div:last-child{min-width:0;flex:1;overflow:hidden}
-.av{width:32px;height:32px;flex:none;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--line);font-weight:700;color:var(--acc);background:#fff}
+.av{width:32px;height:32px;flex:none;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--line);background:#fff}
 .av img{width:32px;height:32px;object-fit:contain;display:block}
 html[data-theme="dark"] .av{background:#0d1117}
-.card h3{font-size:13px;font-weight:700;line-height:1.2;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.card p{color:var(--muted);font-size:11px;margin-top:3px;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.count,.tag{color:var(--muted);font-size:12px;flex:none}
-article.card{padding:16px;line-height:1.6;background:var(--card);white-space:normal}
-article.card h3,article.card p{white-space:normal;overflow:visible;text-overflow:unset}
-article.card a{color:var(--acc)}
-.fab{position:fixed;right:14px;bottom:18px;width:48px;height:48px;border-radius:50%;background:#2aa3e6;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;z-index:50}
-.topbtn{position:fixed;left:14px;bottom:18px;width:48px;height:48px;border:0;border-radius:50%;background:var(--acc);color:#fff;font-size:22px;z-index:50;display:none;align-items:center;justify-content:center}
-.topbtn.on{display:flex}
+.card h3{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card p{color:var(--muted);font-size:11px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.count{color:var(--muted);font-size:12px}
+.fab,.topbtn{position:fixed;bottom:18px;width:48px;height:48px;border:0;border-radius:50%;color:#fff;z-index:50;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:22px}
+.fab{right:14px;background:#2aa3e6}
+.topbtn{left:14px;background:var(--acc)}
