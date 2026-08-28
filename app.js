@@ -1,6 +1,6 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 接单 / 采集 / Grok',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配，换个词再试',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search gigs / capture / Grok',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 语音 / 接口 / Grok',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配，换个词再试',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search voice / API / Grok',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
   ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['绘画','Image'],['视频','Video'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['社区','Community'],['开店','Shop'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books']
@@ -41,19 +41,23 @@ function iconTag(url,letter){
   if(!h) return L;
   return `<img alt="" src="https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(h)}" onerror="this.style.display='none'">`;
 }
+function blob(t0){return [t0.name,t0.desc,t0.desc_en,t0.cat,t0.pack,t0.how].join(' ')}
 function matchOne(t0,c){
-  if(c==='聊天'||c==='对话')return t0.cat==='聊天'||t0.cat==='对话';
-  if(c==='视频')return t0.cat==='视频'||t0.pack==='视频';
-  if(c==='绘画')return t0.cat==='绘画'||t0.cat==='设计'||t0.pack==='绘画';
-  if(c==='游戏')return t0.cat==='游戏'||t0.pack==='游戏';
-  if(c==='智能工作流')return t0.cat==='智能工作流'||t0.cat==='智能体'||t0.pack==='工作流';
-  if(c==='接单')return t0.cat==='接单'||t0.pack==='接单'||/接单|威客|约稿|Upwork|Fiverr|Freelancer|猪八戒|电鸭/.test((t0.name||'')+(t0.desc||'')+(t0.pack||''));
-  if(c==='社区')return t0.cat==='社区'||/社区|Discord|Reddit|Hugging Face|V2EX/.test((t0.name||'')+(t0.desc||''));
-  if(c==='开店')return t0.cat==='开店'||/Shopify|WooCommerce|淘宝|拼多多|小店|Gumroad|Etsy/.test((t0.name||'')+(t0.desc||''));
-  if(c==='采集')return t0.cat==='采集'||/OBS|Streamlabs|ShareX|Loom|录屏|采集/.test((t0.name||'')+(t0.desc||'')+(t0.cat||''));
-  if(c==='接口')return t0.cat==='接口'||/API|Inference/.test((t0.name||'')+(t0.desc||'')+(t0.desc_en||''));
-  if(c==='机器人')return t0.cat==='机器人'||/ROS|Unitree|Optimus|Gazebo|Isaac|机器人/.test((t0.name||'')+(t0.desc||''));
-  if(c==='图书')return t0.cat==='图书'||/读书|听书|Kindle|Gutenberg|图书/.test((t0.name||'')+(t0.desc||''));
+  const b=blob(t0);
+  if(c==='聊天'||c==='对话')return t0.cat==='聊天'||t0.cat==='对话'||/对话|聊天|Chat/.test(b);
+  if(c==='视频')return t0.cat==='视频'||t0.pack==='视频'||/视频|Video/.test(b);
+  if(c==='绘画')return t0.cat==='绘画'||t0.cat==='设计'||/绘画|插画|绘图/.test(b);
+  if(c==='游戏')return t0.cat==='游戏'||/游戏|Game|Unity|Godot/.test(b);
+  if(c==='语音')return t0.cat==='语音'||/语音|配音|TTS|Whisper|Speech|转写/.test(b);
+  if(c==='音乐')return t0.cat==='音乐'||/音乐|配乐|Suno|Music/.test(b);
+  if(c==='接口')return t0.cat==='接口'||/API|接口|Key|SDK/.test(b);
+  if(c==='智能工作流')return t0.cat==='智能工作流'||t0.cat==='智能体'||/工作流|Agent|n8n|Dify/.test(b);
+  if(c==='接单')return t0.cat==='接单'||t0.pack==='接单'||/接单|威客|约稿|Upwork|Fiverr|猪八戒|电鸭/.test(b);
+  if(c==='社区')return t0.cat==='社区'||/社区|Discord|Reddit|Hugging Face|V2EX/.test(b);
+  if(c==='开店')return t0.cat==='开店'||/Shopify|淘宝|拼多多|小店|Gumroad|Etsy/.test(b);
+  if(c==='采集')return t0.cat==='采集'||/OBS|ShareX|Loom|录屏|采集|直播/.test(b);
+  if(c==='机器人')return t0.cat==='机器人'||/ROS|Unitree|Optimus|机器人/.test(b);
+  if(c==='图书')return t0.cat==='图书'||/读书|听书|Kindle|图书/.test(b);
   return t0.cat===c;
 }
 function matchCombo(t0){
@@ -62,7 +66,11 @@ function matchCombo(t0){
   if(selected.has('收费') && t0.free) return false;
   const others=[...selected].filter(c=>c!=='免费'&&c!=='收费');
   if(!others.length) return true;
-  return others.every(c=>matchOne(t0,c));
+  const gig=others.includes('接单');
+  const topics=others.filter(c=>c!=='接单');
+  const hitTopic=!topics.length||topics.some(c=>matchOne(t0,c));
+  const hitGig=!gig||matchOne(t0,'接单');
+  return hitTopic && hitGig;
 }
 async function load(){
   applyChrome();
