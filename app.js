@@ -1,9 +1,9 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 插件 / 陪伴 / Grok',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配，换个词再试',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search plugin / companion / Grok',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 接单 / 社区 / Grok',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配，换个词再试',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search gigs / community / Grok',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
-  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['绘画','Image'],['视频','Video'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write']
+  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['绘画','Image'],['视频','Video'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['社区','Community'],['开店','Shop'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books']
 ];
 const sideEl=document.getElementById('side');
 const listEl=document.getElementById('list');
@@ -48,6 +48,13 @@ function match(t0,c){
   if(c==='视频')return t0.cat==='视频'||t0.pack==='视频';
   if(c==='游戏')return t0.cat==='游戏'||t0.pack==='游戏';
   if(c==='智能工作流')return t0.cat==='智能工作流'||t0.cat==='智能体'||t0.pack==='工作流';
+  if(c==='接单')return t0.cat==='接单'||t0.pack==='接单'||/接单|威客|Upwork|Fiverr|Freelancer|猪八戒|电鸭|客栈/.test((t0.name||'')+(t0.desc||''));
+  if(c==='社区')return t0.cat==='社区'||/社区|Discord|Reddit|Hugging Face|V2EX|Linux\.do/.test((t0.name||'')+(t0.desc||''));
+  if(c==='开店')return t0.cat==='开店'||/Shopify|WooCommerce|淘宝|拼多多|小店|Gumroad|Etsy/.test((t0.name||'')+(t0.desc||''));
+  if(c==='采集')return t0.cat==='采集'||/OBS|Streamlabs|ShareX|Loom|录屏/.test((t0.name||'')+(t0.desc||''));
+  if(c==='接口')return t0.cat==='接口'||/API|Key|Inference/.test((t0.name||'')+(t0.desc||'')+(t0.desc_en||''));
+  if(c==='机器人')return t0.cat==='机器人'||/ROS|Unitree|Optimus|Gazebo|Isaac|机器人/.test((t0.name||'')+(t0.desc||''));
+  if(c==='图书')return t0.cat==='图书'||/读书|听书|Kindle|Gutenberg|Weread|图书/.test((t0.name||'')+(t0.desc||''));
   return t0.cat===c;
 }
 async function load(){
