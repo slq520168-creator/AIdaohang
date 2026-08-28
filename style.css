@@ -3,22 +3,15 @@ html,body{width:100%;max-width:100%;overflow-x:hidden;overscroll-behavior-x:none
 html[data-theme="dark"]{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3;--muted:#8b949e;--acc:#58a6ff;--soft:#21262d;--chip:#1f3a5f;--chip-t:#79c0ff}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%;background:var(--bg);color:var(--txt)}
-body{
-  font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;
-  padding:12px 12px 96px;
-  position:relative;
-}
-html[data-theme="light"] body{
-  background-image:
-    radial-gradient(ellipse 80% 42% at 50% -8%,rgba(59,130,246,.18),transparent 55%);
-}
+body{font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;padding:12px 12px 96px;position:relative}
+html[data-theme="light"] body{background-image:radial-gradient(ellipse 80% 42% at 50% -8%,rgba(59,130,246,.18),transparent 55%)}
 .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:8px}
 .acts{display:flex;gap:6px;align-items:center;flex:none}
 h1{font-size:20px;color:var(--txt);line-height:1.2}
 .sub{color:var(--muted);font-size:12px;margin-top:4px}
 #theme,#lang{border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:999px;padding:8px 10px;flex:none}
 .search{position:sticky;top:0;z-index:20;display:flex;gap:8px;margin:0 0 12px;padding:8px 0;background:var(--bg);width:100%}
-#q{flex:1;min-width:0;width:auto;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:16px;padding:12px;font-size:16px;caret-color:var(--acc)}
+#q{flex:1;min-width:0;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:16px;padding:12px;font-size:16px;caret-color:var(--acc)}
 #q::placeholder{color:var(--muted)}
 #go{width:44px;min-width:44px;height:44px;flex:none;border:0;border-radius:50%;background:var(--acc);color:#fff;font-size:18px}
 .block{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px;margin-bottom:12px;overflow:hidden;width:100%}
@@ -48,3 +41,5 @@ article.card{padding:16px;line-height:1.6;background:var(--card);white-space:nor
 article.card h3,article.card p{white-space:normal;overflow:visible;text-overflow:unset}
 article.card a{color:var(--acc)}
 .fab{position:fixed;right:14px;bottom:18px;width:48px;height:48px;border-radius:50%;background:#2aa3e6;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;z-index:50}
+.topbtn{position:fixed;left:14px;bottom:18px;width:48px;height:48px;border:0;border-radius:50%;background:var(--acc);color:#fff;font-size:22px;z-index:50;display:none;align-items:center;justify-content:center}
+.topbtn.on{display:flex}
