@@ -9,11 +9,11 @@
 <script>
 (async()=>{
   const n=new URLSearchParams(location.search).get('n')||'';
-  const files=['data/tools.json','data/more.json','data/more2.json','data/packs.json'];
+  const files=['data/tools.json','data/more.json','data/more2.json','data/more3.json','data/more4.json','data/packs.json'];
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const t=arrs.flat().find(x=>x.name===n);
   const box=document.getElementById('box');
-  if(!t){box.innerHTML='<p>未找到</p>';return;}
+  if(!t){box.innerHTML='<p>未找到。请用 Pages 打开站点，不要直接打 GitHub 文件。</p>';return;}
   document.title=t.name+' 教程';
   box.innerHTML=`<h3>${t.name}</h3><p>${t.desc}</p>
   <p class="tag">${t.cat} · ${t.free?'免费':'收费'}</p>
