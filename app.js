@@ -5,17 +5,18 @@ const metaEl=document.getElementById('meta');
 const countEl=document.getElementById('count');
 const hotEl=document.getElementById('hot');
 const themeBtn=document.getElementById('theme');
-let tools=[]; let cat='免费';
-const saved=localStorage.getItem('theme')||'dark';
+let tools=[]; let cat='全部';
+const saved=localStorage.getItem('theme')||'light';
 document.documentElement.dataset.theme=saved;
 themeBtn.textContent=saved==='dark'?'浅色':'深色';
 themeBtn.onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n);themeBtn.textContent=n==='dark'?'浅色':'深色'};
+const extra=['全部','免费','收费','对话','绘画','视频','办公','编程','智能工作流','游戏','音乐','语音','设计','搜索','写作'];
 function match(t,c){
   if(c==='全部')return true;
   if(c==='免费')return !!t.free;
   if(c==='收费')return !t.free;
-  if(c==='做视频')return t.cat==='视频'||t.pack==='视频';
-  if(c==='做游戏')return t.cat==='游戏'||t.pack==='游戏';
+  if(c==='视频'||c==='做视频')return t.cat==='视频'||t.pack==='视频';
+  if(c==='游戏')return t.cat==='游戏'||t.pack==='游戏';
   if(c==='智能工作流')return t.cat==='智能工作流'||t.cat==='智能体'||t.pack==='工作流';
   return t.cat===c;
 }
@@ -27,20 +28,19 @@ async function load(){
   for(const t of arrs.flat()){if(!t||!t.name||seen.has(t.name))continue;seen.add(t.name);tools.push(t)}
   const meta=await fetch('data/meta.json').then(r=>r.json()).catch(()=>({}));
   const hot=await fetch('data/hot.json').then(r=>r.json()).catch(()=>[]);
-  metaEl.textContent=`更新 ${meta.updated||'—'} · ${tools.length} 款`;
-  hotEl.innerHTML=(hot||[]).map((h,i)=>`<a class="hotrow" href="${h.url}"><em>${i+1}</em><b>${h.title}</b></a>`).join('');
+  metaEl.textContent=`${tools.length} 款工具`;
+  hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}"><i>${i+1}</i><span>${h.title}</span></a></li>`).join('');
   renderSide(); render();
 }
 function renderSide(){
-  const extra=['免费','收费','做视频','做游戏','智能工作流','全部'];
-  const cats=[...extra,...[...new Set(tools.map(t=>t.cat))]];
+  const cats=[...extra];
   sideEl.innerHTML=cats.map(c=>`<button data-c="${c}" class="${c===cat?'on':''}">${c}</button>`).join('');
   sideEl.onclick=e=>{const b=e.target.closest('button');if(!b)return;cat=b.dataset.c;renderSide();render()};
 }
 function render(){
   const q=(qEl.value||'').trim().toLowerCase();
   const rows=tools.filter(t=>match(t,cat)&&(!q||[t.name,t.desc,t.cat,t.how||''].join(' ').toLowerCase().includes(q)));
-  countEl.textContent=`显示 ${rows.length} / ${tools.length}`;
-  listEl.innerHTML=rows.map(t=>`<article class="card"><h3>${t.name}</h3><p>${t.desc||''}</p><span class="tag">${t.cat}${t.free?' · 免费':' · 收费'}</span><div class="acts"><a class="go" href="${t.url}" target="_blank" rel="noopener">官网</a><a class="how" href="guide.html?n=${encodeURIComponent(t.name)}">教程</a></div></article>`).join('')||'<p class="count">没有匹配</p>';
+  countEl.textContent=`${rows.length}`;
+  listEl.innerHTML=rows.map(t=>`<a class="card" href="guide.html?n=${encodeURIComponent(t.name)}"><div class="row"><div class="av">${(t.name||'?').slice(0,1)}</div><div><h3>${t.name}</h3><p>${t.desc||t.cat}</p></div></div></a>`).join('')||'<p class="count">没有匹配</p>';
 }
 qEl.addEventListener('input',render); load();
