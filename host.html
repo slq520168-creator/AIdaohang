@@ -1,39 +1,28 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>안안</title>
+<title>An An</title>
 <style>
 body{margin:0;background:#f4ece6;font-family:-apple-system,sans-serif;color:#3b2f2c}
 .w{max-width:430px;margin:0 auto;padding:14px 14px 28px}
 a.back{color:#c56b7a;text-decoration:none}
 video{width:100%;border-radius:18px;display:block;margin:12px 0;background:#111}
-.b{background:#fff;border-radius:16px;padding:14px;line-height:1.75}
+.b{background:#fff;border-radius:16px;padding:14px;line-height:1.7}
 .point{text-align:center;font-size:28px;margin:8px 0 4px}
 .enter{display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:16px;border-radius:16px;font-weight:600}
 </style>
 </head>
 <body>
 <div class="w">
-<a class="back" href="./index.html?v=41">← 도마</a>
-<video id="v" playsinline webkit-playsinline controls muted preload="metadata">
+<a class="back" href="./index.html?v=42">← Home</a>
+<video id="v" playsinline webkit-playsinline controls preload="metadata">
   <source src="_users_a225812b-2be1-4613-a32e-8cc822793592_generated_5562c574-e0b1-4b20-8e93-616e70fe0ea6_generated_video.mp4" type="video/mp4"/>
 </video>
-<div class="b">안녕하세요. 글로벌 우수 AI 도마에 오신 것을 환영합니다. 저는 안내 안안입니다. 아래 버튼을 눌러 더 많은 AI 도구를 보세요.</div>
+<div class="b">Hello there! Welcome to Global Preferred AI Directory. I am An An. Tap the button below for more tools.</div>
 <p class="point">👇</p>
-<a class="enter" href="./index.html?v=41">손가락 더 많은 정채 보기</a>
+<a class="enter" href="./index.html?v=42">Tap here for more</a>
 </div>
-<script>
-const t='안녕하세요. 글로벌 우수 AI 도마에 오신 것을 환영합니다. 저는 안내 안안입니다. 아래 버튼을 눌러 더 많은 AI 도구를 보세요.';
-const v=document.getElementById('v');
-v.muted=true;
-function speak(){
-  const u=new SpeechSynthesisUtterance(t);u.lang='ko-KR';u.rate=.92;u.pitch=1.15;
-  const vo=speechSynthesis.getVoices().find(function(x){return x.lang&&x.lang.indexOf('ko')===0});
-  if(vo)u.voice=vo;speechSynthesis.cancel();speechSynthesis.speak(u);
-}
-v.addEventListener('play',speak);
-</script>
 </body>
 </html>
