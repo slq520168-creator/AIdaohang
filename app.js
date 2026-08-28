@@ -28,7 +28,7 @@ async function load(){
   const meta=await fetch('data/meta.json').then(r=>r.json()).catch(()=>({}));
   const hot=await fetch('data/hot.json').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=`更新 ${meta.updated||'—'} · ${tools.length} 款`;
-  hotEl.innerHTML=(hot||[]).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><div><b>${h.title}</b><span>${h.tag||'热门'}</span></div></a></li>`).join('');
+  hotEl.innerHTML=(hot||[]).map((h,i)=>`<a class="hotrow" href="${h.url}"><em>${i+1}</em><b>${h.title}</b></a>`).join('');
   renderSide(); render();
 }
 function renderSide(){
@@ -41,6 +41,6 @@ function render(){
   const q=(qEl.value||'').trim().toLowerCase();
   const rows=tools.filter(t=>match(t,cat)&&(!q||[t.name,t.desc,t.cat,t.how||''].join(' ').toLowerCase().includes(q)));
   countEl.textContent=`显示 ${rows.length} / ${tools.length}`;
-  listEl.innerHTML=rows.map(t=>`<article class="card"><h3>${t.name}</h3><p>${t.desc}</p><span class="tag">${t.cat}${t.free?' · 免费':' · 收费'}</span><div class="acts"><a class="go" href="${t.url}" target="_blank" rel="noopener">官网</a><a class="how" href="guide.html?n=${encodeURIComponent(t.name)}">教程</a></div></article>`).join('')||'<p class="count">没有匹配</p>';
+  listEl.innerHTML=rows.map(t=>`<article class="card"><h3>${t.name}</h3><p>${t.desc||''}</p><span class="tag">${t.cat}${t.free?' · 免费':' · 收费'}</span><div class="acts"><a class="go" href="${t.url}" target="_blank" rel="noopener">官网</a><a class="how" href="guide.html?n=${encodeURIComponent(t.name)}">教程</a></div></article>`).join('')||'<p class="count">没有匹配</p>';
 }
 qEl.addEventListener('input',render); load();
