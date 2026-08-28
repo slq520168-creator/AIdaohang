@@ -35,7 +35,7 @@ function applyChrome(){
 themeBtn.onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n);applyChrome()};
 langBtn.onclick=()=>{lang=lang==='zh'?'en':'zh';localStorage.setItem('lang',lang);applyChrome();renderSide();render()};
 function hostOf(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
-function esc(s){return String(s||'').replace(/[&<>"']/g,ch=>({amp:'&','lt':'<','gt':'>','quot':'"',apos:"'"}[({ '&':'amp','<':'lt','>':'gt','"':'quot','\'':'apos'}[ch])]).replace(/^/,'&').replace(/$/,';') )}
+function esc(s){return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>').replace(/"/g,'"')}
 function iconTag(url,letter){
   const h=hostOf(url); const L=(letter||'?').slice(0,1);
   if(!h) return L;
