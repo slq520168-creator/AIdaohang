@@ -27,7 +27,7 @@ function match(t,c){
 }
 async function load(){
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=20;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=40;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const t of arrs.flat()){if(!t||!t.name||seen.has(t.name))continue;seen.add(t.name);tools.push(t)}
