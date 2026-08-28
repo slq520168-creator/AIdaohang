@@ -9,7 +9,7 @@
 <script>
 (async()=>{
   const n=new URLSearchParams(location.search).get('n')||'';
-  const files=['data/tools.json','data/more.json','data/packs.json'];
+  const files=['data/tools.json','data/more.json','data/more2.json','data/packs.json'];
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const t=arrs.flat().find(x=>x.name===n);
   const box=document.getElementById('box');
@@ -17,7 +17,7 @@
   document.title=t.name+' 教程';
   box.innerHTML=`<h3>${t.name}</h3><p>${t.desc}</p>
   <p class="tag">${t.cat} · ${t.free?'免费':'收费'}</p>
-  <p style="margin-top:10px">${t.how||'打开官网注册，按首页提示开始使用。'}</p>
+  <p style="margin-top:10px">${t.how||'打开官网注册开始使用。'}</p>
   <p style="margin-top:12px"><a href="${t.url}" target="_blank" rel="noopener">打开官网</a>
   ${t.guide?` · <a href="${t.guide}" target="_blank" rel="noopener">官方教程</a>`:''}</p>`;
 })();
