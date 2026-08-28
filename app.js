@@ -20,14 +20,14 @@ function match(t,c){
   return t.cat===c;
 }
 async function load(){
-  const files=['data/tools.json','data/more.json','data/more2.json','data/packs.json'];
+  const files=['data/tools.json','data/more.json','data/more2.json','data/more3.json','data/more4.json','data/packs.json'];
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const t of arrs.flat()){if(!t||!t.name||seen.has(t.name))continue;seen.add(t.name);tools.push(t)}
   const meta=await fetch('data/meta.json').then(r=>r.json()).catch(()=>({}));
   const hot=await fetch('data/hot.json').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=`更新 ${meta.updated||'—'} · ${tools.length} 款`;
-  hotEl.innerHTML=hot.map((h,i)=>`<a href="${h.url}"><span>${i+1} · ${h.tag||'热'}</span><b>${h.title}</b></a>`).join('');
+  hotEl.innerHTML=(hot||[]).map((h,i)=>`<a href="${h.url}"><span>${i+1} · ${h.tag||'热'}</span><b>${h.title}</b></a>`).join('');
   renderSide(); render();
 }
 function renderSide(){
