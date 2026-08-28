@@ -1,49 +1,36 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="ko">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>安安招呼</title>
+<title>안안 인사</title>
 <style>
 html,body{margin:0;background:#f4ece6;color:#3b2f2c;font-family:-apple-system,sans-serif}
-.wrap{max-width:430px;margin:0 auto;min-height:100dvh;padding:14px 14px 28px;box-sizing:border-box}
+.wrap{max-width:430px;margin:0 auto;padding:14px;min-height:100dvh;box-sizing:border-box}
 a{color:#c56b7a;text-decoration:none;font-size:14px}
-.bubble{background:#fff;border-radius:16px 16px 16px 4px;padding:12px 14px;margin:14px 40px 10px 0;text-align:left;line-height:1.6;box-shadow:0 6px 16px #00000010}
-.stage{background:#e7d0c2;border-radius:20px;height:300px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
-.stage svg{width:240px;height:280px}
-h1{margin:12px 0 4px;font-size:22px;text-align:center}
-.sub{text-align:center;margin:0 0 12px;color:#7a6a66}
-button{display:block;width:100%;border:0;background:#d97888;color:#fff;padding:14px;border-radius:16px;font-size:16px}
+.bubble{background:#fff;border-radius:16px 16px 16px 4px;padding:12px 14px;margin:14px 24px 12px 0;line-height:1.7;box-shadow:0 6px 16px #00000012}
+button{width:100%;border:0;background:#d97888;color:#fff;padding:14px;border-radius:16px;font-size:16px}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <a href="./index.html?v=39">← 导航</a>
-  <div class="bubble" id="hi">你好，欢迎来到全球优选AI导航。我是安安。</div>
-  <div class="stage">
-    <svg viewBox="0 0 240 280" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="120" cy="270" rx="90" ry="22" fill="#dfc7b8"/>
-      <path d="M40 150c12-88 50-128 80-128s68 40 80 128c-22 12-50 18-80 18s-58-6-80-18z" fill="#3a2d28"/>
-      <ellipse cx="120" cy="158" rx="52" ry="62" fill="#f0c8b4"/>
-      <path d="M80 122c12-24 26-36 40-36s28 12 40 36c-14-8-26-12-40-12s-26 4-40 12z" fill="#2f2622"/>
-      <ellipse cx="100" cy="156" rx="6" ry="7" fill="#2b221f"/>
-      <ellipse cx="140" cy="156" rx="6" ry="7" fill="#2b221f"/>
-      <path d="M108 182c8 9 16 9 24 0" fill="none" stroke="#c56b7a" stroke-width="3" stroke-linecap="round"/>
-      <path d="M70 208c16 32 40 48 50 50 10-2 34-18 50-50-18 8-34 12-50 12s-32-4-50-12z" fill="#f7f1ec"/>
-    </svg>
-  </div>
-  <h1>安安</h1>
-  <p class="sub">进门招呼 · 柔柔娇小</p>
-  <button type="button" id="say">听她说欢迎</button>
+  <a href="./index.html?v=39">← 도마</a>
+  <div class="bubble" id="hi">안녕하세요. 글로벌 우수 AI 도마에 오신 것을 환영합니다. 저는 안안입니다.</div>
+  <p style="text-align:center;color:#7a6a66">안안 · 한국어 인사</p>
+  <button type="button" id="say">한국어로 인사</button>
 </div>
 <script>
-const text='你好，欢迎来到全球优选AI导航。我是安安。';
+const text='안녕하세요. 글로벌 우수 AI 도마에 오신 것을 환영합니다. 저는 안안입니다.';
 function speak(){
   if(!window.speechSynthesis)return;
   const u=new SpeechSynthesisUtterance(text);
-  u.lang='zh-CN';u.rate=0.92;u.pitch=1.2;
+  u.lang='ko-KR';u.rate=0.95;u.pitch=1.15;
+  const vs=speechSynthesis.getVoices();
+  const ko=vs.find(v=>v.lang.startsWith('ko'));
+  if(ko) u.voice=ko;
   speechSynthesis.cancel();speechSynthesis.speak(u);
 }
+speechSynthesis.onvoiceschanged=()=>{};
 document.getElementById('say').onclick=speak;
 document.body.addEventListener('click',function once(){speak();document.body.removeEventListener('click',once)},{passive:true});
 </script>
