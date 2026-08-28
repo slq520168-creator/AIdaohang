@@ -4,7 +4,6 @@ html[data-theme="dark"]{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%;background:var(--bg);color:var(--txt)}
 body{font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;padding:12px 12px 80px}
-html[data-theme="light"] body{background-image:radial-gradient(ellipse 80% 42% at 50% -8%,rgba(59,130,246,.18),transparent 55%)}
 .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px}
 .acts{display:flex;gap:6px;flex:none}
 h1{font-size:18px}
@@ -16,7 +15,7 @@ h1{font-size:18px}
 .block{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px;margin-bottom:10px;width:100%}
 .block-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .block-h h2{font-size:15px}
-.rank{list-style:none}
+.rank{list-style:none;max-height:168px;overflow-y:auto}
 .rank a{display:flex;gap:8px;padding:6px 0;color:var(--txt);text-decoration:none;font-size:13px;border-bottom:1px solid var(--line)}
 .rank li:last-child a{border-bottom:0}
 .rank i{width:16px;flex:none;font-style:normal;font-weight:700;font-size:12px}
