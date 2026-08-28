@@ -1,28 +1,19 @@
 html,body{width:100%;max-width:100%;overflow-x:hidden}
-:root,html[data-theme="light"]{--bg:#eef4ff;--card:rgba(255,255,255,.38);--line:rgba(255,255,255,.35);--txt:#111827;--muted:#3d4a5c;--acc:#2563eb;--soft:rgba(255,255,255,.28);--chip:rgba(219,234,254,.55);--chip-t:#1d4ed8}
-html[data-theme="dark"]{--bg:#0d1117;--card:rgba(22,27,34,.42);--line:rgba(255,255,255,.12);--txt:#e6edf3;--muted:#b6c0cc;--acc:#58a6ff;--soft:rgba(33,38,45,.35);--chip:rgba(31,58,95,.45);--chip-t:#79c0ff}
+:root,html[data-theme="light"]{--bg:#eef4ff;--card:#fff;--line:#d7e2f2;--txt:#111827;--muted:#5b6b82;--acc:#2563eb;--soft:#eef2f8;--chip:#dbeafe;--chip-t:#1d4ed8}
+html[data-theme="dark"]{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3;--muted:#8b949e;--acc:#58a6ff;--soft:#21262d;--chip:#1f3a5f;--chip-t:#79c0ff}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{min-height:100%;color:var(--txt)}
-body{
-  font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;
-  padding:12px 12px 80px;
-  background-color:#1a1216;
-  background-image:url("IMG_7049.jpeg");
-  background-size:cover;
-  background-position:center 20%;
-  background-attachment:fixed;
-  background-repeat:no-repeat;
-}
+html,body{min-height:100%;background:var(--bg);color:var(--txt)}
+body{font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;padding:0 12px 80px}
+.hero{display:block;width:calc(100% + 24px);margin:0 -12px 10px;height:72vh;object-fit:cover;object-position:center 12%;background:#1a1216}
 .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px}
 .acts{display:flex;gap:6px;flex:none}
 h1{font-size:18px}
 .sub{color:var(--muted);font-size:12px;margin-top:2px}
 #theme,#lang{border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:999px;padding:7px 10px}
-.search{position:sticky;top:0;z-index:20;display:flex;gap:8px;margin:0 0 10px;padding:6px 0;background:transparent}
+.search{position:sticky;top:0;z-index:20;display:flex;gap:8px;margin:0 0 10px;padding:6px 0;background:var(--bg)}
 #q{flex:1;min-width:0;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:14px;padding:11px 12px;font-size:16px}
 #go{width:42px;min-width:42px;height:42px;flex:none;border:0;border-radius:50%;background:var(--acc);color:#fff}
-.block{background:rgba(255,255,255,.16);border:1px solid var(--line);border-radius:16px;padding:10px;margin-bottom:10px;width:100%}
-html[data-theme="dark"] .block{background:rgba(13,17,23,.28)}
+.block{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px;margin-bottom:10px;width:100%}
 .block-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .block-h h2{font-size:15px}
 .rank{list-style:none;max-height:168px;overflow-y:auto}
@@ -35,12 +26,12 @@ html[data-theme="dark"] .block{background:rgba(13,17,23,.28)}
 .cats button{border:1px solid var(--line);background:var(--soft);color:var(--txt);border-radius:10px;padding:6px 9px;font-size:12px}
 .cats button.on{background:var(--chip);color:var(--chip-t);font-weight:600;border-color:transparent}
 .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;width:100%}
-.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 8px;text-decoration:none;color:var(--txt);min-width:0}
+.card{display:block;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:10px 8px;text-decoration:none;color:var(--txt);min-width:0}
 .card .row{display:flex;gap:8px;align-items:center;min-width:0}
 .card .row>div:last-child{min-width:0;flex:1;overflow:hidden}
-.av{width:32px;height:32px;flex:none;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--line);background:rgba(255,255,255,.55)}
+.av{width:32px;height:32px;flex:none;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--line);background:#fff}
 .av img{width:32px;height:32px;object-fit:contain;display:block}
-html[data-theme="dark"] .av{background:rgba(13,17,23,.5)}
+html[data-theme="dark"] .av{background:#0d1117}
 .card h3{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .card p{color:var(--muted);font-size:11px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .count{color:var(--muted);font-size:12px}
