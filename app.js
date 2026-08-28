@@ -17,7 +17,8 @@ const themeBtn=document.getElementById('theme');
 const langBtn=document.getElementById('lang');
 const sf=document.getElementById('sf');
 const topBtn=document.getElementById('topBtn');
-let tools=[]; let cat='全部'; let lang=localStorage.getItem('lang')||'zh';
+let tools=[]; let selected=new Set();
+let lang=localStorage.getItem('lang')||'zh';
 let shown=80; let lastKey=''; let filtered=[];
 const saved=localStorage.getItem('theme')||'light';
 document.documentElement.dataset.theme=saved;
@@ -40,22 +41,27 @@ function iconTag(url,letter){
   if(!h) return L;
   return `<img alt="" src="https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(h)}" onerror="this.remove();this.parentNode&&(this.parentNode.textContent='${L}')">`;
 }
-function match(t0,c){
-  if(c==='全部')return true;
-  if(c==='免费')return !!t0.free;
-  if(c==='收费')return !t0.free;
+function matchOne(t0,c){
   if(c==='聊天'||c==='对话')return t0.cat==='聊天'||t0.cat==='对话';
   if(c==='视频')return t0.cat==='视频'||t0.pack==='视频';
   if(c==='游戏')return t0.cat==='游戏'||t0.pack==='游戏';
   if(c==='智能工作流')return t0.cat==='智能工作流'||t0.cat==='智能体'||t0.pack==='工作流';
   if(c==='接单')return t0.cat==='接单'||t0.pack==='接单'||/接单|威客|Upwork|Fiverr|Freelancer|猪八戒|电鸭|客栈/.test((t0.name||'')+(t0.desc||''));
-  if(c==='社区')return t0.cat==='社区'||/社区|Discord|Reddit|Hugging Face|V2EX|Linux\.do/.test((t0.name||'')+(t0.desc||''));
+  if(c==='社区')return t0.cat==='社区'||/社区|Discord|Reddit|Hugging Face|V2EX/.test((t0.name||'')+(t0.desc||''));
   if(c==='开店')return t0.cat==='开店'||/Shopify|WooCommerce|淘宝|拼多多|小店|Gumroad|Etsy/.test((t0.name||'')+(t0.desc||''));
   if(c==='采集')return t0.cat==='采集'||/OBS|Streamlabs|ShareX|Loom|录屏/.test((t0.name||'')+(t0.desc||''));
-  if(c==='接口')return t0.cat==='接口'||/API|Key|Inference/.test((t0.name||'')+(t0.desc||'')+(t0.desc_en||''));
+  if(c==='接口')return t0.cat==='接口'||/API|Inference/.test((t0.name||'')+(t0.desc||'')+(t0.desc_en||''));
   if(c==='机器人')return t0.cat==='机器人'||/ROS|Unitree|Optimus|Gazebo|Isaac|机器人/.test((t0.name||'')+(t0.desc||''));
-  if(c==='图书')return t0.cat==='图书'||/读书|听书|Kindle|Gutenberg|Weread|图书/.test((t0.name||'')+(t0.desc||''));
+  if(c==='图书')return t0.cat==='图书'||/读书|听书|Kindle|Gutenberg|图书/.test((t0.name||'')+(t0.desc||''));
   return t0.cat===c;
+}
+function matchCombo(t0){
+  if(!selected.size) return true;
+  if(selected.has('免费') && !t0.free) return false;
+  if(selected.has('收费') && t0.free) return false;
+  const others=[...selected].filter(c=>c!=='免费'&&c!=='收费');
+  if(!others.length) return true;
+  return others.some(c=>matchOne(t0,c));
 }
 async function load(){
   applyChrome();
@@ -70,8 +76,22 @@ async function load(){
   renderSide(); render();
 }
 function renderSide(){
-  sideEl.innerHTML=CATS.map(([k,en])=>`<button data-c="${k}" class="${k===cat?'on':''}">${lang==='en'?en:k}</button>`).join('');
-  sideEl.onclick=e=>{const b=e.target.closest('button');if(!b)return;cat=b.dataset.c;shown=80;renderSide();render()};
+  const allOn=!selected.size;
+  sideEl.innerHTML=CATS.map(([k,en])=>{
+    const on=k==='全部'?allOn:selected.has(k);
+    return `<button data-c="${k}" class="${on?'on':''}">${lang==='en'?en:k}</button>`;
+  }).join('');
+  sideEl.onclick=e=>{
+    const b=e.target.closest('button'); if(!b)return;
+    const k=b.dataset.c;
+    if(k==='全部'){selected.clear()}
+    else {
+      if(selected.has(k)) selected.delete(k); else selected.add(k);
+      if(k==='免费') selected.delete('收费');
+      if(k==='收费') selected.delete('免费');
+    }
+    shown=80; renderSide(); render();
+  };
 }
 function card(x){
   const letter=(x.name||'?').slice(0,1);
@@ -81,14 +101,14 @@ function card(x){
 function render(){
   const q=(qEl.value||'').trim().toLowerCase();
   const s=t();
-  const key=cat+'|'+q;
+  const key=[...selected].join(',')+'|'+q;
   if(key!==lastKey){shown=80;lastKey=key}
   if(hotBlock) hotBlock.style.display=q?'none':'block';
   if(listTitle) listTitle.textContent=q?(s.res+'「'+qEl.value.trim()+'」'):s.all;
   metaEl.textContent=tools.length+s.tools;
   filtered=tools.filter(x=>{
     const hit=!q||[x.name,x.desc,x.desc_en||'',x.cat,x.how||'',x.url||''].join(' ').toLowerCase().includes(q);
-    return hit && (q || match(x,cat));
+    return hit && (q || matchCombo(x));
   });
   countEl.textContent=filtered.length+s.hit;
   listEl.innerHTML=filtered.slice(0,shown).map(card).join('')||`<p class="count">${s.empty}</p>`;
