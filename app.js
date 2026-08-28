@@ -4,7 +4,10 @@ const qEl=document.getElementById('q');
 const metaEl=document.getElementById('meta');
 const countEl=document.getElementById('count');
 const hotEl=document.getElementById('hot');
+const hotBlock=document.getElementById('hotBlock');
+const listTitle=document.getElementById('listTitle');
 const themeBtn=document.getElementById('theme');
+const sf=document.getElementById('sf');
 let tools=[]; let cat='全部';
 const saved=localStorage.getItem('theme')||'light';
 document.documentElement.dataset.theme=saved;
@@ -39,12 +42,19 @@ function renderSide(){
 }
 function render(){
   const q=(qEl.value||'').trim().toLowerCase();
-  const rows=tools.filter(t=>match(t,cat)&&(!q||[t.name,t.desc,t.cat,t.how||''].join(' ').toLowerCase().includes(q)));
-  countEl.textContent=String(rows.length);
+  if(hotBlock) hotBlock.style.display=q?'none':'block';
+  if(listTitle) listTitle.textContent=q?('搜索结果 「'+qEl.value.trim()+'」'):'AI 工具大全';
+  const rows=tools.filter(t=>{
+    const hit=!q||[t.name,t.desc,t.cat,t.how||'',t.url||''].join(' ').toLowerCase().includes(q);
+    return hit && (q || match(t,cat));
+  });
+  countEl.textContent=rows.length+' 条';
   listEl.innerHTML=rows.map(t=>{
     const src=icon(t.url);
     const letter=(t.name||'?').slice(0,1);
     return `<a class="card" href="guide.html?n=${encodeURIComponent(t.name)}"><div class="row"><div class="av"><img alt="" src="${src}" onerror="this.style.display='none';this.parentNode.textContent='${letter}'"></div><div><h3>${t.name}</h3><p>${t.desc||t.cat}</p></div></div></a>`;
-  }).join('')||'<p class="count">没有匹配</p>';
+  }).join('')||'<p class="count">没有匹配，换个词再试</p>';
 }
-qEl.addEventListener('input',render); load();
+sf.addEventListener('submit',e=>{e.preventDefault();render();qEl.blur();window.scrollTo({top:0,behavior:'smooth'})});
+qEl.addEventListener('input',render);
+load();
