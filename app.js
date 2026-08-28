@@ -1,9 +1,9 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 健身 / 瑜伽 / Keep',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search fitness / yoga',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 宠物 / 美妆 / 瑜伽',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search pet / beauty / yoga',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
-  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['绘画','Image'],['视频','Video'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['社区','Community'],['开店','Shop'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books']
+  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['法律','Legal'],['绘画','Image'],['视频','Video'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['社区','Community'],['开店','Shop'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books']
 ];
 const KW={
   '对话':/对话|聊天|Chat|GPT|Claude|Grok/,
@@ -12,6 +12,11 @@ const KW={
   '陪伴':/陪伴|女友|角色|Character|Companion/,
   '学习':/学习|教程|学习机|Anki|Khan/,
   '健身':/健身|瑜伽|减肥|跑步|Keep|Fit|Yoga|Workout/,
+  '美妆':/美妆|化妆|美颜|试妆|YouCam|酷皮士|醒图|FaceApp|Remini/,
+  '宠物':/宠物|狗|猫|寄养|兽医|Pet|Rover|Furbo/,
+  '美食':/美食|菜谱|做菜|食材|Yummly|Tasty|Supercook/,
+  '旅行':/旅行|机票|酒店|地图|Travel|Kayak|Skyscanner/,
+  '法律':/法律|律师|法条|DoNotPay|Justia/,
   '绘画':/绘画|插画|Image|Midjourney|Comfy/,
   '视频':/视频|Video|Runway|Pika/,
   '办公':/办公|Office|文档|Notion|邮箱/,
