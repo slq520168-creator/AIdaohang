@@ -1,33 +1,34 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 分类 / 名称 / Grok',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search category / name',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 健身 / 瑜伽 / Keep',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search fitness / yoga',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
-  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['绘画','Image'],['视频','Video'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['社区','Community'],['开店','Shop'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books']
+  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['绘画','Image'],['视频','Video'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['社区','Community'],['开店','Shop'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books']
 ];
 const KW={
-  '对话':/对话|聊天|Chat|GPT|Claude|Gemini|Grok|Kimi/,
-  '聊天':/对话|聊天|Chat|GPT|Claude/,
-  '插件':/插件|扩展|Plugin|Extension|Addon/,
-  '陪伴':/陪伴|女友|角色|Character|Companion|Girlfriend/,
-  '学习':/学习|教程|课程|Anki|教育|Quizlet|Khan|Coursera/,
-  '绘画':/绘画|插画|绘图|Image|Midjourney|SD|Comfy/,
-  '视频':/视频|Video|Runway|Pika|剪映/,
-  '办公':/办公|Office|文档|Notion|日历|邮箱|密码/,
-  '编程':/编程|Code|Git|IDE|部署|托管|GitHub|Vercel/,
-  '智能工作流':/工作流|Agent|n8n|Dify|拓子|Zapier/,
-  '游戏':/游戏|Game|Unity|Godot|Unreal/,
+  '对话':/对话|聊天|Chat|GPT|Claude|Grok/,
+  '聊天':/对话|聊天|Chat|GPT/,
+  '插件':/插件|扩展|Plugin|Extension/,
+  '陪伴':/陪伴|女友|角色|Character|Companion/,
+  '学习':/学习|教程|学习机|Anki|Khan/,
+  '健身':/健身|瑜伽|减肥|跑步|Keep|Fit|Yoga|Workout/,
+  '绘画':/绘画|插画|Image|Midjourney|Comfy/,
+  '视频':/视频|Video|Runway|Pika/,
+  '办公':/办公|Office|文档|Notion|邮箱/,
+  '编程':/编程|Code|Git|IDE|托管|Vercel/,
+  '智能工作流':/工作流|Agent|n8n|Dify|Zapier/,
+  '游戏':/游戏|Game|Unity|Godot/,
   '音乐':/音乐|配乐|Suno|Music/,
-  '语音':/语音|配音|TTS|Whisper|Speech/,
-  '设计':/设计|Figma|白板|流程图|Penpot/,
-  '搜索':/搜索|Search|Google|Bing|Brave/,
-  '写作':/写作|文案|Write|Notion/,
-  '接单':/接单|威客|约稿|Upwork|Fiverr|猪八戒|Gig/,
-  '社区':/社区|Discord|Reddit|Hugging Face|V2EX/,
-  '开店':/Shopify|淘宝|小店|Gumroad|Etsy|开店/,
-  '采集':/OBS|ShareX|Loom|录屏|采集|直播/,
+  '语音':/语音|配音|TTS|Whisper/,
+  '设计':/设计|Figma|白板|Penpot/,
+  '搜索':/搜索|Search|Brave/,
+  '写作':/写作|文案|Write/,
+  '接单':/接单|威客|Upwork|Fiverr|猪八戒|Gig/,
+  '社区':/社区|Discord|Reddit|Hugging Face/,
+  '开店':/Shopify|小店|Gumroad|Etsy|开店/,
+  '采集':/OBS|ShareX|Loom|录屏|采集/,
   '接口':/API|接口|Key|SDK/,
-  '机器人':/ROS|Unitree|机器人|Optimus/,
+  '机器人':/ROS|机器人|Arduino/,
   '图书':/读书|听书|Kindle|图书|Book/
 };
 const sideEl=document.getElementById('side');
