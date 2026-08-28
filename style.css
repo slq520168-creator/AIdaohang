@@ -3,11 +3,11 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 html[data-theme="dark"]{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3;--muted:#8b949e;--acc:#58a6ff;--soft:#21262d;--chip:#1f3a5f;--chip-t:#79c0ff}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%;background:var(--bg);color:var(--txt)}
-body{font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;padding:12px 12px 88px}
+body{font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;padding:12px 12px 80px}
 html[data-theme="light"] body{background-image:radial-gradient(ellipse 80% 42% at 50% -8%,rgba(59,130,246,.18),transparent 55%)}
 .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px}
 .acts{display:flex;gap:6px;flex:none}
-h1{font-size:18px;color:var(--txt)}
+h1{font-size:18px}
 .sub{color:var(--muted);font-size:12px;margin-top:2px}
 #theme,#lang{border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:999px;padding:7px 10px}
 .search{position:sticky;top:0;z-index:20;display:flex;gap:8px;margin:0 0 10px;padding:6px 0;background:var(--bg)}
@@ -16,8 +16,8 @@ h1{font-size:18px;color:var(--txt)}
 .block{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px;margin-bottom:10px;width:100%}
 .block-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .block-h h2{font-size:15px}
-.rank a{display:flex;gap:8px;padding:6px 0;color:var(--txt);text-decoration:none;font-size:13px;border-bottom:1px solid var(--line)}
 .rank{list-style:none}
+.rank a{display:flex;gap:8px;padding:6px 0;color:var(--txt);text-decoration:none;font-size:13px;border-bottom:1px solid var(--line)}
 .rank li:last-child a{border-bottom:0}
 .rank i{width:16px;flex:none;font-style:normal;font-weight:700;font-size:12px}
 .rank li:nth-child(-n+3) i{color:#f85149}
@@ -35,6 +35,7 @@ html[data-theme="dark"] .av{background:#0d1117}
 .card h3{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .card p{color:var(--muted);font-size:11px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .count{color:var(--muted);font-size:12px}
+.more{grid-column:1/-1;border:1px solid var(--line);background:var(--soft);color:var(--txt);border-radius:12px;padding:12px;font-size:14px}
 .fab,.topbtn{position:fixed;bottom:16px;width:44px;height:44px;border:0;border-radius:50%;color:#fff;z-index:50;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:20px}
 .fab{right:12px;background:#2aa3e6}
 .topbtn{left:12px;background:var(--acc)}
