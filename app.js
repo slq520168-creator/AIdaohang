@@ -59,7 +59,7 @@ async function load(){
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
   const hot=await fetch('data/hot.json').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
-  hotEl.innerHTML=(hot||[]).slice(0,6).map((h,i)=>`<li><a href="${h.url}"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
+  hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
 }
 function renderSide(){
