@@ -1,40 +1,41 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 宠物 / 美妆 / 瑜伽',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search pet / beauty / yoga',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 星座 / 运势 / 宠物',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search horoscope / pet',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
-  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['法律','Legal'],['绘画','Image'],['视频','Video'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['社区','Community'],['开店','Shop'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books']
+  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['社区','Community'],['开店','Shop'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books']
 ];
 const KW={
-  '对话':/对话|聊天|Chat|GPT|Claude|Grok/,
-  '聊天':/对话|聊天|Chat|GPT/,
-  '插件':/插件|扩展|Plugin|Extension/,
-  '陪伴':/陪伴|女友|角色|Character|Companion/,
-  '学习':/学习|教程|学习机|Anki|Khan/,
-  '健身':/健身|瑜伽|减肥|跑步|Keep|Fit|Yoga|Workout/,
-  '美妆':/美妆|化妆|美颜|试妆|YouCam|酷皮士|醒图|FaceApp|Remini/,
-  '宠物':/宠物|狗|猫|寄养|兽医|Pet|Rover|Furbo/,
-  '美食':/美食|菜谱|做菜|食材|Yummly|Tasty|Supercook/,
-  '旅行':/旅行|机票|酒店|地图|Travel|Kayak|Skyscanner/,
-  '法律':/法律|律师|法条|DoNotPay|Justia/,
-  '绘画':/绘画|插画|Image|Midjourney|Comfy/,
-  '视频':/视频|Video|Runway|Pika/,
-  '办公':/办公|Office|文档|Notion|邮箱/,
-  '编程':/编程|Code|Git|IDE|托管|Vercel/,
-  '智能工作流':/工作流|Agent|n8n|Dify|Zapier/,
-  '游戏':/游戏|Game|Unity|Godot/,
-  '音乐':/音乐|配乐|Suno|Music/,
-  '语音':/语音|配音|TTS|Whisper/,
-  '设计':/设计|Figma|白板|Penpot/,
-  '搜索':/搜索|Search|Brave/,
-  '写作':/写作|文案|Write/,
-  '接单':/接单|威客|Upwork|Fiverr|猪八戒|Gig/,
-  '社区':/社区|Discord|Reddit|Hugging Face/,
-  '开店':/Shopify|小店|Gumroad|Etsy|开店/,
-  '采集':/OBS|ShareX|Loom|录屏|采集/,
-  '接口':/API|接口|Key|SDK/,
-  '机器人':/ROS|机器人|Arduino/,
-  '图书':/读书|听书|Kindle|图书|Book/
+  '对话':/对话|聊天|Chat|GPT|Grok/,
+  '聊天':/对话|聊天|Chat/,
+  '插件':/插件|扩展|Plugin/,
+  '陪伴':/陪伴|角色|Character/,
+  '学习':/学习|教程|星座|运势|星盘|Anki/,
+  '健身':/健身|瑜伽|Keep|Yoga/,
+  '美妆':/美妆|化妆|美颜|YouCam|酷皮士/,
+  '宠物':/宠物|狗|猫|Pet|Rover/,
+  '美食':/美食|菜谱|Yummly|Tasty/,
+  '旅行':/旅行|机票|Kayak|Skyscanner/,
+  '法律':/法律|律师|DoNotPay/,
+  '管理':/管理|Jira|Linear|Trello|Asana|ClickUp/,
+  '绘画':/绘画|Image|Comfy/,
+  '视频':/视频|Video/,
+  '办公':/办公|Office|Notion|网盘|VPN/,
+  '编程':/编程|Code|Git|域名|建站/,
+  '智能工作流':/工作流|Agent|n8n/,
+  '游戏':/游戏|Game/,
+  '音乐':/音乐|Suno|Music/,
+  '语音':/语音|TTS|Whisper/,
+  '设计':/设计|Figma/,
+  '搜索':/搜索|Search/,
+  '写作':/写作|文案/,
+  '接单':/接单|Fiverr|Upwork|猪八戒/,
+  '社区':/社区|Discord|Reddit/,
+  '开店':/开店|Shopify|Gumroad/,
+  '采集':/采集|OBS|录屏/,
+  '接口':/API|接口/,
+  '机器人':/机器人|ROS/,
+  '图书':/图书|读书|Kindle/
 };
 const sideEl=document.getElementById('side');
 const listEl=document.getElementById('list');
@@ -90,7 +91,7 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=80;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=90;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
