@@ -3,56 +3,55 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>欢迎 · 全球优选AI导航</title>
+<title>安安 · 欢迎</title>
 <style>
-:root{--bg:#fff7f4;--ink:#3a2a28;--pink:#e8899a}
-html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,sans-serif;text-align:center}
-.wrap{min-height:100dvh;padding:24px 16px 40px;box-sizing:border-box}
-a.back{color:var(--pink);text-decoration:none;font-size:14px}
-.stage{width:220px;height:260px;margin:18px auto 8px;position:relative}
-.face{width:160px;height:180px;margin:0 auto;background:#f3d0c4;border-radius:80px 80px 70px 70px;position:relative;box-shadow:0 10px 30px #e7b8b055}
-.hair{position:absolute;left:50%;top:-18px;transform:translateX(-50%);width:188px;height:120px;background:#2b2422;border-radius:90px 90px 20px 20px}
-.eye{position:absolute;top:78px;width:14px;height:16px;background:#2b2422;border-radius:50%}
-.eye.l{left:48px}.eye.r{right:48px}
-.blush{position:absolute;top:100px;width:22px;height:12px;background:#f0a3a388;border-radius:50%}
-.blush.l{left:32px}.blush.r{right:32px}
-.mouth{position:absolute;left:50%;bottom:42px;width:28px;height:14px;margin-left:-14px;border:3px solid #c45b6a;border-top:none;border-radius:0 0 16px 16px;animation:smile 2.4s ease-in-out infinite}
-@keyframes smile{50%{width:34px;margin-left:-17px;height:16px}}
-.wave{font-size:28px;animation:w 1.6s ease-in-out infinite}
-@keyframes w{50%{transform:rotate(16deg)}}
-h1{font-size:20px;margin:8px 0 6px}
-p{margin:6px auto;max-width:320px;line-height:1.6;font-size:15px}
-button{border:0;background:var(--pink);color:#fff;padding:12px 22px;border-radius:22px;font-size:16px}
+html,body{margin:0;background:#f6efe9;color:#3b2f2c;font-family:-apple-system,sans-serif}
+.wrap{max-width:420px;margin:0 auto;padding:18px 16px 40px;text-align:center}
+a{color:#c56b7a;text-decoration:none;font-size:14px}
+.card{margin:16px auto;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 10px 28px #00000014}
+.hero{height:360px;background:linear-gradient(#ead7c8,#d8b8a6);position:relative}
+.hero svg{width:100%;height:100%;display:block}
+h1{margin:14px 0 6px;font-size:22px}
+p{margin:6px 16px;line-height:1.65;font-size:15px}
+button{border:0;background:#d97888;color:#fff;padding:12px 24px;border-radius:22px;font-size:16px;margin:10px 0 18px}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <a class="back" href="./index.html?v=39">← 回导航</a>
-  <div class="stage">
-    <div class="hair"></div>
-    <div class="face">
-      <i class="eye l"></i><i class="eye r"></i>
-      <i class="blush l"></i><i class="blush r"></i>
-      <i class="mouth"></i>
+  <a href="./index.html?v=39">← 回导航</a>
+  <div class="card">
+    <div class="hero">
+      <svg viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg" aria-label="安安">
+        <rect width="300" height="360" fill="#e8d3c4"/>
+        <ellipse cx="150" cy="360" rx="120" ry="50" fill="#efe6df"/>
+        <path d="M70 210c10-80 50-130 80-130s70 50 80 130c-20 10-50 16-80 16s-60-6-80-16z" fill="#3a2d28"/>
+        <path d="M88 200c8-70 40-108 62-108s54 38 62 108c-18 8-40 12-62 12s-44-4-62-12z" fill="#4a3b34"/>
+        <ellipse cx="150" cy="210" rx="58" ry="70" fill="#f0c8b4"/>
+        <path d="M108 168c12-22 28-34 42-34s30 12 42 34c-16-10-28-14-42-14s-26 4-42 14z" fill="#2f2622"/>
+        <ellipse cx="128" cy="208" rx="7" ry="8" fill="#2b221f"/>
+        <ellipse cx="172" cy="208" rx="7" ry="8" fill="#2b221f"/>
+        <ellipse cx="118" cy="222" rx="10" ry="6" fill="#e8a197" opacity=".55"/>
+        <ellipse cx="182" cy="222" rx="10" ry="6" fill="#e8a197" opacity=".55"/>
+        <path d="M138 238c8 10 16 10 24 0" fill="none" stroke="#c56b7a" stroke-width="3" stroke-linecap="round"/>
+        <path d="M92 268c18 34 48 50 58 52 10-2 40-18 58-52-20 8-38 12-58 12s-38-4-58-12z" fill="#f4eee8"/>
+      </svg>
     </div>
+    <h1>安安</h1>
+    <p>韩国味·柔柔·娇小。欢迎来到全球优选AI导航。</p>
+    <p id="line">点按钮听我说欢迎。iPhone 要先点一下才会出声。</p>
+    <button type="button" id="say">微笑打招呼</button>
   </div>
-  <div class="wave">👋</div>
-  <h1>安安</h1>
-  <p>韩国味·柔柔·娇小，体重不过百。欢迎来到全球优选AI导航。</p>
-  <p id="line">点下面按钮，听我说一句欢迎。</p>
-  <p><button type="button" id="say">微笑打招呼</button></p>
 </div>
 <script>
-const text='你好，欢迎来到全球优选AI导航。我是安安，今晚还顺便吗？';
+const text='你好，欢迎来到全球优选AI导航。我是安安。';
 function speak(){
   document.getElementById('line').textContent=text;
   if(!window.speechSynthesis)return;
   const u=new SpeechSynthesisUtterance(text);
-  u.lang='zh-CN';u.rate=0.92;u.pitch=1.25;
+  u.lang='zh-CN';u.rate=0.92;u.pitch=1.2;
   speechSynthesis.cancel();speechSynthesis.speak(u);
 }
 document.getElementById('say').onclick=speak;
-setTimeout(speak,600);
 </script>
 </body>
 </html>
