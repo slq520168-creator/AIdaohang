@@ -8,18 +8,21 @@
 body{margin:0;background:#f4ece6;font-family:-apple-system,sans-serif;color:#3b2f2c}
 .w{max-width:430px;margin:0 auto;padding:14px}
 a{color:#c56b7a;text-decoration:none}
-img{width:100%;border-radius:18px;display:block;margin:12px 0;background:#e7d0c2;min-height:240px}
+video,img{width:100%;border-radius:18px;display:block;margin:12px 0;background:#e7d0c2}
 .b{background:#fff;border-radius:16px;padding:12px;line-height:1.7}
 button{width:100%;border:0;background:#d97888;color:#fff;padding:14px;border-radius:16px;margin-top:12px;font-size:16px}
+.tip{font-size:13px;color:#7a6a66;line-height:1.5}
 </style>
 </head>
 <body>
 <div class="w">
 <a href="./index.html?v=40">← 导航</a>
-<p style="text-align:center;margin:10px 0 0">안안</p>
-<img alt="안안" src="annan.jpg"/>
+<video id="v" playsinline webkit-playsinline controls preload="metadata" poster="annan.jpg">
+  <source src="host.mp4" type="video/mp4"/>
+</video>
 <div class="b">안녕하세요. 글로벌 우수 AI 도마에 오신 것을 환영합니다. 저는 안안입니다.</div>
 <button type="button" id="say">한국어로 인사</button>
+<p class="tip">视频要你上传仓库根目录的 host.mp4（对话里那段微笑招呼）。iPhone 先点播放。</p>
 </div>
 <script>
 const t='안녕하세요. 글로벌 우수 AI 도마에 오신 것을 환영합니다. 저는 안안입니다.';
