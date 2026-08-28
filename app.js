@@ -13,13 +13,17 @@ const saved=localStorage.getItem('theme')||'light';
 document.documentElement.dataset.theme=saved;
 themeBtn.textContent=saved==='dark'?'浅色':'深色';
 themeBtn.onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n);themeBtn.textContent=n==='dark'?'浅色':'深色'};
-const extra=['全部','免费','收费','对话','绘画','视频','办公','编程','智能工作流','游戏','音乐','语音','设计','搜索','写作'];
+const extra=['全部','免费','收费','对话','聊天','插件','陪伴','学习','绘画','视频','办公','编程','智能工作流','游戏','音乐','语音','设计','搜索','写作'];
 function hostOf(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
 function icon(u){const h=hostOf(u);return h?('https://icons.duckduckgo.com/ip3/'+h+'.ico'):'';}
 function match(t,c){
   if(c==='全部')return true;
   if(c==='免费')return !!t.free;
   if(c==='收费')return !t.free;
+  if(c==='聊天'||c==='对话')return t.cat==='聊天'||t.cat==='对话';
+  if(c==='插件')return t.cat==='插件';
+  if(c==='陪伴')return t.cat==='陪伴';
+  if(c==='学习')return t.cat==='学习';
   if(c==='视频')return t.cat==='视频'||t.pack==='视频';
   if(c==='游戏')return t.cat==='游戏'||t.pack==='游戏';
   if(c==='智能工作流')return t.cat==='智能工作流'||t.cat==='智能体'||t.pack==='工作流';
