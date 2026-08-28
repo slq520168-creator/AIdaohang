@@ -3,40 +3,37 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>안안 · 글로벌 우수 AI</title>
+<title>안안</title>
 <style>
 body{margin:0;background:#f4ece6;font-family:-apple-system,sans-serif;color:#3b2f2c}
 .w{max-width:430px;margin:0 auto;padding:14px 14px 28px}
-a.back{color:#c56b7a;text-decoration:none;font-size:14px}
+a.back{color:#c56b7a;text-decoration:none}
 video{width:100%;border-radius:18px;display:block;margin:12px 0;background:#111}
-.b{background:#fff;border-radius:16px;padding:14px;line-height:1.75;font-size:15px}
-.point{text-align:center;font-size:28px;margin:8px 0 4px;animation:bob 1.2s ease-in-out infinite}
-@keyframes bob{50%{transform:translateY(6px)}}
-.enter{display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:16px 12px;border-radius:16px;font-size:17px;font-weight:600}
-.sub{text-align:center;color:#7a6a66;font-size:13px;margin:8px 0 0}
-button.speak{width:100%;border:0;background:#fff;color:#c56b7a;padding:12px;border-radius:16px;margin:10px 0;font-size:15px}
+.b{background:#fff;border-radius:16px;padding:14px;line-height:1.75}
+.point{text-align:center;font-size:28px;margin:8px 0 4px}
+.enter{display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:16px;border-radius:16px;font-weight:600}
 </style>
 </head>
 <body>
 <div class="w">
 <a class="back" href="./index.html?v=41">← 도마</a>
-<video id="v" playsinline webkit-playsinline controls preload="metadata">
+<video id="v" playsinline webkit-playsinline controls muted preload="metadata">
   <source src="_users_a225812b-2be1-4613-a32e-8cc822793592_generated_5562c574-e0b1-4b20-8e93-616e70fe0ea6_generated_video.mp4" type="video/mp4"/>
 </video>
-<div class="b" id="hi">안녕하세요. 글로벌 우수 AI 도마에 오신 것을 환영합니다. 저는 안내 안안입니다. 아래 버튼을 눌러 더 많은 AI 도구를 보세요.</div>
-<button class="speak" type="button" id="say">한국어로 듣기</button>
-<div class="point">👇</div>
+<div class="b">안녕하세요. 글로벌 우수 AI 도마에 오신 것을 환영합니다. 저는 안내 안안입니다. 아래 버튼을 눌러 더 많은 AI 도구를 보세요.</div>
+<p class="point">👇</p>
 <a class="enter" href="./index.html?v=41">손가락 더 많은 정채 보기</a>
-<p class="sub">진입 사이트 · 전체 AI 공구</p>
 </div>
 <script>
 const t='안녕하세요. 글로벌 우수 AI 도마에 오신 것을 환영합니다. 저는 안내 안안입니다. 아래 버튼을 눌러 더 많은 AI 도구를 보세요.';
+const v=document.getElementById('v');
+v.muted=true;
 function speak(){
   const u=new SpeechSynthesisUtterance(t);u.lang='ko-KR';u.rate=.92;u.pitch=1.15;
-  const v=speechSynthesis.getVoices().find(function(x){return x.lang&&x.lang.indexOf('ko')===0});
-  if(v)u.voice=v;speechSynthesis.cancel();speechSynthesis.speak(u);
+  const vo=speechSynthesis.getVoices().find(function(x){return x.lang&&x.lang.indexOf('ko')===0});
+  if(vo)u.voice=vo;speechSynthesis.cancel();speechSynthesis.speak(u);
 }
-document.getElementById('say').onclick=speak;
+v.addEventListener('play',speak);
 </script>
 </body>
 </html>
