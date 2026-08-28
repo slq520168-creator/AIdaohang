@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>教程</title>
+<link rel="stylesheet" href="style.css"/></head>
+<body>
+<header class="top"><a href="index.html" style="color:inherit;text-decoration:none">← 返回</a></header>
+<article class="card" id="box">加载中…</article>
+<a class="fab" href="https://t.me/globalyouxuanaibot" target="_blank" rel="noopener">✈</a>
+<script>
+(async()=>{
+  const n=new URLSearchParams(location.search).get('n')||'';
+  const files=['data/tools.json','data/more.json','data/packs.json'];
+  const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
+  const t=arrs.flat().find(x=>x.name===n);
+  const box=document.getElementById('box');
+  if(!t){box.innerHTML='<p>未找到</p>';return;}
+  document.title=t.name+' 教程';
+  box.innerHTML=`<h3>${t.name}</h3><p>${t.desc}</p>
+  <p class="tag">${t.cat} · ${t.free?'免费':'收费'}</p>
+  <p style="margin-top:10px">${t.how||'打开官网注册，按首页提示开始使用。'}</p>
+  <p style="margin-top:12px"><a href="${t.url}" target="_blank" rel="noopener">打开官网</a>
+  ${t.guide?` · <a href="${t.guide}" target="_blank" rel="noopener">官方教程</a>`:''}</p>`;
+})();
+</script>
+</body></html>
