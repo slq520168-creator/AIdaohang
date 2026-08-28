@@ -12,7 +12,7 @@ themeBtn.textContent=saved==='dark'?'浅色':'深色';
 themeBtn.onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n);themeBtn.textContent=n==='dark'?'浅色':'深色'};
 const extra=['全部','免费','收费','对话','绘画','视频','办公','编程','智能工作流','游戏','音乐','语音','设计','搜索','写作'];
 function hostOf(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
-function icon(u){const h=hostOf(u);return h?('https://www.google.com/s2/favicons?sz=128&domain='+encodeURIComponent(h)):'';}
+function icon(u){const h=hostOf(u);return h?('https://icons.duckduckgo.com/ip3/'+h+'.ico'):'';}
 function match(t,c){
   if(c==='全部')return true;
   if(c==='免费')return !!t.free;
@@ -28,9 +28,8 @@ async function load(){
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const t of arrs.flat()){if(!t||!t.name||seen.has(t.name))continue;seen.add(t.name);tools.push(t)}
-  const meta=await fetch('data/meta.json').then(r=>r.json()).catch(()=>({}));
   const hot=await fetch('data/hot.json').then(r=>r.json()).catch(()=>[]);
-  metaEl.textContent=`${tools.length} 款工具`;
+  metaEl.textContent=tools.length+' 款工具';
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}"><i>${i+1}</i><span>${h.title}</span></a></li>`).join('');
   renderSide(); render();
 }
@@ -45,7 +44,7 @@ function render(){
   listEl.innerHTML=rows.map(t=>{
     const src=icon(t.url);
     const letter=(t.name||'?').slice(0,1);
-    return `<a class="card" href="guide.html?n=${encodeURIComponent(t.name)}"><div class="row"><div class="av">${src?`<img alt="" src="${src}" onerror="this.replaceWith(document.createTextNode('${letter}'))">`:letter}</div><div><h3>${t.name}</h3><p>${t.desc||t.cat}</p></div></div></a>`;
+    return `<a class="card" href="guide.html?n=${encodeURIComponent(t.name)}"><div class="row"><div class="av"><img alt="" src="${src}" onerror="this.style.display='none';this.parentNode.textContent='${letter}'"></div><div><h3>${t.name}</h3><p>${t.desc||t.cat}</p></div></div></a>`;
   }).join('')||'<p class="count">没有匹配</p>';
 }
 qEl.addEventListener('input',render); load();
