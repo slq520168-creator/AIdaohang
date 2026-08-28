@@ -16,6 +16,7 @@ const listTitle=document.getElementById('listTitle');
 const themeBtn=document.getElementById('theme');
 const langBtn=document.getElementById('lang');
 const sf=document.getElementById('sf');
+const topBtn=document.getElementById('topBtn');
 let tools=[]; let cat='全部'; let lang=localStorage.getItem('lang')||'zh';
 const saved=localStorage.getItem('theme')||'light';
 document.documentElement.dataset.theme=saved;
@@ -34,7 +35,7 @@ themeBtn.onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'l
 langBtn.onclick=()=>{lang=lang==='zh'?'en':'zh';localStorage.setItem('lang',lang);applyChrome();renderSide();render()};
 function hostOf(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
 function iconTag(url,letter){
-  const h=hostOf(url);
+  const h=hostOf(u);
   if(!h) return letter;
   const a='https://www.google.com/s2/favicons?sz=128&domain='+encodeURIComponent(h);
   const b='https://icons.duckduckgo.com/ip3/'+h+'.ico';
@@ -83,6 +84,14 @@ function render(){
     return `<a class="card" href="guide.html?n=${encodeURIComponent(x.name)}"><div class="row"><div class="av">${iconTag(x.url,letter)}</div><div><h3>${x.name}</h3><p>${desc}</p></div></div></a>`;
   }).join('')||`<p class="count">${s.empty}</p>`;
 }
-sf.addEventListener('submit',e=>{e.preventDefault();render();qEl.blur();window.scrollTo({top:0,behavior:'smooth'})});
+function goTop(){window.scrollTo({top:0,behavior:'smooth'})}
+if(topBtn){
+  topBtn.onclick=goTop;
+  const sync=()=>topBtn.classList.toggle('on',window.scrollY>280);
+  window.addEventListener('scroll',sync,{passive:true});
+  sync();
+}
+document.getElementById('brand').onclick=goTop;
+sf.addEventListener('submit',e=>{e.preventDefault();render();qEl.blur();goTop()});
 qEl.addEventListener('input',render);
 load();
