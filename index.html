@@ -4,32 +4,35 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>全球优选AI导航</title>
-<link rel="stylesheet" href="style.css?v=9"/>
+<link rel="stylesheet" href="style.css?v=10"/>
 </head>
 <body>
 <header class="top">
   <div>
-    <h1>全球优选AI导航</h1>
+    <h1 id="brand">全球优选AI导航</h1>
     <p class="sub" id="meta"></p>
   </div>
-  <button id="theme" type="button">深色</button>
+  <div class="acts">
+    <button id="lang" type="button">EN</button>
+    <button id="theme" type="button">深色</button>
+  </div>
 </header>
 <form class="search" id="sf">
-  <input id="q" type="search" placeholder="搜 插件 / 陪伴 / Grok" autocomplete="off" enterkeyhint="search"/>
-  <button type="submit" id="go" aria-label="搜索">🔍</button>
+  <input id="q" type="search" placeholder="" autocomplete="off" enterkeyhint="search"/>
+  <button type="submit" id="go" aria-label="search">🔍</button>
 </form>
 <section class="block" id="hotBlock">
-  <div class="block-h"><h2>今日热门</h2></div>
+  <div class="block-h"><h2 id="hotTitle"></h2></div>
   <ol id="hot" class="rank"></ol>
 </section>
 <section class="block">
-  <div class="block-h"><h2 id="listTitle">AI 工具大全</h2><span class="count" id="count"></span></div>
+  <div class="block-h"><h2 id="listTitle"></h2><span class="count" id="count"></span></div>
   <div id="side" class="cats"></div>
   <main id="list" class="grid"></main>
 </section>
 <a class="fab" href="https://t.me/globalyouxuanaibot" target="_blank" rel="noopener" title="@globalyouxuanaibot">
 <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M9.04 15.3l-.37 5.2c.53 0 .76-.23 1.04-.5l2.5-2.4 5.18 3.8c.95.52 1.63.25 1.89-.88l3.42-16.08h.01c.3-1.41-.51-1.96-1.44-1.62L1.3 9.3C-.07 9.84-.05 10.6 1.06 10.95l5.5 1.72 12.77-8.04c.6-.36 1.15-.16.7.2z"/></svg>
 </a>
-<script src="app.js?v=9"></script>
+<script src="app.js?v=10"></script>
 </body>
 </html>
