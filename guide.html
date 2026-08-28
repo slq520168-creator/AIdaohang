@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="dark">
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>教程</title>
-<link rel="stylesheet" href="style.css"/></head>
+<html lang="zh-CN" data-theme="light">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Guide</title>
+<link rel="stylesheet" href="style.css?v=10"/></head>
 <body>
-<header class="top"><a href="index.html" style="color:inherit;text-decoration:none">← 返回</a></header>
-<article class="card" id="box">加载中…</article>
-<a class="fab" href="https://t.me/globalyouxuanaibot" target="_blank" rel="noopener">✈</a>
+<header class="top"><a id="back" href="index.html" style="color:inherit;text-decoration:none">←</a></header>
+<article class="card" id="box">...</article>
+<a class="fab" href="https://t.me/globalyouxuanaibot" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M9.04 15.3l-.37 5.2c.53 0 .76-.23 1.04-.5l2.5-2.4 5.18 3.8c.95.52 1.63.25 1.89-.88l3.42-16.08h.01c.3-1.41-.51-1.96-1.44-1.62L1.3 9.3C-.07 9.84-.05 10.6 1.06 10.95l5.5 1.72 12.77-8.04c.6-.36 1.15-.16.7.2z"/></svg>
+</a>
 <script>
 (async()=>{
+  const theme=localStorage.getItem('theme')||'light';
+  const lang=localStorage.getItem('lang')||'zh';
+  document.documentElement.dataset.theme=theme;
+  document.getElementById('back').textContent=lang==='en'?'← Back':'← 返回';
   const n=new URLSearchParams(location.search).get('n')||'';
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=20;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=40;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const t=arrs.flat().find(x=>x.name===n);
   const box=document.getElementById('box');
-  if(!t){box.innerHTML='<p>未找到。请用 Pages 打开站点。</p>';return;}
-  document.title=t.name+' 教程';
-  box.innerHTML=`<h3>${t.name}</h3><p>${t.desc}</p>
-  <p class="tag">${t.cat} · ${t.free?'免费':'收费'}</p>
-  <p style="margin-top:10px">${t.how||'打开官网注册开始使用。'}</p>
-  <p style="margin-top:12px"><a href="${t.url}" target="_blank" rel="noopener">打开官网</a>
-  ${t.guide?` · <a href="${t.guide}" target="_blank" rel="noopener">官方教程</a>`:''}</p>`;
+  if(!t){box.innerHTML=lang==='en'?'Not found. Open via GitHub Pages.':'未找到。请用 Pages 打开。';return;}
+  document.title=t.name;
+  const free=t.free?(lang==='en'?'Free':'免费'):(lang==='en'?'Paid':'收费');
+  const open=lang==='en'?'Open site':'打开官网';
+  const how=t.how||(lang==='en'?'Open the official site and sign up.':'打开官网注册后使用。');
+  box.innerHTML=`<h3>${t.name}</h3><p>${t.desc||''}</p><p class="tag">${t.cat} · ${free}</p><p style="margin-top:10px">${how}</p><p style="margin-top:12px"><a href="${t.url}" target="_blank" rel="noopener">${open}</a></p>`;
 })();
 </script>
 </body></html>
