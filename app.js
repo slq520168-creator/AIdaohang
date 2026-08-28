@@ -26,14 +26,20 @@ function applyChrome(){
   document.title=s.brand;
   document.getElementById('hotTitle').textContent=s.hot;
   qEl.placeholder=s.ph;
-  langBtn.textContent=lang==='zh'?'EN':'中';
+  langBtn.textContent=lang==='zh'?'中':'EN';
   themeBtn.textContent=document.documentElement.dataset.theme==='dark'?s.themeL:s.themeD;
   document.documentElement.lang=lang==='zh'?'zh-CN':'en';
 }
 themeBtn.onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n);applyChrome()};
 langBtn.onclick=()=>{lang=lang==='zh'?'en':'zh';localStorage.setItem('lang',lang);applyChrome();renderSide();render()};
 function hostOf(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
-function icon(u){const h=hostOf(u);return h?('https://icons.duckduckgo.com/ip3/'+h+'.ico'):'';}
+function iconTag(url,letter){
+  const h=hostOf(url);
+  if(!h) return letter;
+  const a='https://www.google.com/s2/favicons?sz=128&domain='+encodeURIComponent(h);
+  const b='https://icons.duckduckgo.com/ip3/'+h+'.ico';
+  return `<img alt="" src="${a}" data-b="${b}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.b}else{this.remove();this.parentNode.append('${letter}')}">`;
+}
 function match(t0,c){
   if(c==='全部')return true;
   if(c==='免费')return !!t0.free;
@@ -67,14 +73,14 @@ function render(){
   if(listTitle) listTitle.textContent=q?(s.res+'「'+qEl.value.trim()+'」'):s.all;
   metaEl.textContent=tools.length+s.tools;
   const rows=tools.filter(x=>{
-    const hit=!q||[x.name,x.desc,x.cat,x.how||'',x.url||''].join(' ').toLowerCase().includes(q);
+    const hit=!q||[x.name,x.desc,x.desc_en||'',x.cat,x.how||'',x.url||''].join(' ').toLowerCase().includes(q);
     return hit && (q || match(x,cat));
   });
   countEl.textContent=rows.length+s.hit;
   listEl.innerHTML=rows.map(x=>{
-    const src=icon(x.url);
     const letter=(x.name||'?').slice(0,1);
-    return `<a class="card" href="guide.html?n=${encodeURIComponent(x.name)}"><div class="row"><div class="av"><img alt="" src="${src}" onerror="this.style.display='none';this.parentNode.textContent='${letter}'"></div><div><h3>${x.name}</h3><p>${x.desc||x.cat}</p></div></div></a>`;
+    const desc=lang==='en'?(x.desc_en||x.desc||x.cat):(x.desc||x.cat);
+    return `<a class="card" href="guide.html?n=${encodeURIComponent(x.name)}"><div class="row"><div class="av">${iconTag(x.url,letter)}</div><div><h3>${x.name}</h3><p>${desc}</p></div></div></a>`;
   }).join('')||`<p class="count">${s.empty}</p>`;
 }
 sf.addEventListener('submit',e=>{e.preventDefault();render();qEl.blur();window.scrollTo({top:0,behavior:'smooth'})});
