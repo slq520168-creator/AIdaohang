@@ -1,4 +1,8 @@
 (function(){
+  if(sessionStorage.getItem('aid_welcome')!=='1'){
+    location.replace('index.html');
+    return;
+  }
   var KEY='aid_ok';
   var CODE='520168';
   if(sessionStorage.getItem(KEY)==='1') return;

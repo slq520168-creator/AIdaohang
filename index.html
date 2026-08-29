@@ -20,7 +20,12 @@ video{width:100%;border-radius:18px;display:block;margin:12px 0;background:#111}
 </video>
 <div class="b">Hello there! Welcome to Global Preferred AI Directory. I am An An. Tap the button below for more tools.</div>
 <p class="point">👇</p>
-<a class="enter" href="./tools.html?v=70">Tap here for more</a>
+<a class="enter" id="goHome" href="./tools.html?v=74">Tap here for more</a>
 </div>
+<script>
+document.getElementById('goHome').addEventListener('click',function(){
+  sessionStorage.setItem('aid_welcome','1');
+});
+</script>
 </body>
 </html>
