@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Global Preferred AI Directory</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>全球优选AI导航</title>
 <style>
-body{margin:0;background:#f4ece6;font-family:-apple-system,sans-serif;color:#3b2f2c}
-.w{max-width:430px;margin:0 auto;padding:14px 14px 28px}
-video{width:100%;border-radius:18px;display:block;margin:12px 0;background:#111}
-.b{background:#fff;border-radius:16px;padding:14px;line-height:1.7}
-.point{text-align:center;font-size:28px;margin:8px 0 4px}
-.enter{display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:16px;border-radius:16px;font-weight:600}
+html,body{margin:0;background:#f4ece6;font-family:-apple-system,sans-serif;color:#3b2f2c}
+.w{max-width:430px;margin:0 auto;padding:14px 14px calc(28px + env(safe-area-inset-bottom))}
+video{width:100%;border-radius:18px;display:block;margin:12px 0 10px;background:#111}
+.b{background:#fff;border-radius:16px;padding:14px;line-height:1.7;font-size:16px}
+.point{text-align:center;font-size:28px;margin:10px 0 8px}
+.enter{display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:16px;border-radius:16px;font-weight:600;margin-bottom:12px}
 </style>
 </head>
 <body>
@@ -18,9 +18,9 @@ video{width:100%;border-radius:18px;display:block;margin:12px 0;background:#111}
 <video id="v" playsinline webkit-playsinline controls preload="metadata">
   <source src="_users_a225812b-2be1-4613-a32e-8cc822793592_generated_5562c574-e0b1-4b20-8e93-616e70fe0ea6_generated_video.mp4" type="video/mp4"/>
 </video>
-<div class="b">Hello there! Welcome to Global Preferred AI Directory. I am An An. Tap the button below for more tools.</div>
+<div class="b">你好，欢迎来到全球优选AI导航。我是安安。看完视频，点下面进入首页。</div>
 <p class="point">👇</p>
-<a class="enter" id="goHome" href="./tools.html?v=74">Tap here for more</a>
+<a class="enter" id="goHome" href="./tools.html?v=74">进入首页</a>
 </div>
 <script>
 document.getElementById('goHome').addEventListener('click',function(){
