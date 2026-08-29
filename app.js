@@ -1,9 +1,9 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 无审核 / 本地 / 成人',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search uncensored / local',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 约炮 / 交友',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search hookup / dating',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
-  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['成人','Adult'],['无审核','Uncensored'],['直播','Live'],['交友','Dating'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Hire'],['社区','Community'],['开店','Shop'],['小商品','Goods'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books'],['小说','Novels']
+  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['成人','Adult'],['无审核','Uncensored'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Hire'],['社区','Community'],['开店','Shop'],['小商品','Goods'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books'],['小说','Novels']
 ];
 const KW={
   '对话':/对话|聊天|Chat|GPT|Grok/,
@@ -18,17 +18,18 @@ const KW={
   '旅行':/旅行|机票|Kayak|Skyscanner|地图/,
   '法律':/法律|律师|DoNotPay/,
   '管理':/管理|Jira|Linear|Trello|Asana|ClickUp|Airtable|日历|Calendly/,
-  '绘画':/绘画|Image|Comfy|Flux|Imagine|Fooocus|Forge|NovelAI|Invoke|Civitai|Draw Things/,
-  '视频':/视频|Video|Wan|Hunyuan|FramePack|CogVideo|Open-Sora|LivePortrait|SadTalker|AnimateDiff/,
-  '成人':/成人|无审核|NovelAI|Comfy|Grok|Janitor|SpicyChat|Crushon/,
-  '无审核':/无审核|本地|ComfyUI|Kobold|SillyTavern|NovelAI|ACE-Step|Ollama|LM Studio|Pinokio/,
+  '绘画':/绘画|Image|Comfy|Flux|Imagine|Fooocus|Forge|NovelAI|Invoke|Civitai/,
+  '视频':/视频|Video|Wan|Hunyuan|FramePack|CogVideo|Open-Sora|LivePortrait/,
+  '成人':/成人|无审核|约炮|Feeld|Tinder|Grindr/,
+  '无审核':/无审核|本地|ComfyUI|Kobold|SillyTavern|NovelAI|Ollama|LM Studio/,
   '直播':/直播|Chaturbate|Stripchat|LiveJasmin|BongaCams|CamSoda|MyFreeCams|Streamate|Cam4/,
-  '交友':/交友|Feeld|FetLife|Tinder|Badoo|OkCupid|Grindr|Ashley Madison|Pure|3Fun/,
+  '交友':/交友|约炮|Feeld|FetLife|Tinder|Badoo|OkCupid|Grindr|Bumble|Hinge/,
+  '约炮':/约炮|Tinder|Bumble|Feeld|Grindr|Sniffies|Scruff|AFF|Ashley|FetLife|3Fun|Pure/,
   '办公':/办公|Office|Notion|网盘|VPN|邮箱|Bitwarden|Drive/,
   '编程':/编程|Code|Git|域名|建站|Cloudflare|Pinokio/,
   '智能工作流':/工作流|Agent|n8n/,
   '游戏':/游戏|Game|Luma|itch|Steam/,
-  '音乐':/音乐|Suno|Music|Udio|ACE-Step|AudioCraft|RVC|Riffusion|GPT-SoVITS/,
+  '音乐':/音乐|Suno|Music|Udio|ACE-Step|RVC|Riffusion/,
   '语音':/语音|TTS|Whisper|ElevenLabs|RVC|Bark|ChatTTS/,
   '设计':/设计|Figma|Canva|Coolors|Squoosh|TinyPNG|封面/,
   '搜索':/搜索|Search|Perplexity|Analytics|Console/,
@@ -43,7 +44,7 @@ const KW={
   '接口':/API|接口|OpenRouter/,
   '机器人':/机器人|ROS|Telegram/,
   '图书':/图书|读书|Kindle|微信读书|Goodreads|Gutenberg/,
-  '小说':/小说|章纪|人设|Wattpad|AO3|NovelAI|SillyTavern|Kobold|Ollama|Janitor/
+  '小说':/小说|章纪|人设|Wattpad|AO3|NovelAI|SillyTavern|Kobold|Ollama/
 };
 const sideEl=document.getElementById('side');
 const listEl=document.getElementById('list');
@@ -101,11 +102,11 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=113;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=114;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
-  const hot=await fetch('data/hot.json?v=94').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=95').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
