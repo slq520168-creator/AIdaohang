@@ -20,10 +20,11 @@ video{width:100%;border-radius:18px;display:block;margin:12px 0 10px;background:
 </video>
 <div class="b">你好，欢迎来到全球优选AI导航。我是安安。看完视频，点下面进入首页。</div>
 <p class="point">👇</p>
-<a class="enter" id="goHome" href="./tools.html?v=74">进入首页</a>
+<a class="enter" id="goHome" href="./tools.html?v=86">进入首页</a>
 </div>
 <script>
 document.getElementById('goHome').addEventListener('click',function(){
+  localStorage.setItem('aid_welcome','1');
   sessionStorage.setItem('aid_welcome','1');
 });
 </script>
