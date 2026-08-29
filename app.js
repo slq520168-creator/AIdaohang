@@ -1,6 +1,6 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 绘画 / 视频 / 音乐 / 开店',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search image / video / music',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 绘画 / 视频 / 开店 / 接单',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search image / video / shop',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
   ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['社区','Community'],['开店','Shop'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books']
@@ -15,27 +15,27 @@ const KW={
   '美妆':/美妆|化妆|美颜|YouCam|酷皮士/,
   '宠物':/宠物|狗|猫|Pet|Rover/,
   '美食':/美食|菜谱|Yummly|Tasty/,
-  '旅行':/旅行|机票|Kayak|Skyscanner/,
+  '旅行':/旅行|机票|Kayak|Skyscanner|地图/,
   '法律':/法律|律师|DoNotPay/,
-  '管理':/管理|Jira|Linear|Trello|Asana|ClickUp/,
-  '绘画':/绘画|Image|Comfy|Flux|Imagine|Leonardo|Ideogram/,
-  '视频':/视频|Video|数字人/,
-  '办公':/办公|Office|Notion|网盘|VPN/,
+  '管理':/管理|Jira|Linear|Trello|Asana|ClickUp|Airtable|日历|Calendly/,
+  '绘画':/绘画|Image|Comfy|Flux|Imagine|Leonardo|Ideogram|Photopea|Remove/,
+  '视频':/视频|Video|数字人|抖音|快手|字幕/,
+  '办公':/办公|Office|Notion|网盘|VPN|邮箱|Bitwarden|Drive/,
   '编程':/编程|Code|Git|域名|建站|Cloudflare/,
   '智能工作流':/工作流|Agent|n8n/,
-  '游戏':/游戏|Game/,
+  '游戏':/游戏|Game|Luma/,
   '音乐':/音乐|Suno|Music|Udio/,
   '语音':/语音|TTS|Whisper|ElevenLabs/,
-  '设计':/设计|Figma|Canva/,
-  '搜索':/搜索|Search|Perplexity/,
-  '写作':/写作|文案|Grammarly/,
+  '设计':/设计|Figma|Canva|Coolors|Squoosh|TinyPNG|封面/,
+  '搜索':/搜索|Search|Perplexity|Analytics|Console/,
+  '写作':/写作|文案|Grammarly|DeepL/,
   '接单':/接单|Fiverr|Upwork|猪八戒/,
-  '社区':/社区|Discord|Reddit/,
-  '开店':/开店|Shopify|Gumroad/,
-  '采集':/采集|OBS|录屏/,
-  '接口':/API|接口/,
+  '社区':/社区|Discord|Reddit|Buffer|Later/,
+  '开店':/开店|Shopify|Gumroad|Stripe|PayPal|二维码/,
+  '采集':/采集|OBS|录屏|Loom/,
+  '接口':/API|接口|OpenRouter/,
   '机器人':/机器人|ROS|Telegram/,
-  '图书':/图书|读书|Kindle/
+  '图书':/图书|读书|Kindle|微信读书/
 };
 const sideEl=document.getElementById('side');
 const listEl=document.getElementById('list');
@@ -92,11 +92,11 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=96;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=98;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
-  const hot=await fetch('data/hot.json').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=68').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
