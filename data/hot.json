@@ -1,12 +1,12 @@
 [
+  {"title":"OBS录屏采集","url":"guide.html?n=OBS%E5%BD%95%E5%B1%8F%E9%87%87%E9%9B%86","tag":"采集"},
+  {"title":"Upwork接单","url":"guide.html?n=Upwork%E6%8E%A5%E5%8D%95","tag":"接单"},
+  {"title":"OpenRouter接口","url":"guide.html?n=OpenRouter%E6%8E%A5%E5%8F%A3","tag":"接口"},
   {"title":"Grok Imagine出图","url":"guide.html?n=Grok%20Imagine%E5%87%BA%E5%9B%BE","tag":"绘画"},
-  {"title":"即梦+剪映成片","url":"guide.html?n=%E5%8D%B3%E6%A2%A6%2B%E5%89%AA%E6%98%A0%E6%88%90%E7%89%87","tag":"视频"},
-  {"title":"Udio做歌","url":"guide.html?n=Udio%E5%81%9A%E6%AD%8C","tag":"音乐"},
-  {"title":"ElevenLabs配音","url":"guide.html?n=ElevenLabs%E9%85%8D%E9%9F%B3","tag":"语音"},
-  {"title":"剪映数字人","url":"guide.html?n=%E5%89%AA%E6%98%A0%E6%95%B0%E5%AD%97%E4%BA%BA","tag":"视频"},
-  {"title":"Cloudflare Pages上线","url":"guide.html?n=Cloudflare%20Pages%E4%B8%8A%E7%BA%BF","tag":"编程"},
-  {"title":"Telegram机器人通知","url":"guide.html?n=Telegram%E6%9C%BA%E5%99%A8%E4%BA%BA%E9%80%9A%E7%9F%A5","tag":"机器人"},
-  {"title":"Perplexity搜索","url":"guide.html?n=Perplexity%E6%90%9C%E7%B4%A2","tag":"搜索"},
-  {"title":"Notion AI办公","url":"guide.html?n=Notion%20AI%E5%8A%9E%E5%85%AC","tag":"办公"},
-  {"title":"Gumroad开店","url":"guide.html?n=Gumroad%E5%BC%80%E5%BA%97","tag":"开店"}
+  {"title":"Discord社区","url":"guide.html?n=Discord%E7%A4%BE%E5%8C%BA","tag":"社区"},
+  {"title":"Kayak旅行","url":"guide.html?n=Kayak%E6%97%85%E8%A1%8C","tag":"旅行"},
+  {"title":"微信读书","url":"guide.html?n=%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6","tag":"图书"},
+  {"title":"Trello管理","url":"guide.html?n=Trello%E7%AE%A1%E7%90%86","tag":"管理"},
+  {"title":"Character陪伴","url":"guide.html?n=Character%E9%99%AA%E4%BC%B4","tag":"陪伴"},
+  {"title":"即梦+剪映成片","url":"guide.html?n=%E5%8D%B3%E6%A2%A6%2B%E5%89%AA%E6%98%A0%E6%88%90%E7%89%87","tag":"视频"}
 ]
