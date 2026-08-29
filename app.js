@@ -1,56 +1,60 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 读屏 / 手语 / 星座 / 塔罗',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search screen reader sign tarot astrology',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 模型包 / 云盘 / 换脸 / 试装',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search model pack cloud face swap try-on',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
-  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Ride'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['成人','Adult'],['无审核','Uncensored'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Hire'],['社区','Community'],['开店','Shop'],['小商品','Goods'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books'],['小说','Novels'],['日韩漫画','Manga'],['无障碍','Access'],['星座','Stars'],['塔罗','Tarot']
+  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Ride'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['成人','Adult'],['无审核','Uncensored'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Hire'],['社区','Community'],['开店','Shop'],['小商品','Goods'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books'],['小说','Novels'],['日韩漫画','Manga'],['无障碍','Access'],['星座','Stars'],['塔罗','Tarot'],['云盘','Cloud'],['换脸','Swap'],['打扮','Look'],['模型包','Weights']
 ];
 const KW={
   '对话':/对话|Chat/,
-  '聊天':/聊天|Chat/,
+  '聊天':/聊天/,
   '插件':/插件/,
   '陪伴':/陪伴/,
-  '学习':/学习|ASL|SignSchool/,
-  '健身':/健身|Finch|Stoic|How We Feel/,
-  '美妆':/美妆/,
+  '学习':/学习/,
+  '健身':/健身/,
+  '美妆':/美妆|YouCam|Meitu|FaceApp|Sephora|试妆|试装/,
   '宠物':/宠物/,
   '美食':/美食/,
-  '旅行':/旅行|Wheelmap|AccessNow/,
+  '旅行':/旅行/,
   '拼车':/拼车/,
   '租车':/租车/,
   '法律':/法律/,
   '管理':/管理/,
-  '绘画':/绘画/,
-  '视频':/视频/,
+  '绘画':/绘画|Civitai|Liblib/,
+  '视频':/视频|CapCut|DeepFaceLive/,
   '成人':/成人|18/,
   '无审核':/无审核|本地/,
-  '直播':/直播/,
+  '直播':/直播|DeepFaceLive|Snapchat|TikTok/,
   '交友':/交友/,
   '约炮':/约炮/,
   '办公':/办公/,
   '编程':/编程/,
   '智能工作流':/工作流/,
-  '游戏':/游戏|AbleGamers|Xbox Accessibility/,
+  '游戏':/游戏/,
   '音乐':/音乐/,
-  '语音':/语音|NVDA|VoiceOver|TalkBack|Seeing AI/,
+  '语音':/语音/,
   '设计':/设计/,
   '搜索':/搜索/,
-  '写作':/写作|Day One|Rosebud|Reflectly/,
+  '写作':/写作/,
   '接单':/接单/,
   '兼职':/兼职/,
   '招聘':/招聘/,
-  '社区':/社区|Co-Star|CHANI|Nebula/,
+  '社区':/社区|IMDb|TMZ/,
   '开店':/开店/,
   '小商品':/小商品/,
   '采集':/采集/,
-  '接口':/API/,
+  '接口':/API|Hugging Face|ModelScope|Ollama/,
   '机器人':/机器人/,
-  '图书':/图书|Bookshare|DAISY/,
+  '图书':/图书/,
   '小说':/小说/,
   '日韩漫画':/漫画/,
-  '无障碍':/无障碍|读屏|手语|AAC|色盲|轮椅|NVDA|TalkBack|VoiceOver|Be My Eyes|Otter|AVA|Wheelmap/,
-  '星座':/星座|星盘|Co-Star|CHANI|Astro|Horoscope|月相/,
-  '塔罗':/塔罗|Tarot|Labyrinthos|Biddy|Purple Garden/
+  '无障碍':/无障碍|读屏/,
+  '星座':/星座/,
+  '塔罗':/塔罗/,
+  '云盘':/云盘|Drive|Mega|Dropbox|网盘|阿里云|Baidu|Quark/,
+  '换脸':/换脸|Reface|FaceFusion|DeepFaceLive|Roop|SimSwap|InsightFace/,
+  '打扮':/打扮|试装|试妆|YouCam|DressX|Meitu|SNOW/,
+  '模型包':/模型包|Hugging Face|GGUF|Civitai|Ollama|ModelScope|TheBloke/
 };
 const DROP_NAME=new Set(['Cron Calendar','Brilliant Practice','Quizlet Learn','Tuta Mail','Navidrome Demo','Stream Music','Primephonic 已并','Google Jules Agent','OpenDevin 旧名','Cursor.sh 旧域','Fig Term 已并','Amazon CodeWhisperer','Lyuceum','Mentat AI','Safari 技术预览','Character.AI+']);
 const DROP_HOST=new Set(['lyceum.online','mentat.ai','cron.com','getcruise.com','humane.com','tome.app','kajiwoto.ai','height.app','cozy.sh','hourone.ai','bowery.co','6pen.art','webchatgpt.io','darkness.ai','forger.studio','photoscape.ai','wiseone.io','justplayer.app','stillplayer.app','makeupplus.com','marktext.app','snapseed.online','readyplayer.me','resonate.coop','tianmai.cn','wuan.com','xting.com','woodworm.store','taskcn.com','huanbian.com','ishanjian.com','jiami.cn','xiaoyuan-calc.com','joinopen.com','clara.io','csm.ai','digi.ai']);
@@ -118,7 +122,7 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=149;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=151;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seenName=new Set(); const seenUrl=new Set(); tools=[];
   for(const x of arrs.flat()){
@@ -133,7 +137,7 @@ async function load(){
     if(uk) seenUrl.add(uk);
     tools.push(x);
   }
-  const hot=await fetch('data/hot.json?v=121').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=122').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
