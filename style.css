@@ -2,18 +2,10 @@ html,body{width:100%;max-width:100%;min-height:100%;min-height:100dvh;min-height
 :root,html[data-theme="light"]{--bg:#eef4ff;--card:rgba(255,255,255,.26);--line:rgba(255,255,255,.38);--txt:#111827;--muted:#3d4a5c;--acc:#2563eb;--soft:rgba(255,255,255,.2);--chip:rgba(219,234,254,.62);--chip-t:#1d4ed8}
 html[data-theme="dark"]{--bg:#0d1117;--card:rgba(13,17,23,.36);--line:rgba(255,255,255,.16);--txt:#e6edf3;--muted:#9aa8b6;--acc:#58a6ff;--soft:rgba(33,38,45,.32);--chip:#1f3a5f;--chip-t:#79c0ff}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{color:var(--txt)}
-html{
-  background-color:#2a2226;
-  background-image:url("IMG_7049.jpeg");
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:72% center;
-}
+html,body{color:var(--txt);background:transparent}
 body{
   font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;
   padding:12px 12px 80px;
-  background:transparent;
 }
 #sitebg{
   position:fixed;
