@@ -1,1 +1,12 @@
-[{"title":"即梦+剪映成片","url":"guide.html?n=%E5%8D%B3%E6%A2%A6%2B%E5%89%AA%E6%98%A0%E6%88%90%E7%89%87","tag":"视频"},{"title":"可灵+剪映","url":"guide.html?n=%E5%8F%AF%E7%81%B5%2B%E5%89%AA%E6%98%A0","tag":"视频"},{"title":"n8n工作流","url":"guide.html?n=n8n%E5%B7%A5%E4%BD%9C%E6%B5%81","tag":"工作流"},{"title":"扣子工作流","url":"guide.html?n=%E6%89%A3%E5%AD%90%E5%B7%A5%E4%BD%9C%E6%B5%81","tag":"工作流"},{"title":"Unity Muse","url":"guide.html?n=Unity%20Muse","tag":"游戏"},{"title":"Meshy游戏资产","url":"guide.html?n=Meshy%E6%B8%B8%E6%88%8F%E8%B5%84%E4%BA%A7","tag":"游戏"},{"title":"Dify","url":"guide.html?n=Dify","tag":"工作流"},{"title":"Suno+剪映口播","url":"guide.html?n=Suno%2B%E5%89%AA%E6%98%A0%E5%8F%A3%E6%92%AD","tag":"视频"},{"title":"HeyGen数字人","url":"guide.html?n=HeyGen%E6%95%B0%E5%AD%97%E4%BA%BA","tag":"视频"},{"title":"GDevelop","url":"guide.html?n=GDevelop","tag":"游戏"}]
+[
+  {"title":"Grok Imagine出图","url":"guide.html?n=Grok%20Imagine%E5%87%BA%E5%9B%BE","tag":"绘画"},
+  {"title":"即梦+剪映成片","url":"guide.html?n=%E5%8D%B3%E6%A2%A6%2B%E5%89%AA%E6%98%A0%E6%88%90%E7%89%87","tag":"视频"},
+  {"title":"Udio做歌","url":"guide.html?n=Udio%E5%81%9A%E6%AD%8C","tag":"音乐"},
+  {"title":"ElevenLabs配音","url":"guide.html?n=ElevenLabs%E9%85%8D%E9%9F%B3","tag":"语音"},
+  {"title":"剪映数字人","url":"guide.html?n=%E5%89%AA%E6%98%A0%E6%95%B0%E5%AD%97%E4%BA%BA","tag":"视频"},
+  {"title":"Cloudflare Pages上线","url":"guide.html?n=Cloudflare%20Pages%E4%B8%8A%E7%BA%BF","tag":"编程"},
+  {"title":"Telegram机器人通知","url":"guide.html?n=Telegram%E6%9C%BA%E5%99%A8%E4%BA%BA%E9%80%9A%E7%9F%A5","tag":"机器人"},
+  {"title":"Perplexity搜索","url":"guide.html?n=Perplexity%E6%90%9C%E7%B4%A2","tag":"搜索"},
+  {"title":"Notion AI办公","url":"guide.html?n=Notion%20AI%E5%8A%9E%E5%85%AC","tag":"办公"},
+  {"title":"Gumroad开店","url":"guide.html?n=Gumroad%E5%BC%80%E5%BA%97","tag":"开店"}
+]

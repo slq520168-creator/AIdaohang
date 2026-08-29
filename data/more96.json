@@ -1,0 +1,22 @@
+[
+  {"name":"Grok Imagine出图","cat":"绘画","pack":"绘画","url":"https://grok.com","guide":"https://grok.com","desc":"xAI 出图，人像一致性较好","desc_en":"xAI image generation","how":"打开 grok.com，切到出图，先锁一张参考脸再改衣服场景。","free":true},
+  {"name":"Flux绘画","cat":"绘画","pack":"绘画","url":"https://flux.ai","guide":"https://blackforestlabs.ai","desc":"高质量文生图","desc_en":"Flux text to image","how":"选 Flux 模型，提示词写主体+光线+镜头，先出小图再放大。","free":true},
+  {"name":"Leonardo","cat":"绘画","pack":"绘画","url":"https://leonardo.ai","guide":"https://leonardo.ai","desc":"游戏风与产品图","desc_en":"Leonardo image studio","how":"选模型后固定种子，同一角色连续出图。","free":true},
+  {"name":"Ideogram","cat":"绘画","pack":"绘画","url":"https://ideogram.ai","guide":"https://ideogram.ai","desc":"海报文字不容易糊","desc_en":"Text in images","how":"提示词把要出现的英文或中文放引号里。","free":true},
+  {"name":"Udio做歌","cat":"音乐","pack":"音乐","url":"https://www.udio.com","guide":"https://www.udio.com","desc":"AI 写歌编曲","desc_en":"AI music","how":"Custom 写风格和有无人声，先 30 秒试听再延长。","free":true},
+  {"name":"ElevenLabs配音","cat":"语音","pack":"语音","url":"https://elevenlabs.io","guide":"https://elevenlabs.io","desc":"克隆音色与配音","desc_en":"TTS and voice clone","how":"先用现成音色读口播，确认节奏再克隆自己的声音。","free":true},
+  {"name":"剪映数字人","cat":"视频","pack":"视频","url":"https://www.capcut.com","guide":"https://www.capcut.com","desc":"剪映里做口播数字人","desc_en":"CapCut avatar","how":"剪映选数字人，贴文案生成，再裁成 9:16。","free":true},
+  {"name":"Perplexity搜索","cat":"搜索","pack":"搜索","url":"https://www.perplexity.ai","guide":"https://www.perplexity.ai","desc":"带出处的问答搜索","desc_en":"Answer engine","how":"问题写具体时间和范围，点开引用核对原文。","free":true},
+  {"name":"Notion AI办公","cat":"办公","pack":"办公","url":"https://www.notion.so","guide":"https://www.notion.so/product/ai","desc":"笔记里改稿和总结","desc_en":"Notion AI","how":"把会议记录丢进页面，用 AI 出待办，再人工删错项。","free":true},
+  {"name":"Cloudflare Pages上线","cat":"编程","pack":"编程","url":"https://pages.cloudflare.com","guide":"https://developers.cloudflare.com/pages","desc":"静态站免费上线","desc_en":"Cloudflare Pages","how":"连 GitHub 仓库，构建设空或静态，绑自己的域名。","free":true},
+  {"name":"Telegram机器人通知","cat":"机器人","pack":"机器人","url":"https://telegram.org","guide":"https://core.telegram.org/bots","desc":"Bot 收订单和报警","desc_en":"Telegram bot","how":"BotFather 建机器人，拿到 token，接到表格或 n8n。","free":true},
+  {"name":"Figma设计","cat":"设计","pack":"设计","url":"https://www.figma.com","guide":"https://help.figma.com","desc":"界面和海报协作","desc_en":"UI design","how":"先建 390 宽手机画板，组件化按钮再铺页面。","free":true},
+  {"name":"Canva设计","cat":"设计","pack":"设计","url":"https://www.canva.com","guide":"https://www.canva.com","desc":"模板出海报封面","desc_en":"Canva templates","how":"搜 9:16，只改字和主图，不要叠三层特效。","free":true},
+  {"name":"Keep健身","cat":"健身","pack":"健身","url":"https://www.gotokeep.com","guide":"https://www.gotokeep.com","desc":"跟练与记录","desc_en":"Fitness tracking","how":"选徒手新手计划，先把动作做标准再加负重。","free":true},
+  {"name":"YouCam美妆","cat":"美妆","pack":"美妆","url":"https://www.perfectcorp.com/consumer/apps/ymk","guide":"https://www.perfectcorp.com","desc":"试妆与修图","desc_en":"Virtual makeup","how":"先素颜自拍，再单步试口红，不要一次开全部滤镜。","free":true},
+  {"name":"Yummly菜谱","cat":"美食","pack":"美食","url":"https://www.yummly.com","guide":"https://www.yummly.com","desc":"按冰箱存货找菜","desc_en":"Recipes","how":"输入家里有的食材，筛时间和口味。","free":true},
+  {"name":"Shopify开店","cat":"开店","pack":"开店","url":"https://www.shopify.com","guide":"https://help.shopify.com","desc":"跨境独立站","desc_en":"Online store","how":"先上一件商品跑通支付和物流，再铺货。","free":false},
+  {"name":"Gumroad开店","cat":"开店","pack":"开店","url":"https://gumroad.com","guide":"https://gumroad.com","desc":"卖电子资料和模板","desc_en":"Digital products","how":"上传一份能立刻用的文件，定价先低，看退款再调整。","free":true},
+  {"name":"Grammarly写作","cat":"写作","pack":"写作","url":"https://www.grammarly.com","guide":"https://www.grammarly.com","desc":"英文改错","desc_en":"English writing","how":"整段贴进去，只接受语法建议，风格建议自己定。","free":true},
+  {"name":"Anki学习","cat":"学习","pack":"学习","url":"https://apps.ankiweb.net","guide":"https://docs.ankiweb.net","desc":"间隔重复记卡片","desc_en":"Spaced repetition","how":"一张卡片一个问题，每天新卡不超过 20。","free":true}
+]
