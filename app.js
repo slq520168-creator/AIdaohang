@@ -1,53 +1,53 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 ChatGPT / 本地模型 / Agent / RAG',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search ChatGPT local model Agent',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 出图 / 视频 / 配音 / Comfy',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search image video voice',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
   ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Ride'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['成人','Adult'],['无审核','Uncensored'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Hire'],['社区','Community'],['开店','Shop'],['小商品','Goods'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books'],['小说','Novels'],['日韩漫画','Manga']
 ];
 const KW={
-  '对话':/对话|聊天|ChatGPT|Claude|Gemini|Grok|Kimi|豆包|DeepSeek|Poe|HuggingChat/,
+  '对话':/对话|聊天|ChatGPT|Claude|Gemini|Grok|Kimi|豆包|DeepSeek|Poe/,
   '聊天':/对话|聊天|Chat/,
   '插件':/插件|扩展|Plugin/,
   '陪伴':/陪伴|角色|Character/,
-  '学习':/学习|论文|Elicit|Consensus|NotebookLM|ChatPDF|Semantic Scholar|Explainpaper/,
-  '健身':/健身|跑步|睡眠|Whoop|Oura|Strava|Garmin/,
-  '美妆':/美妆|化妆|美颜|YouCam/,
-  '宠物':/宠物|狗|猫|Pet|Rover/,
-  '美食':/美食|餐饮|外卖|Toast|OpenTable|Resy/,
-  '旅行':/旅行|地图|Maps|Komoot|AllTrails|Rome2Rio/,
-  '拼车':/拼车|出行|Uber|Lyft|Bolt|Grab|BlaBlaCar/,
-  '租车':/租车|Hertz|Avis|Turo|Getaround/,
-  '法律':/法律|律师|Harvey|CoCounsel|Spellbook/,
-  '管理':/管理|项目|Linear|ClickUp|Asana|Jira/,
-  '绘画':/绘画|Image|Midjourney|Ideogram|Flux|Recraft|Krea/,
-  '视频':/视频|Video|Runway|Pika|Kling|Luma|HeyGen/,
-  '成人':/成人|韩国|FANZA|DLsite|Fakku|Lezhin|Toomics/,
-  '无审核':/无审核|本地|Ollama|LM Studio|Open WebUI|AnythingLLM|Jan AI|GPT4All|llama.cpp/,
-  '直播':/直播|Chaturbate|Stripchat|LiveJasmin/,
-  '交友':/交友|约炮|Tinder|Bumble|Feeld|Grindr/,
-  '约炮':/约炮|Tinder|Bumble|Feeld|Grindr|Seeking/,
-  '办公':/办公|PDF|Wise|Revolut|PayPal/,
-  '编程':/编程|Cursor|Copilot|Windsurf|Aider|Cline|Bolt|v0|Replit|Phind/,
-  '智能工作流':/工作流|Agent|LangChain|LangGraph|LlamaIndex|Dify|Flowise|CrewAI|n8n|Haystack/,
-  '游戏':/游戏|棋|itch|Chess|Lichess|Roll20/,
-  '音乐':/音乐|Suno|Bandcamp|Uppbeat/,
-  '语音':/语音|TTS|Whisper|ElevenLabs/,
-  '设计':/设计|白板|Excalidraw|Miro|Figma|Canva/,
-  '搜索':/搜索|Perplexity|Tavily|Exa|Genspark|Felo|Kagi|You.com/,
-  '写作':/写作|笔记|Obsidian|Logseq|Jasper/,
-  '接单':/接单|Fiverr|Upwork|猪八戒/,
-  '兼职':/兼职|时段|试稿|时薪/,
-  '招聘':/招聘|简历|岗位|HireVue/,
-  '社区':/社区|Discord|Reddit|Hugging Face/,
-  '开店':/开店|域名|Shopify|Stripe/,
-  '小商品':/小商品|SKU|库存/,
-  '采集':/采集|爬|Firecrawl|Crawl4AI|Jina/,
-  '接口':/API|接口|OpenRouter|OpenAI|Anthropic|Groq|Together|DeepSeek|Mistral/,
-  '机器人':/机器人|Agent|ROS|Telegram/,
-  '图书':/图书|读书|Goodreads|Libby/,
-  '小说':/小说|Wattpad|AO3|Novlr/,
-  '日韩漫画':/漫画|韩国|日韩|Lezhin|Toomics|Webtoon/
+  '学习':/学习|论文|Elicit|NotebookLM|ChatPDF/,
+  '健身':/健身|跑步|Whoop|Oura|Strava/,
+  '美妆':/美妆|化妆|YouCam/,
+  '宠物':/宠物|狗|猫|Pet/,
+  '美食':/美食|餐饮|外卖|Toast|OpenTable/,
+  '旅行':/旅行|地图|Maps|Komoot|AllTrails/,
+  '拼车':/拼车|Uber|Lyft|BlaBlaCar/,
+  '租车':/租车|Hertz|Turo/,
+  '法律':/法律|Harvey|CoCounsel/,
+  '管理':/管理|项目|Linear|ClickUp|Asana/,
+  '绘画':/绘画|出图|Leonardo|Ideogram|Recraft|Krea|Civitai|SeaArt|Liblib|Comfy|fal.ai/,
+  '视频':/视频|PixVerse|Vidu|海螺|Luma|Haiper|Viggle|Hedra|OpusClip|Captions|Submagic/,
+  '成人':/成人|韩国|FANZA|DLsite|Lezhin/,
+  '无审核':/无审核|本地|Ollama|LM Studio|ComfyUI/,
+  '直播':/直播|Chaturbate|Stripchat/,
+  '交友':/交友|约炮|Tinder|Bumble/,
+  '约炮':/约炮|Tinder|Feeld|Grindr/,
+  '办公':/办公|PDF|Wise|PayPal/,
+  '编程':/编程|Cursor|Copilot|Windsurf|Aider/,
+  '智能工作流':/工作流|Agent|LangChain|Dify|n8n/,
+  '游戏':/游戏|itch|Chess|Lichess/,
+  '音乐':/音乐|Udio|Suno|AIVA|Soundraw|Moises|LALAL|Stability Audio/,
+  '语音':/语音|配音|Play.ht|Cartesia|Resemble|Fish Speech|ElevenLabs/,
+  '设计':/设计|白板|Excalidraw|Miro/,
+  '搜索':/搜索|Perplexity|Tavily|Exa/,
+  '写作':/写作|笔记|Obsidian|Logseq/,
+  '接单':/接单|Fiverr|Upwork/,
+  '兼职':/兼职|时薪/,
+  '招聘':/招聘|简历/,
+  '社区':/社区|Discord|Reddit/,
+  '开店':/开店|Shopify|Stripe/,
+  '小商品':/小商品|SKU/,
+  '采集':/采集|Firecrawl/,
+  '接口':/API|fal.ai|Replicate|OpenRouter|OpenAI/,
+  '机器人':/机器人|Agent|Telegram/,
+  '图书':/图书|Goodreads|Libby/,
+  '小说':/小说|Wattpad|AO3/,
+  '日韩漫画':/漫画|韩国|Lezhin|Toomics/
 };
 const sideEl=document.getElementById('side');
 const listEl=document.getElementById('list');
@@ -105,11 +105,11 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=129;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=130;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
-  const hot=await fetch('data/hot.json?v=109').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=110').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
