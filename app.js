@@ -50,7 +50,8 @@ const KW={
   '日韩漫画':/漫画/
 };
 const DROP_NAME=new Set(['Cron Calendar','Brilliant Practice','Quizlet Learn','Tuta Mail','Navidrome Demo','Stream Music','Primephonic 已并','Google Jules Agent','OpenDevin 旧名','Cursor.sh 旧域','Fig Term 已并','Amazon CodeWhisperer','Lyuceum','Mentat AI','Safari 技术预览','Character.AI+']);
-const DROP_HOST=new Set(['lyceum.online','mentat.ai','cron.com']);
+const DROP_HOST=new Set(['lyceum.online','mentat.ai','cron.com','getcruise.com','humane.com','tome.app','kajiwoto.ai','height.app','cozy.sh','hourone.ai','bowery.co','6pen.art','webchatgpt.io','darkness.ai','forger.studio','photoscape.ai','wiseone.io','justplayer.app','stillplayer.app','makeupplus.com','marktext.app','snapseed.online','readyplayer.me','resonate.coop','tianmai.cn','wuan.com','xting.com','woodworm.store','taskcn.com','huanbian.com','ishanjian.com','jiami.cn','xiaoyuan-calc.com','joinopen.com','clara.io','csm.ai','digi.ai','kajiwoto.ai']);
+const DROP_PATH=['assistant.google.com/auto','joshua-uchoa/MochiDiffusion','mifi.github.io/lossless-cut','prisma-ai.com/lensa','geforce-experience/shadowplay','manyvids.com/Live','apple-music/classical','thomsonreuters.com/westlaw','novavideoplayer.github.io','lightricks.com/apps/motionleap','amazon.com/kindle-dbs'];
 const sideEl=document.getElementById('side');
 const listEl=document.getElementById('list');
 const qEl=document.getElementById('q');
@@ -88,6 +89,7 @@ function urlKey(u){
     return x.hostname.replace(/^www\./,'').toLowerCase()+x.pathname.replace(/\/+$/,'');
   }catch(e){return String(u||'').toLowerCase()}
 }
+function deadPath(u){const s=String(u||'').toLowerCase();return DROP_PATH.some(p=>s.includes(p))}
 function esc(s){return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>').replace(/"/g,'"')}
 function isHttp(u){return /^https?:\/\//i.test(u||'')}
 function iconTag(url,letter){
@@ -118,6 +120,7 @@ async function load(){
   const seenName=new Set(); const seenUrl=new Set(); tools=[];
   for(const x of arrs.flat()){
     if(!x||!x.name||DROP_NAME.has(x.name)) continue;
+    if(deadPath(x.url)) continue;
     const h=hostOf(x.url);
     if(h&&DROP_HOST.has(h)) continue;
     if(seenName.has(x.name)) continue;
@@ -127,7 +130,7 @@ async function load(){
     if(uk) seenUrl.add(uk);
     tools.push(x);
   }
-  const hot=await fetch('data/hot.json?v=117').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=118').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
