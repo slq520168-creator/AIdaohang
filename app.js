@@ -1,5 +1,5 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 网盘 / 笔记 / PDF / 会议',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 部署 / 字体 / 网盘 / 音乐',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
   en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search tools',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
@@ -10,7 +10,7 @@ const KW={
   '聊天':/对话|聊天|Chat/,
   '插件':/插件|扩展|Plugin/,
   '陪伴':/陪伴|角色|Character/,
-  '学习':/学习|教程|Anki|Quizlet|Khan|Desmos|Wolfram/,
+  '学习':/学习|教程|Anki|Quizlet|Khan|MDN|DevDocs|Kaggle|Zotero/,
   '健身':/健身|瑜伽|Keep|Yoga/,
   '美妆':/美妆|化妆|美颜|YouCam|酷皮士/,
   '宠物':/宠物|狗|猫|Pet|Rover/,
@@ -18,26 +18,26 @@ const KW={
   '旅行':/旅行|地图|Maps|Kayak|Skyscanner/,
   '法律':/法律|律师|DoNotPay/,
   '管理':/管理|日历|Calendar|Calendly|Jira|Linear|Trello|Asana|ClickUp/,
-  '绘画':/绘画|Image|Comfy|Flux|Imagine|Fooocus|Forge|NovelAI|Invoke|Civitai/,
-  '视频':/视频|Video|TVING|Watcha|Wavve|Zoom|Meet|Jitsi/,
-  '成人':/成人|韩国|FANZA|DLsite|Fakku|Lezhin|Toomics|POVKOREA|AVKOREA/,
+  '绘画':/绘画|Image|Comfy|Unsplash|Pexels|Pixabay/,
+  '视频':/视频|Video|Coverr|Mixkit|TVING|Watcha/,
+  '成人':/成人|韩国|FANZA|DLsite|Fakku|Lezhin|Toomics/,
   '无审核':/无审核|本地|ComfyUI|Kobold|SillyTavern|NovelAI|Ollama|LM Studio/,
   '直播':/直播|Chaturbate|Stripchat|LiveJasmin|BongaCams|CamSoda|MyFreeCams|Streamate|Cam4/,
   '交友':/交友|约炮|Feeld|FetLife|Tinder|Badoo|OkCupid|Grindr|Bumble|Hinge/,
   '约炮':/约炮|Tinder|Bumble|Feeld|Grindr|Sniffies|Seeking|Hornet|Romeo|Doublelist/,
-  '办公':/办公|邮箱|密码|网盘|笔记|会议|PDF|Drive|Dropbox|Notion|Obsidian|Zoom|Proton/,
-  '编程':/编程|Code|Git|域名|建站|Cloudflare|Pinokio/,
+  '办公':/办公|邮箱|密码|网盘|笔记|会议|PDF|Wise|Revolut|Payoneer|Mercury/,
+  '编程':/编程|Code|Git|Vercel|Netlify|Supabase|Cloudflare|Railway|Render|Colab|Replit/,
   '智能工作流':/工作流|Agent|n8n/,
   '游戏':/游戏|Game|Luma|itch|Steam|Nutaku|JAST/,
-  '音乐':/音乐|Suno|Music|Udio|ACE-Step|RVC|Riffusion/,
+  '音乐':/音乐|Suno|Bandcamp|SoundCloud|BandLab|Audacity|Spotify/,
   '语音':/语音|TTS|Whisper|ElevenLabs|RVC|Bark|ChatTTS/,
-  '设计':/设计|Figma|Canva|Photopea|Remove|TinyPNG|Squoosh|Excalidraw|tldraw/,
-  '搜索':/搜索|Search|Perplexity|Archive|Wolfram/,
-  '写作':/写作|文案|翻译|Grammarly|DeepL|Translate|Reverso/,
+  '设计':/设计|Figma|Canva|Photopea|Coolors|Unsplash|Lucide|Tailwind|Google Fonts/,
+  '搜索':/搜索|Search|Perplexity|Archive|PostHog|Plausible|AlternativeTo/,
+  '写作':/写作|文案|翻译|LanguageTool|Hemingway|Overleaf|Typst|Zotero/,
   '接单':/接单|Fiverr|Upwork|猪八戒|兼职|招聘|订金|结算|无审核/,
   '兼职':/兼职|时段|试稿|时薪|结算|无审核/,
   '招聘':/招聘|简历|岗位|入职|工资|试工|无审核/,
-  '社区':/社区|Discord|Reddit|Buffer|Later/,
+  '社区':/社区|Discord|Reddit|Buffer|Later|Mastodon|Bluesky|Product Hunt/,
   '开店':/开店|Shopify|Gumroad|Stripe|PayPal|二维码|售后|小商品/,
   '小商品':/小商品|SKU|库存|白底|进价|套装/,
   '采集':/采集|截图|OBS|录屏|Loom|ShareX|Flameshot|CleanShot/,
@@ -103,11 +103,11 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=119;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=120;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
-  const hot=await fetch('data/hot.json?v=100').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=101').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
