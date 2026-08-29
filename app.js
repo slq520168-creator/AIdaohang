@@ -1,6 +1,6 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 地图 / PDF / 翻译 / 转账',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search maps PDF translate',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 项目 / 白板 / 棋类 / API',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search project board game API',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
   ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Ride'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['成人','Adult'],['无审核','Uncensored'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Hire'],['社区','Community'],['开店','Shop'],['小商品','Goods'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books'],['小说','Novels'],['日韩漫画','Manga']
@@ -19,7 +19,7 @@ const KW={
   '拼车':/拼车|出行|Uber|Lyft|Bolt|Grab|BlaBlaCar|inDrive|Gojek/,
   '租车':/租车|Hertz|Avis|Budget|Enterprise|Sixt|Europcar|Turo|Getaround|DiscoverCars/,
   '法律':/法律|律师|Harvey|CoCounsel|Spellbook|EvenUp|DoNotPay/,
-  '管理':/管理|物流|能源|EnergySage|Octopus|Cal.com|SavvyCal|Flexport|Procore/,
+  '管理':/管理|项目|Linear|Height|ClickUp|Asana|Monday|Jira/,
   '绘画':/绘画|Image|Midjourney|Ideogram|Flux|Recraft|Krea|Firefly/,
   '视频':/视频|Video|HandBrake|LosslessCut|Shotcut|DaVinci|Coverr|Mixkit|Runway|Pika/,
   '成人':/成人|韩国|FANZA|DLsite|Fakku|Lezhin|Toomics/,
@@ -28,25 +28,25 @@ const KW={
   '交友':/交友|约炮|Feeld|FetLife|Tinder|Badoo|OkCupid|Grindr|Bumble|Hinge/,
   '约炮':/约炮|Tinder|Bumble|Feeld|Grindr|Sniffies|Seeking|Hornet|Romeo|Doublelist/,
   '办公':/办公|PDF|转账|Wise|Revolut|PayPal|ILovePDF|Smallpdf|PDF24|CloudConvert/,
-  '编程':/编程|Code|Git|OpenWeather|Darktrace|CrowdStrike|Vercel|Netlify|Supabase/,
+  '编程':/编程|API|Sentry|Postman|Insomnia|Hoppscotch|Bruno|UptimeRobot|Docusaurus|VitePress/,
   '智能工作流':/工作流|Agent|n8n|UiPath|Palantir|C3 AI/,
-  '游戏':/游戏|Game|Luma|itch|Steam|Nutaku|JAST/,
+  '游戏':/游戏|棋|itch|Steam|Chess|Lichess|Roll20|Foundry|Inkarnate|Poki|CrazyGames/,
   '音乐':/音乐|Epidemic|Artlist|Uppbeat|Suno|Bandcamp|SoundCloud/,
   '语音':/语音|TTS|Whisper|ElevenLabs|RVC|Bark|ChatTTS/,
-  '设计':/设计|图库|压图|Unsplash|Pexels|Pixabay|Remove.bg|Photopea|TinyPNG|Squoosh/,
-  '搜索':/搜索|Search|Mixpanel|Amplitude|Hotjar|Clarity|Perplexity/,
-  '写作':/写作|阅读|Readwise|Instapaper|Pocket|Matter|DeepL Write/,
+  '设计':/设计|白板|图标|字体|Excalidraw|Miro|tldraw|Coolors|Lucide|Tabler|Haikei/,
+  '搜索':/搜索|统计|Plausible|Umami|Fathom|GoatCounter|Clarity|Perplexity/,
+  '写作':/写作|笔记|文档|Obsidian|Logseq|GitBook|Confluence|Coda|Scrivener/,
   '接单':/接单|Fiverr|Upwork|猪八戒|兼职|招聘|订金|结算|无审核/,
   '兼职':/兼职|时段|试稿|时薪|结算|无审核/,
   '招聘':/招聘|Eightfold|HireVue|SeekOut|Pymetrics|简历|岗位/,
   '社区':/社区|Discord|Reddit|Buffer|Later|Mastodon|Bluesky|Product Hunt/,
-  '开店':/开店|Shopify|Gumroad|Stripe|PayPal|Lemon Squeezy/,
+  '开店':/开店|域名|Namecheap|Porkbun|Cloudflare Registrar|Shopify|Stripe/,
   '小商品':/小商品|SKU|库存|白底|进价|套装/,
   '采集':/采集|截图|录屏|Loom|Tella|Screen Studio|OBS|ShareX/,
-  '接口':/API|接口|OpenRouter/,
+  '接口':/API|接口|OpenRouter|Postman|Insomnia|Hoppscotch|Bruno|HTTPie/,
   '机器人':/机器人|ROS|Telegram/,
   '图书':/图书|读书|Goodreads|StoryGraph|Libby|OverDrive|Archive.org|Open Library/,
-  '小说':/小说|章纪|人设|Wattpad|AO3|NovelAI|Munpia|Kakao Page/,
+  '小说':/小说|世界观|Novlr|LivingWriter|Campfire|World Anvil|Wattpad|AO3/,
   '日韩漫画':/漫画|韩国|日韩|DLsite|Fakku|Lezhin|Toomics|Toptoon|Webtoon|Kakao|Naver|Tapas|Bomtoon/
 };
 const sideEl=document.getElementById('side');
@@ -105,11 +105,11 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=125;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=127;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
-  const hot=await fetch('data/hot.json?v=106').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=108').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
