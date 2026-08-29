@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
 <title>Guide</title>
-<link rel="stylesheet" href="style.css?v=69"/>
+<link rel="stylesheet" href="style.css?v=73"/>
 <style>
 #box{
   display:block;
@@ -20,14 +20,21 @@
 #box ol{margin:8px 0 0 18px}
 #box li{margin:0 0 12px}
 #box a.btn{display:inline-block;margin-top:12px;background:#2563eb;color:#fff;text-decoration:none;padding:10px 14px;border-radius:12px}
+#gate{position:fixed;inset:0;z-index:99999;background:rgba(20,16,14,.62);display:flex;align-items:center;justify-content:center;padding:18px}
+.gatebox{width:100%;max-width:340px;background:#fff;border-radius:16px;padding:20px 18px 18px}
+.gatet{margin:0 0 12px;font-size:18px;font-weight:600;color:#3b2f2c}
+#gateIn{width:100%;box-sizing:border-box;border:1px solid #d9cfc8;border-radius:12px;padding:12px;font-size:16px;margin:0 0 12px}
+#gateGo{width:100%;border:0;background:#d97888;color:#fff;border-radius:12px;padding:12px;font-size:16px;font-weight:600}
+#gateErr{visibility:hidden;color:#c0392b;font-size:13px;margin:10px 0 0}
 </style>
 </head>
 <body>
 <div id="sitebg" aria-hidden="true"></div>
 <div id="scroll">
-<header class="top"><a href="tools.html?v=69" style="color:inherit;text-decoration:none">← 返回</a></header>
+<header class="top"><a href="tools.html?v=73" style="color:inherit;text-decoration:none">← 返回</a></header>
 <article class="card" id="box">加载中…</article>
 </div>
+<script src="lock.js?v=73"></script>
 <script>
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
 function splitHow(how){
@@ -39,12 +46,8 @@ function splitHow(how){
 (async()=>{
   const box=document.getElementById('box');
   const n=decodeURIComponent(new URLSearchParams(location.search).get('n')||'');
-  const v='69';
+  const v='73';
   let guides={};
-  try{
-    const gs=await Promise.all([1,2,3].map(i=>fetch('data/hot-guides'+(i===1?'':i)+'.json?v='+v).then(r=>r.ok?r.json():{}).catch(()=>({}))));
-    // hot-guides.json is the first file name without number
-  }catch(e){}
   try{
     const a=await fetch('data/hot-guides.json?v='+v).then(r=>r.ok?r.json():{}).catch(()=>({}));
     const b=await fetch('data/hot-guides2.json?v='+v).then(r=>r.ok?r.json():{}).catch(()=>({}));
@@ -52,7 +55,7 @@ function splitHow(how){
     guides=Object.assign({},a,b,c);
   }catch(e){}
   const files=['data/packs.json?v='+v,'data/tools.json?v='+v,'data/more.json?v='+v];
-  for(let i=2;i<=98;i++) files.push('data/more'+i+'.json?v='+v);
+  for(let i=2;i<=101;i++) files.push('data/more'+i+'.json?v='+v);
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const t=arrs.flat().find(x=>x&&x.name===n)||{name:n,url:'#',desc:'',how:''};
   const g=guides[n]||{};
@@ -60,10 +63,10 @@ function splitHow(how){
   if(!steps.length){
     steps=[
       (t.desc||'这条工具')+'。',
-      t.url&&t.url!=='#'?('打开官网：'+t.url):'在导航里点返回，再进这条工具。',
-      '先用正规账号注册，不要买来路不明号。',
-      '先跑通一个最小用例，再批量。',
-      '能用的结果自己留一份，不要只做在网页里。'
+      t.url&&t.url!=='#'?('打开官网：'+t.url):'在导航里点返回。',
+      '先用正规账号注册。',
+      '先跑通一个最小用例。',
+      '结果自己留一份。'
     ];
   }
   document.title=t.name||n;
@@ -72,4 +75,5 @@ function splitHow(how){
   box.innerHTML='<h3>'+esc(t.name||n)+'</h3><p class="sub">'+esc(title)+'</p><ol>'+steps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol><p><a class="btn" href="'+esc(url)+'" target="_blank" rel="noopener">打开官网</a></p>';
 })();
 </script>
-</body></html>
+</body>
+</html>
