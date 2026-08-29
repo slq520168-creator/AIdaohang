@@ -4,10 +4,9 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Guide</title>
-<link rel="stylesheet" href="style.css?v=56"/>
+<link rel="stylesheet" href="style.css?v=60"/>
 <style>
-body{background:#f4f6fb;background-image:none}
-#box{display:block;padding:16px 16px 40px;margin:8px 0 24px;line-height:1.8;background:#fff;opacity:1}
+#box{display:block;padding:16px 16px 40px;margin:8px 0 24px;line-height:1.8;background:rgba(255,255,255,.32);opacity:1;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 #box h3{font-size:20px;margin-bottom:6px}
 #box .sub{color:#5b6b82;font-size:13px;margin-bottom:8px}
 #box ol{margin:8px 0 0 18px}
@@ -16,7 +15,7 @@ body{background:#f4f6fb;background-image:none}
 </style>
 </head>
 <body>
-<header class="top"><a href="tools.html?v=56" style="color:inherit;text-decoration:none">← 返回</a></header>
+<header class="top"><a href="tools.html?v=60" style="color:inherit;text-decoration:none">← 返回</a></header>
 <article class="card" id="box">加载中…</article>
 <script>
 (async()=>{
@@ -24,9 +23,9 @@ body{background:#f4f6fb;background-image:none}
   const n=decodeURIComponent(new URLSearchParams(location.search).get('n')||'');
   let guides={};
   try{
-    guides=await fetch('data/hot-guides.json?v=56').then(r=>r.json());
+    guides=await fetch('data/hot-guides.json?v=60').then(r=>r.json());
   }catch(e){}
-  const files=['data/packs.json?v=56','data/tools.json?v=56'];
+  const files=['data/packs.json?v=60','data/tools.json?v=60'];
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const t=arrs.flat().find(x=>x&&x.name===n)||{name:n,url:'#'};
   const g=guides[n];

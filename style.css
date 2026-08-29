@@ -1,27 +1,35 @@
 html,body{width:100%;max-width:100%;overflow-x:hidden}
-:root,html[data-theme="light"]{--bg:#eef4ff;--card:rgba(255,255,255,.46);--line:rgba(255,255,255,.4);--txt:#111827;--muted:#4b5a70;--acc:#2563eb;--soft:rgba(255,255,255,.34);--chip:rgba(219,234,254,.7);--chip-t:#1d4ed8}
-html[data-theme="dark"]{--bg:#0d1117;--card:rgba(22,27,34,.48);--line:rgba(255,255,255,.16);--txt:#e6edf3;--muted:#9aa8b6;--acc:#58a6ff;--soft:rgba(33,38,45,.4);--chip:#1f3a5f;--chip-t:#79c0ff}
+:root,html[data-theme="light"]{--bg:#eef4ff;--card:rgba(255,255,255,.26);--line:rgba(255,255,255,.38);--txt:#111827;--muted:#3d4a5c;--acc:#2563eb;--soft:rgba(255,255,255,.2);--chip:rgba(219,234,254,.62);--chip-t:#1d4ed8}
+html[data-theme="dark"]{--bg:#0d1117;--card:rgba(13,17,23,.36);--line:rgba(255,255,255,.16);--txt:#e6edf3;--muted:#9aa8b6;--acc:#58a6ff;--soft:rgba(33,38,45,.32);--chip:#1f3a5f;--chip-t:#79c0ff}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%;color:var(--txt)}
 body{
   font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;
   padding:12px 12px 80px;
+  background:#2a2226;
+  position:relative;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
   background-color:#2a2226;
   background-image:url("IMG_7049.jpeg");
-  background-size:auto 100%;
-  background-position:right center;
-  background-attachment:fixed;
   background-repeat:no-repeat;
+  background-size:cover;
+  background-position:72% center;
 }
 .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px}
 .acts{display:flex;gap:6px;flex:none}
 h1{font-size:18px}
 .sub{color:var(--muted);font-size:12px;margin-top:2px}
-#theme,#lang{border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:999px;padding:7px 10px}
+#theme,#lang{border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:999px;padding:7px 10px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .search{position:sticky;top:0;z-index:20;display:flex;gap:8px;margin:0 0 10px;padding:6px 0;background:transparent}
-#q{flex:1;min-width:0;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:14px;padding:11px 12px;font-size:16px}
+#q{flex:1;min-width:0;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:14px;padding:11px 12px;font-size:16px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 #go{width:42px;min-width:42px;height:42px;flex:none;border:0;border-radius:50%;background:var(--acc);color:#fff}
-.block{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px;margin-bottom:10px;width:100%}
+.block{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px;margin-bottom:10px;width:100%;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .block-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .block-h h2{font-size:15px}
 .rank{list-style:none;max-height:168px;overflow-y:auto}
@@ -34,7 +42,7 @@ h1{font-size:18px}
 .cats button{border:1px solid var(--line);background:var(--soft);color:var(--txt);border-radius:10px;padding:6px 9px;font-size:12px}
 .cats button.on{background:var(--chip);color:var(--chip-t);font-weight:600;border-color:transparent}
 .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;width:100%}
-.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 8px;text-decoration:none;color:var(--txt);min-width:0}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 8px;text-decoration:none;color:var(--txt);min-width:0;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .card .row{display:flex;gap:8px;align-items:center;min-width:0}
 .card .row>div:last-child{min-width:0;flex:1;overflow:hidden}
 .av{width:32px;height:32px;flex:none;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--line);background:rgba(255,255,255,.7)}
