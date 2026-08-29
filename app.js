@@ -1,5 +1,5 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 会计 / 保险 / 教育 / 物流AI',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 餐饮 / 健身 / 3D / 邮件营销',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
   en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search industry AI',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
@@ -11,15 +11,15 @@ const KW={
   '插件':/插件|扩展|Plugin/,
   '陪伴':/陪伴|角色|Character/,
   '学习':/学习|教育|Khanmigo|Gradescope|Turnitin|Duolingo|Coursera|Yoodli/,
-  '健身':/健身|瑜伽|Keep|Yoga/,
+  '健身':/健身|跑步|睡眠|Whoop|Oura|Strava|Garmin|MyFitnessPal|Cronometer/,
   '美妆':/美妆|化妆|美颜|YouCam|酷皮士/,
   '宠物':/宠物|狗|猫|Pet|Rover/,
-  '美食':/美食|菜谱|Yummly|Tasty/,
-  '旅行':/旅行|酒店|机票|拼车|租车|Booking|Airbnb|Kayak|Uber|BlaBlaCar|Hertz/,
+  '美食':/美食|餐饮|外卖|Toast|OpenTable|Resy|DoorDash|Uber Eats|TheFork/,
+  '旅行':/旅行|天气|Windy|AccuWeather|Booking|Airbnb|Kayak|Uber/,
   '拼车':/拼车|出行|Uber|Lyft|Bolt|Grab|BlaBlaCar|inDrive|Gojek/,
   '租车':/租车|Hertz|Avis|Budget|Enterprise|Sixt|Europcar|Turo|Getaround|DiscoverCars/,
   '法律':/法律|律师|Harvey|CoCounsel|Spellbook|EvenUp|DoNotPay/,
-  '管理':/管理|物流|施工|Flexport|Procore|Samsara|FourKites|project44/,
+  '管理':/管理|物流|能源|EnergySage|Octopus|Cal.com|SavvyCal|Flexport|Procore/,
   '绘画':/绘画|Image|Midjourney|Ideogram|Flux|Recraft|Krea|Firefly/,
   '视频':/视频|Video|Runway|Pika|Kling|Luma|HeyGen|Synthesia|Descript|Opus|Captions/,
   '成人':/成人|韩国|FANZA|DLsite|Fakku|Lezhin|Toomics/,
@@ -27,22 +27,22 @@ const KW={
   '直播':/直播|Chaturbate|Stripchat|LiveJasmin|BongaCams|CamSoda|MyFreeCams|Streamate|Cam4/,
   '交友':/交友|约炮|Feeld|FetLife|Tinder|Badoo|OkCupid|Grindr|Bumble|Hinge/,
   '约炮':/约炮|Tinder|Bumble|Feeld|Grindr|Sniffies|Seeking|Hornet|Romeo|Doublelist/,
-  '办公':/办公|会计|保险|QuickBooks|Xero|Lemonade|Gamma|Tome|Copilot/,
-  '编程':/编程|Code|Git|Darktrace|CrowdStrike|SentinelOne|Vercel|Netlify|Supabase/,
+  '办公':/办公|会计|保险|问卷|Typeform|Tally|Fillout|QuickBooks|Xero|Gamma/,
+  '编程':/编程|Code|Git|OpenWeather|Darktrace|CrowdStrike|Vercel|Netlify|Supabase/,
   '智能工作流':/工作流|Agent|n8n|UiPath|Palantir|C3 AI/,
   '游戏':/游戏|Game|Luma|itch|Steam|Nutaku|JAST/,
   '音乐':/音乐|Suno|Bandcamp|SoundCloud|BandLab|Audacity|Spotify/,
   '语音':/语音|TTS|Whisper|ElevenLabs|RVC|Bark|ChatTTS/,
-  '设计':/设计|Figma|Canva|Firefly|LookX|Maket|Unsplash|Lucide/,
-  '搜索':/搜索|Search|Perplexity|Surfer|Frase|Clearscope|AlphaSense/,
-  '写作':/写作|文案|Jasper|Copy.ai|Writesonic|LanguageTool|Hemingway/,
+  '设计':/设计|3D|Blender|Meshy|Tripo|Onshape|Fusion|CLO|Figma|Canva/,
+  '搜索':/搜索|Search|Mixpanel|Amplitude|Hotjar|Clarity|Perplexity/,
+  '写作':/写作|邮件|Mailchimp|Klaviyo|Brevo|Jasper|Copy.ai/,
   '接单':/接单|Fiverr|Upwork|猪八戒|兼职|招聘|订金|结算|无审核/,
   '兼职':/兼职|时段|试稿|时薪|结算|无审核/,
   '招聘':/招聘|Eightfold|HireVue|SeekOut|Pymetrics|简历|岗位/,
   '社区':/社区|Discord|Reddit|Buffer|Later|Mastodon|Bluesky|Product Hunt/,
   '开店':/开店|Shopify|Gumroad|Stripe|Lemon Squeezy|二维码|售后/,
   '小商品':/小商品|SKU|库存|白底|进价|套装/,
-  '采集':/采集|截图|OBS|录屏|Loom|ShareX|Flameshot|CleanShot/,
+  '采集':/采集|截图|录屏|Loom|Tella|Screen Studio|OBS|ShareX/,
   '接口':/API|接口|OpenRouter/,
   '机器人':/机器人|ROS|Telegram/,
   '图书':/图书|读书|漫画|Kindle|BookWalker|Webtoon|Piccoma|Ridibooks/,
@@ -105,11 +105,11 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=123;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=124;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
-  const hot=await fetch('data/hot.json?v=104').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=105').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
