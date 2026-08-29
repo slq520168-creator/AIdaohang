@@ -4,9 +4,22 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Guide</title>
-<link rel="stylesheet" href="style.css?v=60"/>
+<link rel="stylesheet" href="style.css?v=61"/>
 <style>
-#box{display:block;padding:16px 16px 40px;margin:8px 0 24px;line-height:1.8;background:rgba(255,255,255,.32);opacity:1;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+body{padding-right:118px}
+.top a{text-shadow:0 1px 2px rgba(255,255,255,.7)}
+#box{
+  display:block;
+  width:100%;
+  max-width:none;
+  padding:14px 14px 28px;
+  margin:8px 0 24px;
+  line-height:1.75;
+  background:rgba(255,248,242,.9);
+  border:1px solid rgba(255,255,255,.55);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+}
 #box h3{font-size:20px;margin-bottom:6px}
 #box .sub{color:#5b6b82;font-size:13px;margin-bottom:8px}
 #box ol{margin:8px 0 0 18px}
@@ -15,7 +28,7 @@
 </style>
 </head>
 <body>
-<header class="top"><a href="tools.html?v=60" style="color:inherit;text-decoration:none">← 返回</a></header>
+<header class="top"><a href="tools.html?v=61" style="color:inherit;text-decoration:none">← 返回</a></header>
 <article class="card" id="box">加载中…</article>
 <script>
 (async()=>{
@@ -23,9 +36,9 @@
   const n=decodeURIComponent(new URLSearchParams(location.search).get('n')||'');
   let guides={};
   try{
-    guides=await fetch('data/hot-guides.json?v=60').then(r=>r.json());
+    guides=await fetch('data/hot-guides.json?v=61').then(r=>r.json());
   }catch(e){}
-  const files=['data/packs.json?v=60','data/tools.json?v=60'];
+  const files=['data/packs.json?v=61','data/tools.json?v=61'];
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const t=arrs.flat().find(x=>x&&x.name===n)||{name:n,url:'#'};
   const g=guides[n];
