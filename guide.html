@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Guide</title>
-<link rel="stylesheet" href="style.css?v=62"/>
+<link rel="stylesheet" href="style.css?v=63"/>
 <style>
 #box{
   display:block;
@@ -25,7 +25,8 @@
 </style>
 </head>
 <body>
-<header class="top"><a href="tools.html?v=62" style="color:inherit;text-decoration:none">← 返回</a></header>
+<div id="sitebg" aria-hidden="true"></div>
+<header class="top"><a href="tools.html?v=63" style="color:inherit;text-decoration:none">← 返回</a></header>
 <article class="card" id="box">加载中…</article>
 <script>
 (async()=>{
@@ -33,9 +34,9 @@
   const n=decodeURIComponent(new URLSearchParams(location.search).get('n')||'');
   let guides={};
   try{
-    guides=await fetch('data/hot-guides.json?v=62').then(r=>r.json());
+    guides=await fetch('data/hot-guides.json?v=63').then(r=>r.json());
   }catch(e){}
-  const files=['data/packs.json?v=62','data/tools.json?v=62'];
+  const files=['data/packs.json?v=63','data/tools.json?v=63'];
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const t=arrs.flat().find(x=>x&&x.name===n)||{name:n,url:'#'};
   const g=guides[n];
