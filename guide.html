@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
 <title>Guide</title>
-<link rel="stylesheet" href="style.css?v=67"/>
+<link rel="stylesheet" href="style.css?v=69"/>
 <style>
 #box{
   display:block;
@@ -13,8 +13,6 @@
   line-height:1.8;
   background:rgba(255,255,255,.18);
   border:1px solid rgba(255,255,255,.28);
-  backdrop-filter:none;
-  -webkit-backdrop-filter:none;
 }
 #box h3,#box li,#box .sub,#box p{text-shadow:0 1px 2px rgba(255,255,255,.85)}
 #box h3{font-size:20px;margin-bottom:6px}
@@ -27,30 +25,51 @@
 <body>
 <div id="sitebg" aria-hidden="true"></div>
 <div id="scroll">
-<header class="top"><a href="tools.html?v=67" style="color:inherit;text-decoration:none">← 返回</a></header>
+<header class="top"><a href="tools.html?v=69" style="color:inherit;text-decoration:none">← 返回</a></header>
 <article class="card" id="box">加载中…</article>
 </div>
 <script>
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function splitHow(how){
+  const t=String(how||'').trim();
+  if(!t) return [];
+  const parts=t.split(/(?:\d+[.\u3001\u3002]\s*|\u3002|;|\n)+/).map(x=>x.trim()).filter(x=>x.length>1);
+  return parts.length?parts:[t];
+}
 (async()=>{
   const box=document.getElementById('box');
   const n=decodeURIComponent(new URLSearchParams(location.search).get('n')||'');
+  const v='69';
   let guides={};
   try{
-    const a=await fetch('data/hot-guides.json?v=67').then(r=>r.ok?r.json():{});
-    const b=await fetch('data/hot-guides2.json?v=67').then(r=>r.ok?r.json():{}).catch(()=>({}));
-    guides=Object.assign({},a,b);
+    const gs=await Promise.all([1,2,3].map(i=>fetch('data/hot-guides'+(i===1?'':i)+'.json?v='+v).then(r=>r.ok?r.json():{}).catch(()=>({}))));
+    // hot-guides.json is the first file name without number
   }catch(e){}
-  const files=['data/packs.json?v=67','data/tools.json?v=67','data/more96.json?v=67'];
+  try{
+    const a=await fetch('data/hot-guides.json?v='+v).then(r=>r.ok?r.json():{}).catch(()=>({}));
+    const b=await fetch('data/hot-guides2.json?v='+v).then(r=>r.ok?r.json():{}).catch(()=>({}));
+    const c=await fetch('data/hot-guides3.json?v='+v).then(r=>r.ok?r.json():{}).catch(()=>({}));
+    guides=Object.assign({},a,b,c);
+  }catch(e){}
+  const files=['data/packs.json?v='+v,'data/tools.json?v='+v,'data/more.json?v='+v];
+  for(let i=2;i<=98;i++) files.push('data/more'+i+'.json?v='+v);
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
-  const t=arrs.flat().find(x=>x&&x.name===n)||{name:n,url:'#'};
-  const g=guides[n];
-  const steps=g&&g.steps?g.steps:[];
-  document.title=t.name||n;
+  const t=arrs.flat().find(x=>x&&x.name===n)||{name:n,url:'#',desc:'',how:''};
+  const g=guides[n]||{};
+  let steps=g.steps&&g.steps.length?g.steps.slice():splitHow(t.how);
   if(!steps.length){
-    box.textContent='详解还没加载到，请硬刷新这一页。';
-    return;
+    steps=[
+      (t.desc||'这条工具')+'。',
+      t.url&&t.url!=='#'?('打开官网：'+t.url):'在导航里点返回，再进这条工具。',
+      '先用正规账号注册，不要买来路不明号。',
+      '先跑通一个最小用例，再批量。',
+      '能用的结果自己留一份，不要只做在网页里。'
+    ];
   }
-  box.innerHTML='<h3>'+(t.name||n)+'</h3><p class="sub">'+(g.title||'')+'</p><ol>'+steps.map(s=>'<li>'+s+'</li>').join('')+'</ol><p><a class="btn" href="'+(t.url||'#')+'" target="_blank" rel="noopener">打开官网</a></p>';
+  document.title=t.name||n;
+  const title=g.title||t.desc||t.cat||'使用说明';
+  const url=t.url||'#';
+  box.innerHTML='<h3>'+esc(t.name||n)+'</h3><p class="sub">'+esc(title)+'</p><ol>'+steps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol><p><a class="btn" href="'+esc(url)+'" target="_blank" rel="noopener">打开官网</a></p>';
 })();
 </script>
 </body></html>
