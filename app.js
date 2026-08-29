@@ -92,11 +92,11 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=101;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=102;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
-  const hot=await fetch('data/hot.json?v=72').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=81').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
