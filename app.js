@@ -1,6 +1,6 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 成人电影 / 图书 / 小说',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search adult film / books',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 成人电影 / 视频 / 小说',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search video / novels',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
   ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['成人','Adult'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Hire'],['社区','Community'],['开店','Shop'],['小商品','Goods'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books'],['小说','Novels']
@@ -19,7 +19,7 @@ const KW={
   '法律':/法律|律师|DoNotPay/,
   '管理':/管理|Jira|Linear|Trello|Asana|ClickUp|Airtable|日历|Calendly/,
   '绘画':/绘画|Image|Comfy|Flux|Imagine|Leonardo|Ideogram|Photopea|Remove/,
-  '视频':/视频|Video|数字人|抖音|快手|字幕/,
+  '视频':/视频|Video|Runway|Pika|Kling|Luma|Veed|Kapwing|Descript|DaVinci|Shotcut|Opus|YouTube|Vimeo|Netflix/,
   '成人':/成人|成人电影|成人视频|Pornhub|xVideos|OnlyFans|Fansly|Brazzers/,
   '办公':/办公|Office|Notion|网盘|VPN|邮箱|Bitwarden|Drive/,
   '编程':/编程|Code|Git|域名|建站|Cloudflare/,
@@ -39,8 +39,8 @@ const KW={
   '采集':/采集|OBS|录屏|Loom/,
   '接口':/API|接口|OpenRouter/,
   '机器人':/机器人|ROS|Telegram/,
-  '图书':/图书|读书|Kindle|微信读书|Goodreads|听书/,
-  '小说':/小说|章纪|人设|Wattpad|连载|纲要/
+  '图书':/图书|读书|Kindle|微信读书|Goodreads|Gutenberg/,
+  '小说':/小说|章纪|人设|Wattpad|AO3|Webnovel|Royal Road/
 };
 const sideEl=document.getElementById('side');
 const listEl=document.getElementById('list');
@@ -97,11 +97,11 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=108;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=109;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
-  const hot=await fetch('data/hot.json?v=88').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=89').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
