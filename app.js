@@ -1,49 +1,49 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 免费 / Ollama / Dify / Chromis',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search free Ollama Dify POS',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 厨房 / 菜谱 / 菜单图 / Unsplash',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search kitchen recipe menu photo',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
-  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Ride'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['成人','Adult'],['无审核','Uncensored'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Hire'],['社区','Community'],['开店','Shop'],['小商品','Goods'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books'],['小说','Novels'],['日韩漫画','Manga'],['无障碍','Access'],['星座','Stars'],['塔罗','Tarot'],['云盘','Cloud'],['换脸','Swap'],['打扮','Look'],['模型包','Weights'],['维修','Fix'],['硬件','Hardware'],['隐私','Privacy'],['资讯','News'],['自然','Nature'],['棋类','Board'],['家庭','Family'],['短剧','Short'],['漫剧','Toon'],['故事','Story'],['创业','Startup'],['名人','Bio'],['八卦','Gossip'],['亲子','Kids'],['宝妈','Moms'],['主播','Stream'],['融资','Fund'],['理财','Money'],['年轻','Youth'],['工薪','Wage'],['种植','Farm'],['搭伙','Buddy'],['爬山','Hike'],['陪聊','Talk'],['情感','Feel'],['端侧','OnDev'],['企业','Ent'],['小商户','Shop'],['食堂','Cafe'],['数字人','Avatar']
+  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Ride'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['成人','Adult'],['无审核','Uncensored'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Hire'],['社区','Community'],['开店','Shop'],['小商品','Goods'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books'],['小说','Novels'],['日韩漫画','Manga'],['无障碍','Access'],['星座','Stars'],['塔罗','Tarot'],['云盘','Cloud'],['换脸','Swap'],['打扮','Look'],['模型包','Weights'],['维修','Fix'],['硬件','Hardware'],['隐私','Privacy'],['资讯','News'],['自然','Nature'],['棋类','Board'],['家庭','Family'],['短剧','Short'],['漫剧','Toon'],['故事','Story'],['创业','Startup'],['名人','Bio'],['八卦','Gossip'],['亲子','Kids'],['宝妈','Moms'],['主播','Stream'],['融资','Fund'],['理财','Money'],['年轻','Youth'],['工薪','Wage'],['种植','Farm'],['搭伙','Buddy'],['爬山','Hike'],['陪聊','Talk'],['情感','Feel'],['端侧','OnDev'],['企业','Ent'],['小商户','Shop'],['食堂','Cafe'],['数字人','Avatar'],['厨房','Kitchen'],['菜谱','Recipe'],['菜单图','MenuPic']
 ];
 const KW={
-  '对话':/对话|Ollama|LM Studio|Jan|GPT4All|Open WebUI/,
+  '对话':/对话/,
   '聊天':/聊天/,
   '插件':/插件/,
-  '陪伴':/陪伴|SillyTavern/,
+  '陪伴':/陪伴/,
   '学习':/学习/,
   '健身':/健身/,
   '美妆':/美妆/,
   '宠物':/宠物/,
-  '美食':/美食|Open Food Facts/,
+  '美食':/美食|菜谱|下厨戾|Allrecipes|Yummly|SuperCook/,
   '旅行':/旅行/,
   '拼车':/拼车/,
   '租车':/租车/,
   '法律':/法律/,
-  '管理':/管理|ERPNext|Odoo/,
-  '绘画':/绘画/,
-  '视频':/视频|SadTalker|LivePortrait|MuseTalk/,
+  '管理':/管理/,
+  '绘画':/绘画|Unsplash|Pexels|Foodiesfeed|Ideogram|Leonardo/,
+  '视频':/视频/,
   '成人':/成人|18/,
   '无审核':/无审核/,
   '直播':/直播/,
   '交友':/交友/,
   '约炮':/约炮/,
-  '办公':/办公|Dify|AnythingLLM|FastGPT|MaxKB|Ragflow/,
+  '办公':/办公/,
   '编程':/编程/,
-  '智能工作流':/工作流|n8n|Flowise|Langflow/,
+  '智能工作流':/工作流/,
   '游戏':/游戏/,
   '音乐':/音乐/,
-  '语音':/语音|OpenVoice|GPT-SoVITS/,
-  '设计':/设计/,
+  '语音':/语音/,
+  '设计':/设计|Canva|Photopea|Remove.bg/,
   '搜索':/搜索/,
   '写作':/写作/,
   '接单':/接单/,
   '兼职':/兼职/,
   '招聘':/招聘/,
   '社区':/社区/,
-  '开店':/开店|WooCommerce|Medusa|Gumroad|Invoice Ninja|Chromis/,
+  '开店':/开店/,
   '小商品':/小商品/,
   '采集':/采集/,
-  '接口':/API|Groq|OpenRouter|Cloudflare Workers AI/,
+  '接口':/API/,
   '机器人':/机器人/,
   '图书':/图书/,
   '小说':/小说/,
@@ -80,13 +80,16 @@ const KW={
   '爬山':/爬山/,
   '陪聊':/陪聊/,
   '情感':/情感/,
-  '端侧':/端侧|Ollama|LM Studio|Jan|GPT4All|MLC/,
-  '企业':/企业|Dify|AnythingLLM|MaxKB|Ragflow|Groq/,
-  '小商户':/小商户|WooCommerce|Medusa|Gumroad|Invoice Ninja/,
-  '食堂':/食堂|Chromis|Floreant|ERPNext|Open Food Facts/,
-  '数字人':/数字人|SadTalker|LivePortrait|MuseTalk|OpenVoice/
+  '端侧':/端侧/,
+  '企业':/企业/,
+  '小商户':/小商户/,
+  '食堂':/食堂/,
+  '数字人':/数字人/,
+  '厨房':/厨房|ThinQ|Yummly|June Oven|Anova|Meater|Thermomix/,
+  '菜谱':/菜谱|Allrecipes|SuperCook|下厨戾|豆果|ChefGPT|DishGen|Mealime/,
+  '菜单图':/菜单|Unsplash|Pexels|Foodiesfeed|Canva|Freepik|Openverse|Wikimedia/
 };
-const DROP_NAME=new Set(['Cron Calendar','Brilliant Practice','Quizlet Learn','Tuta Mail','Navidrome Demo','Stream Music','Primephonic 已并','Google Jules Agent','OpenDevin 旧名','Cursor.sh 旧域','Fig Term 已并','Amazon CodeWhisperer','Lyuceum','Mentat AI','Safari 技术预览','Character.AI+','Odakyu? skip']);
+const DROP_NAME=new Set(['Cron Calendar','Brilliant Practice','Quizlet Learn','Tuta Mail','Navidrome Demo','Stream Music','Primephonic 已并','Google Jules Agent','OpenDevin 旧名','Cursor.sh 旧域','Fig Term 已并','Amazon CodeWhisperer','Lyuceum','Mentat AI','Safari 技术预览','Character.AI+','Odakyu? skip','CopyMeThat Recipes']);
 const DROP_HOST=new Set(['lyceum.online','mentat.ai','cron.com','getcruise.com','humane.com','tome.app','kajiwoto.ai','height.app','cozy.sh','hourone.ai','bowery.co','6pen.art','webchatgpt.io','darkness.ai','forger.studio','photoscape.ai','wiseone.io','justplayer.app','stillplayer.app','makeupplus.com','marktext.app','snapseed.online','readyplayer.me','resonate.coop','tianmai.cn','wuan.com','xting.com','woodworm.store','taskcn.com','huanbian.com','ishanjian.com','jiami.cn','xiaoyuan-calc.com','joinopen.com','clara.io','csm.ai','digi.ai']);
 const DROP_PATH=['assistant.google.com/auto','joshua-uchoa/MochiDiffusion','mifi.github.io/lossless-cut','prisma-ai.com/lensa','geforce-experience/shadowplay','manyvids.com/Live','apple-music/classical','thomsonreuters.com/westlaw','novavideoplayer.github.io','lightricks.com/apps/motionleap','amazon.com/kindle-dbs'];
 const sideEl=document.getElementById('side');
@@ -152,7 +155,7 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=161;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=162;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seenName=new Set(); const seenUrl=new Set(); tools=[];
   for(const x of arrs.flat()){
@@ -167,7 +170,7 @@ async function load(){
     if(uk) seenUrl.add(uk);
     tools.push(x);
   }
-  const hot=await fetch('data/hot.json?v=130').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=131').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
