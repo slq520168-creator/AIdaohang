@@ -4,41 +4,51 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Guide</title>
-<link rel="stylesheet" href="style.css?v=53"/>
+<link rel="stylesheet" href="style.css?v=54"/>
 <style>
-#box{display:block;padding:16px;margin-top:8px}
-#box h3{font-size:20px;margin-bottom:6px}
-#box .tag{color:var(--muted);font-size:12px;margin:8px 0}
-#box ol{margin:10px 0 0 18px;line-height:1.7}
-#box a.btn{display:inline-block;margin-top:14px;background:var(--acc);color:#fff;text-decoration:none;padding:10px 14px;border-radius:12px}
+#box{display:block;padding:16px 16px 28px;margin-top:8px;line-height:1.75}
+#box h3{font-size:20px;margin-bottom:4px}
+#box .sub{color:var(--muted);font-size:13px;margin-bottom:8px}
+#box .tag{color:var(--muted);font-size:12px;margin:6px 0 10px}
+#box ol{margin:0 0 0 18px}
+#box li{margin:0 0 10px}
+#box a.btn{display:inline-block;margin-top:8px;background:var(--acc);color:#fff;text-decoration:none;padding:10px 14px;border-radius:12px}
 </style>
 </head>
 <body>
-<header class="top"><a id="back" href="tools.html?v=53" style="color:inherit;text-decoration:none">←</a></header>
+<header class="top"><a id="back" href="tools.html?v=54" style="color:inherit;text-decoration:none">← 返回</a></header>
 <article class="card" id="box"></article>
 <a class="fab" href="https://t.me/globalyouxuanaibot" target="_blank" rel="noopener">
 <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M9.04 15.3l-.37 5.2c.53 0 .76-.23 1.04-.5l2.5-2.4 5.18 3.8c.95.52 1.63.25 1.89-.88l3.42-16.08h.01c.3-1.41-.51-1.96-1.44-1.62L1.3 9.3C-.07 9.84-.05 10.6 1.06 10.95l5.5 1.72 12.77-8.04c.6-.36 1.15-.16.7.2z"/></svg>
 </a>
 <script>
 (async()=>{
-  const theme=localStorage.getItem('theme')||'light';
   const lang=localStorage.getItem('lang')||'zh';
-  document.documentElement.dataset.theme=theme;
-  document.getElementById('back').textContent=lang==='en'?'\u2190 Back':'\u2190 返回';
+  document.documentElement.dataset.theme=localStorage.getItem('theme')||'light';
   const n=decodeURIComponent(new URLSearchParams(location.search).get('n')||'');
-  const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=95;i++) files.push('data/more'+i+'.json');
-  const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
-  const t=arrs.flat().find(x=>x && x.name===n);
+  const [guides, ...arrs]=await Promise.all([
+    fetch('data/hot-guides.json').then(r=>r.ok?r.json():{}).catch(()=>({})),
+    ...['data/tools.json','data/packs.json','data/more.json'].concat(
+      Array.from({length:94},(_,i)=>'data/more'+(i+2)+'.json')
+    ).map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[]))
+  ]);
+  const t=arrs.flat().find(x=>x&&x.name===n)||{};
+  const g=guides[n];
   const box=document.getElementById('box');
-  if(!t){box.innerHTML=lang==='en'?'Not found.':'未找到对应教程。';return;}
-  document.title=t.name;
-  const free=t.free?(lang==='en'?'Free':'免费'):(lang==='en'?'Paid':'收费');
-  const open=lang==='en'?'Open official site':'打开官网';
-  const how=t.how||(lang==='en'?'Open the official site and sign up.':'打开官网注册后按页面提示使用。');
-  const steps=how.split(/\s*\d+\.\s*/).map(s=>s.trim()).filter(Boolean);
-  const list=steps.length>1?('<ol>'+steps.map(s=>'<li>'+s+'</li>').join('')+'</ol>'):('<p style="margin-top:10px">'+how+'</p>');
-  box.innerHTML='<h3>'+t.name+'</h3><p>'+(lang==='en'?(t.desc_en||t.desc||''):(t.desc||''))+'</p><p class="tag">'+(t.cat||'')+' · '+free+'</p>'+list+'<p><a class="btn" href="'+(t.url||'#')+'" target="_blank" rel="noopener">'+open+'</a></p>';
+  if(!g && !t.name){box.textContent='未找到对应教程。';return;}
+  document.title=n||t.name;
+  const title=(g&&g.title)||t.desc||t.name||n;
+  const steps=(g&&g.steps)||[];
+  let howHtml='';
+  if(steps.length){
+    howHtml='<ol>'+steps.map(s=>'<li>'+s+'</li>').join('')+'</ol>';
+  } else {
+    const how=t.how||'打开官网注册后按页面提示使用。';
+    const parts=how.split(/\s*\d+\.\s*/).map(s=>s.trim()).filter(Boolean);
+    howHtml=parts.length>1?('<ol>'+parts.map(s=>'<li>'+s+'</li>').join('')+'</ol>'):('<p>'+how+'</p>');
+  }
+  const url=t.url||'#';
+  box.innerHTML='<h3>'+(t.name||n)+'</h3><p class="sub">'+title+'</p><p class="tag">'+(t.cat||'')+(t.free===false?' · 收费':' · 免费可用')+'</p>'+howHtml+'<p><a class="btn" href="'+url+'" target="_blank" rel="noopener">打开官网</a></p>';
 })();
 </script>
 </body></html>
