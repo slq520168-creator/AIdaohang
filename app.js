@@ -49,6 +49,8 @@ const KW={
   '小说':/小说/,
   '日韩漫画':/漫画/
 };
+const DROP_NAME=new Set(['Cron Calendar','Brilliant Practice','Quizlet Learn','Tuta Mail','Navidrome Demo','Stream Music','Primephonic 已并','Google Jules Agent','OpenDevin 旧名','Cursor.sh 旧域','Fig Term 已并','Amazon CodeWhisperer','Lyuceum','Mentat AI','Safari 技术预览','Character.AI+']);
+const DROP_HOST=new Set(['lyceum.online','mentat.ai','cron.com']);
 const sideEl=document.getElementById('side');
 const listEl=document.getElementById('list');
 const qEl=document.getElementById('q');
@@ -80,6 +82,12 @@ function applyChrome(){
 themeBtn.onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n);applyChrome()};
 langBtn.onclick=()=>{lang=lang==='zh'?'en':'zh';localStorage.setItem('lang',lang);applyChrome();renderSide();render()};
 function hostOf(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
+function urlKey(u){
+  try{
+    const x=new URL(u);
+    return x.hostname.replace(/^www\./,'').toLowerCase()+x.pathname.replace(/\/+$/,'');
+  }catch(e){return String(u||'').toLowerCase()}
+}
 function esc(s){return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>').replace(/"/g,'"')}
 function isHttp(u){return /^https?:\/\//i.test(u||'')}
 function iconTag(url,letter){
@@ -107,9 +115,19 @@ async function load(){
   const files=['data/tools.json','data/packs.json','data/more.json'];
   for(let i=2;i<=142;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
-  const seen=new Set(); tools=[];
-  for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
-  const hot=await fetch('data/hot.json?v=116').then(r=>r.json()).catch(()=>[]);
+  const seenName=new Set(); const seenUrl=new Set(); tools=[];
+  for(const x of arrs.flat()){
+    if(!x||!x.name||DROP_NAME.has(x.name)) continue;
+    const h=hostOf(x.url);
+    if(h&&DROP_HOST.has(h)) continue;
+    if(seenName.has(x.name)) continue;
+    const uk=isHttp(x.url)?urlKey(x.url):'';
+    if(uk&&seenUrl.has(uk)) continue;
+    seenName.add(x.name);
+    if(uk) seenUrl.add(uk);
+    tools.push(x);
+  }
+  const hot=await fetch('data/hot.json?v=117').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
