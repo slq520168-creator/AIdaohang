@@ -1,5 +1,5 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 翻译 / 邮箱 / 密码 / 学习',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 网盘 / 笔记 / PDF / 会议',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
   en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search tools',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
@@ -17,15 +17,15 @@ const KW={
   '美食':/美食|菜谱|Yummly|Tasty/,
   '旅行':/旅行|地图|Maps|Kayak|Skyscanner/,
   '法律':/法律|律师|DoNotPay/,
-  '管理':/管理|Jira|Linear|Trello|Asana|ClickUp|Airtable|日历|Calendly/,
+  '管理':/管理|日历|Calendar|Calendly|Jira|Linear|Trello|Asana|ClickUp/,
   '绘画':/绘画|Image|Comfy|Flux|Imagine|Fooocus|Forge|NovelAI|Invoke|Civitai/,
-  '视频':/视频|Video|TVING|Watcha|Wavve/,
+  '视频':/视频|Video|TVING|Watcha|Wavve|Zoom|Meet|Jitsi/,
   '成人':/成人|韩国|FANZA|DLsite|Fakku|Lezhin|Toomics|POVKOREA|AVKOREA/,
   '无审核':/无审核|本地|ComfyUI|Kobold|SillyTavern|NovelAI|Ollama|LM Studio/,
   '直播':/直播|Chaturbate|Stripchat|LiveJasmin|BongaCams|CamSoda|MyFreeCams|Streamate|Cam4/,
   '交友':/交友|约炮|Feeld|FetLife|Tinder|Badoo|OkCupid|Grindr|Bumble|Hinge/,
   '约炮':/约炮|Tinder|Bumble|Feeld|Grindr|Sniffies|Seeking|Hornet|Romeo|Doublelist/,
-  '办公':/办公|邮箱|密码|Proton|Bitwarden|1Password|KeePass|Office|Notion/,
+  '办公':/办公|邮箱|密码|网盘|笔记|会议|PDF|Drive|Dropbox|Notion|Obsidian|Zoom|Proton/,
   '编程':/编程|Code|Git|域名|建站|Cloudflare|Pinokio/,
   '智能工作流':/工作流|Agent|n8n/,
   '游戏':/游戏|Game|Luma|itch|Steam|Nutaku|JAST/,
@@ -40,7 +40,7 @@ const KW={
   '社区':/社区|Discord|Reddit|Buffer|Later/,
   '开店':/开店|Shopify|Gumroad|Stripe|PayPal|二维码|售后|小商品/,
   '小商品':/小商品|SKU|库存|白底|进价|套装/,
-  '采集':/采集|OBS|录屏|Loom/,
+  '采集':/采集|截图|OBS|录屏|Loom|ShareX|Flameshot|CleanShot/,
   '接口':/API|接口|OpenRouter/,
   '机器人':/机器人|ROS|Telegram/,
   '图书':/图书|读书|漫画|Kindle|BookWalker|Webtoon|Piccoma|Ridibooks/,
@@ -103,11 +103,11 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=118;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=119;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
-  const hot=await fetch('data/hot.json?v=99').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=100').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
