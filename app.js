@@ -1,6 +1,6 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 星座 / 运势 / 宠物',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search horoscope / pet',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 绘画 / 视频 / 音乐 / 开店',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search image / video / music',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
   ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['社区','Community'],['开店','Shop'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books']
@@ -18,23 +18,23 @@ const KW={
   '旅行':/旅行|机票|Kayak|Skyscanner/,
   '法律':/法律|律师|DoNotPay/,
   '管理':/管理|Jira|Linear|Trello|Asana|ClickUp/,
-  '绘画':/绘画|Image|Comfy/,
-  '视频':/视频|Video/,
+  '绘画':/绘画|Image|Comfy|Flux|Imagine|Leonardo|Ideogram/,
+  '视频':/视频|Video|数字人/,
   '办公':/办公|Office|Notion|网盘|VPN/,
-  '编程':/编程|Code|Git|域名|建站/,
+  '编程':/编程|Code|Git|域名|建站|Cloudflare/,
   '智能工作流':/工作流|Agent|n8n/,
   '游戏':/游戏|Game/,
-  '音乐':/音乐|Suno|Music/,
-  '语音':/语音|TTS|Whisper/,
-  '设计':/设计|Figma/,
-  '搜索':/搜索|Search/,
-  '写作':/写作|文案/,
+  '音乐':/音乐|Suno|Music|Udio/,
+  '语音':/语音|TTS|Whisper|ElevenLabs/,
+  '设计':/设计|Figma|Canva/,
+  '搜索':/搜索|Search|Perplexity/,
+  '写作':/写作|文案|Grammarly/,
   '接单':/接单|Fiverr|Upwork|猪八戒/,
   '社区':/社区|Discord|Reddit/,
   '开店':/开店|Shopify|Gumroad/,
   '采集':/采集|OBS|录屏/,
   '接口':/API|接口/,
-  '机器人':/机器人|ROS/,
+  '机器人':/机器人|ROS|Telegram/,
   '图书':/图书|读书|Kindle/
 };
 const sideEl=document.getElementById('side');
@@ -49,6 +49,7 @@ const themeBtn=document.getElementById('theme');
 const langBtn=document.getElementById('lang');
 const sf=document.getElementById('sf');
 const topBtn=document.getElementById('topBtn');
+const scroller=document.getElementById('scroll')||window;
 let tools=[]; let selected=new Set();
 let lang=localStorage.getItem('lang')||'zh';
 let shown=80; let lastKey=''; let filtered=[];
@@ -91,7 +92,7 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=95;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=96;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
@@ -140,13 +141,15 @@ function render(){
   countEl.textContent=filtered.length+s.hit;
   listEl.innerHTML=filtered.slice(0,shown).map(card).join('')||`<p class="count">${s.empty}</p>`;
 }
-window.addEventListener('scroll',()=>{
+function onScroll(){
   if(shown>=filtered.length) return;
-  if(window.innerHeight+window.scrollY>document.body.offsetHeight-240){
-    shown+=80; listEl.innerHTML=filtered.slice(0,shown).map(card).join('');
-  }
-},{passive:true});
-function goTop(){window.scrollTo({top:0,behavior:'smooth'})}
+  const top=scroller===window?window.scrollY:scroller.scrollTop;
+  const h=scroller===window?window.innerHeight:scroller.clientHeight;
+  const sh=scroller===window?document.body.offsetHeight:scroller.scrollHeight;
+  if(h+top>sh-240){shown+=80; listEl.innerHTML=filtered.slice(0,shown).map(card).join('');}
+}
+scroller.addEventListener('scroll',onScroll,{passive:true});
+function goTop(){if(scroller===window)window.scrollTo({top:0,behavior:'smooth'});else scroller.scrollTo({top:0,behavior:'smooth'});}
 if(topBtn) topBtn.onclick=goTop;
 document.getElementById('brand').onclick=goTop;
 sf.addEventListener('submit',e=>{e.preventDefault();shown=80;render();qEl.blur();goTop()});

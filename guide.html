@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
 <title>Guide</title>
-<link rel="stylesheet" href="style.css?v=66"/>
+<link rel="stylesheet" href="style.css?v=67"/>
 <style>
 #box{
   display:block;
@@ -27,7 +27,7 @@
 <body>
 <div id="sitebg" aria-hidden="true"></div>
 <div id="scroll">
-<header class="top"><a href="tools.html?v=66" style="color:inherit;text-decoration:none">← 返回</a></header>
+<header class="top"><a href="tools.html?v=67" style="color:inherit;text-decoration:none">← 返回</a></header>
 <article class="card" id="box">加载中…</article>
 </div>
 <script>
@@ -36,9 +36,11 @@
   const n=decodeURIComponent(new URLSearchParams(location.search).get('n')||'');
   let guides={};
   try{
-    guides=await fetch('data/hot-guides.json?v=66').then(r=>r.json());
+    const a=await fetch('data/hot-guides.json?v=67').then(r=>r.ok?r.json():{});
+    const b=await fetch('data/hot-guides2.json?v=67').then(r=>r.ok?r.json():{}).catch(()=>({}));
+    guides=Object.assign({},a,b);
   }catch(e){}
-  const files=['data/packs.json?v=66','data/tools.json?v=66'];
+  const files=['data/packs.json?v=67','data/tools.json?v=67','data/more96.json?v=67'];
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const t=arrs.flat().find(x=>x&&x.name===n)||{name:n,url:'#'};
   const g=guides[n];
