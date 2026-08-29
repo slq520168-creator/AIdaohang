@@ -23,7 +23,7 @@ const KW={
   '办公':/办公|Office|Notion|网盘|VPN|邮箱|Bitwarden|Drive/,
   '编程':/编程|Code|Git|域名|建站|Cloudflare/,
   '智能工作流':/工作流|Agent|n8n/,
-  '游戏':/游戏|Game|Luma/,
+  '游戏':/游戏|Game|Luma|itch|Steam/,
   '音乐':/音乐|Suno|Music|Udio/,
   '语音':/语音|TTS|Whisper|ElevenLabs/,
   '设计':/设计|Figma|Canva|Coolors|Squoosh|TinyPNG|封面/,
@@ -31,7 +31,7 @@ const KW={
   '写作':/写作|文案|Grammarly|DeepL/,
   '接单':/接单|Fiverr|Upwork|猪八戒/,
   '社区':/社区|Discord|Reddit|Buffer|Later/,
-  '开店':/开店|Shopify|Gumroad|Stripe|PayPal|二维码/,
+  '开店':/开店|Shopify|Gumroad|Stripe|PayPal|二维码|售后/,
   '采集':/采集|OBS|录屏|Loom/,
   '接口':/API|接口|OpenRouter/,
   '机器人':/机器人|ROS|Telegram/,
@@ -92,11 +92,11 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=98;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=99;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
-  const hot=await fetch('data/hot.json?v=68').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=70').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
