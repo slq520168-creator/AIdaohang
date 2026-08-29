@@ -73,7 +73,8 @@ function applyChrome(){
 themeBtn.onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n);applyChrome()};
 langBtn.onclick=()=>{lang=lang==='zh'?'en':'zh';localStorage.setItem('lang',lang);applyChrome();renderSide();render()};
 function hostOf(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
-function esc(s){return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>')}
+function esc(s){return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>').replace(/"/g,'"')}
+function isHttp(u){return /^https?:\/\//i.test(u||'')}
 function iconTag(url,letter){
   const h=hostOf(url); const L=(letter||'?').slice(0,1);
   if(!h) return L;
@@ -101,9 +102,9 @@ async function load(){
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
-  const hot=await fetch('data/hot.json?v=90').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=91').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
-  hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
+  hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
 }
 function renderSide(){
@@ -127,7 +128,9 @@ function renderSide(){
 function card(x){
   const letter=(x.name||'?').slice(0,1);
   const desc=lang==='en'?(x.desc_en||x.desc||x.cat):(x.desc||x.cat);
-  return `<a class="card" href="guide.html?n=${encodeURIComponent(x.name)}"><div class="row"><div class="av">${iconTag(x.url,letter)}</div><div><h3>${esc(x.name)}</h3><p>${esc(desc)}</p></div></div></a>`;
+  const href=isHttp(x.url)?x.url:('guide.html?n='+encodeURIComponent(x.name||''));
+  const host=hostOf(x.url);
+  return `<a class="card" href="${esc(href)}" target="_blank" rel="noopener"><div class="row"><div class="av">${iconTag(x.url,letter)}</div><div><h3>${esc(x.name)}</h3><p>${esc(host||desc)}</p></div></div></a>`;
 }
 function render(){
   const q=(qEl.value||'').trim().toLowerCase();
