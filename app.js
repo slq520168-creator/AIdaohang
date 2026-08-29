@@ -1,53 +1,53 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 预约 / 跑步 / 音乐 / 播放',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search calendar music player',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 学习 / 密码 / 邮箱 / 浏览器',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search learn password mail browser',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
   ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Ride'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['成人','Adult'],['无审核','Uncensored'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Hire'],['社区','Community'],['开店','Shop'],['小商品','Goods'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books'],['小说','Novels'],['日韩漫画','Manga']
 ];
 const KW={
-  '对话':/对话|ChatGPT|Claude/,
-  '聊天':/对话|聊天|Chat/,
-  '插件':/插件|Plugin/,
-  '陪伴':/陪伴|Character/,
-  '学习':/学习|NotebookLM/,
-  '健身':/健身|跑步|睡眠|Strava|Nike|Whoop|Oura|Garmin|Peloton|ClassPass/,
-  '美妆':/美妆|Remini/,
-  '宠物':/宠物|Pet/,
-  '美食':/美食|外卖/,
-  '旅行':/旅行|越野|步道|Komoot|AllTrails|Wikiloc|Gaia/,
-  '拼车':/拼车|Uber/,
-  '租车':/租车|Hertz/,
+  '对话':/对话|ChatGPT/,
+  '聊天':/聊天|Chat/,
+  '插件':/插件/,
+  '陪伴':/陪伴/,
+  '学习':/学习|语言|记忆卡|Anki|Duolingo|italki|Khan|Coursera|Desmos|Wolfram|Quizlet/,
+  '健身':/健身|Strava/,
+  '美妆':/美妆/,
+  '宠物':/宠物/,
+  '美食':/美食/,
+  '旅行':/旅行|Komoot/,
+  '拼车':/拼车/,
+  '租车':/租车/,
   '法律':/法律/,
-  '管理':/管理|预约|日程|Cal.com|Notion Calendar|Reclaim|Setmore/,
-  '绘画':/绘画|ComfyUI|Krita/,
-  '视频':/视频|播放|VLC|Infuse|Jellyfin|Kdenlive/,
-  '成人':/成人|18|Pornhub|OnlyFans|FANZA/,
-  '无审核':/无审核|本地|Ollama|ComfyUI/,
-  '直播':/直播|Chaturbate/,
-  '交友':/交友|Tinder/,
-  '约炮':/约炮|Tinder/,
-  '办公':/办公|PDF/,
-  '编程':/编程|Cursor/,
-  '智能工作流':/工作流|n8n/,
-  '游戏':/游戏|Steam/,
-  '音乐':/音乐|电台|配乐|Bandcamp|SoundCloud|Navidrome|Radio Garden|Uppbeat|Mubert|Tidal/,
-  '语音':/语音|噪韰|Endel|Noisli|Rainy/,
-  '设计':/设计|Krita/,
-  '搜索':/搜索|Perplexity/,
-  '写作':/写作|Obsidian/,
+  '管理':/管理|密码|Bitwarden|1Password|KeePass|Proton Pass/,
+  '绘画':/绘画/,
+  '视频':/视频/,
+  '成人':/成人|18|Pornhub/,
+  '无审核':/无审核|本地|Ollama/,
+  '直播':/直播/,
+  '交友':/交友/,
+  '约炮':/约炮/,
+  '办公':/办公|邮箱|Proton Mail|Thunderbird|Fastmail|Tuta/,
+  '编程':/编程/,
+  '智能工作流':/工作流/,
+  '游戏':/游戏/,
+  '音乐':/音乐/,
+  '语音':/语音/,
+  '设计':/设计/,
+  '搜索':/搜索|浏览器|Firefox|Brave|DuckDuckGo|Tor|Ecosia|SearXNG|Vivaldi/,
+  '写作':/写作/,
   '接单':/接单/,
   '兼职':/兼职/,
   '招聘':/招聘/,
-  '社区':/社区|Discord/,
+  '社区':/社区/,
   '开店':/开店/,
   '小商品':/小商品/,
-  '采集':/采集|OBS/,
+  '采集':/采集/,
   '接口':/API/,
   '机器人':/机器人/,
   '图书':/图书/,
   '小说':/小说/,
-  '日韩漫画':/漫画|Fakku/
+  '日韩漫画':/漫画/
 };
 const sideEl=document.getElementById('side');
 const listEl=document.getElementById('list');
@@ -105,11 +105,11 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=136;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=138;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
-  const hot=await fetch('data/hot.json?v=113').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=114').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
