@@ -23,8 +23,8 @@ const KW={
   '成人':/成人|无审核|约炮|Feeld|Tinder|Grindr/,
   '无审核':/无审核|本地|ComfyUI|Kobold|SillyTavern|NovelAI|Ollama|LM Studio/,
   '直播':/直播|Chaturbate|Stripchat|LiveJasmin|BongaCams|CamSoda|MyFreeCams|Streamate|Cam4/,
-  '交友':/交友|约炮|Feeld|FetLife|Tinder|Badoo|OkCupid|Grindr|Bumble|Hinge/,
-  '约炮':/约炮|Tinder|Bumble|Feeld|Grindr|Sniffies|Scruff|AFF|Ashley|FetLife|3Fun|Pure/,
+  '交友':/交友|约炮|Feeld|FetLife|Tinder|Badoo|OkCupid|Grindr|Bumble|Hinge|Seeking|Hornet/,
+  '约炮':/约炮|Tinder|Bumble|Feeld|Grindr|Sniffies|Seeking|Hornet|Romeo|Doublelist|Tantan/,
   '办公':/办公|Office|Notion|网盘|VPN|邮箱|Bitwarden|Drive/,
   '编程':/编程|Code|Git|域名|建站|Cloudflare|Pinokio/,
   '智能工作流':/工作流|Agent|n8n/,
@@ -102,11 +102,11 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=114;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=115;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seen=new Set(); tools=[];
   for(const x of arrs.flat()){if(!x||!x.name||seen.has(x.name))continue;seen.add(x.name);tools.push(x)}
-  const hot=await fetch('data/hot.json?v=95').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=96').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
