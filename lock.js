@@ -1,8 +1,19 @@
 (function(){
+  var q=new URLSearchParams(location.search||'');
+  if(q.get('home')==='1'){
+    try{
+      localStorage.setItem('aid_welcome','1');
+      sessionStorage.setItem('aid_welcome','1');
+      localStorage.setItem('aid_ok','1');
+      sessionStorage.setItem('aid_ok','1');
+    }catch(e){}
+  }
   var w=localStorage.getItem('aid_welcome')||sessionStorage.getItem('aid_welcome');
   if(w==='1'){
-    localStorage.setItem('aid_welcome','1');
-    sessionStorage.setItem('aid_welcome','1');
+    try{
+      localStorage.setItem('aid_welcome','1');
+      sessionStorage.setItem('aid_welcome','1');
+    }catch(e){}
   }else{
     location.replace('index.html');
     return;
@@ -10,11 +21,13 @@
   var KEY='aid_ok';
   var CODE='520168';
   if(localStorage.getItem(KEY)==='1'||sessionStorage.getItem(KEY)==='1'){
-    localStorage.setItem(KEY,'1');
-    sessionStorage.setItem(KEY,'1');
+    try{
+      localStorage.setItem(KEY,'1');
+      sessionStorage.setItem(KEY,'1');
+    }catch(e){}
     return;
   }
-  var zh=(localStorage.getItem('lang')||'en')==='zh';
+  var zh=(localStorage.getItem('lang')||'zh')==='zh';
   var wrap=document.createElement('div');
   wrap.id='gate';
   wrap.innerHTML=zh
