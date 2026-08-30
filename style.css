@@ -12,13 +12,15 @@ html[data-theme="dark"] #sitebg{background:#0d1117}
 .acts{display:flex;gap:6px;flex:none}
 h1{font-size:18px}
 .sub{color:var(--muted);font-size:12px;margin-top:2px}
+.sub a{color:inherit;text-decoration:none;font-weight:600}
 #theme,#lang{border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:999px;padding:7px 10px}
 .langbar{display:none;flex-wrap:wrap;gap:6px;margin:0 0 8px}
 .langbar.show{display:flex}
 .langbar button{border:1px solid var(--line);background:var(--soft);color:var(--txt);border-radius:999px;padding:6px 8px;font-size:12px}
-.search{position:sticky;top:0;z-index:20;display:flex;gap:8px;margin:0 0 10px;padding:6px 0;background:var(--bg)}
-#q{flex:1;min-width:0;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:14px;padding:11px 12px;font-size:16px}
-#go{width:42px;min-width:42px;height:42px;flex:none;border:0;border-radius:50%;background:var(--acc);color:#fff}
+.search{position:sticky;top:0;z-index:20;margin:0 0 10px;padding:6px 0;background:var(--bg)}
+.search .box{position:relative}
+#q{width:100%;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:14px;padding:11px 48px 11px 12px;font-size:16px}
+#go{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:34px;height:34px;border:0;border-radius:50%;background:var(--acc);color:#fff}
 .block{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;margin-bottom:10px;width:100%}
 .block-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .block-h h2{font-size:16px;letter-spacing:.02em}

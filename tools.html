@@ -12,17 +12,19 @@
 <header class="top">
   <div>
     <h1 id="brand">全球优选AI导航</h1>
-    <p class="sub"><a href="./fraud.html" style="color:inherit">防骗指南</a> · <span id="meta"></span></p>
+    <p class="sub"><a id="fraudLink" href="./fraud.html">防骗指南</a> · <span id="meta"></span></p>
   </div>
   <div class="acts">
-    <button id="lang" type="button">中</button>
+    <button id="lang" type="button">ZH</button>
     <button id="theme" type="button">深色</button>
   </div>
 </header>
 <div id="langBar" class="langbar"></div>
 <form class="search" id="sf">
-  <input id="q" type="search" placeholder="" autocomplete="off" enterkeyhint="search"/>
-  <button type="submit" id="go" aria-label="search">🔍</button>
+  <div class="box">
+    <input id="q" type="search" placeholder="" autocomplete="off" enterkeyhint="search"/>
+    <button type="submit" id="go" aria-label="search">🔍</button>
+  </div>
 </form>
 <section class="block" id="hotBlock">
   <div class="block-h"><h2 id="hotTitle">今日热点</h2></div>
@@ -49,5 +51,19 @@
 <script src="app.js?v=176"></script>
 <script src="tagsplus.js?v=176"></script>
 <script src="gtrans.js?v=176"></script>
+<script>
+(function(){
+  function setFraud(){
+    var a=document.getElementById('fraudLink');
+    if(!a) return;
+    a.textContent=(typeof lang!=='undefined' && lang==='en')?'Scam guide':'防骗指南';
+  }
+  if(typeof applyChrome==='function'){
+    var old=applyChrome;
+    applyChrome=function(){old();setFraud();};
+  }
+  setFraud();
+})();
+</script>
 </body>
 </html>

@@ -7,69 +7,102 @@
 <style>
 body{margin:0;font-family:-apple-system,"PingFang SC",sans-serif;background:#fff;color:#111;line-height:1.65}
 .w{max-width:640px;margin:0 auto;padding:16px 16px 48px}
+.bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.bar a,.bar button{color:#2563eb;background:none;border:1px solid #e5e7eb;border-radius:999px;padding:6px 12px;text-decoration:none;font-size:14px}
 h1{font-size:22px;margin:8px 0 12px}
 h2{font-size:17px;margin:22px 0 8px}
-p,li{font-size:15px;color:#222}
+p,li{font-size:15px}
 ul{padding-left:1.2em}
-.back{display:inline-block;margin:4px 0 12px;color:#2563eb;text-decoration:none}
 .box{border:1px solid #e5e7eb;border-radius:12px;padding:12px;margin:10px 0;background:#fafafa}
 a{color:#2563eb}
+.en{display:none}
+html[lang="en"] .zh{display:none}
+html[lang="en"] .en{display:block}
+html[lang="en"] li.en{display:list-item}
 </style>
 </head>
 <body>
 <div class="w">
-<a class="back" href="./tools.html?v=176&home=1&lang=zh">← 返回导航</a>
-<h1>防骗指南</h1>
-<p>这页只讲怎么辨认常见骗局。不教怎么骗人，也不提供灰产工具。</p>
-
-<h2>先记这三条</h2>
+<div class="bar">
+  <a href="./tools.html?v=176&home=1">← <span class="zh">返回导航</span><span class="en">Back</span></a>
+  <button type="button" id="lang">EN</button>
+</div>
+<h1 class="zh">防骗指南</h1>
+<h1 class="en">Scam guide</h1>
+<p class="zh">这页只讲怎么辨认常见骗局。不教怎么骗人。</p>
+<p class="en">How to spot common scams. This page does not teach fraud.</p>
+<h2 class="zh">先记这三条</h2>
+<h2 class="en">Three rules</h2>
 <ul>
-<li>不转账、不看验证码、不远程装控制软件。</li>
-<li>赚钱任务要你先交定金，几乎都是骗。</li>
-<li>对方催你发货币、礼品卡、移动支付到「安全账户」，先挂断。</li>
+<li class="zh">不转账、不看验证码、不装远程控制。</li>
+<li class="en">Do not transfer money, share codes, or install remote-control apps.</li>
+<li class="zh">赚钱任务要你先交定金，几乎都是骗。</li>
+<li class="en">A job that asks you to pay first is almost always a scam.</li>
+<li class="zh">催你发货币或礼品卡到「安全账户」，先挂断。</li>
+<li class="en">If someone wants crypto or gift cards sent to a “safe account”, stop.</li>
 </ul>
-
 <div class="box">
-<h2>刷单 / 好评 / 任务赚钱</h2>
-<p>说先付小额再返现、要你用自己钱下单再报销、拉你进企业群打款。正规平台不会要你先打钱才能接单。</p>
+<h2 class="zh">刷单 / 好评</h2>
+<h2 class="en">Fake tasks / fake reviews</h2>
+<p class="zh">先付小额再返现、用自己钱下单再报销、拉进企业群打款。正规平台不要你先打钱。</p>
+<p class="en">Pay-a-deposit-then-refund, buy-then-reimburse, or pay inside a chat group. Real platforms do not ask you to pay first.</p>
 </div>
-
 <div class="box">
-<h2>假客服 / 假警察</h2>
-<p>电话里说账号风险、要你加软件「配合调查」、转账到安全卡。银行和警察不会要你装 AnyDesk / ToDesk / 向私人账号转账。挂断回拨官方客服。</p>
+<h2 class="zh">假客服 / 假警察</h2>
+<h2 class="en">Fake support / fake police</h2>
+<p class="zh">说账号风险、要装软件调查、转账到安全卡。银行和警察不会这么要。挂断回拨官方。</p>
+<p class="en">They claim your account is at risk and want remote software or a transfer. Hang up and call the official number.</p>
 </div>
-
 <div class="box">
-<h2>投资盘 / 虚拟币私募</h2>
-<p>保本付息、拉人抽成、小金额先赢再动员加仓。能提现的小钱是钩。不转币到陌生钱包地址。</p>
+<h2 class="zh">投资盘</h2>
+<h2 class="en">Fake investing</h2>
+<p class="zh">保本付息、小钱先赢再动员加仓。能提现的小额是钩。</p>
+<p class="en">Guaranteed profit and a small first withdrawal are bait. Do not send crypto to a stranger wallet.</p>
 </div>
-
 <div class="box">
-<h2>网恋 / 杀猪盘</h2>
-<p>对方很快谈感情和赚钱，转到外部聊天工具，再引到「老师带单」。散户后再求见面、再转账救人，都是续集。</p>
+<h2 class="zh">网恋 / 杀猪盘</h2>
+<h2 class="en">Romance scam</h2>
+<p class="zh">很快谈感情和赚钱，转到外部聊天再引去投资。散户后再要钱是续集。</p>
+<p class="en">Fast romance plus investing tips, then a move off-platform. More money after a “loss” is still the same scam.</p>
 </div>
-
 <div class="box">
-<h2>裸聊 / 恶意破解</h2>
-<p>对方拿照片或视频要求转账，先停止汇款，保存证据去报警，不要再打钱「消毁证据」。</p>
+<h2 class="zh">敲诈</h2>
+<h2 class="en">Extortion</h2>
+<p class="zh">拿照片要求转账。停止汇款，保存证据报警，不要再付「消毁费」。</p>
+<p class="en">Stop paying. Save evidence and report. Do not pay a “deletion fee”.</p>
 </div>
-
-<h2>被骗了怎么办</h2>
+<h2 class="zh">被骗了</h2>
+<h2 class="en">If you already paid</h2>
 <ul>
-<li>保存转账记录、聊天截图、银行流水。</li>
-<li>打开卡银行挂失或冻结。</li>
-<li>报警或向平台举报，不要找「回收公司」。</li>
+<li class="zh">保存转账和聊天记录，挂失冻结，报警。不要找「回收公司」。</li>
+<li class="en">Save records, freeze the card, report. Ignore “recovery agents”.</li>
 </ul>
-
-<h2>官方查询</h2>
+<h2 class="zh">官方</h2>
+<h2 class="en">Official help</h2>
 <ul>
 <li><a href="https://www.gjfzpt.cn/" target="_blank" rel="noopener">国家反诈中心</a></li>
-<li><a href="https://www.piyao.org.cn/" target="_blank" rel="noopener">中国互联网联合辟谣</a></li>
 <li><a href="https://consumer.ftc.gov/scams" target="_blank" rel="noopener">FTC Scams</a></li>
-<li><a href="https://www.ic3.gov/" target="_blank" rel="noopener">FBI IC3</a></li>
-<li><a href="https://www.scamshield.gov.sg/" target="_blank" rel="noopener">Singapore ScamShield</a></li>
+<li><a href="https://www.scamshield.gov.sg/" target="_blank" rel="noopener">ScamShield</a></li>
 <li><a href="https://haveibeenpwned.com/" target="_blank" rel="noopener">Have I Been Pwned</a></li>
 </ul>
 </div>
+<script>
+(function(){
+  var btn=document.getElementById('lang');
+  var q=new URLSearchParams(location.search).get('lang');
+  var lang=q||localStorage.getItem('lang')||'zh';
+  function apply(){
+    document.documentElement.lang=lang==='en'?'en':'zh-CN';
+    document.title=lang==='en'?'Scam guide':'防骗指南';
+    btn.textContent=lang==='en'?'ZH':'EN';
+  }
+  btn.onclick=function(){
+    lang=lang==='en'?'zh':'en';
+    try{localStorage.setItem('lang',lang)}catch(e){}
+    apply();
+  };
+  apply();
+})();
+</script>
 </body>
 </html>
