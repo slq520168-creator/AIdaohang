@@ -16,7 +16,7 @@
   function grab(n){
     fetch('data/more'+n+'.json').then(function(r){return r.ok?r.json():[];}).then(add).catch(function(){});
   }
-  function run(){grab(184);grab(185);}
+  function run(){grab(184);grab(185);grab(186);}
   if(document.readyState==='complete') setTimeout(run,400);
   else window.addEventListener('load',function(){setTimeout(run,400);});
 })();
