@@ -1,0 +1,14 @@
+[
+  {"name":"ComfyUI安装教程","url":"https://slq520168-creator.github.io/AIdaohang/comfy.html#install","desc":"Desktop Matrix Portable 三种装法","cat":"教程","pack":"教程","free":true},
+  {"name":"ComfyUI多语言","url":"https://slq520168-creator.github.io/AIdaohang/comfy.html#lang","desc":"中文界面与翻译节点","cat":"教程","pack":"教程","free":true},
+  {"name":"ComfyUI第一次跑通","url":"https://slq520168-creator.github.io/AIdaohang/comfy.html#first","desc":"模型位置与 Queue","cat":"教程","pack":"教程","free":true},
+  {"name":"ComfyUI文案工作流","url":"https://slq520168-creator.github.io/AIdaohang/comfy.html#copy","desc":"提示词与口播分线","cat":"文案","pack":"教程","free":true},
+  {"name":"ComfyUI图片工作流","url":"https://slq520168-creator.github.io/AIdaohang/comfy.html#image","desc":"文生图 控制 换装","cat":"绘画","pack":"教程","free":true},
+  {"name":"ComfyUI视频工作流","url":"https://slq520168-creator.github.io/AIdaohang/comfy.html#video","desc":"Hunyuan Wan LTX","cat":"视频","pack":"教程","free":true},
+  {"name":"ComfyUI音乐配乐","url":"https://slq520168-creator.github.io/AIdaohang/comfy.html#music","desc":"ACE-Step TTS 合成","cat":"音乐","pack":"教程","free":true},
+  {"name":"ComfyUI剪辑合成","url":"https://slq520168-creator.github.io/AIdaohang/comfy.html#edit","desc":"拼镜 字幕 对齐","cat":"视频","pack":"教程","free":true},
+  {"name":"ComfyUI报错对照","url":"https://slq520168-creator.github.io/AIdaohang/comfy.html#fix","desc":"显存 缺节点 黑屏","cat":"教程","pack":"教程","free":true},
+  {"name":"Comfy Desktop官网","url":"https://comfy.org/download/","desc":"官方安装包","cat":"教程","pack":"教程","free":true},
+  {"name":"ComfyUI官方文档","url":"https://docs.comfy.org/","desc":"安装与视频范例","cat":"教程","pack":"教程","free":true},
+  {"name":"Stability Matrix","url":"https://github.com/LykosAI/StabilityMatrix","desc":"一键管理 ComfyUI","cat":"教程","pack":"教程","free":true}
+]

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ComfyUI 傻瓜式教程</title>
+<style>
+body{margin:0;font-family:-apple-system,"PingFang SC",sans-serif;background:#fff;color:#111;line-height:1.75}
+.w{max-width:720px;margin:0 auto;padding:16px 16px 64px}
+.bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.bar a{color:#2563eb;text-decoration:none}
+.langs button{border:1px solid #e5e7eb;background:#fff;border-radius:999px;padding:6px 10px;margin-left:4px}
+.langs button.on{background:#2563eb;color:#fff;border-color:#2563eb}
+h1{font-size:22px;margin:8px 0}
+h2{font-size:18px;margin:28px 0 8px;scroll-margin-top:12px}
+h3{font-size:16px;margin:16px 0 6px}
+p,li{font-size:15px}
+ol,ul{padding-left:1.25em}
+.box{border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;margin:12px 0;background:#fafafa}
+.toc a{display:block;padding:6px 0;color:#2563eb;text-decoration:none}
+code{background:#f3f4f6;padding:0 4px;border-radius:4px;font-size:13px;word-break:break-all}
+.src{font-size:12px;color:#6b7280}
+.en{display:none}
+html[lang="en"] .zh{display:none}
+html[lang="en"] .en{display:block}
+html[lang="en"] li.en{display:list-item}
+</style>
+</head>
+<body>
+<div class="w">
+<div class="bar">
+  <a href="./tools.html?v=180&home=1">← <span class="zh">导航</span><span class="en">Home</span></a>
+  <div class="langs"><button type="button" data-l="zh">中</button><button type="button" data-l="en">EN</button></div>
+</div>
+<h1 class="zh">ComfyUI 傻瓜式全教程</h1>
+<h1 class="en">ComfyUI foolproof tutorial</h1>
+<p class="zh">这页把安装、多语言、文案、图、视频、配乐、剪辑写在一起。官方下载：<a href="https://comfy.org/download/" target="_blank" rel="noopener">comfy.org/download</a> 文档：<a href="https://docs.comfy.org/" target="_blank" rel="noopener">docs.comfy.org</a></p>
+<p class="en">Install, language, copy, image, video, music, edit. Official: comfy.org/download</p>
+
+<nav class="toc box">
+<a href="#install">1. 安装</a>
+<a href="#lang">2. 多语言</a>
+<a href="#first">3. 第一次跑通</a>
+<a href="#copy">4. 文案</a>
+<a href="#image">5. 图片</a>
+<a href="#video">6. 视频</a>
+<a href="#music">7. 音乐配乐</a>
+<a href="#edit">8. 剪辑合成</a>
+<a href="#fix">9. 报错</a>
+</nav>
+
+<h2 id="install">1. 傻瓜式安装</h2>
+<p class="zh">先看显卡。NVIDIA 笔记本用 <b>Comfy Desktop</b>。不想装 Python 用 <b>Stability Matrix</b>。只有 iPhone、没有电脑，只能远程打开电脑上的网页，手机本身跑不动大模型。</p>
+<div class="box">
+<h3>方案 A：Comfy Desktop（推荐小白）</h3>
+<ol>
+<li>打开 <a href="https://comfy.org/download/" target="_blank" rel="noopener">https://comfy.org/download/</a> 下 Windows 或 macOS。</li>
+<li>系统：Windows 10+，或 macOS 13+ Apple Silicon。Linux 官方还没有安装包。</li>
+<li>磁盘预留 20GB+（软件约 5GB，模型还要几十 GB）。内存 16GB 更稳。</li>
+<li>跑安装程序，开启后在 Welcome 里新建一个 Installation。</li>
+<li>点 Launch。浏览器会打开 <code>http://127.0.0.1:8188</code>。</li>
+</ol>
+<p class="src">文档： docs.comfy.org/installation/desktop/overview</p>
+</div>
+<div class="box">
+<h3>方案 B：Stability Matrix 一键</h3>
+<ol>
+<li>打开 <a href="https://github.com/LykosAI/StabilityMatrix" target="_blank" rel="noopener">github.com/LykosAI/StabilityMatrix</a> 下 Releases。</li>
+<li>解压到非 C 盘的空文件夹，双击运行。</li>
+<li>包管理里选 ComfyUI → Install。</li>
+<li>等绿灯，点 Launch。模型以后都丢进 Data/Models，不要丢乱。</li>
+</ol>
+</div>
+<div class="box">
+<h3>方案 C：官方 Portable（Windows NVIDIA）</h3>
+<ol>
+<li>到 <a href="https://github.com/comfyanonymous/ComfyUI/releases" target="_blank" rel="noopener">ComfyUI Releases</a> 下 7z。</li>
+<li>解压后双击 <code>run_nvidia_gpu.bat</code>。没显卡用 <code>run_cpu.bat</code>，会很慢。</li>
+</ol>
+</div>
+<p class="zh">驱动：NVIDIA 先装好 Game Ready / Studio 驱动。第一次启动会下 PyTorch，等到命令行出现 Starting server。</p>
+
+<h2 id="lang">2. 多语言界面</h2>
+<ol>
+<li class="zh">右上设置（齿轮）→ Locale / Language。</li>
+<li class="zh">选 简体中文。没有就装自定义节点：ComfyUI-Manager 里搜 translation / AIGODLIKE-ComfyUI-Translation。</li>
+<li class="zh">Manager 安装：右侧面板 Manager → Install Custom Nodes → 搜 AIGODLIKE → Install → Restart。</li>
+<li class="zh">节点上右键 → Convert to multilingual 不存在。换语言只换菜单，工作流 JSON 里的节点名仍是英文，属于正常。</li>
+</ol>
+
+<h2 id="first">3. 第一次跑通（必做）</h2>
+<ol>
+<li>打开后看到布线图。没有就 Load Default。</li>
+<li>最左 Load Checkpoint。红色说没模型：把 <code>.safetensors</code> 放进 <code>models/checkpoints/</code>。</li>
+<li>小白第一个模型建议 SDXL 或 Flux schnell 量化版（显存 8GB 用 GGUF）。去 Hugging Face / Civitai 搜名字下。</li>
+<li>中间 CLIP Text Encode 上箱写提示词，下箱写负向词。</li>
+<li>右下 Empty Latent 宽高：SD1.5 用 512，SDXL 用 1024，Flux 按模型说明。</li>
+<li>点 Queue / 快捷键 Ctrl+Enter。右边 Preview 出图。</li>
+<li>工作流保存：菜单 Save。别人发你的 PNG/图里花带线，直接拖进窗口就能读回节点。</li>
+</ol>
+
+<h2 id="copy">4. 文案工作流</h2>
+<p class="zh">ComfyUI 自己不写文案。用两种做法：</p>
+<ol>
+<li>外部 LLM：ChatGPT / Claude 先写镜头运动、服装、光线、时长 15 秒的分镜文案，再贴进 CLIP 框。</li>
+<li>节点里接 LLM：装 ComfyUI-Custom-Scripts 或 Ollama / LM Studio 节点。左边 Text 节点出提示词，连到图或视频的正向提示。</li>
+<li>中文提示词：Flux / Hunyuan / Wan 对中文更友好。SD1.5 建议英文。</li>
+<li>口播文案不要塞进图模型。图模型只写画面；口播用 TTS（IndexTTS、CosyVoice、F5-TTS 节点）另走一条线。</li>
+</ol>
+<div class="box">
+<p>图提示词示例（英文更稳）：</p>
+<p><code>photorealistic, 18yo East Asian woman in a small cafe, natural window light, visible skin pores, holding a cup, looking at camera, 35mm, shallow depth of field</code></p>
+<p>负向：<code>cartoon, extra fingers, watermark, text, blurry, lowres</code></p>
+</div>
+
+<h2 id="image">5. 图片工作流</h2>
+<ol>
+<li>文生图：Checkpoint → CLIP 正负 → KSampler → VAE Decode → Save Image。</li>
+<li>图生图：加 Load Image + IP-Adapter 或 Redux / PuLID（换脸要单独装节点）。</li>
+<li>控姿势：ControlNet OpenPose / Depth / Canny。Preprocessor 节点先识图，再进 ControlNet。</li>
+<li>贴装换装：分割节点 + Inpaint。</li>
+<li>模型放置：
+  <ul>
+  <li>checkpoints / unet / diffusion_models</li>
+  <li>loras</li>
+  <li>vae</li>
+  <li>clip / text_encoders</li>
+  <li>controlnet</li>
+  </ul>
+</li>
+<li>显存不够：Manager 里装 ComfyUI-GGUF，下 Q4/Q5 量化。KSampler 把步数改 20。</li>
+</ol>
+
+<h2 id="video">6. 视频工作流</h2>
+<p class="zh">不要一上来 4K。先 5 秒 480p 跑通。</p>
+<ol>
+<li>文档范例：<a href="https://docs.comfy.org/tutorials/video/hunyuan/hunyuan-video" target="_blank" rel="noopener">Hunyuan Video</a>。把官方示例图拖进 ComfyUI，红色节点按提示下模型。</li>
+<li>Wan 2.1 / 2.2：文生视频和图生视频都有现成图。显存 8–12GB 选 GGUF。</li>
+<li>LTX Video：更快，画质略弱，适合试镜头。</li>
+<li>图生视频：Load Image → I2V 模型 → 帧数 49–81 先，再接 Video Combine。</li>
+<li>对口型：Sonic / LivePortrait 类节点，左边人像 + 右边音频。</li>
+<li>输出：VHS Video Combine，帧率 16–24，格式 mp4。</li>
+</ol>
+<p class="zh">官方视频模型说明见 docs.comfy.org 的 Video Models。</p>
+
+<h2 id="music">7. 音乐与配乐</h2>
+<ol>
+<li>ACE-Step：Comfy 里有现成音乐节点，填歌词/风格，出 wav。</li>
+<li>Stable Audio Open：短配乐、环境声。</li>
+<li>不要用图模型转音乐。音乐是独立 checkpoint。</li>
+<li>口播：F5-TTS / IndexTTS / CosyVoice 节点，文本进去出 wav。</li>
+<li>合成：Audio 节点出来的 wav + Video Combine 的视频，用 VHS 或 ffmpeg 压在一起。</li>
+<li>手机端只做收听和上传 wav，不要期待 iPhone 本地跑 ACE-Step。</li>
+</ol>
+
+<h2 id="edit">8. 剪辑合成</h2>
+<ol>
+<li>Comfy 里可做：切帧、拼接、加字幕图层、调色。长片还是导出后用 CapCut / Premiere。</li>
+<li>Video Combine 多段排序：多个视频节点依次连到同一个拼接节点。</li>
+<li>字幕：用字幕文件 + 覆加节点，或导出无字幕版去剪映软件里加。</li>
+<li>定点对齐配乐：先定歌曲时长，再让视频帧数 ≈ 秒数 × 帧率。</li>
+<li>批量：把文案 CSV 读进 List 节点，Queue 打勾 extra options 里 increment。</li>
+</ol>
+
+<h2 id="fix">9. 报错对照</h2>
+<ul>
+<li><code>Value not in list</code> 模型没放对文件夹，或要 Refresh。</li>
+<li><code>CUDA out of memory</code> 降分辨率、改 GGUF、关其它卡密集进程。</li>
+<li><code>Missing Node Type</code> Manager 装缺的自定义节点，Restart。</li>
+<li>黑屏：VAE 没选对，或用了 SD1.5 的 VAE 解 Flux。</li>
+<li>人脸塌：加负向 extra fingers, deformed face；或换军武石少的 checkpoint。</li>
+</ul>
+
+<p class="zh">工作流合集可以从社区搜现成图拖进去，不要改人发来的 <code>.bat</code> 跑未知脚本。模型只从 Hugging Face、Civitai、官方文档链接下。</p>
+</div>
+<script>
+(function(){
+  var lang=(new URLSearchParams(location.search).get('lang'))||localStorage.getItem('lang')||'zh';
+  var btns=[].slice.call(document.querySelectorAll('.langs button'));
+  function apply(){
+    document.documentElement.lang=lang==='en'?'en':'zh-CN';
+    document.title=lang==='en'?'ComfyUI tutorial':'ComfyUI 傻瓜式教程';
+    btns.forEach(function(b){b.classList.toggle('on',b.dataset.l===(lang==='en'?'en':'zh'));});
+    if(location.hash){var el=document.querySelector(location.hash);if(el)el.scrollIntoView();}
+  }
+  btns.forEach(function(b){b.onclick=function(){lang=b.dataset.l;try{localStorage.setItem('lang',lang)}catch(e){}apply();};});
+  apply();
+})();
+</script>
+</body>
+</html>
