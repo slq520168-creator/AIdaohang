@@ -1,13 +1,13 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 情感 / 愈愈 / 性格 / 语录 / MBTI',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
-  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search heal personality quotes MBTI',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热门',all:'AI 工具大全',ph:'搜 男直 / 富婆 / 夜生活 / Chaturbate',themeD:'深色',themeL:'浅色',tools:' 款工具',hit:' 条',empty:'没有匹配',res:'搜索结果 '},
+  en:{brand:'Global AI Directory',hot:'Trending',all:'All tools',ph:'Search male live nightlife chat',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const CATS=[
-  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Ride'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['成人','Adult'],['无审核','Uncensored'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Hire'],['社区','Community'],['开店','Shop'],['小商品','Goods'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books'],['小说','Novels'],['日韩漫画','Manga'],['无障碍','Access'],['星座','Stars'],['塔罗','Tarot'],['云盘','Cloud'],['换脸','Swap'],['打扮','Look'],['模型包','Weights'],['维修','Fix'],['硬件','Hardware'],['隐私','Privacy'],['资讯','News'],['自然','Nature'],['棋类','Board'],['家庭','Family'],['短剧','Short'],['漫剧','Toon'],['故事','Story'],['创业','Startup'],['名人','Bio'],['八卦','Gossip'],['亲子','Kids'],['宝妈','Moms'],['主播','Stream'],['融资','Fund'],['理财','Money'],['年轻','Youth'],['工薪','Wage'],['种植','Farm'],['搭伙','Buddy'],['爬山','Hike'],['陪聊','Talk'],['情感','Feel'],['端侧','OnDev'],['企业','Ent'],['小商户','Shop'],['食堂','Cafe'],['数字人','Avatar'],['厨房','Kitchen'],['菜谱','Recipe'],['菜单图','MenuPic'],['酒店','Hotel'],['工程','Build'],['房产','RE'],['保险','Insure'],['物流','Ship'],['能源','Energy'],['教育','Edu'],['演出','Show'],['电影','Film'],['私影','PCine'],['情侣房','Couple'],['附近','Near'],['美剧','US'],['韩剧','KR'],['日剧','JP'],['印剧','IN'],['电视台','TV'],['监控','Cam'],['虚拟定位','GPS'],['虚拟爱人','Lover'],['虚拟人','You'],['虚拟号','VNum'],['虚拟卡','VCard'],['虚拟信箱','VMail'],['虚拟馆','Museum'],['AI音乐','AIMus'],['音轨','Stem'],['缩混','Mix'],['素材','Sample'],['翻唱','Cover'],['欧美交友','West'],['各国交友','World'],['无限交友','Open'],['老年','Senior'],['学生','Student'],['女心','Her'],['愈愈','Heal'],['性格','Trait'],['忠诚度','Loyal'],['语录','Quote']
+  ['全部','All'],['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Chat'],['插件','Plugins'],['陪伴','Companion'],['学习','Learn'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Ride'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Image'],['视频','Video'],['成人','Adult'],['无审核','Uncensored'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Work'],['编程','Code'],['智能工作流','Workflow'],['游戏','Game'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Hire'],['社区','Community'],['开店','Shop'],['小商品','Goods'],['采集','Capture'],['接口','API'],['机器人','Robot'],['图书','Books'],['小说','Novels'],['日韩漫画','Manga'],['无障碍','Access'],['星座','Stars'],['塔罗','Tarot'],['云盘','Cloud'],['换脸','Swap'],['打扮','Look'],['模型包','Weights'],['维修','Fix'],['硬件','Hardware'],['隐私','Privacy'],['资讯','News'],['自然','Nature'],['棋类','Board'],['家庭','Family'],['短剧','Short'],['漫剧','Toon'],['故事','Story'],['创业','Startup'],['名人','Bio'],['八卦','Gossip'],['亲子','Kids'],['宝妈','Moms'],['主播','Stream'],['融资','Fund'],['理财','Money'],['年轻','Youth'],['工薪','Wage'],['种植','Farm'],['搭伙','Buddy'],['爬山','Hike'],['陪聊','Talk'],['情感','Feel'],['端侧','OnDev'],['企业','Ent'],['小商户','Shop'],['食堂','Cafe'],['数字人','Avatar'],['厨房','Kitchen'],['菜谱','Recipe'],['菜单图','MenuPic'],['酒店','Hotel'],['工程','Build'],['房产','RE'],['保险','Insure'],['物流','Ship'],['能源','Energy'],['教育','Edu'],['演出','Show'],['电影','Film'],['私影','PCine'],['情侣房','Couple'],['附近','Near'],['美剧','US'],['韩剧','KR'],['日剧','JP'],['印剧','IN'],['电视台','TV'],['监控','Cam'],['虚拟定位','GPS'],['虚拟爱人','Lover'],['虚拟人','You'],['虚拟号','VNum'],['虚拟卡','VCard'],['虚拟信箱','VMail'],['虚拟馆','Museum'],['AI音乐','AIMus'],['音轨','Stem'],['缩混','Mix'],['素材','Sample'],['翻唱','Cover'],['欧美交友','West'],['各国交友','World'],['无限交友','Open'],['老年','Senior'],['学生','Student'],['女心','Her'],['愈愈','Heal'],['性格','Trait'],['忠诚度','Loyal'],['语录','Quote'],['男直','MLive'],['富婆','Sugar'],['夜生活','Night'],['寂寞聊','Lonely']
 ];
 const KW={
   '对话':/对话/,
-  '聊天':/聊天/,
+  '聊天':/聊天|OmeTV|Chatroulette|Emerald Chat|Shagle|Azar/,
   '插件':/插件/,
   '陪伴':/陪伴/,
   '学习':/学习/,
@@ -15,27 +15,27 @@ const KW={
   '美妆':/美妆/,
   '宠物':/宠物/,
   '美食':/美食/,
-  '旅行':/旅行/,
+  '旅行':/旅行|Timeout|Fever|Nightout/,
   '拼车':/拼车/,
   '租车':/租车/,
   '法律':/法律/,
   '管理':/管理/,
   '绘画':/绘画/,
   '视频':/视频/,
-  '成人':/成人|18/,
-  '无审核':/无审核/,
-  '直播':/直播/,
-  '交友':/交友/,
-  '约炮':/约炮/,
+  '成人':/成人|18|Chaturbate|Stripchat|Seeking|Cougar/,
+  '无审核':/无审核|Chaturbate|Stripchat|Cam4/,
+  '直播':/直播|Chaturbate|Stripchat|Cam4|BongaCams/,
+  '交友':/交友|Seeking|Cougar Life/,
+  '约炮':/约炮|Seeking|Cougar/,
   '办公':/办公/,
   '编程':/编程/,
   '智能工作流':/工作流/,
   '游戏':/游戏/,
-  '音乐':/音乐/,
+  '音乐':/音乐|Resident Advisor|Dice/,
   '语音':/语音/,
   '设计':/设计/,
   '搜索':/搜索/,
-  '写作':/写作|语录|BrainyQuote|Goodreads Quotes|Wikiquote/,
+  '写作':/写作/,
   '接单':/接单/,
   '兼职':/兼职/,
   '招聘':/招聘/,
@@ -79,7 +79,7 @@ const KW={
   '搭伙':/搭伙/,
   '爬山':/爬山/,
   '陪聊':/陪聊/,
-  '情感':/情感|女心|The Cut|知乎 情感|Insight Timer|Calm/,
+  '情感':/情感/,
   '端侧':/端侧/,
   '企业':/企业/,
   '小商户':/小商户/,
@@ -123,11 +123,15 @@ const KW={
   '无限交友':/无限交友/,
   '老年':/老年/,
   '学生':/学生/,
-  '女心':/女心|The Cut|Refinery29|AskWomen|TwoX|豆瓣 女性/,
-  '愈愈':/愈愈|Insight Timer|Calm|Headspace|Daylio|TinyBuddha|School of Life/,
-  '性格':/性格|16Personalities|Truity|Enneagram|Open Psychometrics/,
-  '忠诚度':/忠诚度|Love Languages|Gottman|Psychology Today Tests/,
-  '语录':/语录|BrainyQuote|Goodreads Quotes|Wikiquote|古诗文/
+  '女心':/女心/,
+  '愈愈':/愈愈/,
+  '性格':/性格/,
+  '忠诚度':/忠诚度/,
+  '语录':/语录/,
+  '男直':/男直|Chaturbate|Stripchat|Cam4|BongaCams|JustForFans|Fansly/,
+  '富婆':/富婆|Seeking|Cougar Life|MissTravel|Secret Benefits/,
+  '夜生活':/夜生活|Timeout|Resident Advisor|Dice|Fever|酒吧/,
+  '寂寞聊':/寂寞聊|OmeTV|Chatroulette|Emerald Chat|Shagle|Azar|Monkey/
 };
 const DROP_NAME=new Set(['Cron Calendar','Brilliant Practice','Quizlet Learn','Tuta Mail','Navidrome Demo','Stream Music','Primephonic 已并','Google Jules Agent','OpenDevin 旧名','Cursor.sh 旧域','Fig Term 已并','Amazon CodeWhisperer','Lyuceum','Mentat AI','Safari 技术预览','Character.AI+','Odakyu? skip','CopyMeThat Recipes','Privacy.com Cards Note']);
 const DROP_HOST=new Set(['lyceum.online','mentat.ai','cron.com','getcruise.com','humane.com','tome.app','kajiwoto.ai','height.app','cozy.sh','hourone.ai','bowery.co','6pen.art','webchatgpt.io','darkness.ai','forger.studio','photoscape.ai','wiseone.io','justplayer.app','stillplayer.app','makeupplus.com','marktext.app','snapseed.online','readyplayer.me','resonate.coop','tianmai.cn','wuan.com','xting.com','woodworm.store','taskcn.com','huanbian.com','ishanjian.com','jiami.cn','xiaoyuan-calc.com','joinopen.com','clara.io','csm.ai','digi.ai']);
@@ -195,7 +199,7 @@ function matchCombo(t0){
 async function load(){
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=171;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=172;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seenName=new Set(); const seenUrl=new Set(); tools=[];
   for(const x of arrs.flat()){
@@ -210,7 +214,7 @@ async function load(){
     if(uk) seenUrl.add(uk);
     tools.push(x);
   }
-  const hot=await fetch('data/hot.json?v=140').then(r=>r.json()).catch(()=>[]);
+  const hot=await fetch('data/hot.json?v=141').then(r=>r.json()).catch(()=>[]);
   metaEl.textContent=tools.length+t().tools;
   hotEl.innerHTML=(hot||[]).slice(0,10).map((h,i)=>`<li><a href="${h.url}" target="_blank" rel="noopener"><i>${i+1}</i><span>${esc(h.title)}</span></a></li>`).join('');
   renderSide(); render();
