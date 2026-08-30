@@ -20,16 +20,18 @@ video{width:100%;border-radius:18px;display:block;margin:12px 0 10px;background:
 </video>
 <div class="b" id="hello">Hello. Welcome to Global AI Directory. I am Anan. Watch the video, then tap below to open the home page.</div>
 <p class="point">↓</p>
-<a class="enter" id="goHome" href="./tools.html?v=160">Enter home</a>
+<a class="enter" id="goHome" href="./tools.html?v=167&lang=en">Enter home</a>
 </div>
 <script>
 (function(){
-  var lang=localStorage.getItem('lang')||'en';
+  var q=new URLSearchParams(location.search).get('lang');
+  var lang=q||'en';
   if(lang==='zh'){
     document.documentElement.lang='zh-CN';
     document.title='全球优选AI导航';
     document.getElementById('hello').textContent='你好，欢迎来到全球优选AI导航。我是安安。看完视频，点下面进入首页。';
     document.getElementById('goHome').textContent='进入首页';
+    document.getElementById('goHome').href='./tools.html?v=167&lang=zh';
   }
   document.getElementById('goHome').addEventListener('click',function(){
     localStorage.setItem('aid_welcome','1');
