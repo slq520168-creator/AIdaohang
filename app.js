@@ -20,6 +20,8 @@ const DROP_PATH=['assistant.google.com/auto','joshua-uchoa/MochiDiffusion','mifi
 const sideEl=document.getElementById('side');
 const tagsEl=document.getElementById('tags');
 const listEl=document.getElementById('list');
+const popEl=document.getElementById('pop');
+const popX=document.getElementById('popX');
 const qEl=document.getElementById('q');
 const metaEl=document.getElementById('meta');
 const countEl=document.getElementById('count');
@@ -180,6 +182,7 @@ function render(){
   if(key!==lastKey){shown=80;lastKey=key}
   if(hotBlock) hotBlock.style.display=q?'none':'block';
   if(listTitle) listTitle.textContent='全部工具';
+  if(popEl) popEl.classList.toggle('cover', selected.size>0);
   metaEl.textContent=tools.length+s.tools;
   filtered=tools.filter(x=>{
     const hit=!q||[x.name,x.desc,x.desc_en||'',x.cat,x.how||'',x.url||''].join(' ').toLowerCase().includes(q);
@@ -188,6 +191,7 @@ function render(){
   countEl.textContent=filtered.length+s.hit;
   listEl.innerHTML=filtered.slice(0,shown).map(card).join('')||`<p class="count">${s.empty}</p>`;
 }
+if(popX) popX.onclick=()=>{selected.clear();renderSide();render()};
 function onScroll(){
   if(shown>=filtered.length) return;
   const top=scroller===window?window.scrollY:scroller.scrollTop;
