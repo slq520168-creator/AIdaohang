@@ -54,6 +54,7 @@ function applyChrome(){
   document.getElementById('brand').textContent=s.brand;
   document.title=s.brand;
   document.getElementById('hotTitle').textContent=s.hot;
+  if(listTitle) listTitle.textContent='全部工具';
   qEl.placeholder='';
   qEl.removeAttribute('placeholder');
   langBtn.textContent=lang==='zh'?'中':'EN';
@@ -178,11 +179,7 @@ function render(){
   const key=[...selected].join(',')+'|'+[...tags].join(',')+'|'+q;
   if(key!==lastKey){shown=80;lastKey=key}
   if(hotBlock) hotBlock.style.display=q?'none':'block';
-  if(listTitle){
-    if(q) listTitle.textContent=s.res+qEl.value.trim();
-    else if(!selected.size && !tags.size) listTitle.textContent='全部工具';
-    else listTitle.textContent=[...GROUPS.filter(g=>selected.has(g.id)).map(g=>g.k),...tags].join(' · ');
-  }
+  if(listTitle) listTitle.textContent='全部工具';
   metaEl.textContent=tools.length+s.tools;
   filtered=tools.filter(x=>{
     const hit=!q||[x.name,x.desc,x.desc_en||'',x.cat,x.how||'',x.url||''].join(' ').toLowerCase().includes(q);
