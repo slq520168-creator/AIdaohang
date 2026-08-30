@@ -1,19 +1,21 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热点',all:'全部工具',ph:'',themeD:'深色',themeL:'浅色',tools:' 款',hit:' 条',empty:'没有匹配',res:'搜索 '},
-  en:{brand:'Global AI Directory',hot:'Today picks',all:'全部工具',ph:'',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热点',all:'全部工具',ph:'',themeD:'深色',themeL:'浅色',tools:' 款',hit:' 条',empty:'没有匹配',res:'搜索 ',close:'关闭'},
+  en:{brand:'Global AI Directory',hot:'Today picks',all:'All tools',ph:'',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results ',close:'Close'}
 };
 const GROUPS=[
-  {k:'免费试用',id:'free'},
-  {k:'学习教程',id:'learn'},
-  {k:'接单赚钱',id:'gig'},
-  {k:'绘画设计',id:'draw'},
-  {k:'创作媒体',id:'make'},
-  {k:'生活社交',id:'life'},
-  {k:'工作办公',id:'work'},
-  {k:'成人内容',id:'adult'},
-  {k:'其他类型',id:'other'}
+  {k:'免费试用',en:'Free use',id:'free'},
+  {k:'学习教程',en:'Learning',id:'learn'},
+  {k:'接单赚钱',en:'Gig jobs',id:'gig'},
+  {k:'绘画设计',en:'Art design',id:'draw'},
+  {k:'创作媒体',en:'Media',id:'make'},
+  {k:'生活社交',en:'Life',id:'life'},
+  {k:'工作办公',en:'Office',id:'work'},
+  {k:'成人内容',en:'Adult',id:'adult'},
+  {k:'其他类型',en:'Others',id:'other'}
 ];
-const TAGS=['免费','收费','对话','聊天','插件','陪伴','学习','健身','美妆','宠物','美食','旅行','拼车','租车','法律','管理','绘画','视频','成人','直播','交友','约炮','办公','编程','游戏','音乐','语音','设计','搜索','写作','接单','兼职','招聘','社区','开店','API','图书','小说','漫画','星座','塔罗','云盘','换脸','打扮','隐私','资讯','短剧','漫剧','故事','创业','名人','八卦','亲子','宝妈','主播','融资','理财','种植','搭伙','爬山','陪聊','情感','厨房','菜谱','酒店','房产','电影','私影','附近','美剧','韩剧','日剧','监控','学生','女心','语录','富婆','人设','套图','文案','外贸','铺货','网店','养成','婚恋','出轨','检测','检验','获粉','投票','数据','无审核','小商品','机器人','无障碍','模型包','数字人','电视台','虚拟人','AI音乐','翻唱','夜生活','线下交'];
+const TAGS=[
+  ['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Talk'],['插件','Plugin'],['陪伴','Buddy'],['学习','Study'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Carpool'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Draw'],['视频','Video'],['成人','Adult'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Office'],['编程','Code'],['游戏','Games'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Jobs'],['社区','Forum'],['开店','Shop'],['API','API'],['图书','Books'],['小说','Novels'],['漫画','Manga'],['星座','Zodiac'],['塔罗','Tarot'],['云盘','Cloud'],['换脸','Face'],['打扮','Style'],['隐私','Privacy'],['资讯','News'],['短剧','Short'],['漫剧','Toon'],['故事','Story'],['创业','Startup'],['名人','Bio'],['八卦','Gossip'],['亲子','Kids'],['宝妈','Moms'],['主播','Stream'],['融资','Fund'],['理财','Money'],['种植','Farm'],['搭伙','Buddy'],['爬山','Hike'],['陪聊','Talk'],['情感','Feel'],['厨房','Kitchen'],['菜谱','Recipe'],['酒店','Hotel'],['房产','Realty'],['电影','Film'],['私影','Cinema'],['附近','Nearby'],['美剧','US TV'],['韩剧','KR TV'],['日剧','JP TV'],['监控','Cams'],['学生','Student'],['女心','Her'],['语录','Quotes'],['富婆','Sugar'],['人设','Persona'],['套图','Sets'],['文案','Copy'],['外贸','Trade'],['铺货','Dropship'],['网店','Store'],['养成','Raise'],['婚恋','Dating'],['出轨','Affair'],['检测','Detect'],['检验','Inspect'],['获粉','Grow'],['投票','Vote'],['数据','Stats'],['无审核','Open'],['小商品','Goods'],['机器人','Robot'],['无障碍','Access'],['模型包','Weights'],['数字人','Avatar'],['电视台','TV'],['虚拟人','Virtual'],['AI音乐','AI music'],['翻唱','Cover'],['夜生活','Nightlife'],['线下交','Meetup']
+];
 const DROP_NAME=new Set(['Cron Calendar','Brilliant Practice','Quizlet Learn','Tuta Mail','Navidrome Demo','Stream Music','Primephonic 已并','Google Jules Agent','OpenDevin 旧名','Cursor.sh 旧域','Fig Term 已并','Amazon CodeWhisperer','Lyuceum','Mentat AI','Safari 技术预览','Character.AI+','Odakyu? skip','CopyMeThat Recipes','Privacy.com Cards Note','Ashley Madison Affairs Plus','SSL Labs Recheck']);
 const DROP_HOST=new Set(['lyceum.online','mentat.ai','cron.com','getcruise.com','humane.com','tome.app','kajiwoto.ai','height.app','cozy.sh','hourone.ai','bowery.co','6pen.art','webchatgpt.io','darkness.ai','forger.studio','photoscape.ai','wiseone.io','justplayer.app','stillplayer.app','makeupplus.com','marktext.app','snapseed.online','readyplayer.me','resonate.coop','tianmai.cn','wuan.com','xting.com','woodworm.store','taskcn.com','huanbian.com','ishanjian.com','jiami.cn','xiaoyuan-calc.com','joinopen.com','clara.io','csm.ai','digi.ai']);
 const DROP_PATH=['assistant.google.com/auto','joshua-uchoa/MochiDiffusion','mifi.github.io/lossless-cut','prisma-ai.com/lensa','geforce-experience/shadowplay','manyvids.com/Live','apple-music/classical','thomsonreuters.com/westlaw','novavideoplayer.github.io','lightricks.com/apps/motionleap','amazon.com/kindle-dbs'];
@@ -56,7 +58,8 @@ function applyChrome(){
   document.getElementById('brand').textContent=s.brand;
   document.title=s.brand;
   document.getElementById('hotTitle').textContent=s.hot;
-  if(listTitle) listTitle.textContent='全部工具';
+  if(listTitle) listTitle.textContent=s.all;
+  if(popX) popX.textContent=s.close;
   qEl.placeholder='';
   qEl.removeAttribute('placeholder');
   langBtn.textContent=lang==='zh'?'中':'EN';
@@ -125,7 +128,7 @@ function matchTag(x){
   return others.some(k=>x.cat===k||x.pack===k||s.indexOf(k)>=0);
 }
 function tagLen(s){return Array.from(s).length}
-const TAGS_SORTED=TAGS.slice().sort((a,b)=>tagLen(a)-tagLen(b)||TAGS.indexOf(a)-TAGS.indexOf(b));
+const TAGS_SORTED=TAGS.slice().sort((a,b)=>tagLen(a[0])-tagLen(b[0])||TAGS.indexOf(a)-TAGS.indexOf(b));
 async function load(){
   selected.clear(); tags.clear();
   applyChrome();
@@ -150,7 +153,7 @@ async function load(){
   renderHot(); renderSide(); render();
 }
 function renderSide(){
-  sideEl.innerHTML=GROUPS.map(g=>`<button data-c="${g.id}" class="${selected.has(g.id)?'on':''}">${g.k}</button>`).join('');
+  sideEl.innerHTML=GROUPS.map(g=>`<button data-c="${g.id}" class="${selected.has(g.id)?'on':''}">${lang==='zh'?g.k:g.en}</button>`).join('');
   sideEl.onclick=e=>{
     const b=e.target.closest('button'); if(!b)return;
     const id=b.dataset.c;
@@ -158,7 +161,7 @@ function renderSide(){
     shown=80; renderSide(); render();
   };
   if(!tagsEl) return;
-  tagsEl.innerHTML=TAGS_SORTED.map(k=>`<button data-t="${k}" class="${tags.has(k)?'on':''}">${k}</button>`).join('');
+  tagsEl.innerHTML=TAGS_SORTED.map(([zh,en])=>`<button data-t="${zh}" class="${tags.has(zh)?'on':''}">${lang==='zh'?zh:en}</button>`).join('');
   tagsEl.onclick=e=>{
     const b=e.target.closest('button'); if(!b)return;
     const k=b.dataset.t;
@@ -170,10 +173,10 @@ function renderSide(){
 }
 function card(x){
   const letter=(x.name||'?').slice(0,1);
-  const desc=lang==='en'?(x.desc_en||x.desc||x.cat):(x.desc||x.cat);
+  const desc=lang==='en'?(x.desc_en||hostOf(x.url)||x.desc||x.cat):(x.desc||x.cat);
   const href=isHttp(x.url)?x.url:('guide.html?n='+encodeURIComponent(x.name||''));
   const host=hostOf(x.url);
-  return `<a class="card" href="${esc(href)}" target="_blank" rel="noopener"><div class="row"><div class="av">${iconTag(x.url,letter)}</div><div><h3>${esc(x.name)}</h3><p>${esc(host||desc)}</p></div></div></a>`;
+  return `<a class="card" href="${esc(href)}" target="_blank" rel="noopener"><div class="row"><div class="av">${iconTag(x.url,letter)}</div><div><h3>${esc(x.name)}</h3><p>${esc(lang==='en'?(host||desc): (host||desc))}</p></div></div></a>`;
 }
 function render(){
   const q=(qEl.value||'').trim().toLowerCase();
@@ -181,8 +184,9 @@ function render(){
   const key=[...selected].join(',')+'|'+[...tags].join(',')+'|'+q;
   if(key!==lastKey){shown=80;lastKey=key}
   if(hotBlock) hotBlock.style.display=q?'none':'block';
-  if(listTitle) listTitle.textContent='全部工具';
+  if(listTitle) listTitle.textContent=s.all;
   if(popEl) popEl.classList.toggle('cover', selected.size>0);
+  if(popX) popX.textContent=s.close;
   metaEl.textContent=tools.length+s.tools;
   filtered=tools.filter(x=>{
     const hit=!q||[x.name,x.desc,x.desc_en||'',x.cat,x.how||'',x.url||''].join(' ').toLowerCase().includes(q);
