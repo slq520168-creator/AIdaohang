@@ -10,6 +10,7 @@
   var cache={};
   try{cache=JSON.parse(localStorage.getItem(LS)||'{}')||{}}catch(e){cache={}}
   var q=[]; var busy=false; var saveT=null; var db=null;
+  var SEP='\n';
   function lang(){return localStorage.getItem('lang')||'en'}
   function hasHan(s){return /[\u3400-\u9FFF]/.test(String(s||''))}
   function ck(to,text){return to+'\t'+String(text)}
@@ -44,38 +45,102 @@
         var g=tx.objectStore(ST).getAll();
         g.onsuccess=function(){
           (g.result||[]).forEach(function(row){if(row&&row.k&&row.v&&!cache[row.k]) cache[row.k]=row.v});
-          persist();
-          scan();
+          persist(); scan();
         };
       }catch(e){}
     };
   }
-  function api(text,to){
-    var k=ck(to,text);
-    if(cache[k]) return Promise.resolve(cache[k]);
-    if(to==='zh') return Promise.resolve(text);
-    var cut=String(text).slice(0,450);
+  function oneReq(cut,to){
     var sl=hasHan(cut)?'zh-CN':'en';
     var tl=MM[to]||'en';
-    if(to==='en' && sl==='en') {cache[k]=text;persist();return Promise.resolve(text);}
-    if(sl===tl) {cache[k]=text;persist();return Promise.resolve(text);}
+    if(to==='zh'||sl===tl||(to==='en'&&sl==='en')) return Promise.resolve(cut);
     var u='https://api.mymemory.translated.net/get?q='+encodeURIComponent(cut)+'&langpair='+encodeURIComponent(sl+'|'+tl);
     return fetch(u).then(function(r){return r.json()}).catch(function(){return null}).then(function(j){
       var out=(j&&j.responseData&&j.responseData.translatedText)||'';
       if(out && /MYMEMORY WARNING|QUERY LENGTH|INVALID LANGUAGE/i.test(out)) out='';
-      if(out){cache[k]=out;persist();return out;}
+      if(out) return out;
       var sl2=hasHan(cut)?'zh':'en';
       var tl2=LT[to]||'en';
-      if(sl2===tl2){cache[k]=text;persist();return text;}
+      if(sl2===tl2) return cut;
       return fetch('https://translate.fedilab.app/translate',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({q:cut,source:sl2,target:tl2,format:'text'})
       }).then(function(r){return r.json()}).catch(function(){return null}).then(function(j2){
-        var t2=(j2&&j2.translatedText)||text;
-        cache[k]=t2;persist();return t2;
+        return (j2&&j2.translatedText)||cut;
       });
     });
+  }
+  function splitOut(srcArr, translated){
+    var parts=String(translated||'').split(/\r?\n/);
+    if(parts.length===srcArr.length) return parts;
+    return null;
+  }
+  function apiMany(texts,to){
+    var need=[], mapIdx=[];
+    texts.forEach(function(text,i){
+      var k=ck(to,text);
+      if(cache[k]) return;
+      if(to==='zh'||!text){cache[k]=text;return;}
+      need.push(text); mapIdx.push(i);
+    });
+    if(!need.length) return Promise.resolve(texts.map(function(t){return cache[ck(to,t)]||t}));
+    var groups=[]; var cur=[]; var size=0;
+    need.forEach(function(t){
+      var add=t.length+1;
+      if(cur.length && size+add>420){groups.push(cur);cur=[];size=0;}
+      cur.push(t); size+=add;
+    });
+    if(cur.length) groups.push(cur);
+    return Promise.all(groups.map(function(g){
+      if(g.length===1){
+        return oneReq(g[0].slice(0,450),to).then(function(out){cache[ck(to,g[0])]=out;return;});
+      }
+      return oneReq(g.join(SEP),to).then(function(out){
+        var parts=splitOut(g,out);
+        if(parts){
+          g.forEach(function(t,i){cache[ck(to,t)]=parts[i];});
+        }else{
+          return Promise.all(g.map(function(t){return oneReq(t.slice(0,450),to).then(function(o){cache[ck(to,t)]=o;});}));
+        }
+      });
+    })).then(function(){
+      persist();
+      return texts.map(function(t){return cache[ck(to,t)]||t});
+    });
+  }
+  function pump(){
+    if(busy) return;
+    busy=true;
+    function tick(){
+      if(!q.length){busy=false;return;}
+      var batch=[]; var seen={};
+      while(q.length && batch.length<12){
+        var item=q.shift();
+        var el=item[0], to=item[1];
+        if(!el||!el.isConnected) continue;
+        var raw=el.getAttribute('data-src')||el.textContent;
+        var k=ck(to,raw);
+        if(cache[k]){el.textContent=cache[k];continue;}
+        batch.push({el:el,to:to,raw:raw});
+        seen[k]=1;
+      }
+      if(!batch.length){busy=false; if(q.length) tick(); return;}
+      var by={};
+      batch.forEach(function(b){
+        if(!by[b.to]) by[b.to]=[];
+        by[b.to].push(b);
+      });
+      var jobs=Object.keys(by).map(function(to){
+        var arr=by[to];
+        var texts=arr.map(function(b){return b.raw});
+        return apiMany(texts,to).then(function(outs){
+          arr.forEach(function(b,i){ if(b.el.isConnected) b.el.textContent=outs[i]||b.raw; });
+        });
+      });
+      Promise.all(jobs).then(function(){ tick(); }).catch(function(){ setTimeout(tick,200); });
+    }
+    tick();
   }
   function enqueue(el,to){
     var raw=el.getAttribute('data-src')||el.textContent;
@@ -87,22 +152,6 @@
     if(cache[k]){el.textContent=cache[k];return;}
     q.push([el,to]);
     pump();
-  }
-  function pump(){
-    if(busy) return;
-    busy=true;
-    (function next(){
-      if(!q.length){busy=false;return;}
-      var item=q.shift(); var el=item[0], to=item[1];
-      if(!el||!el.isConnected){next();return;}
-      var raw=el.getAttribute('data-src')||el.textContent;
-      var k=ck(to,raw);
-      if(cache[k]){el.textContent=cache[k];next();return;}
-      api(raw,to).then(function(t){
-        if(el.isConnected && t) el.textContent=t;
-        setTimeout(next, cache[k]?0:220);
-      }).catch(function(){setTimeout(next,400)});
-    })();
   }
   function scan(){
     var to=lang();
