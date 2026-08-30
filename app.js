@@ -40,6 +40,8 @@ let lang=localStorage.getItem('lang')||'en';
 let shown=80; let lastKey=''; let filtered=[]; let hotList=[];
 const saved=localStorage.getItem('theme')||'light';
 document.documentElement.dataset.theme=saved;
+const TAG_EN={};
+TAGS.forEach(p=>{TAG_EN[p[0]]=p[1]});
 function t(){return I18N[lang]||I18N.en}
 function hasHan(s){return /[\u3400-\u9FFF]/.test(String(s||''))}
 function enOnly(){
@@ -119,7 +121,12 @@ function showName(x){
 }
 function showDesc(x){
   const host=hostOf(x.url);
-  if(lang==='en') return enOnly(x.desc_en, host, x.pack && !hasHan(x.pack)?x.pack:'', x.cat && !hasHan(x.cat)?x.cat:'');
+  if(lang==='en'){
+    if(x.desc_en && !hasHan(x.desc_en)) return x.desc_en;
+    const cat=TAG_EN[x.cat]||TAG_EN[x.pack]||'';
+    if(cat && host) return cat+' · '+host;
+    return enOnly(cat, host, 'Tool');
+  }
   return x.desc||x.cat||host||'';
 }
 function renderHot(){
