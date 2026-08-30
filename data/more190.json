@@ -1,0 +1,19 @@
+[
+  {"name":"免费部署10套教程","url":"https://slq520168-creator.github.io/AIdaohang/deploy10.html","desc":"中外各五套仓库发布","cat":"教程","pack":"教程","free":true},
+  {"name":"Gitee Pages教程","url":"https://slq520168-creator.github.io/AIdaohang/deploy10.html#c1","desc":"国内仓库静态站","cat":"教程","pack":"教程","free":true},
+  {"name":"腾讯云CloudBase教程","url":"https://slq520168-creator.github.io/AIdaohang/deploy10.html#c2","desc":"静态托管","cat":"教程","pack":"教程","free":true},
+  {"name":"阿里云OSS教程","url":"https://slq520168-creator.github.io/AIdaohang/deploy10.html#c3","desc":"桶+静态网站","cat":"教程","pack":"教程","free":true},
+  {"name":"华为云OBS教程","url":"https://slq520168-creator.github.io/AIdaohang/deploy10.html#c4","desc":"静态托管","cat":"教程","pack":"教程","free":true},
+  {"name":"Coding Pages教程","url":"https://slq520168-creator.github.io/AIdaohang/deploy10.html#c5","desc":"持续部署","cat":"教程","pack":"教程","free":true},
+  {"name":"GitHub Pages教程","url":"https://slq520168-creator.github.io/AIdaohang/deploy10.html#f1","desc":"分支发布","cat":"教程","pack":"教程","free":true},
+  {"name":"Cloudflare Pages教程","url":"https://slq520168-creator.github.io/AIdaohang/deploy10.html#f2","desc":"挂Git自动发","cat":"教程","pack":"教程","free":true},
+  {"name":"Vercel教程","url":"https://slq520168-creator.github.io/AIdaohang/deploy10.html#f3","desc":"Git导入发布","cat":"教程","pack":"教程","free":true},
+  {"name":"Netlify教程","url":"https://slq520168-creator.github.io/AIdaohang/deploy10.html#f4","desc":"拖拽或Git发布","cat":"教程","pack":"教程","free":true},
+  {"name":"Render教程","url":"https://slq520168-creator.github.io/AIdaohang/deploy10.html#f5","desc":"静态或Web免费档","cat":"教程","pack":"教程","free":true},
+  {"name":"Gitee","url":"https://gitee.com/","desc":"国内Git仓库","cat":"编程","pack":"教程","free":true},
+  {"name":"Coding.net","url":"https://coding.net/","desc":"腾讯云代码托管","cat":"编程","pack":"教程","free":true},
+  {"name":"Vercel","url":"https://vercel.com/","desc":"免费部署","cat":"编程","pack":"教程","free":true},
+  {"name":"Netlify","url":"https://www.netlify.com/","desc":"免费静态部署","cat":"编程","pack":"教程","free":true},
+  {"name":"Render","url":"https://render.com/","desc":"免费Web与静态","cat":"编程","pack":"教程","free":true},
+  {"name":"Cloudflare Pages","url":"https://pages.cloudflare.com/","desc":"免费Pages","cat":"编程","pack":"教程","free":true}
+]
