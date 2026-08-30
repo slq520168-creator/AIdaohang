@@ -1,17 +1,17 @@
 const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热点',all:'工具列表',ph:'',themeD:'深色',themeL:'浅色',tools:' 款',hit:' 条',empty:'没有匹配',res:'搜索 '},
-  en:{brand:'Global AI Directory',hot:'Today picks',all:'All tools',ph:'',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
+  zh:{brand:'全球优选AI导航',hot:'今日热点',all:'全部工具',ph:'',themeD:'深色',themeL:'浅色',tools:' 款',hit:' 条',empty:'没有匹配',res:'搜索 '},
+  en:{brand:'Global AI Directory',hot:'Today picks',all:'全部工具',ph:'',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const GROUPS=[
-  {k:'全部工具',en:'All tools',id:'all',pin:false},
-  {k:'免费试用',en:'Free use',id:'free',pin:true},
-  {k:'学习教程',en:'Learning',id:'learn',pin:true},
-  {k:'接单赚钱',en:'Gigs pay',id:'gig',pin:true},
-  {k:'创作媒体',en:'Create',id:'make',pin:false},
-  {k:'生活社交',en:'Life',id:'life',pin:false},
-  {k:'工作办公',en:'Work',id:'work',pin:false},
-  {k:'成人内容',en:'Adult',id:'adult',pin:false},
-  {k:'其他类型',en:'Others',id:'other',pin:false}
+  {k:'全部工具',en:'All tools',id:'all'},
+  {k:'免费试用',en:'Free use',id:'free'},
+  {k:'学习教程',en:'Learning',id:'learn'},
+  {k:'接单赚钱',en:'Gigs pay',id:'gig'},
+  {k:'创作媒体',en:'Create',id:'make'},
+  {k:'生活社交',en:'Life',id:'life'},
+  {k:'工作办公',en:'Work',id:'work'},
+  {k:'成人内容',en:'Adult',id:'adult'},
+  {k:'其他类型',en:'Others',id:'other'}
 ];
 const DROP_NAME=new Set(['Cron Calendar','Brilliant Practice','Quizlet Learn','Tuta Mail','Navidrome Demo','Stream Music','Primephonic 已并','Google Jules Agent','OpenDevin 旧名','Cursor.sh 旧域','Fig Term 已并','Amazon CodeWhisperer','Lyuceum','Mentat AI','Safari 技术预览','Character.AI+','Odakyu? skip','CopyMeThat Recipes','Privacy.com Cards Note','Ashley Madison Affairs Plus','SSL Labs Recheck']);
 const DROP_HOST=new Set(['lyceum.online','mentat.ai','cron.com','getcruise.com','humane.com','tome.app','kajiwoto.ai','height.app','cozy.sh','hourone.ai','bowery.co','6pen.art','webchatgpt.io','darkness.ai','forger.studio','photoscape.ai','wiseone.io','justplayer.app','stillplayer.app','makeupplus.com','marktext.app','snapseed.online','readyplayer.me','resonate.coop','tianmai.cn','wuan.com','xting.com','woodworm.store','taskcn.com','huanbian.com','ishanjian.com','jiami.cn','xiaoyuan-calc.com','joinopen.com','clara.io','csm.ai','digi.ai']);
@@ -39,9 +39,6 @@ function blob(x){return [x.name,x.desc,x.desc_en,x.cat,x.pack,x.how].join(' ')}
 function gidOf(x){
   const s=blob(x);
   if(/18|Adult|成人|无审核|约炮|出轨|男直|富婆|Chaturbate|Pornhub/i.test(s)) return 'adult';
-  if(x.free===false && /Learn|学习|教程|亲子|宝妈|学生/.test(s)===false && /接单|兼职|招聘|Gigs/.test(s)===false){
-    /* keep going */
-  }
   if(/学习|教育|亲子|宝妈|学生|Khan|Anki|Coursera|Scholar|Photomath|教程/.test(s)) return 'learn';
   if(/接单|兼职|招聘|Upwork|Fiverr|Boss直聘|智联|JobStreet|Indeed/.test(s)) return 'gig';
   if(/绘画|视频|音乐|写作|设计|套图|人设|文案|翻唱|Suno|Civitai|Leonardo|Canva/.test(s)) return 'make';
@@ -112,6 +109,7 @@ function matchGroup(x){
   return gidOf(x)===groupId;
 }
 async function load(){
+  groupId='all';
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
   for(let i=2;i<=181;i++) files.push('data/more'+i+'.json');
@@ -136,8 +134,7 @@ async function load(){
 function renderSide(){
   sideEl.innerHTML=GROUPS.map(g=>{
     const on=groupId===g.id;
-    const label=lang==='en'?g.en:g.k;
-    return `<button data-c="${g.id}" class="${on?'on':''}${g.pin?' pin':''}">${label}</button>`;
+    return `<button data-c="${g.id}" class="${on?'on':''}">${g.k}</button>`;
   }).join('');
   sideEl.onclick=e=>{
     const b=e.target.closest('button'); if(!b)return;
@@ -159,7 +156,7 @@ function render(){
   if(key!==lastKey){shown=80;lastKey=key}
   if(hotBlock) hotBlock.style.display=q?'none':'block';
   const g=GROUPS.find(z=>z.id===groupId);
-  if(listTitle) listTitle.textContent=q?(s.res+(qEl.value.trim())):(lang==='en'?(g&&g.en)||s.all:(g&&g.k)||s.all);
+  if(listTitle) listTitle.textContent=q?(s.res+(qEl.value.trim())):((g&&g.k)||'全部工具');
   metaEl.textContent=tools.length+s.tools;
   filtered=tools.filter(x=>{
     const hit=!q||[x.name,x.desc,x.desc_en||'',x.cat,x.how||'',x.url||''].join(' ').toLowerCase().includes(q);
