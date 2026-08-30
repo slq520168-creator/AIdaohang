@@ -1,0 +1,11 @@
+[
+  {"name":"防骗指南","url":"https://slq520168-creator.github.io/AIdaohang/fraud.html","desc":"常见骗局怎么辨","cat":"检测","pack":"检测","free":true},
+  {"name":"国家反诈中心","url":"https://www.gjfzpt.cn/","desc":"中国反诈官方","cat":"检测","pack":"检测","free":true},
+  {"name":"互联网联合辟谣","url":"https://www.piyao.org.cn/","desc":"辟谣查询","cat":"检测","pack":"检测","free":true},
+  {"name":"FTC Scams","url":"https://consumer.ftc.gov/scams","desc":"美国消委防骗","cat":"检测","pack":"检测","free":true},
+  {"name":"FBI IC3","url":"https://www.ic3.gov/","desc":"网络犯罪举报","cat":"检测","pack":"检测","free":true},
+  {"name":"ScamShield","url":"https://www.scamshield.gov.sg/","desc":"新加坡反诈","cat":"检测","pack":"检测","free":true},
+  {"name":"Have I Been Pwned","url":"https://haveibeenpwned.com/","desc":"邮箱是否泄露","cat":"隐私","pack":"隐私","free":true},
+  {"name":"VirusTotal","url":"https://www.virustotal.com/","desc":"链接与文件检测","cat":"检测","pack":"检测","free":true},
+  {"name":"Google Safe Browsing","url":"https://transparencyreport.google.com/safe-browsing/search","desc":"网址安全查询","cat":"检测","pack":"检测","free":true}
+]
