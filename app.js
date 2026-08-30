@@ -13,10 +13,12 @@ const GROUPS=[
   {k:'成人内容',id:'adult'},
   {k:'其他类型',id:'other'}
 ];
+const TAGS=['免费','收费','对话','聊天','插件','陪伴','学习','健身','美妆','宠物','美食','旅行','拼车','租车','法律','管理','绘画','视频','成人','无审核','直播','交友','约炮','办公','编程','游戏','音乐','语音','设计','搜索','写作','接单','兼职','招聘','社区','开店','小商品','API','机器人','图书','小说','漫画','无障碍','星座','塔罗','云盘','换脸','打扮','模型包','隐私','资讯','短剧','漫剧','故事','创业','名人','八卦','亲子','宝妈','主播','融资','理财','种植','搭伙','爬山','陪聊','情感','数字人','厨房','菜谱','酒店','房产','电影','私影','附近','美剧','韩剧','日剧','电视台','监控','虚拟人','AI音乐','翻唱','学生','女心','语录','富婆','夜生活','人设','套图','文案','外贸','铺货','网店','养成','婚恋','线下交','出轨','检测','检验','获粉','投票','数据'];
 const DROP_NAME=new Set(['Cron Calendar','Brilliant Practice','Quizlet Learn','Tuta Mail','Navidrome Demo','Stream Music','Primephonic 已并','Google Jules Agent','OpenDevin 旧名','Cursor.sh 旧域','Fig Term 已并','Amazon CodeWhisperer','Lyuceum','Mentat AI','Safari 技术预览','Character.AI+','Odakyu? skip','CopyMeThat Recipes','Privacy.com Cards Note','Ashley Madison Affairs Plus','SSL Labs Recheck']);
 const DROP_HOST=new Set(['lyceum.online','mentat.ai','cron.com','getcruise.com','humane.com','tome.app','kajiwoto.ai','height.app','cozy.sh','hourone.ai','bowery.co','6pen.art','webchatgpt.io','darkness.ai','forger.studio','photoscape.ai','wiseone.io','justplayer.app','stillplayer.app','makeupplus.com','marktext.app','snapseed.online','readyplayer.me','resonate.coop','tianmai.cn','wuan.com','xting.com','woodworm.store','taskcn.com','huanbian.com','ishanjian.com','jiami.cn','xiaoyuan-calc.com','joinopen.com','clara.io','csm.ai','digi.ai']);
 const DROP_PATH=['assistant.google.com/auto','joshua-uchoa/MochiDiffusion','mifi.github.io/lossless-cut','prisma-ai.com/lensa','geforce-experience/shadowplay','manyvids.com/Live','apple-music/classical','thomsonreuters.com/westlaw','novavideoplayer.github.io','lightricks.com/apps/motionleap','amazon.com/kindle-dbs'];
 const sideEl=document.getElementById('side');
+const tagsEl=document.getElementById('tags');
 const listEl=document.getElementById('list');
 const qEl=document.getElementById('q');
 const metaEl=document.getElementById('meta');
@@ -29,7 +31,7 @@ const langBtn=document.getElementById('lang');
 const sf=document.getElementById('sf');
 const topBtn=document.getElementById('topBtn');
 const scroller=document.getElementById('scroll')||window;
-let tools=[]; let selected=new Set();
+let tools=[]; let selected=new Set(); let tags=new Set();
 let lang=localStorage.getItem('lang')||'en';
 let shown=80; let lastKey=''; let filtered=[]; let hotList=[];
 const saved=localStorage.getItem('theme')||'light';
@@ -110,8 +112,17 @@ function matchGroup(x){
   if(!topics.length) return true;
   return topics.includes(gidOf(x));
 }
+function matchTag(x){
+  if(!tags.size) return true;
+  const s=blob(x);
+  if(tags.has('免费') && !x.free) return false;
+  if(tags.has('收费') && x.free) return false;
+  const others=[...tags].filter(k=>k!=='免费'&&k!=='收费');
+  if(!others.length) return true;
+  return others.some(k=>x.cat===k||x.pack===k||s.indexOf(k)>=0);
+}
 async function load(){
-  selected.clear();
+  selected.clear(); tags.clear();
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
   for(let i=2;i<=181;i++) files.push('data/more'+i+'.json');
@@ -134,14 +145,21 @@ async function load(){
   renderHot(); renderSide(); render();
 }
 function renderSide(){
-  sideEl.innerHTML=GROUPS.map(g=>{
-    const on=selected.has(g.id);
-    return `<button data-c="${g.id}" class="${on?'on':''}">${g.k}</button>`;
-  }).join('');
+  sideEl.innerHTML=GROUPS.map(g=>`<button data-c="${g.id}" class="${selected.has(g.id)?'on':''}">${g.k}</button>`).join('');
   sideEl.onclick=e=>{
     const b=e.target.closest('button'); if(!b)return;
     const id=b.dataset.c;
     if(selected.has(id)) selected.delete(id); else selected.add(id);
+    shown=80; renderSide(); render();
+  };
+  if(!tagsEl) return;
+  tagsEl.innerHTML=TAGS.map(k=>`<button data-t="${k}" class="${tags.has(k)?'on':''}">${k}</button>`).join('');
+  tagsEl.onclick=e=>{
+    const b=e.target.closest('button'); if(!b)return;
+    const k=b.dataset.t;
+    if(tags.has(k)) tags.delete(k); else tags.add(k);
+    if(k==='免费') tags.delete('收费');
+    if(k==='收费') tags.delete('免费');
     shown=80; renderSide(); render();
   };
 }
@@ -155,18 +173,18 @@ function card(x){
 function render(){
   const q=(qEl.value||'').trim().toLowerCase();
   const s=t();
-  const key=[...selected].join(',')+'|'+q;
+  const key=[...selected].join(',')+'|'+[...tags].join(',')+'|'+q;
   if(key!==lastKey){shown=80;lastKey=key}
   if(hotBlock) hotBlock.style.display=q?'none':'block';
   if(listTitle){
     if(q) listTitle.textContent=s.res+qEl.value.trim();
-    else if(!selected.size) listTitle.textContent='全部工具';
-    else listTitle.textContent=GROUPS.filter(g=>selected.has(g.id)).map(g=>g.k).join(' · ');
+    else if(!selected.size && !tags.size) listTitle.textContent='全部工具';
+    else listTitle.textContent=[...GROUPS.filter(g=>selected.has(g.id)).map(g=>g.k),...tags].join(' · ');
   }
   metaEl.textContent=tools.length+s.tools;
   filtered=tools.filter(x=>{
     const hit=!q||[x.name,x.desc,x.desc_en||'',x.cat,x.how||'',x.url||''].join(' ').toLowerCase().includes(q);
-    return hit && (q || matchGroup(x));
+    return hit && (q || (matchGroup(x) && matchTag(x)));
   });
   countEl.textContent=filtered.length+s.hit;
   listEl.innerHTML=filtered.slice(0,shown).map(card).join('')||`<p class="count">${s.empty}</p>`;
