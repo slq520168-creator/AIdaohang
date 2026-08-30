@@ -1,30 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="zh-CN" data-theme="light">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
-<title>Global AI Directory</title>
-<link rel="stylesheet" href="style.css?v=168"/>
+<title>全球优选AI导航</title>
+<link rel="stylesheet" href="style.css?v=169"/>
+<style>
+.goog-te-banner-frame,.skiptranslate iframe{display:none!important}
+body{top:0!important}
+#google_translate_element{position:absolute;left:-9999px;height:0;overflow:hidden}
+</style>
 </head>
 <body>
 <div id="sitebg" aria-hidden="true"></div>
 <div id="scroll">
 <header class="top">
   <div>
-    <h1 id="brand">Global AI Directory</h1>
+    <h1 id="brand">全球优选AI导航</h1>
     <p class="sub" id="meta"></p>
   </div>
   <div class="acts">
-    <button id="lang" type="button">EN</button>
-    <button id="theme" type="button">Dark</button>
+    <button id="lang" type="button">中</button>
+    <button id="theme" type="button">深色</button>
   </div>
 </header>
+<div id="langBar" class="langbar"></div>
+<div id="google_translate_element"></div>
 <form class="search" id="sf">
   <input id="q" type="search" placeholder="" autocomplete="off" enterkeyhint="search"/>
   <button type="submit" id="go" aria-label="search">🔍</button>
 </form>
 <section class="block" id="hotBlock">
-  <div class="block-h"><h2 id="hotTitle">Today picks</h2></div>
+  <div class="block-h"><h2 id="hotTitle">今日热点</h2></div>
   <ol id="hot" class="rank"></ol>
 </section>
 <section class="block">
@@ -43,7 +50,42 @@
 <a class="fab" href="https://t.me/globalyouxuanaibot" target="_blank" rel="noopener" title="@globalyouxuanaibot">
 <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M9.04 15.3l-.37 5.2c.53 0 .76-.23 1.04-.5l2.5-2.4 5.18 3.8c.95.52 1.63.25 1.89-.88l3.42-16.08h.01c.3-1.41-.51-1.96-1.44-1.62L1.3 9.3C-.07 9.84-.05 10.6 1.06 10.95l5.5 1.72 12.77-8.04c.6-.36 1.15-.16.7.2z"/></svg>
 </a>
-<script src="lock.js?v=168"></script>
-<script src="app.js?v=168"></script>
+<script>
+window.googleTranslateElementInit=function(){
+  new google.translate.TranslateElement({
+    pageLanguage:'zh-CN',
+    includedLanguages:'zh-CN,en,vi,km,th,ja,ko,id,es,fr,pt,de,ru,ar',
+    autoDisplay:false,
+    layout:google.translate.TranslateElement.InlineLayout.SIMPLE
+  },'google_translate_element');
+};
+function aidSetLang(code){
+  var sel=document.querySelector('.goog-te-combo');
+  if(!sel){setTimeout(function(){aidSetLang(code)},300);return;}
+  sel.value=code;
+  sel.dispatchEvent(new Event('change'));
+  var btn=document.getElementById('lang');
+  var map={'zh-CN':'中',en:'EN',vi:'VI',km:'KM',th:'TH',ja:'JA',ko:'KO',id:'ID',es:'ES',fr:'FR',pt:'PT',de:'DE',ru:'RU',ar:'AR'};
+  if(btn) btn.textContent=map[code]||code;
+  document.getElementById('langBar').classList.remove('show');
+}
+(function(){
+  var list=[['zh-CN','中'],['en','EN'],['vi','VI'],['km','KM'],['th','TH'],['ja','JA'],['ko','KO'],['id','ID'],['es','ES'],['fr','FR'],['pt','PT'],['de','DE'],['ru','RU'],['ar','AR']];
+  var bar=document.getElementById('langBar');
+  bar.innerHTML=list.map(function(p){return '<button type="button" data-l="'+p[0]+'">'+p[1]+'</button>'}).join('');
+  bar.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    aidSetLang(b.dataset.l);
+  });
+  var langBtn=document.getElementById('lang');
+  if(langBtn) langBtn.addEventListener('click',function(e){
+    e.stopPropagation();
+    bar.classList.toggle('show');
+  });
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="lock.js?v=169"></script>
+<script src="app.js?v=169"></script>
 </body>
 </html>
