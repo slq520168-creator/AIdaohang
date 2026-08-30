@@ -41,6 +41,14 @@ let shown=80; let lastKey=''; let filtered=[]; let hotList=[];
 const saved=localStorage.getItem('theme')||'light';
 document.documentElement.dataset.theme=saved;
 function t(){return I18N[lang]||I18N.en}
+function hasHan(s){return /[\u3400-\u9FFF]/.test(String(s||''))}
+function enOnly(){
+  for(let i=0;i<arguments.length;i++){
+    const s=arguments[i];
+    if(s && !hasHan(s)) return String(s);
+  }
+  return 'Tool';
+}
 function blob(x){return [x.name,x.desc,x.desc_en,x.cat,x.pack,x.how].join(' ')}
 function gidOf(x){
   const s=blob(x);
@@ -62,7 +70,7 @@ function applyChrome(){
   if(popX) popX.textContent=s.close;
   qEl.placeholder='';
   qEl.removeAttribute('placeholder');
-  langBtn.textContent=lang==='zh'?'中':'EN';
+  langBtn.textContent=lang==='zh'?'ZH':'EN';
   themeBtn.textContent=document.documentElement.dataset.theme==='dark'?s.themeL:s.themeD;
   document.documentElement.lang=lang==='zh'?'zh-CN':'en';
 }
@@ -76,8 +84,8 @@ function deadPath(u){const s=String(u||'').toLowerCase();return DROP_PATH.some(p
 function esc(s){return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>').replace(/"/g,'"')}
 function isHttp(u){return /^https?:\/\//i.test(u||'')}
 function iconTag(url,letter){
-  const h=hostOf(url); const L=(letter||'?').slice(0,1);
-  if(!h) return L;
+  const h=hostOf(url); const L=(letter||'T').slice(0,1);
+  if(!h) return hasHan(L)?'T':L;
   return `<img alt="" src="https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(h)}" onerror="this.style.display='none'">`;
 }
 function dayNum(){const d=new Date();return Math.floor(Date.UTC(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate())/86400000)}
@@ -104,11 +112,20 @@ function pickHot(){
   }
   hotList=out;
 }
+function showName(x){
+  const host=hostOf(x.url);
+  if(lang==='en') return enOnly(x.name_en, hasHan(x.name)?'':x.name, host);
+  return x.name||host||'';
+}
+function showDesc(x){
+  const host=hostOf(x.url);
+  if(lang==='en') return enOnly(x.desc_en, host, x.pack && !hasHan(x.pack)?x.pack:'', x.cat && !hasHan(x.cat)?x.cat:'');
+  return x.desc||x.cat||host||'';
+}
 function renderHot(){
   hotEl.innerHTML=hotList.map((h,i)=>{
-    const intro=lang==='zh'?(h.desc||h.cat||''):(h.desc_en||h.desc||h.cat||'');
     const href=isHttp(h.url)?h.url:('guide.html?n='+encodeURIComponent(h.name||''));
-    return `<li><a href="${esc(href)}" target="_blank" rel="noopener"><i>${i+1}</i><span class="ht"><strong>${esc(h.name)}</strong><em>${esc(intro)}</em></span></a></li>`;
+    return `<li><a href="${esc(href)}" target="_blank" rel="noopener"><i>${i+1}</i><span class="ht"><strong>${esc(showName(h))}</strong><em>${esc(showDesc(h))}</em></span></a></li>`;
   }).join('');
 }
 function matchGroup(x){
@@ -172,11 +189,10 @@ function renderSide(){
   };
 }
 function card(x){
-  const letter=(x.name||'?').slice(0,1);
-  const desc=lang==='en'?(x.desc_en||hostOf(x.url)||x.desc||x.cat):(x.desc||x.cat);
+  const title=showName(x);
+  const desc=showDesc(x);
   const href=isHttp(x.url)?x.url:('guide.html?n='+encodeURIComponent(x.name||''));
-  const host=hostOf(x.url);
-  return `<a class="card" href="${esc(href)}" target="_blank" rel="noopener"><div class="row"><div class="av">${iconTag(x.url,letter)}</div><div><h3>${esc(x.name)}</h3><p>${esc(lang==='en'?(host||desc): (host||desc))}</p></div></div></a>`;
+  return `<a class="card" href="${esc(href)}" target="_blank" rel="noopener"><div class="row"><div class="av">${iconTag(x.url,title)}</div><div><h3>${esc(title)}</h3><p>${esc(desc)}</p></div></div></a>`;
 }
 function render(){
   const q=(qEl.value||'').trim().toLowerCase();
