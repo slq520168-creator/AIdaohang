@@ -13,7 +13,7 @@ const GROUPS=[
   {k:'成人内容',id:'adult'},
   {k:'其他类型',id:'other'}
 ];
-const TAGS=['免费','收费','对话','聊天','插件','陪伴','学习','健身','美妆','宠物','美食','旅行','拼车','租车','法律','管理','绘画','视频','成人','无审核','直播','交友','约炮','办公','编程','游戏','音乐','语音','设计','搜索','写作','接单','兼职','招聘','社区','开店','小商品','API','机器人','图书','小说','漫画','无障碍','星座','塔罗','云盘','换脸','打扮','模型包','隐私','资讯','短剧','漫剧','故事','创业','名人','八卦','亲子','宝妈','主播','融资','理财','种植','搭伙','爬山','陪聊','情感','数字人','厨房','菜谱','酒店','房产','电影','私影','附近','美剧','韩剧','日剧','电视台','监控','虚拟人','AI音乐','翻唱','学生','女心','语录','富婆','夜生活','人设','套图','文案','外贸','铺货','网店','养成','婚恋','线下交','出轨','检测','检验','获粉','投票','数据'];
+const TAGS=['免费','收费','对话','聊天','插件','陪伴','学习','健身','美妆','宠物','美食','旅行','拼车','租车','法律','管理','绘画','视频','成人','直播','交友','约炮','办公','编程','游戏','音乐','语音','设计','搜索','写作','接单','兼职','招聘','社区','开店','API','图书','小说','漫画','星座','塔罗','云盘','换脸','打扮','隐私','资讯','短剧','漫剧','故事','创业','名人','八卦','亲子','宝妈','主播','融资','理财','种植','搭伙','爬山','陪聊','情感','厨房','菜谱','酒店','房产','电影','私影','附近','美剧','韩剧','日剧','监控','学生','女心','语录','富婆','人设','套图','文案','外贸','铺货','网店','养成','婚恋','出轨','检测','检验','获粉','投票','数据','无审核','小商品','机器人','无障碍','模型包','数字人','电视台','虚拟人','AI音乐','翻唱','夜生活','线下交'];
 const DROP_NAME=new Set(['Cron Calendar','Brilliant Practice','Quizlet Learn','Tuta Mail','Navidrome Demo','Stream Music','Primephonic 已并','Google Jules Agent','OpenDevin 旧名','Cursor.sh 旧域','Fig Term 已并','Amazon CodeWhisperer','Lyuceum','Mentat AI','Safari 技术预览','Character.AI+','Odakyu? skip','CopyMeThat Recipes','Privacy.com Cards Note','Ashley Madison Affairs Plus','SSL Labs Recheck']);
 const DROP_HOST=new Set(['lyceum.online','mentat.ai','cron.com','getcruise.com','humane.com','tome.app','kajiwoto.ai','height.app','cozy.sh','hourone.ai','bowery.co','6pen.art','webchatgpt.io','darkness.ai','forger.studio','photoscape.ai','wiseone.io','justplayer.app','stillplayer.app','makeupplus.com','marktext.app','snapseed.online','readyplayer.me','resonate.coop','tianmai.cn','wuan.com','xting.com','woodworm.store','taskcn.com','huanbian.com','ishanjian.com','jiami.cn','xiaoyuan-calc.com','joinopen.com','clara.io','csm.ai','digi.ai']);
 const DROP_PATH=['assistant.google.com/auto','joshua-uchoa/MochiDiffusion','mifi.github.io/lossless-cut','prisma-ai.com/lensa','geforce-experience/shadowplay','manyvids.com/Live','apple-music/classical','thomsonreuters.com/westlaw','novavideoplayer.github.io','lightricks.com/apps/motionleap','amazon.com/kindle-dbs'];
@@ -121,6 +121,8 @@ function matchTag(x){
   if(!others.length) return true;
   return others.some(k=>x.cat===k||x.pack===k||s.indexOf(k)>=0);
 }
+function tagLen(s){return Array.from(s).length}
+const TAGS_SORTED=TAGS.slice().sort((a,b)=>tagLen(a)-tagLen(b)||TAGS.indexOf(a)-TAGS.indexOf(b));
 async function load(){
   selected.clear(); tags.clear();
   applyChrome();
@@ -153,7 +155,7 @@ function renderSide(){
     shown=80; renderSide(); render();
   };
   if(!tagsEl) return;
-  tagsEl.innerHTML=TAGS.map(k=>`<button data-t="${k}" class="${tags.has(k)?'on':''}">${k}</button>`).join('');
+  tagsEl.innerHTML=TAGS_SORTED.map(k=>`<button data-t="${k}" class="${tags.has(k)?'on':''}">${k}</button>`).join('');
   tagsEl.onclick=e=>{
     const b=e.target.closest('button'); if(!b)return;
     const k=b.dataset.t;
