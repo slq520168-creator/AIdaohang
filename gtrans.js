@@ -1,37 +1,27 @@
 (function(){
-  var list=[
-    ['zh','中','zh-CN'],['en','EN','en'],['vi','VI','vi'],['km','KM','km'],['th','TH','th'],
-    ['ja','JA','ja'],['ko','KO','ko'],['id','ID','id'],['es','ES','es'],['fr','FR','fr'],
-    ['pt','PT','pt'],['de','DE','de'],['ru','RU','ru'],['ar','AR','ar']
-  ];
-  function pageUrl(){
-    return location.origin+location.pathname+'?v=171&home=1';
-  }
-  function go(tl){
-    if(tl==='zh-CN'||tl==='zh'){
-      location.href=pageUrl();
-      return;
-    }
-    location.href='https://translate.google.com/translate?sl=zh-CN&tl='+encodeURIComponent(tl)+'&u='+encodeURIComponent(pageUrl());
+  var list=[['zh','中'],['en','EN']];
+  function go(code){
+    var u=new URL(location.origin+location.pathname);
+    u.searchParams.set('v','172');
+    u.searchParams.set('home','1');
+    u.searchParams.set('lang',code);
+    location.href=u.toString();
   }
   function boot(){
     var bar=document.getElementById('langBar');
-    if(!bar){
-      bar=document.createElement('div');
-      bar.id='langBar';
-      bar.className='langbar';
-      var top=document.querySelector('.top');
-      if(top&&top.parentNode) top.parentNode.insertBefore(bar,top.nextSibling);
-    }
+    if(!bar) return;
     bar.innerHTML=list.map(function(p){
-      return '<button type="button" data-tl="'+p[2]+'">'+p[1]+'</button>';
+      return '<button type="button" data-l="'+p[0]+'">'+p[1]+'</button>';
     }).join('');
     bar.onclick=function(e){
       var b=e.target.closest('button'); if(!b)return;
-      go(b.dataset.tl);
+      go(b.dataset.l);
     };
     var btn=document.getElementById('lang');
     if(btn){
+      var cur=(new URLSearchParams(location.search).get('lang'))||'zh';
+      if(cur==='zh-CN') cur='zh';
+      btn.textContent=cur==='en'?'EN':'中';
       btn.onclick=function(e){
         e.preventDefault();
         e.stopImmediatePropagation();
