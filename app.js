@@ -1,21 +1,6 @@
-const I18N={
-  zh:{brand:'全球优选AI导航',hot:'今日热点',all:'全部工具',ph:'',themeD:'深色',themeL:'浅色',tools:' 款',hit:' 条',empty:'没有匹配',res:'搜索 ',close:'关闭'},
-  en:{brand:'Global AI Directory',hot:'Today picks',all:'All tools',ph:'',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results ',close:'Close'}
-};
-const GROUPS=[
-  {k:'免费试用',en:'Free use',id:'free'},
-  {k:'学习教程',en:'Learning',id:'learn'},
-  {k:'接单赚钱',en:'Gig jobs',id:'gig'},
-  {k:'绘画设计',en:'Art design',id:'draw'},
-  {k:'创作媒体',en:'Media',id:'make'},
-  {k:'生活社交',en:'Life',id:'life'},
-  {k:'工作办公',en:'Office',id:'work'},
-  {k:'成人内容',en:'Adult',id:'adult'},
-  {k:'其他类型',en:'Others',id:'other'}
-];
-const TAGS=[
-  ['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Talk'],['插件','Plugin'],['陪伴','Buddy'],['学习','Study'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Carpool'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Draw'],['视频','Video'],['成人','Adult'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Office'],['编程','Code'],['游戏','Games'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Jobs'],['社区','Forum'],['开店','Shop'],['API','API'],['图书','Books'],['小说','Novels'],['漫画','Manga'],['星座','Zodiac'],['塔罗','Tarot'],['云盘','Cloud'],['换脸','Face'],['打扮','Style'],['隐私','Privacy'],['资讯','News'],['短剧','Short'],['漫剧','Toon'],['故事','Story'],['创业','Startup'],['名人','Bio'],['八卦','Gossip'],['亲子','Kids'],['宝妈','Moms'],['主播','Stream'],['融资','Fund'],['理财','Money'],['种植','Farm'],['搭伙','Buddy'],['爬山','Hike'],['陪聊','Talk'],['情感','Feel'],['厨房','Kitchen'],['菜谱','Recipe'],['酒店','Hotel'],['房产','Realty'],['电影','Film'],['私影','Cinema'],['附近','Nearby'],['美剧','US TV'],['韩剧','KR TV'],['日剧','JP TV'],['监控','Cams'],['学生','Student'],['女心','Her'],['语录','Quotes'],['富婆','Sugar'],['人设','Persona'],['套图','Sets'],['文案','Copy'],['外贸','Trade'],['铺货','Dropship'],['网店','Store'],['养成','Raise'],['婚恋','Dating'],['出轨','Affair'],['检测','Detect'],['检验','Inspect'],['获粉','Grow'],['投票','Vote'],['数据','Stats'],['无审核','Open'],['小商品','Goods'],['机器人','Robot'],['无障碍','Access'],['模型包','Weights'],['数字人','Avatar'],['电视台','TV'],['虚拟人','Virtual'],['AI音乐','AI music'],['翻唱','Cover'],['夜生活','Nightlife'],['线下交','Meetup'],['羊毛','Deals'],['外卖','Delivery'],['陪护','Care']
-];
+const I18N={zh:{brand:'全球优选AI导航',hot:'今日热点',all:'全部工具',ph:'',themeD:'深色',themeL:'浅色',tools:' 款',hit:' 条',empty:'没有匹配',res:'搜索 ',close:'关闭'},en:{brand:'Global AI Directory',hot:'Today picks',all:'All tools',ph:'',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results ',close:'Close'}};
+const GROUPS=[{k:'免费试用',en:'Free use',id:'free'},{k:'学习教程',en:'Learning',id:'learn'},{k:'接单赚钱',en:'Gig jobs',id:'gig'},{k:'绘画设计',en:'Art design',id:'draw'},{k:'创作媒体',en:'Media',id:'make'},{k:'生活社交',en:'Life',id:'life'},{k:'工作办公',en:'Office',id:'work'},{k:'成人内容',en:'Adult',id:'adult'},{k:'其他类型',en:'Others',id:'other'}];
+const TAGS=[['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Talk'],['插件','Plugin'],['陪伴','Buddy'],['学习','Study'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Carpool'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Draw'],['视频','Video'],['成人','Adult'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Office'],['编程','Code'],['游戏','Games'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Jobs'],['社区','Forum'],['开店','Shop'],['API','API'],['图书','Books'],['小说','Novels'],['漫画','Manga'],['星座','Zodiac'],['塔罗','Tarot'],['云盘','Cloud'],['换脸','Face'],['打扮','Style'],['隐私','Privacy'],['资讯','News'],['短剧','Short'],['漫剧','Toon'],['故事','Story'],['创业','Startup'],['名人','Bio'],['八卦','Gossip'],['亲子','Kids'],['宝妈','Moms'],['主播','Stream'],['融资','Fund'],['理财','Money'],['种植','Farm'],['搭伙','Buddy'],['爬山','Hike'],['陪聊','Talk'],['情感','Feel'],['厨房','Kitchen'],['菜谱','Recipe'],['酒店','Hotel'],['房产','Realty'],['电影','Film'],['私影','Cinema'],['附近','Nearby'],['美剧','US TV'],['韩剧','KR TV'],['日剧','JP TV'],['监控','Cams'],['学生','Student'],['女心','Her'],['语录','Quotes'],['富婆','Sugar'],['人设','Persona'],['套图','Sets'],['文案','Copy'],['外贸','Trade'],['铺货','Dropship'],['网店','Store'],['养成','Raise'],['婚恋','Dating'],['出轨','Affair'],['检测','Detect'],['检验','Inspect'],['获粉','Grow'],['投票','Vote'],['数据','Stats'],['无审核','Open'],['小商品','Goods'],['机器人','Robot'],['无障碍','Access'],['模型包','Weights'],['数字人','Avatar'],['电视台','TV'],['虚拟人','Virtual'],['AI音乐','AI music'],['翻唱','Cover'],['夜生活','Nightlife'],['线下交','Meetup'],['羊毛','Deals'],['外卖','Delivery'],['陪护','Care'],['问卷','Survey'],['二手','Used'],['跑腿','Errand'],['维修','Repair'],['美容','Salon']];
 const DROP_NAME=new Set(['Cron Calendar','Brilliant Practice','Quizlet Learn','Tuta Mail','Navidrome Demo','Stream Music','Primephonic 已并','Google Jules Agent','OpenDevin 旧名','Cursor.sh 旧域','Fig Term 已并','Amazon CodeWhisperer','Lyuceum','Mentat AI','Safari 技术预览','Character.AI+','Odakyu? skip','CopyMeThat Recipes','Privacy.com Cards Note','Ashley Madison Affairs Plus','SSL Labs Recheck']);
 const DROP_HOST=new Set(['lyceum.online','mentat.ai','cron.com','getcruise.com','humane.com','tome.app','kajiwoto.ai','height.app','cozy.sh','hourone.ai','bowery.co','6pen.art','webchatgpt.io','darkness.ai','forger.studio','photoscape.ai','wiseone.io','justplayer.app','stillplayer.app','makeupplus.com','marktext.app','snapseed.online','readyplayer.me','resonate.coop','tianmai.cn','wuan.com','xting.com','woodworm.store','taskcn.com','huanbian.com','ishanjian.com','jiami.cn','xiaoyuan-calc.com','joinopen.com','clara.io','csm.ai','digi.ai']);
 const DROP_PATH=['assistant.google.com/auto','joshua-uchoa/MochiDiffusion','mifi.github.io/lossless-cut','prisma-ai.com/lensa','geforce-experience/shadowplay','manyvids.com/Live','apple-music/classical','thomsonreuters.com/westlaw','novavideoplayer.github.io','lightricks.com/apps/motionleap','amazon.com/kindle-dbs'];
@@ -40,209 +25,41 @@ let lang=localStorage.getItem('lang')||'en';
 let shown=80; let lastKey=''; let filtered=[]; let hotList=[];
 const saved=localStorage.getItem('theme')||'light';
 document.documentElement.dataset.theme=saved;
-const TAG_EN={};
-TAGS.forEach(p=>{TAG_EN[p[0]]=p[1]});
+const TAG_EN={}; TAGS.forEach(p=>{TAG_EN[p[0]]=p[1]});
 function t(){return I18N[lang]||I18N.en}
 function hasHan(s){return /[\u3400-\u9FFF]/.test(String(s||''))}
-function enOnly(){
-  for(let i=0;i<arguments.length;i++){
-    const s=arguments[i];
-    if(s && !hasHan(s)) return String(s);
-  }
-  return 'Tool';
-}
+function enOnly(){for(let i=0;i<arguments.length;i++){const s=arguments[i];if(s&&!hasHan(s))return String(s);}return 'Tool';}
 function blob(x){return [x.name,x.desc,x.desc_en,x.cat,x.pack,x.how].join(' ')}
-function gidOf(x){
-  const s=blob(x);
-  if(/18|Adult|成人|无审核|约炮|出轨|男直|富婆|Chaturbate|Pornhub/i.test(s)) return 'adult';
-  if(/学习|教育|亲子|宝妈|学生|Khan|Anki|Coursera|Scholar|Photomath|教程/.test(s)) return 'learn';
-  if(/接单|兼职|招聘|Upwork|Fiverr|Boss直聘|智联|JobStreet|Indeed/.test(s)) return 'gig';
-  if(/绘画|设计|套图|人设|Civitai|Leonardo|Canva|SeaArt|Artbreeder/.test(s)) return 'draw';
-  if(/视频|音乐|写作|文案|翻唱|Suno|HeyGen/.test(s)) return 'make';
-  if(/交友|旅行|美食|厨房|婚恋|线下交|陪伴|情感|家庭|附近|外卖|陪护|Meetup|Tinder/.test(s)) return 'life';
-  if(/办公|编程|管理|企业|开店|外贸|铺货|API|接口|Shopify|Sheets/.test(s)) return 'work';
-  return 'other';
-}
-function applyChrome(){
-  const s=t();
-  document.getElementById('brand').textContent=s.brand;
-  document.title=s.brand;
-  document.getElementById('hotTitle').textContent=s.hot;
-  if(listTitle) listTitle.textContent=s.all;
-  if(popX) popX.textContent=s.close;
-  qEl.placeholder='';
-  qEl.removeAttribute('placeholder');
-  langBtn.textContent=lang==='zh'?'ZH':'EN';
-  themeBtn.textContent=document.documentElement.dataset.theme==='dark'?s.themeL:s.themeD;
-  document.documentElement.lang=lang==='zh'?'zh-CN':'en';
-}
+function gidOf(x){const s=blob(x);if(/18|Adult|成人|无审核|约炮|出轨|Chaturbate|Pornhub/i.test(s))return 'adult';if(/学习|教育|Khan|Coursera|教程/.test(s))return 'learn';if(/接单|兼职|招聘|问卷/.test(s))return 'gig';if(/绘画|设计/.test(s))return 'draw';if(/视频|音乐|写作/.test(s))return 'make';if(/交友|美食|外卖|陪护|二手|跑腿|维修|美容|附近/.test(s))return 'life';if(/办公|编程|管理|API/.test(s))return 'work';return 'other';}
+function applyChrome(){const s=t();document.getElementById('brand').textContent=s.brand;document.title=s.brand;document.getElementById('hotTitle').textContent=s.hot;if(listTitle)listTitle.textContent=s.all;if(popX)popX.textContent=s.close;qEl.placeholder='';qEl.removeAttribute('placeholder');langBtn.textContent=lang==='zh'?'ZH':'EN';themeBtn.textContent=document.documentElement.dataset.theme==='dark'?s.themeL:s.themeD;document.documentElement.lang=lang==='zh'?'zh-CN':'en';}
 themeBtn.onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n);applyChrome()};
 langBtn.onclick=()=>{lang=lang==='zh'?'en':'zh';localStorage.setItem('lang',lang);applyChrome();renderSide();renderHot();render()};
 function hostOf(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
-function urlKey(u){
-  try{const x=new URL(u);return x.hostname.replace(/^www\./,'').toLowerCase()+x.pathname.replace(/\/+$/,'')}catch(e){return String(u||'').toLowerCase()}
-}
+function urlKey(u){try{const x=new URL(u);return x.hostname.replace(/^www\./,'').toLowerCase()+x.pathname.replace(/\/+$/,'')}catch(e){return String(u||'').toLowerCase()}}
 function deadPath(u){const s=String(u||'').toLowerCase();return DROP_PATH.some(p=>s.includes(p))}
 function esc(s){return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>').replace(/"/g,'"')}
 function isHttp(u){return /^https?:\/\//i.test(u||'')}
-function iconTag(url,letter){
-  const h=hostOf(url); const L=(letter||'T').slice(0,1);
-  if(!h) return hasHan(L)?'T':L;
-  return `<img alt="" src="https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(h)}" onerror="this.style.display='none'">`;
-}
+function iconTag(url,letter){const h=hostOf(url);const L=(letter||'T').slice(0,1);if(!h)return hasHan(L)?'T':L;return `<img alt="" src="https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(h)}" onerror="this.style.display='none'">`;}
 function dayNum(){const d=new Date();return Math.floor(Date.UTC(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate())/86400000)}
-function pickHot(){
-  const buckets={learn:[],gig:[],draw:[],make:[],life:[],work:[],adult:[],other:[],free:[]};
-  for(const x of tools){
-    const g=gidOf(x);
-    (buckets[g]||buckets.other).push(x);
-    if(x.free) buckets.free.push(x);
-  }
-  const order=['free','learn','gig','draw','make','life','work','adult','other','free'];
-  const seed=dayNum();
-  const used=new Set();
-  const out=[];
-  for(let i=0;i<10;i++){
-    const arr=buckets[order[i]]||tools;
-    if(!arr.length) continue;
-    let n=arr.length, idx=(seed*17+i*31)%n, hit=null;
-    for(let k=0;k<n;k++){
-      const x=arr[(idx+k)%n];
-      if(!used.has(x.name)){hit=x;break}
-    }
-    if(hit){used.add(hit.name);out.push(hit)}
-  }
-  hotList=out;
-}
-function showName(x){
-  const host=hostOf(x.url);
-  if(lang==='en') return enOnly(x.name_en, hasHan(x.name)?'':x.name, host);
-  return x.name||host||'';
-}
-function showDesc(x){
-  const host=hostOf(x.url);
-  if(lang==='en'){
-    if(x.desc_en && !hasHan(x.desc_en)) return x.desc_en;
-    const cat=TAG_EN[x.cat]||TAG_EN[x.pack]||'';
-    if(cat && host) return cat+' · '+host;
-    return enOnly(cat, host, 'Tool');
-  }
-  return x.desc||x.cat||host||'';
-}
-function renderHot(){
-  hotEl.innerHTML=hotList.map((h,i)=>{
-    const href=isHttp(h.url)?h.url:('guide.html?n='+encodeURIComponent(h.name||''));
-    return `<li><a href="${esc(href)}" target="_blank" rel="noopener"><i>${i+1}</i><span class="ht"><strong>${esc(showName(h))}</strong><em>${esc(showDesc(h))}</em></span></a></li>`;
-  }).join('');
-}
-function matchGroup(x){
-  if(!selected.size) return true;
-  if(selected.has('free') && !x.free) return false;
-  const topics=[...selected].filter(id=>id!=='free');
-  if(!topics.length) return true;
-  return topics.includes(gidOf(x));
-}
-function matchTag(x){
-  if(!tags.size) return true;
-  const s=blob(x);
-  if(tags.has('免费') && !x.free) return false;
-  if(tags.has('收费') && x.free) return false;
-  const others=[...tags].filter(k=>k!=='免费'&&k!=='收费');
-  if(!others.length) return true;
-  return others.some(k=>x.cat===k||x.pack===k||s.indexOf(k)>=0);
-}
+function pickHot(){const buckets={learn:[],gig:[],draw:[],make:[],life:[],work:[],adult:[],other:[],free:[]};for(const x of tools){const g=gidOf(x);(buckets[g]||buckets.other).push(x);if(x.free)buckets.free.push(x);}const order=['free','learn','gig','draw','make','life','work','adult','other','free'];const seed=dayNum();const used=new Set();const out=[];for(let i=0;i<10;i++){const arr=buckets[order[i]]||tools;if(!arr.length)continue;let n=arr.length,idx=(seed*17+i*31)%n,hit=null;for(let k=0;k<n;k++){const x=arr[(idx+k)%n];if(!used.has(x.name)){hit=x;break;}}if(hit){used.add(hit.name);out.push(hit);}}hotList=out;}
+function showName(x){const host=hostOf(x.url);if(lang==='en')return enOnly(x.name_en,hasHan(x.name)?'':x.name,host);return x.name||host||'';}
+function showDesc(x){const host=hostOf(x.url);if(lang==='en'){if(x.desc_en&&!hasHan(x.desc_en))return x.desc_en;const cat=TAG_EN[x.cat]||TAG_EN[x.pack]||'';if(cat&&host)return cat+' · '+host;return enOnly(cat,host,'Tool');}return x.desc||x.cat||host||'';}
+function renderHot(){hotEl.innerHTML=hotList.map((h,i)=>{const href=isHttp(h.url)?h.url:('guide.html?n='+encodeURIComponent(h.name||''));return `<li><a href="${esc(href)}" target="_blank" rel="noopener"><i>${i+1}</i><span class="ht"><strong>${esc(showName(h))}</strong><em>${esc(showDesc(h))}</em></span></a></li>`;}).join('');}
+function matchGroup(x){if(!selected.size)return true;if(selected.has('free')&&!x.free)return false;const topics=[...selected].filter(id=>id!=='free');if(!topics.length)return true;return topics.includes(gidOf(x));}
+function matchTag(x){if(!tags.size)return true;const s=blob(x);if(tags.has('免费')&&!x.free)return false;if(tags.has('收费')&&x.free)return false;const others=[...tags].filter(k=>k!=='免费'&&k!=='收费');if(!others.length)return true;return others.some(k=>x.cat===k||x.pack===k||s.indexOf(k)>=0);}
 function tagLen(s){return Array.from(String(s||'').replace(/\s+/g,'')).length}
 function wordLen(s){return String(s||'').trim().split(/\s+/).filter(Boolean).length}
-function sortedTags(){
-  return TAGS.slice().sort((a,b)=>{
-    const A=lang==='zh'?a[0]:a[1];
-    const B=lang==='zh'?b[0]:b[1];
-    if(lang==='en'){
-      const wa=wordLen(A), wb=wordLen(B);
-      if(wa!==wb) return wa-wb;
-      const ca=tagLen(A), cb=tagLen(B);
-      return ca-cb || A.localeCompare(B);
-    }
-    return tagLen(A)-tagLen(B) || A.localeCompare(B,'zh');
-  });
-}
-async function load(){
-  selected.clear(); tags.clear();
-  applyChrome();
-  const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=182;i++) files.push('data/more'+i+'.json');
-  const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
-  const seenName=new Set(); const seenUrl=new Set(); tools=[];
-  for(const x of arrs.flat()){
-    if(!x||!x.name||DROP_NAME.has(x.name)) continue;
-    if(deadPath(x.url)) continue;
-    const h=hostOf(x.url);
-    if(h&&DROP_HOST.has(h)) continue;
-    if(seenName.has(x.name)) continue;
-    const uk=isHttp(x.url)?urlKey(x.url):'';
-    if(uk&&seenUrl.has(uk)) continue;
-    seenName.add(x.name);
-    if(uk) seenUrl.add(uk);
-    tools.push(x);
-  }
-  pickHot();
-  metaEl.textContent=tools.length+t().tools;
-  renderHot(); renderSide(); render();
-}
-function renderSide(){
-  sideEl.innerHTML=GROUPS.map(g=>`<button data-c="${g.id}" class="${selected.has(g.id)?'on':''}">${lang==='zh'?g.k:g.en}</button>`).join('');
-  sideEl.onclick=e=>{
-    const b=e.target.closest('button'); if(!b)return;
-    const id=b.dataset.c;
-    if(selected.has(id)) selected.delete(id); else selected.add(id);
-    shown=80; renderSide(); render();
-  };
-  if(!tagsEl) return;
-  tagsEl.innerHTML=sortedTags().map(([zh,en])=>`<button data-t="${zh}" class="${tags.has(zh)?'on':''}">${lang==='zh'?zh:en}</button>`).join('');
-  tagsEl.onclick=e=>{
-    const b=e.target.closest('button'); if(!b)return;
-    const k=b.dataset.t;
-    if(tags.has(k)) tags.delete(k); else tags.add(k);
-    if(k==='免费') tags.delete('收费');
-    if(k==='收费') tags.delete('免费');
-    shown=80; renderSide(); render();
-  };
-}
-function card(x){
-  const title=showName(x);
-  const desc=showDesc(x);
-  const href=isHttp(x.url)?x.url:('guide.html?n='+encodeURIComponent(x.name||''));
-  return `<a class="card" href="${esc(href)}" target="_blank" rel="noopener"><div class="row"><div class="av">${iconTag(x.url,title)}</div><div><h3>${esc(title)}</h3><p>${esc(desc)}</p></div></div></a>`;
-}
-function render(){
-  const q=(qEl.value||'').trim().toLowerCase();
-  const s=t();
-  const key=[...selected].join(',')+'|'+[...tags].join(',')+'|'+q;
-  if(key!==lastKey){shown=80;lastKey=key}
-  if(hotBlock) hotBlock.style.display=q?'none':'block';
-  if(listTitle) listTitle.textContent=s.all;
-  if(popEl) popEl.classList.toggle('cover', selected.size>0);
-  if(popX) popX.textContent=s.close;
-  metaEl.textContent=tools.length+s.tools;
-  filtered=tools.filter(x=>{
-    const hit=!q||[x.name,x.desc,x.desc_en||'',x.cat,x.how||'',x.url||''].join(' ').toLowerCase().includes(q);
-    return hit && (q || (matchGroup(x) && matchTag(x)));
-  });
-  countEl.textContent=filtered.length+s.hit;
-  listEl.innerHTML=filtered.slice(0,shown).map(card).join('')||`<p class="count">${s.empty}</p>`;
-}
-if(popX) popX.onclick=()=>{selected.clear();renderSide();render()};
-function onScroll(){
-  if(shown>=filtered.length) return;
-  const top=scroller===window?window.scrollY:scroller.scrollTop;
-  const h=scroller===window?window.innerHeight:scroller.clientHeight;
-  const sh=scroller===window?document.body.offsetHeight:scroller.scrollHeight;
-  if(h+top>sh-240){shown+=80; listEl.innerHTML=filtered.slice(0,shown).map(card).join('');}
-}
+function sortedTags(){return TAGS.slice().sort((a,b)=>{const A=lang==='zh'?a[0]:a[1];const B=lang==='zh'?b[0]:b[1];if(lang==='en'){const wa=wordLen(A),wb=wordLen(B);if(wa!==wb)return wa-wb;return tagLen(A)-tagLen(B)||A.localeCompare(B);}return tagLen(A)-tagLen(B)||A.localeCompare(B,'zh');});}
+async function load(){selected.clear();tags.clear();applyChrome();const files=['data/tools.json','data/packs.json','data/more.json'];for(let i=2;i<=183;i++)files.push('data/more'+i+'.json');const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));const seenName=new Set();const seenUrl=new Set();tools=[];for(const x of arrs.flat()){if(!x||!x.name||DROP_NAME.has(x.name))continue;if(deadPath(x.url))continue;const h=hostOf(x.url);if(h&&DROP_HOST.has(h))continue;if(seenName.has(x.name))continue;const uk=isHttp(x.url)?urlKey(x.url):'';if(uk&&seenUrl.has(uk))continue;seenName.add(x.name);if(uk)seenUrl.add(uk);tools.push(x);}pickHot();metaEl.textContent=tools.length+t().tools;renderHot();renderSide();render();}
+function renderSide(){sideEl.innerHTML=GROUPS.map(g=>`<button data-c="${g.id}" class="${selected.has(g.id)?'on':''}">${lang==='zh'?g.k:g.en}</button>`).join('');sideEl.onclick=e=>{const b=e.target.closest('button');if(!b)return;const id=b.dataset.c;if(selected.has(id))selected.delete(id);else selected.add(id);shown=80;renderSide();render();};if(!tagsEl)return;tagsEl.innerHTML=sortedTags().map(([zh,en])=>`<button data-t="${zh}" class="${tags.has(zh)?'on':''}">${lang==='zh'?zh:en}</button>`).join('');tagsEl.onclick=e=>{const b=e.target.closest('button');if(!b)return;const k=b.dataset.t;if(tags.has(k))tags.delete(k);else tags.add(k);if(k==='免费')tags.delete('收费');if(k==='收费')tags.delete('免费');shown=80;renderSide();render();};}
+function card(x){const title=showName(x);const desc=showDesc(x);const href=isHttp(x.url)?x.url:('guide.html?n='+encodeURIComponent(x.name||''));return `<a class="card" href="${esc(href)}" target="_blank" rel="noopener"><div class="row"><div class="av">${iconTag(x.url,title)}</div><div><h3>${esc(title)}</h3><p>${esc(desc)}</p></div></div></a>`;}
+function render(){const q=(qEl.value||'').trim().toLowerCase();const s=t();const key=[...selected].join(',')+'|'+[...tags].join(',')+'|'+q;if(key!==lastKey){shown=80;lastKey=key;}if(hotBlock)hotBlock.style.display=q?'none':'block';if(listTitle)listTitle.textContent=s.all;if(popEl)popEl.classList.toggle('cover',selected.size>0);if(popX)popX.textContent=s.close;metaEl.textContent=tools.length+s.tools;filtered=tools.filter(x=>{const hit=!q||[x.name,x.desc,x.desc_en||'',x.cat,x.how||'',x.url||''].join(' ').toLowerCase().includes(q);return hit&&(q||(matchGroup(x)&&matchTag(x)));});countEl.textContent=filtered.length+s.hit;listEl.innerHTML=filtered.slice(0,shown).map(card).join('')||`<p class="count">${s.empty}</p>`;}
+if(popX)popX.onclick=()=>{selected.clear();renderSide();render();};
+function onScroll(){if(shown>=filtered.length)return;const top=scroller===window?window.scrollY:scroller.scrollTop;const h=scroller===window?window.innerHeight:scroller.clientHeight;const sh=scroller===window?document.body.offsetHeight:scroller.scrollHeight;if(h+top>sh-240){shown+=80;listEl.innerHTML=filtered.slice(0,shown).map(card).join('');}}
 scroller.addEventListener('scroll',onScroll,{passive:true});
 function goTop(){if(scroller===window)window.scrollTo({top:0,behavior:'smooth'});else scroller.scrollTo({top:0,behavior:'smooth'});}
-if(topBtn) topBtn.onclick=goTop;
+if(topBtn)topBtn.onclick=goTop;
 document.getElementById('brand').onclick=goTop;
-sf.addEventListener('submit',e=>{e.preventDefault();shown=80;render();qEl.blur();goTop()});
-qEl.addEventListener('input',()=>{shown=80;render()});
+sf.addEventListener('submit',e=>{e.preventDefault();shown=80;render();qEl.blur();goTop();});
+qEl.addEventListener('input',()=>{shown=80;render();});
 load();
