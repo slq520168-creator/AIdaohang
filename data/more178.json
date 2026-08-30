@@ -1,0 +1,23 @@
+[
+{"name":"世纪佳缘 婚恋","cat":"交友","pack":"婚恋","url":"https://www.jiayuan.com","desc":"国内相亲","how":"App/网页。","free":true},
+{"name":"百合网 婚恋","cat":"交友","pack":"婚恋","url":"https://www.baihe.com","desc":"婚恋","how":"网页。","free":true},
+{"name":"珍爱网 婚介","cat":"交友","pack":"婚恋","url":"https://www.zhenai.com","desc":"线下约见多","how":"要会员。","free":true},
+{"name":"樱花婚恋","cat":"交友","pack":"婚恋","url":"https://www.youyuan.com","desc":"婚恋社交","how":"App。","free":true},
+{"name":"WeddingWire Venue","cat":"交友","pack":"婚恋","url":"https://www.weddingwire.com","desc":"海外婚礼","how":"网页。","free":true},
+{"name":"The Knot Wedding","cat":"交友","pack":"婚恋","url":"https://www.theknot.com","desc":"婚礼策划","how":"网页。","free":true},
+{"name":"Shaadi India Marriage","cat":"交友","pack":"婚恋","url":"https://www.shaadi.com","desc":"印度婚姻","how":"网页。","free":true},
+{"name":"Meetup Singles Events","cat":"交友","pack":"线下交","url":"https://www.meetup.com/topics/singles/","desc":"单身线下活动","how":"选城市。","free":true},
+{"name":"Eventbrite Dating Events","cat":"交友","pack":"线下交","url":"https://www.eventbrite.com/d/online/dating/","desc":"线下聚会","how":"网页。","free":true},
+{"name":"Timeleft Dinner Strangers","cat":"交友","pack":"线下交","url":"https://www.timeleft.com","desc":"陌生人晚餐","how":"App。","free":true},
+{"name":"豆瓣同城 聚会","cat":"交友","pack":"线下交","url":"https://www.douban.com/location/","desc":"同城线下","how":"选城市。","free":true},
+{"name":"Rental Girlfriend JP Official","cat":"交友","pack":"陪伴租","url":"https://www.rental-girlfriend.jp","desc":"日本租女友陪伴","how":"公司契约，不是色情中介。","free":false},
+{"name":"Ibara Casual Date JP","cat":"交友","pack":"陪伴租","url":"https://www.ibara.tokyo","desc":"日本陪伴预约","how":"公司站。","free":false},
+{"name":"Indeed Jobs World","cat":"招聘","pack":"招聘","url":"https://www.indeed.com","desc":"全球招聘","how":"网页。","free":true},
+{"name":"LinkedIn Jobs Hunt","cat":"招聘","pack":"招聘","url":"https://www.linkedin.com/jobs/","desc":"职位","how":"账号。","free":true},
+{"name":"JobStreet SEA Jobs","cat":"招聘","pack":"招聘","url":"https://www.jobstreet.com","desc":"东南亚招聘","how":"网页。","free":true},
+{"name":"JobsDB HK SG","cat":"招聘","pack":"招聘","url":"https://www.jobsdb.com","desc":"港台新","how":"网页。","free":true},
+{"name":"Glints SEA Career","cat":"招聘","pack":"招聘","url":"https://glints.com","desc":"东南亚职场","how":"网页。","free":true},
+{"name":"Boss直聘","cat":"招聘","pack":"招聘","url":"https://www.zhipin.com","desc":"国内直聊招聘","how":"App。","free":true},
+{"name":"智联招聘","cat":"招聘","pack":"招聘","url":"https://www.zhaopin.com","desc":"国内招聘","how":"网页。","free":true},
+{"name":"51Job 前程无忧","cat":"招聘","pack":"招聘","url":"https://www.51job.com","desc":"国内招聘","how":"网页。","free":true}
+]
