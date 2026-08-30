@@ -1,0 +1,19 @@
+[
+  {"name":"Resident Advisor","url":"https://ra.co/","desc":"全球酒吧厅派对信息","cat":"夜生活","pack":"夜生活","free":true},
+  {"name":"Dice","url":"https://dice.fm/","desc":"夜店演出票务","cat":"夜生活","pack":"夜生活","free":true},
+  {"name":"Shotgun","url":"https://shotgun.live/","desc":"夜店活动票","cat":"夜生活","pack":"夜生活","free":true},
+  {"name":"Time Out Nightlife","url":"https://www.timeout.com/","desc":"各城夜生活指南","cat":"夜生活","pack":"夜生活","free":true},
+  {"name":"Tripadvisor Nightlife","url":"https://www.tripadvisor.com/","desc":"酒吧夜店点评","cat":"夜生活","pack":"夜生活","free":true},
+  {"name":"Google Maps Nightlife","url":"https://maps.google.com/","desc":"地图搜酒吧夜店","cat":"附近","pack":"夜生活","free":true},
+  {"name":"大众点评","url":"https://www.dianping.com/","desc":"酒吧KTV点评","cat":"夜生活","pack":"夜生活","free":true},
+  {"name":"美团","url":"https://www.meituan.com/","desc":"酒吧预定团购","cat":"夜生活","pack":"夜生活","free":true},
+  {"name":"Tattoodo","url":"https://www.tattoodo.com/","desc":"纹身师与图案","cat":"纹身","pack":"纹身","free":true},
+  {"name":"InkSearcher","url":"https://www.inksearcher.com/","desc":"纹身师搜索","cat":"纹身","pack":"纹身","free":true},
+  {"name":"Tattoo.com","url":"https://www.tattoo.com/","desc":"纹身店目录","cat":"纹身","pack":"纹身","free":true},
+  {"name":"Inked Mag","url":"https://www.inkedmag.com/","desc":"纹身杂志与艺师","cat":"纹身","pack":"纹身","free":true},
+  {"name":"World Tattoo Events","url":"https://www.tattoofest.com/","desc":"纹身展会信息","cat":"纹身","pack":"纹身","free":true},
+  {"name":"Association of Professional Piercers","url":"https://www.safepiercing.org/","desc":"正规穿刺安全标准","cat":"舌钉","pack":"纹身","free":true},
+  {"name":"BMEzine Wiki","url":"https://wiki.bme.com/","desc":"穿刺纹身知识","cat":"舌钉","pack":"纹身","free":true},
+  {"name":"Yelp Tattoo","url":"https://www.yelp.com/","desc":"本地纹身店点评","cat":"纹身","pack":"纹身","free":true},
+  {"name":"Booksy Tattoo","url":"https://booksy.com/","desc":"纹身穿刺预约","cat":"纹身","pack":"纹身","free":true}
+]
