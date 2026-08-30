@@ -1,0 +1,22 @@
+[
+{"name":"SGS Inspect Cert","cat":"管理","pack":"检验","url":"https://www.sgs.com","desc":"全球检验","how":"企业委托。","free":true},
+{"name":"Bureau Veritas Test","cat":"管理","pack":"检验","url":"https://www.bureauveritas.com","desc":"检验+认证","how":"官网。","free":true},
+{"name":"Intertek Quality","cat":"管理","pack":"检验","url":"https://www.intertek.com","desc":"质量检测","how":"官网。","free":true},
+{"name":"TUV Rheinland Cert","cat":"管理","pack":"检验","url":"https://www.tuv.com","desc":"德国 TUV","how":"官网。","free":true},
+{"name":"UL Solutions Safety","cat":"管理","pack":"检验","url":"https://www.ul.com","desc":"安全认证","how":"官网。","free":true},
+{"name":"中国质检 CNCA","cat":"管理","pack":"检验","url":"https://www.cnca.gov.cn","desc":"认证认可","how":"政府站。","free":true},
+{"name":"国家市监总局","cat":"管理","pack":"检测","url":"https://www.samr.gov.cn","desc":"市场监管","how":"政府站。","free":true},
+{"name":"VirusTotal File Scan","cat":"隐私","pack":"检测","url":"https://www.virustotal.com","desc":"文件+网址杀毒","how":"上传或贴链接。","free":true},
+{"name":"Have I Been Pwned Check","cat":"隐私","pack":"检测","url":"https://haveibeenpwned.com","desc":"邮箱是否泄露","how":"贴邮箱。","free":true},
+{"name":"Snopes Fact Check","cat":"资讯","pack":"检测","url":"https://www.snopes.com","desc":"谣言核实","how":"网页。","free":true},
+{"name":"FactCheck.org Verify","cat":"资讯","pack":"检测","url":"https://www.factcheck.org","desc":"政治事实核对","how":"网页。","free":true},
+{"name":"Google Fact Check Explorer","cat":"资讯","pack":"检测","url":"https://toolbox.google.com/factcheck/explorer","desc":"事实核查汇总","how":"网页。","free":true},
+{"name":"Hive Moderation Detect","cat":"绘画","pack":"检测","url":"https://hivemoderation.com","desc":"色情/暴力图检","how":"试用。","free":true},
+{"name":"InVID WeVerify Video","cat":"视频","pack":"检测","url":"https://www.invid-project.eu","desc":"视频真假","how":"插件。","free":true},
+{"name":"Sensity Deepfake Scan","cat":"视频","pack":"检测","url":"https://sensity.ai","desc":"换脸检测","how":"企业试用。","free":true},
+{"name":"SSL Labs Recheck","cat":"编程","pack":"检验","url":"https://www.ssllabs.com/ssltest/","desc":"证书检验","how":"贴域名 可能去重。","free":true},
+{"name":"Mozila Observatory Scan","cat":"编程","pack":"检测","url":"https://observatory.mozilla.org","desc":"站点安全打分","how":"贴网址。","free":true},
+{"name":"URLScan.io Page","cat":"隐私","pack":"检测","url":"https://urlscan.io","desc":"可疑网页扫描","how":"贴链接。","free":true},
+{"name":"LabFinder Tests US","cat":"学习","pack":"检验","url":"https://www.labfinder.com","desc":"就近化验","how":"网页。","free":true},
+{"name":"Quest Diagnostics Labs","cat":"学习","pack":"检验","url":"https://www.questdiagnostics.com","desc":"美国化验","how":"需医生单。","free":true}
+]
