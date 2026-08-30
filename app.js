@@ -3,15 +3,15 @@ const I18N={
   en:{brand:'Global AI Directory',hot:'Today picks',all:'全部工具',ph:'',themeD:'Dark',themeL:'Light',tools:' tools',hit:'',empty:'No match',res:'Results '}
 };
 const GROUPS=[
-  {k:'全部工具',en:'All tools',id:'all'},
-  {k:'免费试用',en:'Free use',id:'free'},
-  {k:'学习教程',en:'Learning',id:'learn'},
-  {k:'接单赚钱',en:'Gigs pay',id:'gig'},
-  {k:'创作媒体',en:'Create',id:'make'},
-  {k:'生活社交',en:'Life',id:'life'},
-  {k:'工作办公',en:'Work',id:'work'},
-  {k:'成人内容',en:'Adult',id:'adult'},
-  {k:'其他类型',en:'Others',id:'other'}
+  {k:'免费试用',id:'free'},
+  {k:'学习教程',id:'learn'},
+  {k:'接单赚钱',id:'gig'},
+  {k:'绘画设计',id:'draw'},
+  {k:'创作媒体',id:'make'},
+  {k:'生活社交',id:'life'},
+  {k:'工作办公',id:'work'},
+  {k:'成人内容',id:'adult'},
+  {k:'其他类型',id:'other'}
 ];
 const DROP_NAME=new Set(['Cron Calendar','Brilliant Practice','Quizlet Learn','Tuta Mail','Navidrome Demo','Stream Music','Primephonic 已并','Google Jules Agent','OpenDevin 旧名','Cursor.sh 旧域','Fig Term 已并','Amazon CodeWhisperer','Lyuceum','Mentat AI','Safari 技术预览','Character.AI+','Odakyu? skip','CopyMeThat Recipes','Privacy.com Cards Note','Ashley Madison Affairs Plus','SSL Labs Recheck']);
 const DROP_HOST=new Set(['lyceum.online','mentat.ai','cron.com','getcruise.com','humane.com','tome.app','kajiwoto.ai','height.app','cozy.sh','hourone.ai','bowery.co','6pen.art','webchatgpt.io','darkness.ai','forger.studio','photoscape.ai','wiseone.io','justplayer.app','stillplayer.app','makeupplus.com','marktext.app','snapseed.online','readyplayer.me','resonate.coop','tianmai.cn','wuan.com','xting.com','woodworm.store','taskcn.com','huanbian.com','ishanjian.com','jiami.cn','xiaoyuan-calc.com','joinopen.com','clara.io','csm.ai','digi.ai']);
@@ -29,7 +29,7 @@ const langBtn=document.getElementById('lang');
 const sf=document.getElementById('sf');
 const topBtn=document.getElementById('topBtn');
 const scroller=document.getElementById('scroll')||window;
-let tools=[]; let groupId='all';
+let tools=[]; let selected=new Set();
 let lang=localStorage.getItem('lang')||'en';
 let shown=80; let lastKey=''; let filtered=[]; let hotList=[];
 const saved=localStorage.getItem('theme')||'light';
@@ -41,7 +41,8 @@ function gidOf(x){
   if(/18|Adult|成人|无审核|约炮|出轨|男直|富婆|Chaturbate|Pornhub/i.test(s)) return 'adult';
   if(/学习|教育|亲子|宝妈|学生|Khan|Anki|Coursera|Scholar|Photomath|教程/.test(s)) return 'learn';
   if(/接单|兼职|招聘|Upwork|Fiverr|Boss直聘|智联|JobStreet|Indeed/.test(s)) return 'gig';
-  if(/绘画|视频|音乐|写作|设计|套图|人设|文案|翻唱|Suno|Civitai|Leonardo|Canva/.test(s)) return 'make';
+  if(/绘画|设计|套图|人设|Civitai|Leonardo|Canva|SeaArt|Artbreeder/.test(s)) return 'draw';
+  if(/视频|音乐|写作|文案|翻唱|Suno|HeyGen/.test(s)) return 'make';
   if(/交友|旅行|美食|厨房|婚恋|线下交|陪伴|情感|家庭|附近|Meetup|Tinder/.test(s)) return 'life';
   if(/办公|编程|管理|企业|开店|外贸|铺货|API|接口|Shopify|Sheets/.test(s)) return 'work';
   return 'other';
@@ -73,13 +74,13 @@ function iconTag(url,letter){
 }
 function dayNum(){const d=new Date();return Math.floor(Date.UTC(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate())/86400000)}
 function pickHot(){
-  const buckets={learn:[],gig:[],make:[],life:[],work:[],adult:[],other:[],free:[]};
+  const buckets={learn:[],gig:[],draw:[],make:[],life:[],work:[],adult:[],other:[],free:[]};
   for(const x of tools){
     const g=gidOf(x);
     (buckets[g]||buckets.other).push(x);
     if(x.free) buckets.free.push(x);
   }
-  const order=['free','learn','gig','make','life','work','adult','other','free','learn'];
+  const order=['free','learn','gig','draw','make','life','work','adult','other','free'];
   const seed=dayNum();
   const used=new Set();
   const out=[];
@@ -97,19 +98,20 @@ function pickHot(){
 }
 function renderHot(){
   hotEl.innerHTML=hotList.map((h,i)=>{
-    const title=h.name;
     const intro=lang==='zh'?(h.desc||h.cat||''):(h.desc_en||h.desc||h.cat||'');
     const href=isHttp(h.url)?h.url:('guide.html?n='+encodeURIComponent(h.name||''));
-    return `<li><a href="${esc(href)}" target="_blank" rel="noopener"><i>${i+1}</i><span class="ht"><strong>${esc(title)}</strong><em>${esc(intro)}</em></span></a></li>`;
+    return `<li><a href="${esc(href)}" target="_blank" rel="noopener"><i>${i+1}</i><span class="ht"><strong>${esc(h.name)}</strong><em>${esc(intro)}</em></span></a></li>`;
   }).join('');
 }
 function matchGroup(x){
-  if(groupId==='all') return true;
-  if(groupId==='free') return !!x.free;
-  return gidOf(x)===groupId;
+  if(!selected.size) return true;
+  if(selected.has('free') && !x.free) return false;
+  const topics=[...selected].filter(id=>id!=='free');
+  if(!topics.length) return true;
+  return topics.includes(gidOf(x));
 }
 async function load(){
-  groupId='all';
+  selected.clear();
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
   for(let i=2;i<=181;i++) files.push('data/more'+i+'.json');
@@ -133,12 +135,13 @@ async function load(){
 }
 function renderSide(){
   sideEl.innerHTML=GROUPS.map(g=>{
-    const on=groupId===g.id;
+    const on=selected.has(g.id);
     return `<button data-c="${g.id}" class="${on?'on':''}">${g.k}</button>`;
   }).join('');
   sideEl.onclick=e=>{
     const b=e.target.closest('button'); if(!b)return;
-    groupId=b.dataset.c;
+    const id=b.dataset.c;
+    if(selected.has(id)) selected.delete(id); else selected.add(id);
     shown=80; renderSide(); render();
   };
 }
@@ -152,11 +155,14 @@ function card(x){
 function render(){
   const q=(qEl.value||'').trim().toLowerCase();
   const s=t();
-  const key=groupId+'|'+q;
+  const key=[...selected].join(',')+'|'+q;
   if(key!==lastKey){shown=80;lastKey=key}
   if(hotBlock) hotBlock.style.display=q?'none':'block';
-  const g=GROUPS.find(z=>z.id===groupId);
-  if(listTitle) listTitle.textContent=q?(s.res+(qEl.value.trim())):((g&&g.k)||'全部工具');
+  if(listTitle){
+    if(q) listTitle.textContent=s.res+qEl.value.trim();
+    else if(!selected.size) listTitle.textContent='全部工具';
+    else listTitle.textContent=GROUPS.filter(g=>selected.has(g.id)).map(g=>g.k).join(' · ');
+  }
   metaEl.textContent=tools.length+s.tools;
   filtered=tools.filter(x=>{
     const hit=!q||[x.name,x.desc,x.desc_en||'',x.cat,x.how||'',x.url||''].join(' ').toLowerCase().includes(q);
