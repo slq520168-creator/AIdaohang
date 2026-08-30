@@ -59,33 +59,10 @@ window.googleTranslateElementInit=function(){
     layout:google.translate.TranslateElement.InlineLayout.SIMPLE
   },'google_translate_element');
 };
-function aidSetLang(code){
-  var sel=document.querySelector('.goog-te-combo');
-  if(!sel){setTimeout(function(){aidSetLang(code)},300);return;}
-  sel.value=code;
-  sel.dispatchEvent(new Event('change'));
-  var btn=document.getElementById('lang');
-  var map={'zh-CN':'中',en:'EN',vi:'VI',km:'KM',th:'TH',ja:'JA',ko:'KO',id:'ID',es:'ES',fr:'FR',pt:'PT',de:'DE',ru:'RU',ar:'AR'};
-  if(btn) btn.textContent=map[code]||code;
-  document.getElementById('langBar').classList.remove('show');
-}
-(function(){
-  var list=[['zh-CN','中'],['en','EN'],['vi','VI'],['km','KM'],['th','TH'],['ja','JA'],['ko','KO'],['id','ID'],['es','ES'],['fr','FR'],['pt','PT'],['de','DE'],['ru','RU'],['ar','AR']];
-  var bar=document.getElementById('langBar');
-  bar.innerHTML=list.map(function(p){return '<button type="button" data-l="'+p[0]+'">'+p[1]+'</button>'}).join('');
-  bar.addEventListener('click',function(e){
-    var b=e.target.closest('button'); if(!b)return;
-    aidSetLang(b.dataset.l);
-  });
-  var langBtn=document.getElementById('lang');
-  if(langBtn) langBtn.addEventListener('click',function(e){
-    e.stopPropagation();
-    bar.classList.toggle('show');
-  });
-})();
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="lock.js?v=169"></script>
 <script src="app.js?v=169"></script>
+<script src="gtrans.js?v=169"></script>
 </body>
 </html>
