@@ -144,8 +144,21 @@ function matchTag(x){
   if(!others.length) return true;
   return others.some(k=>x.cat===k||x.pack===k||s.indexOf(k)>=0);
 }
-function tagLen(s){return Array.from(s).length}
-const TAGS_SORTED=TAGS.slice().sort((a,b)=>tagLen(a[0])-tagLen(b[0])||TAGS.indexOf(a)-TAGS.indexOf(b));
+function tagLen(s){return Array.from(String(s||'').replace(/\s+/g,'')).length}
+function wordLen(s){return String(s||'').trim().split(/\s+/).filter(Boolean).length}
+function sortedTags(){
+  return TAGS.slice().sort((a,b)=>{
+    const A=lang==='zh'?a[0]:a[1];
+    const B=lang==='zh'?b[0]:b[1];
+    if(lang==='en'){
+      const wa=wordLen(A), wb=wordLen(B);
+      if(wa!==wb) return wa-wb;
+      const ca=tagLen(A), cb=tagLen(B);
+      return ca-cb || A.localeCompare(B);
+    }
+    return tagLen(A)-tagLen(B) || A.localeCompare(B,'zh');
+  });
+}
 async function load(){
   selected.clear(); tags.clear();
   applyChrome();
@@ -178,7 +191,7 @@ function renderSide(){
     shown=80; renderSide(); render();
   };
   if(!tagsEl) return;
-  tagsEl.innerHTML=TAGS_SORTED.map(([zh,en])=>`<button data-t="${zh}" class="${tags.has(zh)?'on':''}">${lang==='zh'?zh:en}</button>`).join('');
+  tagsEl.innerHTML=sortedTags().map(([zh,en])=>`<button data-t="${zh}" class="${tags.has(zh)?'on':''}">${lang==='zh'?zh:en}</button>`).join('');
   tagsEl.onclick=e=>{
     const b=e.target.closest('button'); if(!b)return;
     const k=b.dataset.t;
