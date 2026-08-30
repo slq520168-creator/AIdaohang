@@ -36,7 +36,7 @@ h1{font-size:18px}
 .cats button{border:1px solid var(--line);background:var(--soft);color:var(--txt);border-radius:12px;padding:10px 6px;font-size:14px;font-weight:700;letter-spacing:.04em}
 .cats button.on{background:var(--chip);color:var(--chip-t);border-color:transparent}
 .under{position:relative;min-height:120px}
-.fine{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.fine{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;max-height:92px;overflow:auto;-webkit-overflow-scrolling:touch}
 .fine button{border:1px solid var(--line);background:var(--soft);color:var(--txt);border-radius:999px;padding:5px 8px;font-size:12px}
 .fine button.on{background:var(--chip);color:var(--chip-t);border-color:transparent;font-weight:600}
 #pop{position:relative;z-index:1}
