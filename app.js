@@ -14,7 +14,7 @@ const GROUPS=[
   {k:'其他类型',en:'Others',id:'other'}
 ];
 const TAGS=[
-  ['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Talk'],['插件','Plugin'],['陪伴','Buddy'],['学习','Study'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Carpool'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Draw'],['视频','Video'],['成人','Adult'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Office'],['编程','Code'],['游戏','Games'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Jobs'],['社区','Forum'],['开店','Shop'],['API','API'],['图书','Books'],['小说','Novels'],['漫画','Manga'],['星座','Zodiac'],['塔罗','Tarot'],['云盘','Cloud'],['换脸','Face'],['打扮','Style'],['隐私','Privacy'],['资讯','News'],['短剧','Short'],['漫剧','Toon'],['故事','Story'],['创业','Startup'],['名人','Bio'],['八卦','Gossip'],['亲子','Kids'],['宝妈','Moms'],['主播','Stream'],['融资','Fund'],['理财','Money'],['种植','Farm'],['搭伙','Buddy'],['爬山','Hike'],['陪聊','Talk'],['情感','Feel'],['厨房','Kitchen'],['菜谱','Recipe'],['酒店','Hotel'],['房产','Realty'],['电影','Film'],['私影','Cinema'],['附近','Nearby'],['美剧','US TV'],['韩剧','KR TV'],['日剧','JP TV'],['监控','Cams'],['学生','Student'],['女心','Her'],['语录','Quotes'],['富婆','Sugar'],['人设','Persona'],['套图','Sets'],['文案','Copy'],['外贸','Trade'],['铺货','Dropship'],['网店','Store'],['养成','Raise'],['婚恋','Dating'],['出轨','Affair'],['检测','Detect'],['检验','Inspect'],['获粉','Grow'],['投票','Vote'],['数据','Stats'],['无审核','Open'],['小商品','Goods'],['机器人','Robot'],['无障碍','Access'],['模型包','Weights'],['数字人','Avatar'],['电视台','TV'],['虚拟人','Virtual'],['AI音乐','AI music'],['翻唱','Cover'],['夜生活','Nightlife'],['线下交','Meetup']
+  ['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Talk'],['插件','Plugin'],['陪伴','Buddy'],['学习','Study'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Carpool'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Draw'],['视频','Video'],['成人','Adult'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Office'],['编程','Code'],['游戏','Games'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Jobs'],['社区','Forum'],['开店','Shop'],['API','API'],['图书','Books'],['小说','Novels'],['漫画','Manga'],['星座','Zodiac'],['塔罗','Tarot'],['云盘','Cloud'],['换脸','Face'],['打扮','Style'],['隐私','Privacy'],['资讯','News'],['短剧','Short'],['漫剧','Toon'],['故事','Story'],['创业','Startup'],['名人','Bio'],['八卦','Gossip'],['亲子','Kids'],['宝妈','Moms'],['主播','Stream'],['融资','Fund'],['理财','Money'],['种植','Farm'],['搭伙','Buddy'],['爬山','Hike'],['陪聊','Talk'],['情感','Feel'],['厨房','Kitchen'],['菜谱','Recipe'],['酒店','Hotel'],['房产','Realty'],['电影','Film'],['私影','Cinema'],['附近','Nearby'],['美剧','US TV'],['韩剧','KR TV'],['日剧','JP TV'],['监控','Cams'],['学生','Student'],['女心','Her'],['语录','Quotes'],['富婆','Sugar'],['人设','Persona'],['套图','Sets'],['文案','Copy'],['外贸','Trade'],['铺货','Dropship'],['网店','Store'],['养成','Raise'],['婚恋','Dating'],['出轨','Affair'],['检测','Detect'],['检验','Inspect'],['获粉','Grow'],['投票','Vote'],['数据','Stats'],['无审核','Open'],['小商品','Goods'],['机器人','Robot'],['无障碍','Access'],['模型包','Weights'],['数字人','Avatar'],['电视台','TV'],['虚拟人','Virtual'],['AI音乐','AI music'],['翻唱','Cover'],['夜生活','Nightlife'],['线下交','Meetup'],['羊毛','Deals'],['外卖','Delivery'],['陪护','Care']
 ];
 const DROP_NAME=new Set(['Cron Calendar','Brilliant Practice','Quizlet Learn','Tuta Mail','Navidrome Demo','Stream Music','Primephonic 已并','Google Jules Agent','OpenDevin 旧名','Cursor.sh 旧域','Fig Term 已并','Amazon CodeWhisperer','Lyuceum','Mentat AI','Safari 技术预览','Character.AI+','Odakyu? skip','CopyMeThat Recipes','Privacy.com Cards Note','Ashley Madison Affairs Plus','SSL Labs Recheck']);
 const DROP_HOST=new Set(['lyceum.online','mentat.ai','cron.com','getcruise.com','humane.com','tome.app','kajiwoto.ai','height.app','cozy.sh','hourone.ai','bowery.co','6pen.art','webchatgpt.io','darkness.ai','forger.studio','photoscape.ai','wiseone.io','justplayer.app','stillplayer.app','makeupplus.com','marktext.app','snapseed.online','readyplayer.me','resonate.coop','tianmai.cn','wuan.com','xting.com','woodworm.store','taskcn.com','huanbian.com','ishanjian.com','jiami.cn','xiaoyuan-calc.com','joinopen.com','clara.io','csm.ai','digi.ai']);
@@ -59,7 +59,7 @@ function gidOf(x){
   if(/接单|兼职|招聘|Upwork|Fiverr|Boss直聘|智联|JobStreet|Indeed/.test(s)) return 'gig';
   if(/绘画|设计|套图|人设|Civitai|Leonardo|Canva|SeaArt|Artbreeder/.test(s)) return 'draw';
   if(/视频|音乐|写作|文案|翻唱|Suno|HeyGen/.test(s)) return 'make';
-  if(/交友|旅行|美食|厨房|婚恋|线下交|陪伴|情感|家庭|附近|Meetup|Tinder/.test(s)) return 'life';
+  if(/交友|旅行|美食|厨房|婚恋|线下交|陪伴|情感|家庭|附近|外卖|陪护|Meetup|Tinder/.test(s)) return 'life';
   if(/办公|编程|管理|企业|开店|外贸|铺货|API|接口|Shopify|Sheets/.test(s)) return 'work';
   return 'other';
 }
@@ -170,7 +170,7 @@ async function load(){
   selected.clear(); tags.clear();
   applyChrome();
   const files=['data/tools.json','data/packs.json','data/more.json'];
-  for(let i=2;i<=181;i++) files.push('data/more'+i+'.json');
+  for(let i=2;i<=182;i++) files.push('data/more'+i+'.json');
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const seenName=new Set(); const seenUrl=new Set(); tools=[];
   for(const x of arrs.flat()){
