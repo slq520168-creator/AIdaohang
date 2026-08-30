@@ -5,141 +5,160 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>防骗指南</title>
 <style>
-body{margin:0;font-family:-apple-system,"PingFang SC",sans-serif;background:#fff;color:#111;line-height:1.7}
+body{margin:0;font-family:-apple-system,"PingFang SC",sans-serif;background:#fff;color:#111;line-height:1.75}
 .w{max-width:640px;margin:0 auto;padding:16px 16px 56px}
-.bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.bar a,.bar button{color:#2563eb;background:#fff;border:1px solid #e5e7eb;border-radius:999px;padding:6px 12px;text-decoration:none;font-size:14px}
-h1{font-size:22px;margin:8px 0}
-h2{font-size:18px;margin:26px 0 8px}
-h3{font-size:16px;margin:16px 0 6px}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}
+.bar a{color:#2563eb;text-decoration:none;font-size:14px}
+.langs{display:flex;gap:6px}
+.langs button{border:1px solid #e5e7eb;background:#fff;border-radius:999px;padding:6px 10px;font-size:13px}
+.langs button.on{background:#2563eb;color:#fff;border-color:#2563eb}
+h1{font-size:22px;margin:4px 0 10px}
+h2{font-size:18px;margin:28px 0 8px}
+h3{font-size:16px;margin:0 0 8px}
 p,li{font-size:15px}
-ul{padding-left:1.2em}
-.box{border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;margin:12px 0;background:#fafafa}
-.tag{display:inline-block;background:#fee2e2;color:#991b1b;border-radius:6px;padding:1px 8px;font-size:12px;margin-right:6px}
-src{display:block;margin-top:8px;font-size:12px;color:#6b7280}
+ul,ol{padding-left:1.2em}
+.box{border:1px solid #e5e7eb;border-radius:12px;padding:14px;margin:14px 0;background:#fafafa}
+.tag{display:inline-block;background:#fee2e2;color:#991b1b;border-radius:6px;padding:1px 8px;font-size:12px;margin-bottom:8px}
+.src{display:block;margin-top:10px;font-size:12px;color:#6b7280}
 a{color:#2563eb}
 .en{display:none}
 html[lang="en"] .zh{display:none}
 html[lang="en"] .en{display:block}
-html[lang="en"] li.en{display:list-item}
+html[lang="en"] li.en,html[lang="en"] h1.en,html[lang="en"] h2.en,html[lang="en"] h3.en,html[lang="en"] p.en{display:revert}
 </style>
 </head>
 <body>
 <div class="w">
 <div class="bar">
-  <a href="./tools.html?v=177&home=1">← <span class="zh">返回导航</span><span class="en">Back</span></a>
-  <button type="button" id="lang">EN</button>
+  <a href="./tools.html?v=178&home=1">← <span class="zh">导航</span><span class="en">Home</span></a>
+  <div class="langs"><button type="button" data-l="zh">中</button><button type="button" data-l="en">EN</button></div>
 </div>
 
-<h1 class="zh">防骗指南：怎么被骗、怎么防、骗后怎么办</h1>
-<h1 class="en">Scam guide: how it happens, how to stop it, what to do after</h1>
-<p class="zh">下面案例都来自检察院、法院、公安和美国 FTC / FBI 已公开的材料。只讲受害人一侧怎么认、怎么停、怎么报。</p>
-<p class="en">Cases below are from public court, police and FTC/FBI reports. Victim side only.</p>
+<h1 class="zh">防骗指南</h1>
+<h1 class="en">Scam guide</h1>
+<p class="zh">案例均出自检察院、法院、公安、银行和美国 FTC / FBI / CFTC 已公开的材料。写清受害人是怎么一步步被带走的，不教怎么去骗人。</p>
+<p class="en">Public cases only. Victim timeline, not a crime manual.</p>
 
-<h2 class="zh">一、人是怎么被骗进去的</h2>
-<h2 class="en">1. How people get pulled in</h2>
-<p class="zh">不是一句话把钱骗走。常见步骤是：陌生人先套近 → 养成信任 → 小钱让你觉得真 → 催你加仓 → 提现失败 → 再要一笔「解冻费」。</p>
-<p class="en">It is rarely one message. Trust first, a small fake profit, then a large transfer, then a “fee to unlock”.</p>
+<h2 class="zh">部分一：具体怎么被骗的</h2>
+<h2 class="en">Part 1: How the victim was walked in</h2>
 
 <div class="box">
-<span class="tag">案例</span>
-<h3 class="zh">杭州富阳：加好友误入杀猪盘</h3>
-<h3 class="en">Hangzhou Fuyang: a friend request</h3>
-<p class="zh">2021 年 10 月，张某收到微信名为「君子慎独」的好友申请，顺手通过。对方先聊天套近，再引到投资。杭州富阳检察院公布：该系列跨境电诈已有 30 余人判刑，涉案超千万元，本地追回 200 余万。</p>
-<p class="en">Zhang accepted a WeChat request, then was walked into a fake investment. Fuyang prosecutors: 30+ convictions, over 10 million yuan involved.</p>
-<p class="src">来源：最高人民检察院 / 杭州富阳检察院 2025-05</p>
+<div class="tag">杀猪盘 · 杭州富阳</div>
+<h3 class="zh">张某：一条微信好友申请</h3>
+<p class="zh">2021 年 10 月，张某手机弹出微信好友申请，昵称「君子慎独」。她没多想就点了通过。对方不先要钱，先聊天、问暖、讲自己做生意。几天后才说「有个稳妥的理财渠道」，发来一个看起来像正规交易所的网页。张某先小额试，真的能看到账面涨了，也真的提出一小笔。相信之后把存款往里塞。再想取时，页面弹出「税费 / 解冻费」，不交就取不出。检察机关后来查清：这不是单干，是跨境团伙流水线上的一环。至 2025 年 4 月，该系列案 30 余人判刑，涉案超千万元，杭州地区追回 200 余万。</p>
+<p class="en">Zhang accepted a WeChat request from “Junzi Shendu”, chatted for days, then a fake trading site that paid a small withdrawal first. Hangzhou Fuyang prosecutors: 30+ sentenced, over 10 million yuan in the series.</p>
+<span class="src">最高人民检察院 / 杭州富阳检察院 2025-05</span>
 </div>
 
 <div class="box">
-<span class="tag">案例</span>
-<h3 class="zh">北京丰台：境外园区 + 婚恋 APP</h3>
-<h3 class="en">Beijing Fengtai: overseas compound + dating apps</h3>
-<p class="zh">2023–2024 年，甘某华等 8 人在境外「DIP 园区」「绿洲园区」参与「东傲集团」。用陌陌、探探虚构成功人士，养感情后引到假平台。小额能提，大额限提。北京高院 2026 年 1 月公布典型案：骗取 100 余万元，这 8 人判 2 年 3 个月至 3 年。</p>
-<p class="en">Eight people in an overseas compound used dating apps, then a fake trading site. Beijing High Court 2026 typical case: 1 million+ yuan, prison terms 2.25–3 years.</p>
-<p class="src">来源：北京市高级人民法院典型案例 / 澎渤 2026-01-05</p>
+<div class="tag">杀猪盘 · 北京丰台</div>
+<h3 class="zh">境外园区里的「东傲集团」</h3>
+<p class="zh">2023 年到 2024 年，甘某华等 8 人在境外「DIP 园区」「绿洲园区」入职。团伙分业务、技术、人事、后勤，统一吃住。业务员的任务不是明抢，是在陌陌、探探上挂虚拟头像：成功人士、常出差、会理财。先聊几周感情，再发一个看起来像券商的网址。受害人小额能提，大额就被限提。北京高院 2026 年 1 月把这起当典型案发布：骗走 100 余万元，8 人判 2 年 3 个月至 3 年。法院自己把脚本写成五句：建人设、找目标、养感情、诱导投资、收割离场。</p>
+<p class="en">Eight staff in an overseas compound used dating apps for weeks, then a fake broker site. Beijing High Court typical case, Jan 2026: 1 million+ yuan.</p>
+<span class="src">北京高院典型案 / 澎渤 2026-01-05</span>
 </div>
 
 <div class="box">
-<span class="tag">案例</span>
-<h3 class="zh">杀猪盘 2.0：从父母短信开始</h3>
-<h3 class="en">Pig-butchering 2.0: text the parents first</h3>
-<p class="zh">2025 年 12 月，景女士母亲收到陌生短信，对方自称是某男士父亲，要给两家孩子牵线。「儿子」被说成黄金集团中层、在吉尔吉斯斯坦出差。接着诱导买实物黄金寄出、再上假投资网页。景女士提现失败后才醒。兰州康女士同类被骗 85 万余元（连续 8 次购金邮寄 + 转账）。</p>
-<p class="en">A text to the mother posing as a future in-law, then gold purchases mailed out, then a fake investment page. Similar Lanzhou case: over 850,000 yuan.</p>
-<p class="src">来源：《经济参考报》 / 澎渤 2026-06-16</p>
+<div class="tag">杀猪盘 2.0</div>
+<h3 class="zh">先骗妈妈，再让女儿寄黄金</h3>
+<p class="zh">2025 年 12 月，景女士的母亲收到短信。对方自称是一位男士的父亲，想给两家孩子牵线。短信里「儿子」年龄就差一岁，211 双学士，某黄金集团银川区域中层，年入 35 万，家里有房有铺，目前在吉尔吉斯斯坦出差。妈妈觉得对象越正经，把人推给女儿。接下来不是直接要转账，是让景女士去买实物黄金、交快递寄出。后面再给一个「黄金套利」网页。她 2026 年 1 月试提现，页面提不出来，才知道从妈妈那条短信就开始了。同期兰州 32 岁康女士：母亲介绍的「相亲对象」让她连续 8 次买金邮寄，又转账 10 余万，共被骗 85 万余元。</p>
+<p class="en">A text to the mother posing as a future father-in-law, then physical gold mailed out, then a fake gold-arbitrage page. Lanzhou Kang: 8 gold shipments + transfers, 850,000+ yuan.</p>
+<span class="src">《经济参考报》 / 澎渤 2026-06-16</span>
 </div>
 
 <div class="box">
-<span class="tag">案例</span>
-<h3 class="zh">山西长治：银行门口拦下 95 万</h3>
-<h3 class="en">Changzhi: 950,000 stopped at the bank</h3>
-<p class="zh">反诈中心预警张某预约取 95 万元。民警陪伴劝说近 15 小时，她才拿出手机：在 APP 上认识男子，「内部消息稳赚」引到假理财页。钱还没转走。</p>
-<p class="en">Police spent 15 hours talking her down before a 950,000 yuan withdrawal. The “boyfriend” was a fake-invest pitch.</p>
-<p class="src">来源：山西晚报 / 光明网 2025-11-04</p>
+<div class="tag">银行拦截</div>
+<h3 class="zh">长治张某：95 万已约好取现</h3>
+<p class="zh">反诈中心看到预警：张某第二天上午 9 点到 10 点要在银行取 95 万元。民警从傍晚找到她，她一开始不承认。劝了近 15 个小时，她才拿出一直藏着的手机。聊天记录里，男子是 APP 上认识的，话术是「内部消息、稳赚不赔」，链接是假理财页。钱还没转走。这起能拦下，是因为银行预约取现被系统打了标。</p>
+<p class="en">Police spent 15 hours before she showed the phone. 950,000 yuan was still in the bank because the withdrawal had been flagged.</p>
+<span class="src">山西晚报 / 光明网 2025-11-04</span>
 </div>
 
 <div class="box">
-<span class="tag">数字</span>
-<h3 class="zh">美国官方数据</h3>
-<h3 class="en">U.S. official numbers</h3>
-<p class="zh">FTC：2023 年网恋骗局举报亏损约 11.4 亿美元。FBI IC3：2022 年投资类诈骗亏损约 33 亿美元，其中虚拟币投资诈骗 25.7 亿美元。CFTC 2023 年对首例「杀猪盘」判决：Cunwen Zhu / Justby 误导并挪用约 135 万美元。</p>
-<p class="en">FTC romance losses about $1.14B in 2023. FBI IC3 investment scams about $3.3B in 2022. CFTC 2023 judgment in a pig-butchering mule case: about $1.35M taken.</p>
-<p class="src">FTC Sentinel / FBI IC3 / CFTC Release 8841-23</p>
+<div class="tag">假客服</div>
+<h3 class="zh">杨某：抖音客服 + 飞鸽远程控制，一天 119 万</h3>
+<p class="zh">2024 年 7 月 24 日，杨某接到电话，对方称是抖音客服：你的号开了直播会员自动扣费，每月 800，一年 9600，要关就按我说的做。他按指引下载「飞鸽远程控制」，把手机银行交出去操作。对方在耳边说输密码、点确认。直到傍晚 6 点左右公安打来预警电话，他才停。当日被骗 119 万余元，其中 39 万余转到格某中行账号。兰州宁安检察院后来以帮信罪起诉格某，法院判 8 个月。</p>
+<p class="en">A fake Douyin support call, a remote-control app named Feige, 1.19 million yuan the same day. A mule account later got 8 months.</p>
+<span class="src">兰州宁安检察院 / 新浪财经 2025-09-18</span>
 </div>
 
-<h2 class="zh">二、如何防止被骗</h2>
-<h2 class="en">2. How to prevent it</h2>
+<div class="box">
+<div class="tag">假客服</div>
+<h3 class="zh">乌鲁木齐王先生：银行查台看到「请勿触摸屏幕」</h3>
+<p class="zh">2026 年 1 月 16 日，王先生进工行点。柜员看到他手机停在一行字：「正在对接系统中心，请勿触摸手机屏幕」。柜员拔掉 SIM 卡、断网、帮助挂失。王先生事后说：先接到冒充抖音客服的电话，说他开了直播会员每月扣 800；对方视频出示「银联工作证」，叫他下「银联会议」APP。手机随即被远程控制。这笔 39.79 万被拦在银行里。</p>
+<p class="en">A branch clerk saw “do not touch the screen” on the phone, pulled the SIM, froze cards. 397,900 yuan stayed in the bank.</p>
+<span class="src">工商银行乌鲁木齐喀什东路支行 2026-02</span>
+</div>
+
+<div class="box">
+<div class="tag">假征信</div>
+<h3 class="zh">广州谢先生：一通客服电话换来 136 万贷款</h3>
+<p class="zh">谢先生接到某电商金融客服电话，称受银保监会委托要降利率、回收资产，他的账户是风险账户，不调就上征信。三分钟电话接着三个小时视频会议。他按指示办了微粒贷、交行、中银消费金融、广州银行、广发、平安等一串贷款，加上存款，一共 136.4 万元进了对方账户。北京张晓同款：70 万存款加 30 万贷款。</p>
+<p class="en">A “regulator” credit-repair call. Xie ended with 1.364 million yuan in new loans and savings gone. Similar Beijing case: 700k savings + 300k loans.</p>
+<span class="src">新京报贝壳财经 / 潍坊公安提醒</span>
+</div>
+
+<div class="box">
+<div class="tag">刷单</div>
+<h3 class="zh">温岭曹女士：群里领红包，后面是垫资</h3>
+<p class="zh">2022 年 6 月，曹女士被拉进陌生群。群规写：关注店铺、刷好评就能领红包。群里一直有人刷「谢谢老板」。她先抢到几个红包，觉得真。再往下就要自己垫付货款下单，说是确认收货好评后返本金加佣金。温岭检察院后来起诉的朱某某、王某某，本人先是刷单受害人，亏了钱之后去当群托：专门在群里发「我赚到了」的截图。法院按诈骗罪判了拘役。</p>
+<p class="en">Cao was pulled into a group that paid small red packets first. Later cases in Wenling showed former victims hired as fake reviewers. They got detention, not a job.</p>
+<span class="src">温岭市人民检察院 2025-11-02</span>
+</div>
+
+<div class="box">
+<div class="tag">刷单变吸储</div>
+<h3 class="zh">深圳光明黄某：垫 2 万到 10 万，15–30 天还本加佣</h3>
+<p class="zh">电脑配件店老板黄某 2019 年起在群里发刷单：你先垫 2 万到 10 万，15 到 30 天后本金加 50 到 300 元佣金一起还。前期真还，后期用新人的钱还旧人。․ 2024 年 2 月同行暴雷，6 月关店。审计：向 400 余人吸收 6400 余万，34 名报案人刷单额 5000 余万、亏损 230 余万。法院以非法吸收公众存款罪判 10 年，二审维持。</p>
+<p class="en">A shop owner paid early “brushers” then used new deposits to repay old ones. 64 million yuan absorbed. Ten years for illegal fundraising.</p>
+<span class="src">最高检察院 / 检察日报 2025-11-22</span>
+</div>
+
+<h2 class="zh">部分二：怎么防</h2>
+<h2 class="en">Part 2: Prevention</h2>
 <ul>
-<li class="zh">陌生人先谈感情再谈赚钱，先假定他是骗局。</li>
-<li class="en">If a stranger talks money after talking love, treat it as a scam first.</li>
-<li class="zh">不转账、不买礼品卡、不把黄金寄给没见过面的人。</li>
-<li class="en">No transfers, gift cards, or mailing gold to someone you have not met.</li>
-<li class="zh">不装 AnyDesk / ToDesk / TeamViewer。银行不会这么要。</li>
-<li class="en">Do not install remote-control apps. Banks do not ask for that.</li>
-<li class="zh">提现顺利的小额不是证明，是钩。要你再交「税」「解冻费」就停。</li>
-<li class="en">A small successful withdrawal is bait. A fee to unlock the rest is the hook.</li>
-<li class="zh">父母收到陌生人给孩子相亲的短信，先当面核实，不要在群里转钱。</li>
-<li class="en">A text to parents about a perfect match needs a face-to-face check first.</li>
-<li class="zh">大额取现前告诉家人或拨 96110。长治那 95 万能留下，是因为银行预警 + 家人知道。</li>
-<li class="en">Tell family before a large cash-out. The 950,000 yuan case stopped because the bank alerted police.</li>
+<li class="zh">陌生人先套近再谈赚钱，按骗局处理。富阳、丰台的人都是这一步进去的。</li>
+<li class="zh">妈妈收到「给孩子相亲」的短信，先见面核实。不要寄黄金、不要加他发的理财网址。</li>
+<li class="zh">平台客服不会打来要你下远程控制、不会要你把密码发到客服号码。挂断，自己打 App 里的官方号。</li>
+<li class="zh">手机出现「请勿触摸屏幕」，拔卡断网，去柜台挂失。</li>
+<li class="zh">刷单群先发红包再让你垫资，红包是钩。正规平台不要你先打钱。</li>
+<li class="zh">大额取现先告诉家人。长治那 95 万能留下，是因为银行打了标。</li>
 </ul>
 
-<h2 class="zh">三、被骗之后怎么办</h2>
-<h2 class="en">3. After you already paid</h2>
+<h2 class="zh">部分三：被骗之后</h2>
+<h2 class="en">Part 3: After the loss</h2>
 <ol>
-<li class="zh">马上停止任何新转账。对方说「再交一笔就能取回」是续集。</li>
-<li class="en">Stop all new payments. “One more transfer to recover” is the next hit.</li>
-<li class="zh">打银行 / 支付宝 / 币安挂失、申请冻结和争议。越快越有机会拦下。</li>
-<li class="en">Call the bank or wallet and ask for a freeze and a dispute. Speed matters.</li>
-<li class="zh">保存：聊天截图、转账单号、对方账号、网址、快递单。不要删聊天。</li>
-<li class="en">Save chats, transfer IDs, wallet addresses, URLs, tracking numbers. Do not delete the chat.</li>
-<li class="zh">报警：中国拨 110 或用国家反诈中心 App。美国可向 FTC 和 IC3 举报。新加坡用 ScamShield。</li>
-<li class="en">Report: police + national anti-scam app. U.S.: FTC and IC3. Singapore: ScamShield.</li>
-<li class="zh">不要找「回收公司」「链上追赃专家」。这些几乎都是第二次行骗。</li>
-<li class="en">Ignore recovery agents. Most are a second scam.</li>
+<li class="zh">停止任何新付款。「再交一笔就能解冻」是续集。</li>
+<li class="zh">打银行 / 支付宝 / 币安挂失冻结，越快越有机会拦下。</li>
+<li class="zh">保存聊天、转账单号、对方账号、网址、快递单，不删记录。</li>
+<li class="zh">报警 110，用国家反诈中心 App。美国报 FTC 和 IC3。</li>
+<li class="zh">不要找「回收公司」。温岭那起里，部分受害人后来就是被拉去当托的。</li>
 </ol>
 
-<h2 class="zh">官方入口</h2>
-<h2 class="en">Official links</h2>
+<h2 class="zh">官方</h2>
 <ul>
-<li><a href="https://www.gjfzpt.cn/" target="_blank" rel="noopener">国家反诈中心</a></li>
-<li><a href="https://www.piyao.org.cn/" target="_blank" rel="noopener">互联网联合辟谣</a></li>
-<li><a href="https://consumer.ftc.gov/scams" target="_blank" rel="noopener">FTC Scams</a></li>
-<li><a href="https://www.ic3.gov/" target="_blank" rel="noopener">FBI IC3</a></li>
-<li><a href="https://www.scamshield.gov.sg/" target="_blank" rel="noopener">ScamShield</a></li>
-<li><a href="https://haveibeenpwned.com/" target="_blank" rel="noopener">Have I Been Pwned</a></li>
+<li><a href="https://www.gjfzpt.cn/">国家反诈中心</a></li>
+<li><a href="https://consumer.ftc.gov/scams">FTC</a></li>
+<li><a href="https://www.ic3.gov/">FBI IC3</a></li>
+<li><a href="https://www.scamshield.gov.sg/">ScamShield</a></li>
 </ul>
 </div>
 <script>
 (function(){
-  var btn=document.getElementById('lang');
-  var q=new URLSearchParams(location.search).get('lang');
-  var lang=q||localStorage.getItem('lang')||'zh';
+  var lang=(new URLSearchParams(location.search).get('lang'))||localStorage.getItem('lang')||'zh';
+  var btns=[].slice.call(document.querySelectorAll('.langs button'));
   function apply(){
     document.documentElement.lang=lang==='en'?'en':'zh-CN';
     document.title=lang==='en'?'Scam guide':'防骗指南';
-    btn.textContent=lang==='en'?'ZH':'EN';
+    btns.forEach(function(b){b.classList.toggle('on',b.dataset.l===(lang==='en'?'en':'zh'));});
   }
-  btn.onclick=function(){lang=lang==='en'?'zh':'en';try{localStorage.setItem('lang',lang)}catch(e){}apply();};
+  btns.forEach(function(b){
+    b.onclick=function(){
+      lang=b.dataset.l;
+      try{localStorage.setItem('lang',lang)}catch(e){}
+      apply();
+    };
+  });
   apply();
 })();
 </script>
