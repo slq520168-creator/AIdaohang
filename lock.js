@@ -14,9 +14,12 @@
     sessionStorage.setItem(KEY,'1');
     return;
   }
+  var zh=(localStorage.getItem('lang')||'en')==='zh';
   var wrap=document.createElement('div');
   wrap.id='gate';
-  wrap.innerHTML='<div class="gatebox"><p class="gatet">请输入验证码</p><input id="gateIn" type="password" inputmode="numeric" autocomplete="off" /><button type="button" id="gateGo">确认</button><p id="gateErr">验证码不对</p></div>';
+  wrap.innerHTML=zh
+    ?'<div class="gatebox"><p class="gatet">请输入验证码</p><input id="gateIn" type="password" inputmode="numeric" autocomplete="off" /><button type="button" id="gateGo">确认</button><p id="gateErr">验证码不对</p></div>'
+    :'<div class="gatebox"><p class="gatet">Enter access code</p><input id="gateIn" type="password" inputmode="numeric" autocomplete="off" /><button type="button" id="gateGo">Confirm</button><p id="gateErr">Wrong code</p></div>';
   document.documentElement.appendChild(wrap);
   document.documentElement.style.overflow='hidden';
   var inp=document.getElementById('gateIn');
