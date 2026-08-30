@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>免费仓库部署发布 10 套</title>
+<title>打包 App 10 套</title>
 <style>
 body{margin:0;font-family:-apple-system,"PingFang SC",sans-serif;background:#fff;color:#111;line-height:1.75}
 .w{max-width:720px;margin:0 auto;padding:16px 16px 56px}
@@ -17,121 +17,138 @@ code{background:#f3f4f6;padding:0 4px;border-radius:4px;font-size:13px;word-brea
 <body>
 <div class="w">
 <p><a href="./tools.html?v=179&home=1&lang=zh">← 导航</a></p>
-<h1>免费仓库 · 部署 · 发布 · 打包：10 套</h1>
-<p>静态站用 1–8；要后端用 9–10。都有免费档。域名要自己买，部署本身不收钱。</p>
-<p><a href="#c1">中1 Gitee</a> · <a href="#c2">中2 腾讯云</a> · <a href="#c3">中3 阿里云</a> · <a href="#c4">中4 华为云</a> · <a href="#c5">中5 Coding</a><br/>
-<a href="#f1">外1 GitHub Pages</a> · <a href="#f2">外2 Cloudflare</a> · <a href="#f3">外3 Vercel</a> · <a href="#f4">外4 Netlify</a> · <a href="#f5">外5 Render</a></p>
+<h1>打包 App：中外各 5 套</h1>
+<p>先选技术栈，再打包。iPhone 上架必须苹果开发者账号和 Xcode，没有正规签名的 ipa 不写。</p>
+<p>
+<a href="#c1">中1 HBuilderX</a> · <a href="#c2">中2 Android Studio</a> · <a href="#c3">中3 应用市场签名</a> · <a href="#c4">中4 小程序</a> · <a href="#c5">中5 网页转桌面</a><br/>
+<a href="#f1">外1 PWA</a> · <a href="#f2">外2 Capacitor</a> · <a href="#f3">外3 Flutter</a> · <a href="#f4">外4 Tauri/Electron</a> · <a href="#f5">外5 Actions 云打包</a>
+</p>
 
-<h2 id="pack">打包通用</h2>
-<ol>
-<li>静态站：根目录放 <code>index.html</code>，不要丢在子文件夹里却把根指错。</li>
-<li>前端构建：本地 <code>npm run build</code>，把 <code>dist</code> 或 <code>out</code> 当发布目录。</li>
-<li>Git 打包：<code>git tag v1.0.0</code> 后在仓库 Releases 上传 zip。</li>
-<li>Docker：有 Dockerfile 再推到 Render / 云函数。纯 HTML 不需要 Docker。</li>
-</ol>
-
-<h2 id="c1">中1 Gitee Pages</h2>
+<h2>打包前必看</h2>
 <div class="box">
 <ol>
-<li>打开 <a href="https://gitee.com/">gitee.com</a> 注册，新建仓库，勾公开。</li>
-<li>上传站点文件，默认分支 master。</li>
-<li>仓库 → 服务 → Gitee Pages → 启用，分支选 master，目录填 <code>/</code>。</li>
-<li>等审核通过（国内 Pages 有人工审）。结束地址像 <code>https://用户名.gitee.io/仓库名/</code>。</li>
-<li>改了文件要再点一次更新部署。</li>
+<li>包名一旦上架就不要改，如 <code>com.nidegongsi.app</code>。</li>
+<li>图标 1024px，应用名不要套牌。</li>
+<li>安卓要一把自己的签名钥匙 <code>.jks</code> / <code>.keystore</code>，丢了就不能覆盖安装。</li>
+<li>测试包和上架包分开：debug 不能上店。</li>
+<li>网站发布仍见下面「网站部署补充」。</li>
 </ol>
 </div>
 
-<h2 id="c2">中2 腾讯云 CloudBase 静态托管</h2>
+<h2 id="c1">中1 HBuilderX / uni-app（国内最常用）</h2>
 <div class="box">
 <ol>
-<li>打开 <a href="https://cloud.tencent.com/product/tcb">腾讯云 CloudBase</a> 开免费环境。</li>
-<li>新建环境 → 静态网站托管 → 上传 zip 或关联 Git。</li>
-<li>运行 <code>tcb hosting deploy dist -e 环境ID</code>（需要装 CloudBase CLI）。</li>
-<li>给一个 <code>.tcloudbaseapp.com</code> 域名。可绑自有域。</li>
+<li>下 <a href="https://www.dcloud.io/hbuilderx.html">HBuilderX</a>，安装 App 开发插件。</li>
+<li>文件 → 新建 → uni-app。改 <code>manifest.json</code>：应用名、图标、AppID。</li>
+<li>发行 → 真机运行跑通。</li>
+<li>发行 → 原生 App-云打包：选安卓、填包名、使用 DCloud 公证或自有证书。</li>
+<li>云端出 apk / aab。iOS 要苹果证书，在同一菜单里选 iOS。</li>
+<li>官方文档：<a href="https://uniapp.dcloud.net.cn/tutorial/app-packaged.html">uniapp 云打包</a></li>
 </ol>
 </div>
 
-<h2 id="c3">中3 阿里云 OSS 静态</h2>
+<h2 id="c2">中2 Android Studio 打正式包</h2>
 <div class="box">
 <ol>
-<li><a href="https://www.aliyun.com/product/oss">阿里云 OSS</a> 开桶（有免费额度 / 按量）。</li>
-<li>新建 Bucket，读公共。</li>
-<li>基础设置 → 静态网站托管 → 默认首页 <code>index.html</code>。</li>
-<li>上传文件或用 ossutil / 控制台拖拽。</li>
-<li>绑 CDN 和域名后把 Bucket 改私有读 + CDN 回源。</li>
+<li>下 <a href="https://developer.android.com/studio">Android Studio</a>。</li>
+<li>Build → Generate Signed App Bundle / APK。</li>
+<li>没钥匙就 Create new：记住别名、密码、存盘路径。</li>
+<li>选 release。上架用 AAB，自己装机用 APK。</li>
+<li>产物在 <code>app/release/</code>。</li>
 </ol>
 </div>
 
-<h2 id="c4">中4 华为云 OBS 静态</h2>
+<h2 id="c3">中3 应用宝 / 华为 / 小米 上架打包要求</h2>
 <div class="box">
 <ol>
-<li><a href="https://www.huaweicloud.com/product/obs.html">华为云 OBS</a> 开桶。</li>
-<li>新建桶 → 静态网站托管 → 上传 index.html。</li>
-<li>绑自有域或用 OBS 默认域名访问。</li>
+<li>应用宝开放平台：<a href="https://open.oceanengine.com/">巨量引擎开放平台</a> 与 <a href="https://developer.open-douyin.com/">抖音开放平台</a>不是同一个；安卓应用走 <a href="https://open.tencent.com/">应用宝开放平台</a>。</li>
+<li>准备：营业执照、软著软件著作权、隐私政策 URL、签名后的 aab。</li>
+<li>华为上架要额外签名（AppGallery Connect）。小米要市场账号。</li>
+<li>不要把 debug 包传上去。包名与软著证一致。</li>
 </ol>
 </div>
 
-<h2 id="c5">中5 Coding Pages</h2>
+<h2 id="c4">中4 微信 / 抖音 / 快手小程序打包</h2>
 <div class="box">
 <ol>
-<li><a href="https://coding.net/">coding.net</a> 建项目与仓库。</li>
-<li>项目 → 持续部署 → 静态网站。</li>
-<li>选分支、构建命令（纯 HTML 留空）、发布目录 <code>/</code>。</li>
-<li>推送后自动出页面地址。</li>
+<li>微信：<a href="https://mp.weixin.qq.com/">公众平台</a> → 开发 → 开发管理 → 提交审核。本地用微信开发者工具或 HBuilderX 发行到小程序。</li>
+<li>抖音小程序：<a href="https://developer.open-douyin.com/">抖音开放平台</a> 创建小程序 → 上传代码包或用 IDE 上传。</li>
+<li>快手小程序：<a href="https://mp.kuaishou.com/">快手小程序后台</a>。</li>
+<li>这三种不是 apk，是平台代码包，审核通过才能搜到。</li>
 </ol>
 </div>
 
-<h2 id="f1">外1 GitHub Pages</h2>
+<h2 id="c5">中5 把现成网站打成桌面软件</h2>
 <div class="box">
 <ol>
-<li><a href="https://github.com/">github.com</a> New repository，Public。</li>
-<li>上传代码。Settings → Pages → Source 选 Deploy from a branch，branch=main，folder=/root。</li>
-<li>几分钟后地址：<code>https://用户名.github.io/仓库名/</code></li>
-<li>仓库名若是 <code>用户名.github.io</code>，则根域名直接是站。</li>
-<li>改文件后 push 就重新发布。本站就是这套。</li>
+<li><a href="https://github.com/tw93/Pake">Pake</a>：一条命令把 URL 打成 Windows / Mac 安装包。</li>
+<li>用 Electron 自制皮：见国外 4。</li>
+<li>只是套壳，不是原生 App，上架应用市场通过率低。自用够了。</li>
 </ol>
 </div>
 
-<h2 id="f2">外2 Cloudflare Pages</h2>
+<h2 id="f1">外1 PWA（手机添加到主屏幕）</h2>
 <div class="box">
 <ol>
-<li><a href="https://pages.cloudflare.com/">pages.cloudflare.com</a> 用 GitHub 登录。</li>
-<li>Create → Connect Git → 选仓库。</li>
-<li>纯 HTML：Build command 空，Output 空或 <code>/</code>。</li>
-<li>Deploy。域名 <code>项目.pages.dev</code>。可在 Cloudflare 绑自有域。</li>
+<li>站里加 <code>manifest.webmanifest</code>：name、icons、start_url、display=standalone。</li>
+<li>加 Service Worker。必须 HTTPS。</li>
+<li>手机浏览器打开站 → 添加到主屏幕。不走应用市场。</li>
+<li>文档：<a href="https://web.dev/learn/pwa/">web.dev/learn/pwa</a></li>
 </ol>
 </div>
 
-<h2 id="f3">外3 Vercel</h2>
+<h2 id="f2">外2 Capacitor（网页变成 apk）</h2>
 <div class="box">
 <ol>
-<li><a href="https://vercel.com/">vercel.com</a> Import Git 仓库。</li>
-<li>框架自动识别 Next / Vite。纯 HTML 也能 Deploy。</li>
-<li>得 <code>项目.vercel.app</code>。每次 push 自动发布。</li>
-<li>免费档有带宽限制，静态站够用。</li>
+<li>官网 <a href="https://capacitorjs.com/">capacitorjs.com</a></li>
+<li><code>npm create @capacitor/app</code> 或在现有前端里 <code>npm i @capacitor/core @capacitor/cli</code> 然后 <code>npx cap init</code>。</li>
+<li><code>npm run build</code> → <code>npx cap add android</code> → <code>npx cap open android</code>。</li>
+<li>到 Android Studio 按中2 打签名包。</li>
+<li>iOS：<code>npx cap add ios</code> 后用 Mac + Xcode。</li>
 </ol>
 </div>
 
-<h2 id="f4">外4 Netlify</h2>
+<h2 id="f3">外3 Flutter 打 apk / ipa</h2>
 <div class="box">
 <ol>
-<li><a href="https://www.netlify.com/">netlify.com</a> Add new site → Import from Git。</li>
-<li>Publish directory 填 <code>/</code> 或 <code>dist</code>。</li>
-<li>得 <code>项目.netlify.app</code>。也可把本地文件夹拖到控制台直接发。</li>
+<li>装 <a href="https://docs.flutter.dev/get-started/install">Flutter SDK</a>。</li>
+<li><code>flutter create myapp</code> → <code>flutter run</code>。</li>
+<li>安卓发布包：<code>flutter build appbundle</code>。自测 apk：<code>flutter build apk --release</code>。</li>
+<li>iOS：Mac 上 <code>flutter build ipa</code>，再上传 App Store Connect / TestFlight。</li>
+<li>签名配置见 Flutter 官方 Android signing。</li>
 </ol>
 </div>
 
-<h2 id="f5">外5 Render</h2>
+<h2 id="f4">外4 Tauri / Electron 桌面安装包</h2>
 <div class="box">
 <ol>
-<li><a href="https://render.com/">render.com</a> New → Static Site 或 Web Service。</li>
-<li>挂 GitHub。Static：Build 空，Publish <code>.</code></li>
-<li>要 Node 服务用 Web Service 免费档（会睡眠）。</li>
-<li>域名 <code>项目.onrender.com</code>。</li>
+<li>Tauri（更轻）：<a href="https://v2.tauri.app/">v2.tauri.app</a> → <code>npm create tauri-app</code> → <code>npm run tauri build</code>，出 msi / dmg / deb。</li>
+<li>Electron：<a href="https://www.electronjs.org/">electronjs.org</a> + electron-builder，出 exe / dmg。</li>
+<li>代码签名：Windows 要证书才能消 SmartScreen；Mac 要 Apple 签名和通知。</li>
 </ol>
 </div>
 
-<p>选哪套：只有 HTML/CSS/JS 选 GitHub Pages 或 Cloudflare Pages。要自动构建选 Vercel / Netlify。国内访问稳选 Gitee 或腾讯云。</p>
+<h2 id="f5">外5 GitHub Actions 云打包</h2>
+<div class="box">
+<ol>
+<li>仓库建 <code>.github/workflows/build.yml</code>。</li>
+<li>安卓用 <code>ubuntu-latest</code> + 装 JDK，跑 <code>./gradlew assembleRelease</code> 或 <code>flutter build apk</code>。</li>
+<li>签名密钥放 GitHub Secrets，不要写进仓库。</li>
+<li>Actions 成功后 Artifacts 下 apk，或发到 Releases。</li>
+<li>示例文档：<a href="https://docs.github.com/actions">docs.github.com/actions</a></li>
+</ol>
+</div>
+
+<h2 id="web">网站部署补充（不打 apk）</h2>
+<div class="box">
+<p>静态站仍用：GitHub Pages、Cloudflare Pages、Vercel、Netlify、Gitee Pages、腾讯云 CloudBase。步骤见旧版四字：仓库 → 挂 Git → 选分支 → 得域名。</p>
+<ul>
+<li><a href="https://pages.github.com/">GitHub Pages</a></li>
+<li><a href="https://pages.cloudflare.com/">Cloudflare Pages</a></li>
+<li><a href="https://vercel.com/">Vercel</a></li>
+<li><a href="https://gitee.com/">Gitee</a></li>
+</ul>
+</div>
 </div>
 </body>
 </html>
