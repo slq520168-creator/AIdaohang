@@ -13,6 +13,9 @@ html[data-theme="dark"] #sitebg{background:#0d1117}
 h1{font-size:18px}
 .sub{color:var(--muted);font-size:12px;margin-top:2px}
 #theme,#lang{border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:999px;padding:7px 10px}
+.langbar{display:none;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+.langbar.show{display:flex}
+.langbar button{border:1px solid var(--line);background:var(--soft);color:var(--txt);border-radius:999px;padding:6px 8px;font-size:12px}
 .search{position:sticky;top:0;z-index:20;display:flex;gap:8px;margin:0 0 10px;padding:6px 0;background:var(--bg)}
 #q{flex:1;min-width:0;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:14px;padding:11px 12px;font-size:16px}
 #go{width:42px;min-width:42px;height:42px;flex:none;border:0;border-radius:50%;background:var(--acc);color:#fff}
