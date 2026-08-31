@@ -21,20 +21,18 @@ html[data-theme="dark"] #theme,html[data-theme="dark"] #lang{background:#1f2937;
 .search .box{position:relative}
 #q{width:100%;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:14px;padding:11px 48px 11px 12px;font-size:16px}
 #go{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:34px;height:34px;border:0;border-radius:50%;background:var(--acc);color:#fff}
-.block{background:rgba(255,255,255,.92);border:1px solid rgba(17,24,39,.08);border-radius:16px;padding:12px;margin-bottom:10px;width:100%}
-html[data-theme="dark"] .block{background:rgba(22,27,34,.92);border-color:rgba(255,255,255,.1)}
+.block{background:transparent;border:0;border-radius:0;padding:0;margin-bottom:14px;width:100%}
 .block-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.block-h h2{font-size:16px;letter-spacing:.02em}
+.block-h h2{font-size:16px;letter-spacing:.02em;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.75),0 0 8px rgba(0,0,0,.4)}
 .rank{list-style:none}
-.rank a{display:flex;gap:10px;align-items:flex-start;padding:10px 4px;color:var(--txt);text-decoration:none;border-bottom:1px solid var(--line);width:100%}
+.rank a{display:flex;gap:10px;align-items:flex-start;padding:10px 4px;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.22);width:100%;text-shadow:0 1px 2px rgba(0,0,0,.7)}
 .rank li:last-child a{border-bottom:0}
 .rank i{width:22px;flex:none;font-style:normal;font-weight:800;font-size:15px;line-height:1.4;text-align:center}
-.rank li:nth-child(-n+3) i{color:#ef4444}
-.rank li:nth-child(n+4) i{color:#d97706}
+.rank li:nth-child(-n+3) i{color:#ff6b6b;text-shadow:0 1px 2px rgba(0,0,0,.65)}
+.rank li:nth-child(n+4) i{color:#ffb020;text-shadow:0 1px 2px rgba(0,0,0,.65)}
 .rank .ht{flex:1;min-width:0}
-.rank strong{display:block;font-size:15px;font-weight:700;line-height:1.35;word-break:break-word}
-.rank em{display:block;margin-top:4px;font-style:normal;font-size:12px;line-height:1.45;color:#4b5563;word-break:break-word}
-html[data-theme="dark"] .rank em{color:#9aa8b6}
+.rank strong{display:block;font-size:15px;font-weight:700;line-height:1.35;word-break:break-word;color:#fff}
+.rank em{display:block;margin-top:4px;font-style:normal;font-size:12px;line-height:1.45;color:rgba(255,255,255,.88);word-break:break-word;text-shadow:0 1px 2px rgba(0,0,0,.7)}
 .cats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:8px}
 .cats button{border:1px solid #e5e7eb;background:#fff;color:#111827;border-radius:12px;padding:10px 6px;font-size:14px;font-weight:700;letter-spacing:.04em}
 html[data-theme="dark"] .cats button{background:#21262d;color:#e6edf3;border-color:#30363d}
@@ -50,8 +48,8 @@ html[data-theme="dark"] .fine button{background:#21262d;color:#e6edf3;border-col
 .under.open #pop{order:1}
 .under.open #tags{order:2}
 .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;width:100%}
-.card{display:block;background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:10px 8px;text-decoration:none;color:#111827;min-width:0}
-html[data-theme="dark"] .card{background:#161b22;border-color:#30363d;color:#e6edf3}
+.card{display:block;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.55);border-radius:14px;padding:10px 8px;text-decoration:none;color:#111827;min-width:0}
+html[data-theme="dark"] .card{background:rgba(22,27,34,.7);border-color:rgba(255,255,255,.14);color:#e6edf3}
 .card .row{display:flex;gap:8px;align-items:center;min-width:0}
 .card .row>div:last-child{min-width:0;flex:1;overflow:hidden}
 .av{width:32px;height:32px;flex:none;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--line);background:#fff}
@@ -60,8 +58,7 @@ html[data-theme="dark"] .av{background:#161b22}
 .card h3{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .card p{color:#4b5563;font-size:11px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 html[data-theme="dark"] .card p{color:#9aa8b6}
-.count{color:#4b5563;font-size:12px}
-html[data-theme="dark"] .count{color:#9aa8b6}
+.count{color:rgba(255,255,255,.9);font-size:12px;text-shadow:0 1px 2px rgba(0,0,0,.7)}
 .fab,.topbtn{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:44px;height:44px;border:0;border-radius:50%;color:#fff;z-index:50;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:20px}
 .fab{right:12px;background:#2aa3e6}
 .topbtn{left:12px;background:var(--acc)}
