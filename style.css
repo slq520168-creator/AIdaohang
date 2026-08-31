@@ -67,3 +67,7 @@ html[data-theme="dark"] .card p{color:#9aa8b6}
 .topbtn{left:12px;background:var(--acc)}
 
 
+
+#google_translate_element,.goog-te-banner-frame,.goog-te-balloon-frame,.skiptranslate,.goog-logo-link,.goog-te-gadget{display:none!important;visibility:hidden!important;height:0!important;width:0!important;overflow:hidden!important}
+body{top:0!important}
+.goog-text-highlight{background:transparent!important;box-shadow:none!important}
