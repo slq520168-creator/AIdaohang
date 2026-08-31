@@ -44,11 +44,15 @@
     el.dispatchEvent(new Event('change'));
     return true;
   }
+  function resort(){
+    if(typeof sortLangChips==='function') sortLangChips();
+  }
   function waitCombo(gcode){
-    if(comboSet(gcode)) return;
+    function ping(){ setTimeout(resort,120); setTimeout(resort,400); setTimeout(resort,900); }
+    if(comboSet(gcode)){ ping(); return; }
     var n=0, t=setInterval(function(){
       n++;
-      if(comboSet(gcode)||n>40) clearInterval(t);
+      if(comboSet(gcode)||n>40){ clearInterval(t); ping(); }
     },50);
   }
   function go(code){
