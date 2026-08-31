@@ -1,0 +1,668 @@
+[
+  {
+    "name": "Chewy",
+    "url": "https://www.chewy.com",
+    "desc": "宠物用品电商",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "PetSmart",
+    "url": "https://www.petsmart.com",
+    "desc": "宠物店",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Rover",
+    "url": "https://www.rover.com",
+    "desc": "宠物寄养遛狗",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Wag",
+    "url": "https://wagwalking.com",
+    "desc": "遛狗与宠物服务",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Adopt a Pet",
+    "url": "https://www.adoptapet.com",
+    "desc": "领养宠物",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "BarkBox",
+    "url": "https://www.barkbox.com",
+    "desc": "狗狗订阅盒",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Royal Canin",
+    "url": "https://www.royalcanin.com",
+    "desc": "宠物粮",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "PetMD",
+    "url": "https://www.petmd.com",
+    "desc": "宠物健康百科",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "ASPCA",
+    "url": "https://www.aspca.org",
+    "desc": "美国动物保护",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "RSPCA",
+    "url": "https://www.rspca.org.uk",
+    "desc": "英国动物保护",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "E宠商城",
+    "url": "https://www.epet.com",
+    "desc": "宠物用品电商",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "京东宠物",
+    "url": "https://pet.jd.com",
+    "desc": "京东宠物",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "The Dodo",
+    "url": "https://www.thedodo.com",
+    "desc": "宠物内容",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Steam",
+    "url": "https://store.steampowered.com",
+    "desc": "PC游戏商店",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Epic Games",
+    "url": "https://store.epicgames.com",
+    "desc": "Epic游戏商店",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "GOG",
+    "url": "https://www.gog.com",
+    "desc": "无DRM游戏",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Itch.io",
+    "url": "https://itch.io",
+    "desc": "独立游戏",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Xbox",
+    "url": "https://www.xbox.com",
+    "desc": "微软游戏",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "PlayStation Store",
+    "url": "https://store.playstation.com",
+    "desc": "索尼游戏",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Nintendo",
+    "url": "https://www.nintendo.com",
+    "desc": "任天堂",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Roblox",
+    "url": "https://www.roblox.com",
+    "desc": "沙盒游戏",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Minecraft",
+    "url": "https://www.minecraft.net",
+    "desc": "我的世界",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Riot Games",
+    "url": "https://www.riotgames.com",
+    "desc": "英雄联盟与Valorant",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "米哈游",
+    "url": "https://www.mihoyo.com",
+    "desc": "原神崩铁",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "网易游戏",
+    "url": "https://game.163.com",
+    "desc": "网易游戏",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "腾讯游戏",
+    "url": "https://game.qq.com",
+    "desc": "腾讯游戏",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "4399",
+    "url": "https://www.4399.com",
+    "desc": "小游戏",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "好游快爆",
+    "url": "https://www.3839.com",
+    "desc": "手游下载",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Ubisoft Connect",
+    "url": "https://www.ubisoft.com",
+    "desc": "育碧游戏",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "EA App",
+    "url": "https://www.ea.com",
+    "desc": "EA游戏",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "HoYoverse",
+    "url": "https://www.hoyoverse.com",
+    "desc": "国际米哈游",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Twitch",
+    "url": "https://www.twitch.tv",
+    "desc": "游戏直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "斗鱼",
+    "url": "https://www.douyu.com",
+    "desc": "游戏直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "虎牙",
+    "url": "https://www.huya.com",
+    "desc": "游戏直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "YY直播",
+    "url": "https://www.yy.com",
+    "desc": "语音与直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "CC直播",
+    "url": "https://cc.163.com",
+    "desc": "网易直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Kick",
+    "url": "https://kick.com",
+    "desc": "游戏直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "YouTube Gaming",
+    "url": "https://www.youtube.com/gaming",
+    "desc": "YouTube游戏直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Trovo",
+    "url": "https://trovo.live",
+    "desc": "游戏直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "SOOP",
+    "url": "https://www.sooplive.com",
+    "desc": "韩国直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Chzzk",
+    "url": "https://chzzk.naver.com",
+    "desc": "Naver直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "17LIVE",
+    "url": "https://17.live",
+    "desc": "真人直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Bigo Live",
+    "url": "https://www.bigo.tv",
+    "desc": "国际直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "OpenRec",
+    "url": "https://www.openrec.tv",
+    "desc": "日本游戏直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "快手直播",
+    "url": "https://live.kuaishou.com",
+    "desc": "快手直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "抖音直播",
+    "url": "https://live.douyin.com",
+    "desc": "抖音直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "西瓜直播",
+    "url": "https://live.ixigua.com",
+    "desc": "西瓜直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Facebook Gaming",
+    "url": "https://www.facebook.com/gaming",
+    "desc": "Facebook游戏直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "DLive",
+    "url": "https://dlive.tv",
+    "desc": "去中心直播",
+    "cat": "直播",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Binance",
+    "url": "https://www.binance.com",
+    "desc": "币安交易所",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "OKX",
+    "url": "https://www.okx.com",
+    "desc": "欧易交易所",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Coinbase",
+    "url": "https://www.coinbase.com",
+    "desc": "Coinbase交易所",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Bybit",
+    "url": "https://www.bybit.com",
+    "desc": "Bybit交易所",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Bitget",
+    "url": "https://www.bitget.com",
+    "desc": "Bitget交易所",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "KuCoin",
+    "url": "https://www.kucoin.com",
+    "desc": "KuCoin交易所",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "HTX",
+    "url": "https://www.htx.com",
+    "desc": "HTX交易所",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Crypto.com",
+    "url": "https://crypto.com",
+    "desc": "Crypto.com",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Bitfinex",
+    "url": "https://www.bitfinex.com",
+    "desc": "Bitfinex交易所",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "MetaMask",
+    "url": "https://metamask.io",
+    "desc": "以太坊钱包",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Trust Wallet",
+    "url": "https://trustwallet.com",
+    "desc": "多链钱包",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Phantom",
+    "url": "https://phantom.app",
+    "desc": "Solana钱包",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Uniswap",
+    "url": "https://uniswap.org",
+    "desc": "去中心交易",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "CoinMarketCap",
+    "url": "https://coinmarketcap.com",
+    "desc": "币价行情",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "CoinGecko",
+    "url": "https://www.coingecko.com",
+    "desc": "币价行情",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "TradingView",
+    "url": "https://www.tradingview.com",
+    "desc": "行情图表",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Blockchain.com",
+    "url": "https://www.blockchain.com",
+    "desc": "钱包与行情",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Petco",
+    "url": "https://www.petco.com",
+    "desc": "宠物店",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Petfinder",
+    "url": "https://www.petfinder.com",
+    "desc": "领养宠物",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Purina",
+    "url": "https://www.purina.com",
+    "desc": "宠物粮",
+    "cat": "宠物",
+    "pack": "生活",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "SteamDB",
+    "url": "https://steamdb.info",
+    "desc": "Steam数据",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Battle.net",
+    "url": "https://battle.net",
+    "desc": "暴雪游戏",
+    "cat": "游戏",
+    "pack": "娱乐",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Gate.io",
+    "url": "https://www.gate.io",
+    "desc": "Gate交易所",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Kraken",
+    "url": "https://www.kraken.com",
+    "desc": "Kraken交易所",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Gemini",
+    "url": "https://www.gemini.com",
+    "desc": "Gemini交易所",
+    "cat": "加密",
+    "pack": "金融",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  }
+]
