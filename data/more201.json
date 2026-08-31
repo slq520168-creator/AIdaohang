@@ -1,0 +1,542 @@
+[
+  {
+    "name": "Cougar Life",
+    "url": "https://www.cougarlife.com",
+    "desc": "熟女富婆约会",
+    "cat": "富婆",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Cougar.com",
+    "url": "https://www.cougar.com",
+    "desc": "熟女约会",
+    "cat": "富婆",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "DateMyAge",
+    "url": "https://www.datemyage.com",
+    "desc": "年龄匹配熟女约会",
+    "cat": "富婆",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Luxy",
+    "url": "https://onluxy.com",
+    "desc": "高收入人群约会",
+    "cat": "富婆",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "The League",
+    "url": "https://www.theleague.com",
+    "desc": "精选精英约会",
+    "cat": "富婆",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "MissTravel",
+    "url": "https://www.misstravel.com",
+    "desc": "旅行伴侣约会",
+    "cat": "富婆",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Victoria Milan",
+    "url": "https://www.victoriamilan.com",
+    "desc": "已婚约会",
+    "cat": "富婆",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Ashley Madison",
+    "url": "https://www.ashleymadison.com",
+    "desc": "婚外约会",
+    "cat": "富婆",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "OurTime",
+    "url": "https://www.ourtime.com",
+    "desc": "中年约会",
+    "cat": "富婆",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Seeking",
+    "url": "https://www.seeking.com",
+    "desc": "大款与约会安排",
+    "cat": "大款",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "SecretBenefits",
+    "url": "https://www.secretbenefits.com",
+    "desc": "大款互惠约会",
+    "cat": "大款",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "WhatsYourPrice",
+    "url": "https://www.whatsyourprice.com",
+    "desc": "出价约会",
+    "cat": "大款",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "RichMeetBeautiful",
+    "url": "https://www.richmeetbeautiful.com",
+    "desc": "富豪约会",
+    "cat": "大款",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "EstablishedMen",
+    "url": "https://www.establishedmen.com",
+    "desc": "成功男士约会",
+    "cat": "大款",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Sugars",
+    "url": "https://sugars.dating",
+    "desc": "互惠约会",
+    "cat": "大款",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Tinder",
+    "url": "https://tinder.com",
+    "desc": "成年滑动约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Bumble",
+    "url": "https://bumble.com",
+    "desc": "女生先开口约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Hinge",
+    "url": "https://hinge.co",
+    "desc": "认真约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Badoo",
+    "url": "https://badoo.com",
+    "desc": "全球社交约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "探探",
+    "url": "https://tantanapp.com",
+    "desc": "国内滑动约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "陌陌",
+    "url": "https://www.immomo.com",
+    "desc": "附近社交约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "伊对",
+    "url": "https://www.yidui.me",
+    "desc": "视频相亲",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "珍爱网",
+    "url": "https://www.zhenai.com",
+    "desc": "婚恋约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "百合网",
+    "url": "https://www.baihe.com",
+    "desc": "婚恋约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "世纪佳缘",
+    "url": "https://www.jiayuan.com",
+    "desc": "婚恋约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "OkCupid",
+    "url": "https://www.okcupid.com",
+    "desc": "问卷匹配约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Happn",
+    "url": "https://www.happn.com",
+    "desc": "路过匹配约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "POF",
+    "url": "https://www.pof.com",
+    "desc": "成年约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Coffee Meets Bagel",
+    "url": "https://coffeemeetsbagel.com",
+    "desc": "精选约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Pairs",
+    "url": "https://pairs.lv",
+    "desc": "日本约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "with",
+    "url": "https://with.is",
+    "desc": "日本约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Amanda",
+    "url": "https://amanda.co.kr",
+    "desc": "韩国约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Grindr",
+    "url": "https://www.grindr.com",
+    "desc": "男男约会",
+    "cat": "帅哥",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Scruff",
+    "url": "https://www.scruff.com",
+    "desc": "男男约会",
+    "cat": "帅哥",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Blued",
+    "url": "https://www.blued.com",
+    "desc": "男男社交",
+    "cat": "帅哥",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Hornet",
+    "url": "https://hornet.com",
+    "desc": "男男社交",
+    "cat": "帅哥",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Jackd",
+    "url": "https://www.jackd.com",
+    "desc": "男男约会",
+    "cat": "帅哥",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "PlanetRomeo",
+    "url": "https://www.planetromeo.com",
+    "desc": "男男约会",
+    "cat": "帅哥",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "GROWLr",
+    "url": "https://growlrapp.com",
+    "desc": "男男约会",
+    "cat": "帅哥",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Taimi",
+    "url": "https://taimi.com",
+    "desc": "LGBTQ约会",
+    "cat": "帅哥",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "HER",
+    "url": "https://weareher.com",
+    "desc": "女性向约会",
+    "cat": "小妹",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "RentAFriend",
+    "url": "https://www.rentafriend.com",
+    "desc": "付费陪伴朋友",
+    "cat": "帅哥",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Sniffies",
+    "url": "https://sniffies.com",
+    "desc": "成年男男地图社交",
+    "cat": "帅哥",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "他趣",
+    "url": "https://www.taqu.cn",
+    "desc": "语音社交约会",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Soul",
+    "url": "https://www.soulapp.cn",
+    "desc": "灵魂匹配社交",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Feeld",
+    "url": "https://feeld.co",
+    "desc": "开放式关系约会",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "3Fun",
+    "url": "https://www.3fun.com",
+    "desc": "三人约会",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "AdultFriendFinder",
+    "url": "https://adultfriendfinder.com",
+    "desc": "成人约会",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "FetLife",
+    "url": "https://fetlife.com",
+    "desc": "成人兴趣社交",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Pure",
+    "url": "https://www.pure.info",
+    "desc": "匿名成人约会",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "KOOK",
+    "url": "https://www.kookapp.cn",
+    "desc": "语音开黑陪玩",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "猫耳FM",
+    "url": "https://www.missevan.com",
+    "desc": "语音电台陪伴",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Discord",
+    "url": "https://discord.com",
+    "desc": "语音房间社交",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Session",
+    "url": "https://getsession.org",
+    "desc": "匿名加密聊天",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "MeWe",
+    "url": "https://mewe.com",
+    "desc": "去中心社交",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Signal",
+    "url": "https://signal.org",
+    "desc": "加密聊天",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Element",
+    "url": "https://element.io",
+    "desc": "去中心聊天",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "蝙蝠",
+    "url": "https://www.batchat.com",
+    "desc": "国内加密聊天",
+    "cat": "灰产",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "SugarDaddyMeet",
+    "url": "https://www.sugardaddymeet.com",
+    "desc": "大款约会",
+    "cat": "大款",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "MillionaireMatch",
+    "url": "https://www.millionairematch.com",
+    "desc": "百万富翁约会",
+    "cat": "大款",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  }
+]
