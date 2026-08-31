@@ -1,15 +1,10 @@
 (function(){
-  var ok={zh:1,en:1};
-  var u=new URL(location.href);
-  var q=u.searchParams.get('lang');
+  var ok={zh:1,en:1,ja:1,ko:1,hi:1,th:1,vi:1,id:1,ms:1,km:1,lo:1,my:1,tl:1,ru:1,uk:1,de:1,fr:1,es:1,pt:1,it:1,nl:1,pl:1,tr:1,ar:1};
+  var q=new URLSearchParams(location.search||'').get('lang');
   if(q==='zh-CN') q='zh';
-  var stored=null, tl=null;
-  try{stored=localStorage.getItem('lang'); tl=localStorage.getItem('aid_tl');}catch(e){}
-  var cur='zh';
-  if(ok[q]) cur=q;
-  else if(tl==='en'||stored==='en'&&tl==='en') cur='en';
-  else cur='zh';
-  try{localStorage.setItem('lang',cur); if(!tl) localStorage.setItem('aid_tl',cur);}catch(e){}
+  var stored=null;
+  try{stored=localStorage.getItem('lang')}catch(e){}
+  var cur=ok[q]?q:(ok[stored]?stored:'zh');
   var _get=Storage.prototype.getItem;
   var _set=Storage.prototype.setItem;
   Storage.prototype.getItem=function(k){

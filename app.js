@@ -21,17 +21,17 @@ const sf=document.getElementById('sf');
 const topBtn=document.getElementById('topBtn');
 const scroller=document.getElementById('scroll')||window;
 let tools=[]; let selected=new Set(); let tags=new Set();
-let lang=localStorage.getItem('lang')||'zh';if(lang!=='zh'&&lang!=='en')lang='zh';
+let lang=localStorage.getItem('lang')||'zh';
 let shown=80; let lastKey=''; let filtered=[]; let hotList=[];
 const saved=localStorage.getItem('theme')||'light';
 document.documentElement.dataset.theme=saved;
 const TAG_EN={}; TAGS.forEach(p=>{TAG_EN[p[0]]=p[1]});
-function t(){return I18N[lang]||I18N.en}
+function t(){return I18N[lang]||I18N.zh}
 function hasHan(s){return /[\u3400-\u9FFF]/.test(String(s||''))}
 function enOnly(){for(let i=0;i<arguments.length;i++){const s=arguments[i];if(s&&!hasHan(s))return String(s);}return 'Tool';}
 function blob(x){return [x.name,x.desc,x.desc_en,x.cat,x.pack,x.how].join(' ')}
 function gidOf(x){const s=blob(x);if(/18|Adult|成人|无审核|约炮|出轨|Chaturbate|Pornhub/i.test(s))return 'adult';if(/学习|教育|Khan|Coursera|教程/.test(s))return 'learn';if(/接单|兼职|招聘|问卷/.test(s))return 'gig';if(/绘画|设计/.test(s))return 'draw';if(/视频|音乐|写作/.test(s))return 'make';if(/交友|美食|外卖|陪护|二手|跑腿|维修|美容|附近/.test(s))return 'life';if(/办公|编程|管理|API/.test(s))return 'work';return 'other';}
-function applyChrome(){const s=t();document.getElementById('brand').textContent=s.brand;document.title=s.brand;document.getElementById('hotTitle').textContent=s.hot;if(listTitle)listTitle.textContent=s.all;qEl.placeholder='';qEl.removeAttribute('placeholder');themeBtn.textContent=document.documentElement.dataset.theme==='dark'?s.themeL:s.themeD;document.documentElement.lang=lang==='zh'?'zh-CN':'en';}
+function applyChrome(){const s=t();document.getElementById('brand').textContent=s.brand;document.title=s.brand;document.getElementById('hotTitle').textContent=s.hot;if(listTitle)listTitle.textContent=s.all;qEl.placeholder='';qEl.removeAttribute('placeholder');themeBtn.textContent=document.documentElement.dataset.theme==='dark'?s.themeL:s.themeD;document.documentElement.lang=lang==='zh'?'zh-CN':lang;}
 themeBtn.onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n);applyChrome()};
 function hostOf(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
 function urlKey(u){try{const x=new URL(u);return x.hostname.replace(/^www\./,'').toLowerCase()+x.pathname.replace(/\/+$/,'')}catch(e){return String(u||'').toLowerCase()}}
@@ -61,8 +61,9 @@ document.getElementById('brand').onclick=goTop;
 sf.addEventListener('submit',e=>{e.preventDefault();shown=80;render();qEl.blur();goTop();});
 qEl.addEventListener('input',()=>{shown=80;render();});
 window.setAidLang=function(code){
-  lang=(code==='en')?'en':'zh';
-  try{localStorage.setItem('lang',lang)}catch(e){}
+  lang=code||'zh';
+  try{localStorage.setItem('lang',lang);localStorage.setItem('aid_tl',lang)}catch(e){}
   applyChrome();renderSide();renderHot();render();
+  if(typeof aidTranslate==='function') aidTranslate();
 };
 load();

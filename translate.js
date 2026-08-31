@@ -14,18 +14,28 @@
     pt:{brand:'Global AI Directory',hot:'Hoje',all:'Todas as ferramentas',close:'Fechar',themeD:'Escuro',themeL:'Claro'},
     de:{brand:'Global AI Directory',hot:'Heute',all:'Alle Tools',close:'Schließen',themeD:'Dunkel',themeL:'Hell'},
     ru:{brand:'Global AI Directory',hot:'Сегодня',all:'Все инструменты',close:'Закрыть',themeD:'Тёмная',themeL:'Светлая'},
-    ar:{brand:'Global AI Directory',hot:'اليوم',all:'كل الأدوات',close:'إغلاق',themeD:'داكن',themeL:'فاتح'}
+    ar:{brand:'Global AI Directory',hot:'اليوم',all:'كل الأدوات',close:'إغلاق',themeD:'داكن',themeL:'فاتح'},
+    ms:{brand:'Global AI Directory',hot:'Pilihan hari ini',all:'Semua alat',close:'Tutup',themeD:'Gelap',themeL:'Cerah'},
+    lo:{brand:'Global AI Directory',hot:'ຍອດນິຍົມມື້ນີ້',all:'ທຸກເຄື່ອງມື',close:'ປິດ',themeD:'ມືດ',themeL:'ແຈ້ງ'},
+    my:{brand:'Global AI Directory',hot:'ယနေ့ရွေးချယ်မှု',all:'ကိရိယာအားလုံး',close:'ပိတ်',themeD:'အမှောင်',themeL:'အလင်း'},
+    tl:{brand:'Global AI Directory',hot:'Picks ngayon',all:'Lahat ng tools',close:'Isara',themeD:'Madilim',themeL:'Maliwanag'},
+    hi:{brand:'Global AI Directory',hot:'आज की पसंद',all:'सभी टूल',close:'बंद',themeD:'डार्क',themeL:'लाइट'},
+    uk:{brand:'Global AI Directory',hot:'Сьогодні',all:'Усі інструменти',close:'Закрити',themeD:'Темна',themeL:'Світла'},
+    it:{brand:'Global AI Directory',hot:'Scelte di oggi',all:'Tutti gli strumenti',close:'Chiudi',themeD:'Scuro',themeL:'Chiaro'},
+    nl:{brand:'Global AI Directory',hot:'Vandaag',all:'Alle tools',close:'Sluiten',themeD:'Donker',themeL:'Licht'},
+    pl:{brand:'Global AI Directory',hot:'Dzisiaj',all:'Wszystkie narzędzia',close:'Zamknij',themeD:'Ciemny',themeL:'Jasny'},
+    tr:{brand:'Global AI Directory',hot:'Bugün',all:'Tüm araçlar',close:'Kapat',themeD:'Koyu',themeL:'Açık'}
   };
   var GR={
-    free:{zh:'免费试用',en:'Free',km:'Free',th:'ฟรี',vi:'Miễn phí',ja:'無料',ko:'무료',id:'Gratis',es:'Gratis',fr:'Gratuit',pt:'Grátis',de:'Gratis',ru:'Бесплатно',ar:'مجانا'},
-    learn:{zh:'学习教程',en:'Learn',km:'Learn',th:'เรียน',vi:'Học',ja:'学習',ko:'학습',id:'Belajar',es:'Aprender',fr:'Apprendre',pt:'Aprender',de:'Lernen',ru:'Учёба',ar:'تعلم'},
-    gig:{zh:'接单赚钱',en:'Gigs',km:'Gigs',th:'งาน',vi:'Nhận việc',ja:'案件',ko:'건',id:'Job',es:'Tareas',fr:'Missions',pt:'Jobs',de:'Jobs',ru:'Заказы',ar:'وظائف'},
-    draw:{zh:'绘画设计',en:'Art',km:'Art',th:'ดีไซ',vi:'Vẽ',ja:'絵',ko:'그림',id:'Desain',es:'Arte',fr:'Art',pt:'Arte',de:'Kunst',ru:'Рисунок',ar:'فن'},
-    make:{zh:'创作媒体',en:'Media',km:'Media',th:'มีเดีย',vi:'Media',ja:'メディア',ko:'미디어',id:'Media',es:'Medios',fr:'Médias',pt:'Mídia',de:'Medien',ru:'Медиа',ar:'وسائط'},
-    life:{zh:'生活社交',en:'Life',km:'Life',th:'ชีวิต',vi:'Đời sống',ja:'生活',ko:'생활',id:'Hidup',es:'Vida',fr:'Vie',pt:'Vida',de:'Leben',ru:'Жизнь',ar:'حياة'},
-    work:{zh:'工作办公',en:'Work',km:'Work',th:'งาน',vi:'Văn phòng',ja:'仕事',ko:'직장',id:'Kantor',es:'Oficina',fr:'Bureau',pt:'Escritório',de:'Büro',ru:'Офис',ar:'عمل'},
-    adult:{zh:'成人内容',en:'Adult',km:'Adult',th:'ผู้ใหญ่',vi:'Người lớn',ja:'アダルト',ko:'성인',id:'Dewasa',es:'Adulto',fr:'Adulte',pt:'Adulto',de:'Adult',ru:'18+',ar:'للبالغين'},
-    other:{zh:'其他类型',en:'Other',km:'Other',th:'อื่นๆ',vi:'Khác',ja:'その他',ko:'기타',id:'Lain',es:'Otros',fr:'Autre',pt:'Outros',de:'Andere',ru:'Другое',ar:'أخرى'}
+    free:{zh:'免费试用',en:'Free',km:'Free',th:'ฟรี',vi:'Miễn phí',ja:'無料',ko:'무료',id:'Gratis',es:'Gratis',fr:'Gratuit',pt:'Grátis',de:'Gratis',ru:'Бесплатно',ar:'مجانا',ms:'Percuma',lo:'ຟຣີ',my:'အခမဲ့',tl:'Libre',hi:'मुफ़्त',uk:'Безкоштовно',it:'Gratis',nl:'Gratis',pl:'Za darmo',tr:'Ücretsiz'},
+    learn:{zh:'学习教程',en:'Learn',km:'Learn',th:'เรียน',vi:'Học',ja:'学習',ko:'학습',id:'Belajar',es:'Aprender',fr:'Apprendre',pt:'Aprender',de:'Lernen',ru:'Учёба',ar:'تعلم',ms:'Belajar',lo:'ຮຽນ',my:'သင်ယူ',tl:'Aral',hi:'सीखें',uk:'Навчання',it:'Impara',nl:'Leren',pl:'Nauka',tr:'Öğren'},
+    gig:{zh:'接单赚钱',en:'Gigs',km:'Gigs',th:'งาน',vi:'Nhận việc',ja:'案件',ko:'건',id:'Job',es:'Tareas',fr:'Missions',pt:'Jobs',de:'Jobs',ru:'Заказы',ar:'وظائف',ms:'Kerja',lo:'ວຽກ',my:'အလုပ်',tl:'Trabaho',hi:'काम',uk:'Замовлення',it:'Lavori',nl:'Klussen',pl:'Zlecenia',tr:'İşler'},
+    draw:{zh:'绘画设计',en:'Art',km:'Art',th:'ดีไซ',vi:'Vẽ',ja:'絵',ko:'그림',id:'Desain',es:'Arte',fr:'Art',pt:'Arte',de:'Kunst',ru:'Рисунок',ar:'فن',ms:'Seni',lo:'ສິລະປະ',my:'ပန်းချီ',tl:'Sining',hi:'कला',uk:'Малюнок',it:'Arte',nl:'Kunst',pl:'Sztuka',tr:'Sanat'},
+    make:{zh:'创作媒体',en:'Media',km:'Media',th:'มีเดีย',vi:'Media',ja:'メディア',ko:'미디어',id:'Media',es:'Medios',fr:'Médias',pt:'Mídia',de:'Medien',ru:'Медиа',ar:'وسائط',ms:'Media',lo:'ສື່',my:'မီဒီယာ',tl:'Media',hi:'मीडिया',uk:'Медіа',it:'Media',nl:'Media',pl:'Media',tr:'Medya'},
+    life:{zh:'生活社交',en:'Life',km:'Life',th:'ชีวิต',vi:'Đời sống',ja:'生活',ko:'생활',id:'Hidup',es:'Vida',fr:'Vie',pt:'Vida',de:'Leben',ru:'Жизнь',ar:'حياة',ms:'Hidup',lo:'ຊີວິດ',my:'ဘဝ',tl:'Buhay',hi:'जीवन',uk:'Життя',it:'Vita',nl:'Leven',pl:'Życie',tr:'Yaşam'},
+    work:{zh:'工作办公',en:'Work',km:'Work',th:'งาน',vi:'Văn phòng',ja:'仕事',ko:'직장',id:'Kantor',es:'Oficina',fr:'Bureau',pt:'Escritório',de:'Büro',ru:'Офис',ar:'عمل',ms:'Pejabat',lo:'ຫ້ອງການ',my:'ရုံး',tl:'Opisina',hi:'ऑफिस',uk:'Офіс',it:'Ufficio',nl:'Kantoor',pl:'Biuro',tr:'Ofis'},
+    adult:{zh:'成人内容',en:'Adult',km:'Adult',th:'ผู้ใหญ่',vi:'Người lớn',ja:'アダルト',ko:'성인',id:'Dewasa',es:'Adulto',fr:'Adulte',pt:'Adulto',de:'Adult',ru:'18+',ar:'للبالغين',ms:'Dewasa',lo:'ຜູ້ໃຫຍ່',my:'အရွယ်ရောက်',tl:'Adult',hi:'वयस्क',uk:'18+',it:'Adulti',nl:'18+',pl:'18+',tr:'Yetişkin'},
+    other:{zh:'其他类型',en:'Other',km:'Other',th:'อื่นๆ',vi:'Khác',ja:'その他',ko:'기타',id:'Lain',es:'Otros',fr:'Autre',pt:'Outros',de:'Andere',ru:'Другое',ar:'أخرى',ms:'Lain',lo:'ອື່ນ',my:'အခြား',tl:'Iba pa',hi:'अन्य',uk:'Інше',it:'Altro',nl:'Overig',pl:'Inne',tr:'Diğer'}
   };
   var TG={
     '免费':{en:'Free',vi:'Gratis',ja:'無料',ko:'무료',th:'ฟรี',id:'Gratis',es:'Gratis',fr:'Gratuit',pt:'Grátis',de:'Free',ru:'Free',ar:'Free',km:'Free'},
@@ -179,16 +189,11 @@
       box.classList.remove('show');
       apply();
     };
-    var btn=document.getElementById('lang');
-    if(btn){
-      btn.textContent=(LANGS.filter(function(p){return p[0]===cur})[0]||['en','EN'])[1];
-      btn.onclick=function(e){e.stopPropagation();box.classList.toggle('show');};
-    }
+
   }
   var t=null;
   var mo=new MutationObserver(function(){clearTimeout(t);t=setTimeout(apply,30)});
   function boot(){
-    bar();
     apply();
     var root=document.getElementById('scroll')||document.body;
     mo.observe(root,{childList:true,subtree:true});
