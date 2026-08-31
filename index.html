@@ -13,22 +13,22 @@
 <link rel="manifest" href="manifest.webmanifest"/>
 <link rel="apple-touch-icon" href="IMG_7049.jpeg"/>
 <style>
-html,body{margin:0;min-height:100svh;font-family:-apple-system,sans-serif;color:#3b2f2c;background:#000}
-body{min-height:100svh;background:#000 url("IMG_7049.jpeg") center/cover no-repeat fixed}
+html,body{margin:0;min-height:100%;min-height:100dvh;font-family:-apple-system,sans-serif;color:#3b2f2c;background:#000}
+body{min-height:100dvh;background:#000 url("IMG_7049.jpeg") center/cover no-repeat fixed}
 body::before{content:"";position:fixed;inset:0;z-index:-1;background:rgba(244,236,230,.08)}
-.w{max-width:430px;margin:0 auto;min-height:100svh;display:flex;flex-direction:column;box-sizing:border-box;padding:calc(10px + env(safe-area-inset-top)) 14px 24px}
-.b{background:rgba(255,255,255,.86);color:#111827;border-radius:14px;padding:12px;line-height:1.45;font-size:15px}
-.enter{display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:16px;border-radius:14px;font-weight:700;font-size:17px;margin:12px 0;flex:none}
-video{width:100%;height:28svh;max-height:200px;object-fit:contain;border-radius:14px;display:block;margin:8px 0 0;background:#111;flex:none}
+.w{max-width:430px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 14px 88px}
+video{width:100%;border-radius:18px;display:block;margin:12px 0 8px;background:#111}
+.b{background:rgba(255,255,255,.86);color:#111827;border-radius:10px;padding:8px 10px;line-height:1.35;font-size:12px}
+.enter{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom));z-index:20;width:calc(100% - 28px);max-width:402px;box-sizing:border-box;display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:14px;border-radius:16px;font-weight:700;font-size:16px}
 </style>
 </head>
 <body>
 <div class="w">
-<div class="b" id="hello">你好，欢迎来到全球优选AI导航。我是安安。点下面进入首页，也可以先看视频。</div>
-<a class="enter" id="goHome" href="./tools.html?v=192&home=1&lang=zh">进入首页</a>
 <video id="v" playsinline webkit-playsinline controls preload="metadata">
   <source src="_users_a225812b-2be1-4613-a32e-8cc822793592_generated_5562c574-e0b1-4b20-8e93-616e70fe0ea6_generated_video.mp4" type="video/mp4"/>
 </video>
+<div class="b" id="hello">你好，欢迎来到全球优选AI导航。我是安安。看完视频，点下面进入首页。</div>
+<a class="enter" id="goHome" href="./tools.html?v=192&home=1&lang=zh">进入首页</a>
 </div>
 <script>
 (function(){
@@ -37,7 +37,7 @@ video{width:100%;height:28svh;max-height:200px;object-fit:contain;border-radius:
   if(lang==='en'){
     document.documentElement.lang='en';
     document.title='Global AI Directory';
-    document.getElementById('hello').textContent='Hello. Welcome to Global AI Directory. I am Anan. Tap below to enter, or watch the video first.';
+    document.getElementById('hello').textContent='Hello. Welcome to Global AI Directory. I am Anan. Watch the video, then tap below.';
     document.getElementById('goHome').textContent='Enter home';
     document.getElementById('goHome').href='./tools.html?v=192&home=1&lang=en';
   }
