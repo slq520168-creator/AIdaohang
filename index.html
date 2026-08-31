@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
 <meta name="mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<meta name="apple-mobile-web-app-title" content="AI导航"/>
+<meta name="apple-mobile-web-app-title" content="AI Directory"/>
 <meta name="theme-color" content="#000000"/>
 <meta http-equiv="Cache-Control" content="no-cache"/>
-<title>全球优选AI导航</title>
+<title>Global AI Directory</title>
 <link rel="manifest" href="manifest.webmanifest"/>
 <link rel="apple-touch-icon" href="IMG_7049.jpeg"/>
 <style>
 html,body{margin:0;min-height:100%;min-height:100dvh;font-family:-apple-system,sans-serif;color:#3b2f2c;background:#000}
 body{min-height:100dvh;background:#000 url("IMG_7049.jpeg") center/cover no-repeat fixed}
 body::before{content:"";position:fixed;inset:0;z-index:-1;background:rgba(244,236,230,.08)}
-.w{max-width:430px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 14px 88px}
+.w{max-width:430px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 14px calc(28px + env(safe-area-inset-bottom))}
 video{width:100%;border-radius:18px;display:block;margin:12px 0 8px;background:#111}
 .b{background:rgba(255,255,255,.86);color:#111827;border-radius:10px;padding:8px 10px;line-height:1.35;font-size:12px}
-.enter{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom));z-index:20;width:calc(100% - 28px);max-width:402px;box-sizing:border-box;display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:14px;border-radius:16px;font-weight:700;font-size:16px}
+.enter{display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:14px;border-radius:16px;font-weight:700;font-size:16px;margin:10px 0 0}
 </style>
 </head>
 <body>
@@ -27,19 +27,19 @@ video{width:100%;border-radius:18px;display:block;margin:12px 0 8px;background:#
 <video id="v" playsinline webkit-playsinline controls preload="metadata">
   <source src="_users_a225812b-2be1-4613-a32e-8cc822793592_generated_5562c574-e0b1-4b20-8e93-616e70fe0ea6_generated_video.mp4" type="video/mp4"/>
 </video>
-<div class="b" id="hello">你好，欢迎来到全球优选AI导航。我是安安。看完视频，点下面进入首页。</div>
-<a class="enter" id="goHome" href="./tools.html?v=192&home=1&lang=zh">进入首页</a>
+<div class="b" id="hello">Hello. Welcome to Global AI Directory. I am Anan. Watch the video, then tap below to open the home page.</div>
+<a class="enter" id="goHome" href="./tools.html?v=192&home=1&lang=en">Enter home</a>
 </div>
 <script>
 (function(){
   var q=new URLSearchParams(location.search).get('lang');
-  var lang=q||localStorage.getItem('lang')||'zh';
-  if(lang==='en'){
-    document.documentElement.lang='en';
-    document.title='Global AI Directory';
-    document.getElementById('hello').textContent='Hello. Welcome to Global AI Directory. I am Anan. Watch the video, then tap below.';
-    document.getElementById('goHome').textContent='Enter home';
-    document.getElementById('goHome').href='./tools.html?v=192&home=1&lang=en';
+  var lang=q||localStorage.getItem('lang')||'en';
+  if(lang==='zh'){
+    document.documentElement.lang='zh-CN';
+    document.title='全球优选AI导航';
+    document.getElementById('hello').textContent='你好，欢迎来到全球优选AI导航。我是安安。看完视频，点下面进入首页。';
+    document.getElementById('goHome').textContent='进入首页';
+    document.getElementById('goHome').href='./tools.html?v=192&home=1&lang=zh';
   }
   document.getElementById('goHome').addEventListener('click',function(){
     localStorage.setItem('aid_welcome','1');
