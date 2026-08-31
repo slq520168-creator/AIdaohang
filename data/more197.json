@@ -1,0 +1,353 @@
+[
+{
+"name": "GeeLark",
+"url": "https://www.geelark.com",
+"desc": "出海云手机矩阵",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "MoreLogin",
+"url": "https://www.morelogin.com",
+"desc": "指纹浏览器加云手机",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "AdsPower",
+"url": "https://www.adspower.net",
+"desc": "指纹浏览器防关联",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "DuoPlus",
+"url": "https://www.duoplus.cn",
+"desc": "ARM 云手机矩阵",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "Hubstudio",
+"url": "https://hubstudio.cn",
+"desc": "免费指纹环境",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "BitBrowser",
+"url": "https://www.bitbrowser.net",
+"desc": "比特指纹浏览器",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "GoLogin",
+"url": "https://gologin.com",
+"desc": "云端指纹浏览器",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "Multilogin",
+"url": "https://multilogin.com",
+"desc": "企业级防关联",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "Dolphin Anty",
+"url": "https://dolphin-anty.com",
+"desc": "指纹浏览器",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "Octo Browser",
+"url": "https://octobrowser.net",
+"desc": "反检测浏览器",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "Kameleo",
+"url": "https://kameleo.io",
+"desc": "真机指纹模拟",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "Incogniton",
+"url": "https://incogniton.com",
+"desc": "多账号指纹浏览器",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "Undetectable",
+"url": "https://undetectable.io",
+"desc": "反检测浏览器",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "紫鸟浏览器",
+"url": "https://www.ziniao.com",
+"desc": "跨境指纹浏览器",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "花漾灵动",
+"url": "https://www.szdamai.com",
+"desc": "云端指纹加 RPA",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "VMLogin",
+"url": "https://vmlogin.us",
+"desc": "虚拟机级指纹",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "傲晨云手机",
+"url": "https://www.aochenyun.com",
+"desc": "云手机群控挂机",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "川川云手机",
+"url": "https://www.xiaochuanyun.com",
+"desc": "云手机多开挂机",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "海马云",
+"url": "https://www.haimacloud.com",
+"desc": "云游戏云手机",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "爱云兔",
+"url": "https://www.aiyuntu.com",
+"desc": "云手机多开",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "BrowserStack",
+"url": "https://www.browserstack.com",
+"desc": "真机云测",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "Sauce Labs",
+"url": "https://saucelabs.com",
+"desc": "云端真机测试",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "Appetize",
+"url": "https://appetize.io",
+"desc": "浏览器里跑安卓",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "爱思助手",
+"url": "https://www.i4.cn",
+"desc": "苹果设备管理",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "3uTools",
+"url": "https://www.3u.com",
+"desc": "苹果刷机管理",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "ToDesk",
+"url": "https://www.todesk.com",
+"desc": "远程桌面控制",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "向日葵",
+"url": "https://sunlogin.oray.com",
+"desc": "远程控制",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "AnyDesk",
+"url": "https://anydesk.com",
+"desc": "远程桌面",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "RustDesk",
+"url": "https://rustdesk.com",
+"desc": "开源远程桌面",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "TeamViewer",
+"url": "https://www.teamviewer.com",
+"desc": "远程协助",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "HideMyAcc",
+"url": "https://www.hidemyacc.com",
+"desc": "指纹浏览器",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "Ghost Browser",
+"url": "https://www.ghostbrowser.com",
+"desc": "多会话浏览器",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "SessionBox",
+"url": "https://sessionbox.io",
+"desc": "多账号会话",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "Splashtop",
+"url": "https://www.splashtop.com",
+"desc": "远程桌面",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "HeadSpin",
+"url": "https://www.headspin.io",
+"desc": "全球真机云",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "Chrome 远程桌面",
+"url": "https://remotedesktop.google.com",
+"desc": "Chrome 远程控制",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "iTools",
+"url": "https://www.itools.cn",
+"desc": "苹果设备助手",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "同步推",
+"url": "https://www.tongbu.com",
+"desc": "苹果应用助手",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+},
+{
+"name": "XY苹果助手",
+"url": "https://www.xyzs.com",
+"desc": "苹果助手",
+"cat": "群控",
+"pack": "矩阵",
+"free": true,
+"how": "打开官网注册或下载后使用。"
+}
+]
