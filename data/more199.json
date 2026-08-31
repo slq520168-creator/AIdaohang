@@ -1,0 +1,902 @@
+[
+  {
+    "name": "光速虚拟机",
+    "url": "https://www.gsxnj.cn",
+    "desc": "安卓云手机/虚拟机",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "天翼云手机",
+    "url": "https://www.ctyun.cn",
+    "desc": "电信天翼云手机",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "华为云空间",
+    "url": "https://cloud.huawei.com",
+    "desc": "华为云空间与设备协同",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "移动云",
+    "url": "https://ecloud.10086.cn",
+    "desc": "移动云主机与云手机入口",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "联通云",
+    "url": "https://www.cucloud.cn",
+    "desc": "联通云主机与云手机入口",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "酷安",
+    "url": "https://www.coolapk.com",
+    "desc": "安卓应用与数码社区",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "应用宝",
+    "url": "https://sj.qq.com",
+    "desc": "腾讯手机应用商店",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "小米应用商店",
+    "url": "https://app.mi.com",
+    "desc": "小米安卓应用商店",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "华为应用市场",
+    "url": "https://appgallery.huawei.com",
+    "desc": "华为 AppGallery",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "TapTap",
+    "url": "https://www.taptap.cn",
+    "desc": "手机游戏与应用商店",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Samsung远程真机",
+    "url": "https://developer.samsung.com/remote-test-lab",
+    "desc": "三星免费远程真机实验室",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Firebase Test Lab",
+    "url": "https://firebase.google.com/products/test-lab",
+    "desc": "Google 真机测试",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "AWS Device Farm",
+    "url": "https://aws.amazon.com/device-farm/",
+    "desc": "亚马逊真机云测",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "LambdaTest",
+    "url": "https://www.lambdatest.com",
+    "desc": "浏览器与真机云测",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Now.gg",
+    "url": "https://now.gg",
+    "desc": "浏览器里玩安卓云游戏/应用",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Kobiton",
+    "url": "https://kobiton.com",
+    "desc": "真机云测试平台",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "F-Droid",
+    "url": "https://f-droid.org",
+    "desc": "开源安卓应用商店",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "APKMirror",
+    "url": "https://www.apkmirror.com",
+    "desc": "APK 下载镜像",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Google Play",
+    "url": "https://play.google.com",
+    "desc": "谷歌官方应用商店",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Obtainium",
+    "url": "https://github.com/ImranR98/Obtainium",
+    "desc": "直接订阅应用更新",
+    "cat": "手机",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "京东云电脑",
+    "url": "https://cloud-pc.jd.com",
+    "desc": "京东云电脑",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "无影云电脑",
+    "url": "https://wuying.aliyun.com",
+    "desc": "阿里云无影云电脑",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "腾讯云电脑",
+    "url": "https://cloud.tencent.com/product/ecd",
+    "desc": "腾讯云弹性云电脑",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "华为云桌面",
+    "url": "https://www.huaweicloud.com/product/workspace.html",
+    "desc": "华为 Workspace 云桌面",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "天翼云电脑",
+    "url": "https://www.ctyun.cn",
+    "desc": "电信天翼云电脑",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "百度智能云",
+    "url": "https://cloud.baidu.com",
+    "desc": "百度云主机与云电脑入口",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "火山引擎",
+    "url": "https://www.volcengine.com",
+    "desc": "字节跳动云与算力",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "UCloud",
+    "url": "https://www.ucloud.cn",
+    "desc": "优刻得云主机",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "青云QingCloud",
+    "url": "https://www.qingcloud.com",
+    "desc": "青云主机与桌面",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "新华三云桌面",
+    "url": "https://www.h3c.com",
+    "desc": "H3C 云桌面",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Windows 365",
+    "url": "https://www.microsoft.com/windows-365",
+    "desc": "微软云电脑",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Shadow PC",
+    "url": "https://shadow.tech",
+    "desc": "云端游戏电脑",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Paperspace",
+    "url": "https://www.paperspace.com",
+    "desc": "云 GPU / 云电脑",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Amazon WorkSpaces",
+    "url": "https://aws.amazon.com/workspaces/",
+    "desc": "亚马逊云桌面",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Shells",
+    "url": "https://shells.com",
+    "desc": "浏览器里的云电脑",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "DistroSea",
+    "url": "https://distrosea.com",
+    "desc": "在线试用 Linux",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "OnWorks",
+    "url": "https://www.onworks.net",
+    "desc": "浏览器在线操作系统",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "v86在线电脑",
+    "url": "https://copy.sh/v86/",
+    "desc": "浏览器里跑老电脑/系统",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "VirtualBox",
+    "url": "https://www.virtualbox.org",
+    "desc": "免费本地虚拟机",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "UTM",
+    "url": "https://mac.getutm.app",
+    "desc": "Mac 免费虚拟机",
+    "cat": "电脑",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "VS Code",
+    "url": "https://code.visualstudio.com",
+    "desc": "免费代码编辑器",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "desc": "GitHub AI 写代码",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Windsurf",
+    "url": "https://windsurf.com",
+    "desc": "Windsurf AI IDE",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Trae",
+    "url": "https://www.trae.ai",
+    "desc": "字节跳动 AI IDE",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "通义灵码",
+    "url": "https://lingma.aliyun.com",
+    "desc": "阿里云 AI 编程助手",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "百度Comate",
+    "url": "https://comate.baidu.com",
+    "desc": "百度 AI 写代码",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "CodeGeeX",
+    "url": "https://codegeex.cn",
+    "desc": "智谱代码模型",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Tabnine",
+    "url": "https://www.tabnine.com",
+    "desc": "AI 代码补全",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Replit",
+    "url": "https://replit.com",
+    "desc": "浏览器里写代码运行",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "StackBlitz",
+    "url": "https://stackblitz.com",
+    "desc": "浏览器全栈 IDE",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "CodeSandbox",
+    "url": "https://codesandbox.io",
+    "desc": "在线前端沙箱",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Gitpod",
+    "url": "https://www.gitpod.io",
+    "desc": "云端开发环境",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "GitHub Codespaces",
+    "url": "https://github.com/features/codespaces",
+    "desc": "GitHub 云开发机",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Firebase Studio",
+    "url": "https://studio.firebase.google.com",
+    "desc": "Google 在线做应用",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Continue",
+    "url": "https://www.continue.dev",
+    "desc": "开源 IDE AI 插件",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Aider",
+    "url": "https://aider.chat",
+    "desc": "终端里 AI 改代码",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Zed",
+    "url": "https://zed.dev",
+    "desc": "高速协作编辑器",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "腾讯 Cloud Studio",
+    "url": "https://cloudstudio.net",
+    "desc": "腾讯云在线 IDE",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Gitee",
+    "url": "https://gitee.com",
+    "desc": "国内代码托管",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "力扣",
+    "url": "https://leetcode.cn",
+    "desc": "算法刷题写代码",
+    "cat": "代码",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Vercel",
+    "url": "https://vercel.com",
+    "desc": "前端免费部署",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Netlify",
+    "url": "https://www.netlify.com",
+    "desc": "静态站点免费发布",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Cloudflare Pages",
+    "url": "https://pages.cloudflare.com",
+    "desc": "Cloudflare 免费 Pages",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "GitHub Pages",
+    "url": "https://pages.github.com",
+    "desc": "仓库直接发布网站",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Railway",
+    "url": "https://railway.app",
+    "desc": "应用一键部署",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Render",
+    "url": "https://render.com",
+    "desc": "Web 服务免费档",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Fly.io",
+    "url": "https://fly.io",
+    "desc": "全球边缘部署",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Koyeb",
+    "url": "https://www.koyeb.com",
+    "desc": "Serverless 部署",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Zeabur",
+    "url": "https://zeabur.com",
+    "desc": "中英双语一键部署",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Sealos",
+    "url": "https://sealos.io",
+    "desc": "国产云原生应用平台",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "七牛云",
+    "url": "https://www.qiniu.com",
+    "desc": "对象存储与 CDN 发布",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "又拍云",
+    "url": "https://www.upyun.com",
+    "desc": "CDN 与静态托管",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Deno Deploy",
+    "url": "https://deno.com/deploy",
+    "desc": "Deno 边缘发布",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Hugging Face Spaces",
+    "url": "https://huggingface.co/spaces",
+    "desc": "模型应用免费托管",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Firebase Hosting",
+    "url": "https://firebase.google.com/products/hosting",
+    "desc": "Google 静态托管",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "腾讯云开发",
+    "url": "https://cloud.tencent.com/product/tcb",
+    "desc": "CloudBase 小程序/Web 发布",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "阿里云",
+    "url": "https://www.aliyun.com",
+    "desc": "国内云部署",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "华为云",
+    "url": "https://www.huaweicloud.com",
+    "desc": "华为云部署",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Gitee Pages",
+    "url": "https://gitee.com",
+    "desc": "Gitee 静态页发布",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "AWS Amplify",
+    "url": "https://aws.amazon.com/amplify/",
+    "desc": "亚马逊前后端发布",
+    "cat": "部署",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "PWABuilder",
+    "url": "https://www.pwabuilder.com",
+    "desc": "网站打成 PWA/应用包",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Expo",
+    "url": "https://expo.dev",
+    "desc": "React Native 打包发布",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Apache Cordova",
+    "url": "https://cordova.apache.org",
+    "desc": "网页封装成 App",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Ionic",
+    "url": "https://ionicframework.com",
+    "desc": "混合 App 框架",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "uni-app",
+    "url": "https://uniapp.dcloud.net.cn",
+    "desc": "一套代码打多端 App",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "DCloud",
+    "url": "https://www.dcloud.io",
+    "desc": "HBuilder 云打包",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "蒲公英",
+    "url": "https://www.pgyer.com",
+    "desc": "内测分发与扫码安装",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Codemagic",
+    "url": "https://codemagic.io",
+    "desc": "Flutter/iOS/Android 云打包",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Fastlane",
+    "url": "https://fastlane.tools",
+    "desc": "自动签名上架",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Bitrise",
+    "url": "https://www.bitrise.io",
+    "desc": "移动端 CI 打包",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "WebIntoApp",
+    "url": "https://www.webintoapp.com",
+    "desc": "网址一键打 APK",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "AppsGeyser",
+    "url": "https://appsgeyser.com",
+    "desc": "免费网站转 App",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "MIT App Inventor",
+    "url": "https://appinventor.mit.edu",
+    "desc": "积木编程打安卓包",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Thunkable",
+    "url": "https://www.thunkable.com",
+    "desc": "无代码打手机 App",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Kodular",
+    "url": "https://www.kodular.io",
+    "desc": "积木打安卓应用",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "FlutterFlow",
+    "url": "https://www.flutterflow.io",
+    "desc": "可视化 Flutter 打包",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Median",
+    "url": "https://median.co",
+    "desc": "网站封装 iOS/Android",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "TestFlight",
+    "url": "https://developer.apple.com/testflight/",
+    "desc": "苹果内测分发",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Google Play Console",
+    "url": "https://play.google.com/console",
+    "desc": "安卓上架发布",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "React Native",
+    "url": "https://reactnative.dev",
+    "desc": "用 JS 打原生 App",
+    "cat": "打包",
+    "pack": "开发",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  }
+]
