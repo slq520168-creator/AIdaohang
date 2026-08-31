@@ -9,7 +9,7 @@
     ['it','Italiano'],['nl','Nederlands'],['pl','Polski'],['tr','Türkçe'],
     ['ar','العربية']
   ];
-  var toGoogle={zh:'zh-CN',en:'en',ja:'ja',ko:'ko',hi:'hi',th:'th',vi:'vi',id:'id',ms:'ms',km:'km',lo:'lo',my:'my',tl:'tl',ru:'ru',uk:'uk',de:'de',fr:'fr',es:'es',pt:'pt',it:'it',nl:'nl',pl:'pl',tr:'tr',ar:'ar'};
+  var toGoogle={en:'en',ja:'ja',ko:'ko',hi:'hi',th:'th',vi:'vi',id:'id',ms:'ms',km:'km',lo:'lo',my:'my',tl:'tl',ru:'ru',uk:'uk',de:'de',fr:'fr',es:'es',pt:'pt',it:'it',nl:'nl',pl:'pl',tr:'tr',ar:'ar'};
   var label={}; list.forEach(function(p){label[p[0]]=p[1];});
   function readCookie(n){
     var m=document.cookie.match('(?:^|; )'+n+'=([^;]*)');
@@ -17,50 +17,75 @@
   }
   function writeCookie(v){
     var host=location.hostname;
-    var bits=[
-      'googtrans='+v+';path=/',
-      'googtrans='+v+';path=/;domain='+host,
-      'googtrans='+v+';path=/;domain=.'+host
-    ];
-    bits.forEach(function(c){document.cookie=c;});
+    ['googtrans='+v+';path=/','googtrans='+v+';path=/;domain='+host,'googtrans='+v+';path=/;domain=.'+host].forEach(function(c){document.cookie=c;});
   }
   function clearCookie(){
     var host=location.hostname;
     var dead=';expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
-    ['googtrans=','googtrans=;domain='+host,'googtrans=;domain=.'+host].forEach(function(c){
-      document.cookie=c+dead;
-    });
+    ['googtrans=','googtrans=;domain='+host,'googtrans=;domain=.'+host].forEach(function(c){document.cookie=c+dead;});
+  }
+  function googleOn(){
+    return document.body.classList.contains('translated-ltr')||document.body.classList.contains('translated-rtl')||/\/zh-CN\/(?!zh)/.test(readCookie('googtrans'));
   }
   function curLang(){
     var q=new URLSearchParams(location.search).get('tl')||localStorage.getItem('aid_tl')||'';
     if(q==='zh-CN') q='zh';
     if(label[q]) return q;
-    var ck=readCookie('googtrans'); // /zh-CN/th
+    var ck=readCookie('googtrans');
     var m=/\/zh-CN\/([a-zA-Z-]+)/.exec(ck);
-    if(m){
-      for(var k in toGoogle){ if(toGoogle[k]===m[1]||toGoogle[k]===m[1].toLowerCase()) return k; }
+    if(m && m[1]!=='zh-CN' && m[1]!=='zh'){
+      for(var k in toGoogle){ if(toGoogle[k]===m[1]) return k; }
     }
-    return 'zh';
+    var lg=localStorage.getItem('lang');
+    return lg==='en'?'en':'zh';
   }
+  function combo(){ return document.querySelector('.goog-te-combo'); }
   function comboSet(gcode){
-    var combo=document.querySelector('.goog-te-combo');
-    if(!combo) return false;
-    combo.value=gcode;
-    combo.dispatchEvent(new Event('change'));
+    var el=combo();
+    if(!el) return false;
+    el.value=gcode;
+    el.dispatchEvent(new Event('change'));
     return true;
+  }
+  function waitCombo(gcode, done){
+    if(comboSet(gcode)){ done(true); return; }
+    var n=0, t=setInterval(function(){
+      n++;
+      if(comboSet(gcode)||n>40){ clearInterval(t); done(!!combo()); }
+    },50);
+  }
+  function native(code){
+    if(typeof setAidLang==='function') setAidLang(code);
+    else if(typeof applyChrome==='function'){
+      try{localStorage.setItem('lang',code)}catch(e){}
+      applyChrome();
+      if(typeof renderSide==='function') renderSide();
+      if(typeof renderHot==='function') renderHot();
+      if(typeof render==='function') render();
+    }
+  }
+  function stripGoogle(){
+    clearCookie();
+    document.body.classList.remove('translated-ltr','translated-rtl');
+    document.documentElement.classList.remove('translated-ltr','translated-rtl');
+    native('zh');
   }
   function go(code){
     try{localStorage.setItem('aid_tl',code);}catch(e){}
-    var g=toGoogle[code]||'en';
-    if(code==='zh'){
+    updateBtn(code);
+    if(code==='zh'||code==='en'){
       clearCookie();
-      if(!comboSet('zh-CN')) location.reload();
-      else updateBtn(code);
+      native(code);
+      if(googleOn()){
+        waitCombo(code==='en'?'en':'zh-CN', function(){
+          document.body.classList.remove('translated-ltr','translated-rtl');
+        });
+      }
       return;
     }
-    writeCookie('/zh-CN/'+g);
-    if(!comboSet(g)) location.reload();
-    else updateBtn(code);
+    native('zh');
+    writeCookie('/zh-CN/'+toGoogle[code]);
+    waitCombo(toGoogle[code], function(){});
   }
   function updateBtn(code){
     var btn=document.getElementById('lang');
@@ -100,6 +125,7 @@
       if(bar.contains(e.target)||(btn&&btn.contains(e.target))) return;
       bar.classList.remove('show');
     });
+    if(cur==='zh'||cur==='en') native(cur);
   }
   window.googleTranslateElementInit=function(){
     try{
@@ -110,6 +136,8 @@
         layout:google.translate.TranslateElement.InlineLayout.VERTICAL
       },'google_translate_element');
     }catch(e){}
+    var want=localStorage.getItem('aid_tl');
+    if(want && toGoogle[want]) setTimeout(function(){ comboSet(toGoogle[want]); },300);
   };
   function loadGoogle(){
     if(document.getElementById('google_translate_element')) return;

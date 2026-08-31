@@ -21,7 +21,7 @@ const sf=document.getElementById('sf');
 const topBtn=document.getElementById('topBtn');
 const scroller=document.getElementById('scroll')||window;
 let tools=[]; let selected=new Set(); let tags=new Set();
-let lang=localStorage.getItem('lang')||'en';
+let lang=localStorage.getItem('lang')||'zh';if(lang!=='zh'&&lang!=='en')lang='zh';
 let shown=80; let lastKey=''; let filtered=[]; let hotList=[];
 const saved=localStorage.getItem('theme')||'light';
 document.documentElement.dataset.theme=saved;
@@ -60,4 +60,9 @@ if(topBtn)topBtn.onclick=goTop;
 document.getElementById('brand').onclick=goTop;
 sf.addEventListener('submit',e=>{e.preventDefault();shown=80;render();qEl.blur();goTop();});
 qEl.addEventListener('input',()=>{shown=80;render();});
+window.setAidLang=function(code){
+  lang=(code==='en')?'en':'zh';
+  try{localStorage.setItem('lang',lang)}catch(e){}
+  applyChrome();renderSide();renderHot();render();
+};
 load();
