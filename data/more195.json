@@ -1,0 +1,866 @@
+[
+{
+"name": "AustLII",
+"url": "https://www.austlii.edu.au",
+"desc": "澳洲法律",
+"cat": "法律",
+"pack": "法律",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Manatal",
+"url": "https://www.manatal.com",
+"desc": "猎头 CRM",
+"cat": "招聘",
+"pack": "招聘",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "FlyerTalk",
+"url": "https://www.flyertalk.com",
+"desc": "常旅客论坛",
+"cat": "航空",
+"pack": "航空",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Seloger",
+"url": "https://www.seloger.com",
+"desc": "法国房产",
+"cat": "房产",
+"pack": "房产",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Xometry",
+"url": "https://www.xometry.com",
+"desc": "按需制造",
+"cat": "制造",
+"pack": "制造",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Fernish",
+"url": "https://www.fernish.com",
+"desc": "家具租赁",
+"cat": "家居",
+"pack": "家居",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Roadtrippers",
+"url": "https://roadtrippers.com",
+"desc": "自驾路线",
+"cat": "旅行",
+"pack": "旅行",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Pitchup",
+"url": "https://www.pitchup.com",
+"desc": "营地预订",
+"cat": "酒店",
+"pack": "酒店",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Climate-Data",
+"url": "https://en.climate-data.org",
+"desc": "气候数据",
+"cat": "天气",
+"pack": "天气",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Policybazaar",
+"url": "https://www.policybazaar.com",
+"desc": "印度保险",
+"cat": "保险",
+"pack": "保险",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Energy Star",
+"url": "https://www.energystar.gov",
+"desc": "能效标识",
+"cat": "能源",
+"pack": "能源",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Net-a-Porter",
+"url": "https://www.net-a-porter.com",
+"desc": "奢侈时装",
+"cat": "时尚",
+"pack": "时尚",
+"free": true,
+"how": "打开 www.net-a-porter.com 使用。"
+},
+{
+"name": "MarineTraffic Mobile",
+"url": "https://apps.marinetraffic.com",
+"desc": "AIS 应用",
+"cat": "海事",
+"pack": "海事",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Rivian",
+"url": "https://rivian.com",
+"desc": "电动卡车",
+"cat": "汽车",
+"pack": "汽车",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "老虎证券",
+"url": "https://www.tigerbrokers.com",
+"desc": "海外投资",
+"cat": "理财",
+"pack": "理财",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "春雨医生",
+"url": "https://www.chunyuyisheng.com",
+"desc": "在线问诊",
+"cat": "医疗",
+"pack": "医疗",
+"free": true,
+"how": "打开 www.chunyuyisheng.com 使用。"
+},
+{
+"name": "SSRN",
+"url": "https://www.ssrn.com",
+"desc": "社科预印本",
+"cat": "科学",
+"pack": "科学",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "ShipBob",
+"url": "https://www.shipbob.com",
+"desc": "电商履约",
+"cat": "物流",
+"pack": "物流",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Docracy",
+"url": "https://www.docracy.com",
+"desc": "开源合同",
+"cat": "法律",
+"pack": "法律",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "CoderPad",
+"url": "https://coderpad.io",
+"desc": "在线编程面试",
+"cat": "招聘",
+"pack": "招聘",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "SkyVector",
+"url": "https://skyvector.com",
+"desc": "航图",
+"cat": "航空",
+"pack": "航空",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Immowelt",
+"url": "https://www.immowelt.de",
+"desc": "德国房产",
+"cat": "房产",
+"pack": "房产",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Creality",
+"url": "https://www.creality.com",
+"desc": "3D 打印机",
+"cat": "制造",
+"pack": "制造",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Wayfair",
+"url": "https://www.wayfair.com",
+"desc": "家居电商",
+"cat": "家居",
+"pack": "家居",
+"free": true,
+"how": "打开 www.wayfair.com 使用。"
+},
+{
+"name": "Atlas Obscura",
+"url": "https://www.atlasobscura.com",
+"desc": "冷门目的地",
+"cat": "旅行",
+"pack": "旅行",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Trivago",
+"url": "https://www.trivago.com",
+"desc": "酒店比价",
+"cat": "酒店",
+"pack": "酒店",
+"free": true,
+"how": "打开 www.trivago.com 使用。"
+},
+{
+"name": "WeatherSpark",
+"url": "https://weatherspark.com",
+"desc": "气候统计",
+"cat": "天气",
+"pack": "天气",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "MoneySuperMarket",
+"url": "https://www.moneysupermarket.com",
+"desc": "英国金融比价",
+"cat": "保险",
+"pack": "保险",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Electricity Maps",
+"url": "https://app.electricitymaps.com",
+"desc": "电网碳强度",
+"cat": "能源",
+"pack": "能源",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Carvana",
+"url": "https://www.carvana.com",
+"desc": "网上买车",
+"cat": "汽车",
+"pack": "汽车",
+"free": true,
+"how": "打开 www.carvana.com 使用。"
+},
+{
+"name": "eToro",
+"url": "https://www.etoro.com",
+"desc": "社交交易",
+"cat": "理财",
+"pack": "理财",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "GoodRx",
+"url": "https://www.goodrx.com",
+"desc": "药品比价",
+"cat": "医疗",
+"pack": "医疗",
+"free": true,
+"how": "打开 www.goodrx.com 使用。"
+},
+{
+"name": "USGS",
+"url": "https://www.usgs.gov",
+"desc": "地质调查",
+"cat": "科学",
+"pack": "科学",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Deliverr",
+"url": "https://www.deliverr.com",
+"desc": "电商仓储",
+"cat": "物流",
+"pack": "物流",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "FindLaw",
+"url": "https://www.findlaw.com",
+"desc": "法律资讯律师",
+"cat": "法律",
+"pack": "法律",
+"free": true,
+"how": "打开 www.findlaw.com 使用。"
+},
+{
+"name": "Codility",
+"url": "https://www.codility.com",
+"desc": "编程考试",
+"cat": "招聘",
+"pack": "招聘",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "ForeFlight",
+"url": "https://www.foreflight.com",
+"desc": "飞行员导航",
+"cat": "航空",
+"pack": "航空",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Rent.com",
+"url": "https://www.rent.com",
+"desc": "美国租房",
+"cat": "房产",
+"pack": "房产",
+"free": true,
+"how": "打开 www.rent.com 使用。"
+},
+{
+"name": "Formlabs",
+"url": "https://formlabs.com",
+"desc": "光固化打印",
+"cat": "制造",
+"pack": "制造",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "West Elm",
+"url": "https://www.westelm.com",
+"desc": "现代家具",
+"cat": "家居",
+"pack": "家居",
+"free": true,
+"how": "打开 www.westelm.com 使用。"
+},
+{
+"name": "Lonely Planet",
+"url": "https://www.lonelyplanet.com",
+"desc": "旅行指南",
+"cat": "旅行",
+"pack": "旅行",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Marriott",
+"url": "https://www.marriott.com",
+"desc": "万豪",
+"cat": "酒店",
+"pack": "酒店",
+"free": true,
+"how": "打开 www.marriott.com 使用。"
+},
+{
+"name": "Dark Sky archive",
+"url": "https://darksky.net",
+"desc": "天气 API 遗产",
+"cat": "天气",
+"pack": "天气",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Compare the Market",
+"url": "https://www.comparethemarket.com",
+"desc": "英国保险比价",
+"cat": "保险",
+"pack": "保险",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Edmunds",
+"url": "https://www.edmunds.com",
+"desc": "车评报价",
+"cat": "汽车",
+"pack": "汽车",
+"free": true,
+"how": "打开 www.edmunds.com 使用。"
+},
+{
+"name": "Acorns",
+"url": "https://www.acorns.com",
+"desc": "零钱投资",
+"cat": "理财",
+"pack": "理财",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Practo",
+"url": "https://www.practo.com",
+"desc": "问诊挂号",
+"cat": "医疗",
+"pack": "医疗",
+"free": true,
+"how": "打开 www.practo.com 使用。"
+},
+{
+"name": "Dryad",
+"url": "https://datadryad.org",
+"desc": "数据仓储",
+"cat": "科学",
+"pack": "科学",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "EasyPost",
+"url": "https://www.easypost.com",
+"desc": "物流 API",
+"cat": "物流",
+"pack": "物流",
+"free": true,
+"how": "打开 www.easypost.com 使用。"
+},
+{
+"name": "中国庭审公开网",
+"url": "https://tingshen.court.gov.cn",
+"desc": "庭审直播",
+"cat": "法律",
+"pack": "法律",
+"free": true,
+"how": "打开 tingshen.court.gov.cn 使用。"
+},
+{
+"name": "Criteria",
+"url": "https://www.criteriacorp.com",
+"desc": "人才测评",
+"cat": "招聘",
+"pack": "招聘",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "AwardWallet",
+"url": "https://awardwallet.com",
+"desc": "里程管理",
+"cat": "航空",
+"pack": "航空",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Idealista",
+"url": "https://www.idealista.com",
+"desc": "西班牙房产",
+"cat": "房产",
+"pack": "房产",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Bambu Lab",
+"url": "https://bambulab.com",
+"desc": "消费级 3D 打印",
+"cat": "制造",
+"pack": "制造",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Overstock",
+"url": "https://www.overstock.com",
+"desc": "家居折扣",
+"cat": "家居",
+"pack": "家居",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Recreation.gov",
+"url": "https://www.recreation.gov",
+"desc": "美国国家公园营地",
+"cat": "旅行",
+"pack": "旅行",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "The Dyrt",
+"url": "https://thedyrt.com",
+"desc": "营地评价",
+"cat": "酒店",
+"pack": "酒店",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Tropical Tidbits",
+"url": "https://www.tropicaltidbits.com",
+"desc": "热带气旋",
+"cat": "天气",
+"pack": "天气",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Openbay",
+"url": "https://www.openbay.com",
+"desc": "修车比价",
+"cat": "汽车",
+"pack": "汽车",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Kraken",
+"url": "https://www.kraken.com",
+"desc": "加密交易所",
+"cat": "理财",
+"pack": "理财",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "RxList",
+"url": "https://www.rxlist.com",
+"desc": "药品百科",
+"cat": "医疗",
+"pack": "医疗",
+"free": true,
+"how": "打开 www.rxlist.com 使用。"
+},
+{
+"name": "JSTOR",
+"url": "https://www.jstor.org",
+"desc": "学术文献",
+"cat": "科学",
+"pack": "科学",
+"free": true,
+"how": "打开 www.jstor.org 使用。"
+},
+{
+"name": "Easyship",
+"url": "https://www.easyship.com",
+"desc": "跨境发货",
+"cat": "物流",
+"pack": "物流",
+"free": true,
+"how": "打开 www.easyship.com 使用。"
+},
+{
+"name": "中国裁判文书网",
+"url": "https://wenshu.court.gov.cn",
+"desc": "裁判文书公开",
+"cat": "法律",
+"pack": "法律",
+"free": true,
+"how": "打开 wenshu.court.gov.cn 使用。"
+},
+{
+"name": "Personio",
+"url": "https://www.personio.com",
+"desc": "欧洲 HR",
+"cat": "招聘",
+"pack": "招聘",
+"free": true,
+"how": "打开 www.personio.com 使用。"
+},
+{
+"name": "ExpertFlyer",
+"url": "https://www.expertflyer.com",
+"desc": "舱位查询",
+"cat": "航空",
+"pack": "航空",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "PadMapper",
+"url": "https://www.padmapper.com",
+"desc": "租房地图",
+"cat": "房产",
+"pack": "房产",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Protolabs",
+"url": "https://www.protolabs.com",
+"desc": "快速模具",
+"cat": "制造",
+"pack": "制造",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Home Depot",
+"url": "https://www.homedepot.com",
+"desc": "建材五金",
+"cat": "家居",
+"pack": "家居",
+"free": true,
+"how": "打开 www.homedepot.com 使用。"
+},
+{
+"name": "Rome2Rio company",
+"url": "https://company.rome2rio.com",
+"desc": "交通数据",
+"cat": "旅行",
+"pack": "旅行",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Priceline",
+"url": "https://www.priceline.com",
+"desc": "酒店机票",
+"cat": "酒店",
+"pack": "酒店",
+"free": true,
+"how": "打开 www.priceline.com 使用。"
+},
+{
+"name": "Weather Underground",
+"url": "https://www.wunderground.com",
+"desc": "社区气象站",
+"cat": "天气",
+"pack": "天气",
+"free": true,
+"how": "打开 www.wunderground.com 使用。"
+},
+{
+"name": "TrueCar",
+"url": "https://www.truecar.com",
+"desc": "新车成交价",
+"cat": "汽车",
+"pack": "汽车",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Webull",
+"url": "https://www.webull.com",
+"desc": "手机券商",
+"cat": "理财",
+"pack": "理财",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Vitals",
+"url": "https://www.vitals.com",
+"desc": "找医生",
+"cat": "医疗",
+"pack": "医疗",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "ACM DL",
+"url": "https://dl.acm.org",
+"desc": "计算机文献",
+"cat": "科学",
+"pack": "科学",
+"free": true,
+"how": "打开 dl.acm.org 使用。"
+},
+{
+"name": "La Poste",
+"url": "https://www.laposte.fr",
+"desc": "法国邮政",
+"cat": "物流",
+"pack": "物流",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Fastcase",
+"url": "https://www.fastcase.com",
+"desc": "法律数据库",
+"cat": "法律",
+"pack": "法律",
+"free": true,
+"how": "打开 www.fastcase.com 使用。"
+},
+{
+"name": "Workable",
+"url": "https://www.workable.com",
+"desc": "招聘软件",
+"cat": "招聘",
+"pack": "招聘",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "LoungeBuddy",
+"url": "https://www.loungebuddy.com",
+"desc": "机场休息室",
+"cat": "航空",
+"pack": "航空",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Rightmove",
+"url": "https://www.rightmove.co.uk",
+"desc": "英国找房",
+"cat": "房产",
+"pack": "房产",
+"free": true,
+"how": "打开 www.rightmove.co.uk 使用。"
+},
+{
+"name": "Tinkercad",
+"url": "https://www.tinkercad.com",
+"desc": "入门 3D",
+"cat": "制造",
+"pack": "制造",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Pottery Barn",
+"url": "https://www.potterybarn.com",
+"desc": "家居软装",
+"cat": "家居",
+"pack": "家居",
+"free": true,
+"how": "打开 www.potterybarn.com 使用。"
+},
+{
+"name": "National Parks Service",
+"url": "https://www.nps.gov",
+"desc": "美国国家公园",
+"cat": "旅行",
+"pack": "旅行",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "CarGurus",
+"url": "https://www.cargurus.com",
+"desc": "二手车比价",
+"cat": "汽车",
+"pack": "汽车",
+"free": true,
+"how": "打开 www.cargurus.com 使用。"
+},
+{
+"name": "E-Trade",
+"url": "https://us.etrade.com",
+"desc": "券商",
+"cat": "理财",
+"pack": "理财",
+"free": true,
+"how": "打开 us.etrade.com 使用。"
+},
+{
+"name": "Zocdoc",
+"url": "https://www.zocdoc.com",
+"desc": "预约医生",
+"cat": "医疗",
+"pack": "医疗",
+"free": true,
+"how": "打开 www.zocdoc.com 使用。"
+},
+{
+"name": "Nature",
+"url": "https://www.nature.com",
+"desc": "自然科学期刊",
+"cat": "科学",
+"pack": "科学",
+"free": true,
+"how": "打开 www.nature.com 使用。"
+},
+{
+"name": "Purolator",
+"url": "https://www.purolator.com",
+"desc": "加拿大快递",
+"cat": "物流",
+"pack": "物流",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "LawDepot",
+"url": "https://www.lawdepot.com",
+"desc": "法律模板",
+"cat": "法律",
+"pack": "法律",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Handshake",
+"url": "https://joinhandshake.com",
+"desc": "校园招聘",
+"cat": "招聘",
+"pack": "招聘",
+"free": true,
+"how": "打开 joinhandshake.com 使用。"
+},
+{
+"name": "Garmin Pilot",
+"url": "https://www.garmin.com/pilot",
+"desc": "飞行应用",
+"cat": "航空",
+"pack": "航空",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "StreetEasy",
+"url": "https://streeteasy.com",
+"desc": "纽约租售",
+"cat": "房产",
+"pack": "房产",
+"free": true,
+"how": "打开 streeteasy.com 使用。"
+},
+{
+"name": "Plasticity",
+"url": "https://www.plasticity.xyz",
+"desc": "工业建模",
+"cat": "制造",
+"pack": "制造",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Cars.com",
+"url": "https://www.cars.com",
+"desc": "美国车源",
+"cat": "汽车",
+"pack": "汽车",
+"free": true,
+"how": "打开 www.cars.com 使用。"
+},
+{
+"name": "Empower",
+"url": "https://www.empower.com",
+"desc": "财富管理",
+"cat": "理财",
+"pack": "理财",
+"free": true,
+"how": "打开 www.empower.com 使用。"
+}
+]

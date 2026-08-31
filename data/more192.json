@@ -1,0 +1,884 @@
+[
+{
+"name": "易车",
+"url": "https://www.yiche.com",
+"desc": "新车报价",
+"cat": "汽车",
+"pack": "汽车",
+"free": true,
+"how": "打开 www.yiche.com 使用。"
+},
+{
+"name": "IG",
+"url": "https://www.ig.com",
+"desc": "差价合约",
+"cat": "理财",
+"pack": "理财",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Ro",
+"url": "https://ro.co",
+"desc": "远程处方",
+"cat": "医疗",
+"pack": "医疗",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "万方",
+"url": "https://www.wanfangdata.com.cn",
+"desc": "国内文献",
+"cat": "科学",
+"pack": "科学",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "菜鸟",
+"url": "https://www.cainiao.com",
+"desc": "物流网络",
+"cat": "物流",
+"pack": "物流",
+"free": true,
+"how": "打开 www.cainiao.com 使用。"
+},
+{
+"name": "Avvo",
+"url": "https://www.avvo.com",
+"desc": "找律师评价",
+"cat": "法律",
+"pack": "法律",
+"free": true,
+"how": "打开 www.avvo.com 使用。"
+},
+{
+"name": "北森",
+"url": "https://www.beisen.com",
+"desc": "国内人才管理",
+"cat": "招聘",
+"pack": "招聘",
+"free": true,
+"how": "打开 www.beisen.com 使用。"
+},
+{
+"name": "OAG",
+"url": "https://www.oag.com",
+"desc": "航班时刻",
+"cat": "航空",
+"pack": "航空",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "房天下",
+"url": "https://www.fang.com",
+"desc": "房产资讯",
+"cat": "房产",
+"pack": "房产",
+"free": true,
+"how": "打开 www.fang.com 使用。"
+},
+{
+"name": "LCSC",
+"url": "https://www.lcsc.com",
+"desc": "元器件",
+"cat": "制造",
+"pack": "制造",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "齐家",
+"url": "https://www.jia.com",
+"desc": "装修家居",
+"cat": "家居",
+"pack": "家居",
+"free": true,
+"how": "打开 www.jia.com 使用。"
+},
+{
+"name": "12306",
+"url": "https://www.12306.cn",
+"desc": "中国铁路",
+"cat": "旅行",
+"pack": "旅行",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "途牛",
+"url": "https://www.tuniu.com",
+"desc": "度假酒店",
+"cat": "酒店",
+"pack": "酒店",
+"free": true,
+"how": "打开 www.tuniu.com 使用。"
+},
+{
+"name": "YR",
+"url": "https://www.yr.no",
+"desc": "挪威气象",
+"cat": "天气",
+"pack": "天气",
+"free": true,
+"how": "打开 www.yr.no 使用。"
+},
+{
+"name": "蚂蚁保",
+"url": "https://www.antfin.com",
+"desc": "保险入口",
+"cat": "保险",
+"pack": "保险",
+"free": true,
+"how": "打开 www.antfin.com 使用。"
+},
+{
+"name": "EIA",
+"url": "https://www.eia.gov",
+"desc": "能源数据",
+"cat": "能源",
+"pack": "能源",
+"free": true,
+"how": "打开 www.eia.gov 使用。"
+},
+{
+"name": "GQ",
+"url": "https://www.gq.com",
+"desc": "男装时尚",
+"cat": "时尚",
+"pack": "时尚",
+"free": true,
+"how": "打开 www.gq.com 使用。"
+},
+{
+"name": "IMO",
+"url": "https://www.imo.org",
+"desc": "国际海事组织",
+"cat": "海事",
+"pack": "海事",
+"free": true,
+"how": "打开 www.imo.org 使用。"
+},
+{
+"name": "图虫",
+"url": "https://tuchong.com",
+"desc": "国内摄影社区",
+"cat": "摄影",
+"pack": "摄影",
+"free": true,
+"how": "打开 tuchong.com 使用。"
+},
+{
+"name": "Esri",
+"url": "https://www.esri.com",
+"desc": "GIS 平台",
+"cat": "地图",
+"pack": "地图",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "虎扑",
+"url": "https://www.hupu.com",
+"desc": "国内体育社区",
+"cat": "体育",
+"pack": "体育",
+"free": true,
+"how": "打开 www.hupu.com 使用。"
+},
+{
+"name": "Mode",
+"url": "https://mode.com",
+"desc": "分析平台",
+"cat": "统计",
+"pack": "统计",
+"free": true,
+"how": "打开 mode.com 使用。"
+},
+{
+"name": "电子税务局",
+"url": "https://etax.chinatax.gov.cn",
+"desc": "网上办税",
+"cat": "税务",
+"pack": "税务",
+"free": true,
+"how": "打开 etax.chinatax.gov.cn 使用。"
+},
+{
+"name": "用友",
+"url": "https://www.yonyou.com",
+"desc": "企业 ERP",
+"cat": "会计",
+"pack": "会计",
+"free": true,
+"how": "打开 www.yonyou.com 使用。"
+},
+{
+"name": "广联达",
+"url": "https://www.glodon.com",
+"desc": "造价施工",
+"cat": "建筑",
+"pack": "建筑",
+"free": true,
+"how": "打开 www.glodon.com 使用。"
+},
+{
+"name": "Affirm",
+"url": "https://www.affirm.com",
+"desc": "分期付款",
+"cat": "支付",
+"pack": "支付",
+"free": true,
+"how": "打开 www.affirm.com 使用。"
+},
+{
+"name": "小宇宙",
+"url": "https://www.xiaoyuzhoufm.com",
+"desc": "中文播客",
+"cat": "播客",
+"pack": "播客",
+"free": true,
+"how": "打开 www.xiaoyuzhoufm.com 使用。"
+},
+{
+"name": "腾讯问卷",
+"url": "https://wj.qq.com",
+"desc": "腾讯表单",
+"cat": "调查",
+"pack": "调查",
+"free": true,
+"how": "打开 wj.qq.com 使用。"
+},
+{
+"name": "WW",
+"url": "https://www.weightwatchers.com",
+"desc": "体重管理",
+"cat": "健身",
+"pack": "健身",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "DaFont",
+"url": "https://www.dafont.com",
+"desc": "字体下载",
+"cat": "设计",
+"pack": "设计",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "e签宝",
+"url": "https://www.esign.cn",
+"desc": "电子签名",
+"cat": "签名",
+"pack": "签名",
+"free": true,
+"how": "打开 www.esign.cn 使用。"
+},
+{
+"name": "美洽",
+"url": "https://www.meiqia.com",
+"desc": "在线客服",
+"cat": "管理",
+"pack": "管理",
+"free": true,
+"how": "打开 www.meiqia.com 使用。"
+},
+{
+"name": "GiveWell",
+"url": "https://www.givewell.org",
+"desc": "高效慈善",
+"cat": "资讯",
+"pack": "资讯",
+"free": true,
+"how": "打开 www.givewell.org 使用。"
+},
+{
+"name": "盒马",
+"url": "https://www.freshippo.com",
+"desc": "生鲜超市",
+"cat": "外卖",
+"pack": "外卖",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "完美日记",
+"url": "https://www.perfectdiary.com",
+"desc": "彩妆",
+"cat": "美妆",
+"pack": "美妆",
+"free": true,
+"how": "打开 www.perfectdiary.com 使用。"
+},
+{
+"name": "Webex",
+"url": "https://www.webex.com",
+"desc": "思科会议",
+"cat": "会议",
+"pack": "会议",
+"free": true,
+"how": "打开 www.webex.com 使用。"
+},
+{
+"name": "坚果云",
+"url": "https://www.jianguoyun.com",
+"desc": "同步盘",
+"cat": "存储",
+"pack": "存储",
+"free": true,
+"how": "打开 www.jianguoyun.com 使用。"
+},
+{
+"name": "Trakt",
+"url": "https://trakt.tv",
+"desc": "观影追踪",
+"cat": "电影",
+"pack": "电影",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Cookpad",
+"url": "https://cookpad.com",
+"desc": "家常菜谱",
+"cat": "美食",
+"pack": "美食",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "TimeTree",
+"url": "https://timetreeapp.com",
+"desc": "共享日历",
+"cat": "日历",
+"pack": "日历",
+"free": true,
+"how": "打开 timetreeapp.com 使用。"
+},
+{
+"name": "Kobo",
+"url": "https://www.kobo.com",
+"desc": "电子书商店",
+"cat": "电子书",
+"pack": "电子书",
+"free": true,
+"how": "打开 www.kobo.com 使用。"
+},
+{
+"name": "一嗨租车",
+"url": "https://www.1hai.cn",
+"desc": "国内租车",
+"cat": "租车",
+"pack": "租车",
+"free": true,
+"how": "打开 www.1hai.cn 使用。"
+},
+{
+"name": "BigCommerce",
+"url": "https://www.bigcommerce.com",
+"desc": "独立站",
+"cat": "开店",
+"pack": "开店",
+"free": true,
+"how": "打开 www.bigcommerce.com 使用。"
+},
+{
+"name": "Farmers.gov",
+"url": "https://www.farmers.gov",
+"desc": "美国农业服务",
+"cat": "农业",
+"pack": "农业",
+"free": true,
+"how": "打开 www.farmers.gov 使用。"
+},
+{
+"name": "学堂在线",
+"url": "https://www.xuetangx.com",
+"desc": "清华慕课",
+"cat": "学习",
+"pack": "学习",
+"free": true,
+"how": "打开 www.xuetangx.com 使用。"
+},
+{
+"name": "波奇网",
+"url": "https://www.boqii.com",
+"desc": "宠物电商",
+"cat": "宠物",
+"pack": "宠物",
+"free": true,
+"how": "打开 www.boqii.com 使用。"
+},
+{
+"name": "Discogs",
+"url": "https://www.discogs.com",
+"desc": "唱片资料",
+"cat": "音乐",
+"pack": "音乐",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "瓜子",
+"url": "https://www.guazi.com",
+"desc": "二手车",
+"cat": "汽车",
+"pack": "汽车",
+"free": true,
+"how": "打开 www.guazi.com 使用。"
+},
+{
+"name": "长桥",
+"url": "https://www.longbridge.com",
+"desc": "港美股",
+"cat": "理财",
+"pack": "理财",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "微医",
+"url": "https://www.guahao.com",
+"desc": "挂号问诊",
+"cat": "医疗",
+"pack": "医疗",
+"free": true,
+"how": "打开 www.guahao.com 使用。"
+},
+{
+"name": "维普",
+"url": "https://www.cqvip.com",
+"desc": "中文期刊",
+"cat": "科学",
+"pack": "科学",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "顺丰",
+"url": "https://www.sf-express.com",
+"desc": "国内快递",
+"cat": "物流",
+"pack": "物流",
+"free": true,
+"how": "打开 www.sf-express.com 使用。"
+},
+{
+"name": "Clio",
+"url": "https://www.clio.com",
+"desc": "律所管理",
+"cat": "法律",
+"pack": "法律",
+"free": true,
+"how": "打开 www.clio.com 使用。"
+},
+{
+"name": "拉勾",
+"url": "https://www.lagou.com",
+"desc": "互联网职位",
+"cat": "招聘",
+"pack": "招聘",
+"free": true,
+"how": "打开 www.lagou.com 使用。"
+},
+{
+"name": "飞常准",
+"url": "https://www.variflight.com",
+"desc": "航班准点",
+"cat": "航空",
+"pack": "航空",
+"free": true,
+"how": "打开 www.variflight.com 使用。"
+},
+{
+"name": "99.co",
+"url": "https://www.99.co",
+"desc": "新加坡房产",
+"cat": "房产",
+"pack": "房产",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "CATIA",
+"url": "https://www.3ds.com/products/catia",
+"desc": "高端 CAD",
+"cat": "制造",
+"pack": "制造",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "CB2",
+"url": "https://www.cb2.com",
+"desc": "现代家具",
+"cat": "家居",
+"pack": "家居",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "KKday",
+"url": "https://www.kkday.com",
+"desc": "当地玩乐",
+"cat": "旅行",
+"pack": "旅行",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "IHG",
+"url": "https://www.ihg.com",
+"desc": "洲际酒店",
+"cat": "酒店",
+"pack": "酒店",
+"free": true,
+"how": "打开 www.ihg.com 使用。"
+},
+{
+"name": "NOAA",
+"url": "https://www.noaa.gov",
+"desc": "海洋大气",
+"cat": "天气",
+"pack": "天气",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "USAA",
+"url": "https://www.usaa.com",
+"desc": "军人保险银行",
+"cat": "保险",
+"pack": "保险",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "IEA",
+"url": "https://www.iea.org",
+"desc": "国际能源署",
+"cat": "能源",
+"pack": "能源",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "得物",
+"url": "https://www.poizon.com",
+"desc": "潮流鉴定",
+"cat": "时尚",
+"pack": "时尚",
+"free": true,
+"how": "打开 www.poizon.com 使用。"
+},
+{
+"name": "C-MAP",
+"url": "https://www.c-map.com",
+"desc": "电子海图",
+"cat": "海事",
+"pack": "海事",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "500px",
+"url": "https://500px.com",
+"desc": "摄影作品",
+"cat": "摄影",
+"pack": "摄影",
+"free": true,
+"how": "打开 500px.com 使用。"
+},
+{
+"name": "Felt",
+"url": "https://felt.com",
+"desc": "协作地图",
+"cat": "地图",
+"pack": "地图",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "懂球帝",
+"url": "https://www.dongqiudi.com",
+"desc": "足球资讯",
+"cat": "体育",
+"pack": "体育",
+"free": true,
+"how": "打开 www.dongqiudi.com 使用。"
+},
+{
+"name": "Tableau",
+"url": "https://www.tableau.com",
+"desc": "数据可视化",
+"cat": "统计",
+"pack": "统计",
+"free": true,
+"how": "打开 www.tableau.com 使用。"
+},
+{
+"name": "TaxAct",
+"url": "https://www.taxact.com",
+"desc": "报税软件",
+"cat": "税务",
+"pack": "税务",
+"free": true,
+"how": "打开 www.taxact.com 使用。"
+},
+{
+"name": "金蝶",
+"url": "https://www.kingdee.com",
+"desc": "财务软件",
+"cat": "会计",
+"pack": "会计",
+"free": true,
+"how": "打开 www.kingdee.com 使用。"
+},
+{
+"name": "鲁班软件",
+"url": "https://www.lubansoft.com",
+"desc": "造价算量",
+"cat": "建筑",
+"pack": "建筑",
+"free": true,
+"how": "打开 www.lubansoft.com 使用。"
+},
+{
+"name": "Klarna",
+"url": "https://www.klarna.com",
+"desc": "分期支付",
+"cat": "支付",
+"pack": "支付",
+"free": true,
+"how": "打开 www.klarna.com 使用。"
+},
+{
+"name": "Anchor",
+"url": "https://anchor.fm",
+"desc": "做播客",
+"cat": "播客",
+"pack": "播客",
+"free": true,
+"how": "打开 anchor.fm 使用。"
+},
+{
+"name": "Jotform",
+"url": "https://www.jotform.com",
+"desc": "表单工具",
+"cat": "调查",
+"pack": "调查",
+"free": true,
+"how": "打开 www.jotform.com 使用。"
+},
+{
+"name": "咕咚",
+"url": "https://www.codoon.com",
+"desc": "运动轨迹",
+"cat": "健身",
+"pack": "健身",
+"free": true,
+"how": "打开 www.codoon.com 使用。"
+},
+{
+"name": "Khroma",
+"url": "https://www.khroma.co",
+"desc": "配色 AI",
+"cat": "设计",
+"pack": "设计",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "上上签",
+"url": "https://www.bestsign.cn",
+"desc": "电子签约",
+"cat": "签名",
+"pack": "签名",
+"free": true,
+"how": "打开 www.bestsign.cn 使用。"
+},
+{
+"name": "纷享销客",
+"url": "https://www.fxiaoke.com",
+"desc": "国内 CRM",
+"cat": "管理",
+"pack": "管理",
+"free": true,
+"how": "打开 www.fxiaoke.com 使用。"
+},
+{
+"name": "Change.org",
+"url": "https://www.change.org",
+"desc": "请愿",
+"cat": "资讯",
+"pack": "资讯",
+"free": true,
+"how": "打开 www.change.org 使用。"
+},
+{
+"name": "叮咚买菜",
+"url": "https://www.100.me",
+"desc": "生鲜配送",
+"cat": "外卖",
+"pack": "外卖",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Zenni",
+"url": "https://www.zennioptical.com",
+"desc": "网上配镜",
+"cat": "美妆",
+"pack": "美妆",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Around",
+"url": "https://www.around.co",
+"desc": "摄像头会议",
+"cat": "会议",
+"pack": "会议",
+"free": true,
+"how": "打开 www.around.co 使用。"
+},
+{
+"name": "Icedrive",
+"url": "https://icedrive.net",
+"desc": "云存储",
+"cat": "存储",
+"pack": "存储",
+"free": true,
+"how": "打开 icedrive.net 使用。"
+},
+{
+"name": "TV Time",
+"url": "https://www.tvtime.com",
+"desc": "追剧",
+"cat": "电影",
+"pack": "电影",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Blue Apron",
+"url": "https://www.blueapron.com",
+"desc": "食材包",
+"cat": "美食",
+"pack": "美食",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "Outlook Calendar",
+"url": "https://outlook.live.com/calendar/",
+"desc": "Outlook 日历",
+"cat": "日历",
+"pack": "日历",
+"free": true,
+"how": "打开 outlook.live.com/calendar/ 使用。"
+},
+{
+"name": "Libro.fm",
+"url": "https://libro.fm",
+"desc": "独立有声书",
+"cat": "电子书",
+"pack": "电子书",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "神州租车",
+"url": "https://www.zuche.com",
+"desc": "国内租车",
+"cat": "租车",
+"pack": "租车",
+"free": true,
+"how": "打开 www.zuche.com 使用。"
+},
+{
+"name": "Squarespace",
+"url": "https://www.squarespace.com",
+"desc": "建站商店",
+"cat": "开店",
+"pack": "开店",
+"free": true,
+"how": "打开 www.squarespace.com 使用。"
+},
+{
+"name": "人人车",
+"url": "https://www.renrenche.com",
+"desc": "二手车",
+"cat": "汽车",
+"pack": "汽车",
+"free": true,
+"how": "打开 www.renrenche.com 使用。"
+},
+{
+"name": "雪球",
+"url": "https://xueqiu.com",
+"desc": "投资社区",
+"cat": "理财",
+"pack": "理财",
+"free": true,
+"how": "打开 xueqiu.com 使用。"
+},
+{
+"name": "1mg",
+"url": "https://www.1mg.com",
+"desc": "印度药品",
+"cat": "医疗",
+"pack": "医疗",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "NIH",
+"url": "https://www.nih.gov",
+"desc": "美国卫生研究院",
+"cat": "科学",
+"pack": "科学",
+"free": true,
+"how": "打开 www.nih.gov 使用。"
+},
+{
+"name": "4PX",
+"url": "https://www.4px.com",
+"desc": "递四方",
+"cat": "物流",
+"pack": "物流",
+"free": true,
+"how": "打开官网使用。"
+},
+{
+"name": "北大法宝",
+"url": "https://www.pkulaw.com",
+"desc": "法律法规库",
+"cat": "法律",
+"pack": "法律",
+"free": true,
+"how": "打开 www.pkulaw.com 使用。"
+},
+{
+"name": "薪人薪事",
+"url": "https://www.xinrenxinshi.com",
+"desc": "薪酬人事",
+"cat": "招聘",
+"pack": "招聘",
+"free": true,
+"how": "打开 www.xinrenxinshi.com 使用。"
+},
+{
+"name": "IATA",
+"url": "https://www.iata.org",
+"desc": "航协信息",
+"cat": "航空",
+"pack": "航空",
+"free": true,
+"how": "打开 www.iata.org 使用。"
+}
+]
