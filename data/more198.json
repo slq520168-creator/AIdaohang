@@ -1,0 +1,434 @@
+[
+{
+"name": "京东秒送",
+"url": "https://www.jddj.com",
+"desc": "京东到家外卖",
+"cat": "外卖",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Glovo",
+"url": "https://glovoapp.com",
+"desc": "欧洲外卖跑腿",
+"cat": "外卖",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Rappi",
+"url": "https://www.rappi.com",
+"desc": "拉美外卖",
+"cat": "外卖",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Swiggy",
+"url": "https://www.swiggy.com",
+"desc": "印度外卖",
+"cat": "外卖",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Zomato",
+"url": "https://www.zomato.com",
+"desc": "印度点餐",
+"cat": "外卖",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "闪送",
+"url": "https://www.ishansong.com",
+"desc": "即时跑腿配送",
+"cat": "跑腿",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "UU跑腿",
+"url": "https://www.uupt.com",
+"desc": "同城跑腿",
+"cat": "跑腿",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "达达快送",
+"url": "https://www.imdada.cn",
+"desc": "即时配送",
+"cat": "跑腿",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "蜂鸟跑腿",
+"url": "https://fengniao.ele.me",
+"desc": "饿了么跑腿",
+"cat": "跑腿",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "美团跑腿",
+"url": "https://peisong.meituan.com",
+"desc": "美团即时配送",
+"cat": "跑腿",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Postmates",
+"url": "https://www.postmates.com",
+"desc": "美国即时配送",
+"cat": "外卖",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Caviar",
+"url": "https://www.trycaviar.com",
+"desc": "精品外卖",
+"cat": "外卖",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Seamless",
+"url": "https://www.seamless.com",
+"desc": "纽约点餐",
+"cat": "外卖",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "讯飞翻译",
+"url": "https://fanyi.xfyun.cn",
+"desc": "语音同传翻译",
+"cat": "翻译",
+"pack": "工作",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "火山翻译",
+"url": "https://translate.volcengine.com",
+"desc": "字节翻译",
+"cat": "翻译",
+"pack": "工作",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Systran",
+"url": "https://www.systran.net",
+"desc": "企业翻译",
+"cat": "翻译",
+"pack": "工作",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Smartcat",
+"url": "https://www.smartcat.com",
+"desc": "翻译协作平台",
+"cat": "翻译",
+"pack": "工作",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "MemoQ",
+"url": "https://www.memoq.com",
+"desc": "CAT 翻译软件",
+"cat": "翻译",
+"pack": "工作",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "SDL Trados",
+"url": "https://www.trados.com",
+"desc": "专业翻译记忆",
+"cat": "翻译",
+"pack": "工作",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Phrase",
+"url": "https://phrase.com",
+"desc": "本地化平台",
+"cat": "翻译",
+"pack": "工作",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Crowdin",
+"url": "https://crowdin.com",
+"desc": "软件本地化",
+"cat": "翻译",
+"pack": "工作",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "POEditor",
+"url": "https://poeditor.com",
+"desc": "字符串翻译",
+"cat": "翻译",
+"pack": "工作",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Weblate",
+"url": "https://weblate.org",
+"desc": "开源本地化",
+"cat": "翻译",
+"pack": "工作",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "OmegaT",
+"url": "https://omegat.org",
+"desc": "开源 CAT",
+"cat": "翻译",
+"pack": "工作",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "农信互联",
+"url": "https://www.nxin.com",
+"desc": "数字农业",
+"cat": "农业",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "中化MAP",
+"url": "https://www.map.sinochem.com",
+"desc": "农资农服",
+"cat": "农业",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "大北农",
+"url": "https://www.dbn.com.cn",
+"desc": "种养殖农资",
+"cat": "农业",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "中国农科院",
+"url": "https://www.caas.cn",
+"desc": "农业科研",
+"cat": "农业",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "全国农产品商务信息",
+"url": "https://nc.mofcom.gov.cn",
+"desc": "农业农村部行情",
+"cat": "农业",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "新农人",
+"url": "https://www.xinnongren.com",
+"desc": "农业资讯社区",
+"cat": "农业",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "农管家",
+"url": "https://www.nonggj.com",
+"desc": "农技农资",
+"cat": "农业",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "智慧农业云",
+"url": "https://www.nongyiyun.com",
+"desc": "智慧农业",
+"cat": "农业",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "兼职猫",
+"url": "https://www.jianzhimao.com",
+"desc": "兼职招聘",
+"cat": "兼职",
+"pack": "接单",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "蚂蚁众包",
+"url": "https://www.antzhb.com",
+"desc": "众包兼职",
+"cat": "兼职",
+"pack": "接单",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "微差事",
+"url": "https://www.weichaishi.com",
+"desc": "问卷兼职",
+"cat": "兼职",
+"pack": "接单",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "猿急送",
+"url": "https://www.yuanjisong.com",
+"desc": "技术兼职",
+"cat": "兼职",
+"pack": "接单",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "58同城兼职",
+"url": "https://jianzhi.58.com",
+"desc": "本地兼职",
+"cat": "兼职",
+"pack": "接单",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "到位",
+"url": "https://www.daoway.com",
+"desc": "上门家政维修",
+"cat": "维修",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "58到家",
+"url": "https://www.daojia.com",
+"desc": "家政维修",
+"cat": "维修",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "啄木鸟家庭维修",
+"url": "https://www.zmn.cn",
+"desc": "家电维修",
+"cat": "维修",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "师傅到家",
+"url": "https://www.sfdj.com",
+"desc": "上门维修",
+"cat": "维修",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "HomeAdvisor",
+"url": "https://www.homeadvisor.com",
+"desc": "家庭维修",
+"cat": "维修",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Handy",
+"url": "https://www.handy.com",
+"desc": "家政维修",
+"cat": "维修",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Porch",
+"url": "https://porch.com",
+"desc": "家装维修",
+"cat": "维修",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "闪电修",
+"url": "https://www.shandianxiu.com",
+"desc": "手机维修",
+"cat": "维修",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "极客修",
+"url": "https://www.jikexiu.com",
+"desc": "手机电脑维修",
+"cat": "维修",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "Hi维修",
+"url": "https://www.hiweixiu.com",
+"desc": "数码维修",
+"cat": "维修",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+},
+{
+"name": "帮家师傅",
+"url": "https://www.bangjia.com",
+"desc": "家政维修",
+"cat": "维修",
+"pack": "生活",
+"free": true,
+"how": "打开官网注册或使用。"
+}
+]
