@@ -1,0 +1,353 @@
+[
+{
+"name": "Dub",
+"url": "https://dub.co",
+"desc": "开源短链平台",
+"cat": "短链",
+"pack": "工具",
+"free": true,
+"how": "打开 dub.co 建短链，可自建。"
+},
+{
+"name": "Gif",
+"url": "https://t.me/gif",
+"desc": "Telegram GIF 机器人",
+"cat": "飞机",
+"pack": "机器人",
+"free": true,
+"how": "打开 t.me/gif 在对话里搜 GIF。"
+},
+{
+"name": "Beeg",
+"url": "https://beeg.com",
+"desc": "成人电影",
+"cat": "成人",
+"pack": "电影",
+"free": true,
+"how": "18+。仅限成人观看。"
+},
+{
+"name": "T.LY",
+"url": "https://t.ly",
+"desc": "短链和二维码",
+"cat": "短链",
+"pack": "工具",
+"free": true,
+"how": "注册后缩短链接，可看点击。"
+},
+{
+"name": "VJAV",
+"url": "https://vjav.com",
+"desc": "成人电影",
+"cat": "成人",
+"pack": "电影",
+"free": true,
+"how": "18+。仅限成人观看。"
+},
+{
+"name": "v.gd",
+"url": "https://v.gd",
+"desc": "免费短链接",
+"cat": "短链",
+"pack": "工具",
+"free": true,
+"how": "打开贴长链，生成短链。"
+},
+{
+"name": "Bitly",
+"url": "https://bitly.com",
+"desc": "常用短链接",
+"cat": "短链",
+"pack": "工具",
+"free": true,
+"how": "登录后贴长链生成 bit.ly。"
+},
+{
+"name": "JavDB",
+"url": "https://javdb.com",
+"desc": "成人电影番号库",
+"cat": "成人",
+"pack": "电影",
+"free": true,
+"how": "18+。查番号和影片信息。"
+},
+{
+"name": "da.gd",
+"url": "https://da.gd",
+"desc": "命令行短链",
+"cat": "短链",
+"pack": "工具",
+"free": true,
+"how": "网页或 curl 缩短链接。"
+},
+{
+"name": "is.gd",
+"url": "https://is.gd",
+"desc": "无账号短链",
+"cat": "短链",
+"pack": "工具",
+"free": true,
+"how": "打开贴长链即可。"
+},
+{
+"name": "rb.gy",
+"url": "https://rb.gy",
+"desc": "免费短链跳转",
+"cat": "短链",
+"pack": "工具",
+"free": true,
+"how": "打开生成短链。"
+},
+{
+"name": "机器人文档",
+"url": "https://core.telegram.org/bots",
+"desc": "官方 Bot API 文档",
+"cat": "飞机",
+"pack": "机器人",
+"free": true,
+"how": "按文档对接 Bot API。"
+},
+{
+"name": "Combot",
+"url": "https://t.me/combot",
+"desc": "群管和频道统计",
+"cat": "飞机",
+"pack": "频道",
+"free": true,
+"how": "拉进群或频道，看成员和发言。"
+},
+{
+"name": "Rose群管",
+"url": "https://t.me/MissRose_bot",
+"desc": "群组管理机器人",
+"cat": "飞机",
+"pack": "机器人",
+"free": true,
+"how": "拉进群，设欢迎、禁言、过滤。"
+},
+{
+"name": "Sxyprn",
+"url": "https://sxyprn.com",
+"desc": "成人电影",
+"cat": "成人",
+"pack": "电影",
+"free": true,
+"how": "18+。仅限成人观看。"
+},
+{
+"name": "TGStat",
+"url": "https://tgstat.com",
+"desc": "频道目录和排名",
+"cat": "飞机",
+"pack": "频道",
+"free": true,
+"how": "搜索公开频道、看订阅和阅读。"
+},
+{
+"name": "YOURLS",
+"url": "https://yourls.org",
+"desc": "自建短链程序",
+"cat": "短链",
+"pack": "工具",
+"free": true,
+"how": "下载后装到自己的域名。"
+},
+{
+"name": "Cutt.ly",
+"url": "https://cutt.ly",
+"desc": "短链统计",
+"cat": "短链",
+"pack": "工具",
+"free": true,
+"how": "打开 cutt.ly 缩短并看点击。"
+},
+{
+"name": "DrTuber",
+"url": "https://www.drtuber.com",
+"desc": "成人电影",
+"cat": "成人",
+"pack": "电影",
+"free": true,
+"how": "18+。仅限成人观看。"
+},
+{
+"name": "Empflix",
+"url": "https://www.empflix.com",
+"desc": "成人电影",
+"cat": "成人",
+"pack": "电影",
+"free": true,
+"how": "18+。仅限成人观看。"
+},
+{
+"name": "Manybot",
+"url": "https://t.me/Manybot",
+"desc": "无代码做机器人",
+"cat": "飞机",
+"pack": "机器人",
+"free": true,
+"how": "打开 t.me/Manybot 按提示建菜单机器人。"
+},
+{
+"name": "PornHat",
+"url": "https://www.pornhat.com",
+"desc": "成人电影",
+"cat": "成人",
+"pack": "电影",
+"free": true,
+"how": "18+。仅限成人观看。"
+},
+{
+"name": "SpamBot",
+"url": "https://t.me/SpamBot",
+"desc": "解封申诉机器人",
+"cat": "飞机",
+"pack": "机器人",
+"free": true,
+"how": "打开 t.me/SpamBot 查看限制并申诉。"
+},
+{
+"name": "TNAFlix",
+"url": "https://www.tnaflix.com",
+"desc": "成人电影",
+"cat": "成人",
+"pack": "电影",
+"free": true,
+"how": "18+。仅限成人观看。"
+},
+{
+"name": "Tiny.cc",
+"url": "https://tiny.cc",
+"desc": "自定义短链",
+"cat": "短链",
+"pack": "工具",
+"free": true,
+"how": "注册后缩短并可改后半段。"
+},
+{
+"name": "TinyURL",
+"url": "https://tinyurl.com",
+"desc": "老牌短链接",
+"cat": "短链",
+"pack": "工具",
+"free": true,
+"how": "打开贴长链，可不注册。"
+},
+{
+"name": "Combot官网",
+"url": "https://combot.org",
+"desc": "Combot 群管官网",
+"cat": "飞机",
+"pack": "频道",
+"free": true,
+"how": "打开 combot.org 看功能和接入。"
+},
+{
+"name": "Porn.com",
+"url": "https://www.porn.com",
+"desc": "成人电影",
+"cat": "成人",
+"pack": "电影",
+"free": true,
+"how": "18+。仅限成人观看。"
+},
+{
+"name": "Porntrex",
+"url": "https://www.porntrex.com",
+"desc": "成人电影",
+"cat": "成人",
+"pack": "电影",
+"free": true,
+"how": "18+。仅限成人观看。"
+},
+{
+"name": "Short.io",
+"url": "https://short.io",
+"desc": "品牌短域",
+"cat": "短链",
+"pack": "工具",
+"free": true,
+"how": "绑定自己的短域名。"
+},
+{
+"name": "Stickers",
+"url": "https://t.me/Stickers",
+"desc": "贴纸包机器人",
+"cat": "飞机",
+"pack": "机器人",
+"free": true,
+"how": "打开 t.me/Stickers 创建或管理贴纸。"
+},
+{
+"name": "SunPorno",
+"url": "https://www.sunporno.com",
+"desc": "成人电影",
+"cat": "成人",
+"pack": "电影",
+"free": true,
+"how": "18+。仅限成人观看。"
+},
+{
+"name": "BotFather",
+"url": "https://t.me/BotFather",
+"desc": "官方创建机器人",
+"cat": "飞机",
+"pack": "机器人",
+"free": true,
+"how": "打开 t.me/BotFather，/newbot 拿 token。"
+},
+{
+"name": "GroupHelp",
+"url": "https://t.me/GroupHelpBot",
+"desc": "群组管理机器人",
+"cat": "飞机",
+"pack": "机器人",
+"free": true,
+"how": "拉进群，设欢迎和反垃圾。"
+},
+{
+"name": "Rebrandly",
+"url": "https://www.rebrandly.com",
+"desc": "品牌短链接",
+"cat": "短链",
+"pack": "工具",
+"free": true,
+"how": "绑定品牌域名做短链。"
+},
+{
+"name": "Telegraph",
+"url": "https://telegra.ph",
+"desc": "Telegram 即时文章",
+"cat": "飞机",
+"pack": "频道",
+"free": true,
+"how": "打开 telegra.ph 发文，可贴到频道。"
+},
+{
+"name": "Telegram应用",
+"url": "https://telegram.org/apps",
+"desc": "官方客户端下载",
+"cat": "飞机",
+"pack": "频道",
+"free": true,
+"how": "打开 telegram.org/apps 下载对应系统。"
+},
+{
+"name": "ShortURL.at",
+"url": "https://www.shorturl.at",
+"desc": "网页短链",
+"cat": "短链",
+"pack": "工具",
+"free": true,
+"how": "打开贴长链生成。"
+},
+{
+"name": "ControllerBot",
+"url": "https://t.me/ControllerBot",
+"desc": "频道投稿机器人",
+"cat": "飞机",
+"pack": "频道",
+"free": true,
+"how": "打开绑定频道，审核投稿再发。"
+}
+]
