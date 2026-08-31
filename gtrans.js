@@ -34,6 +34,9 @@
       if(m[1]==='zh-CN'||m[1]==='zh') return 'zh';
       for(var k in toGoogle){ if(toGoogle[k]===m[1]) return k; }
     }
+    var lq=new URLSearchParams(location.search).get('lang')||localStorage.getItem('lang')||'';
+    if(lq==='zh-CN') lq='zh';
+    if(label[lq]) return lq;
     return 'zh';
   }
   function combo(){ return document.querySelector('.goog-te-combo'); }
@@ -71,7 +74,7 @@
   }
   function updateBtn(code){
     var btn=document.getElementById('lang');
-    if(btn) btn.textContent=label[code]||'中文';
+    if(btn) btn.textContent=code==='en'?'EN':(label[code]||'中文');
     var bar=document.getElementById('langBar');
     if(bar){
       bar.querySelectorAll('button').forEach(function(b){
@@ -95,7 +98,7 @@
     };
     var btn=document.getElementById('lang');
     if(btn){
-      btn.textContent=label[cur]||'中文';
+      btn.textContent=cur==='en'?'EN':(label[cur]||'中文');
       btn.onclick=function(e){
         e.preventDefault();
         e.stopImmediatePropagation();
