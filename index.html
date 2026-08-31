@@ -12,14 +12,14 @@
 <link rel="manifest" href="manifest.webmanifest"/>
 <link rel="apple-touch-icon" href="IMG_7049.jpeg"/>
 <style>
-html,body{margin:0;min-height:100%;min-height:100dvh;min-height:100lvh;font-family:-apple-system,sans-serif;color:#3b2f2c;background:#000}
-body{min-height:100dvh;background:#000 url("IMG_7049.jpeg") center/cover no-repeat fixed}
+html,body{margin:0;height:100%;height:100dvh;overflow:hidden;font-family:-apple-system,sans-serif;color:#3b2f2c;background:#000}
+body{height:100dvh;background:#000 url("IMG_7049.jpeg") center/cover no-repeat fixed}
 body::before{content:"";position:fixed;inset:0;z-index:-1;background:rgba(244,236,230,.08)}
-.w{max-width:430px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 14px calc(28px + env(safe-area-inset-bottom))}
-video{width:100%;border-radius:18px;display:block;margin:12px 0 10px;background:#111}
-.b{background:rgba(255,255,255,.72);color:#111827;border-radius:16px;padding:14px;line-height:1.7;font-size:16px}
-.point{text-align:center;font-size:28px;margin:10px 0 8px}
-.enter{display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:16px;border-radius:16px;font-weight:600;margin-bottom:12px}
+.w{max-width:430px;margin:0 auto;height:100dvh;display:flex;flex-direction:column;box-sizing:border-box;padding:calc(8px + env(safe-area-inset-top)) 14px calc(12px + env(safe-area-inset-bottom))}
+video{width:100%;max-height:38vh;object-fit:cover;border-radius:14px;display:block;margin:6px 0;background:#111;flex:0 1 auto}
+.b{background:rgba(255,255,255,.78);color:#111827;border-radius:14px;padding:10px 12px;line-height:1.45;font-size:14px;flex:0 0 auto}
+.point{text-align:center;font-size:20px;margin:6px 0;flex:0 0 auto}
+.enter{display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:14px;border-radius:14px;font-weight:600;margin-top:auto;flex:0 0 auto}
 </style>
 </head>
 <body>
