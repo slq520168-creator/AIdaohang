@@ -41,7 +41,11 @@ html[data-theme="dark"] .block{background:rgba(13,17,23,.38);border-color:rgba(2
 .fine button{border:1px solid var(--line);background:var(--soft);color:var(--txt);border-radius:999px;padding:5px 8px;font-size:12px}
 .fine button.on{background:var(--chip);color:var(--chip-t);border-color:transparent;font-weight:600}
 #pop{position:relative;z-index:1;margin:0 0 10px}
-#pop[hidden]{display:none}
+.under{display:flex;flex-direction:column}
+.under #tags{order:1}
+.under #pop{order:2}
+.under.open #pop{order:1}
+.under.open #tags{order:2}
 .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;width:100%}
 .card{display:block;background:rgba(255,255,255,.4);border:1px solid rgba(255,255,255,.45);border-radius:14px;padding:10px 8px;text-decoration:none;color:var(--txt);min-width:0}
 html[data-theme="dark"] .card{background:rgba(13,17,23,.4);border-color:rgba(255,255,255,.14)}
