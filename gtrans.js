@@ -25,18 +25,24 @@
     ['googtrans=','googtrans=;domain='+host,'googtrans=;domain=.'+host].forEach(function(c){document.cookie=c+dead;});
   }
   function curLang(){
-    var q=new URLSearchParams(location.search).get('tl')||localStorage.getItem('aid_tl')||'';
+    var sp=new URLSearchParams(location.search);
+    var q=sp.get('tl')||sp.get('lang')||'';
     if(q==='zh-CN') q='zh';
     if(label[q]) return q;
+    try{
+      var lg=localStorage.getItem('lang')||'';
+      if(lg==='zh-CN') lg='zh';
+      if(label[lg]) return lg;
+    }catch(e){}
     var ck=readCookie('googtrans');
     var m=/\/zh-CN\/([a-zA-Z-]+)/.exec(ck);
     if(m){
       if(m[1]==='zh-CN'||m[1]==='zh') return 'zh';
       for(var k in toGoogle){ if(toGoogle[k]===m[1]) return k; }
     }
-    var lq=new URLSearchParams(location.search).get('lang')||localStorage.getItem('lang')||'';
-    if(lq==='zh-CN') lq='zh';
-    if(label[lq]) return lq;
+    var tl=localStorage.getItem('aid_tl')||'';
+    if(tl==='zh-CN') tl='zh';
+    if(label[tl]) return tl;
     return 'zh';
   }
   function combo(){ return document.querySelector('.goog-te-combo'); }
