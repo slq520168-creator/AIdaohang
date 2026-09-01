@@ -1,0 +1,299 @@
+[
+  {
+    "name": "iAnyGo",
+    "url": "https://www.ianygo.com",
+    "desc": "电脑改 iPhone/安卓定位",
+    "cat": "虚拟定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "iAnyGo 中文",
+    "url": "https://www.tenorshare.tw/products/ianygo-change-gps-location-iphone.html",
+    "desc": "Tenorshare 虚拟定位中文",
+    "cat": "虚拟定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "AnyTo",
+    "url": "https://anyto.imyfone.com",
+    "desc": "iMyFone 虚拟定位",
+    "cat": "虚拟定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "AnyTo 中文",
+    "url": "https://anyto.imyfone.com/zh/",
+    "desc": "iMyFone 虚拟定位中文",
+    "cat": "虚拟定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Dr.Fone 虚拟定位",
+    "url": "https://drfone.wondershare.com/virtual-location-changer.html",
+    "desc": "万兴虚拟定位",
+    "cat": "虚拟定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "LocaChange",
+    "url": "https://www.locachange.com",
+    "desc": "免 Root 虚拟定位",
+    "cat": "虚拟定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "LocaChange 中文",
+    "url": "https://tw.locachange.com",
+    "desc": "虚拟定位中文",
+    "cat": "虚拟定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "TunesKit Location",
+    "url": "https://www.tuneskit.com/location-changer/",
+    "desc": "TunesKit 改定位",
+    "cat": "虚拟定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "UltFone Location",
+    "url": "https://www.ultfone.com/ios-location-changer.html",
+    "desc": "UltFone 改 iPhone 定位",
+    "cat": "虚拟定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "UltFone Toolkit",
+    "url": "https://www.ultfone.com/toolkit-virtual-location.html",
+    "desc": "UltFone 工具箱虚拟定位",
+    "cat": "虚拟定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "GPS JoyStick",
+    "url": "https://play.google.com/store/apps/details?id=com.theappninjas.fakegpsjoystick",
+    "desc": "安卓摇杆模拟定位",
+    "cat": "定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "GPS JoyStick 官网",
+    "url": "https://gpsjoystick.theappninjas.com",
+    "desc": "JoyStick 官网",
+    "cat": "定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Fake GPS Location",
+    "url": "https://play.google.com/store/apps/details?id=com.lexa.fakegps",
+    "desc": "Lexa 模拟定位",
+    "cat": "定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Lockito",
+    "url": "https://play.google.com/store/apps/details?id=fr.dvilleneuve.lockito",
+    "desc": "路线模拟定位",
+    "cat": "定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Dr.Fone App",
+    "url": "https://play.google.com/store/apps/details?id=com.wondershare.virtuallocation",
+    "desc": "万兴手机端虚拟定位",
+    "cat": "定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Fake GPS GO",
+    "url": "https://play.google.com/store/apps/details?id=com.incorporateapps.fakegps",
+    "desc": "安卓模拟定位",
+    "cat": "定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Fake GPS Route",
+    "url": "https://play.google.com/store/apps/details?id=com.blogspot.newapphorizons.fakegps",
+    "desc": "路线假定位",
+    "cat": "定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Mock Locations",
+    "url": "https://play.google.com/store/apps/details?id=ru.gavrikov.mocklocations",
+    "desc": "开发者模拟定位",
+    "cat": "定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "逍遥模拟器",
+    "url": "https://www.xyaz.cn",
+    "desc": "安卓模拟器可改定位",
+    "cat": "模拟",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "LDPlayer",
+    "url": "https://www.ldplayer.net",
+    "desc": "雷电国际版可改定位",
+    "cat": "模拟",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "BlueStacks",
+    "url": "https://www.bluestacks.com",
+    "desc": "蓝叠国际版可改定位",
+    "cat": "模拟",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "GameLoop",
+    "url": "https://www.gameloop.com",
+    "desc": "腾讯模拟器可改定位",
+    "cat": "模拟",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Android 模拟定位文档",
+    "url": "https://developer.android.com/guide/topics/location/testing",
+    "desc": "安卓开发者模拟定位",
+    "cat": "模拟",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Xcode 模拟定位",
+    "url": "https://developer.apple.com/documentation/xcode/simulating-location-in-tests",
+    "desc": "Xcode 模拟定位",
+    "cat": "模拟",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Android Emulator Geo",
+    "url": "https://developer.android.com/studio/run/emulator-extended-controls",
+    "desc": "官方模拟器改 GPS",
+    "cat": "模拟",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Location Guard",
+    "url": "https://addons.mozilla.org/firefox/addon/location-guard/",
+    "desc": "浏览器伪装定位",
+    "cat": "模拟",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Change Geolocation",
+    "url": "https://chromewebstore.google.com/detail/change-geolocation/lknpoadjjkjcmjhbjpajhidfgkfchemn",
+    "desc": "Chrome 伪装定位",
+    "cat": "模拟",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Mock Location Chrome",
+    "url": "https://chromewebstore.google.com/detail/location-guard/ljmioajikknkkdikbibbgmbkmaahkfhh",
+    "desc": "Chrome 定位守卫",
+    "cat": "模拟",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "3uTools 虚拟定位",
+    "url": "https://www.3u.com",
+    "desc": "3uTools 电脑改定位",
+    "cat": "模拟",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "爱思虚拟定位",
+    "url": "https://www.i4.cn",
+    "desc": "爱思助手电脑改定位",
+    "cat": "模拟",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Genymotion GPS",
+    "url": "https://www.genymotion.com",
+    "desc": "云/桌面模拟器改 GPS",
+    "cat": "模拟",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "Tenorshare iAnyGo EN",
+    "url": "https://www.tenorshare.com/products/ianygo.html",
+    "desc": "Tenorshare 国际版",
+    "cat": "虚拟定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  },
+  {
+    "name": "iMyFone AnyTo Win",
+    "url": "https://www.imyfone.com/location-changer/",
+    "desc": "iMyFone 电脑改定位",
+    "cat": "虚拟定位",
+    "pack": "工具",
+    "free": true,
+    "how": "打开官网下载，仅限自己的设备。"
+  }
+]
