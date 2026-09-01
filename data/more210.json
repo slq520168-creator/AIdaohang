@@ -1,0 +1,1802 @@
+[
+  {
+    "name": "Wix网店",
+    "url": "https://www.wix.com",
+    "desc": "拖拽建站开店",
+    "cat": "开店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Spreadshirt",
+    "url": "https://www.spreadshirt.com",
+    "desc": "服装定制铺货",
+    "cat": "铺货",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "天猫商城",
+    "url": "https://www.tmall.com",
+    "desc": "品牌网店卖场",
+    "cat": "网店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "香港贸发局",
+    "url": "https://www.hktdc.com",
+    "desc": "香港贸发配对",
+    "cat": "外贸",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "Qoo10卖家",
+    "url": "https://www.qoo10.com",
+    "desc": "亚洲跨境卖场",
+    "cat": "跨境",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Shift4Shop",
+    "url": "https://www.shift4shop.com",
+    "desc": "托管网店平台",
+    "cat": "开店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Gooten铺货",
+    "url": "https://www.gooten.com",
+    "desc": "按需印花铺货",
+    "cat": "铺货",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Gorgias客服",
+    "url": "https://www.gorgias.com",
+    "desc": "电商客服台",
+    "cat": "网店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "TradeKey",
+    "url": "https://www.tradekey.com",
+    "desc": "全球贸易配对",
+    "cat": "外贸",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Walmart Marketplace",
+    "url": "https://marketplace.walmart.com",
+    "desc": "沃尔玛跨境卖场",
+    "cat": "跨境",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "PrestaShop",
+    "url": "https://www.prestashop.com",
+    "desc": "开源网店系统",
+    "cat": "开店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Dropified",
+    "url": "https://www.dropified.com",
+    "desc": "铺货自动化",
+    "cat": "铺货",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Loox晒图",
+    "url": "https://loox.io",
+    "desc": "买家秀评价",
+    "cat": "网店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "世贸在线",
+    "url": "https://www.exportimes.com",
+    "desc": "外贸供求信息",
+    "cat": "外贸",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Shopee卖家中心",
+    "url": "https://shopee.com",
+    "desc": "东南亚跨境卖场",
+    "cat": "跨境",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "店匠Shopyy",
+    "url": "https://www.shopyy.com",
+    "desc": "跨境独立站建站",
+    "cat": "开店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "SaleHoo",
+    "url": "https://www.salehoo.com",
+    "desc": "批发供应商目录",
+    "cat": "铺货",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "Judge.me评价",
+    "url": "https://judge.me",
+    "desc": "网店商品评价",
+    "cat": "网店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "中国进出口商品交易会",
+    "url": "https://www.cantonfair.org.cn",
+    "desc": "广交会外贸展",
+    "cat": "外贸",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "Coupang卖家",
+    "url": "https://www.coupang.com",
+    "desc": "韩国跨境卖场",
+    "cat": "跨境",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "OpenCart开店",
+    "url": "https://www.opencart.com",
+    "desc": "开源购物车",
+    "cat": "开店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Inventory Source",
+    "url": "https://www.inventorysource.com",
+    "desc": "批发铺货对接",
+    "cat": "铺货",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Yotpo评价",
+    "url": "https://www.yotpo.com",
+    "desc": "口碑评价营销",
+    "cat": "网店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "IndiaMART",
+    "url": "https://www.indiamart.com",
+    "desc": "印度B2B贸易",
+    "cat": "外贸",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Wildberries卖家",
+    "url": "https://seller.wildberries.ru",
+    "desc": "俄欧跨境卖场",
+    "cat": "跨境",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "微店开店",
+    "url": "https://www.weidian.com",
+    "desc": "手机快速开店",
+    "cat": "开店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Modalyst铺货",
+    "url": "https://www.modalyst.co",
+    "desc": "品牌一件代发",
+    "cat": "铺货",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "SmartScout",
+    "url": "https://www.smartscout.com",
+    "desc": "亚马逊品牌数据",
+    "cat": "网店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "ThomasNet",
+    "url": "https://www.thomasnet.com",
+    "desc": "美国工业采购",
+    "cat": "外贸",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "雅虎购物日本",
+    "url": "https://shopping.yahoo.co.jp",
+    "desc": "日本购物开店",
+    "cat": "跨境",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Weebly开店",
+    "url": "https://www.weebly.com",
+    "desc": "简易建站开店",
+    "cat": "开店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "CafePress",
+    "url": "https://www.cafepress.com",
+    "desc": "定制周边铺货",
+    "cat": "铺货",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Privy弹窗",
+    "url": "https://www.privy.com",
+    "desc": "网店转化弹窗",
+    "cat": "网店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "EC21贸易",
+    "url": "https://www.ec21.com",
+    "desc": "韩国B2B贸易",
+    "cat": "外贸",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "ShipStation",
+    "url": "https://www.shipstation.com",
+    "desc": "多渠道打单发货",
+    "cat": "跨境",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Jimdo开店",
+    "url": "https://www.jimdo.com",
+    "desc": "欧洲建站开店",
+    "cat": "开店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Zazzle定制",
+    "url": "https://www.zazzle.com",
+    "desc": "个性定制商城",
+    "cat": "铺货",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "AMZScout",
+    "url": "https://amzscout.net",
+    "desc": "亚马逊选品工具",
+    "cat": "网店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Kompass名录",
+    "url": "https://www.kompass.com",
+    "desc": "全球企业名录",
+    "cat": "外贸",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "Pirate Ship",
+    "url": "https://www.pirateship.com",
+    "desc": "便宜打单发货",
+    "cat": "跨境",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Volusion",
+    "url": "https://www.volusion.com",
+    "desc": "托管网店系统",
+    "cat": "开店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "义乌购",
+    "url": "https://www.yiwugo.com",
+    "desc": "义乌批发货源",
+    "cat": "铺货",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Viral Launch",
+    "url": "https://viral-launch.com",
+    "desc": "亚马逊选品",
+    "cat": "网店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Europages",
+    "url": "https://www.europages.com",
+    "desc": "欧洲企业名录",
+    "cat": "外贸",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "云途物流YunExpress",
+    "url": "https://www.yunexpress.com",
+    "desc": "跨境小包物流",
+    "cat": "跨境",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Sellfy开店",
+    "url": "https://sellfy.com",
+    "desc": "数字商品开店",
+    "cat": "开店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "CustomCat",
+    "url": "https://www.customcat.com",
+    "desc": "POD一件代发",
+    "cat": "铺货",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "卖家精灵",
+    "url": "https://www.sellersprite.com",
+    "desc": "亚马逊选品插件",
+    "cat": "网店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "TradeWheel",
+    "url": "https://www.tradewheel.com",
+    "desc": "全球B2B配对",
+    "cat": "外贸",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "燕文物流",
+    "url": "https://www.yw56.com.cn",
+    "desc": "跨境小包专线",
+    "cat": "跨境",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Storenvy",
+    "url": "https://www.storenvy.com",
+    "desc": "社交风开店",
+    "cat": "开店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Wholesale Central",
+    "url": "https://www.wholesalecentral.com",
+    "desc": "美国批发目录",
+    "cat": "铺货",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "聚水潭ERP",
+    "url": "https://www.jushuitan.com",
+    "desc": "电商进销存",
+    "cat": "网店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "TradeIndia",
+    "url": "https://www.tradeindia.com",
+    "desc": "印度B2B贸易",
+    "cat": "外贸",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "SHEIN卖家",
+    "url": "https://www.shein.com",
+    "desc": "时尚跨境卖场",
+    "cat": "跨境",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "GoDaddy网店",
+    "url": "https://www.godaddy.com",
+    "desc": "域名建站开店",
+    "cat": "开店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "店小秘",
+    "url": "https://www.dianxiaomi.com",
+    "desc": "跨境店群管理",
+    "cat": "铺货",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "1stDibs",
+    "url": "https://www.1stdibs.com",
+    "desc": "奢侈古董商城",
+    "cat": "网店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "MFG.com采购",
+    "url": "https://www.mfg.com",
+    "desc": "制造业询盘",
+    "cat": "外贸",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Cdiscount卖家",
+    "url": "https://www.cdiscount.com",
+    "desc": "法国跨境卖场",
+    "cat": "跨境",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Whop店铺",
+    "url": "https://whop.com",
+    "desc": "数字商品卖场",
+    "cat": "开店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "AliDropship",
+    "url": "https://alidropship.com",
+    "desc": "速卖通铺货插件",
+    "cat": "铺货",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Attentive短信",
+    "url": "https://www.attentive.com",
+    "desc": "电商短信营销",
+    "cat": "网店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "DIYTrade",
+    "url": "https://www.diytrade.com",
+    "desc": "外贸展示平台",
+    "cat": "外贸",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "ManoMano",
+    "url": "https://www.manomano.com",
+    "desc": "欧洲建材卖场",
+    "cat": "跨境",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Nuvemshop",
+    "url": "https://www.nuvemshop.com",
+    "desc": "拉美独立站",
+    "cat": "开店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "搜款网17网",
+    "url": "https://www.17zwd.com",
+    "desc": "女装批发搜款",
+    "cat": "铺货",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Postscript短信",
+    "url": "https://postscript.io",
+    "desc": "网店短信营销",
+    "cat": "网店",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "ExportersIndia",
+    "url": "https://www.exportersindia.com",
+    "desc": "印度出口名录",
+    "cat": "外贸",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "OnBuy卖家",
+    "url": "https://www.onbuy.com",
+    "desc": "英国跨境卖场",
+    "cat": "跨境",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册开店上架。"
+  },
+  {
+    "name": "Cornell法学院LII",
+    "url": "https://www.law.cornell.edu",
+    "desc": "免费法律资料",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "云帐房",
+    "url": "https://www.yunzhangfang.com",
+    "desc": "云端代理记账",
+    "cat": "会计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "TaxJar报税",
+    "url": "https://www.taxjar.com",
+    "desc": "电商销售税",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "友邦保险AIA",
+    "url": "https://www.aia.com",
+    "desc": "人寿健康保险",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Healthcare.gov",
+    "url": "https://www.healthcare.gov",
+    "desc": "美国医保市场",
+    "cat": "医疗",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Rocket Lawyer",
+    "url": "https://www.rocketlawyer.com",
+    "desc": "合同法律咨询",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "AICPA",
+    "url": "https://www.aicpa-cima.com",
+    "desc": "美国注会协会",
+    "cat": "会计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "Avalara报税",
+    "url": "https://www.avalara.com",
+    "desc": "销售税自动算",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "泰康保险",
+    "url": "https://www.taikang.com",
+    "desc": "寿险健康养老",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "MedlinePlus",
+    "url": "https://medlineplus.gov",
+    "desc": "权威健康百科",
+    "cat": "医疗",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "知识共享CC",
+    "url": "https://creativecommons.org",
+    "desc": "开放版权协议",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "东奥会计在线",
+    "url": "https://www.dongao.com",
+    "desc": "会计考试培训",
+    "cat": "会计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "澳洲税务局ATO",
+    "url": "https://www.ato.gov.au",
+    "desc": "澳洲报税官网",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "中国人民保险",
+    "url": "https://www.picc.com.cn",
+    "desc": "财产人寿保险",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "中国疾控中心",
+    "url": "https://www.chinacdc.cn",
+    "desc": "疾控健康资讯",
+    "cat": "医疗",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "LegalZoom",
+    "url": "https://www.legalzoom.com",
+    "desc": "在线法律文件",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "FASB",
+    "url": "https://www.fasb.org",
+    "desc": "美国会计准则",
+    "cat": "会计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "航天信息金税",
+    "url": "https://www.aisino.com",
+    "desc": "金税发票服务",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "中国人寿保险",
+    "url": "https://www.chinalife.com.cn",
+    "desc": "人寿保险服务",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "健客网",
+    "url": "https://www.jianke.com",
+    "desc": "药品健康商城",
+    "cat": "医疗",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "美国专利商标局",
+    "url": "https://www.uspto.gov",
+    "desc": "专利商标查询",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "Bench记账",
+    "url": "https://bench.co",
+    "desc": "在线代理记账",
+    "cat": "会计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "百望云发票",
+    "url": "https://www.baiwang.com",
+    "desc": "电子发票平台",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "太平洋保险",
+    "url": "https://www.cpic.com.cn",
+    "desc": "综合保险服务",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "1药网",
+    "url": "https://www.111.com.cn",
+    "desc": "药品保健商城",
+    "cat": "医疗",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "世界知识产权组织",
+    "url": "https://www.wipo.int",
+    "desc": "国际知识产权",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "Expensify报销",
+    "url": "https://www.expensify.com",
+    "desc": "费用报销管理",
+    "cat": "会计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "亿企赢",
+    "url": "https://www.17win.com",
+    "desc": "企业报税开票",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "国家金融监督管理总局",
+    "url": "https://www.nfra.gov.cn",
+    "desc": "金融保险监管",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "FDA美国药监",
+    "url": "https://www.fda.gov",
+    "desc": "药品器械监管",
+    "cat": "医疗",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "欧洲专利局",
+    "url": "https://www.epo.org",
+    "desc": "欧洲专利检索",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "IFRS基金会",
+    "url": "https://www.ifrs.org",
+    "desc": "国际财务准则",
+    "cat": "会计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "Credit Karma税务",
+    "url": "https://www.creditkarma.com",
+    "desc": "免费报税信用",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "MetLife保险",
+    "url": "https://www.metlife.com",
+    "desc": "人寿雇员保险",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Medscape",
+    "url": "https://www.medscape.com",
+    "desc": "临床医学资讯",
+    "cat": "医疗",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "找法网",
+    "url": "https://www.findlaw.cn",
+    "desc": "法律咨询案例",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "中华会计网校",
+    "url": "https://www.chinaacc.com",
+    "desc": "会计职称学习",
+    "cat": "会计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "诺诺发票",
+    "url": "https://www.nuonuo.com",
+    "desc": "电子发票开具",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Prudential保诚",
+    "url": "https://www.prudential.com",
+    "desc": "人寿退休保险",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Johns Hopkins医学",
+    "url": "https://www.hopkinsmedicine.org",
+    "desc": "医学健康资讯",
+    "cat": "医疗",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "PracticePanther",
+    "url": "https://www.practicepanther.com",
+    "desc": "律所办案系统",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Dext票据",
+    "url": "https://dext.com",
+    "desc": "票据自动采集",
+    "cat": "会计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "新西兰税局IRD",
+    "url": "https://www.ird.govt.nz",
+    "desc": "新西兰报税",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "Allianz安联",
+    "url": "https://www.allianz.com",
+    "desc": "全球综合保险",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Cleveland Clinic",
+    "url": "https://my.clevelandclinic.org",
+    "desc": "医学健康百科",
+    "cat": "医疗",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "Ironclad合同",
+    "url": "https://ironcladapp.com",
+    "desc": "电子合同管理",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "中注协CICPA",
+    "url": "https://www.cicpa.org.cn",
+    "desc": "注册会计师协会",
+    "cat": "会计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "新加坡税务IRAS",
+    "url": "https://www.iras.gov.sg",
+    "desc": "新加坡报税",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "Zurich苏黎世",
+    "url": "https://www.zurich.com",
+    "desc": "财产责任保险",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "The BMJ",
+    "url": "https://www.bmj.com",
+    "desc": "医学期刊检索",
+    "cat": "医疗",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "无讼案例",
+    "url": "https://www.itslaw.com",
+    "desc": "裁判案例检索",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "ACCA",
+    "url": "https://www.accaglobal.com",
+    "desc": "特许公认会计师",
+    "cat": "会计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Sovos税务",
+    "url": "https://sovos.com",
+    "desc": "全球间接税",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "The Zebra比价",
+    "url": "https://www.thezebra.com",
+    "desc": "车险比价报价",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "北京114预约挂号",
+    "url": "https://www.114yygh.com",
+    "desc": "北京医院挂号",
+    "cat": "医疗",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "律图",
+    "url": "https://www.64365.com",
+    "desc": "法律咨询文书",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Vertex税务",
+    "url": "https://www.vertexinc.com",
+    "desc": "企业税务引擎",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Aetna医保",
+    "url": "https://www.aetna.com",
+    "desc": "健康医疗保险",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "JAMA Network",
+    "url": "https://jamanetwork.com",
+    "desc": "医学期刊检索",
+    "cat": "医疗",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "启信宝",
+    "url": "https://www.qixin.com",
+    "desc": "企业工商查询",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "香港税务局",
+    "url": "https://www.ird.gov.hk",
+    "desc": "香港报税查询",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "Liberty Mutual",
+    "url": "https://www.libertymutual.com",
+    "desc": "车房责任保险",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "国家医疗保障局",
+    "url": "https://www.nhsa.gov.cn",
+    "desc": "医保政策查询",
+    "cat": "医疗",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "国家企业信用信息公示系统",
+    "url": "https://www.gsxt.gov.cn",
+    "desc": "企业工商公示",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "韩国国税厅",
+    "url": "https://www.nts.go.kr",
+    "desc": "韩国报税官网",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "AIG保险",
+    "url": "https://www.aig.com",
+    "desc": "财产责任保险",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "NEJM",
+    "url": "https://www.nejm.org",
+    "desc": "新英格兰医学",
+    "cat": "医疗",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "12309中国检察网",
+    "url": "https://www.12309.gov.cn",
+    "desc": "检察举报信访",
+    "cat": "法律",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "法国税务总局",
+    "url": "https://www.impots.gouv.fr",
+    "desc": "法国报税官网",
+    "cat": "税务",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "Blue Cross BCBS",
+    "url": "https://www.bcbs.com",
+    "desc": "美国蓝十字",
+    "cat": "保险",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "GoodShort短剧",
+    "url": "https://www.goodshort.tv",
+    "desc": "海外短剧平台",
+    "cat": "短剧",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册观看。"
+  },
+  {
+    "name": "Typecast配音",
+    "url": "https://typecast.ai",
+    "desc": "AI角色配音",
+    "cat": "数字人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Didimo虚拟人",
+    "url": "https://www.didimo.co",
+    "desc": "三维数字人",
+    "cat": "虚拟人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Moonvalley视频",
+    "url": "https://www.moonvalley.com",
+    "desc": "AI生成视频",
+    "cat": "视频",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Funimate剪辑",
+    "url": "https://www.funimate.com",
+    "desc": "特效卡点剪辑",
+    "cat": "剪辑",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "FlickReels短剧",
+    "url": "https://www.flickreels.com",
+    "desc": "短剧内容平台",
+    "cat": "短剧",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册观看。"
+  },
+  {
+    "name": "Uneeq数字人",
+    "url": "https://www.uneeq.com",
+    "desc": "交互数字人",
+    "cat": "数字人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Avaturn捏脸",
+    "url": "https://avaturn.me",
+    "desc": "写实虚拟人",
+    "cat": "虚拟人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Creatify广告",
+    "url": "https://www.creatify.ai",
+    "desc": "AI广告视频",
+    "cat": "视频",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "HappyScribe字幕",
+    "url": "https://www.happyscribe.com",
+    "desc": "语音转字幕",
+    "cat": "剪辑",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Kalos短剧",
+    "url": "https://www.kalos.tv",
+    "desc": "海外短剧观看",
+    "cat": "短剧",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册观看。"
+  },
+  {
+    "name": "Anam数字人",
+    "url": "https://anam.ai",
+    "desc": "实时对话数字人",
+    "cat": "数字人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Reallusion",
+    "url": "https://www.reallusion.com",
+    "desc": "三维角色动画",
+    "cat": "虚拟人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Lumen5视频",
+    "url": "https://lumen5.com",
+    "desc": "文稿转视频",
+    "cat": "视频",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "KineMaster剪辑",
+    "url": "https://www.kinemaster.com",
+    "desc": "手机专业剪辑",
+    "cat": "剪辑",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "StardustTV短剧",
+    "url": "https://www.stardusttv.com",
+    "desc": "海外短剧平台",
+    "cat": "短剧",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册观看。"
+  },
+  {
+    "name": "Rephrase.ai",
+    "url": "https://www.rephrase.ai",
+    "desc": "文本驱动数字人",
+    "cat": "数字人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Beyond Presence",
+    "url": "https://www.beyondpresence.io",
+    "desc": "实时虚拟分身",
+    "cat": "虚拟人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Vyond动画",
+    "url": "https://www.vyond.com",
+    "desc": "企业动画视频",
+    "cat": "视频",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "Hypic修图",
+    "url": "https://www.hypic.com",
+    "desc": "手机修图剪辑",
+    "cat": "剪辑",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "ShortMax短剧",
+    "url": "https://www.shortmax.app",
+    "desc": "海外竖屏短剧",
+    "cat": "短剧",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册观看。"
+  },
+  {
+    "name": "Synthesys口播",
+    "url": "https://synthesys.io",
+    "desc": "数字人口播",
+    "cat": "数字人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Daz三维人",
+    "url": "https://www.daz3d.com",
+    "desc": "三维虚拟人",
+    "cat": "虚拟人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Higgsfield视频",
+    "url": "https://higgsfield.ai",
+    "desc": "AI视频生成",
+    "cat": "视频",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "魔音工坊",
+    "url": "https://www.moyin.com",
+    "desc": "配音音效制作",
+    "cat": "剪辑",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "点众科技短剧",
+    "url": "https://www.dianzhongkeji.com",
+    "desc": "河马繁花短剧",
+    "cat": "短剧",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册观看。"
+  },
+  {
+    "name": "Jogg.ai广告",
+    "url": "https://www.jogg.ai",
+    "desc": "数字人广告片",
+    "cat": "数字人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Cascadeur",
+    "url": "https://cascadeur.com",
+    "desc": "角色动作动画",
+    "cat": "虚拟人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Powtoon",
+    "url": "https://www.powtoon.com",
+    "desc": "动画讲解视频",
+    "cat": "视频",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "Supercreator",
+    "url": "https://www.supercreator.ai",
+    "desc": "短视频批量剪",
+    "cat": "剪辑",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "Dreame短剧",
+    "url": "https://www.dreame.com",
+    "desc": "网文短剧阅读",
+    "cat": "短剧",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册观看。"
+  },
+  {
+    "name": "相芯FaceUnity",
+    "url": "https://www.faceunity.com",
+    "desc": "人脸数字人",
+    "cat": "数字人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Plotagon",
+    "url": "https://www.plotagon.com",
+    "desc": "文本生成动画人",
+    "cat": "虚拟人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Biteable",
+    "url": "https://biteable.com",
+    "desc": "在线模板视频",
+    "cat": "视频",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "Lightworks剪辑",
+    "url": "https://lwks.com",
+    "desc": "专业视频剪辑",
+    "cat": "剪辑",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "常读短剧",
+    "url": "https://www.changdu.com",
+    "desc": "短剧阅读平台",
+    "cat": "短剧",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册观看。"
+  },
+  {
+    "name": "竹间智能",
+    "url": "https://www.emotibot.com",
+    "desc": "情感对话数字人",
+    "cat": "数字人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "MiniMax海螺",
+    "url": "https://www.minimax.io",
+    "desc": "海螺视频生成",
+    "cat": "视频",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Avid Media Composer",
+    "url": "https://www.avid.com/media-composer",
+    "desc": "电影级剪辑",
+    "cat": "剪辑",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "Inkitt短剧",
+    "url": "https://www.inkitt.com",
+    "desc": "短剧小说平台",
+    "cat": "短剧",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册观看。"
+  },
+  {
+    "name": "追一科技",
+    "url": "https://www.zhuiyi.ai",
+    "desc": "对话数字人",
+    "cat": "数字人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Arcads广告",
+    "url": "https://www.arcads.ai",
+    "desc": "UGC广告视频",
+    "cat": "视频",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Animoto",
+    "url": "https://www.animoto.com",
+    "desc": "模板快速成片",
+    "cat": "剪辑",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "Galatea短剧",
+    "url": "https://www.galatea.com",
+    "desc": "互动短剧阅读",
+    "cat": "短剧",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册观看。"
+  },
+  {
+    "name": "新华网",
+    "url": "https://www.xinhuanet.com",
+    "desc": "新华社数字人",
+    "cat": "数字人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网查询使用。"
+  },
+  {
+    "name": "Raw Shorts",
+    "url": "https://www.rawshorts.com",
+    "desc": "动画短视频",
+    "cat": "视频",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "PowerDirector",
+    "url": "https://www.cyberlink.com/products/powerdirector-video-editing-software/overview_en_US.html",
+    "desc": "威力导演剪辑",
+    "cat": "剪辑",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "GoodNovel短剧",
+    "url": "https://www.goodnovel.com",
+    "desc": "网文短剧阅读",
+    "cat": "短剧",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册观看。"
+  },
+  {
+    "name": "小冰Xiaoice",
+    "url": "https://www.xiaoice.com",
+    "desc": "人工智能数字人",
+    "cat": "数字人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "VideoScribe",
+    "url": "https://www.videoscribe.co",
+    "desc": "手绘讲解视频",
+    "cat": "视频",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "Sonix转写",
+    "url": "https://sonix.ai",
+    "desc": "音视频转文字",
+    "cat": "剪辑",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "PlayLet短剧",
+    "url": "https://www.playlet.app",
+    "desc": "海外短剧应用",
+    "cat": "短剧",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册观看。"
+  },
+  {
+    "name": "MakeUGC",
+    "url": "https://www.makeugc.com",
+    "desc": "数字人口播广告",
+    "cat": "数字人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Maxon Cinema",
+    "url": "https://www.maxon.net",
+    "desc": "三维动画视频",
+    "cat": "视频",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Movavi剪辑",
+    "url": "https://www.movavi.com",
+    "desc": "简易视频剪辑",
+    "cat": "剪辑",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "掌阅",
+    "url": "https://www.ireader.com.cn",
+    "desc": "阅读与短剧",
+    "cat": "短剧",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册观看。"
+  },
+  {
+    "name": "Yepic数字人",
+    "url": "https://www.yepic.ai",
+    "desc": "数字人口播",
+    "cat": "数字人",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册制作数字人。"
+  },
+  {
+    "name": "Boris FX",
+    "url": "https://borisfx.com",
+    "desc": "影视特效插件",
+    "cat": "视频",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册使用。"
+  },
+  {
+    "name": "Camtasia录屏",
+    "url": "https://www.techsmith.com/camtasia.html",
+    "desc": "录屏剪辑教程",
+    "cat": "剪辑",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网下载或在线剪辑。"
+  },
+  {
+    "name": "Webfic短剧",
+    "url": "https://www.webfic.com",
+    "desc": "出海网文短剧",
+    "cat": "短剧",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册观看。"
+  }
+]
