@@ -1,0 +1,776 @@
+[
+  {
+    "name": "Mico",
+    "url": "https://www.mico.com",
+    "desc": "附近偶遇语音",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Tango",
+    "url": "https://www.tango.me",
+    "desc": "视频偶遇聊天",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "LivU",
+    "url": "https://livu.me",
+    "desc": "随机视频偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Holla",
+    "url": "https://holla.world",
+    "desc": "随机视频偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Chamet",
+    "url": "https://www.chamet.com",
+    "desc": "视频偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Hinge Nearby",
+    "url": "https://hinge.co",
+    "desc": "附近认真偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Bumble Night",
+    "url": "https://bumble.com",
+    "desc": "夜间偶遇模式",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Tinder Explore",
+    "url": "https://tinder.com",
+    "desc": "探索附近的人",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Grindr Explore",
+    "url": "https://www.grindr.com",
+    "desc": "附近男男偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Sniffies Map",
+    "url": "https://sniffies.com",
+    "desc": "地图偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Hornet Nearby",
+    "url": "https://hornet.com",
+    "desc": "附近偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "SKOUT Nearby",
+    "url": "https://www.skout.com",
+    "desc": "附近偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Jaumo Nearby",
+    "url": "https://www.jaumo.com",
+    "desc": "附近偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Lovoo Nearby",
+    "url": "https://www.lovoo.com",
+    "desc": "附近偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "MeetMe Nearby",
+    "url": "https://www.meetme.com",
+    "desc": "附近偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "SayHi Nearby",
+    "url": "https://sayhi.me",
+    "desc": "视频偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Azar Nearby",
+    "url": "https://azarlive.com",
+    "desc": "随机视频偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "OmeTV Nearby",
+    "url": "https://ome.tv",
+    "desc": "随机视频偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Chatroulette Nearby",
+    "url": "https://chatroulette.com",
+    "desc": "随机视频偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "CooMeet Nearby",
+    "url": "https://coomeet.com",
+    "desc": "视频偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Emerald Nearby",
+    "url": "https://emeraldchat.com",
+    "desc": "文字视频偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Paltalk Nearby",
+    "url": "https://www.paltalk.com",
+    "desc": "语音房偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Camfrog Nearby",
+    "url": "https://www.camfrog.com",
+    "desc": "视频房偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Tinychat Nearby",
+    "url": "https://tinychat.com",
+    "desc": "视频房间偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Litmatch Nearby",
+    "url": "https://www.litmatchapp.com",
+    "desc": "灵魂偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Slowly Nearby",
+    "url": "https://slowly.app",
+    "desc": "慢信偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Michat Nearby",
+    "url": "https://www.michat.com",
+    "desc": "附近偶遇聊天",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Zalo Nearby",
+    "url": "https://zalo.me",
+    "desc": "附近的人",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "LINE Nearby",
+    "url": "https://line.me",
+    "desc": "附近的人",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Viber Nearby",
+    "url": "https://www.viber.com",
+    "desc": "附近聊天",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "IMO Nearby",
+    "url": "https://imo.im",
+    "desc": "视频偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "BOTIM Nearby",
+    "url": "https://botim.me",
+    "desc": "视频偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Coco Nearby",
+    "url": "https://www.imcoco.com",
+    "desc": "附近聊天偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Jodel Nearby",
+    "url": "https://jodel.com",
+    "desc": "匿名附近偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Yik Yak Nearby",
+    "url": "https://yikyak.com",
+    "desc": "匿名附近偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Happn Map",
+    "url": "https://www.happn.com",
+    "desc": "路过偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "POF Nearby",
+    "url": "https://www.pof.com",
+    "desc": "附近约会",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Badoo Nearby",
+    "url": "https://badoo.com",
+    "desc": "附近偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Tantan Nearby",
+    "url": "https://tantanapp.com",
+    "desc": "滑动偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "陌陌附近",
+    "url": "https://www.immomo.com",
+    "desc": "附近的人",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Soul 偶遇",
+    "url": "https://www.soulapp.cn",
+    "desc": "灵魂匹配偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "他趣偶遇",
+    "url": "https://www.taqu.cn",
+    "desc": "语音偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "ThaiFriendly Nearby",
+    "url": "https://www.thaifriendly.com",
+    "desc": "泰国附近偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "AsianDating Nearby",
+    "url": "https://www.asiandating.com",
+    "desc": "亚洲附近偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Tagged Nearby",
+    "url": "https://www.tagged.com",
+    "desc": "社区偶遇",
+    "cat": "偶遇",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Gleeden",
+    "url": "https://www.gleeden.com",
+    "desc": "已婚偷情交友",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Illicit Encounters",
+    "url": "https://www.illicitencounters.com",
+    "desc": "婚外 discreet 交友",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "BeNaughty",
+    "url": "https://www.benaughty.com",
+    "desc": "成人偷情约会",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Fling",
+    "url": "https://www.fling.com",
+    "desc": "短期偷情约会",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Flirt",
+    "url": "https://www.flirt.com",
+    "desc": "调情偷情",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "iDates",
+    "url": "https://www.idates.com",
+    "desc": "成人 discreet 约会",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "XMatch",
+    "url": "https://www.xmatch.com",
+    "desc": "成人配对偷情",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Kasidie",
+    "url": "https://www.kasidie.com",
+    "desc": "夫妻交换与偷情社交",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "SDC",
+    "url": "https://www.sdc.com",
+    "desc": "swingers 社交",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "SLS",
+    "url": "https://www.swinglifestyle.com",
+    "desc": "swingers 生活方式",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Collarspace",
+    "url": "https://www.collarspace.com",
+    "desc": "BDSM discreet 社交",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "AdultFriendFinder Discreet",
+    "url": "https://adultfriendfinder.com",
+    "desc": "成人偷情交友",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Ashley Madison Discreet",
+    "url": "https://www.ashleymadison.com",
+    "desc": "已婚偷情",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Victoria Milan Discreet",
+    "url": "https://www.victoriamilan.com",
+    "desc": "已婚偷情",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Seeking Discreet",
+    "url": "https://www.seeking.com",
+    "desc": "互惠 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "SecretBenefits Discreet",
+    "url": "https://www.secretbenefits.com",
+    "desc": "秘密互惠",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "WhatsYourPrice Discreet",
+    "url": "https://www.whatsyourprice.com",
+    "desc": "出价约会",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Pure Discreet",
+    "url": "https://www.pure.info",
+    "desc": "匿名偷情约会",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Feeld Discreet",
+    "url": "https://feeld.co",
+    "desc": "开放关系 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "3Fun Discreet",
+    "url": "https://www.3fun.com",
+    "desc": "三人约会",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "FetLife Discreet",
+    "url": "https://fetlife.com",
+    "desc": "兴趣 discreet 社交",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Cougar Life Discreet",
+    "url": "https://www.cougarlife.com",
+    "desc": "熟女 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Cougar.com Discreet",
+    "url": "https://www.cougar.com",
+    "desc": "熟女约会",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "MissTravel Discreet",
+    "url": "https://www.misstravel.com",
+    "desc": "旅行伴侣 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "EstablishedMen Discreet",
+    "url": "https://www.establishedmen.com",
+    "desc": "成功男士 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Sugars Discreet",
+    "url": "https://sugars.dating",
+    "desc": "互惠 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "RichMeetBeautiful Discreet",
+    "url": "https://www.richmeetbeautiful.com",
+    "desc": "富豪 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "OurTime Discreet",
+    "url": "https://www.ourtime.com",
+    "desc": "中年 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "DateMyAge Discreet",
+    "url": "https://www.datemyage.com",
+    "desc": "年龄匹配 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Luxy Discreet",
+    "url": "https://onluxy.com",
+    "desc": "高收入 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "The League Discreet",
+    "url": "https://www.theleague.com",
+    "desc": "精选 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Scruff Discreet",
+    "url": "https://www.scruff.com",
+    "desc": "男男 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Recon",
+    "url": "https://www.recon.com",
+    "desc": "男男 fetish discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Daddyhunt",
+    "url": "https://www.daddyhunt.com",
+    "desc": "男男 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Adam4Adam",
+    "url": "https://www.adam4adam.com",
+    "desc": "男男 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Squirt",
+    "url": "https://www.squirt.org",
+    "desc": "男男 discreet 地图",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "AdultMatch",
+    "url": "https://www.adultmatchdoctor.com",
+    "desc": "成人配对",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "LocalSex",
+    "url": "https://www.localsex.com",
+    "desc": "本地成人约会",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "SexFinder",
+    "url": "https://www.sexfinder.com",
+    "desc": "成人配对",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Chaturbate Discreet",
+    "url": "https://chaturbate.com",
+    "desc": "成人直播私聊",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "OnlyFans Discreet",
+    "url": "https://onlyfans.com",
+    "desc": "订阅 discreet",
+    "cat": "偷情",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  }
+]
