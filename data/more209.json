@@ -1,0 +1,1802 @@
+[
+  {
+    "name": "PowerToFly",
+    "url": "https://powertofly.com",
+    "desc": "远程多元招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Otta",
+    "url": "https://otta.com",
+    "desc": "欧洲远程岗位",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Y Combinator Jobs",
+    "url": "https://www.ycombinator.com/jobs",
+    "desc": "YC 公司岗位",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Himalayas",
+    "url": "https://himalayas.app",
+    "desc": "远程岗位板",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Jobspresso",
+    "url": "https://jobspresso.co",
+    "desc": "远程岗位",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "SkipTheDrive",
+    "url": "https://www.skipthedrive.com",
+    "desc": "居家办公岗",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Virtual Vocations",
+    "url": "https://www.virtualvocations.com",
+    "desc": "居家远程岗",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "WFH Jobs",
+    "url": "https://www.wfh.io",
+    "desc": "居家办公聚合",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "X-Team",
+    "url": "https://x-team.com",
+    "desc": "远程开发团队",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Scalable Path",
+    "url": "https://www.scalablepath.com",
+    "desc": "远程开发匹配",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "程序员客栈",
+    "url": "https://www.proginn.com",
+    "desc": "程序员接单",
+    "cat": "威客",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "开源中国众包",
+    "url": "https://zb.oschina.net",
+    "desc": "开发众包",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "时间财富",
+    "url": "https://www.680.com",
+    "desc": "威客任务",
+    "cat": "威客",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "解放号",
+    "url": "https://www.jfh.com",
+    "desc": "企业服务接单",
+    "cat": "威客",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "人人开发",
+    "url": "https://www.rrkf.com",
+    "desc": "软件外包接单",
+    "cat": "外包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "码市腾讯云",
+    "url": "https://dev.tencent.com",
+    "desc": "腾讯云开发者接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Coding 码市",
+    "url": "https://codemart.com",
+    "desc": "软件外包",
+    "cat": "外包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Truelancer",
+    "url": "https://www.truelancer.com",
+    "desc": "国际威客",
+    "cat": "威客",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Twago",
+    "url": "https://www.twago.com",
+    "desc": "欧洲外包",
+    "cat": "外包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Freelance.de",
+    "url": "https://www.freelance.de",
+    "desc": "德国自由职业",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Sribulancer",
+    "url": "https://www.sribulancer.com",
+    "desc": "东南亚接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Projects.co.id",
+    "url": "https://projects.co.id",
+    "desc": "印尼威客",
+    "cat": "威客",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Fastwork",
+    "url": "https://fastwork.co",
+    "desc": "泰国接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "KUPU",
+    "url": "https://kupu.id",
+    "desc": "印尼零工",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Bark",
+    "url": "https://www.bark.com",
+    "desc": "本地服务接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Airtasker",
+    "url": "https://www.airtasker.com",
+    "desc": "澳洲任务接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Angi Leads",
+    "url": "https://www.angi.com",
+    "desc": "家装服务线索",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Care.com",
+    "url": "https://www.care.com",
+    "desc": "看护家政接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Rover Pets",
+    "url": "https://www.rover.com",
+    "desc": "宠物寄养接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Wag Walking",
+    "url": "https://wagwalking.com",
+    "desc": "遛狗兼职",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "UrbanSitter",
+    "url": "https://www.urbansitter.com",
+    "desc": "临时看护",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Nextdoor Services",
+    "url": "https://nextdoor.com",
+    "desc": "邻里服务",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "DataAnnotation",
+    "url": "https://www.dataannotation.tech",
+    "desc": "AI 数据标注居家",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Outlier AI",
+    "url": "https://outlier.ai",
+    "desc": "AI 训练任务居家",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "TELUS International AI",
+    "url": "https://www.telusinternational.com/ai-data-solutions",
+    "desc": "AI 数据众包",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Lionbridge AI",
+    "url": "https://www.lionbridge.com",
+    "desc": "语言与 AI 众包",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "OneForma",
+    "url": "https://www.oneforma.com",
+    "desc": "语言众包",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "RWS Lionbridge",
+    "url": "https://www.rws.com",
+    "desc": "翻译本地化众包",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Defined.ai",
+    "url": "https://defined.ai",
+    "desc": "语音数据众包",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Sama",
+    "url": "https://www.sama.com",
+    "desc": "数据标注众包",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Playment",
+    "url": "https://playment.io",
+    "desc": "数据标注",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Nextdata Hive",
+    "url": "https://thehive.ai",
+    "desc": "数据标注",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Microworkers",
+    "url": "https://www.microworkers.com",
+    "desc": "微任务众包",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "User Interviews",
+    "url": "https://www.userinterviews.com",
+    "desc": "用户访谈接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Userlytics",
+    "url": "https://www.userlytics.com",
+    "desc": "可用性测试",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Testbirds",
+    "url": "https://www.testbirds.com",
+    "desc": "众包测试",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "uTest",
+    "url": "https://www.utest.com",
+    "desc": "软件测试众包",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Userfeel",
+    "url": "https://www.userfeel.com",
+    "desc": "用户测试接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "IntelliZoom",
+    "url": "https://www.intellizoom.com",
+    "desc": "远程用户测试",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "TryMyUI",
+    "url": "https://www.trymyui.com",
+    "desc": "网站测试接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "PlaybookUX",
+    "url": "https://www.playbookux.com",
+    "desc": "用户研究接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Maze Testing",
+    "url": "https://maze.co",
+    "desc": "产品测试",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "CloudResearch",
+    "url": "https://www.cloudresearch.com",
+    "desc": "在线研究任务",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "YouGov",
+    "url": "https://yougov.com",
+    "desc": "问卷调研",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Toluna",
+    "url": "https://www.toluna.com",
+    "desc": "问卷积分",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Google Opinion Rewards",
+    "url": "https://surveys.google.com/google-opinion-rewards",
+    "desc": "谷歌问卷",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Survey Junkie",
+    "url": "https://www.surveyjunkie.com",
+    "desc": "问卷变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Unbabel",
+    "url": "https://unbabel.com",
+    "desc": "AI 辅助翻译",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Translated.com",
+    "url": "https://translated.com",
+    "desc": "翻译接单",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "ProZ",
+    "url": "https://www.proz.com",
+    "desc": "翻译人才市场",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Smartling",
+    "url": "https://www.smartling.com",
+    "desc": "本地化平台",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "TransPerfect",
+    "url": "https://www.transperfect.com",
+    "desc": "翻译本地化",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Rev Transcription",
+    "url": "https://www.rev.com",
+    "desc": "转录字幕接单",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Speechpad",
+    "url": "https://www.speechpad.com",
+    "desc": "转录接单",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "CastingWords",
+    "url": "https://castingwords.com",
+    "desc": "转录众包",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Contently",
+    "url": "https://contently.com",
+    "desc": "内容写作接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Textbroker",
+    "url": "https://www.textbroker.com",
+    "desc": "英文写作接单",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "WriterAccess",
+    "url": "https://www.writeraccess.com",
+    "desc": "写作接单",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Constant Content",
+    "url": "https://www.constant-content.com",
+    "desc": "文章售卖",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "ClearVoice",
+    "url": "https://www.clearvoice.com",
+    "desc": "内容创作接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Verblio",
+    "url": "https://www.verblio.com",
+    "desc": "博客写作接单",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Scripted",
+    "url": "https://www.scripted.com",
+    "desc": "文案接单",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Compose.ly",
+    "url": "https://compose.ly",
+    "desc": "写作接单",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "CloudPeeps",
+    "url": "https://www.cloudpeeps.com",
+    "desc": "营销自由职业",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "DesignHill",
+    "url": "https://www.designhill.com",
+    "desc": "Logo 设计接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Crowdspring",
+    "url": "https://www.crowdspring.com",
+    "desc": "设计命名接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Cad Crowd",
+    "url": "https://www.cadcrowd.com",
+    "desc": "CAD 设计接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "99designs Contests",
+    "url": "https://99designs.com",
+    "desc": "设计竞赛接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Behance Jobs",
+    "url": "https://www.behance.net/joblist",
+    "desc": "设计岗位",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "站酷ZCOOL",
+    "url": "https://www.zcool.com.cn",
+    "desc": "设计作品与招聘",
+    "cat": "设计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "UI中国",
+    "url": "https://www.ui.cn",
+    "desc": "UI 设计社区接单",
+    "cat": "设计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "优设网",
+    "url": "https://www.uisdc.com",
+    "desc": "设计资讯与招聘",
+    "cat": "设计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "花瓣网",
+    "url": "https://huaban.com",
+    "desc": "设计灵感接单素材",
+    "cat": "设计",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Creative Market",
+    "url": "https://creativemarket.com",
+    "desc": "设计素材变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Envato",
+    "url": "https://www.envato.com",
+    "desc": "模板素材变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "TeacherOn",
+    "url": "https://www.teacheron.com",
+    "desc": "在线家教",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Wyzant",
+    "url": "https://www.wyzant.com",
+    "desc": "美国家教",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Chegg Tutors",
+    "url": "https://www.chegg.com/tutors",
+    "desc": "在线辅导",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Varsity Tutors",
+    "url": "https://www.varsitytutors.com",
+    "desc": "在线辅导",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Verbling",
+    "url": "https://www.verbling.com",
+    "desc": "语言教学",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Outschool",
+    "url": "https://outschool.com",
+    "desc": "儿童在线课",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "51Talk",
+    "url": "https://www.51talk.com",
+    "desc": "在线英语教学",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "阿卡索",
+    "url": "https://www.acadsoc.com.cn",
+    "desc": "在线英语",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Tutor.com",
+    "url": "https://www.tutor.com",
+    "desc": "在线辅导",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "拉勾网",
+    "url": "https://www.lagou.com",
+    "desc": "互联网岗位",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "猎聘",
+    "url": "https://www.liepin.com",
+    "desc": "中高端岗位",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "看准网",
+    "url": "https://www.kanzhun.com",
+    "desc": "公司口碑与岗位",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "职友集",
+    "url": "https://www.jobui.com",
+    "desc": "职位搜索",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "牛客网",
+    "url": "https://www.nowcoder.com",
+    "desc": "校招实习",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "应届生求职网",
+    "url": "https://www.yingjiesheng.com",
+    "desc": "校招",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "海投网",
+    "url": "https://www.haitou.cc",
+    "desc": "校招网申",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "斗米",
+    "url": "https://www.doumi.com",
+    "desc": "兼职零工",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "青团社",
+    "url": "https://www.qingtuanshe.com",
+    "desc": "学生兼职",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "米多多",
+    "url": "https://www.miduoduo.cn",
+    "desc": "兼职",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "兼职吧",
+    "url": "https://www.jianzhi8.com",
+    "desc": "兼职信息",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "蚂蚁兼职",
+    "url": "https://www.mayi.com",
+    "desc": "兼职",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "V2EX 酷工作",
+    "url": "https://www.v2ex.com/?tab=jobs",
+    "desc": "技术远程岗",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "少数派招聘",
+    "url": "https://sspai.com/job",
+    "desc": "产品设计岗",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "即刻工作",
+    "url": "https://web.okjike.com",
+    "desc": "社区招聘",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "百家号",
+    "url": "https://baijiahao.baidu.com",
+    "desc": "百度号变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "头条号",
+    "url": "https://mp.toutiao.com",
+    "desc": "头条创作变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "大鱼号",
+    "url": "https://mp.dayu.com",
+    "desc": "阿里大鱼号",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "企鹅号",
+    "url": "https://om.qq.com",
+    "desc": "腾讯内容变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "网易号",
+    "url": "https://mp.163.com",
+    "desc": "网易号变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "搜狐号",
+    "url": "https://mp.sohu.com",
+    "desc": "搜狐号变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "知乎创作者",
+    "url": "https://www.zhihu.com/creator",
+    "desc": "知乎变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "简书",
+    "url": "https://www.jianshu.com",
+    "desc": "写作社区",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "B站创作中心",
+    "url": "https://member.bilibili.com",
+    "desc": "B站创作变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "小红书创作者",
+    "url": "https://creator.xiaohongshu.com",
+    "desc": "小红书变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "快手创作者服务",
+    "url": "https://cp.kuaishou.com",
+    "desc": "快手创作变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "西瓜创作者",
+    "url": "https://www.ixigua.com",
+    "desc": "西瓜视频变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "喜马拉雅主播",
+    "url": "https://studio.ximalaya.com",
+    "desc": "音频变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "荔枝电台",
+    "url": "https://www.lizhi.fm",
+    "desc": "播客变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "起点作家",
+    "url": "https://write.qq.com",
+    "desc": "网文变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "晋江作者",
+    "url": "https://www.jjwxc.net",
+    "desc": "网文变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "番茄作家",
+    "url": "https://fanqienovel.com",
+    "desc": "短篇网文变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "阅文作家助手",
+    "url": "https://writer.yuewen.com",
+    "desc": "网文变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "淘宝联盟",
+    "url": "https://pub.alimama.com",
+    "desc": "淘客佣金",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "京东联盟",
+    "url": "https://union.jd.com",
+    "desc": "京东佣金",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "拼多多推手",
+    "url": "https://duomai.com",
+    "desc": "电商分销",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "美团联盟",
+    "url": "https://union.meituan.com",
+    "desc": "本地生活佣金",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "抖音星图",
+    "url": "https://www.xingtu.cn",
+    "desc": "达人商单",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "快手聚星",
+    "url": "https://juxing.kuaishou.com",
+    "desc": "达人商单",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Awin",
+    "url": "https://www.awin.com",
+    "desc": "联盟营销",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Impact.com",
+    "url": "https://impact.com",
+    "desc": "联盟营销",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Redbubble",
+    "url": "https://www.redbubble.com",
+    "desc": "印品按需变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Printful",
+    "url": "https://www.printful.com",
+    "desc": "按需印品",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "TeeSpring Spring",
+    "url": "https://www.spring.com",
+    "desc": "T恤按需变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Society6",
+    "url": "https://society6.com",
+    "desc": "艺术衍生品变现",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Shopify Collabs",
+    "url": "https://www.shopify.com/collabs",
+    "desc": "创作者带货",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Etsy Seller",
+    "url": "https://www.etsy.com/sell",
+    "desc": "手作数字商品",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "LiveOps",
+    "url": "https://www.liveops.com",
+    "desc": "居家客服接单",
+    "cat": "客服",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Working Solutions",
+    "url": "https://www.workingsolutions.com",
+    "desc": "居家客服",
+    "cat": "客服",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Arise",
+    "url": "https://www.arise.com",
+    "desc": "居家客服",
+    "cat": "客服",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Concentrix WorkHome",
+    "url": "https://www.concentrix.com",
+    "desc": "客服与支持",
+    "cat": "客服",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "SiteStaff",
+    "url": "https://sitestaff.com",
+    "desc": "远程客服",
+    "cat": "客服",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "SupportNinja",
+    "url": "https://supportninja.com",
+    "desc": "远程客服外包",
+    "cat": "客服",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "WeLocalize Jobs",
+    "url": "https://jobs.welocalize.com",
+    "desc": "本地化居家岗",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Field Agent",
+    "url": "https://www.fieldagent.net",
+    "desc": "门店采集任务",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Idealist",
+    "url": "https://www.idealist.org",
+    "desc": "公益与社会岗位",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "The Muse",
+    "url": "https://www.themuse.com",
+    "desc": "职业与远程岗",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Authentic Jobs",
+    "url": "https://authenticjobs.com",
+    "desc": "设计开发岗位",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Smashing Jobs",
+    "url": "https://www.smashingmagazine.com/jobs/",
+    "desc": "前端设计岗",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Python Job Board",
+    "url": "https://www.python.org/jobs/",
+    "desc": "Python 岗位",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Laravel Jobs",
+    "url": "https://larajobs.com",
+    "desc": "Laravel 远程",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Ruby on Rails Jobs",
+    "url": "https://jobs.rubyonrails.org",
+    "desc": "Rails 岗位",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "智通人才",
+    "url": "https://www.job5156.com",
+    "desc": "珠三角招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "南方人才网",
+    "url": "https://www.job168.com",
+    "desc": "广东招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "中国人才热线",
+    "url": "https://www.cjol.com",
+    "desc": "招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "中华英才网",
+    "url": "https://www.chinahr.com",
+    "desc": "综合招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "深圳人才网",
+    "url": "https://www.szhr.com.cn",
+    "desc": "深圳招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "浙江人才网",
+    "url": "https://www.zjrc.com",
+    "desc": "浙江招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "江苏人才网",
+    "url": "https://www.jsrc.com",
+    "desc": "江苏招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "湖南人才网",
+    "url": "https://www.hnrcsc.com",
+    "desc": "湖南招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "湖北人才网",
+    "url": "https://www.jobhb.com",
+    "desc": "湖北招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "江西人才网",
+    "url": "https://www.jxrcw.com",
+    "desc": "江西招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "广西人才网",
+    "url": "https://www.gxrc.com",
+    "desc": "广西招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "云南人才网",
+    "url": "https://www.ynhr.com",
+    "desc": "云南招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "辽宁人才网",
+    "url": "https://www.lnrc.com.cn",
+    "desc": "辽宁招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "吉林人才网",
+    "url": "https://www.jlrc.com.cn",
+    "desc": "吉林招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Gumtree Jobs",
+    "url": "https://www.gumtree.com/jobs",
+    "desc": "分类兼职",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Craigslist Gigs",
+    "url": "https://www.craigslist.org",
+    "desc": "分类零工",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Indeed Flex",
+    "url": "https://www.indeed.com/career-advice/finding-a-job/gig-jobs",
+    "desc": "零工岗位",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Glassdoor Jobs",
+    "url": "https://www.glassdoor.com/Job/index.htm",
+    "desc": "岗位口碑",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Monster Jobs",
+    "url": "https://www.monster.com",
+    "desc": "综合招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "CareerBuilder",
+    "url": "https://www.careerbuilder.com",
+    "desc": "综合招聘",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "SimplyHired",
+    "url": "https://www.simplyhired.com",
+    "desc": "岗位聚合",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "CoolWorks",
+    "url": "https://www.coolworks.com",
+    "desc": "季节工",
+    "cat": "兼职",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "We Work Remotely Jobs",
+    "url": "https://weworkremotely.com",
+    "desc": "远程职位板",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Remote OK Jobs",
+    "url": "https://remoteok.com",
+    "desc": "远程技术岗位",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "FlexJobs Remote",
+    "url": "https://www.flexjobs.com",
+    "desc": "弹性远程岗位",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "JustRemote Jobs",
+    "url": "https://justremote.co",
+    "desc": "远程岗位检索",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Working Nomads EU",
+    "url": "https://www.workingnomads.com/jobs",
+    "desc": "数字游民岗位",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Otta Tech",
+    "url": "https://app.otta.com",
+    "desc": "科技远程岗",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Remote.com Hub",
+    "url": "https://remote.com",
+    "desc": "远程公司与岗位",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Turing Jobs",
+    "url": "https://www.turing.com",
+    "desc": "远程工程师",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Toptal Freelance",
+    "url": "https://www.toptal.com/freelance",
+    "desc": "高端自由职业",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Arc.dev Jobs",
+    "url": "https://arc.dev",
+    "desc": "远程开发岗位",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Turing Remote",
+    "url": "https://www.turing.com/jobs",
+    "desc": "Turing 远程岗",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "一品威客任务",
+    "url": "https://www.epweike.com",
+    "desc": "威客悬赏",
+    "cat": "威客",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "猪八戒设计",
+    "url": "https://www.zbj.com",
+    "desc": "设计开发营销接单",
+    "cat": "威客",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "RapidWorkers",
+    "url": "https://rapidworkers.com",
+    "desc": "微任务",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "TranslatorsCafe",
+    "url": "https://www.translatorscafe.com",
+    "desc": "翻译接单",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Preply Tutors",
+    "url": "https://preply.com/en/online/tutors",
+    "desc": "语言家教",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "电鸭远程",
+    "url": "https://eleduck.com",
+    "desc": "远程工作社区",
+    "cat": "远程",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "ShareASale Hub",
+    "url": "https://www.shareasale.com",
+    "desc": "联盟营销",
+    "cat": "变现",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Appen Connect",
+    "url": "https://connect.appen.com",
+    "desc": "Appen 居家任务",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Clickworker Edu",
+    "url": "https://www.clickworker.com",
+    "desc": "微任务居家",
+    "cat": "居家",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Amazon MTurk Requester",
+    "url": "https://www.mturk.com",
+    "desc": "机械土耳其任务",
+    "cat": "众包",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  },
+  {
+    "name": "Dribbble Hire",
+    "url": "https://dribbble.com/hiring",
+    "desc": "雇设计",
+    "cat": "接单",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网注册接单，仅限合法劳务。"
+  }
+]
