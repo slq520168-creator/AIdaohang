@@ -1,0 +1,434 @@
+[
+  {
+    "name": "なでしこ彼女",
+    "url": "https://www.nadeshikokanojo.jp",
+    "desc": "东京租女友约会陪伴",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "なでしこ彼女岩手",
+    "url": "https://www.nadeshikoiwate.com",
+    "desc": "岩手租女友约会陪伴",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "レンカノ",
+    "url": "https://rent-kano.com",
+    "desc": "日本全国租女友",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "恋かの",
+    "url": "https://kanojohaken.com",
+    "desc": "关西租女友约会",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "コイカノ",
+    "url": "https://www.koikano.jp",
+    "desc": "大阪京都神户租女友",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "レンタル彼女PREMIUM",
+    "url": "https://www.rentalkanojo.com",
+    "desc": "东京租女友PREMIUM",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Family Romance",
+    "url": "https://www.family-romance.com",
+    "desc": "日本租家人/伴侣代行",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Cuddle Comfort",
+    "url": "https://cuddlecomfort.com",
+    "desc": "专业拥抱陪伴",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Cuddlist",
+    "url": "https://cuddlist.com",
+    "desc": "专业拥抱师预约",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "ThaiLoveLines",
+    "url": "https://www.thailovelines.com",
+    "desc": "泰国交友陪伴",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "ThaiLoveLinks",
+    "url": "https://www.thailovelinks.com",
+    "desc": "泰国交友（Cupid）",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "JapaneseCupid",
+    "url": "https://www.japanesecupid.com",
+    "desc": "日本交友陪伴",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "KoreanCupid",
+    "url": "https://www.koreancupid.com",
+    "desc": "韩国交友陪伴",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "ChineseCupid",
+    "url": "https://www.chinesecupid.com",
+    "desc": "华语交友陪伴",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "InternationalCupid",
+    "url": "https://www.internationalcupid.com",
+    "desc": "国际交友陪伴",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "HongKongCupid",
+    "url": "https://www.hongkongcupid.com",
+    "desc": "香港交友",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "SingaporeCupid",
+    "url": "https://www.singaporecupid.com",
+    "desc": "新加坡交友",
+    "cat": "租妻",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Rent-Mimi",
+    "url": "https://rent-mimi.com",
+    "desc": "韩国租女友/爱人大行",
+    "cat": "租女友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "With-U",
+    "url": "https://with-u.kr",
+    "desc": "韩国租朋友/女友代行",
+    "cat": "租女友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "SSoul Mate",
+    "url": "https://ssoulmate.net",
+    "desc": "韩国爱人大行",
+    "cat": "租女友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Cyrano Agency",
+    "url": "https://cyranoagency.co.kr",
+    "desc": "韩国租女友",
+    "cat": "租女友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "BeeTalk App",
+    "url": "https://www.beetalk.net",
+    "desc": "东南亚语音交友",
+    "cat": "租女友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "CambodianCupid",
+    "url": "https://www.cambodiancupid.com",
+    "desc": "柬埔寨交友",
+    "cat": "租女友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "LaosCupid",
+    "url": "https://www.laoscupid.com",
+    "desc": "老挝交友",
+    "cat": "租女友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "IndianCupid",
+    "url": "https://www.indiancupid.com",
+    "desc": "印度交友",
+    "cat": "租女友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "AsianSingleSolution",
+    "url": "https://www.asiansinglesolution.com",
+    "desc": "亚洲单身交友",
+    "cat": "租女友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "ThaiFriendly PH",
+    "url": "https://www.thaifriendly.com/philippines-dating",
+    "desc": "泰站菲律宾交友",
+    "cat": "租女友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "ThaiFriendly VN",
+    "url": "https://www.thaifriendly.com/vietnamese-dating",
+    "desc": "泰站越南交友",
+    "cat": "租女友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "DateThai",
+    "url": "https://www.datethai.com",
+    "desc": "泰国约会",
+    "cat": "租女友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "MeetThai",
+    "url": "https://www.meetthai.com",
+    "desc": "泰国交友",
+    "cat": "租女友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "コイカレ",
+    "url": "https://www.koikare.jp",
+    "desc": "关西名古屋东京租男友",
+    "cat": "租男友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "レンカレ",
+    "url": "https://rent-kare.net",
+    "desc": "关西名古屋福冈租男友",
+    "cat": "租男友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "カトレア",
+    "url": "https://cattleya.club",
+    "desc": "日本租男友约会",
+    "cat": "租男友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Family Romance BF",
+    "url": "https://www.family-romance.com/en/service/boyfriend/",
+    "desc": "日本男友代行",
+    "cat": "租男友",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Tourlina",
+    "url": "https://www.tourlina.com",
+    "desc": "女性旅行结伴",
+    "cat": "陪游",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Travel Ladies",
+    "url": "https://www.travelladies.app",
+    "desc": "女性旅行伴侣",
+    "cat": "陪游",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Backpackr",
+    "url": "https://backpackr.org",
+    "desc": "旅行结伴",
+    "cat": "陪游",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Touristlink",
+    "url": "https://www.touristlink.com",
+    "desc": "旅行伙伴",
+    "cat": "陪游",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "TravelBuddy",
+    "url": "https://www.travelbuddyapp.com",
+    "desc": "旅行伴侣",
+    "cat": "陪游",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Showaround",
+    "url": "https://showaround.com",
+    "desc": "当地人陪游",
+    "cat": "陪游",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Withlocals",
+    "url": "https://www.withlocals.com",
+    "desc": "当地人陪游",
+    "cat": "陪游",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "ToursByLocals",
+    "url": "https://www.toursbylocals.com",
+    "desc": "当地向导陪游",
+    "cat": "陪游",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "GuruWalk",
+    "url": "https://www.guruwalk.com",
+    "desc": "当地向导陪游",
+    "cat": "陪游",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Nomad List Meet",
+    "url": "https://nomadlist.com",
+    "desc": "数字游民结伴",
+    "cat": "陪游",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "BeWelcome",
+    "url": "https://www.bewelcome.org",
+    "desc": "旅行互助结伴",
+    "cat": "陪游",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Trustroots",
+    "url": "https://www.trustroots.org",
+    "desc": "旅行互助结伴",
+    "cat": "陪游",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "WarmShowers",
+    "url": "https://www.warmshowers.org",
+    "desc": "骑行旅行结伴",
+    "cat": "陪游",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  },
+  {
+    "name": "Hospitality Club",
+    "url": "https://www.hospitalityclub.org",
+    "desc": "旅行接待结伴",
+    "cat": "陪游",
+    "pack": "社交",
+    "free": true,
+    "how": "打开官网，仅限18岁以上。"
+  }
+]
