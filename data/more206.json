@@ -1,0 +1,1001 @@
+[
+  {
+    "name": "58同城招聘",
+    "url": "https://www.58.com",
+    "desc": "本地兼职招聘",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "赶集网",
+    "url": "https://www.ganji.com",
+    "desc": "分类兼职",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "BOSS直聘兼职",
+    "url": "https://www.zhipin.com",
+    "desc": "兼职与全职",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "前程无忧",
+    "url": "https://www.51job.com",
+    "desc": "招聘兼职",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "智联招聘",
+    "url": "https://www.zhaopin.com",
+    "desc": "招聘兼职",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "实习僧",
+    "url": "https://www.shixiseng.com",
+    "desc": "实习兼职",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "应届生",
+    "url": "https://www.yingjiesheng.com",
+    "desc": "校招兼职",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Indeed",
+    "url": "https://www.indeed.com",
+    "desc": "全球招聘",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Glassdoor",
+    "url": "https://www.glassdoor.com",
+    "desc": "公司点评与兼职",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "ZipRecruiter",
+    "url": "https://www.ziprecruiter.com",
+    "desc": "美国招聘",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Kalibrr",
+    "url": "https://www.kalibrr.com",
+    "desc": "菲律宾招聘",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Glints",
+    "url": "https://glints.com",
+    "desc": "东南亚招聘",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "VietnamWorks",
+    "url": "https://www.vietnamworks.com",
+    "desc": "越南招聘",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Craigslist Jobs",
+    "url": "https://www.craigslist.org",
+    "desc": "分类兼职",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Snagajob",
+    "url": "https://www.snagajob.com",
+    "desc": "小时工兼职",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Instawork",
+    "url": "https://www.instawork.com",
+    "desc": "灵活兼职",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Wonolo",
+    "url": "https://www.wonolo.com",
+    "desc": "日结兼职",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Shiftgig",
+    "url": "https://www.shiftgig.com",
+    "desc": "班次兼职",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Cooler",
+    "url": "https://www.coolworks.com",
+    "desc": "季节兼职",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Dribbble Jobs",
+    "url": "https://dribbble.com/jobs",
+    "desc": "设计接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Contra",
+    "url": "https://contra.com",
+    "desc": "独立接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Workana",
+    "url": "https://www.workana.com",
+    "desc": "拉美接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "FreelancerMap",
+    "url": "https://www.freelancermap.com",
+    "desc": "欧洲接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Malt",
+    "url": "https://www.malt.fr",
+    "desc": "法国接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Twine",
+    "url": "https://www.twine.net",
+    "desc": "创意接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "SolidGigs",
+    "url": "https://solidgigs.com",
+    "desc": "精选接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Gun.io",
+    "url": "https://gun.io",
+    "desc": "开发接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Toptal Edge",
+    "url": "https://www.toptal.com",
+    "desc": "高端接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Arc.dev",
+    "url": "https://arc.dev",
+    "desc": "远程开发接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Andela",
+    "url": "https://andela.com",
+    "desc": "非洲开发接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Lemon.io",
+    "url": "https://lemon.io",
+    "desc": "开发接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Gigster",
+    "url": "https://gigster.com",
+    "desc": "团队接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Codementor",
+    "url": "https://www.codementor.io",
+    "desc": "编程辅导接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Preply",
+    "url": "https://preply.com",
+    "desc": "语言家教接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "italki",
+    "url": "https://www.italki.com",
+    "desc": "语言老师接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Cambly",
+    "url": "https://www.cambly.com",
+    "desc": "英语口语接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "VIPKid",
+    "url": "https://www.vipkid.com",
+    "desc": "少儿英语接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "AmazingTalker",
+    "url": "https://www.amazingtalker.com",
+    "desc": "语言家教",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "猪八戒任务",
+    "url": "https://task.zbj.com",
+    "desc": "威客接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "实现网",
+    "url": "https://shixian.com",
+    "desc": "程序员兼职接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "V2EX 远程",
+    "url": "https://www.v2ex.com/?tab=jobs",
+    "desc": "远程与兼职信息",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "远程.work",
+    "url": "https://yuancheng.work",
+    "desc": "远程职位",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Remotive",
+    "url": "https://remotive.com",
+    "desc": "远程工作",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "TaskRabbit",
+    "url": "https://www.taskrabbit.com",
+    "desc": "上门杂活接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Thumbtack",
+    "url": "https://www.thumbtack.com",
+    "desc": "本地服务接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Handy Jobs",
+    "url": "https://www.handy.com",
+    "desc": "家政接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Gumroad",
+    "url": "https://gumroad.com",
+    "desc": "数字产品变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Ko-fi",
+    "url": "https://ko-fi.com",
+    "desc": "打赏变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Buy Me a Coffee",
+    "url": "https://www.buymeacoffee.com",
+    "desc": "打赏变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Patreon",
+    "url": "https://www.patreon.com",
+    "desc": "订阅变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Substack",
+    "url": "https://substack.com",
+    "desc": "newsletter 变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Medium Partner",
+    "url": "https://medium.com",
+    "desc": "写作分成",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Kick Creator",
+    "url": "https://kick.com",
+    "desc": "直播变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Amazon Associates",
+    "url": "https://affiliate-program.amazon.com",
+    "desc": "联盟变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "ShareASale",
+    "url": "https://www.shareasale.com",
+    "desc": "联盟变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "CJ Affiliate",
+    "url": "https://www.cj.com",
+    "desc": "联盟变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "ClickBank",
+    "url": "https://www.clickbank.com",
+    "desc": "数字商品联盟",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Impact",
+    "url": "https://impact.com",
+    "desc": "联盟变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Rakuten Advertising",
+    "url": "https://rakutenadvertising.com",
+    "desc": "联盟变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Etsy",
+    "url": "https://www.etsy.com",
+    "desc": "手作变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Shopify",
+    "url": "https://www.shopify.com",
+    "desc": "开店变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Depop",
+    "url": "https://www.depop.com",
+    "desc": "闲置变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Poshmark",
+    "url": "https://poshmark.com",
+    "desc": "闲置变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Mercari",
+    "url": "https://www.mercari.com",
+    "desc": "闲置变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "闲鱼",
+    "url": "https://2.taobao.com",
+    "desc": "闲置变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "转转",
+    "url": "https://www.zhuanzhuan.com",
+    "desc": "二手变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Swagbucks",
+    "url": "https://www.swagbucks.com",
+    "desc": "任务积分变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Prolific",
+    "url": "https://www.prolific.com",
+    "desc": "问卷变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Amazon MTurk",
+    "url": "https://www.mturk.com",
+    "desc": "微任务变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Clickworker",
+    "url": "https://www.clickworker.com",
+    "desc": "微任务变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Toloka",
+    "url": "https://toloka.ai",
+    "desc": "数据标注变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Scale AI",
+    "url": "https://scale.com",
+    "desc": "数据标注",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Remotasks",
+    "url": "https://www.remotasks.com",
+    "desc": "AI 数据任务",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Neevo",
+    "url": "https://www.neevo.ai",
+    "desc": "语音数据任务",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "GoTranscript",
+    "url": "https://gotranscript.com",
+    "desc": "转录接单变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Scribie",
+    "url": "https://scribie.com",
+    "desc": "转录变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "TranscribeMe",
+    "url": "https://www.transcribeme.com",
+    "desc": "转录变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "UserInterviews",
+    "url": "https://www.userinterviews.com",
+    "desc": "用户研究变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Intellizoom",
+    "url": "https://www.intellizoom.com",
+    "desc": "测试变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "PlaytestCloud",
+    "url": "https://www.playtestcloud.com",
+    "desc": "游戏测试变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Upwork Global",
+    "url": "https://www.upwork.com",
+    "desc": "全球自由职业",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Fiverr Global",
+    "url": "https://www.fiverr.com",
+    "desc": "全球技能市场",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Freelancer Global",
+    "url": "https://www.freelancer.com",
+    "desc": "全球竞标接单",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Guru Global",
+    "url": "https://www.guru.com",
+    "desc": "全球接单",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "PeoplePerHour Global",
+    "url": "https://www.peopleperhour.com",
+    "desc": "全球按小时接单",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "We Work Remotely Global",
+    "url": "https://weworkremotely.com",
+    "desc": "全球远程",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Remote OK Global",
+    "url": "https://remoteok.com",
+    "desc": "全球远程职位",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Working Nomads Global",
+    "url": "https://www.workingnomads.com",
+    "desc": "全球数字游民",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "JustRemote Global",
+    "url": "https://justremote.co",
+    "desc": "全球远程",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "LinkedIn Global",
+    "url": "https://www.linkedin.com",
+    "desc": "全球职业社交",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Deel",
+    "url": "https://www.deel.com",
+    "desc": "全球远程发薪",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Remote.com",
+    "url": "https://remote.com",
+    "desc": "全球雇佣",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Oyster",
+    "url": "https://www.oysterhr.com",
+    "desc": "全球雇佣",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Payoneer",
+    "url": "https://www.payoneer.com",
+    "desc": "全球收款",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Wise",
+    "url": "https://wise.com",
+    "desc": "全球收款",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "PayPal",
+    "url": "https://www.paypal.com",
+    "desc": "全球收款",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Stripe Atlas",
+    "url": "https://stripe.com/atlas",
+    "desc": "全球收款与公司",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Nomad List",
+    "url": "https://nomadlist.com",
+    "desc": "数字游民城市",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "CoworkingCafe",
+    "url": "https://coworkingcafe.com",
+    "desc": "全球共创空间",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "OnlineJobs.ph Global",
+    "url": "https://www.onlinejobs.ph",
+    "desc": "菲律宾远程助理",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "VirtualHelper",
+    "url": "https://www.virtualstaff.ph",
+    "desc": "菲律宾虚拟助理",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Hubstaff Talent",
+    "url": "https://talent.hubstaff.com",
+    "desc": "全球远程人才",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Crossover",
+    "url": "https://www.crossover.com",
+    "desc": "全球远程高薪",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Toptal Network",
+    "url": "https://www.toptal.com/talent",
+    "desc": "全球人才网络",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Turing Global",
+    "url": "https://www.turing.com",
+    "desc": "全球远程开发",
+    "cat": "全球",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "eBay",
+    "url": "https://www.ebay.com",
+    "desc": "二手变现",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Twitch Affiliate",
+    "url": "https://www.twitch.tv",
+    "desc": "直播分成",
+    "cat": "变现",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Seek",
+    "url": "https://www.seek.com",
+    "desc": "澳洲招聘",
+    "cat": "兼职",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Behance",
+    "url": "https://www.behance.net",
+    "desc": "设计作品接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Superprof",
+    "url": "https://www.superprof.com",
+    "desc": "家教接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  },
+  {
+    "name": "Wellfound",
+    "url": "https://wellfound.com",
+    "desc": "创业公司接单",
+    "cat": "接单",
+    "pack": "接单",
+    "free": true,
+    "how": "打开官网注册或使用。"
+  }
+]
