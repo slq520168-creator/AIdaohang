@@ -53,10 +53,11 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
 </div>
 <script>
 (function(){
-  var k='img', style='photo', busy=false, esRef=null;
+  var k='img', style='photo', busy=false, abortCtl=null;
   var FLUX='https://black-forest-labs-flux-1-schnell.hf.space';
   var ACE='https://ace-step-ace-step-v1-5.hf.space';
-  var WAN='https://wan-ai-wan2-1.hf.space';
+  var LTX='https://lightricks-ltx-video-distilled.hf.space';
+  var MGEN='https://facebook-musicgen.hf.space';
   var preset={
     img:'东亚年轻女人靠在深色窗边，金色夕阳光打在侧脸和锁骨，浅景深，85mm镜头',
     vid:'黄昏海边女主角回眸，金色轮廓光，慢速向前推镜头，发丝随风',
@@ -71,7 +72,7 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
       k=b.getAttribute('data-k');
       q.value=preset[k];
       document.getElementById('styles').style.display = (k==='mus') ? 'none' : '';
-      closeEs();
+      if(abortCtl) try{abortCtl.abort()}catch(e){}
     };
   });
   document.querySelectorAll('#styles button').forEach(function(b){
@@ -89,7 +90,6 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
   var styleName={photo:'写真', cartoon:'卡通'};
   function showWait(t){document.getElementById('out').innerHTML='<p class="wait">'+(t||'正在生成…')+'</p>'}
   function showBox(html){document.getElementById('out').innerHTML='<div class="box">'+html+'</div>'}
-  function closeEs(){ if(esRef){ try{esRef.close()}catch(e){} esRef=null; } }
   function esc(s){ return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]}); }
   function fileUrl(x, base){
     function abs(u){
@@ -102,7 +102,10 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
       return u;
     }
     if(!x) return '';
-    if(typeof x==='string') return abs(x);
+    if(typeof x==='string'){
+      if(/^https?:/i.test(x) || /\.(png|jpe?g|webp|gif|mp3|mp4|wav|webm|flac)(\?|$)/i.test(x)) return abs(x);
+      return '';
+    }
     if(Array.isArray(x)){
       for(var i=0;i<x.length;i++){ var u=fileUrl(x[i], base); if(u) return u; }
       return '';
@@ -114,49 +117,66 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
     }
     return '';
   }
-  function runGradio(base, apiName, fnIndex, data, onInfo){
-    closeEs();
-    return new Promise(function(resolve, reject){
-      var session=Math.random().toString(36).slice(2)+Date.now().toString(36);
-      fetch(base+'/gradio_api/queue/join',{
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({data:data, fn_index:fnIndex, session_hash:session, api_name:apiName})
-      }).then(function(r){ return r.json().then(function(j){ if(!r.ok) throw new Error(j.error||j.detail||('HTTP '+r.status)); return j; }); })
-      .then(function(j){
-        if(!j.event_id) throw new Error('排队失败');
-        var es=new EventSource(base+'/gradio_api/queue/data?session_hash='+encodeURIComponent(session));
-        esRef=es;
-        var done=false;
-        function finish(fn){ if(done) return; done=true; closeEs(); fn(); }
-        es.onmessage=function(ev){
-          var msg; try{ msg=JSON.parse(ev.data); }catch(e){ return; }
-          if(msg.msg==='estimation' && onInfo){
-            var eta=Math.round(msg.rank_eta||0);
-            onInfo('排队第 '+(msg.rank||0)+' 位 · 约 '+eta+' 秒');
-          }
-          if(msg.msg==='process_starts' && onInfo) onInfo('模型正在跑…');
-          if(msg.msg==='progress' && onInfo) onInfo('生成中…');
-          if(msg.msg==='process_completed'){
-            var err=msg.output && msg.output.error;
-            if(msg.success===false || err){
-              finish(function(){ reject(new Error(String(err||msg.title||'失败'))); });
-              return;
-            }
-            finish(function(){ resolve((msg.output && msg.output.data) || []); });
-          }
-          if(msg.msg==='close_stream'){
-            finish(function(){ reject(new Error('连接断开')); });
-          }
-        };
-        es.onerror=function(){ finish(function(){ reject(new Error('连接失败')); }); };
-      }).catch(reject);
+  async function readSse(res, onInfo){
+    var reader=res.body.getReader(), dec=new TextDecoder(), buf='', result=null, lastErr=null;
+    while(true){
+      var chunk=await reader.read();
+      if(chunk.done) break;
+      buf+=dec.decode(chunk.value,{stream:true});
+      var parts=buf.split('\n\n');
+      buf=parts.pop();
+      for(var i=0;i<parts.length;i++){
+        var event='message', dataStr='', lines=parts[i].split('\n');
+        for(var j=0;j<lines.length;j++){
+          var line=lines[j];
+          if(line.indexOf('event:')===0) event=line.slice(6).trim();
+          else if(line.indexOf('data:')===0) dataStr+=line.slice(5).trim();
+        }
+        if(event==='error'){ lastErr=String(dataStr||'').replace(/^"|"$/g,''); continue; }
+        if(!dataStr) continue;
+        var msg; try{ msg=JSON.parse(dataStr); }catch(e){ continue; }
+        if(msg.msg==='estimation' && onInfo) onInfo('排队第 '+(msg.rank||0)+' 位 · 约 '+Math.round(msg.rank_eta||0)+' 秒');
+        if(msg.msg==='process_starts' && onInfo) onInfo('模型正在跑…');
+        if(msg.msg==='progress' && onInfo) onInfo('生成中…');
+        if(msg.msg==='log' && onInfo && msg.log) onInfo(String(msg.log).slice(0,80));
+        if(msg.msg==='process_completed'){
+          var err=msg.output && msg.output.error;
+          if(msg.success===false || err) lastErr=String(err||msg.title||'失败');
+          else result=(msg.output && msg.output.data)||[];
+        }
+        if(msg.msg==='close_stream'){ i=parts.length; break; }
+      }
+      if(result || (lastErr && result===null && /quota|needed:|not in the list|ZeroGPU/i.test(String(lastErr)))){
+        if(result) return result;
+      }
+    }
+    if(result) return result;
+    throw new Error(lastErr||'没返回结果');
+  }
+  async function runGradio(base, apiName, fnIndex, data, onInfo){
+    if(abortCtl) try{abortCtl.abort()}catch(e){}
+    abortCtl=new AbortController();
+    var session=Math.random().toString(36).slice(2)+Date.now().toString(36);
+    var join=await fetch(base+'/gradio_api/queue/join',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({data:data, fn_index:fnIndex, session_hash:session, api_name:apiName}),
+      signal:abortCtl.signal
     });
+    var j=await join.json();
+    if(!join.ok || !j.event_id) throw new Error(j.error||j.detail||j.message||('排队失败 '+join.status));
+    var res=await fetch(base+'/gradio_api/queue/data?session_hash='+encodeURIComponent(session),{
+      headers:{'Accept':'text/event-stream'},
+      signal:abortCtl.signal
+    });
+    if(!res.ok || !res.body) throw new Error('连接失败');
+    return readSse(res, onInfo);
   }
   function niceErr(e){
     var s=String((e && e.message)||e||'失败');
-    if(/ZeroGPU|quota/i.test(s)) return '这块免费 GPU 额度用完了，过几分钟再试。模型是真的，不是假图。';
+    if(/ZeroGPU|quota/i.test(s)) return '免费 GPU 额度用完了，过几分钟再试。模型是真的。';
     if(/login|auth|token|unauthor/i.test(s)) return '这个模型要登录才能用，这一次没拿到结果。';
+    if(/AbortError/i.test(s)) return '已取消';
     return s.replace(/https?:\/\/\S+/g,'').slice(0,180);
   }
 
@@ -179,37 +199,42 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
       0.0,1.0,3.0,'ode','',
       'mp3',0.85,false,2.0,0,
       0.9,'NO USER INPUT',true,true,true,
+      null,
       false,true,false,false,0.5,
-      8,null,[],false
+      8,null,[],false,
+      null,null,null,null
     ];
   }
 
   async function makeMus(){
     var prompt=q.value.trim()||preset.mus;
     showWait('ACE-Step v1.5 排队中');
-    var data=await runGradio(ACE, '/generation_wrapper', 77, aceData(prompt), function(t){ showWait('ACE-Step v1.5 · '+t); });
-    var url=fileUrl(data, ACE);
-    if(!url) throw new Error('没返回音频');
-    showBox('<audio controls src="'+esc(url)+'"></audio><p class="cap">ACE-Step v1.5 XL Turbo</p>');
+    try{
+      var data=await runGradio(ACE, '/generation_wrapper', 77, aceData(prompt), function(t){ showWait('ACE-Step v1.5 · '+t); });
+      var url=fileUrl(data, ACE);
+      if(!url) throw new Error('没返回音频');
+      showBox('<audio controls src="'+esc(url)+'"></audio><p class="cap">ACE-Step v1.5 XL Turbo</p>');
+      return;
+    }catch(e){
+      if(!/quota|ZeroGPU|额度/i.test(String(e&&e.message||e))) throw e;
+    }
+    showWait('ACE 额度满了，改走 MusicGen');
+    var data2=await runGradio(MGEN, '/predict_batched', 0, [prompt, null], function(t){ showWait('MusicGen · '+t); });
+    var url2=fileUrl(data2, MGEN);
+    if(!url2) throw new Error('没返回音频');
+    showBox('<audio controls src="'+esc(url2)+'"></audio><p class="cap">MusicGen · ACE 额度满了才用这个</p>');
   }
 
   async function makeVid(){
     var prompt=styled(q.value.trim()||preset.vid);
-    showWait('Wan 2.1 提交中');
-    var data=await runGradio(WAN, '/t2v_generation_async', 5, [prompt, '832*480', false, -1], function(t){ showWait('Wan 2.1 · '+t); });
-    var url=fileUrl(data, WAN);
-    if(!url){
-      showWait('Wan 2.1 等成片');
-      for(var i=0;i<24 && !url;i++){
-        await new Promise(function(r){ setTimeout(r, 8000); });
-        try{
-          var d2=await runGradio(WAN, '/status_refresh', 7, [], function(t){ showWait('Wan 2.1 · '+t); });
-          url=fileUrl(d2, WAN);
-        }catch(e){}
-      }
-    }
-    if(!url) throw new Error('Wan 2.1 这次没给出视频（队列或额度）。不会用静图假装成片。');
-    showBox('<video controls playsinline src="'+esc(url)+'"></video><p class="cap">Wan 2.1 · '+(styleName[style]||'')+' · 832×480</p>');
+    var neg='worst quality, inconsistent motion, blurry, jittery, distorted, watermark';
+    var h=style==='photo'?768:640, w=style==='photo'?512:512;
+    showWait('LTX-Video 排队中');
+    var payload=[prompt, neg, null, null, h, w, 'text-to-video', 2, 9, 42, true, 1, false];
+    var data=await runGradio(LTX, '/text_to_video', 4, payload, function(t){ showWait('LTX-Video · '+t); });
+    var url=fileUrl(data, LTX);
+    if(!url) throw new Error('LTX 这次没给出视频。不会用静图假装成片。');
+    showBox('<video controls playsinline src="'+esc(url)+'"></video><p class="cap">LTX-Video Distilled · '+(styleName[style]||'')+' · '+w+'×'+h+'</p>');
   }
 
   document.getElementById('go').onclick=async function(){
