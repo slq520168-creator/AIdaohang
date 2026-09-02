@@ -180,13 +180,61 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
     return s.replace(/https?:\/\/\S+/g,'').slice(0,180);
   }
 
+  function sleep(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+  async function hordeImg(prompt, models, w, h){
+    var body={
+      prompt: prompt,
+      params:{ width:w, height:h, steps:8, n:1, sampler_name:'k_euler_a', cfg_scale:5 },
+      models: models,
+      nsfw: true,
+      censor_nsfw: false,
+      r2: true,
+      slow_workers: true
+    };
+    var headers={
+      'Content-Type':'application/json',
+      'apikey':'0000000000',
+      'Client-Agent':'AIdaohang:1.0:github.com/slq520168-creator'
+    };
+    var join=await fetch('https://stablehorde.net/api/v2/generate/async',{method:'POST', headers:headers, body:JSON.stringify(body)});
+    var j=await join.json();
+    if(!j.id){
+      var msg=j.message||j.rc||('排队失败 '+join.status);
+      var err=new Error(msg); err.rc=j.rc; throw err;
+    }
+    for(var i=0;i<60;i++){
+      await sleep(2500);
+      var c=await fetch('https://stablehorde.net/api/v2/generate/check/'+j.id,{headers:headers}).then(function(r){return r.json();});
+      var q=c.queue_position||0, wt=c.wait_time||0;
+      showWait('AI Horde · 排队 '+(q)+' · 约 '+wt+' 秒');
+      if(c.done || c.faulted) break;
+    }
+    var st=await fetch('https://stablehorde.net/api/v2/generate/status/'+j.id,{headers:headers}).then(function(r){return r.json();});
+    var g=(st.generations||[])[0];
+    if(!g || !g.img) throw new Error(st.message||'没返回图片');
+    return g;
+  }
   async function makeImg(){
-    var prompt=styled(q.value.trim()||preset.img);
-    showWait('FLUX.1-schnell 排队中');
-    var data=await runGradio(FLUX, '/infer', 2, [prompt, 0, true, 768, 1024, 4], function(t){ showWait('FLUX.1-schnell · '+t); });
-    var url=fileUrl(data, FLUX);
-    if(!url) throw new Error('没返回图片');
-    showBox('<img alt="" src="'+esc(url)+'"><p class="cap">FLUX.1-schnell · '+(styleName[style]||'')+' · 768×1024</p>');
+    var raw=q.value.trim()||preset.img;
+    var prompt, models;
+    if(style==='cartoon'){
+      prompt=raw+' , anime, cartoon illustration, clean line art ### photorealistic, photo, 3d render';
+      models=['Abyss OrangeMix','WAI-NSFW-illustrious-SDXL','AMPonyXL'];
+    }else{
+      prompt=raw+' , RAW photo, photorealistic portrait, 85mm, skin pores ### cartoon, anime, illustration, cgi';
+      models=['AbsoluteReality','Deliberate','ICBINP - I Can\'t Believe It\'s Not Photography','AlbedoBase XL (SDXL)'];
+    }
+    showWait('AI Horde 排队中');
+    var g;
+    try{
+      g=await hordeImg(prompt, models, 512, 768);
+    }catch(e){
+      if(String(e.rc||e.message||e).indexOf('Kudos')===-1) throw e;
+      g=await hordeImg(prompt, models, 512, 512);
+    }
+    var url=g.img;
+    if(url && url.indexOf('http')!==0 && url.indexOf('data:')!==0) url='data:image/webp;base64,'+url;
+    showBox('<img alt="" src="'+esc(url)+'"><p class="cap">'+esc(g.model||'AI Horde')+' · '+(styleName[style]||'')+'</p>');
   }
 
   function aceData(prompt){
