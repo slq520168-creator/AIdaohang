@@ -1,0 +1,1802 @@
+[
+  {
+    "name": "豆包写短剧脚本",
+    "url": "https://www.doubao.com",
+    "desc": "手机写9:16短剧和提示词",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开豆包官网 doubao.com 或手机App，用抖音/手机号登录。 2. 发「写一条30秒9:16竖屏短剧，含分镜表和每镜画面提示词」。 3. 让它按镜头编号输出：画面、台词、时长、运镜。 4. 把视觉提示词单独复制出来，后面给即梦用。 5. 不满意就说「更口语、更冲突、每镜不超过5秒」再生成一版。"
+  },
+  {
+    "name": "Kimi写口播稿",
+    "url": "https://kimi.moonshot.cn",
+    "desc": "长文口播稿和分点提纲",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 kimi.moonshot.cn 或Kimi App登录。 2. 发「给带货/知识口播写60秒稿，口语、可停顿」。 3. 让它标清：钩子、痛点、三句卖点、结尾行动。 4. 复制全文到备忘录，按句拆成字幕行。 5. 再让它出一版更短的15秒版本备用。"
+  },
+  {
+    "name": "通义千问写分场",
+    "url": "https://tongyi.aliyun.com",
+    "desc": "阿里通义写分场和提示词",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 tongyi.aliyun.com 登录阿里云/淘宝账号。 2. 选通义千问，发「3场短剧分场，每场含画面提示词」。 3. 要求9:16、人物服装固定、 palettes 写清楚。 4. 复制提示词，删掉空话只留镜头语言。 5. 把人物设定固定成一段「以后每镜都带上」。"
+  },
+  {
+    "name": "DeepSeek写爽文剧本",
+    "url": "https://chat.deepseek.com",
+    "desc": "DeepSeek网页写爽文短剧",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 chat.deepseek.com 登录。 2. 发「写反转短剧30秒，5个镜头，每镜带画面提示词」。 3. 打开深度思考可关掉，先求快再改细节。 4. 复制分镜表到备忘录。 5. 让它再输出英文提示词一版，给国际生视频用。"
+  },
+  {
+    "name": "智谱清言写旁白",
+    "url": "https://chatglm.cn",
+    "desc": "清言写旁白和字幕行",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 chatglm.cn 或清言App登录。 2. 发「把这个选题写成旁白，每句不超过12字」。 3. 让它按时间轴 0-5秒、5-10秒 切开。 4. 复制旁白去配音工具。 5. 让它同时给即梦出对应画面提示词。"
+  },
+  {
+    "name": "文心一言写带货稿",
+    "url": "https://yiyan.baidu.com",
+    "desc": "百度文心写带货口播",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 yiyan.baidu.com 百度账号登录。 2. 发「30秒带货口播，前3秒钩子，含价格和行动指令」。 3. 让它避免违禁词，改成平台能过审的说法。 4. 复制到剪映草稿箱。 5. 再要一版评论区置顶话术。"
+  },
+  {
+    "name": "讯飞星火写口播",
+    "url": "https://xinghuo.xfyun.cn",
+    "desc": "星火写口播可转语音",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 xinghuo.xfyun.cn 登录。 2. 发「知识口播60秒，适合讯飞配音朗读」。 3. 让它标停顿符号。 4. 复制文本去讯飞配音或剪映朗读。 5. 让它再出标题和封面大字。"
+  },
+  {
+    "name": "秘塔AI搜热点写稿",
+    "url": "https://metaso.cn",
+    "desc": "先搜热点再写短视频稿",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 metaso.cn。 2. 搜你的赛道近24小时热点。 3. 点进结果让秘塔「写成30秒口播稿」。 4. 核对事实，删掉编造数据。 5. 把稿和参考链接一起存备忘录。"
+  },
+  {
+    "name": "腾讯元宝写脚本",
+    "url": "https://yuanbao.tencent.com",
+    "desc": "元宝写脚本可联网",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 yuanbao.tencent.com 微信/QQ登录。 2. 打开联网，发「根据今天热点写短剧脚本」。 3. 要分镜+提示词+标题三件套。 4. 复制分镜给即梦。 5. 让它给视频号过审版再出一稿。"
+  },
+  {
+    "name": "天工AI写短视频稿",
+    "url": "https://www.tiangong.cn",
+    "desc": "天工搜索写短视频稿",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 tiangong.cn 登录。 2. 用搜索+写作「XX赛道爆款结构」。 3. 让它按抖音前3秒完播来写钩子。 4. 复制口播稿。 5. 再让它列出5个系列续集标题。"
+  },
+  {
+    "name": "ChatGPT写短剧脚本",
+    "url": "https://chatgpt.com",
+    "desc": "ChatGPT写竖屏短剧脚本",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 chatgpt.com 登录。 2. 发「Write a 30s 9:16 short-drama shot list with visual prompts」。 3. 让它每镜含 duration、camera、dialogue。 4. 复制画面prompt给Runway或即梦。 5. 让它再出一版中文口播。"
+  },
+  {
+    "name": "Claude写分场剧本",
+    "url": "https://claude.ai",
+    "desc": "Claude写分场和镜头语言",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 claude.ai 登录。 2. 发「5-shot vertical short, cinematic shot list」。 3. 要求人物一致性描述写死。 4. 复制英文prompt。 5. 让它把每镜压到可图生视频的长度。"
+  },
+  {
+    "name": "Gemini写短视频稿",
+    "url": "https://gemini.google.com",
+    "desc": "Gemini写稿可接Veo",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 gemini.google.com Google账号登录。 2. 发「写9:16产品短视频脚本+分镜提示词」。 3. 让它按Veo/即梦能懂的画面语言写。 4. 复制提示词。 5. 再要封面大字和标题。"
+  },
+  {
+    "name": "Copilot写口播稿",
+    "url": "https://copilot.microsoft.com",
+    "desc": "微软Copilot写口播",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 copilot.microsoft.com 登录。 2. 发「60秒口播，口语化，分句」。 3. 让它给中英两版。 4. 复制到CapCut或剪映。 5. 让它出3个封面标题备选。"
+  },
+  {
+    "name": "Perplexity搜热点写稿",
+    "url": "https://www.perplexity.ai",
+    "desc": "先检索再写短视频稿",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 perplexity.ai。 2. 搜你的领域趋势。 3. 说「turn this into a 30s script with sources」。 4. 删掉没出处的句子。 5. 复制可用口播去配音。"
+  },
+  {
+    "name": "Grok写爽文口播",
+    "url": "https://grok.com",
+    "desc": "Grok网页直接写稿",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 grok.com 登录X或账号。 2. 发「写反转爽文30秒口播+分镜」。 3. 让它更狠钩子、少形容词。 4. 复制提示词给即梦/Grok Imagine若有。 5. 再出标题话题标签。"
+  },
+  {
+    "name": "Poe多模型写稿",
+    "url": "https://poe.com",
+    "desc": "Poe里换模型写脚本",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 poe.com 登录。 2. 选Claude或GPT bot。 3. 发短剧脚本需求，要分镜和prompt。 4. 同一提示换一个模型再出一版对比。 5. 把最好的一版复制走。"
+  },
+  {
+    "name": "OpenRouter多模型写稿",
+    "url": "https://openrouter.ai",
+    "desc": "一个入口换模型写稿",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 openrouter.ai 登录。 2. 在Chat里选DeepSeek/Claude等。 3. 发「竖屏短剧脚本+画面提示词」。 4. 复制输出。 5. 把常用模型钉在侧边下次免找。"
+  },
+  {
+    "name": "Jasper写广告脚本",
+    "url": "https://www.jasper.ai",
+    "desc": "Jasper写广告口播脚本",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 jasper.ai 注册登录。 2. 选Video Script或Ads模板。 3. 填产品卖点和时长15-30秒。 4. 生成后改成口语。 5. 复制去CapCut配音。"
+  },
+  {
+    "name": "Copy.ai写带货口播",
+    "url": "https://www.copy.ai",
+    "desc": "Copy.ai写带货口播",
+    "cat": "脚本",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 copy.ai 登录。 2. 选Short video / TikTok script。 3. 填产品和受众。 4. 生成3版钩子选1个。 5. 复制分句去字幕。"
+  },
+  {
+    "name": "豆包镜头表分镜",
+    "url": "https://www.doubao.com",
+    "desc": "用豆包先出镜头表",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开豆包，粘贴已写好的短剧剧本。 2. 发「改成镜头表：镜号、景别、运镜、画面、台词、秒数」。 3. 要求总共5-8镜，每镜3-5秒。 4. 让它给每镜一条即梦可用提示词。 5. 保存为备忘录，按镜号去生图。"
+  },
+  {
+    "name": "即梦文生图分镜",
+    "url": "https://jimeng.jianying.com",
+    "desc": "即梦按提示词出分镜图",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 jimeng.jianying.com 抖音或剪映账号登录。 2. 选文生图，比例9:16。 3. 按镜头表逐条粘贴提示词，人物描述保持同一段。 4. 每镜出4张选1张保存。 5. 全部镜头导出相册，后面图生视频用。"
+  },
+  {
+    "name": "Kimi列镜头清单",
+    "url": "https://kimi.moonshot.cn",
+    "desc": "Kimi把稿拆成镜头清单",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开Kimi，上传或粘贴口播稿。 2. 发「拆成竖屏镜头清单，每镜画面+字幕」。 3. 让它标清特写还是全景。 4. 复制每镜提示词。 5. 让它检查人物服装是否前后一致。"
+  },
+  {
+    "name": "通义万相分镜图",
+    "url": "https://tongyi.aliyun.com/wanxiang",
+    "desc": "万相出分镜静帧",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开通义万相页面登录。 2. 选文生图9:16。 3. 按镜号生成静帧。 4. 用同一角色参考图锁脸。 5. 下载分镜图到相册。"
+  },
+  {
+    "name": "DeepSeek列分镜表",
+    "url": "https://chat.deepseek.com",
+    "desc": "DeepSeek列可执行分镜",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开DeepSeek聊天。 2. 贴剧本，要「镜号/景别/提示词/台词」。 3. 限制总时长30秒内。 4. 复制表格。 5. 让它把提示词改成即梦风格中文。"
+  },
+  {
+    "name": "智谱清言分镜描述",
+    "url": "https://chatglm.cn",
+    "desc": "清言写分镜描述",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开清言。 2. 发「把旁白改分镜，给清影/即梦用」。 3. 每镜写主体、动作、镜头运动。 4. 复制。 5. 再要首尾帧描述。"
+  },
+  {
+    "name": "即梦首尾帧分镜",
+    "url": "https://jimeng.jianying.com",
+    "desc": "即梦首尾帧控制镜头",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开即梦，先文生图出首帧和尾帧。 2. 进入图生视频，上传首帧，有尾帧也传。 3. 写中间动作提示词。 4. 生成3-5秒预览选最稳的。 5. 按镜号重复直到整段齐。"
+  },
+  {
+    "name": "美图WHEE分镜图",
+    "url": "https://www.whee.com",
+    "desc": "WHEE出分镜静帧",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 whee.com 登录。 2. 文生图，竖图比例。 3. 同一角色垫图。 4. 每镜出图下载。 5. 导入剪映当封面或视频首帧。"
+  },
+  {
+    "name": "腾讯元宝分镜表",
+    "url": "https://yuanbao.tencent.com",
+    "desc": "元宝出分镜表",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开元宝。 2. 贴脚本要镜头表。 3. 让它按视频号9:16写。 4. 复制提示词。 5. 让它标转场方式。"
+  },
+  {
+    "name": "文心一言分镜表",
+    "url": "https://yiyan.baidu.com",
+    "desc": "文心出分镜表",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开文心一言。 2. 发「5镜分镜表+画面提示」。 3. 要求可给度加/即梦用。 4. 复制。 5. 让它检查节奏前3秒。"
+  },
+  {
+    "name": "Claude分镜表",
+    "url": "https://claude.ai",
+    "desc": "Claude写电影感分镜",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 claude.ai。 2. 发「storyboard 5 shots, 9:16, prompts」。 3. 锁角色外貌一段话。 4. 复制英文prompt。 5. 让它再出中文对照。"
+  },
+  {
+    "name": "ChatGPT镜头清单",
+    "url": "https://chatgpt.com",
+    "desc": "ChatGPT出镜头清单",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开ChatGPT。 2. 贴脚本要shot list。 3. 每镜含camera+prompt。 4. 复制给Midjourney或即梦。 5. 让它压缩到可图生视频。"
+  },
+  {
+    "name": "Midjourney分镜板",
+    "url": "https://www.midjourney.com",
+    "desc": "MJ出风格统一分镜",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 midjourney.com 登录进Create。 2. 用同一--cref或角色描述连出5张。 3. 比例--ar 9:16。 4. 把成套图保存。 5. 后续用Runway图生视频。"
+  },
+  {
+    "name": "Gemini分镜描述",
+    "url": "https://gemini.google.com",
+    "desc": "Gemini写Veo分镜",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开Gemini。 2. 发「Veo storyboard, 8s clips」。 3. 要每镜prompt独立。 4. 复制到Flow或AI Studio。 5. 让它写转场衔接句。"
+  },
+  {
+    "name": "Ideogram分镜图",
+    "url": "https://ideogram.ai",
+    "desc": "Ideogram出带字分镜",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 ideogram.ai 登录。 2. 竖图，需要字幕大字就写在prompt里。 3. 同一style码连出多张。 4. 下载。 5. 给CapCut当封面或首帧。"
+  },
+  {
+    "name": "Leonardo分镜板",
+    "url": "https://leonardo.ai",
+    "desc": "Leonardo出分镜静帧",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 leonardo.ai。 2. Image Generation，锁角色参考。 3. 9:16出一组。 4. 下载。 5. 导入Runway做图生视频。"
+  },
+  {
+    "name": "Boords分镜软件",
+    "url": "https://boords.com",
+    "desc": "网页分镜表工具",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 boords.com 注册。 2. 新建故事板，画幅竖屏。 3. 按镜上传即梦图或占位。 4. 给每镜写台词时长。 5. 导出给剪辑对照。"
+  },
+  {
+    "name": "StudioBinder分镜",
+    "url": "https://www.studiobinder.com",
+    "desc": "专业分镜和镜头表",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 studiobinder.com 登录。 2. 新建Storyboard项目。 3. 填镜号、景别、对白。 4. 贴参考图。 5. 导出PDF对着剪。"
+  },
+  {
+    "name": "Milanote分镜墙",
+    "url": "https://milanote.com",
+    "desc": "看板墙排分镜",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 milanote.com。 2. 新建board，9:16参考框。 3. 把脚本、图、提示词卡片排好。 4. 按拍摄/生成顺序编号。 5. 手机打开对照着生成。"
+  },
+  {
+    "name": "Firefly分镜图",
+    "url": "https://firefly.adobe.com",
+    "desc": "Firefly出分镜图",
+    "cat": "分镜",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 firefly.adobe.com Adobe登录。 2. Text to image，竖图。 3. 同一风格连出分镜。 4. 下载。 5. 去Adobe Express或剪映继续。"
+  },
+  {
+    "name": "即梦手机生图",
+    "url": "https://jimeng.jianying.com",
+    "desc": "即梦文生图竖屏出图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 jimeng.jianying.com 登录。 2. 选文生图，比例9:16。 3. 粘贴豆包给的画面提示词，写清人物服装。 4. 生成选最稳一张保存相册。 5. 需要改脸或衣服就用编辑/参考图再出一版。"
+  },
+  {
+    "name": "通义万相生图",
+    "url": "https://tongyi.aliyun.com/wanxiang",
+    "desc": "万相文生图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开通义万相登录。 2. 选文生图竖图。 3. 贴提示词生成。 4. 用垫图保持人物。 5. 下载高清去即梦或剪映。"
+  },
+  {
+    "name": "Liblib生图",
+    "url": "https://www.liblib.art",
+    "desc": "Liblib选模型出图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 liblib.art 登录。 2. 搜适合短剧的模型。 3. 在线生成9:16。 4. 下图。 5. 当即梦参考图用。"
+  },
+  {
+    "name": "美图WHEE生图",
+    "url": "https://www.whee.com",
+    "desc": "WHEE手机可出图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 whee.com 或美图WHEE。 2. 文生图竖图。 3. 生成后修脸。 4. 保存相册。 5. 给即梦图生视频当首帧。"
+  },
+  {
+    "name": "文心一格生图",
+    "url": "https://yige.baidu.com",
+    "desc": "百度一格生图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 yige.baidu.com 登录。 2. 文生图，选竖图。 3. 贴中文提示词。 4. 下载。 5. 导入度加或剪映。"
+  },
+  {
+    "name": "秒画生图",
+    "url": "https://miaohua.baidu.com",
+    "desc": "百度秒画生图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 miaohua.baidu.com。 2. 输入画面描述。 3. 选比例9:16。 4. 出图保存。 5. 用于封面或分镜。"
+  },
+  {
+    "name": "混元生图",
+    "url": "https://hunyuan.tencent.com",
+    "desc": "腾讯混元出图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 hunyuan.tencent.com 登录。 2. 找到图像生成。 3. 竖图比例出角色。 4. 下载。 5. 保持同一描述连出多镜。"
+  },
+  {
+    "name": "堆友AI生图",
+    "url": "https://d.design",
+    "desc": "堆友出图和模板",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 d.design 登录。 2. 用AI出图或搜模板。 3. 导出9:16。 4. 下载。 5. 当封面或视频首帧。"
+  },
+  {
+    "name": "豆包文生图",
+    "url": "https://www.doubao.com",
+    "desc": "豆包对话里直接出图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开豆包。 2. 发「画9:16，…」贴画面描述。 3. 让它改到人物稳定。 4. 长按保存图片。 5. 把图送进即梦图生视频。"
+  },
+  {
+    "name": "稿定AI生图",
+    "url": "https://www.gaoding.com",
+    "desc": "稿定AI出封面图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 gaoding.com 登录。 2. 进AI出图。 3. 竖图生成。 4. 再在画布加标题字。 5. 导出封面。"
+  },
+  {
+    "name": "Midjourney生图",
+    "url": "https://www.midjourney.com",
+    "desc": "MJ出高质量竖图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 midjourney.com Create。 2. 输入prompt加 --ar 9:16。 3. 选中放大下载。 4. 同一角色参数连出系列。 5. 给Runway当首帧。"
+  },
+  {
+    "name": "Flux黑森林生图",
+    "url": "https://bfl.ai",
+    "desc": "Flux官方出图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 bfl.ai 进Flux playground。 2. 登录后贴英文prompt。 3. 出图选清晰的一张。 4. 下载。 5. 去图生视频。"
+  },
+  {
+    "name": "Ideogram海报生图",
+    "url": "https://ideogram.ai",
+    "desc": "Ideogram擅长图里带字",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 ideogram.ai。 2. prompt写清封面大字。 3. 竖图生成。 4. 选字不乱的一张。 5. 当封面导出。"
+  },
+  {
+    "name": "Leonardo生图",
+    "url": "https://leonardo.ai",
+    "desc": "Leonardo出角色图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 leonardo.ai。 2. 选模型，9:16。 3. 用Image guidance锁角色。 4. 批量出分镜。 5. 下载最好的。"
+  },
+  {
+    "name": "Adobe Firefly生图",
+    "url": "https://firefly.adobe.com",
+    "desc": "Firefly商用相对清晰",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 Firefly。 2. Text to image竖图。 3. 生成后generative fill改细节。 4. 下载。 5. 去Express做封面字。"
+  },
+  {
+    "name": "Bing Image Creator",
+    "url": "https://www.bing.com/images/create",
+    "desc": "必应免费出图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 bing.com/images/create 微软登录。 2. 输入描述，竖图尽量写vertical。 3. 生成4张选1。 4. 保存。 5. 注意水印，可再去即梦精修。"
+  },
+  {
+    "name": "SeaArt生图",
+    "url": "https://www.seaart.ai",
+    "desc": "SeaArt模型多",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 seaart.ai 登录。 2. 选模型文生图。 3. 9:16。 4. 下载。 5. 当参考图。"
+  },
+  {
+    "name": "Recraft矢量生图",
+    "url": "https://www.recraft.ai",
+    "desc": "Recraft出图标封面",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 recraft.ai。 2. 选矢量或栅格。 3. 生成封面元素。 4. 导出PNG。 5. 去Canva拼封面。"
+  },
+  {
+    "name": "Krea生图",
+    "url": "https://www.krea.ai",
+    "desc": "Krea实时出图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 krea.ai。 2. Enhance或Generate。 3. 调到竖图。 4. 导出。 5. 可继续Krea视频。"
+  },
+  {
+    "name": "Playground生图",
+    "url": "https://playground.com",
+    "desc": "Playground网页出图",
+    "cat": "生图",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 playground.com 登录。 2. Canvas或Generate。 3. 出9:16角色。 4. 下载。 5. 给Pika/Runway用。"
+  },
+  {
+    "name": "即梦图生视频",
+    "url": "https://jimeng.jianying.com",
+    "desc": "即梦把分镜图变成视频",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开即梦登录。 2. 选图生视频，上传9:16分镜图。 3. 写动作提示词，时长3-5秒。 4. 生成后下载到相册。 5. 下一镜重复，全部镜号下完再去剪映。"
+  },
+  {
+    "name": "可灵手机生视频",
+    "url": "https://klingai.kuaishou.com",
+    "desc": "可灵国内站出视频",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 klingai.kuaishou.com 快手账号登录。 2. 选图生视频或文生视频，比例9:16。 3. 上传即梦静帧，写动作。 4. 生成下载。 5. 多镜都下完导入剪映。"
+  },
+  {
+    "name": "可灵国际Kling",
+    "url": "https://klingai.com",
+    "desc": "Kling国际站出视频",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 klingai.com 登录。 2. 选image to video 9:16。 3. 上传图，写英文动作prompt。 4. 下载mp4。 5. 去CapCut拼接。"
+  },
+  {
+    "name": "智谱清影生视频",
+    "url": "https://chatglm.cn/video",
+    "desc": "清影文生/图生视频",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 chatglm.cn/video 或清言App里清影。 2. 登录后选文生视频或图生视频。 3. 贴分镜提示或上传图。 4. 生成下载。 5. 导入剪映。"
+  },
+  {
+    "name": "Vidu生视频",
+    "url": "https://www.vidu.com",
+    "desc": "Vidu参考图生视频",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 vidu.com 登录。 2. 选参考生视频，上传角色图。 3. 写镜头动作。 4. 生成下载。 5. 多镜头拼接。"
+  },
+  {
+    "name": "海螺视频手机出片",
+    "url": "https://hailuoai.com",
+    "desc": "MiniMax海螺网页出视频",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 hailuoai.com 登录。 2. 选视频，图生或文生，竖屏。 3. 贴提示词或上传首帧。 4. 生成下载。 5. 去剪映。"
+  },
+  {
+    "name": "度加创作视频",
+    "url": "https://aigc.baidu.com",
+    "desc": "百度度加出视频",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 aigc.baidu.com 登录。 2. 选智能成片或图生视频。 3. 上传素材或贴脚本。 4. 导出竖屏。 5. 发百度系或导入剪映。"
+  },
+  {
+    "name": "混元视频",
+    "url": "https://hunyuan.tencent.com",
+    "desc": "混元出视频",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开混元官网找视频生成。 2. 登录腾讯账号。 3. 文生或图生，竖屏。 4. 下载。 5. 去视频号或剪映。"
+  },
+  {
+    "name": "通义万相视频",
+    "url": "https://tongyi.aliyun.com/wanxiang",
+    "desc": "万相视频模式",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开万相，切到视频。 2. 上传图或写提示。 3. 竖屏生成。 4. 下载。 5. 导入剪映。"
+  },
+  {
+    "name": "Dreamina Seedance视频",
+    "url": "https://dreamina.capcut.com",
+    "desc": "即梦国际Dreamina出视频",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 dreamina.capcut.com 登录。 2. 选Seedance视频，9:16。 3. 上传参考或写prompt。 4. 生成下载。 5. 用CapCut成片。"
+  },
+  {
+    "name": "MiniMax Design出片",
+    "url": "https://hub.minimaxi.com",
+    "desc": "MiniMax画布出片",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 hub.minimaxi.com 登录。 2. 新建短视频画布。 3. 让它按脚本出图再出视频。 4. 导出片段。 5. 去剪映精剪。"
+  },
+  {
+    "name": "Runway Gen视频",
+    "url": "https://runwayml.com",
+    "desc": "Runway图生视频",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 runwayml.com 登录。 2. 选Image to Video或Gen。 3. 上传9:16图，写动作。 4. 生成下载。 5. 去CapCut。"
+  },
+  {
+    "name": "Luma Dream Machine",
+    "url": "https://lumalabs.ai",
+    "desc": "Luma梦工厂出视频",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 lumalabs.ai 进Dream Machine。 2. 文生或图生。 3. 竖屏尽量选portrait。 4. 下载。 5. 导入CapCut。"
+  },
+  {
+    "name": "Pika生视频",
+    "url": "https://pika.art",
+    "desc": "Pika出短视频",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 pika.art 登录。 2. 上传图或写prompt。 3. 选竖屏时长。 4. 生成下载。 5. 去剪辑。"
+  },
+  {
+    "name": "Google AI Studio Veo",
+    "url": "https://aistudio.google.com",
+    "desc": "AI Studio里跑Veo",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 aistudio.google.com Google登录。 2. 选Veo视频生成。 3. 贴Gemini写好的英文prompt，竖屏。 4. 生成下载。 5. 去CapCut。"
+  },
+  {
+    "name": "Google Flow生视频",
+    "url": "https://labs.google/fx/tools/flow",
+    "desc": "Flow用Veo做镜头",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 labs.google/fx/tools/flow 登录。 2. 新建场景，选Veo。 3. 按分镜一条条生成。 4. 下载片段。 5. CapCut拼接。"
+  },
+  {
+    "name": "Higgsfield口播出片",
+    "url": "https://higgsfield.ai",
+    "desc": "Higgsfield出镜人口播",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 higgsfield.ai 登录。 2. 选口播/视频模板。 3. 上传人或写prompt。 4. 生成下载。 5. CapCut加字幕。"
+  },
+  {
+    "name": "Haiper生视频",
+    "url": "https://haiper.ai",
+    "desc": "Haiper图生视频",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 haiper.ai。 2. 上传图，写动作。 3. 生成。 4. 下载。 5. 去剪辑时间线。"
+  },
+  {
+    "name": "Genmo生视频",
+    "url": "https://www.genmo.ai",
+    "desc": "Genmo出视频",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 genmo.ai 登录。 2. 文生或图生视频。 3. 生成预览。 4. 下载。 5. 导入CapCut。"
+  },
+  {
+    "name": "Viggle角色驱动",
+    "url": "https://viggle.ai",
+    "desc": "上传角色让它动",
+    "cat": "生视频",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 viggle.ai 登录。 2. 上传角色图。 3. 选动作模板或视频。 4. 生成下载。 5. 当特效镜头插入剪映。"
+  },
+  {
+    "name": "腾讯智影数字人",
+    "url": "https://zenvideo.qq.com",
+    "desc": "智影口播数字人",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 zenvideo.qq.com 登录。 2. 选数字人模板或克隆。 3. 粘贴口播稿生成视频。 4. 下载竖屏。 5. 进剪映加字幕花字。"
+  },
+  {
+    "name": "硅基智能数字人",
+    "url": "https://www.guiji.ai",
+    "desc": "硅基克隆数字人",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 guiji.ai 登录。 2. 选数字人/声音克隆。 3. 上传授权形象和文案。 4. 生成口播视频。 5. 下载去剪映。"
+  },
+  {
+    "name": "闪剪数字人",
+    "url": "https://www.shanjian.tv",
+    "desc": "闪剪模板数字人",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 shanjian.tv 或闪剪App。 2. 选数字人口播模板。 3. 贴文案生成。 4. 导出。 5. 发抖音前再剪一次字幕。"
+  },
+  {
+    "name": "万兴播爆数字人",
+    "url": "https://virbo.wondershare.cn",
+    "desc": "播爆数字人口播",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 virbo.wondershare.cn。 2. 选形象，贴文案。 3. 生成口播。 4. 导出竖屏。 5. 导入剪映。"
+  },
+  {
+    "name": "来画数字人",
+    "url": "https://www.laihua.com",
+    "desc": "来画动画数字人",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 laihua.com 登录。 2. 选数字人或动画模板。 3. 贴旁白生成。 4. 导出。 5. 去剪映混剪。"
+  },
+  {
+    "name": "即梦对口型数字人",
+    "url": "https://jimeng.jianying.com",
+    "desc": "即梦对口型/数字人",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开即梦。 2. 选对口型或数字人相关能力。 3. 上传人像+配音。 4. 生成口型视频。 5. 下载进剪映。"
+  },
+  {
+    "name": "剪映数字人",
+    "url": "https://www.capcut.cn",
+    "desc": "剪映里的数字人",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开剪映App登录。 2. 搜数字人或智能口播。 3. 选形象贴文案。 4. 生成片段。 5. 直接在同一项目加字幕导出。"
+  },
+  {
+    "name": "度加数字人",
+    "url": "https://aigc.baidu.com",
+    "desc": "度加数字人播报",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开度加。 2. 选数字人播报。 3. 贴稿生成。 4. 导出。 5. 可发百度系或再剪。"
+  },
+  {
+    "name": "讯飞虚拟人",
+    "url": "https://www.xfyun.cn",
+    "desc": "讯飞虚拟人口播",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 xfyun.cn 找虚拟人/智作。 2. 登录后选形象。 3. 贴文本合成。 4. 下载视频。 5. 进剪映。"
+  },
+  {
+    "name": "腾讯云数智人",
+    "url": "https://cloud.tencent.com/product/ivh",
+    "desc": "云数智人播报",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开腾讯云数智人产品页。 2. 登录开通体验。 3. 选形象贴文本。 4. 生成预览下载。 5. 去视频号。"
+  },
+  {
+    "name": "HeyGen数字人",
+    "url": "https://www.heygen.com",
+    "desc": "HeyGen多语言数字人",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 heygen.com 登录。 2. 选Avatar，贴脚本。 3. 生成竖屏。 4. 下载。 5. CapCut加字幕。"
+  },
+  {
+    "name": "D-ID数字人",
+    "url": "https://www.d-id.com",
+    "desc": "照片说话数字人",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 d-id.com。 2. 上传照片，贴文案或音频。 3. 生成说话视频。 4. 下载。 5. 插入CapCut。"
+  },
+  {
+    "name": "Synthesia数字人",
+    "url": "https://www.synthesia.io",
+    "desc": "Synthesia培训口播",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 synthesia.io 登录。 2. 选avatar，贴脚本。 3. 生成。 4. 下载。 5. 再压成Shorts尺寸。"
+  },
+  {
+    "name": "Elai数字人口播",
+    "url": "https://elai.io",
+    "desc": "Elai网页数字人",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 elai.io。 2. 选形象贴文案。 3. 生成。 4. 下载竖屏。 5. 去剪辑。"
+  },
+  {
+    "name": "Colossyan数字人",
+    "url": "https://www.colossyan.com",
+    "desc": "Colossyan口播",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 colossyan.com。 2. 选presenter。 3. 贴脚本生成。 4. 下载。 5. CapCut包装。"
+  },
+  {
+    "name": "JoggAI口播数字人",
+    "url": "https://www.jogg.ai",
+    "desc": "Jogg从URL出数字人广告",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 jogg.ai 登录。 2. 可贴产品链接或脚本。 3. 选avatar生成。 4. 下载。 5. CapCut加字幕。"
+  },
+  {
+    "name": "Tavus数字人",
+    "url": "https://www.tavus.io",
+    "desc": "Tavus个性化数字人",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 tavus.io。 2. 克隆或选replica。 3. 贴脚本。 4. 生成下载。 5. 去剪辑。"
+  },
+  {
+    "name": "DeepBrain数字人",
+    "url": "https://www.deepbrain.io",
+    "desc": "DeepBrain Studio口播",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 deepbrain.io。 2. 进Studio选AI avatar。 3. 贴文案。 4. 生成下载。 5. Shorts尺寸导出。"
+  },
+  {
+    "name": "Captions数字人",
+    "url": "https://www.captions.ai",
+    "desc": "Captions App数字人",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 captions.ai 下App。 2. 选AI creator/avatar。 3. 贴脚本生成。 4. 导出。 5. 直接发Reels或再剪。"
+  },
+  {
+    "name": "KreadoAI数字人",
+    "url": "https://www.kreadoai.com",
+    "desc": "Kreado数字人广告",
+    "cat": "数字人",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 kreadoai.com。 2. 选数字人，贴产品卖点。 3. 生成口播。 4. 下载。 5. CapCut成片。"
+  },
+  {
+    "name": "剪映AI配音",
+    "url": "https://www.capcut.cn",
+    "desc": "剪映里直接配音",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开剪映App，导入视频或空时间线。 2. 点音频-文字配音。 3. 粘贴口播稿，选音色。 4. 生成后对齐画面。 5. 音量压BGM再导出。"
+  },
+  {
+    "name": "豆包语音朗读",
+    "url": "https://www.doubao.com",
+    "desc": "豆包把稿读出来",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开豆包。 2. 把口播稿发给它，让它朗读或用语音能力。 3. 用手机录音/导出音频。 4. 导入剪映音轨。 5. 对齐字幕。"
+  },
+  {
+    "name": "魔音工坊手机口播",
+    "url": "https://www.moyin.com",
+    "desc": "魔音工坊配音",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 moyin.com 登录。 2. 新建配音，贴文案。 3. 选主播音色。 4. 导出mp3。 5. 导入剪映。"
+  },
+  {
+    "name": "讯飞配音",
+    "url": "https://peiyin.xunfei.cn",
+    "desc": "讯飞在线配音",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 peiyin.xunfei.cn 登录。 2. 贴口播稿。 3. 选音色、语速。 4. 导出音频。 5. 进剪映对齐画面。"
+  },
+  {
+    "name": "MiniMax语音",
+    "url": "https://hailuoai.com",
+    "desc": "海螺/MiniMax语音",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 hailuoai.com 找语音/配音。 2. 贴文案选音色。 3. 生成试听。 4. 下载。 5. 导入剪映。"
+  },
+  {
+    "name": "通义听悟配音转写",
+    "url": "https://tingwu.aliyun.com",
+    "desc": "听悟转写也可辅助配音稿",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 tingwu.aliyun.com 登录。 2. 上传样片转写校对口播。 3. 把修正稿复制去配音工具。 4. 生成新音轨。 5. 替换剪映原声。"
+  },
+  {
+    "name": "必剪配音",
+    "url": "https://bcut.bilibili.cn",
+    "desc": "必剪里配音",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开必剪App。 2. 导入视频，点配音/朗读。 3. 贴文案选音色。 4. 生成对齐。 5. 导出或一键投B站。"
+  },
+  {
+    "name": "腾讯云语音合成",
+    "url": "https://cloud.tencent.com/product/tts",
+    "desc": "腾讯云TTS",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开腾讯云TTS产品页登录。 2. 用体验台贴文本。 3. 选音色生成。 4. 下载音频。 5. 导入剪映。"
+  },
+  {
+    "name": "剪映音色克隆",
+    "url": "https://www.capcut.cn",
+    "desc": "剪映克隆自己的声音",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开剪映，找声音克隆/我的音色。 2. 按提示录授权音频。 3. 用克隆音色读稿。 4. 放到时间线。 5. 检查口型再导出。"
+  },
+  {
+    "name": "阿里云智能语音",
+    "url": "https://www.aliyun.com/product/nls",
+    "desc": "阿里云NLS配音",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开阿里云智能语音产品页。 2. 用控制台体验文本转语音。 3. 选中文音色。 4. 下载。 5. 进剪映。"
+  },
+  {
+    "name": "ElevenLabs配音",
+    "url": "https://elevenlabs.io",
+    "desc": "ElevenLabs多语言配音",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 elevenlabs.io 登录。 2. Text to Speech贴脚本。 3. 选声音，生成。 4. 下载mp3。 5. CapCut对齐。"
+  },
+  {
+    "name": "CapCut TTS配音",
+    "url": "https://www.capcut.com",
+    "desc": "CapCut文字配音",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开CapCut App。 2. Audio - text to speech。 3. 贴文案选voice。 4. 生成对齐画面。 5. 导出。"
+  },
+  {
+    "name": "PlayHT配音",
+    "url": "https://play.ht",
+    "desc": "PlayHT配音",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 play.ht 登录。 2. 贴文本选voice。 3. 生成下载。 4. 导入CapCut。 5. 调音量。"
+  },
+  {
+    "name": "Fish Audio配音",
+    "url": "https://fish.audio",
+    "desc": "Fish Audio克隆配音",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 fish.audio。 2. 选模型或克隆。 3. 贴文案生成。 4. 下载。 5. 进剪辑。"
+  },
+  {
+    "name": "Murf配音",
+    "url": "https://murf.ai",
+    "desc": "Murf广告配音",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 murf.ai。 2. 贴脚本选voice。 3. 生成。 4. 下载。 5. CapCut。"
+  },
+  {
+    "name": "WellSaid配音",
+    "url": "https://wellsaidlabs.com",
+    "desc": "WellSaid口播",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 wellsaidlabs.com。 2. 贴文案。 3. 生成配音。 4. 下载。 5. 对齐字幕。"
+  },
+  {
+    "name": "Speechify朗读",
+    "url": "https://speechify.com",
+    "desc": "Speechify读稿",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 speechify.com。 2. 贴口播稿。 3. 选声音播放/导出。 4. 导入剪辑。 5. 当旁白轨。"
+  },
+  {
+    "name": "Resemble配音",
+    "url": "https://www.resemble.ai",
+    "desc": "Resemble克隆配音",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 resemble.ai。 2. 创建voice，贴文本。 3. 生成。 4. 下载。 5. 进CapCut。"
+  },
+  {
+    "name": "LOVO配音",
+    "url": "https://lovo.ai",
+    "desc": "LOVO Genny配音",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 lovo.ai。 2. 贴脚本选音色。 3. 生成下载。 4. 导入。 5. 压BGM。"
+  },
+  {
+    "name": "Adobe Podcast Enhance",
+    "url": "https://podcast.adobe.com",
+    "desc": "人声降噪增强",
+    "cat": "配音",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 podcast.adobe.com。 2. 上传你的口播录音。 3. Enhance处理。 4. 下载干净人声。 5. 替换剪映原声。"
+  },
+  {
+    "name": "豆包+即梦+剪映",
+    "url": "https://www.doubao.com",
+    "desc": "豆包写稿即梦出片剪映成片",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开豆包 doubao.com 登录，发「写一条9:16竖屏短剧或产品片，30秒内，含分镜表和每镜画面提示词」。 2. 复制镜头1的视觉提示词。 3. 打开即梦 jimeng.jianying.com 抖音或剪映账号登录，先文生图9:16，再把图丢进图生视频，每镜3-5秒。 4. 把全部片段下载到手机相册。 5. 打开剪映App，新建项目，画幅9:16。 6. 从相册导入全部片段，按分镜顺序排到时间线。 7. 点文字-智能字幕-开始识别，改错字后换成花字。 8. 点音频添加BGM，人声处把音乐压低。 9. 导出1080P，能关水印就关，不能就裁掉底部水印区。 10. 保存后打开抖音/视频号上传，写标题话题发布。"
+  },
+  {
+    "name": "豆包+可灵+剪映",
+    "url": "https://klingai.kuaishou.com",
+    "desc": "豆包写稿可灵出片剪映成片",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开豆包写9:16短剧脚本和分镜提示词，每镜带画面描述。 2. 复制视觉提示词，必要时先让豆包出参考图描述。 3. 打开可灵 klingai.kuaishou.com 快手登录，选图生视频或文生视频9:16，按镜生成。 4. 下载全部片段到相册。 5. 打开剪映新建9:16项目。 6. 导入片段按镜号排列、切掉废帧。 7. 智能字幕识别，改成花字。 8. 加BGM和转场，口播处降音乐。 9. 导出尽量无水印。 10. 发快手或抖音。"
+  },
+  {
+    "name": "ChatGPT+Runway+CapCut",
+    "url": "https://chatgpt.com",
+    "desc": "ChatGPT写稿Runway出片CapCut成片",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 chatgpt.com，发「write a 9:16 short-drama or product script with shot list and visual prompts」。 2. 复制每镜visual prompt。 3. 打开 runwayml.com，Image to Video或Gen，先出图再图生视频，竖屏。 4. 下载clips到手机。 5. 打开CapCut，New project 9:16。 6. Import clips按shot list排列。 7. Auto captions，改错，换成动态字幕。 8. 加BGM，voice处duck音量。 9. Export 1080p，尽量无水印。 10. 发TikTok或Shorts。"
+  },
+  {
+    "name": "Gemini+Veo+CapCut",
+    "url": "https://gemini.google.com",
+    "desc": "Gemini写稿Veo出片CapCut成片",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 gemini.google.com，要9:16脚本+分镜prompt。 2. 复制画面prompt。 3. 打开 aistudio.google.com 或 labs.google/fx/tools/flow 用Veo按镜生成。 4. 下载视频到手机。 5. CapCut新建9:16项目。 6. 导入全部clips排时间线。 7. Auto captions+花字。 8. 加BGM。 9. 导出尽量无水印。 10. 发YouTube Shorts或TikTok。"
+  },
+  {
+    "name": "剪映手机剪辑",
+    "url": "https://www.capcut.cn",
+    "desc": "剪映App剪成片",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 手机下载剪映并登录。 2. 新建项目9:16。 3. 导入即梦/相册素材。 4. 剪掉废镜头，加转场。 5. 智能字幕+BGM后导出。"
+  },
+  {
+    "name": "必剪手机剪辑",
+    "url": "https://bcut.bilibili.cn",
+    "desc": "B站必剪成片",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 下载必剪App登录B站号。 2. 新建竖屏项目。 3. 导入素材剪辑。 4. 语音转字幕。 5. 导出或一键投稿B站。"
+  },
+  {
+    "name": "快影手机剪辑",
+    "url": "https://s.kuaishou.com/kuaiying/",
+    "desc": "快手官方快影剪辑",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开快影官网或App。 2. 新建作品9:16。 3. 导入相册片段。 4. 用字幕和配音。 5. 导出发快手。"
+  },
+  {
+    "name": "度加智能剪辑",
+    "url": "https://aigc.baidu.com",
+    "desc": "度加一键成片",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开度加登录。 2. 选智能成片，贴文案或上传素材。 3. 选竖屏模板。 4. 预览改字幕。 5. 导出。"
+  },
+  {
+    "name": "小影手机剪辑",
+    "url": "https://www.xiaoying.tv",
+    "desc": "小影App剪辑",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 xiaoying.tv 下App。 2. 新建视频导入素材。 3. 裁切变速加字幕。 4. 加音乐。 5. 导出相册。"
+  },
+  {
+    "name": "万兴喵影剪辑",
+    "url": "https://miao.wondershare.cn",
+    "desc": "喵影剪辑成片",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 miao.wondershare.cn 下载。 2. 新建9:16。 3. 导入AI片段。 4. 字幕音乐。 5. 导出。"
+  },
+  {
+    "name": "剪映电脑版",
+    "url": "https://www.capcut.cn",
+    "desc": "电脑精剪导出",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 电脑打开 capcut.cn 下载剪映专业版。 2. 新建9:16。 3. 导入手机传来的片段。 4. 精细剪字幕音频。 5. 导出无水印如有会员。"
+  },
+  {
+    "name": "CapCut手机剪辑",
+    "url": "https://www.capcut.com",
+    "desc": "国际CapCut剪辑",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开CapCut App登录。 2. New project 9:16。 3. Import clips。 4. Captions+BGM。 5. Export。"
+  },
+  {
+    "name": "InShot剪辑",
+    "url": "https://inshot.com",
+    "desc": "InShot轻量剪辑",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 inshot.com 下App。 2. 新建视频竖屏。 3. 导入裁切。 4. 加字幕音乐。 5. 导出。"
+  },
+  {
+    "name": "Descript剪辑",
+    "url": "https://www.descript.com",
+    "desc": "改字幕等于剪视频",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 descript.com 登录。 2. 上传口播视频。 3. 在文稿里删句即删画面。 4. 加字幕。 5. 导出竖屏。"
+  },
+  {
+    "name": "DaVinci iPad剪辑",
+    "url": "https://www.blackmagicdesign.com/products/davinciresolve",
+    "desc": "达芬奇iPad精剪",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. iPad安装DaVinci Resolve。 2. 新建timeline 1080x1920。 3. 导入素材。 4. 调色剪辑字幕。 5. 导出到Files再发。"
+  },
+  {
+    "name": "iMovie剪辑",
+    "url": "https://www.apple.com/imovie/",
+    "desc": "iPhone iMovie剪辑",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开iPhone自带iMovie。 2. 新建项目，选竖屏。 3. 导入片段。 4. 加标题和音乐。 5. 导出到相册。"
+  },
+  {
+    "name": "CapCut网页剪辑",
+    "url": "https://www.capcut.com",
+    "desc": "浏览器里剪CapCut",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 capcut.com 登录。 2. Web editor新建9:16。 3. 上传clips。 4. 自动字幕。 5. 导出。"
+  },
+  {
+    "name": "Final Cut iPad",
+    "url": "https://www.apple.com/final-cut-pro/",
+    "desc": "Final Cut iPad精剪",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. iPad打开Final Cut Pro。 2. 竖屏项目。 3. 导入素材多轨剪。 4. 字幕音乐。 5. 导出。"
+  },
+  {
+    "name": "VEED在线剪辑",
+    "url": "https://www.veed.io",
+    "desc": "浏览器剪辑加字幕",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 veed.io。 2. 上传视频。 3. 自动字幕竖屏。 4. 裁切导出。 5. 发Shorts。"
+  },
+  {
+    "name": "Kapwing在线剪辑",
+    "url": "https://www.kapwing.com",
+    "desc": "Kapwing在线成片",
+    "cat": "剪辑",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 kapwing.com。 2. 上传clips。 3. 拼时间线加字幕。 4. 9:16导出。 5. 下载发布。"
+  },
+  {
+    "name": "剪映自动字幕",
+    "url": "https://www.capcut.cn",
+    "desc": "剪映一键识别字幕",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开剪映项目。 2. 点文字-智能字幕-开始识别。 3. 选中文，校对错字。 4. 调位置避开人脸。 5. 用花字模板后导出。"
+  },
+  {
+    "name": "剪映花字",
+    "url": "https://www.capcut.cn",
+    "desc": "剪映花字模板",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开剪映，先出普通字幕。 2. 点字幕-花字，选爆款模板。 3. 按句高亮关键词。 4. 检查出画。 5. 导出。"
+  },
+  {
+    "name": "必剪语音字幕",
+    "url": "https://bcut.bilibili.cn",
+    "desc": "必剪语音转字幕",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开必剪。 2. 导入成片。 3. 一键语音转字幕。 4. 校对。 5. 导出或投B站。"
+  },
+  {
+    "name": "讯飞听见字幕",
+    "url": "https://www.iflyrec.com",
+    "desc": "听见转写字幕",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 iflyrec.com 登录。 2. 上传视频/音频转写。 3. 校对说话人。 4. 导出srt。 5. 导入剪映。"
+  },
+  {
+    "name": "网易见外字幕",
+    "url": "https://jianwai.youdao.com",
+    "desc": "见外翻译字幕",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 jianwai.youdao.com。 2. 上传视频。 3. 转写并翻译。 4. 导出srt。 5. 进剪映叠双语。"
+  },
+  {
+    "name": "通义听悟转写字幕",
+    "url": "https://tingwu.aliyun.com",
+    "desc": "听悟出字幕稿",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开听悟。 2. 上传成片。 3. 转写校对。 4. 导出文本/字幕。 5. 贴回剪映。"
+  },
+  {
+    "name": "Notta中文字幕",
+    "url": "https://www.notta.ai",
+    "desc": "Notta转写字幕",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 notta.ai。 2. 上传音视频。 3. 选中文转写。 4. 导出srt。 5. 导入剪映或CapCut。"
+  },
+  {
+    "name": "快影智能字幕",
+    "url": "https://s.kuaishou.com/kuaiying/",
+    "desc": "快影语音加字幕",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开快影。 2. 导入视频。 3. 智能字幕。 4. 改模板。 5. 导出发快手。"
+  },
+  {
+    "name": "CapCut自动字幕",
+    "url": "https://www.capcut.com",
+    "desc": "CapCut auto captions",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开CapCut。 2. Text - auto captions。 3. 校对英文/中文。 4. 套模板。 5. 导出。"
+  },
+  {
+    "name": "Submagic字幕",
+    "url": "https://www.submagic.co",
+    "desc": "Submagic爆款字幕",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 submagic.co 登录。 2. 上传竖屏视频。 3. 生成高亮字幕。 4. 选风格。 5. 导出。"
+  },
+  {
+    "name": "Vrew字幕剪辑",
+    "url": "https://vrew.ai",
+    "desc": "Vrew转写即剪辑",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 vrew.ai。 2. 上传视频转写。 3. 在文稿删句。 4. 样式化字幕。 5. 导出。"
+  },
+  {
+    "name": "Descript字幕",
+    "url": "https://www.descript.com",
+    "desc": "Descript字幕轨",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开Descript。 2. 项目自动转写。 3. 改文本即改字幕。 4. 导出带字幕视频。 5. 发平台。"
+  },
+  {
+    "name": "VEED字幕",
+    "url": "https://www.veed.io",
+    "desc": "VEED自动字幕",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开VEED。 2. 上传。 3. Subtitles自动识别。 4. 改样式。 5. 导出。"
+  },
+  {
+    "name": "Kapwing字幕",
+    "url": "https://www.kapwing.com",
+    "desc": "Kapwing自动字幕",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开Kapwing。 2. 自动字幕工具。 3. 校对。 4. 竖屏适配。 5. 导出。"
+  },
+  {
+    "name": "Captions App字幕",
+    "url": "https://www.captions.ai",
+    "desc": "Captions做口播字幕",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开Captions App。 2. 导入口播。 3. 生成动态字幕。 4. 选模板。 5. 导出。"
+  },
+  {
+    "name": "Otter转写字幕",
+    "url": "https://otter.ai",
+    "desc": "Otter出逐字稿",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 otter.ai。 2. 上传音频。 3. 转写校对。 4. 导出文本。 5. 拿去配字幕。"
+  },
+  {
+    "name": "Maestra字幕",
+    "url": "https://www.maestra.ai",
+    "desc": "Maestra字幕翻译",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 maestra.ai。 2. 上传视频。 3. 转写+翻译。 4. 导出srt。 5. 进CapCut。"
+  },
+  {
+    "name": "YouTube字幕工具",
+    "url": "https://studio.youtube.com",
+    "desc": "Studio里出字幕",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 studio.youtube.com。 2. 上传成片到草稿。 3. 自动字幕。 4. 校对下载srt。 5. 也可只发Shorts开字幕。"
+  },
+  {
+    "name": "CapCut动态字幕",
+    "url": "https://www.capcut.com",
+    "desc": "CapCut关键词高亮",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. CapCut里生成captions。 2. 给关键词换色放大。 3. 对准节奏。 4. 预览竖屏安全区。 5. 导出。"
+  },
+  {
+    "name": "剪映识别歌词",
+    "url": "https://www.capcut.cn",
+    "desc": "剪映歌词字幕",
+    "cat": "字幕",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开剪映，导入带BGM视频。 2. 识别歌词或字幕。 3. 用歌词模板。 4. 校对错词。 5. 导出。"
+  },
+  {
+    "name": "即梦出封面",
+    "url": "https://jimeng.jianying.com",
+    "desc": "即梦直接出封面大图",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开即梦文生图9:16。 2. 提示词写「封面大字+人物特写+留标题空位」。 3. 出4张选1。 4. 保存。 5. 发抖音时当封面帧。"
+  },
+  {
+    "name": "美图设计室封面",
+    "url": "https://design.meitu.com",
+    "desc": "美图设计室做封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 design.meitu.com。 2. 选竖版模板。 3. 换图和标题。 4. 导出。 5. 上传平台封面。"
+  },
+  {
+    "name": "美图秀秀封面",
+    "url": "https://xiuxiu.meitu.com",
+    "desc": "秀秀修封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开秀秀App。 2. 导入成片截帧。 3. 磨皮滤镜加文字。 4. 保存。 5. 当封面。"
+  },
+  {
+    "name": "稿定设计封面",
+    "url": "https://www.gaoding.com",
+    "desc": "稿定模板封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 gaoding.com。 2. 搜抖音封面模板。 3. 换字换图。 4. 导出1080x1920。 5. 上传。"
+  },
+  {
+    "name": "创客贴封面",
+    "url": "https://www.chuangkit.com",
+    "desc": "创客贴做封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 chuangkit.com。 2. 选竖版封面。 3. 改文字。 4. 下载。 5. 设为视频封面。"
+  },
+  {
+    "name": "佐糖抠图封面",
+    "url": "https://picwish.cn",
+    "desc": "佐糖抠人做封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 picwish.cn。 2. 上传人物图抠图。 3. 下载透明底。 4. 去剪映或稿定贴标题。 5. 导出封面。"
+  },
+  {
+    "name": "剪映封面模板",
+    "url": "https://www.capcut.cn",
+    "desc": "剪映导出封面帧",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开剪映项目。 2. 在高潮帧暂停。 3. 加标题贴纸。 4. 导出当前帧或设置封面。 5. 发布时选这帧。"
+  },
+  {
+    "name": "WHEE封面图",
+    "url": "https://www.whee.com",
+    "desc": "WHEE出封面图",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开WHEE。 2. 文生图写封面构图。 3. 出图。 4. 加字。 5. 导出。"
+  },
+  {
+    "name": "堆友封面",
+    "url": "https://d.design",
+    "desc": "堆友模板封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开堆友。 2. 搜短视频封面。 3. 替换素材。 4. 导出。 5. 上传。"
+  },
+  {
+    "name": "可灵出封面静帧",
+    "url": "https://klingai.kuaishou.com",
+    "desc": "可灵视频截封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开可灵。 2. 用已生成视频预览。 3. 截最稳一帧保存。 4. 去剪映加标题。 5. 当封面。"
+  },
+  {
+    "name": "Canva封面",
+    "url": "https://www.canva.com",
+    "desc": "Canva做封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 canva.com。 2. 选TikTok/Shorts尺寸。 3. 套模板改字。 4. 下载。 5. 上传封面。"
+  },
+  {
+    "name": "CapCut封面",
+    "url": "https://www.capcut.com",
+    "desc": "CapCut设封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开CapCut项目。 2. 选封面帧。 3. 加文字。 4. 导出或发布时用。 5. 检查安全区。"
+  },
+  {
+    "name": "Photopea封面",
+    "url": "https://www.photopea.com",
+    "desc": "浏览器PS做封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 photopea.com。 2. 新建1080x1920。 3. 导入截帧，加标题。 4. 导出PNG。 5. 当封面。"
+  },
+  {
+    "name": "Adobe Express封面",
+    "url": "https://www.adobe.com/express/",
+    "desc": "Express做封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 Adobe Express。 2. 选竖版。 3. 套模板。 4. 下载。 5. 上传。"
+  },
+  {
+    "name": "Fotor封面",
+    "url": "https://www.fotor.com",
+    "desc": "Fotor做封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 fotor.com。 2. 设计竖版。 3. 加字。 4. 下载。 5. 设封面。"
+  },
+  {
+    "name": "Pixlr封面",
+    "url": "https://pixlr.com",
+    "desc": "Pixlr在线做封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 pixlr.com。 2. E编辑器竖画布。 3. 贴图加字。 4. 导出。 5. 用。"
+  },
+  {
+    "name": "Recraft封面",
+    "url": "https://www.recraft.ai",
+    "desc": "Recraft出封面插画",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开Recraft。 2. 生成插画封面。 3. 下载。 4. Canva加标题。 5. 导出。"
+  },
+  {
+    "name": "Ideogram封面字",
+    "url": "https://ideogram.ai",
+    "desc": "Ideogram出带字封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开Ideogram。 2. prompt写封面标题字。 3. 选字正确的。 4. 下载。 5. 可再精修。"
+  },
+  {
+    "name": "Kittl封面",
+    "url": "https://www.kittl.com",
+    "desc": "Kittl做标题封面",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 kittl.com。 2. 选竖版文字设计。 3. 导出。 4. 叠到截帧上。 5. 当封面。"
+  },
+  {
+    "name": "VistaCreate封面",
+    "url": "https://create.vista.com",
+    "desc": "VistaCreate封面模板",
+    "cat": "封面",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 create.vista.com。 2. 选Reels封面。 3. 改字换图。 4. 下载。 5. 上传。"
+  },
+  {
+    "name": "抖音发作品",
+    "url": "https://www.douyin.com",
+    "desc": "抖音App发竖屏作品",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开抖音App登录。 2. 点+上传剪映导出的成片。 3. 选封面、写标题话题。 4. 设谁可以看，先自见检查。 5. 公开发布并看完播。"
+  },
+  {
+    "name": "快手发作品",
+    "url": "https://www.kuaishou.com",
+    "desc": "快手发作品",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开快手App。 2. 点拍摄/相册上传成片。 3. 写标题。 4. 选封面。 5. 发布。"
+  },
+  {
+    "name": "视频号投稿",
+    "url": "https://channels.weixin.qq.com",
+    "desc": "微信视频号发视频",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开微信-视频号或网页 channels.weixin.qq.com。 2. 发表-从相册选视频。 3. 写描述位置。 4. 可先私密。 5. 公开发布。"
+  },
+  {
+    "name": "哔哩哔哩手机投稿",
+    "url": "https://member.bilibili.com",
+    "desc": "B站手机投稿",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开B站App创作中心。 2. 投稿选竖屏视频。 3. 填标题分区封面。 4. 等转码。 5. 发布。"
+  },
+  {
+    "name": "小红书发短视频",
+    "url": "https://www.xiaohongshu.com",
+    "desc": "小红书发短视频",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开小红书App。 2. 发布-视频。 3. 封面裁切，标题标签。 4. 正文关键词。 5. 发布。"
+  },
+  {
+    "name": "微博视频发布",
+    "url": "https://weibo.com",
+    "desc": "微博发视频",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开微博App。 2. 发微博选视频。 3. 写话题。 4. 上传成片。 5. 发送。"
+  },
+  {
+    "name": "西瓜视频投稿",
+    "url": "https://www.ixigua.com",
+    "desc": "西瓜投稿",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开西瓜/抖音同源创作。 2. 上传视频。 3. 填标题封面。 4. 选竖屏。 5. 发布。"
+  },
+  {
+    "name": "今日头条发视频",
+    "url": "https://mp.toutiao.com",
+    "desc": "头条号发视频",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 mp.toutiao.com 或头条App。 2. 发视频。 3. 标题封面。 4. 发布。 5. 看推荐数据。"
+  },
+  {
+    "name": "抖音创作者中心",
+    "url": "https://creator.douyin.com",
+    "desc": "电脑看数据再发",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 creator.douyin.com 登录。 2. 看昨日完播和热词。 3. 用手机抖音上传新成片。 4. 填标题。 5. 发布后回中心看数据。"
+  },
+  {
+    "name": "快手创作者中心",
+    "url": "https://cp.kuaishou.com",
+    "desc": "快手创作者后台",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 cp.kuaishou.com。 2. 看数据。 3. App上传新片。 4. 写标题。 5. 发布。"
+  },
+  {
+    "name": "TikTok发视频",
+    "url": "https://www.tiktok.com",
+    "desc": "TikTok发作品",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开TikTok App。 2. +上传CapCut成片。 3. 封面描述hashtag。 4. 先Friends检查。 5. 公开。"
+  },
+  {
+    "name": "YouTube Shorts发布",
+    "url": "https://www.youtube.com/shorts",
+    "desc": "YouTube Shorts",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开YouTube App。 2. 创建-Short。 3. 上传竖屏。 4. 标题描述。 5. 发布。"
+  },
+  {
+    "name": "Instagram Reels发布",
+    "url": "https://www.instagram.com/reels",
+    "desc": "Reels发布",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开Instagram。 2. Reels-相册选成片。 3. 封面文字。 4. 分享。 5. 可同时到Feed。"
+  },
+  {
+    "name": "Facebook Reels发布",
+    "url": "https://www.facebook.com/reels",
+    "desc": "Facebook Reels",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开Facebook。 2. Reels上传。 3. 说明文字。 4. 选公开。 5. 发布。"
+  },
+  {
+    "name": "YouTube Studio发布",
+    "url": "https://studio.youtube.com",
+    "desc": "Studio上传Shorts",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开 studio.youtube.com。 2. 创建-上传视频。 3. 勾选Shorts竖屏。 4. 填标题缩略图。 5. 发布。"
+  },
+  {
+    "name": "X发视频",
+    "url": "https://x.com",
+    "desc": "X上传视频",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开X App。 2. 发帖点视频。 3. 上传成片。 4. 写推文。 5. 发送。"
+  },
+  {
+    "name": "LinkedIn发视频",
+    "url": "https://www.linkedin.com",
+    "desc": "LinkedIn发视频",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开LinkedIn。 2. 发帖添加视频。 3. 写职业向说明。 4. 发布。 5. 看播放。"
+  },
+  {
+    "name": "Pinterest发视频",
+    "url": "https://www.pinterest.com",
+    "desc": "Pinterest Idea Pin",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开Pinterest。 2. 创建Pin，上传竖屏。 3. 标题描述。 4. 选看板。 5. 发布。"
+  },
+  {
+    "name": "Snapchat Spotlight",
+    "url": "https://www.snapchat.com",
+    "desc": "Spotlight发布",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开Snapchat。 2. Spotlight或上传。 3. 竖屏成片。 4. 发布。 5. 看浏览。"
+  },
+  {
+    "name": "Threads发视频",
+    "url": "https://www.threads.net",
+    "desc": "Threads发短视频",
+    "cat": "发布",
+    "pack": "视频",
+    "free": true,
+    "how": "1. 打开Threads。 2. 新帖添加视频。 3. 写两句文案。 4. 发布。 5. 可同步IG。"
+  }
+]
