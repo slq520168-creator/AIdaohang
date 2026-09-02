@@ -29,6 +29,7 @@ video{width:100%;border-radius:18px;display:block;margin:12px 0 8px;background:#
 </video>
 <div class="b" id="hello">Hello. Welcome to Global AI Directory. I am Anan. Watch the video, then tap below to open the home page.</div>
 <a class="enter" id="goHome" href="./tools.html?v=212&home=1&lang=en">Enter home</a>
+<a class="enter" id="goMake" href="./create.html" style="background:#1f2937">Image · Video · Music</a>
 </div>
 <script>
 (function(){
@@ -40,6 +41,7 @@ video{width:100%;border-radius:18px;display:block;margin:12px 0 8px;background:#
     document.getElementById('hello').textContent='你好，欢迎来到全球优选AI导航。我是安安。看完视频，点下面进入首页。';
     document.getElementById('goHome').textContent='进入首页';
     document.getElementById('goHome').href='./tools.html?v=212&home=1&lang=zh';
+    document.getElementById('goMake').textContent='做图 · 视频 · 音乐';
   }
   document.getElementById('goHome').addEventListener('click',function(){
     localStorage.setItem('aid_welcome','1');

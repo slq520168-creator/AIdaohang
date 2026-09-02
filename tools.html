@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="IMG_7049.jpeg"/>
 <link rel="stylesheet" href="style.css?v=191"/>
 <style>
-#fraudBtn{border:1px solid #e5e7eb;background:#fff;color:#111827;border-radius:999px;padding:7px 10px;font-size:13px;text-decoration:none;white-space:nowrap}html[data-theme="dark"] #fraudBtn{background:#1f2937;color:#e6edf3;border-color:rgba(255,255,255,.12)}
+#fraudBtn,#makeBtn{border:1px solid #e5e7eb;background:#fff;color:#111827;border-radius:999px;padding:7px 10px;font-size:13px;text-decoration:none;white-space:nowrap}html[data-theme="dark"] #fraudBtn,html[data-theme="dark"] #makeBtn{background:#1f2937;color:#e6edf3;border-color:rgba(255,255,255,.12)}
 .acts{align-items:center}
 </style>
 </head>
@@ -26,6 +26,7 @@
     <p class="sub" id="meta"></p>
   </div>
   <div class="acts">
+    <a id="makeBtn" href="./create.html">创作</a>
     <a id="fraudBtn" href="./fraud.html">防骗指南</a>
     <button id="lang" type="button">中文</button>
     <button id="theme" type="button">深色</button>
@@ -70,6 +71,7 @@
     var a=document.getElementById('fraudBtn');
     if(!a) return;
     a.textContent=(typeof lang!=='undefined' && lang==='en')?'Scam guide':'防骗指南';
+    var m=document.getElementById('makeBtn'); if(m) m.textContent=(typeof lang!=='undefined' && lang==='en')?'Create':'创作';
   }
   if(typeof applyChrome==='function'){
     var old=applyChrome;

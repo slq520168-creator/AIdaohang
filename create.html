@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
+<meta name="theme-color" content="#000000"/>
+<title>创作台 · 做图 视频 音乐</title>
+<link rel="apple-touch-icon" href="IMG_7049.jpeg"/>
+<style>
+html,body{margin:0;min-height:100%;background:#000;color:#f4ece6;font-family:-apple-system,"PingFang SC",sans-serif}
+body{background:#000 url("IMG_7049.jpeg") center/cover no-repeat fixed}
+body::before{content:"";position:fixed;inset:0;background:rgba(8,6,5,.55)}
+.w{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:calc(12px + env(safe-area-inset-top)) 14px calc(24px + env(safe-area-inset-bottom))}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.back{color:#fff;text-decoration:none;background:rgba(255,255,255,.16);border-radius:999px;padding:8px 12px;font-size:14px}
+h1{font-size:18px;margin:0;flex:1}
+.tabs{display:flex;gap:8px;margin:0 0 12px}
+.tabs button{flex:1;border:0;border-radius:12px;padding:10px 0;font-size:15px;font-weight:700;background:rgba(255,255,255,.16);color:#fff}
+.tabs button.on{background:#d97888}
+label{display:block;font-size:13px;opacity:.85;margin:0 0 6px}
+textarea{width:100%;min-height:88px;border:0;border-radius:14px;padding:12px;font-size:16px;resize:vertical;box-sizing:border-box}
+.go{width:100%;margin-top:10px;border:0;border-radius:14px;padding:14px;font-size:16px;font-weight:700;background:#d97888;color:#fff}
+.go[disabled]{opacity:.55}
+.hint{font-size:12px;opacity:.8;margin:8px 0 0;line-height:1.4}
+.box{margin-top:14px;background:rgba(255,255,255,.9);color:#111;border-radius:16px;padding:10px;min-height:80px}
+.box img,.box video,.box audio{width:100%;border-radius:12px;display:block;background:#111}
+.box pre{white-space:pre-wrap;font-size:14px;line-height:1.45;margin:8px 0 0;font-family:inherit}
+.wait{text-align:center;padding:28px 8px;color:#fff}
+</style>
+</head>
+<body>
+<div class="w">
+  <div class="top">
+    <a class="back" href="./tools.html">返回</a>
+    <h1>创作台</h1>
+  </div>
+  <div class="tabs">
+    <button type="button" class="on" data-k="img">做图</button>
+    <button type="button" data-k="vid">视频</button>
+    <button type="button" data-k="mus">音乐</button>
+  </div>
+  <label id="lab">写画面，点生成，图出在下面</label>
+  <textarea id="p" placeholder="一只金色的猫坐在窗边，阳光，电影感"></textarea>
+  <button class="go" id="go" type="button">生成</button>
+  <p class="hint" id="hint">全程留在这一页，不用跳到别的网站。</p>
+  <div id="out"></div>
+</div>
+<script>
+(function(){
+  var k='img', busy=false, audioCtx=null, nodes=[];
+  var lab={
+    img:'写画面，点生成，图出在下面',
+    vid:'写镜头，点生成，短片出在下面（约5秒）',
+    mus:'写歌名或心情，点生成，歌词和音乐在本页播放'
+  };
+  var ph={
+    img:'一只金色的猫坐在窗边，阳光，电影感',
+    vid:'夜晚的赛博街道，镜头向前推，霓虹倒影',
+    mus:'一首温柔的中文情歌，雨夜，吉他'
+  };
+  document.querySelectorAll('.tabs button').forEach(function(b){
+    b.onclick=function(){
+      document.querySelectorAll('.tabs button').forEach(function(x){x.classList.remove('on')});
+      b.classList.add('on');
+      k=b.getAttribute('data-k');
+      document.getElementById('lab').textContent=lab[k];
+      document.getElementById('p').placeholder=ph[k];
+      stopMus();
+    };
+  });
+  function enc(s){return encodeURIComponent(String(s||'').trim()).replace(/%20/g,'%20')}
+  function imgUrl(prompt,w,h,seed){
+    return 'https://image.pollinations.ai/prompt/'+enc(prompt)+'?width='+(w||768)+'&height='+(h||768)+'&nologo=true&model=sana&seed='+(seed||Math.floor(Math.random()*99999));
+  }
+  function loadImg(url){
+    return new Promise(function(res,rej){
+      var im=new Image();
+      im.crossOrigin='anonymous';
+      im.onload=function(){res(im)};
+      im.onerror=function(){rej(new Error('图失败'))};
+      im.src=url;
+    });
+  }
+  function pickMime(){
+    var list=['video/mp4','video/webm;codecs=vp9','video/webm'];
+    if(!window.MediaRecorder) return '';
+    for(var i=0;i<list.length;i++) if(MediaRecorder.isTypeSupported(list[i])) return list[i];
+    return '';
+  }
+  function showWait(t){document.getElementById('out').innerHTML='<p class="wait">'+(t||'正在生成…')+'</p>'}
+  function showBox(html){document.getElementById('out').innerHTML='<div class="box">'+html+'</div>'}
+
+  async function makeImg(){
+    var prompt=document.getElementById('p').value.trim()||ph.img;
+    var url=imgUrl(prompt,768,768);
+    showWait('正在出图，请等几秒');
+    await loadImg(url);
+    showBox('<img alt="生成图" src="'+url+'"><p class="hint" style="color:#444">长按图片可保存</p>');
+  }
+
+  async function makeVid(){
+    var prompt=document.getElementById('p').value.trim()||ph.vid;
+    showWait('正在出画面并合成短片');
+    var im=await loadImg(imgUrl(prompt+' cinematic still 9:16',720,1280));
+    var canvas=document.createElement('canvas');
+    canvas.width=720; canvas.height=1280;
+    var ctx=canvas.getContext('2d');
+    var mime=pickMime();
+    var seconds=5;
+    if(!mime || !canvas.captureStream){
+      showBox('<img alt="画面" src="'+im.src+'"><p class="hint" style="color:#444">这台手机不能本页录视频，先长按保存画面。</p>');
+      return;
+    }
+    var stream=canvas.captureStream(24);
+    var rec=new MediaRecorder(stream,{mimeType:mime});
+    var chunks=[];
+    rec.ondataavailable=function(e){if(e.data&&e.data.size) chunks.push(e.data)};
+    var done=new Promise(function(res){rec.onstop=res});
+    rec.start();
+    var t0=performance.now();
+    function draw(now){
+      var p=Math.min(1,(now-t0)/(seconds*1000));
+      var z=1+0.18*p;
+      var w=720*z, h=1280*z;
+      ctx.fillStyle='#000'; ctx.fillRect(0,0,720,1280);
+      ctx.drawImage(im,(720-w)/2,(1280-h)/2,w,h);
+      if(p<1) requestAnimationFrame(draw);
+      else rec.stop();
+    }
+    requestAnimationFrame(draw);
+    await done;
+    var blob=new Blob(chunks,{type:mime});
+    var url=URL.createObjectURL(blob);
+    showBox('<video controls playsinline src="'+url+'"></video><p class="hint" style="color:#444">短片已在本页，可直接播放。</p>');
+  }
+
+  function stopMus(){
+    nodes.forEach(function(n){try{n.stop()}catch(e){} try{n.disconnect()}catch(e2){}});
+    nodes=[];
+    if(window.speechSynthesis) speechSynthesis.cancel();
+  }
+  function tone(ctx, type, freq, t, dur, gain){
+    var o=ctx.createOscillator();
+    var g=ctx.createGain();
+    o.type=type; o.frequency.value=freq;
+    g.gain.setValueAtTime(0,t);
+    g.gain.linearRampToValueAtTime(gain,t+0.02);
+    g.gain.exponentialRampToValueAtTime(0.0008,t+dur);
+    o.connect(g); g.connect(ctx.destination);
+    o.start(t); o.stop(t+dur+0.02);
+    nodes.push(o);
+  }
+  async function makeMus(){
+    var prompt=document.getElementById('p').value.trim()||ph.mus;
+    showWait('正在写歌词并编排伴奏');
+    stopMus();
+    var lyrics='';
+    try{
+      var q='用中文写一首8行歌词，只要歌词不要解释，主题：'+prompt;
+      var r=await fetch('https://text.pollinations.ai/'+enc(q)+'?model=openai-fast');
+      lyrics=(await r.text()).replace(/^["'\s]+|["'\s]+$/g,'').slice(0,800);
+    }catch(e){
+      lyrics='夜色轻轻落下\n我想你还在路上\n路灯把影子拉长\n这首歌只唱给你听';
+    }
+    if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+    if(audioCtx.state==='suspended') await audioCtx.resume();
+    var now=audioCtx.currentTime+0.05;
+    var bpm=92, beat=60/bpm;
+    var scale=[220,247,262,294,330,349,392,440];
+    for(var i=0;i<32;i++){
+      var t=now+i*beat;
+      if(i%4===0) tone(audioCtx,'sine',110,t,0.18,0.2);
+      if(i%2===0) tone(audioCtx,'triangle',55,t,0.12,0.12);
+      tone(audioCtx,'square',900,t,0.04,0.03);
+      if(i%2===1) tone(audioCtx,'sine',scale[i%scale.length],t,0.28,0.07);
+    }
+    showBox('<audio id="a" controls></audio><pre id="ly">'+lyrics.replace(/[<>]/g,'')+'</pre><p class="hint" style="color:#444">伴奏已在本页响起。若要人声，系统会朗读歌词。</p>');
+    try{
+      var u=new SpeechSynthesisUtterance(lyrics.replace(/\n/g,'，'));
+      u.lang='zh-CN'; u.rate=0.92; u.pitch=1;
+      speechSynthesis.speak(u);
+    }catch(e2){}
+  }
+
+  document.getElementById('go').onclick=async function(){
+    if(busy) return;
+    busy=true; this.disabled=true;
+    try{
+      if(k==='img') await makeImg();
+      else if(k==='vid') await makeVid();
+      else await makeMus();
+    }catch(e){
+      showBox('<p>这次没生成成功，换一句再试。'+(e&&e.message?' '+e.message:'')+'</p>');
+    }
+    busy=false; this.disabled=false;
+  };
+})();
+</script>
+</body>
+</html>
