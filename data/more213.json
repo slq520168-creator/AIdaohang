@@ -1,0 +1,127 @@
+[
+  {
+    "name": "Maestro",
+    "url": "https://github.com/Blizaine/Maestro",
+    "desc": "开源一体创作台：图 Flux、视频 LTX/Wan、音乐 ACE-Step，本地 GPU 跑",
+    "desc_en": "All-in-one local studio: Flux image, LTX/Wan video, ACE-Step music",
+    "cat": "端侧",
+    "pack": "开源套",
+    "tags": [
+      "开源",
+      "本地",
+      "端侧",
+      "生图",
+      "生视频"
+    ],
+    "how": "1. 打开 github.com/Blizaine/Maestro。 2. 电脑安装 Pinokio 后搜索 Maestro 一键装。 3. 按文档下载 Flux、LTX、ACE-Step 权重。 4. 打开 Studio：做图 / 视频 / 音乐三个入口。 5. 需要本机显卡，手机浏览器跑不了引擎。",
+    "free": true
+  },
+  {
+    "name": "DiffSynth-Studio",
+    "url": "https://github.com/modelscope/DiffSynth-Studio",
+    "desc": "魔搭开源扩散引擎，一套代码封面生图、Wan/LTX 视频、ACE-Step 音乐",
+    "desc_en": "ModelScope diffusion engine for image, Wan/LTX video, and ACE-Step music",
+    "cat": "端侧",
+    "pack": "开源套",
+    "tags": [
+      "开源",
+      "本地",
+      "端侧",
+      "生图",
+      "生视频"
+    ],
+    "how": "1. 打开 github.com/modelscope/DiffSynth-Studio。 2. pip 安装后按文档拉 Flux/Wan/ACE-Step。 3. 图、视频、音乐用同一套 Pipeline。 4. WebUI 可用 Streamlit/Gradio 本地起。 5. 需要本机 GPU，不能直接塞进 GitHub 静态页。",
+    "free": true
+  },
+  {
+    "name": "SwarmUI",
+    "url": "https://github.com/mcmonkeyprojects/SwarmUI",
+    "desc": "开源 WebUI：Flux/SD 出图、Wan/混元出视频、ACE-Step 1.5 出歌",
+    "desc_en": "Modular web UI for Flux/SD images, Wan/Hunyuan video, ACE-Step 1.5 music",
+    "cat": "端侧",
+    "pack": "开源套",
+    "tags": [
+      "开源",
+      "本地",
+      "生图",
+      "生视频"
+    ],
+    "how": "1. 打开 github.com/mcmonkeyprojects/SwarmUI。 2. 按官方文档安装（自带 Comfy 后端）。 3. Generate 页选出图或视频模型。 4. 音频选 ACE-Step 1.5。 5. 本机或局域网打开，不依赖手机云额度。",
+    "free": true
+  },
+  {
+    "name": "Wan2GP",
+    "url": "https://github.com/deepbeepmeep/Wan2GP",
+    "desc": "Wan 视频全家桶开源界面，低显存也能跑文生视频",
+    "desc_en": "Wan video generation UI for lower-VRAM local GPUs",
+    "cat": "生视频",
+    "pack": "开源套",
+    "tags": [
+      "开源",
+      "本地",
+      "生视频"
+    ],
+    "how": "1. 打开 github.com/deepbeepmeep/Wan2GP。 2. 按 README 安装。 3. 选 Wan 文生视频或图生视频。 4. Maestro 也是基于这套管线。 5. 需要电脑 GPU。",
+    "free": true
+  },
+  {
+    "name": "ComfyUI",
+    "url": "https://github.com/comfyanonymous/ComfyUI",
+    "desc": "开源节点画布，Flux 出图、LTX/Wan 出视频、ACE-Step 出歌都能挂工作流",
+    "desc_en": "Node graph UI: Flux, LTX/Wan, ACE-Step workflows",
+    "cat": "运行时",
+    "pack": "开源套",
+    "tags": [
+      "开源",
+      "本地",
+      "生图",
+      "生视频",
+      "运行时"
+    ],
+    "how": "1. 打开 github.com/comfyanonymous/ComfyUI。 2. 安装后进工作流页。 3. 加载官方 Flux / LTX / ACE-Step 模板。 4. 同一画布出图、视频、音乐。 5. 本机或局域网使用。",
+    "free": true
+  },
+  {
+    "name": "ACE-Step",
+    "url": "https://github.com/ACE-Step/ACE-Step",
+    "desc": "开源文生音乐模型，创作台音乐页挂的就是它",
+    "desc_en": "Open-source text-to-music model used on the create studio music tab",
+    "cat": "语音",
+    "pack": "开源套",
+    "tags": [
+      "开源",
+      "本地",
+      "语音"
+    ],
+    "how": "1. 打开 github.com/ACE-Step/ACE-Step。 2. 创作台音乐页已接官方 v1.5 演示。 3. 写歌曲描述后点生成。 4. 额度满了会改走 MusicGen。 5. 本机部署可免云额度。",
+    "free": true
+  },
+  {
+    "name": "LTX-Video",
+    "url": "https://github.com/Lightricks/LTX-Video",
+    "desc": "Lightricks 开源文生视频，创作台视频页挂的就是蒸馏版",
+    "desc_en": "Open-source text-to-video; distilled demo is on the create studio video tab",
+    "cat": "生视频",
+    "pack": "开源套",
+    "tags": [
+      "开源",
+      "生视频"
+    ],
+    "how": "1. 打开 github.com/Lightricks/LTX-Video。 2. 创作台视频页已接官方 distilled 演示。 3. 写画面后点生成，等真视频。 4. 不出片不会用静图假装。 5. 完整权重可本机装。",
+    "free": true
+  },
+  {
+    "name": "FLUX.1",
+    "url": "https://github.com/black-forest-labs/flux",
+    "desc": "Black Forest Labs 开源出图，官方空间一张就没额度，创作台图页改走 Horde 写实",
+    "desc_en": "Open-source image model; official ZeroGPU quota dies in one shot so the studio uses Horde photoreal",
+    "cat": "生图",
+    "pack": "开源套",
+    "tags": [
+      "开源",
+      "生图"
+    ],
+    "how": "1. 打开 github.com/black-forest-labs/flux。 2. 官方 HF 空间一张就烧光免费 GPU。 3. 创作台做图改走 AI Horde 写实模型，可连着出。 4. 写真/卡通自己选。 5. 有电脑 GPU 可本机跑 Flux schnell。",
+    "free": true
+  }
+]
