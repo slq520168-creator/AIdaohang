@@ -1,0 +1,1929 @@
+[
+  {
+    "name": "Private LLM",
+    "url": "https://privatellm.app/en",
+    "desc": "iPhone端侧离线对话，买断制本地模型",
+    "desc_en": "On-device offline LLM chat for iPhone, iPad and Mac",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线",
+      "隐私"
+    ],
+    "how": "1. 打开 privatellm.app 进 App Store 安装。 2. 按机型内存选 Llama/Qwen/Gemma 等端侧模型下载。 3. 打开飞行模式也能聊，内容不出手机。 4. 可把对话接到 Siri 和快捷指令。 5. 8GB 内存优先 1B–3B，旗舰再试更大模型。",
+    "free": false
+  },
+  {
+    "name": "fullmoon 本地对话",
+    "url": "https://fullmoon.app",
+    "desc": "苹果芯片端侧离线聊 Llama 和 DeepSeek",
+    "desc_en": "Free on-device LLM chat for Apple silicon via MLX",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 fullmoon.app 或 App Store 搜 fullmoon。 2. 免费装上后选 Llama 3.2 1B/3B 或 DeepSeek-R1 蒸馏 1.5B。 3. 等模型下完即可离线对话。 4. 可改主题和系统提示词。 5. 源码在 GitHub mainframecomputer/fullmoon-ios。",
+    "free": true
+  },
+  {
+    "name": "fullmoon iOS 源码",
+    "url": "https://github.com/mainframecomputer/fullmoon-ios",
+    "desc": "fullmoon 开源端侧聊天 App 源码",
+    "desc_en": "Open-source iOS app for local MLX LLM chat",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 GitHub 仓库看支持的 MLX 模型列表。 2. 普通用户去 App Store 装 fullmoon 即可。 3. 开发者用 Xcode 打开 Swift 工程真机运行。 4. 模型从 Hugging Face mlx-community 拉取。 5. 聊天记录只存在本机。",
+    "free": true
+  },
+  {
+    "name": "Locally AI",
+    "url": "https://locallyai.app",
+    "desc": "LM Studio 出品 iPhone 端侧 MLX 离线聊",
+    "desc_en": "LM Studio iOS app running MLX models fully on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 locallyai.app 或 App Store 搜 Locally AI。 2. 无需登录，选 Llama/Gemma/Qwen 下载到手机。 3. 断网也能聊，数据不出设备。 4. 可选 LM Link 连家里电脑上的更大模型。 5. 建议 iPhone 15 及以上或带 Apple 芯片的 iPad。",
+    "free": true
+  },
+  {
+    "name": "Google AI Edge Gallery",
+    "url": "https://github.com/google-ai-edge/gallery",
+    "desc": "谷歌官方端侧 Gallery，手机跑 Gemma",
+    "desc_en": "Official Google on-device gallery app for Gemma and more",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 GitHub google-ai-edge/gallery。 2. 安卓去 Play 或 Releases 装 APK，iOS 去 App Store。 3. 在 App 里下载 Gemma 等 LiteRT 模型。 4. 用 Chat、识图、录音转写，全部端侧。 5. 安卓 12+ / iOS 17+，Wi-Fi 下模型。",
+    "free": true
+  },
+  {
+    "name": "AI Edge Gallery 安卓",
+    "url": "https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery",
+    "desc": "Play 商店端侧 Gallery 离线跑模型",
+    "desc_en": "Play Store listing for Google AI Edge Gallery",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. Play 搜 Google AI Edge Gallery 安装。 2. 首次联网下载 Gemma 等模型。 3. 打开 Chat 或 Ask Image 在手机本地推理。 4. 可看 Benchmark 对比本机速度。 5. 无 Play 则用 GitHub Releases 的 APK。",
+    "free": true
+  },
+  {
+    "name": "AI Edge Gallery iPhone",
+    "url": "https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337",
+    "desc": "App Store 端侧 Gallery 离线跑 Gemma",
+    "desc_en": "App Store listing for Google AI Edge Gallery on iOS",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. App Store 搜 Google AI Edge Gallery。 2. 安装后下载列表里的端侧模型。 3. 用对话、识图、语音转写，均在本机。 4. 可导入自定义模型做对比。 5. 需 iOS 17+ 和足够存储。",
+    "free": true
+  },
+  {
+    "name": "MLC Chat iOS 部署",
+    "url": "https://llm.mlc.ai/docs/deploy/ios.html",
+    "desc": "MLC 官方 iPhone 端侧编译部署文档",
+    "desc_en": "Official MLC LLM iOS on-device deploy guide",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF"
+    ],
+    "how": "1. 打开 llm.mlc.ai 的 iOS 部署页。 2. 按文档用 Xcode 编译 MLC Chat 或装预编译包。 3. 把编译好的模型打进 App。 4. 真机运行，聊天走 Metal/GPU。 5. 存储不够就换更小量化。",
+    "free": true
+  },
+  {
+    "name": "Layla 本地LLM",
+    "url": "https://www.layla-network.ai",
+    "desc": "安卓端侧离线助手，可加载 GGUF",
+    "desc_en": "Android/iOS offline assistant running GGUF on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线",
+      "GGUF"
+    ],
+    "how": "1. 打开 layla-network.ai 或 Play 搜 Layla。 2. 首次下载端侧模型，建议 6–8GB 内存手机。 3. 可导入自己的 GGUF。 4. 可设为系统默认助手替代云端。 5. 飞行模式测试是否真离线。",
+    "free": true
+  },
+  {
+    "name": "Termux",
+    "url": "https://termux.dev/en/",
+    "desc": "安卓终端，可编译跑 llama.cpp 端侧",
+    "desc_en": "Android terminal to build and run llama.cpp on-device",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF"
+    ],
+    "how": "1. 打开 termux.dev 按官方方式安装 Termux。 2. pkg 安装 clang cmake git。 3. 克隆 llama.cpp 编译。 4. 用 wget 拉 1B–3B 的 GGUF。 5. 在 Termux 里 ./llama-cli -m 模型.gguf 对话。",
+    "free": true
+  },
+  {
+    "name": "Termux 应用源码",
+    "url": "https://github.com/termux/termux-app",
+    "desc": "Termux 开源安卓终端，跑本地模型",
+    "desc_en": "Termux Android app source for on-device CLI LLMs",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 GitHub termux/termux-app 看安装说明。 2. 不要用已停更的 Play 旧包。 3. 装好后在终端编译 llama.cpp 或 whisper.cpp。 4. 模型放 Termux 主目录。 5. 用 tmux 防止切后台被杀。",
+    "free": true
+  },
+  {
+    "name": "MNN Chat 安卓",
+    "url": "https://github.com/alibaba/MNN/tree/master/apps/Android/MnnLlmChat",
+    "desc": "阿里 MNN 自带端侧 LLM 聊天 App",
+    "desc_en": "Alibaba MNN engine with Android on-device LLM chat app",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 GitHub alibaba/MNN。 2. 看 apps/Android/MnnLlmChat 说明。 3. 按文档编译或下官方包。 4. 导入 Qwen 等 MNN 格式模型。 5. 对话在手机 NPU/GPU 本地完成。",
+    "free": true
+  },
+  {
+    "name": "MNN-LLM 文档",
+    "url": "https://mnn-docs.readthedocs.io/en/latest/transformers/llm.html",
+    "desc": "MNN-LLM 手机本地大模型用法",
+    "desc_en": "Docs for running LLMs on-device with MNN",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 MNN-LLM 用户指南。 2. 按平台选 Android/iOS 导出。 3. 把 HuggingFace 模型转成 MNN。 4. 丢进 MNN Chat 或自己的 App。 5. 先用 0.5B–1.5B 验证速度。",
+    "free": true
+  },
+  {
+    "name": "Nexa SDK 端侧",
+    "url": "https://github.com/NexaAI/nexa-sdk",
+    "desc": "跨平台端侧推理，支持安卓 iOS NPU",
+    "desc_en": "On-device SDK for Android/iOS NPU GPU CPU",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF"
+    ],
+    "how": "1. 打开 GitHub NexaAI/nexa-sdk。 2. 按文档接 Android/iOS SDK。 3. 从 Nexa 模型库拉 GGUF/NEXA 模型。 4. 优先开 NPU 加速。 5. 用官方示例 App 先跑通对话。",
+    "free": true
+  },
+  {
+    "name": "Cactus 端侧推理",
+    "url": "https://github.com/cactus-compute/cactus",
+    "desc": "手机本地推理引擎，接 GGUF",
+    "desc_en": "Mobile-first inference engine for on-device GGUF",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF"
+    ],
+    "how": "1. 打开 GitHub cactus-compute/cactus。 2. 按 README 集成到 iOS/Android。 3. 放入量化 GGUF。 4. 用示例聊天界面测试离线。 5. 看设备内存再决定模型大小。",
+    "free": true
+  },
+  {
+    "name": "llama.rn",
+    "url": "https://github.com/mybigday/llama.rn",
+    "desc": "React Native 绑定 llama.cpp 端侧推理",
+    "desc_en": "React Native llama.cpp bindings for on-device inference",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF"
+    ],
+    "how": "1. 打开 GitHub mybigday/llama.rn。 2. 在 RN 项目安装并开新架构。 3. 把 GGUF 放 App 沙盒。 4. 调用 completion 做本地对话。 5. iOS 走 Metal，安卓可试 NPU。",
+    "free": true
+  },
+  {
+    "name": "腾讯 NCNN",
+    "url": "https://github.com/Tencent/ncnn",
+    "desc": "腾讯端侧推理库，手机跑视觉和模型",
+    "desc_en": "Tencent ncnn high-performance on-device inference",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 GitHub Tencent/ncnn。 2. 按文档编 Android/iOS 库。 3. 用 ncnnoptimize 转模型。 4. 先跑官方 YOLO/分类示例。 5. 适合视觉小模型和部分生成模型。",
+    "free": true
+  },
+  {
+    "name": "阿里 MNN 引擎",
+    "url": "https://github.com/alibaba/MNN",
+    "desc": "阿里巴巴端侧引擎，淘宝级手机推理",
+    "desc_en": "Alibaba MNN lightweight on-device inference engine",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 GitHub alibaba/MNN。 2. 用转换工具把 ONNX/TFLite 转 MNN。 3. 集成 Android/iOS SDK。 4. 打开 GPU/NPU 后端。 5. LLM 走 MNN-LLM 分支。",
+    "free": true
+  },
+  {
+    "name": "飞桨 Paddle Lite",
+    "url": "https://github.com/PaddlePaddle/Paddle-Lite",
+    "desc": "百度飞桨端侧运行时，手机部署",
+    "desc_en": "Paddle Lite runtime for mobile on-device models",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 GitHub PaddlePaddle/Paddle-Lite。 2. 用 opt 工具转 Paddle 模型。 3. 集成 Android/iOS demo。 4. 选 ARM/OpenCL/NPU 后端。 5. 中文文档见 paddlepaddle.org.cn/lite。",
+    "free": true
+  },
+  {
+    "name": "Paddle Lite 中文站",
+    "url": "https://www.paddlepaddle.org.cn/lite",
+    "desc": "飞桨端侧官网，手机模型部署",
+    "desc_en": "Paddle Lite Chinese portal for mobile deployment",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开飞桨 Lite 官网。 2. 下对应平台预测库。 3. 按示例把模型放进手机 App。 4. 用量化减小包体。 5. 真机测延时和内存。",
+    "free": true
+  },
+  {
+    "name": "Google LiteRT",
+    "url": "https://ai.google.dev/edge/litert",
+    "desc": "原 TFLite，谷歌端侧运行时",
+    "desc_en": "LiteRT (formerly TFLite) Google on-device runtime",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 ai.google.dev/edge/litert。 2. 把模型转成 LiteRT/.tflite。 3. 用 Android/iOS API 加载。 4. 打开 GPU/NPU 委托。 5. 和 Edge Gallery 用同一套端侧栈。",
+    "free": true
+  },
+  {
+    "name": "LiteRT-LM",
+    "url": "https://developers.google.com/edge/litert-lm/overview",
+    "desc": "谷歌端侧 LLM 编排层，跑 Gemma",
+    "desc_en": "Google LiteRT-LM orchestration for on-device LLMs",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 LiteRT-LM 概览文档。 2. 选 Kotlin/Swift/C++ API。 3. 下载官方支持的 Gemma/Qwen/Phi 端侧包。 4. 按会话 API 发消息。 5. 用 Gallery App 对照效果。",
+    "free": true
+  },
+  {
+    "name": "LiteRT 源码",
+    "url": "https://github.com/google-ai-edge/LiteRT",
+    "desc": "LiteRT 开源端侧运行时仓库",
+    "desc_en": "LiteRT source repo for on-device ML",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 GitHub google-ai-edge/LiteRT。 2. 按平台编译运行时。 3. 把 .tflite 丢进示例。 4. 开 GPU/NPU delegate。 5. 生产环境优先用稳定发布包。",
+    "free": true
+  },
+  {
+    "name": "Apple Core ML",
+    "url": "https://developer.apple.com/documentation/coreml",
+    "desc": "苹果官方端侧框架，走神经引擎",
+    "desc_en": "Apple Core ML on-device inference with Neural Engine",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "CoreML"
+    ],
+    "how": "1. 打开 Apple Core ML 文档。 2. 用 coremltools 把模型转 mlpackage。 3. Xcode 拖进工程。 4. 选 CPU/GPU/ANE。 5. 真机测，模拟器神经引擎不完整。",
+    "free": true
+  },
+  {
+    "name": "coremltools",
+    "url": "https://github.com/apple/coremltools",
+    "desc": "把 PyTorch/ONNX 转 CoreML 端侧包",
+    "desc_en": "Convert models to Core ML for iPhone on-device run",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "CoreML"
+    ],
+    "how": "1. 打开 GitHub apple/coremltools。 2. pip 安装后转换权重。 3. 量化成 4/8bit 减小体积。 4. 用 Xcode 或 Core ML 加载。 5. 给 iPhone 留出内存再选精度。",
+    "free": true
+  },
+  {
+    "name": "sherpa-onnx",
+    "url": "https://github.com/k2-fsa/sherpa-onnx",
+    "desc": "端侧语音识别合成，手机离线跑",
+    "desc_en": "On-device ASR/TTS with ONNX on phones",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 GitHub k2-fsa/sherpa-onnx。 2. 下 Android APK 或 iOS 示例。 3. 选中文小模型离线识别。 4. 麦克风权限开了就能转写。 5. 也可做本地 TTS。",
+    "free": true
+  },
+  {
+    "name": "sherpa-onnx 文档",
+    "url": "https://k2-fsa.github.io/sherpa/onnx/",
+    "desc": "sherpa-onnx 端侧语音官方文档",
+    "desc_en": "Official sherpa-onnx on-device speech docs",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开文档选 Android/iOS。 2. 按下模型链接下载。 3. 用官方 APK 先试中文离线 ASR。 4. 再集成到自己的 App。 5. 小模型优先，注意包体积。",
+    "free": true
+  },
+  {
+    "name": "sherpa-onnx 发布包",
+    "url": "https://github.com/k2-fsa/sherpa-onnx/releases",
+    "desc": "端侧语音安卓 APK 和模型包",
+    "desc_en": "Prebuilt sherpa-onnx APKs for on-device speech",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 Releases 下最新 Android APK。 2. 允许未知来源安装。 3. 按提示下载离线模型。 4. 对着手机说话看转写。 5. 无网环境验证。",
+    "free": true
+  },
+  {
+    "name": "MLX Swift",
+    "url": "https://github.com/ml-explore/mlx-swift",
+    "desc": "苹果 MLX 的 Swift 端侧数组库",
+    "desc_en": "MLX Swift array framework for Apple on-device ML",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "CoreML"
+    ],
+    "how": "1. 打开 GitHub ml-explore/mlx-swift。 2. 用 SPM 加进 Xcode。 3. 配合 mlx-swift-lm 跑 LLM。 4. 真机 Apple 芯片才能加速。 5. 看 examples 里的聊天 Demo。",
+    "free": true
+  },
+  {
+    "name": "MLX Swift 示例",
+    "url": "https://github.com/ml-explore/mlx-swift-examples",
+    "desc": "iPhone 端侧 LLM/VLM 官方示例",
+    "desc_en": "Official MLX Swift examples including on-device LLM apps",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 mlx-swift-examples。 2. 用 Xcode 打开 LLM 示例工程。 3. 真机运行并下载 MLX 量化模型。 4. 在示例 App 里离线对话。 5. 可改模型 ID 换成 Qwen/Llama。",
+    "free": true
+  },
+  {
+    "name": "mlx-swift-lm",
+    "url": "https://github.com/ml-explore/mlx-swift-lm",
+    "desc": "Swift 端侧语言模型包，iPhone 跑 LLM",
+    "desc_en": "Swift package to run LLMs on-device with MLX",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 mlx-swift-lm 仓库。 2. 按 README 加依赖。 3. 指定 mlx-community 的 4bit 模型。 4. 流式输出到 SwiftUI。 5. 1B/3B 适合大多数 iPhone。",
+    "free": true
+  },
+  {
+    "name": "WhisperKit",
+    "url": "https://github.com/argmaxinc/WhisperKit",
+    "desc": "iPhone CoreML 端侧语音转写",
+    "desc_en": "Swift Whisper on Apple Neural Engine via Core ML",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线",
+      "CoreML"
+    ],
+    "how": "1. 打开 GitHub argmaxinc/WhisperKit。 2. 用 SPM 集成或跑示例 App。 3. 首次下载 tiny/base CoreML 模型。 4. 录音后本机转写，可离线。 5. 中文用 multilingual 权重。",
+    "free": true
+  },
+  {
+    "name": "WhisperKit CoreML 权重",
+    "url": "https://huggingface.co/argmaxinc/whisperkit-coreml",
+    "desc": "Whisper 端侧 CoreML 模型包",
+    "desc_en": "Preconverted Whisper Core ML weights for iPhone",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "CoreML",
+      "模型包"
+    ],
+    "how": "1. 打开 Hugging Face argmaxinc/whisperkit-coreml。 2. 选 tiny/base/small 适配手机。 3. 用 WhisperKit 自动下载或手动导入。 4. 在 iPhone 上离线转写。 5. turbo 量化包更省空间。",
+    "free": true
+  },
+  {
+    "name": "Vosk 离线语音",
+    "url": "https://alphacephei.com/vosk/",
+    "desc": "离线语音识别，手机可跑小模型",
+    "desc_en": "Offline ASR with small models for mobile",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 alphacephei.com/vosk。 2. 下 Android/iOS 示例。 3. 选中文小模型包。 4. 授权麦克风后离线识别。 5. 模型越小越省电。",
+    "free": true
+  },
+  {
+    "name": "Vosk Android",
+    "url": "https://alphacephei.com/vosk/android",
+    "desc": "Vosk 安卓端侧离线识别文档",
+    "desc_en": "Vosk Android on-device ASR integration",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 Vosk Android 页。 2. 按 Gradle 接入。 3. 把 vosk-model-small-cn 放 assets。 4. 断网测试识别。 5. 大模型识别更好但更占空间。",
+    "free": true
+  },
+  {
+    "name": "Picovoice",
+    "url": "https://picovoice.ai",
+    "desc": "端侧语音唤醒和识别，不出网",
+    "desc_en": "On-device wake word, ASR and TTS SDKs",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 picovoice.ai。 2. 注册拿免费 AccessKey。 3. 集成 Porcupine/Cheetah 到手机 App。 4. 唤醒词和转写都在端侧。 5. 按文档选中文模型。",
+    "free": true
+  },
+  {
+    "name": "Picovoice Porcupine",
+    "url": "https://picovoice.ai/platform/porcupine/",
+    "desc": "端侧自定义唤醒词，手机离线听",
+    "desc_en": "On-device wake-word engine for phones",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 Porcupine 页面。 2. 控制台做自定义唤醒词。 3. 把模型打进 iOS/Android。 4. 无网也能唤醒。 5. 注意电量和误唤醒。",
+    "free": true
+  },
+  {
+    "name": "Picovoice Cheetah",
+    "url": "https://picovoice.ai/platform/cheetah/",
+    "desc": "端侧流式语音转写，手机本地",
+    "desc_en": "Streaming on-device speech-to-text",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 Cheetah 页面拿 SDK。 2. 集成到手机项目。 3. 下载对应语言模型。 4. 实时麦克风转写，数据留本地。 5. 先用短句测延迟。",
+    "free": true
+  },
+  {
+    "name": "Qualcomm AI Hub",
+    "url": "https://aihub.qualcomm.com",
+    "desc": "骁龙 NPU 端侧模型库和部署",
+    "desc_en": "Qualcomm hub for Snapdragon on-device models",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 aihub.qualcomm.com 注册。 2. 搜适合手机的 LLM/ASR/检测模型。 3. 按 SoC 下 NPU 优化包。 4. 用 QNN/AI Engine 接入 App。 5. 在骁龙真机上测，不要只看模拟器。",
+    "free": true
+  },
+  {
+    "name": "MindSpore Lite",
+    "url": "https://www.mindspore.cn/lite",
+    "desc": "昇思端侧推理，华为手机常用",
+    "desc_en": "MindSpore Lite on-device runtime",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 mindspore.cn/lite。 2. 下 Android/iOS/Harmony 预测库。 3. 转换模型为 MindIR。 4. 在华为/安卓真机跑。 5. 可配合盘古端侧和小艺能力。",
+    "free": true
+  },
+  {
+    "name": "ONNX Runtime GenAI",
+    "url": "https://github.com/microsoft/onnxruntime-genai",
+    "desc": "ONNX 端侧生成式模型运行时",
+    "desc_en": "ONNX Runtime GenAI for on-device generative models",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 microsoft/onnxruntime-genai。 2. 看 Android/iOS 说明。 3. 用官方小模型示例。 4. 生成走本地 ORT。 5. 和 ORT Mobile 可一起用。",
+    "free": true
+  },
+  {
+    "name": "ONNX Runtime GenAI 文档",
+    "url": "https://onnxruntime.ai/docs/genai/",
+    "desc": "端侧生成式 ONNX 官方文档",
+    "desc_en": "Docs for ONNX Runtime GenAI on-device",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 onnxruntime.ai GenAI 文档。 2. 选移动端构建。 3. 下载示例 Phi/Llama ONNX。 4. 在手机跑 generate。 5. 量化后再上旗舰机。",
+    "free": true
+  },
+  {
+    "name": "llama.cpp iOS 示例",
+    "url": "https://github.com/ggml-org/llama.cpp/tree/master/examples/llama.swiftui",
+    "desc": "官方 SwiftUI 示例，iPhone 跑 GGUF",
+    "desc_en": "Official llama.cpp SwiftUI iPhone example",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF"
+    ],
+    "how": "1. 打开 llama.cpp examples/llama.swiftui。 2. Xcode 编译到真机。 3. 导入 1B–3B GGUF。 4. 在示例界面离线对话。 5. 内存不够就换 Q4_K_M 或更小。",
+    "free": true
+  },
+  {
+    "name": "llama.cpp Android 示例",
+    "url": "https://github.com/ggml-org/llama.cpp/tree/master/examples/llama.android",
+    "desc": "官方安卓示例，手机跑 GGUF",
+    "desc_en": "Official llama.cpp Android on-device example",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF"
+    ],
+    "how": "1. 打开 examples/llama.android。 2. 用 Android Studio 编译。 3. 把 GGUF 拷进手机。 4. 在示例 App 选模型聊天。 5. 也可改用 Termux 命令行。",
+    "free": true
+  },
+  {
+    "name": "whisper.cpp iOS 示例",
+    "url": "https://github.com/ggml-org/whisper.cpp/tree/master/examples/whisper.swiftui",
+    "desc": "iPhone 本地 Whisper 转写示例",
+    "desc_en": "whisper.cpp SwiftUI iOS on-device transcription",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线",
+      "GGUF"
+    ],
+    "how": "1. 打开 whisper.cpp whisper.swiftui 示例。 2. Xcode 跑到 iPhone。 3. 下载 ggml tiny/base 模型。 4. 录音后本机转写。 5. 中文用 multilingual 模型。",
+    "free": true
+  },
+  {
+    "name": "IREE 端侧",
+    "url": "https://iree.dev",
+    "desc": "MLIR 编译的端侧/移动推理",
+    "desc_en": "IREE compiler runtime for mobile/on-device",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 iree.dev。 2. 按移动端指南编译。 3. 把模型编译成 VMFB。 4. 在 Android 示例里加载。 5. 适合自己部署小模型。",
+    "free": true
+  },
+  {
+    "name": "小米 MACE",
+    "url": "https://github.com/XiaoMi/mace",
+    "desc": "小米端侧推理引擎，手机部署",
+    "desc_en": "Xiaomi MACE on-device inference engine",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 GitHub XiaoMi/mace。 2. 按文档转换模型。 3. 集成 Android demo。 4. 用 GPU/DSP 加速。 5. 适合视觉和小网络，不是聊天云服务。",
+    "free": true
+  },
+  {
+    "name": "腾讯 TNN",
+    "url": "https://github.com/Tencent/TNN",
+    "desc": "腾讯端侧高性能推理框架",
+    "desc_en": "Tencent TNN mobile inference framework",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 GitHub Tencent/TNN。 2. 转 ONNX 到 TNN。 3. 跑 Android/iOS demo。 4. 打开 GPU/NPU。 5. 先用官方检测模型验证。",
+    "free": true
+  },
+  {
+    "name": "HarmonyOS AI Kit",
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ai-kit-overview",
+    "desc": "鸿蒙端侧 AI Kit 官方文档",
+    "desc_en": "HarmonyOS on-device AI Kit overview",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开华为开发者 AI Kit 概览。 2. 用 DevEco 建 Harmony 工程。 3. 调用端侧意图/语音/视觉接口。 4. 在鸿蒙真机调试。 5. 隐私数据按文档留在本地。",
+    "free": true
+  },
+  {
+    "name": "Android AICore",
+    "url": "https://developer.android.com/ml/aicore",
+    "desc": "安卓系统级端侧，承载 Gemini Nano",
+    "desc_en": "Android AICore system service for Gemini Nano",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 developer.android.com/ml/aicore。 2. 确认手机支持 AICore。 3. 用 ML Kit GenAI 或 AICore API。 4. 模型由系统下载管理。 5. 推理在设备沙箱，不走普通云聊天。",
+    "free": true
+  },
+  {
+    "name": "ML Kit GenAI",
+    "url": "https://developers.google.com/ml-kit/genai",
+    "desc": "ML Kit 调用端侧 Gemini Nano",
+    "desc_en": "ML Kit GenAI APIs on Gemini Nano on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 ML Kit GenAI 文档。 2. 给 Android 工程加依赖。 3. 调摘要/改写等端侧 API。 4. 首次让系统下 Nano 模型。 5. 仅支持部分 Pixel/旗舰。",
+    "free": true
+  },
+  {
+    "name": "Llama 3.2 1B",
+    "url": "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct",
+    "desc": "Meta 端侧 1B 对话模型，手机可跑",
+    "desc_en": "Meta Llama 3.2 1B Instruct for on-device chat",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Hugging Face Llama-3.2-1B-Instruct。 2. 同意许可后下载。 3. 转 GGUF 或用现成量化。 4. 导入 PocketPal/MLC/fullmoon。 5. 1B 适合 6GB 内存手机。",
+    "free": true
+  },
+  {
+    "name": "Llama 3.2 3B",
+    "url": "https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct",
+    "desc": "Meta 端侧 3B，旗舰手机本地聊",
+    "desc_en": "Meta Llama 3.2 3B Instruct for phones",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Llama-3.2-3B-Instruct 页面。 2. 下 GGUF/MLX 4bit。 3. iPhone 用 fullmoon/Locally，安卓用 PocketPal/Gallery。 4. 8GB 内存更稳。 5. 上下文先开短再加长。",
+    "free": true
+  },
+  {
+    "name": "Llama 3.2 1B MLX 4bit",
+    "url": "https://huggingface.co/mlx-community/Llama-3.2-1B-Instruct-4bit",
+    "desc": "给 iPhone MLX 用的 4bit 端侧包",
+    "desc_en": "MLX 4-bit Llama 3.2 1B for iPhone",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 mlx-community 该模型页。 2. 用 fullmoon/Locally/MLX 示例下载。 3. 体积约 0.7GB。 4. 完全离线对话。 5. 老款 iPhone 优先这个。",
+    "free": true
+  },
+  {
+    "name": "Gemma 2 2B",
+    "url": "https://huggingface.co/google/gemma-2-2b-it",
+    "desc": "谷歌 2B 指令模型，适合手机",
+    "desc_en": "Google Gemma 2 2B IT for on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 google/gemma-2-2b-it。 2. 接受 Gemma 许可。 3. 下 GGUF 或 LiteRT 包。 4. 用 Edge Gallery 或 PocketPal 加载。 5. 2B 在中端机也能聊。",
+    "free": true
+  },
+  {
+    "name": "Gemma 2 2B MLX 4bit",
+    "url": "https://huggingface.co/mlx-community/gemma-2-2b-it-4bit",
+    "desc": "iPhone MLX 4bit Gemma 2 2B",
+    "desc_en": "MLX 4-bit Gemma 2 2B for Apple devices",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 mlx-community/gemma-2-2b-it-4bit。 2. 用 Locally AI 或 MLX 示例下载。 3. 断网聊天。 4. 中文效果一般，可换 Qwen。 5. 注意许可条款。",
+    "free": true
+  },
+  {
+    "name": "Gemma 3 1B",
+    "url": "https://huggingface.co/google/gemma-3-1b-it",
+    "desc": "Gemma 3 1B 端侧对话小模型",
+    "desc_en": "Gemma 3 1B IT for phones",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 google/gemma-3-1b-it。 2. 用 Gallery/LiteRT 或 GGUF 加载。 3. 适合低内存手机。 4. 先测中文再当主力。 5. 可与 4B 对比质量。",
+    "free": true
+  },
+  {
+    "name": "Gemma 3 4B",
+    "url": "https://huggingface.co/google/gemma-3-4b-it",
+    "desc": "Gemma 3 4B，旗舰手机端侧更强",
+    "desc_en": "Gemma 3 4B IT on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 google/gemma-3-4b-it。 2. 下 4bit 量化再进手机。 3. Edge Gallery 或 llama.cpp 加载。 4. 建议 8GB+ 内存。 5. 可开思考模式看官方说明。",
+    "free": true
+  },
+  {
+    "name": "Gemma 3 270M",
+    "url": "https://huggingface.co/google/gemma-3-270m-it",
+    "desc": "超小端侧模型，低端机也能跑",
+    "desc_en": "Gemma 3 270M tiny on-device model",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 gemma-3-270m-it。 2. 导入 Gallery 或 LiteRT。 3. 适合补全、分类、短回复。 4. 老手机优先这个。 5. 复杂推理请换 1B 以上。",
+    "free": true
+  },
+  {
+    "name": "Gemma 3n E4B",
+    "url": "https://huggingface.co/google/gemma-3n-E4B-it",
+    "desc": "Gemma 3n 有效 4B，手机多模态端侧",
+    "desc_en": "Gemma 3n E4B efficient on-device multimodal",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 google/gemma-3n-E4B-it。 2. 用 AI Edge Gallery 下载。 3. 试对话和识图。 4. 全在本机推理。 5. 旗舰机体验更好。",
+    "free": true
+  },
+  {
+    "name": "FunctionGemma 270M",
+    "url": "https://huggingface.co/google/functiongemma-270m-it",
+    "desc": "端侧函数调用小模型，手机代理",
+    "desc_en": "Tiny on-device function-calling Gemma",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 functiongemma-270m-it。 2. 用 Gallery 的 Mobile Actions 或 LiteRT-LM。 3. 让模型在端侧调工具。 4. 不适合长文写作。 5. 结合系统权限做本地自动化。",
+    "free": true
+  },
+  {
+    "name": "Phi-3.5 mini",
+    "url": "https://huggingface.co/microsoft/Phi-3.5-mini-instruct",
+    "desc": "微软 3.8B 端侧模型，推理强",
+    "desc_en": "Microsoft Phi-3.5-mini for on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Phi-3.5-mini-instruct。 2. 下 GGUF Q4。 3. 用 PocketPal/llama.cpp 手机跑。 4. 英文推理较好。 5. 3.8B 建议 8GB 内存。",
+    "free": true
+  },
+  {
+    "name": "Phi-3.5 vision",
+    "url": "https://huggingface.co/microsoft/Phi-3.5-vision-instruct",
+    "desc": "端侧多模态，手机看图问答",
+    "desc_en": "Phi-3.5 vision on-device VLM",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 Phi-3.5-vision-instruct。 2. 转成手机能加载的量化。 3. 用支持视觉的端侧 App。 4. 相册图片本机提问。 5. 比纯文本更占内存。",
+    "free": true
+  },
+  {
+    "name": "Phi-4 mini",
+    "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+    "desc": "Phi-4 mini 端侧对话模型",
+    "desc_en": "Phi-4 mini instruct for phones",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Phi-4-mini-instruct。 2. 找 GGUF/LiteRT 量化。 3. 导入手机本地 App。 4. 测中英问答。 5. 旗舰机优先。",
+    "free": true
+  },
+  {
+    "name": "Phi-4 mini 推理版",
+    "url": "https://huggingface.co/microsoft/Phi-4-mini-reasoning",
+    "desc": "端侧思考模型，手机慢慢推",
+    "desc_en": "Phi-4 mini reasoning on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 Phi-4-mini-reasoning。 2. 量化后导入端侧 App。 3. 问数学/逻辑看思考过程。 4. 速度慢于普通 mini。 5. 温度调低更稳。",
+    "free": true
+  },
+  {
+    "name": "Qwen2.5 0.5B",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+    "desc": "通义 0.5B，低端手机本地中文",
+    "desc_en": "Qwen2.5 0.5B Instruct for tiny on-device chat",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Qwen2.5-0.5B-Instruct。 2. 下 GGUF 或魔搭副本。 3. 导入 PocketPal/MNN Chat。 4. 中文短对话够用。 5. 复杂任务换 1.5B/3B。",
+    "free": true
+  },
+  {
+    "name": "Qwen2.5 1.5B",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
+    "desc": "1.5B 端侧中文甜区",
+    "desc_en": "Qwen2.5 1.5B Instruct on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Qwen2.5-1.5B-Instruct。 2. 选 Q4 GGUF。 3. 安卓/iOS 本地 App 加载。 4. 适合总结、翻译、短写作。 5. 6–8GB 内存友好。",
+    "free": true
+  },
+  {
+    "name": "Qwen2.5 3B",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct",
+    "desc": "3B 端侧中文，质量明显更好",
+    "desc_en": "Qwen2.5 3B Instruct for flagship phones",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Qwen2.5-3B-Instruct。 2. 下 4bit。 3. 用 Layla/PocketPal/Locally 跑。 4. 中文明显强于 Gemma 小模型。 5. 注意发热和电量。",
+    "free": true
+  },
+  {
+    "name": "Qwen2.5 0.5B 魔搭",
+    "url": "https://www.modelscope.cn/models/Qwen/Qwen2.5-0.5B-Instruct",
+    "desc": "魔搭下载 0.5B，国内手机更顺",
+    "desc_en": "Qwen2.5 0.5B on ModelScope for CN downloads",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 ModelScope 该模型页。 2. 用魔搭下载比 HF 快。 3. 转 GGUF 或直接给 MNN。 4. 导入手机 App。 5. 需魔搭账号时先登录。",
+    "free": true
+  },
+  {
+    "name": "Qwen3 0.6B",
+    "url": "https://huggingface.co/Qwen/Qwen3-0.6B",
+    "desc": "Qwen3 超小端侧，可思考",
+    "desc_en": "Qwen3 0.6B tiny on-device model",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Qwen/Qwen3-0.6B。 2. 下 Instruct/量化版。 3. 手机本地加载。 4. 可开关思考模式。 5. 老设备首选。",
+    "free": true
+  },
+  {
+    "name": "Qwen3 1.7B",
+    "url": "https://huggingface.co/Qwen/Qwen3-1.7B",
+    "desc": "Qwen3 1.7B 端侧中文",
+    "desc_en": "Qwen3 1.7B on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Qwen3-1.7B。 2. 量化后进 PocketPal 等。 3. 中文对话和指令。 4. 比 0.6B 稳很多。 5. 看官方聊天模板。",
+    "free": true
+  },
+  {
+    "name": "Qwen3 4B",
+    "url": "https://huggingface.co/Qwen/Qwen3-4B",
+    "desc": "Qwen3 4B 旗舰手机端侧主力",
+    "desc_en": "Qwen3 4B on-device for flagships",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Qwen3-4B。 2. 用 4bit GGUF/MLX。 3. Locally/Gallery/llama.cpp 加载。 4. 中英推理都不错。 5. 内存不够就降到 1.7B。",
+    "free": true
+  },
+  {
+    "name": "Qwen2.5-Coder 1.5B",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct",
+    "desc": "端侧写代码小模型，手机改片段",
+    "desc_en": "Qwen2.5-Coder 1.5B on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Qwen2.5-Coder-1.5B-Instruct。 2. 导入本地 LLM App。 3. 贴代码让它改。 4. 不要指望大型项目。 5. 离线时当口袋补全。",
+    "free": true
+  },
+  {
+    "name": "Qwen2.5-Coder 3B",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct",
+    "desc": "3B 端侧代码模型，手机可读栈",
+    "desc_en": "Qwen2.5-Coder 3B on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Coder 3B 页。 2. Q4 量化进手机。 3. 解释报错、写小函数。 4. 旗舰机更流畅。 5. 敏感代码不必上传云。",
+    "free": true
+  },
+  {
+    "name": "Qwen2.5-Math 1.5B",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B-Instruct",
+    "desc": "端侧数学小模型，手机解题",
+    "desc_en": "Qwen2.5-Math 1.5B on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 Math 1.5B 页。 2. 量化加载到手机。 3. 逐步提问。 4. 核对计算不要盲信。 5. 配合草稿备忘录。",
+    "free": true
+  },
+  {
+    "name": "Qwen2-VL 2B",
+    "url": "https://huggingface.co/Qwen/Qwen2-VL-2B-Instruct",
+    "desc": "2B 端侧看图模型，手机识图",
+    "desc_en": "Qwen2-VL 2B on-device vision-language",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 Qwen2-VL-2B-Instruct。 2. 用支持视觉的端侧运行时。 3. 拍照提问。 4. 全本地、不传相册。 5. 分辨率别开太大。",
+    "free": true
+  },
+  {
+    "name": "Qwen2.5-VL 3B",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct",
+    "desc": "3B 端侧多模态，手机看图更准",
+    "desc_en": "Qwen2.5-VL 3B on-device VLM",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 Qwen2.5-VL-3B-Instruct。 2. 选手机能量化。 3. 用 MLX/llama.cpp 多模态前端。 4. 离线描述图片。 5. 占用高于纯文本。",
+    "free": true
+  },
+  {
+    "name": "SmolLM2 1.7B",
+    "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "desc": "HF 小模型，专为端侧设计",
+    "desc_en": "SmolLM2 1.7B Instruct on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 SmolLM2-1.7B-Instruct。 2. 下 GGUF。 3. 导入 PocketPal 等。 4. 英文指令不错。 5. 中文可再试 Qwen。",
+    "free": true
+  },
+  {
+    "name": "SmolLM2 360M",
+    "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct",
+    "desc": "360M 超轻端侧，低端机可跑",
+    "desc_en": "SmolLM2 360M tiny on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 SmolLM2-360M-Instruct。 2. 直接丢进手机 App。 3. 做补全和短回复。 4. 几乎不占内存。 5. 别用来写长文。",
+    "free": true
+  },
+  {
+    "name": "SmolLM2 135M",
+    "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct",
+    "desc": "135M 端侧玩具级，秒开",
+    "desc_en": "SmolLM2 135M ultra-small on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 135M 页。 2. 加载几乎秒完成。 3. 适合演示端侧流程。 4. 质量有限。 5. 正式使用换 1.7B。",
+    "free": true
+  },
+  {
+    "name": "TinyLlama 1.1B",
+    "url": "https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "desc": "经典 1.1B 聊天模型，手机本地",
+    "desc_en": "TinyLlama 1.1B Chat for on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 TinyLlama-1.1B-Chat-v1.0。 2. 大量现成 GGUF。 3. 老设备也能跑。 4. 质量不如 Llama 3.2 1B。 5. 适合学量化流程。",
+    "free": true
+  },
+  {
+    "name": "MiniCPM 小钢炮",
+    "url": "https://github.com/OpenBMB/MiniCPM",
+    "desc": "面壁 MiniCPM 端侧中文小钢炮",
+    "desc_en": "OpenBMB MiniCPM on-device Chinese SLM",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 GitHub OpenBMB/MiniCPM。 2. 看手机/端侧部署说明。 3. 下 2B 或更小权重。 4. 用 MNN/llama.cpp 加载。 5. 中文端侧很能打。",
+    "free": true
+  },
+  {
+    "name": "MiniCPM-2B 权重",
+    "url": "https://huggingface.co/openbmb/MiniCPM-2B-dpo-fp16",
+    "desc": "MiniCPM 2B 权重，可量化上手机",
+    "desc_en": "MiniCPM 2B DPO weights for mobile quant",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 MiniCPM-2B-dpo-fp16。 2. 转 GGUF/MNN。 3. 导入端侧 App。 4. 中文对话。 5. 2B 比 0.5B 明显聪明。",
+    "free": true
+  },
+  {
+    "name": "MiniCPM-V 2.6",
+    "url": "https://huggingface.co/openbmb/MiniCPM-V-2_6",
+    "desc": "端侧多模态小钢炮，手机看图",
+    "desc_en": "MiniCPM-V 2.6 on-device VLM",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 MiniCPM-V-2_6。 2. 按官方手机 demo 部署。 3. 相册图片本机问答。 4. 也可用量化版。 5. 注意视觉编码器内存。",
+    "free": true
+  },
+  {
+    "name": "MiniCPM4 0.5B",
+    "url": "https://huggingface.co/openbmb/MiniCPM4-0.5B",
+    "desc": "新一代 0.5B 端侧，极轻中文",
+    "desc_en": "MiniCPM4 0.5B on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 MiniCPM4-0.5B。 2. 量化进手机。 3. 低端机中文短聊。 4. 看官方聊天模板。 5. 质量不够就上 2B。",
+    "free": true
+  },
+  {
+    "name": "MiniCPM-o 2.6",
+    "url": "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+    "desc": "端侧全模态，语音图像都能本地",
+    "desc_en": "MiniCPM-o 2.6 omni on-device model",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "语音",
+      "模型包"
+    ],
+    "how": "1. 打开 MiniCPM-o-2_6。 2. 按仓库说明在端侧跑。 3. 试语音和图像输入。 4. 旗舰机更现实。 5. 先关云端接口确认本地。",
+    "free": true
+  },
+  {
+    "name": "面壁智能 MiniCPM",
+    "url": "https://www.modelbest.cn/",
+    "desc": "面壁智能官网，端侧小钢炮厂商",
+    "desc_en": "ModelBest official site for MiniCPM on-device models",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 modelbest.cn。 2. 找 MiniCPM 产品与开源。 3. 下适合手机的版本。 4. 按文档端侧部署。 5. 国内镜像通常更快。",
+    "free": true
+  },
+  {
+    "name": "DeepSeek-R1 蒸馏 1.5B",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "desc": "R1 蒸馏 1.5B，手机端侧思考",
+    "desc_en": "DeepSeek-R1 distill 1.5B on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 DeepSeek-R1-Distill-Qwen-1.5B。 2. 下 GGUF 或 MLX 4bit。 3. fullmoon/PocketPal 加载。 4. 看思考链，回答会慢。 5. 1.5B 是手机甜点。",
+    "free": true
+  },
+  {
+    "name": "DeepSeek-R1 蒸馏 1.5B MLX",
+    "url": "https://huggingface.co/mlx-community/DeepSeek-R1-Distill-Qwen-1.5B-4bit",
+    "desc": "给 iPhone 的 R1 1.5B 4bit",
+    "desc_en": "MLX 4-bit R1 distill 1.5B for iPhone",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 mlx-community 该页。 2. 用 fullmoon 一键下。 3. 离线思考问答。 4. 体积约 1GB。 5. 思考过程可折叠看。",
+    "free": true
+  },
+  {
+    "name": "DeepSeek-R1 蒸馏 7B",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+    "desc": "7B 蒸馏，仅建议旗舰大内存",
+    "desc_en": "R1 distill 7B for high-RAM phones",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Distill-Qwen-7B。 2. 必须 Q4/Q3 量化。 3. 12GB 内存手机更稳。 4. 多数机请用 1.5B。 5. 发热明显就停。",
+    "free": true
+  },
+  {
+    "name": "Gemini Nano",
+    "url": "https://developer.android.com/ai/gemini-nano",
+    "desc": "安卓系统端侧 Gemini Nano",
+    "desc_en": "Gemini Nano via Android AICore on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 Gemini Nano 开发者页。 2. 确认机型支持 AICore。 3. 用 ML Kit GenAI 调用。 4. 系统自动管理模型。 5. 不是云端 Gemini 聊天网页。",
+    "free": true
+  },
+  {
+    "name": "MobileLLM 125M",
+    "url": "https://huggingface.co/facebook/MobileLLM-125M",
+    "desc": "Meta 专门为手机设计的超小 LLM",
+    "desc_en": "Meta MobileLLM 125M for phones",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 facebook/MobileLLM-125M。 2. 按卡说明转换部署。 3. 适合分类和极短生成。 4. 不是通用聊天替代。 5. 研究端侧占用很好。",
+    "free": true
+  },
+  {
+    "name": "MobileLLM 1B",
+    "url": "https://huggingface.co/facebook/MobileLLM-1B",
+    "desc": "MobileLLM 1B 端侧语言模型",
+    "desc_en": "Meta MobileLLM 1B on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 MobileLLM-1B。 2. 量化后上手机。 3. 对比 Llama 3.2 1B。 4. 看官方许可。 5. 用 llama.cpp 或 ExecuTorch。",
+    "free": true
+  },
+  {
+    "name": "MobileLLM-R1 950M",
+    "url": "https://huggingface.co/facebook/MobileLLM-R1-950M",
+    "desc": "MobileLLM R1 近 1B 端侧推理",
+    "desc_en": "MobileLLM-R1 950M on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 MobileLLM-R1-950M。 2. 按模型卡部署到手机。 3. 做短推理任务。 4. 内存友好。 5. 阅读许可再商用。",
+    "free": true
+  },
+  {
+    "name": "FastVLM",
+    "url": "https://github.com/apple/ml-fastvlm",
+    "desc": "苹果 FastVLM 端侧视觉语言模型",
+    "desc_en": "Apple FastVLM efficient on-device VLM",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "CoreML"
+    ],
+    "how": "1. 打开 GitHub apple/ml-fastvlm。 2. 下 0.5B/1.5B Apple 格式。 3. 按 mobile app 说明编译。 4. iPhone 看图问答。 5. 走 Core ML/ANE。",
+    "free": true
+  },
+  {
+    "name": "OpenELM 1.1B",
+    "url": "https://huggingface.co/apple/OpenELM-1_1B-Instruct",
+    "desc": "苹果开源 1.1B，可转 CoreML 上手机",
+    "desc_en": "Apple OpenELM 1.1B instruct on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "CoreML",
+      "模型包"
+    ],
+    "how": "1. 打开 apple/OpenELM-1_1B-Instruct。 2. 转 Core ML 或 GGUF。 3. iPhone 本地跑。 4. 参数小、启动快。 5. 指令遵循一般。",
+    "free": true
+  },
+  {
+    "name": "SmolVLM",
+    "url": "https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct",
+    "desc": "超小端侧视觉语言模型",
+    "desc_en": "SmolVLM instruct on-device VLM",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 SmolVLM-Instruct。 2. 用支持视觉的端侧运行时。 3. 压图后再问。 4. 低内存机也能试。 5. 细节识别有限。",
+    "free": true
+  },
+  {
+    "name": "SmolVLM2",
+    "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+    "desc": "SmolVLM2 2.2B 端侧看图",
+    "desc_en": "SmolVLM2 2.2B on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 SmolVLM2-2.2B-Instruct。 2. 量化后导入手机。 3. 本地图片问答。 4. 2.2B 需中高端机。 5. 先缩小分辨率。",
+    "free": true
+  },
+  {
+    "name": "InternLM2 1.8B",
+    "url": "https://huggingface.co/internlm/internlm2-chat-1_8b",
+    "desc": "书生 1.8B 聊天，中文端侧",
+    "desc_en": "InternLM2 chat 1.8B on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 internlm2-chat-1_8b。 2. 转 GGUF。 3. 手机本地中文聊。 4. 看书生对话模板。 5. 1.8B 是舒适区。",
+    "free": true
+  },
+  {
+    "name": "StableLM 2 1.6B",
+    "url": "https://huggingface.co/stabilityai/stablelm-2-1_6b-chat",
+    "desc": "Stability 1.6B 聊天，可上手机",
+    "desc_en": "StableLM 2 1.6B chat on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 stablelm-2-1_6b-chat。 2. 量化 GGUF。 3. 导入端侧 App。 4. 英文为主。 5. 中文请用 Qwen。",
+    "free": true
+  },
+  {
+    "name": "OLMo 1B",
+    "url": "https://huggingface.co/allenai/OLMo-1B-hf",
+    "desc": "AllenAI 开源 1B，可端侧实验",
+    "desc_en": "OLMo 1B open on-device research model",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 allenai/OLMo-1B-hf。 2. 转换量化。 3. 手机跑通即可。 4. 偏研究用途。 5. 对话体验不如 Llama 3.2。",
+    "free": true
+  },
+  {
+    "name": "Moondream2",
+    "url": "https://huggingface.co/vikhyatk/moondream2",
+    "desc": "超小看图模型，手机端侧识图",
+    "desc_en": "Moondream2 tiny on-device vision model",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 vikhyatk/moondream2。 2. 用官方小推理或 GGUF。 3. 给照片出描述。 4. 占用很小。 5. 复杂场景会漏细节。",
+    "free": true
+  },
+  {
+    "name": "CodeGemma 2B",
+    "url": "https://huggingface.co/google/codegemma-2b",
+    "desc": "2B 端侧代码模型",
+    "desc_en": "CodeGemma 2B on-device coding",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 google/codegemma-2b。 2. 接受许可并量化。 3. 手机上解释短代码。 4. 不要当完整 IDE。 5. 离线补全片段。",
+    "free": true
+  },
+  {
+    "name": "Granite 3.1 2B",
+    "url": "https://huggingface.co/ibm-granite/granite-3.1-2b-instruct",
+    "desc": "IBM 2B 指令模型，可上手机",
+    "desc_en": "IBM Granite 3.1 2B instruct on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 granite-3.1-2b-instruct。 2. 下 GGUF。 3. 本地 App 加载。 4. 偏英文企业风格。 5. 看 Apache 许可。",
+    "free": true
+  },
+  {
+    "name": "MobileVLM 1.7B",
+    "url": "https://huggingface.co/mtgv/MobileVLM-1.7B",
+    "desc": "美团 MobileVLM，专为手机视觉",
+    "desc_en": "Meituan MobileVLM 1.7B on-device VLM",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 mtgv/MobileVLM-1.7B。 2. 看 GitHub Meituan-AutoML/MobileVLM 部署。 3. 手机端侧看图。 4. 1.7B 较轻。 5. 按官方转换脚本走。",
+    "free": true
+  },
+  {
+    "name": "MobileVLM 仓库",
+    "url": "https://github.com/Meituan-AutoML/MobileVLM",
+    "desc": "美团端侧视觉语言模型源码",
+    "desc_en": "MobileVLM source for phone vision-language",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 GitHub Meituan-AutoML/MobileVLM。 2. 按 README 转手机格式。 3. 跑官方 demo。 4. 结合 1.7B 权重。 5. 真机测帧率和内存。",
+    "free": true
+  },
+  {
+    "name": "华为小艺",
+    "url": "https://consumer.huawei.com/cn/mobileservices/celia/",
+    "desc": "鸿蒙端侧助手，盘古终端能力",
+    "desc_en": "Huawei Celia on-device assistant",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 华为手机打开小艺或应用市场搜小艺。 2. 升级 HarmonyOS 到支持版本。 3. 用语音/圈选，部分能力走端侧。 4. 设置里看隐私与本地处理。 5. 非华为机请用网页说明了解，不要装来路不明包。",
+    "free": true
+  },
+  {
+    "name": "OPPO AI 小布",
+    "url": "https://www.oppo.com/cn/discover/technology/oppo-ai/",
+    "desc": "OPPO 端云协同，AndesGPT 端侧",
+    "desc_en": "OPPO AndesGPT on-device plus Breeno",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 OPPO AI 官网了解 AndesGPT。 2. ColorOS 里唤起小布助手。 3. 通话摘要等可走端侧。 4. 在系统 AI 设置看本地选项。 5. 仅官方系统，不装野包。",
+    "free": true
+  },
+  {
+    "name": "vivo 蓝心 BlueLM",
+    "url": "https://github.com/vivo-ai-lab/BlueLM",
+    "desc": "vivo 蓝心开源端侧模型",
+    "desc_en": "vivo BlueLM open models for on-device",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "模型包"
+    ],
+    "how": "1. 打开 GitHub vivo-ai-lab/BlueLM。 2. 下开源权重研究/部署。 3. 真机蓝心小V在 OriginOS 设置-AI 打开。 4. 开源权重用 llama.cpp 量化上自己的手机。 5. 系统助手与开源权重不是同一个入口。",
+    "free": true
+  },
+  {
+    "name": "荣耀 MagicOS YOYO",
+    "url": "https://www.honor.com/cn/magic-os/",
+    "desc": "荣耀端侧智能体 YOYO",
+    "desc_en": "Honor MagicOS YOYO on-device agent",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 honor.com/cn/magic-os。 2. 荣耀手机升级 MagicOS。 3. 按 AI 键唤 YOYO。 4. 圈选、记忆等在系统内完成。 5. 看机型是否支持端侧能力。",
+    "free": true
+  },
+  {
+    "name": "小米澎湃OS AI",
+    "url": "https://www.mi.com/hyperos",
+    "desc": "澎湃OS 超级小爱，端侧+系统 AI",
+    "desc_en": "Xiaomi HyperOS on-device Xiaoai/MiMo AI",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机"
+    ],
+    "how": "1. 打开 mi.com/hyperos 看机型。 2. 升级澎湃OS。 3. 长按小爱同学。 4. 部分识屏/建议走端侧。 5. 在小爱设置里看隐私。",
+    "free": true
+  },
+  {
+    "name": "Apple Intelligence",
+    "url": "https://www.apple.com/apple-intelligence/",
+    "desc": "苹果系统端侧智能，写作与摘要",
+    "desc_en": "Apple Intelligence on-device system models",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线",
+      "CoreML"
+    ],
+    "how": "1. 打开 apple.com/apple-intelligence 核对机型。 2. 系统设置打开 Apple 智能。 3. 邮件摘要、改写等多在端侧。 4. 更重任务才上 Private Cloud Compute。 5. 需新系统和新芯片。",
+    "free": true
+  },
+  {
+    "name": "三星 Galaxy AI",
+    "url": "https://www.samsung.com/us/galaxy-ai/",
+    "desc": "三星端侧处理可开关，圈选即搜等",
+    "desc_en": "Samsung Galaxy AI with on-device processing toggle",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 samsung.com/us/galaxy-ai。 2. 设置里进 Galaxy AI。 3. 打开仅在设备处理。 4. 圈选、修图等走 NPU。 5. 部分高级功能关云后不可用。",
+    "free": true
+  },
+  {
+    "name": "FunASR",
+    "url": "https://github.com/alibaba-damo-academy/FunASR",
+    "desc": "达摩院语音识别，可端侧部署",
+    "desc_en": "FunASR speech models deployable on-device",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 GitHub FunASR。 2. 选 small/paraformer 小模型。 3. 导出 ONNX 用 sherpa-onnx 上手机。 4. 离线中文转写。 5. 不要用云 API 版冒充本地。",
+    "free": true
+  },
+  {
+    "name": "SenseVoice",
+    "url": "https://github.com/FunAudioLLM/SenseVoice",
+    "desc": "多语言语音理解，可上手机",
+    "desc_en": "SenseVoice multilingual speech on-device",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 FunAudioLLM/SenseVoice。 2. 用 Small 权重。 3. 经 sherpa-onnx 或官方导出到 Android。 4. 本地转写+语种检测。 5. 先下 Small 再考虑更大。",
+    "free": true
+  },
+  {
+    "name": "SenseVoice Small",
+    "url": "https://huggingface.co/FunAudioLLM/SenseVoiceSmall",
+    "desc": "SenseVoice 小权重，端侧转写",
+    "desc_en": "SenseVoice Small weights for mobile",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线",
+      "模型包"
+    ],
+    "how": "1. 打开 FunAudioLLM/SenseVoiceSmall。 2. 下载后转 ONNX。 3. 放进 sherpa-onnx 手机示例。 4. 离线试中英。 5. 麦克风权限记得开。",
+    "free": true
+  },
+  {
+    "name": "Silero VAD",
+    "url": "https://github.com/snakers4/silero-vad",
+    "desc": "端侧语音活动检测，手机听人声",
+    "desc_en": "Silero VAD on-device voice activity detection",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线"
+    ],
+    "how": "1. 打开 snakers4/silero-vad。 2. 下 ONNX 小模型。 3. 集成到 Android/iOS。 4. 用来判断有没有人说话。 5. 常和 Whisper 本地转写搭配。",
+    "free": true
+  },
+  {
+    "name": "Whisper Tiny",
+    "url": "https://huggingface.co/openai/whisper-tiny",
+    "desc": "最小 Whisper，手机离线转写",
+    "desc_en": "Whisper tiny for on-device ASR",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "离线",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 openai/whisper-tiny。 2. 转 ggml/CoreML。 3. 用 whisper.cpp 或 WhisperKit。 4. 英文短语音效果可以。 5. 中文请用 multilingual + small。",
+    "free": true
+  },
+  {
+    "name": "Core ML Stable Diffusion",
+    "url": "https://github.com/apple/ml-stable-diffusion",
+    "desc": "苹果官方 CoreML 端侧出图",
+    "desc_en": "Apple Core ML Stable Diffusion on-device",
+    "cat": "生图",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "CoreML"
+    ],
+    "how": "1. 打开 apple/ml-stable-diffusion。 2. 下编译好的 Core ML 包。 3. 用官方 Swift 包集成。 4. iPhone/iPad 本地出图。 5. 普通用户也可用 Draw Things。",
+    "free": true
+  },
+  {
+    "name": "SD v1.5 CoreML 权重",
+    "url": "https://huggingface.co/apple/coreml-stable-diffusion-v1-5",
+    "desc": "给 iPhone 的 SD1.5 CoreML 包",
+    "desc_en": "Core ML SD v1.5 weights for Apple devices",
+    "cat": "生图",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "CoreML",
+      "模型包"
+    ],
+    "how": "1. 打开 apple/coreml-stable-diffusion-v1-5。 2. 选 compiled 变体。 3. 放进 ml-stable-diffusion 示例。 4. 本机出图不上传。 5. 占存储较多，Wi-Fi 下载。",
+    "free": true
+  }
+]
