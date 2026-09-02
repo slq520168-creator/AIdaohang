@@ -21,8 +21,8 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
 .go{width:100%;margin-top:10px;border:0;border-radius:14px;padding:14px;font-size:16px;font-weight:700;background:#d97888;color:#fff}
 .go[disabled]{opacity:.55}
 .box{margin-top:14px;background:rgba(255,255,255,.88);color:#111;border-radius:16px;padding:10px}
-.box img,.box video,.box audio{width:100%;border-radius:12px;display:block;background:transparent}
-.box pre{white-space:pre-wrap;font-size:14px;line-height:1.45;margin:0;font-family:inherit}
+.box img,.box video,.box audio{width:100%;border-radius:12px;display:block;background:#111}
+.cap{margin:8px 2px 0;font-size:12px;opacity:.7}
 .wait{text-align:center;padding:16px 8px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}
 </style>
 </head>
@@ -30,7 +30,7 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
 <img id="sitebg" src="IMG_7049.jpeg" alt="" aria-hidden="true"/>
 <div class="w">
   <div class="top">
-    <a class="back" href="./tools.html">返回</a>
+    <a class="back" href="./">返回</a>
     <h1>创作台</h1>
   </div>
   <div class="tabs">
@@ -46,7 +46,10 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
 </div>
 <script>
 (function(){
-  var k='img', busy=false, audioCtx=null, nodes=[];
+  var k='img', busy=false, esRef=null;
+  var FLUX='https://black-forest-labs-flux-1-schnell.hf.space';
+  var ACE='https://ace-step-ace-step-v1-5.hf.space';
+  var WAN='https://wan-ai-wan2-1.hf.space';
   var preset={
     img:'电影级写真，东亚年轻女人靠在深色窗边，金色夕阳光打在侧脸和锁骨，皮肤毛孔清晰，浅景深，85mm镜头，8K超高清，胶片质感，电影调色',
     vid:'电影级运镜短片，黄昏海边女主角回眸，金色轮廓光，慢速向前推镜头，发丝随风，8K超高清，宽银幕电影调色，写真质感',
@@ -60,121 +63,132 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
       b.classList.add('on');
       k=b.getAttribute('data-k');
       q.value=preset[k];
-      stopMus();
+      closeEs();
     };
   });
-  function enc(s){return encodeURIComponent(String(s||'').trim())}
-  function quality(s){
-    return s+' , cinematic film still, ultra HD 8K, photorealistic portrait photography, movie grade color grading, sharp focus, studio lighting';
-  }
-  function imgUrl(prompt,w,h,seed){
-    return 'https://image.pollinations.ai/prompt/'+enc(quality(prompt))+'?width='+(w||1280)+'&height='+(h||1600)+'&nologo=true&enhance=true&model=sana&seed='+(seed||Math.floor(Math.random()*99999));
-  }
-  function loadImg(url){
-    return new Promise(function(res,rej){
-      var im=new Image();
-      im.crossOrigin='anonymous';
-      im.onload=function(){res(im)};
-      im.onerror=function(){rej(new Error('图失败'))};
-      im.src=url;
-    });
-  }
-  function pickMime(){
-    var list=['video/mp4','video/webm;codecs=vp9','video/webm'];
-    if(!window.MediaRecorder) return '';
-    for(var i=0;i<list.length;i++) if(MediaRecorder.isTypeSupported(list[i])) return list[i];
-    return '';
-  }
   function showWait(t){document.getElementById('out').innerHTML='<p class="wait">'+(t||'正在生成…')+'</p>'}
   function showBox(html){document.getElementById('out').innerHTML='<div class="box">'+html+'</div>'}
+  function closeEs(){ if(esRef){ try{esRef.close()}catch(e){} esRef=null; } }
+  function esc(s){ return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]}); }
+  function fileUrl(x, base){
+    function abs(u){
+      if(!u) return '';
+      u=String(u);
+      if(/^https?:/i.test(u)) return u;
+      if(u.indexOf('//')===0) return location.protocol+u;
+      if(base && u.charAt(0)==='/') return base+u;
+      if(base && u.indexOf('gradio_api/file')===-1) return base+'/gradio_api/file='+u;
+      return u;
+    }
+    if(!x) return '';
+    if(typeof x==='string') return abs(x);
+    if(Array.isArray(x)){
+      for(var i=0;i<x.length;i++){ var u=fileUrl(x[i], base); if(u) return u; }
+      return '';
+    }
+    if(typeof x==='object'){
+      if(x.url) return abs(x.url);
+      if(x.path) return abs(x.path);
+      return fileUrl(x.video, base)||fileUrl(x.image, base)||fileUrl(x.value, base);
+    }
+    return '';
+  }
+  function runGradio(base, apiName, data, onInfo){
+    closeEs();
+    return new Promise(function(resolve, reject){
+      var session=Math.random().toString(36).slice(2)+Date.now().toString(36);
+      fetch(base+'/gradio_api/queue/join',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({data:data, session_hash:session, api_name:apiName})
+      }).then(function(r){ return r.json().then(function(j){ if(!r.ok) throw new Error(j.error||j.detail||('HTTP '+r.status)); return j; }); })
+      .then(function(j){
+        if(!j.event_id) throw new Error('排队失败');
+        var es=new EventSource(base+'/gradio_api/queue/data?session_hash='+encodeURIComponent(session));
+        esRef=es;
+        var done=false;
+        function finish(fn){ if(done) return; done=true; closeEs(); fn(); }
+        es.onmessage=function(ev){
+          var msg; try{ msg=JSON.parse(ev.data); }catch(e){ return; }
+          if(msg.msg==='estimation' && onInfo){
+            var eta=Math.round(msg.rank_eta||0);
+            onInfo('排队第 '+(msg.rank||0)+' 位 · 约 '+eta+' 秒');
+          }
+          if(msg.msg==='process_starts' && onInfo) onInfo('模型正在跑…');
+          if(msg.msg==='progress' && onInfo) onInfo('生成中…');
+          if(msg.msg==='process_completed'){
+            var err=msg.output && msg.output.error;
+            if(msg.success===false || err){
+              finish(function(){ reject(new Error(String(err||msg.title||'失败'))); });
+              return;
+            }
+            finish(function(){ resolve((msg.output && msg.output.data) || []); });
+          }
+          if(msg.msg==='close_stream'){
+            finish(function(){ reject(new Error('连接断开')); });
+          }
+        };
+        es.onerror=function(){ finish(function(){ reject(new Error('连接失败')); }); };
+      }).catch(reject);
+    });
+  }
+  function niceErr(e){
+    var s=String((e && e.message)||e||'失败');
+    if(/ZeroGPU|quota/i.test(s)) return '这块免费 GPU 额度用完了，过几分钟再试。模型是真的，不是假图。';
+    if(/login|auth|token|unauthor/i.test(s)) return '这个模型要登录才能用，这一次没拿到结果。';
+    return s.replace(/https?:\/\/\S+/g,'').slice(0,180);
+  }
 
   async function makeImg(){
     var prompt=q.value.trim()||preset.img;
-    var url=imgUrl(prompt,1280,1600);
-    showWait('正在出图');
-    await loadImg(url);
-    showBox('<img alt="" src="'+url+'">');
+    showWait('FLUX.1-schnell 排队中');
+    var data=await runGradio(FLUX, '/infer', [prompt, 0, true, 768, 1024, 4], function(t){ showWait('FLUX.1-schnell · '+t); });
+    var url=fileUrl(data, FLUX);
+    if(!url) throw new Error('没返回图片');
+    showBox('<img alt="" src="'+esc(url)+'"><p class="cap">FLUX.1-schnell · 768×1024</p>');
+  }
+
+  function aceData(prompt){
+    return [
+      'acestep-v15-xl-turbo','simple',prompt,'zh',
+      prompt,'',0,'','','zh',
+      8,7.0,true,'-1',null,
+      -1,1,null,null,0.0,
+      -1,'Fill the audio semantic mask based on the given conditions:',1.0,'text2music',false,
+      0.0,1.0,3.0,'ode','',
+      'mp3',0.85,false,2.0,0,
+      0.9,'NO USER INPUT',true,true,true,
+      false,true,false,false,0.5,
+      8,null,[],false
+    ];
+  }
+
+  async function makeMus(){
+    var prompt=q.value.trim()||preset.mus;
+    showWait('ACE-Step v1.5 排队中');
+    var data=await runGradio(ACE, '/generation_wrapper', aceData(prompt), function(t){ showWait('ACE-Step v1.5 · '+t); });
+    var url=fileUrl(data, ACE);
+    if(!url) throw new Error('没返回音频');
+    showBox('<audio controls src="'+esc(url)+'"></audio><p class="cap">ACE-Step v1.5 XL Turbo</p>');
   }
 
   async function makeVid(){
     var prompt=q.value.trim()||preset.vid;
-    showWait('正在出片');
-    var im=await loadImg(imgUrl(prompt,1080,1920));
-    var canvas=document.createElement('canvas');
-    canvas.width=1080; canvas.height=1920;
-    var ctx=canvas.getContext('2d');
-    var mime=pickMime();
-    var seconds=5;
-    if(!mime || !canvas.captureStream){
-      showBox('<img alt="" src="'+im.src+'">');
-      return;
+    showWait('Wan 2.1 提交中');
+    var data=await runGradio(WAN, '/t2v_generation_async', [prompt, '832*480', false, -1], function(t){ showWait('Wan 2.1 · '+t); });
+    var url=fileUrl(data, WAN);
+    if(!url){
+      showWait('Wan 2.1 等成片');
+      for(var i=0;i<24 && !url;i++){
+        await new Promise(function(r){ setTimeout(r, 8000); });
+        try{
+          var d2=await runGradio(WAN, '/status_refresh', [], function(t){ showWait('Wan 2.1 · '+t); });
+          url=fileUrl(d2, WAN);
+        }catch(e){}
+      }
     }
-    var stream=canvas.captureStream(30);
-    var rec=new MediaRecorder(stream,{mimeType:mime,videoBitsPerSecond:8000000});
-    var chunks=[];
-    rec.ondataavailable=function(e){if(e.data&&e.data.size) chunks.push(e.data)};
-    var done=new Promise(function(res){rec.onstop=res});
-    rec.start();
-    var t0=performance.now();
-    function draw(now){
-      var p=Math.min(1,(now-t0)/(seconds*1000));
-      var z=1+0.22*p;
-      var w=1080*z, h=1920*z;
-      ctx.drawImage(im,(1080-w)/2,(1920-h)/2,w,h);
-      if(p<1) requestAnimationFrame(draw);
-      else rec.stop();
-    }
-    requestAnimationFrame(draw);
-    await done;
-    var blob=new Blob(chunks,{type:mime});
-    showBox('<video controls playsinline src="'+URL.createObjectURL(blob)+'"></video>');
-  }
-
-  function stopMus(){
-    nodes.forEach(function(n){try{n.stop()}catch(e){} try{n.disconnect()}catch(e2){}});
-    nodes=[];
-    if(window.speechSynthesis) speechSynthesis.cancel();
-  }
-  function tone(ctx, type, freq, t, dur, gain){
-    var o=ctx.createOscillator();
-    var g=ctx.createGain();
-    o.type=type; o.frequency.value=freq;
-    g.gain.setValueAtTime(0,t);
-    g.gain.linearRampToValueAtTime(gain,t+0.03);
-    g.gain.exponentialRampToValueAtTime(0.0008,t+dur);
-    o.connect(g); g.connect(ctx.destination);
-    o.start(t); o.stop(t+dur+0.02);
-    nodes.push(o);
-  }
-  async function makeMus(){
-    var prompt=q.value.trim()||preset.mus;
-    showWait('正在出歌');
-    stopMus();
-    var lyrics='';
-    try{
-      var ask='用中文写一首8行电影主题歌词，只要歌词：'+prompt;
-      var r=await fetch('https://text.pollinations.ai/'+enc(ask)+'?model=openai-fast');
-      lyrics=(await r.text()).replace(/^["\'\\s]+|["\'\\s]+$/g,'').slice(0,800);
-    }catch(e){
-      lyrics='夜色铺在窗上\\n灯火一格一格亮\\n我想把这首歌\\n唱得很干净';
-    }
-    if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
-    if(audioCtx.state==='suspended') await audioCtx.resume();
-    var now=audioCtx.currentTime+0.05;
-    var bpm=84, beat=60/bpm;
-    var scale=[196,220,247,262,294,330,349,392];
-    for(var i=0;i<40;i++){
-      var t=now+i*beat;
-      if(i%4===0) tone(audioCtx,'sine',98,t,0.22,0.18);
-      if(i%2===0) tone(audioCtx,'triangle',49,t,0.16,0.1);
-      if(i%2===1) tone(audioCtx,'sine',scale[i%scale.length],t,0.36,0.08);
-    }
-    showBox('<pre>'+lyrics.replace(/[<>]/g,'')+'</pre>');
-    try{
-      var u=new SpeechSynthesisUtterance(lyrics.replace(/\\n/g,'，'));
-      u.lang='zh-CN'; u.rate=0.9; u.pitch=1;
-      speechSynthesis.speak(u);
-    }catch(e2){}
+    if(!url) throw new Error('Wan 2.1 这次没给出视频（队列或额度）。不会用静图假装成片。');
+    showBox('<video controls playsinline src="'+esc(url)+'"></video><p class="cap">Wan 2.1 · 832×480</p>');
   }
 
   document.getElementById('go').onclick=async function(){
@@ -185,7 +199,7 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
       else if(k==='vid') await makeVid();
       else await makeMus();
     }catch(e){
-      showBox('<p>这次没生成成功，再点一次。</p>');
+      showBox('<p>'+esc(niceErr(e))+'</p>');
     }
     busy=false; this.disabled=false;
   };
