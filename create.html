@@ -7,28 +7,29 @@
 <title>创作台 · 做图 视频 音乐</title>
 <link rel="apple-touch-icon" href="IMG_7049.jpeg"/>
 <style>
-html,body{margin:0;min-height:100%;background:#000;color:#f4ece6;font-family:-apple-system,"PingFang SC",sans-serif}
-body{background:#000 url("IMG_7049.jpeg") center/cover no-repeat fixed}
-body::before{content:"";position:fixed;inset:0;background:rgba(8,6,5,.55)}
+html,body{margin:0;min-height:100%;min-height:100dvh;background:transparent;color:#3b2f2c;font-family:-apple-system,"PingFang SC",sans-serif}
+#sitebg{position:fixed;inset:0;width:100%;height:100%;height:100dvh;object-fit:cover;z-index:0;pointer-events:none}
 .w{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:calc(12px + env(safe-area-inset-top)) 14px calc(24px + env(safe-area-inset-bottom))}
 .top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.back{color:#fff;text-decoration:none;background:rgba(255,255,255,.16);border-radius:999px;padding:8px 12px;font-size:14px}
-h1{font-size:18px;margin:0;flex:1}
+.back{color:#fff;text-decoration:none;background:rgba(0,0,0,.35);border-radius:999px;padding:8px 12px;font-size:14px}
+h1{font-size:18px;margin:0;flex:1;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}
 .tabs{display:flex;gap:8px;margin:0 0 12px}
-.tabs button{flex:1;border:0;border-radius:12px;padding:10px 0;font-size:15px;font-weight:700;background:rgba(255,255,255,.16);color:#fff}
-.tabs button.on{background:#d97888}
+.tabs button{flex:1;border:0;border-radius:12px;padding:10px 0;font-size:15px;font-weight:700;background:rgba(255,255,255,.55);color:#111}
+.tabs button.on{background:#d97888;color:#fff}
+.panel{background:rgba(255,255,255,.78);border-radius:16px;padding:12px}
 label{display:block;font-size:13px;opacity:.85;margin:0 0 6px}
-textarea{width:100%;min-height:88px;border:0;border-radius:14px;padding:12px;font-size:16px;resize:vertical;box-sizing:border-box}
+textarea{width:100%;min-height:88px;border:0;border-radius:14px;padding:12px;font-size:16px;resize:vertical;box-sizing:border-box;background:#fff}
 .go{width:100%;margin-top:10px;border:0;border-radius:14px;padding:14px;font-size:16px;font-weight:700;background:#d97888;color:#fff}
 .go[disabled]{opacity:.55}
-.hint{font-size:12px;opacity:.8;margin:8px 0 0;line-height:1.4}
-.box{margin-top:14px;background:rgba(255,255,255,.9);color:#111;border-radius:16px;padding:10px;min-height:80px}
-.box img,.box video,.box audio{width:100%;border-radius:12px;display:block;background:#111}
+.hint{font-size:12px;opacity:.9;margin:8px 0 0;line-height:1.4;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+.box{margin-top:14px;background:rgba(255,255,255,.88);color:#111;border-radius:16px;padding:10px}
+.box img,.box video,.box audio{width:100%;border-radius:12px;display:block;background:transparent}
 .box pre{white-space:pre-wrap;font-size:14px;line-height:1.45;margin:8px 0 0;font-family:inherit}
-.wait{text-align:center;padding:28px 8px;color:#fff}
+.wait{text-align:center;padding:16px 8px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}
 </style>
 </head>
 <body>
+<img id="sitebg" src="IMG_7049.jpeg" alt="" aria-hidden="true"/>
 <div class="w">
   <div class="top">
     <a class="back" href="./tools.html">返回</a>
@@ -39,9 +40,11 @@ textarea{width:100%;min-height:88px;border:0;border-radius:14px;padding:12px;fon
     <button type="button" data-k="vid">视频</button>
     <button type="button" data-k="mus">音乐</button>
   </div>
-  <label id="lab">写画面，点生成，图出在下面</label>
-  <textarea id="p" placeholder="一只金色的猫坐在窗边，阳光，电影感"></textarea>
-  <button class="go" id="go" type="button">生成</button>
+  <div class="panel">
+    <label id="lab">写画面，点生成，图出在下面</label>
+    <textarea id="p" placeholder="一只金色的猫坐在窗边，阳光，电影感"></textarea>
+    <button class="go" id="go" type="button">生成</button>
+  </div>
   <p class="hint" id="hint">全程留在这一页，不用跳到别的网站。</p>
   <div id="out"></div>
 </div>
@@ -68,7 +71,7 @@ textarea{width:100%;min-height:88px;border:0;border-radius:14px;padding:12px;fon
       stopMus();
     };
   });
-  function enc(s){return encodeURIComponent(String(s||'').trim()).replace(/%20/g,'%20')}
+  function enc(s){return encodeURIComponent(String(s||'').trim())}
   function imgUrl(prompt,w,h,seed){
     return 'https://image.pollinations.ai/prompt/'+enc(prompt)+'?width='+(w||768)+'&height='+(h||768)+'&nologo=true&model=sana&seed='+(seed||Math.floor(Math.random()*99999));
   }
@@ -95,7 +98,7 @@ textarea{width:100%;min-height:88px;border:0;border-radius:14px;padding:12px;fon
     var url=imgUrl(prompt,768,768);
     showWait('正在出图，请等几秒');
     await loadImg(url);
-    showBox('<img alt="生成图" src="'+url+'"><p class="hint" style="color:#444">长按图片可保存</p>');
+    showBox('<img alt="生成图" src="'+url+'"><p class="hint" style="color:#444;text-shadow:none">长按图片可保存</p>');
   }
 
   async function makeVid(){
@@ -108,7 +111,7 @@ textarea{width:100%;min-height:88px;border:0;border-radius:14px;padding:12px;fon
     var mime=pickMime();
     var seconds=5;
     if(!mime || !canvas.captureStream){
-      showBox('<img alt="画面" src="'+im.src+'"><p class="hint" style="color:#444">这台手机不能本页录视频，先长按保存画面。</p>');
+      showBox('<img alt="画面" src="'+im.src+'"><p class="hint" style="color:#444;text-shadow:none">这台手机不能本页录视频，先长按保存画面。</p>');
       return;
     }
     var stream=canvas.captureStream(24);
@@ -122,7 +125,6 @@ textarea{width:100%;min-height:88px;border:0;border-radius:14px;padding:12px;fon
       var p=Math.min(1,(now-t0)/(seconds*1000));
       var z=1+0.18*p;
       var w=720*z, h=1280*z;
-      ctx.fillStyle='#000'; ctx.fillRect(0,0,720,1280);
       ctx.drawImage(im,(720-w)/2,(1280-h)/2,w,h);
       if(p<1) requestAnimationFrame(draw);
       else rec.stop();
@@ -131,7 +133,7 @@ textarea{width:100%;min-height:88px;border:0;border-radius:14px;padding:12px;fon
     await done;
     var blob=new Blob(chunks,{type:mime});
     var url=URL.createObjectURL(blob);
-    showBox('<video controls playsinline src="'+url+'"></video><p class="hint" style="color:#444">短片已在本页，可直接播放。</p>');
+    showBox('<video controls playsinline src="'+url+'"></video><p class="hint" style="color:#444;text-shadow:none">短片已在本页，可直接播放。</p>');
   }
 
   function stopMus(){
@@ -174,7 +176,7 @@ textarea{width:100%;min-height:88px;border:0;border-radius:14px;padding:12px;fon
       tone(audioCtx,'square',900,t,0.04,0.03);
       if(i%2===1) tone(audioCtx,'sine',scale[i%scale.length],t,0.28,0.07);
     }
-    showBox('<audio id="a" controls></audio><pre id="ly">'+lyrics.replace(/[<>]/g,'')+'</pre><p class="hint" style="color:#444">伴奏已在本页响起。若要人声，系统会朗读歌词。</p>');
+    showBox('<pre id="ly">'+lyrics.replace(/[<>]/g,'')+'</pre><p class="hint" style="color:#444;text-shadow:none">伴奏已在本页响起。若要人声，系统会朗读歌词。</p>');
     try{
       var u=new SpeechSynthesisUtterance(lyrics.replace(/\n/g,'，'));
       u.lang='zh-CN'; u.rate=0.92; u.pitch=1;
