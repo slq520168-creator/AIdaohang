@@ -51,6 +51,7 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
   </div>
   <div id="out"></div>
 </div>
+<script src="https://js.puter.com/v2/"></script>
 <script>
 (function(){
   var k='img', style='photo', busy=false, abortCtl=null;
@@ -175,11 +176,20 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
   function niceErr(e){
     var s=String((e && e.message)||e||'失败');
     if(/ZeroGPU|quota/i.test(s)) return '免费 GPU 额度用完了，过几分钟再试。模型是真的。';
+    if(/insufficient|funds|402|credit/i.test(s)) return '这次要额度，没出成。做图可以再试，视频有时要付费。';
     if(/login|auth|token|unauthor/i.test(s)) return '这个模型要登录才能用，这一次没拿到结果。';
     if(/AbortError/i.test(s)) return '已取消';
     return s.replace(/https?:\/\/\S+/g,'').slice(0,180);
   }
 
+  function hasPuter(){ return typeof puter!=='undefined' && puter.ai; }
+  function mediaSrc(el){
+    if(!el) return '';
+    if(typeof el==='string') return el;
+    if(el.src) return el.src;
+    if(el.getAttribute){ var u=el.getAttribute('src'); if(u) return u; }
+    return '';
+  }
   function sleep(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
   async function hordeImg(prompt, models, w, h){
     var body={
@@ -223,6 +233,18 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
     }else{
       prompt=raw+' , sharp focus on the eyes, 85mm ### blurry, out of focus, cartoon, anime, illustration, cgi, extra fingers';
       models=['AlbedoBase XL (SDXL)','ICBINP - I Can\'t Believe It\'s Not Photography','Deliberate'];
+    }
+    if(hasPuter()){
+      try{
+        showWait('FLUX.1-schnell');
+        var fluxPrompt=style==='cartoon'? raw : (raw+' , sharp focus on the eyes, 85mm');
+        var im=await puter.ai.txt2img({prompt:fluxPrompt, model:'black-forest-labs/flux-schnell', width:768, height:1024});
+        var pu=mediaSrc(im);
+        if(pu){
+          showBox('<img alt="" src="'+esc(pu)+'"><p class="cap">FLUX.1-schnell · '+(styleName[style]||'')+'</p>');
+          return;
+        }
+      }catch(e){}
     }
     showWait('AI Horde 排队中');
     var g;
@@ -277,6 +299,19 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
     var prompt=styled(q.value.trim()||preset.vid);
     var neg='worst quality, inconsistent motion, blurry, jittery, distorted, watermark';
     var h=style==='photo'?768:640, w=style==='photo'?512:512;
+    if(hasPuter()){
+      try{
+        showWait('Wan 出片中，要等一会儿');
+        var vid=await puter.ai.txt2vid(prompt, {model:'wan'});
+        var vu=mediaSrc(vid);
+        if(vu){
+          showBox('<video controls playsinline src="'+esc(vu)+'"></video><p class="cap">Wan · '+(styleName[style]||'')+'</p>');
+          return;
+        }
+      }catch(e){
+        if(/insufficient|funds|402|credit/i.test(String(e&&e.message||e))) throw e;
+      }
+    }
     showWait('LTX-Video 排队中');
     var payload=[prompt, neg, null, null, h, w, 'text-to-video', 2, 9, 42, true, 1, false];
     var data=await runGradio(LTX, '/text_to_video', 4, payload, function(t){ showWait('LTX-Video · '+t); });
