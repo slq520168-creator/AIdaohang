@@ -59,7 +59,7 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
   var LTX='https://lightricks-ltx-video-distilled.hf.space';
   var MGEN='https://facebook-musicgen.hf.space';
   var preset={
-    img:'东亚年轻女人靠在深色窗边，金色夕阳光打在侧脸和锁骨，浅景深，85mm镜头',
+    img:'窗边侧脸特写，东亚年轻女人，金色夕阳光只打在脸颊，眼睛对焦，锁骨在暗部，浅景深',
     vid:'黄昏海边女主角回眸，金色轮廓光，慢速向前推镜头，发丝随风',
     mus:'电影级中文抒情主题曲，管弦乐铺底，钢琴主旋律，高保真录音，温暖女声，雨夜城市，史诗而克制'
   };
@@ -184,7 +184,7 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
   async function hordeImg(prompt, models, w, h){
     var body={
       prompt: prompt,
-      params:{ width:w, height:h, steps:8, n:1, sampler_name:'k_euler_a', cfg_scale:5 },
+      params:{ width:w, height:h, steps:12, n:1, sampler_name:'k_euler_a', cfg_scale:7 },
       models: models,
       nsfw: true,
       censor_nsfw: false,
@@ -218,11 +218,11 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
     var raw=q.value.trim()||preset.img;
     var prompt, models;
     if(style==='cartoon'){
-      prompt=raw+' , anime, cartoon illustration, clean line art ### photorealistic, photo, 3d render';
-      models=['Abyss OrangeMix','WAI-NSFW-illustrious-SDXL','AMPonyXL'];
+      prompt=raw+' ### photo, realistic, 3d, blurry';
+      models=['WAI-NSFW-illustrious-SDXL','Abyss OrangeMix','AMPonyXL'];
     }else{
-      prompt=raw+' , RAW photo, photorealistic portrait, 85mm, skin pores ### cartoon, anime, illustration, cgi';
-      models=['AbsoluteReality','Deliberate','ICBINP - I Can\'t Believe It\'s Not Photography','AlbedoBase XL (SDXL)'];
+      prompt=raw+' , sharp focus on the eyes, 85mm ### blurry, out of focus, cartoon, anime, illustration, cgi, extra fingers';
+      models=['AlbedoBase XL (SDXL)','ICBINP - I Can\'t Believe It\'s Not Photography','Deliberate'];
     }
     showWait('AI Horde 排队中');
     var g;
