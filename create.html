@@ -93,14 +93,14 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
     }
     return '';
   }
-  function runGradio(base, apiName, data, onInfo){
+  function runGradio(base, apiName, fnIndex, data, onInfo){
     closeEs();
     return new Promise(function(resolve, reject){
       var session=Math.random().toString(36).slice(2)+Date.now().toString(36);
       fetch(base+'/gradio_api/queue/join',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({data:data, session_hash:session, api_name:apiName})
+        body:JSON.stringify({data:data, fn_index:fnIndex, session_hash:session, api_name:apiName})
       }).then(function(r){ return r.json().then(function(j){ if(!r.ok) throw new Error(j.error||j.detail||('HTTP '+r.status)); return j; }); })
       .then(function(j){
         if(!j.event_id) throw new Error('排队失败');
@@ -142,7 +142,7 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
   async function makeImg(){
     var prompt=q.value.trim()||preset.img;
     showWait('FLUX.1-schnell 排队中');
-    var data=await runGradio(FLUX, '/infer', [prompt, 0, true, 768, 1024, 4], function(t){ showWait('FLUX.1-schnell · '+t); });
+    var data=await runGradio(FLUX, '/infer', 2, [prompt, 0, true, 768, 1024, 4], function(t){ showWait('FLUX.1-schnell · '+t); });
     var url=fileUrl(data, FLUX);
     if(!url) throw new Error('没返回图片');
     showBox('<img alt="" src="'+esc(url)+'"><p class="cap">FLUX.1-schnell · 768×1024</p>');
@@ -166,7 +166,7 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
   async function makeMus(){
     var prompt=q.value.trim()||preset.mus;
     showWait('ACE-Step v1.5 排队中');
-    var data=await runGradio(ACE, '/generation_wrapper', aceData(prompt), function(t){ showWait('ACE-Step v1.5 · '+t); });
+    var data=await runGradio(ACE, '/generation_wrapper', 77, aceData(prompt), function(t){ showWait('ACE-Step v1.5 · '+t); });
     var url=fileUrl(data, ACE);
     if(!url) throw new Error('没返回音频');
     showBox('<audio controls src="'+esc(url)+'"></audio><p class="cap">ACE-Step v1.5 XL Turbo</p>');
@@ -175,14 +175,14 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
   async function makeVid(){
     var prompt=q.value.trim()||preset.vid;
     showWait('Wan 2.1 提交中');
-    var data=await runGradio(WAN, '/t2v_generation_async', [prompt, '832*480', false, -1], function(t){ showWait('Wan 2.1 · '+t); });
+    var data=await runGradio(WAN, '/t2v_generation_async', 5, [prompt, '832*480', false, -1], function(t){ showWait('Wan 2.1 · '+t); });
     var url=fileUrl(data, WAN);
     if(!url){
       showWait('Wan 2.1 等成片');
       for(var i=0;i<24 && !url;i++){
         await new Promise(function(r){ setTimeout(r, 8000); });
         try{
-          var d2=await runGradio(WAN, '/status_refresh', [], function(t){ showWait('Wan 2.1 · '+t); });
+          var d2=await runGradio(WAN, '/status_refresh', 7, [], function(t){ showWait('Wan 2.1 · '+t); });
           url=fileUrl(d2, WAN);
         }catch(e){}
       }
