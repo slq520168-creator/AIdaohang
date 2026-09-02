@@ -1,0 +1,166 @@
+[
+  {
+    "name": "小程序申请",
+    "url": "https://mp.weixin.qq.com/wxopen/waregister?action=step1",
+    "desc": "官方注册入口，电脑打开 mp.weixin.qq.com 选「小程序」注册。",
+    "desc_en": "Official WeChat Mini Program register page. Open mp.weixin.qq.com on a computer and choose Mini Program.",
+    "cat": "小程序",
+    "pack": "小程序",
+    "tags": [
+      "小程序",
+      "申请"
+    ],
+    "how": "1. 电脑浏览器打开 mp.weixin.qq.com/wxopen/waregister?action=step1，这是官方申请入口。 2. 用管理员微信号扫码登录。 3. 选「小程序」账号，填个人或企业主体。 4. 完成邮箱和身份证/营业执照资料。 5. 注册后回公众平台补信息、认证和备案。手机微信里没有完整注册页，请用电脑打开。",
+    "free": true
+  },
+  {
+    "name": "微信公众平台",
+    "url": "https://mp.weixin.qq.com/",
+    "desc": "公众平台首页，点立即注册可选公众号或小程序。",
+    "desc_en": "WeChat Official Accounts Platform home. Tap Register and choose Official Account or Mini Program.",
+    "cat": "小程序",
+    "pack": "微信",
+    "tags": [
+      "小程序",
+      "申请"
+    ],
+    "how": "1. 电脑打开 mp.weixin.qq.com。 2. 点「立即注册」。 3. 账号类型选「小程序」。 4. 按页面填邮箱、主体资料。 5. 已有账号可直接登录管理已申请的小程序。",
+    "free": true
+  },
+  {
+    "name": "小程序产品介绍",
+    "url": "https://developers.weixin.qq.com/miniprogram/introduction/index.html",
+    "desc": "官方介绍注册流程、认证和发布步骤。",
+    "desc_en": "Official intro: what a Mini Program is, how to register, verify and publish.",
+    "cat": "小程序",
+    "pack": "小程序",
+    "tags": [
+      "小程序",
+      "申请",
+      "认证"
+    ],
+    "how": "1. 打开开发者文档「小程序产品介绍」。 2. 按注册、信息完善、开发、提交审核、发布阅读。 3. 政府/媒体等类型必须先微信认证。 4. 认证后可申请微信支付。 5. 申请入口仍回公众平台或本页「小程序申请」。",
+    "free": true
+  },
+  {
+    "name": "小程序开发文档",
+    "url": "https://developers.weixin.qq.com/miniprogram/dev/framework/",
+    "desc": "官方框架文档，目录、组件和 API。",
+    "desc_en": "Official Mini Program framework docs: directory, components and APIs.",
+    "cat": "小程序",
+    "pack": "小程序",
+    "tags": [
+      "小程序"
+    ],
+    "how": "1. 打开 miniprogram/dev/framework。 2. 先看起步和目录结构。 3. 对照组件、API 写页面。 4. 用微信开发者工具预览。 5. 发布前对照运营规范和审核规范。",
+    "free": true
+  },
+  {
+    "name": "微信开发者工具",
+    "url": "https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html",
+    "desc": "官方开发者工具下载页，电脑调试和预览小程序。",
+    "desc_en": "Official WeChat DevTools download page for desktop debug and preview.",
+    "cat": "小程序",
+    "pack": "小程序",
+    "tags": [
+      "小程序",
+      "电脑"
+    ],
+    "how": "1. 打开官方下载页。 2. 按 Windows 或 macOS 下载安装。 3. 用小程序 AppID 建项目（可先用测试号）。 4. 预览、真机调试、上传代码。 5. 上传后到公众平台提交审核。",
+    "free": true
+  },
+  {
+    "name": "小程序备案",
+    "url": "https://developers.weixin.qq.com/miniprogram/product/record_guidelines.html",
+    "desc": "官方备案操作指引，上架前按工信部要求备案。",
+    "desc_en": "Official ICP filing guide. File before listing, as required by MIIT.",
+    "cat": "小程序",
+    "pack": "小程序",
+    "tags": [
+      "小程序",
+      "备案"
+    ],
+    "how": "1. 打开「小程序备案操作指引」。 2. 登录公众平台，设置里进「小程序备案」。 3. 填主体负责人和小程序信息，上传证件。 4. 平台初审后，24小时内到 beian.miit.gov.cn 做短信核验。 5. 通管局通过后才算备案成功。",
+    "free": true
+  },
+  {
+    "name": "微信认证",
+    "url": "https://developers.weixin.qq.com/miniprogram/product/renzheng",
+    "desc": "官方认证指引，企业等类型一般需支付 300 元审核费。",
+    "desc_en": "Official WeChat verification guide. Most account types pay a 300 CNY review fee.",
+    "cat": "小程序",
+    "pack": "小程序",
+    "tags": [
+      "小程序",
+      "认证"
+    ],
+    "how": "1. 打开「微信认证」文档看入口和材料。 2. 登录公众平台：设置 → 基本信息 → 微信认证。 3. 选主体类型并上传资质。 4. 除政府等免费类型外，支付 300 元审核费（成败均不退）。 5. 认证通过后才能开通微信支付等能力。",
+    "free": true
+  },
+  {
+    "name": "微信开放平台",
+    "url": "https://open.weixin.qq.com/",
+    "desc": "开放平台官网，移动应用、网站和小程序能力入口。",
+    "desc_en": "WeChat Open Platform home for mobile apps, websites and Mini Programs.",
+    "cat": "小程序",
+    "pack": "微信",
+    "tags": [
+      "小程序"
+    ],
+    "how": "1. 打开 open.weixin.qq.com。 2. 注册/登录开放平台账号。 3. 创建移动应用或网站应用。 4. 把已有小程序绑定到开放平台账号下，便于统一管理。 5. 需要开放接口、第三方平台时在这里申请。",
+    "free": true
+  },
+  {
+    "name": "小程序支付",
+    "url": "https://developers.weixin.qq.com/miniprogram/dev/api/payment/wx.requestPayment.html",
+    "desc": "官方微信支付接口文档，认证后可申请收款。",
+    "desc_en": "Official wx.requestPayment docs. Apply for WeChat Pay after verification.",
+    "cat": "小程序",
+    "pack": "小程序",
+    "tags": [
+      "小程序",
+      "支付"
+    ],
+    "how": "1. 小程序先完成微信认证。 2. 登录公众平台「支付与交易 - 微信支付」按指引绑定商户号。 3. 服务端下单拿到 prepay_id。 4. 小程序内调用 wx.requestPayment 拉起收银台。 5. 接口说明见本页官方文档。",
+    "free": true
+  },
+  {
+    "name": "小程序审核规范",
+    "url": "https://developers.weixin.qq.com/miniprogram/product",
+    "desc": "官方运营规范，提交审核前必读。",
+    "desc_en": "Official Mini Program operation rules. Read before submitting for review.",
+    "cat": "小程序",
+    "pack": "小程序",
+    "tags": [
+      "小程序"
+    ],
+    "how": "1. 打开「微信小程序平台运营规范」。 2. 对照注册、类目、内容、支付、隐私各章自查。 3. 常见拒绝情形见 product/reject 文档。 4. 改完再用开发者工具上传并提交审核。 5. 被拒后按站内信逐条改再提。",
+    "free": true
+  },
+  {
+    "name": "uni-app",
+    "url": "https://uniapp.dcloud.net.cn/",
+    "desc": "DCloud 跨端框架，一套代码可发微信小程序。",
+    "desc_en": "DCloud uni-app docs. One Vue codebase can ship to WeChat Mini Program.",
+    "cat": "小程序",
+    "pack": "小程序",
+    "tags": [
+      "小程序"
+    ],
+    "how": "1. 打开 uniapp.dcloud.net.cn。 2. 用 HBuilderX 或 CLI 建项目。 3. 运行到微信小程序，用开发者工具预览。 4. 仍需先在公众平台申请小程序拿到 AppID。 5. 申请入口用本页「小程序申请」，不要在框架文档里找注册。",
+    "free": true
+  },
+  {
+    "name": "Taro 文档",
+    "url": "https://docs.taro.zone/docs/",
+    "desc": "京东 Taro 文档，React/Vue 编译到微信小程序。",
+    "desc_en": "JD Taro docs. Compile React or Vue to WeChat Mini Program.",
+    "cat": "小程序",
+    "pack": "小程序",
+    "tags": [
+      "小程序"
+    ],
+    "how": "1. 打开 docs.taro.zone/docs。 2. 按安装及使用初始化项目。 3. 执行 dev:weapp，用微信开发者工具打开 dist。 4. 填公众平台 AppID。 5. 没有小程序账号时先走「小程序申请」。",
+    "free": true
+  }
+]
