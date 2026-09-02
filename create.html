@@ -51,7 +51,7 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
   var ACE='https://ace-step-ace-step-v1-5.hf.space';
   var WAN='https://wan-ai-wan2-1.hf.space';
   var preset={
-    img:'电影级写真，东亚年轻女人靠在深色窗边，金色夕阳光打在侧脸和锁骨，皮肤毛孔清晰，浅景深，85mm镜头，8K超高清，胶片质感，电影调色',
+    img:'真人实拍写真，东亚年轻女人靠在深色窗边，金色夕阳光打在侧脸和锁骨，皮肤毛孔清晰，浅景深，85mm镜头，胶片质感，不是卡通，不是动漫，不是插画',
     vid:'电影级运镜短片，黄昏海边女主角回眸，金色轮廓光，慢速向前推镜头，发丝随风，8K超高清，宽银幕电影调色，写真质感',
     mus:'电影级中文抒情主题曲，管弦乐铺底，钢琴主旋律，高保真录音，温暖女声，雨夜城市，史诗而克制'
   };
@@ -141,8 +141,9 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
 
   async function makeImg(){
     var prompt=q.value.trim()||preset.img;
+    var shot=prompt+' , RAW photo of a real person, photorealistic portrait photography, natural skin pores, 85mm, Kodak Portra, live-action movie still, not cartoon, not anime, not illustration, not cgi';
     showWait('FLUX.1-schnell 排队中');
-    var data=await runGradio(FLUX, '/infer', 2, [prompt, 0, true, 768, 1024, 4], function(t){ showWait('FLUX.1-schnell · '+t); });
+    var data=await runGradio(FLUX, '/infer', 2, [shot, 0, true, 768, 1024, 4], function(t){ showWait('FLUX.1-schnell · '+t); });
     var url=fileUrl(data, FLUX);
     if(!url) throw new Error('没返回图片');
     showBox('<img alt="" src="'+esc(url)+'"><p class="cap">FLUX.1-schnell · 768×1024</p>');
