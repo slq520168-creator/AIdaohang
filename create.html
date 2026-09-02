@@ -18,6 +18,9 @@ h1{font-size:18px;margin:0;flex:1;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.4
 .tabs button.on{background:#d97888;color:#fff}
 .panel{background:rgba(255,255,255,.78);border-radius:16px;padding:12px}
 textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;font-size:15px;resize:vertical;box-sizing:border-box;background:#fff;line-height:1.4}
+.styles{display:flex;gap:8px;margin:10px 0 0}
+.styles button{flex:1;border:0;border-radius:12px;padding:8px 0;font-size:14px;font-weight:700;background:rgba(255,255,255,.9);color:#111}
+.styles button.on{background:#111;color:#fff}
 .go{width:100%;margin-top:10px;border:0;border-radius:14px;padding:14px;font-size:16px;font-weight:700;background:#d97888;color:#fff}
 .go[disabled]{opacity:.55}
 .box{margin-top:14px;background:rgba(255,255,255,.88);color:#111;border-radius:16px;padding:10px}
@@ -40,19 +43,23 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
   </div>
   <div class="panel">
     <textarea id="p"></textarea>
+    <div class="styles" id="styles">
+      <button type="button" class="on" data-s="photo">写真</button>
+      <button type="button" data-s="cartoon">卡通</button>
+    </div>
     <button class="go" id="go" type="button">生成</button>
   </div>
   <div id="out"></div>
 </div>
 <script>
 (function(){
-  var k='img', busy=false, esRef=null;
+  var k='img', style='photo', busy=false, esRef=null;
   var FLUX='https://black-forest-labs-flux-1-schnell.hf.space';
   var ACE='https://ace-step-ace-step-v1-5.hf.space';
   var WAN='https://wan-ai-wan2-1.hf.space';
   var preset={
-    img:'真人实拍写真，东亚年轻女人靠在深色窗边，金色夕阳光打在侧脸和锁骨，皮肤毛孔清晰，浅景深，85mm镜头，胶片质感，不是卡通，不是动漫，不是插画',
-    vid:'电影级运镜短片，黄昏海边女主角回眸，金色轮廓光，慢速向前推镜头，发丝随风，8K超高清，宽银幕电影调色，写真质感',
+    img:'东亚年轻女人靠在深色窗边，金色夕阳光打在侧脸和锁骨，浅景深，85mm镜头',
+    vid:'黄昏海边女主角回眸，金色轮廓光，慢速向前推镜头，发丝随风',
     mus:'电影级中文抒情主题曲，管弦乐铺底，钢琴主旋律，高保真录音，温暖女声，雨夜城市，史诗而克制'
   };
   var q=document.getElementById('p');
@@ -63,9 +70,23 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
       b.classList.add('on');
       k=b.getAttribute('data-k');
       q.value=preset[k];
+      document.getElementById('styles').style.display = (k==='mus') ? 'none' : '';
       closeEs();
     };
   });
+  document.querySelectorAll('#styles button').forEach(function(b){
+    b.onclick=function(){
+      document.querySelectorAll('#styles button').forEach(function(x){x.classList.remove('on')});
+      b.classList.add('on');
+      style=b.getAttribute('data-s');
+    };
+  });
+  var styleHint={
+    photo:' , RAW photo of a real person, photorealistic portrait photography, natural skin pores, 85mm, Kodak Portra, live-action movie still, not cartoon, not anime, not illustration',
+    cartoon:' , cute 2D cartoon illustration, anime key visual, vibrant colors, clean line art, studio animation still, not photorealistic, not live action'
+  };
+  function styled(prompt){ return (prompt||'') + (styleHint[style]||styleHint.photo); }
+  var styleName={photo:'写真', cartoon:'卡通'};
   function showWait(t){document.getElementById('out').innerHTML='<p class="wait">'+(t||'正在生成…')+'</p>'}
   function showBox(html){document.getElementById('out').innerHTML='<div class="box">'+html+'</div>'}
   function closeEs(){ if(esRef){ try{esRef.close()}catch(e){} esRef=null; } }
@@ -140,13 +161,12 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
   }
 
   async function makeImg(){
-    var prompt=q.value.trim()||preset.img;
-    var shot=prompt+' , RAW photo of a real person, photorealistic portrait photography, natural skin pores, 85mm, Kodak Portra, live-action movie still, not cartoon, not anime, not illustration, not cgi';
+    var prompt=styled(q.value.trim()||preset.img);
     showWait('FLUX.1-schnell 排队中');
-    var data=await runGradio(FLUX, '/infer', 2, [shot, 0, true, 768, 1024, 4], function(t){ showWait('FLUX.1-schnell · '+t); });
+    var data=await runGradio(FLUX, '/infer', 2, [prompt, 0, true, 768, 1024, 4], function(t){ showWait('FLUX.1-schnell · '+t); });
     var url=fileUrl(data, FLUX);
     if(!url) throw new Error('没返回图片');
-    showBox('<img alt="" src="'+esc(url)+'"><p class="cap">FLUX.1-schnell · 768×1024</p>');
+    showBox('<img alt="" src="'+esc(url)+'"><p class="cap">FLUX.1-schnell · '+(styleName[style]||'')+' · 768×1024</p>');
   }
 
   function aceData(prompt){
@@ -174,7 +194,7 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
   }
 
   async function makeVid(){
-    var prompt=q.value.trim()||preset.vid;
+    var prompt=styled(q.value.trim()||preset.vid);
     showWait('Wan 2.1 提交中');
     var data=await runGradio(WAN, '/t2v_generation_async', 5, [prompt, '832*480', false, -1], function(t){ showWait('Wan 2.1 · '+t); });
     var url=fileUrl(data, WAN);
@@ -189,7 +209,7 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
       }
     }
     if(!url) throw new Error('Wan 2.1 这次没给出视频（队列或额度）。不会用静图假装成片。');
-    showBox('<video controls playsinline src="'+esc(url)+'"></video><p class="cap">Wan 2.1 · 832×480</p>');
+    showBox('<video controls playsinline src="'+esc(url)+'"></video><p class="cap">Wan 2.1 · '+(styleName[style]||'')+' · 832×480</p>');
   }
 
   document.getElementById('go').onclick=async function(){
