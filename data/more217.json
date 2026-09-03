@@ -1,0 +1,1704 @@
+[
+  {
+    "name": "Lazada卖家中心",
+    "url": "https://sellercenter.lazada.com",
+    "desc": "东南亚Lazada开店，覆盖泰马新印菲越。",
+    "desc_en": "Lazada Seller Center for SEA marketplaces.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://sellercenter.lazada.com 选国家注册卖家。 2. 完成店铺、证件和收款账户。 3. 上架商品、设库存和运费。 4. 用Lazada广告或优惠券拉单。 5. 订单发货后在卖家中心看结算。",
+    "free": true
+  },
+  {
+    "name": "Tokopedia卖家",
+    "url": "https://seller.tokopedia.com",
+    "desc": "印尼Tokopedia商家后台，本地电商主流入口。",
+    "desc_en": "Tokopedia seller dashboard for Indonesia.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://seller.tokopedia.com 注册店铺。 2. 绑定印尼银行或电子钱包收款。 3. 上传商品图和价格。 4. 处理订单和物流（JNE/SiCepat等）。 5. 看评价和广告投放。",
+    "free": true
+  },
+  {
+    "name": "Bukalapak商家",
+    "url": "https://www.bukalapak.com",
+    "desc": "印尼Bukalapak C2C/B2C 售卖。",
+    "desc_en": "Sell on Indonesia's Bukalapak.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://www.bukalapak.com 注册。 2. 开通卖家/Mitra。 3. 上架商品。 4. 用Bukalapak物流发货。 5. 提现到本地银行。",
+    "free": true
+  },
+  {
+    "name": "Blibli Seller",
+    "url": "https://seller.blibli.com",
+    "desc": "印尼Blibli官方卖家中心。",
+    "desc_en": "Blibli official seller center.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://seller.blibli.com 申请入驻。 2. 提交企业或个人资料。 3. 上架SKU。 4. 按Blibli仓储或自发货履约。 5. 对账打款。",
+    "free": true
+  },
+  {
+    "name": "Carousell出售",
+    "url": "https://www.carousell.sg",
+    "desc": "新马港等闲置与一手C2C。",
+    "desc_en": "Carousell C2C selling in SG/MY/HK.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://www.carousell.sg 或本国 Carousell 注册。 2. 发布图文商品。 3. 用聊天谈价。 4. 面交或邮寄。 5. 完成后评价。",
+    "free": true
+  },
+  {
+    "name": "Grab商家",
+    "url": "https://merchant.grab.com",
+    "desc": "GrabFood/GrabMart 商家入驻。",
+    "desc_en": "Grab merchant for food and mart.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://merchant.grab.com 申请。 2. 选 GrabFood 或 GrabMart。 3. 填门店与菜单。 4. 接单出餐。 5. 钱包提现。",
+    "free": true
+  },
+  {
+    "name": "GoBiz",
+    "url": "https://www.gobiz.co.id",
+    "desc": "Gojek商家端，GoFood/GoPay收款。",
+    "desc_en": "Gojek GoBiz for GoFood merchants.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://www.gobiz.co.id 注册。 2. 开通 GoFood 或其它服务。 3. 上架菜单。 4. 用GoPay结算。 5. 看日报表。",
+    "free": true
+  },
+  {
+    "name": "Foodpanda加盟",
+    "url": "https://www.foodpanda.com",
+    "desc": "Foodpanda餐厅/商店配送加盟。",
+    "desc_en": "Foodpanda restaurant partner signup.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://www.foodpanda.com 进商家合作。 2. 提交餐厅资料。 3. 等审核开通。 4. 接单打包。 5. 按周期结算。",
+    "free": true
+  },
+  {
+    "name": "LINE购物",
+    "url": "https://shopping.line.me",
+    "desc": "泰国/台湾 LINE Shopping 带货。",
+    "desc_en": "LINE Shopping for TH/TW sellers.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://shopping.line.me 了解入驻。 2. 用LINE官方账号申请店铺。 3. 上架并同步LINE好友。 4. 用LINE Pay收款。 5. 看订单履约。",
+    "free": true
+  },
+  {
+    "name": "LINE MyShop",
+    "url": "https://myshop.line.me",
+    "desc": "LINE内开小店，东南亚聊天成交。",
+    "desc_en": "LINE MyShop in-chat storefront.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://myshop.line.me 用LINE登录。 2. 创建商品页。 3. 把店铺链发到LINE群。 4. 客人下单后发货。 5. 用LINE Pay或本地支付收款。",
+    "free": true
+  },
+  {
+    "name": "WhatsApp Business",
+    "url": "https://business.whatsapp.com",
+    "desc": "目录+聊天成交，东南亚外贸常用。",
+    "desc_en": "WhatsApp Business catalog selling.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://business.whatsapp.com 下载商家版。 2. 做商品目录。 3. 把wa.me链接放到社媒。 4. 聊天报价收款。 5. 可接Meta广告点进聊天。",
+    "free": true
+  },
+  {
+    "name": "ShopBack商家",
+    "url": "https://www.shopback.com",
+    "desc": "新马泰等返利平台招商。",
+    "desc_en": "ShopBack merchant cashback network.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://www.shopback.com 找商家合作。 2. 提交网站或店铺。 3. 谈佣金。 4. 用户经ShopBack下单。 5. 按效果付佣。",
+    "free": true
+  },
+  {
+    "name": "Atome商家",
+    "url": "https://www.atome.sg",
+    "desc": "东南亚先买后付，提高客单价。",
+    "desc_en": "Atome BNPL for SEA merchants.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://www.atome.sg 申请商家。 2. 把Atome支付接到网店或POS。 3. 顾客分期下单。 4. Atome先打款。 5. 对账手续费。",
+    "free": true
+  },
+  {
+    "name": "Involve Asia",
+    "url": "https://involve.asia",
+    "desc": "东南亚联盟营销网络。",
+    "desc_en": "SEA affiliate network Involve Asia.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://involve.asia 注册广告主或联盟。 2. 选Shopee/Lazada等计划。 3. 拿追踪链接。 4. 内容引流。 5. 后台看佣金结算。",
+    "free": true
+  },
+  {
+    "name": "AccessTrade",
+    "url": "https://www.accesstrade.asia",
+    "desc": "日韩东南亚联盟（AccessTrade）。",
+    "desc_en": "AccessTrade affiliate Asia.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.accesstrade.asia 注册。 2. 选电商/金融计划。 3. 布置追踪链。 4. 按CPA/CPS结算。 5. 提现到银行。",
+    "free": true
+  },
+  {
+    "name": "Shopee联盟",
+    "url": "https://affiliate.shopee.sg",
+    "desc": "Shopee Affiliate 带货佣金（新马等）。",
+    "desc_en": "Shopee Affiliate program.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://affiliate.shopee.sg 或本国 affiliate.shopee 注册。 2. 选商品拿佣金链。 3. 发TikTok/短视频/社媒。 4. 成交后看佣金。 5. 满额提现到Shopee钱包或银行。",
+    "free": true
+  },
+  {
+    "name": "TikTok Shop卖家",
+    "url": "https://seller.tiktok.com",
+    "desc": "TikTok小店全球卖家中心（含东南亚）。",
+    "desc_en": "TikTok Shop seller center.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "直播",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://seller.tiktok.com 选站点注册。 2. 完成主体和收款。 3. 上架商品并挂短视频/直播。 4. 用官方物流或自发货。 5. 看结算与罚单。",
+    "free": true
+  },
+  {
+    "name": "Klook联盟",
+    "url": "https://www.klook.com",
+    "desc": "Klook旅行玩乐联盟。",
+    "desc_en": "Klook travel affiliate.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "接单",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://www.klook.com 找 Affiliate。 2. 申请联盟账号。 3. 推景点门票/交通。 4. 按预订佣金。 5. PayPal或银行提现。",
+    "free": true
+  },
+  {
+    "name": "Agoda联盟",
+    "url": "https://www.agoda.com/partners.html",
+    "desc": "Agoda酒店联盟。",
+    "desc_en": "Agoda hotel affiliate partners.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "接单",
+      "欧美"
+    ],
+    "how": "1. 打开 https://www.agoda.com/partners.html 申请。 2. 获取酒店追踪链。 3. 内容或比价站导流。 4. 按入住结算。 5. 看后台报表。",
+    "free": true
+  },
+  {
+    "name": "EasyStore",
+    "url": "https://easystore.co",
+    "desc": "马来西亚独立站，对标Shopify。",
+    "desc_en": "Malaysia EasyStore Shopify alternative.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://easystore.co 注册。 2. 选模板上架。 3. 接iPay88/FPX等本地支付。 4. 绑Shopee/Lazada多渠道。 5. 用自带物流发货。",
+    "free": true
+  },
+  {
+    "name": "StoreHub",
+    "url": "https://www.storehub.com",
+    "desc": "东南亚餐饮零售收银+网单。",
+    "desc_en": "StoreHub POS for SEA F&B/retail.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://www.storehub.com 申请演示。 2. 装POS和库存。 3. 接GrabFood等外卖。 4. 店内扫码点餐。 5. 看营业额报表。",
+    "free": true
+  },
+  {
+    "name": "GCash商家",
+    "url": "https://www.gcash.com",
+    "desc": "菲律宾GCash收款码。",
+    "desc_en": "GCash merchant QR in the Philippines.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://www.gcash.com 看企业/商家。 2. 用GCash App申请商家码。 3. 顾客扫码付。 4. 钱包提现到银行。 5. 对账手续费。",
+    "free": true
+  },
+  {
+    "name": "TNG电子钱包",
+    "url": "https://www.touchngo.com.my",
+    "desc": "马来西亚Touch n Go eWallet商家。",
+    "desc_en": "Touch 'n Go eWallet merchant MY.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://www.touchngo.com.my 了解商家。 2. 申请TNG收款。 3. 店内展示QR。 4. 顾客TNG支付。 5. 结算到商户账户。",
+    "free": true
+  },
+  {
+    "name": "TrueMoney",
+    "url": "https://www.truemoney.com",
+    "desc": "泰国TrueMoney钱包与代理。",
+    "desc_en": "TrueMoney wallet/merchant TH.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://www.truemoney.com 选商家或代理。 2. 提交证件。 3. 开通收款或现金点。 4. 顾客扫码或充值。 5. 按佣金/手续费结算。",
+    "free": true
+  },
+  {
+    "name": "Tiki卖家",
+    "url": "https://banhang.tiki.vn",
+    "desc": "越南Tiki卖家中心。",
+    "desc_en": "Tiki seller Vietnam.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://banhang.tiki.vn 注册。 2. 完成税务与银行。 3. 上架商品。 4. 用Tiki仓或自发货。 5. 看对账单。",
+    "free": true
+  },
+  {
+    "name": "Sendo卖家",
+    "url": "https://www.sendo.vn",
+    "desc": "越南Sendo电商卖货。",
+    "desc_en": "Sendo marketplace Vietnam.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://www.sendo.vn 注册卖家。 2. 上架商品。 3. 处理越南本地物流。 4. 做店内优惠。 5. 提现到银行。",
+    "free": true
+  },
+  {
+    "name": "Qoo10卖家",
+    "url": "https://www.qoo10.com",
+    "desc": "Qoo10跨境（新马日韩）。",
+    "desc_en": "Qoo10 cross-border marketplace.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.qoo10.com 进卖家入驻。 2. 选站点（SG/JP等）。 3. 上架并设国际运费。 4. 用Qoo10物流。 5. 结算美元或本地货币。",
+    "free": true
+  },
+  {
+    "name": "Zalora品牌入驻",
+    "url": "https://www.zalora.com",
+    "desc": "东南亚时尚电商Zalora。",
+    "desc_en": "Zalora fashion marketplace SEA.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "电商",
+      "跨境",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://www.zalora.com 找品牌合作。 2. 提交品牌资料。 3. 寄样审核。 4. Zalora代发或联营。 5. 按季对账。",
+    "free": true
+  },
+  {
+    "name": "Kwai商家",
+    "url": "https://www.kwai.com",
+    "desc": "Kwai（海外快手）短视频带货入口。",
+    "desc_en": "Kwai short-video selling overseas.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "直播",
+      "东南亚"
+    ],
+    "how": "1. 打开 https://www.kwai.com 注册创作者。 2. 发短视频测品。 3. 开通购物车/橱窗（视地区）。 4. 直播讲解。 5. 看礼物和带货分成。",
+    "free": true
+  },
+  {
+    "name": "淘宝卖家中心",
+    "url": "https://myseller.taobao.com",
+    "desc": "淘宝开店与订单后台。",
+    "desc_en": "Taobao seller center.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://myseller.taobao.com 用支付宝登录。 2. 完成实名与保证金（按类目）。 3. 上架宝贝。 4. 用千牛处理订单。 5. 看结算和违规。",
+    "free": true
+  },
+  {
+    "name": "拼多多商家后台",
+    "url": "https://mms.pinduoduo.com",
+    "desc": "拼多多店铺经营后台。",
+    "desc_en": "Pinduoduo merchant admin.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://mms.pinduoduo.com 登录。 2. 选类目交保证金。 3. 上架与活动报名。 4. 及时发货避免处罚。 5. 看货款结算。",
+    "free": true
+  },
+  {
+    "name": "抖音电商后台",
+    "url": "https://fxg.jinritemai.com",
+    "desc": "抖音小店/巨量百应带货。",
+    "desc_en": "Douyin e-commerce seller (Jinritemai).",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "直播",
+      "跨境"
+    ],
+    "how": "1. 打开 https://fxg.jinritemai.com 入驻小店。 2. 选达人带货或自播。 3. 上架并挂车。 4. 直播或短视频成交。 5. 看货款与达人佣金。",
+    "free": true
+  },
+  {
+    "name": "小红书蒲公英",
+    "url": "https://pgy.xiaohongshu.com",
+    "desc": "小红书官方商单与合作平台。",
+    "desc_en": "Xiaohongshu PGY creator marketplace.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "接单"
+    ],
+    "how": "1. 打开 https://pgy.xiaohongshu.com 用小红书账号登录。 2. 创作者接商单或品牌发任务。 3. 按brief做笔记。 4. 数据回收。 5. 平台结算佣金。",
+    "free": true
+  },
+  {
+    "name": "快手小店",
+    "url": "https://s.kwaixiaodian.com",
+    "desc": "快手小店卖货后台。",
+    "desc_en": "Kuaishou Shop seller.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "直播",
+      "跨境"
+    ],
+    "how": "1. 打开 https://s.kwaixiaodian.com 入驻。 2. 上架商品。 3. 短视频或直播挂车。 4. 用快手物流或自发货。 5. 看结算。",
+    "free": true
+  },
+  {
+    "name": "视频号小店",
+    "url": "https://store.weixin.qq.com",
+    "desc": "微信视频号/公众号小店。",
+    "desc_en": "WeChat Channels mini-store.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://store.weixin.qq.com 用微信登录。 2. 开通视频号小店。 3. 上架并挂到视频号。 4. 直播或短视频成交。 5. 货款进微信商户号。",
+    "free": true
+  },
+  {
+    "name": "京东商家后台",
+    "url": "https://shop.jd.com",
+    "desc": "京东POP/自营合作商家。",
+    "desc_en": "JD.com merchant portal.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://shop.jd.com 申请入驻。 2. 提交资质。 3. 上架并选仓配。 4. 参加京东活动。 5. 按账期结算。",
+    "free": true
+  },
+  {
+    "name": "1688旺铺",
+    "url": "https://www.1688.com",
+    "desc": "1688批发与代发货源。",
+    "desc_en": "1688 wholesale / dropship source.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.1688.com 注册商家或采购。 2. 认证后上架批发价。 3. 接代发订单。 4. 用阿里物流。 5. 旺旺沟通回款。",
+    "free": true
+  },
+  {
+    "name": "速卖通卖家",
+    "url": "https://sell.aliexpress.com",
+    "desc": "AliExpress 跨境零售。",
+    "desc_en": "AliExpress seller.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://sell.aliexpress.com 注册。 2. 选全托管或自营。 3. 上架海外价。 4. 用无忧物流。 5. 美元/人民币结算。",
+    "free": true
+  },
+  {
+    "name": "阿里国际站",
+    "url": "https://seller.alibaba.com",
+    "desc": "Alibaba.com B2B 询盘成交。",
+    "desc_en": "Alibaba.com B2B seller.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://seller.alibaba.com 开旺铺。 2. 做产品和认证。 3. 回询盘报价。 4. 样品成交后大货。 5. 用信保收款。",
+    "free": true
+  },
+  {
+    "name": "Temu卖家",
+    "url": "https://seller.temu.com",
+    "desc": "Temu全托管/半托管招商。",
+    "desc_en": "Temu seller portal.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://seller.temu.com 申请。 2. 选全托管或半托管。 3. 寄仓或备货。 4. Temu定价流量。 5. 按平台账期回款。",
+    "free": true
+  },
+  {
+    "name": "SHEIN卖家",
+    "url": "https://seller.shein.com",
+    "desc": "SHEIN商家/柔性供应链。",
+    "desc_en": "SHEIN seller portal.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://seller.shein.com 申请。 2. 提交资料和样品。 3. 上架或接备货单。 4. 按SHEIN仓规则发货。 5. 对账结算。",
+    "free": true
+  },
+  {
+    "name": "Rakuten RMS",
+    "url": "https://www.rakuten.co.jp",
+    "desc": "日本乐天市场开店。",
+    "desc_en": "Rakuten Ichiba RMS Japan.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.rakuten.co.jp 找出店。 2. 申请RMS账号。 3. 日语上架。 4. 用楽天物流或自家发货。 5. 按乐天周期结算。",
+    "free": true
+  },
+  {
+    "name": "Yahoo购物卖家",
+    "url": "https://shopping.yahoo.co.jp",
+    "desc": "Yahoo! JAPAN Shopping 开店。",
+    "desc_en": "Yahoo! Shopping Japan seller.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://shopping.yahoo.co.jp 找出店。 2. 申请店铺。 3. 同步库存。 4. 用Yahoo钱包收款。 5. 处理日本本土配送。",
+    "free": true
+  },
+  {
+    "name": "Naver SmartStore",
+    "url": "https://sell.smartstore.naver.com",
+    "desc": "韩国Naver智能商店。",
+    "desc_en": "Naver SmartStore Korea.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://sell.smartstore.naver.com 注册。 2. 绑定事业者登记。 3. 上架商品。 4. 接Naver Pay。 5. 用韩国物流发货。",
+    "free": true
+  },
+  {
+    "name": "Meesho供货",
+    "url": "https://supplier.meesho.com",
+    "desc": "印度Meesho社交电商供货。",
+    "desc_en": "Meesho supplier India.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://supplier.meesho.com 注册。 2. 填GST。 3. 上架供货价。 4. Meesho达人分销。 5. 按单结算。",
+    "free": true
+  },
+  {
+    "name": "Flipkart卖家",
+    "url": "https://seller.flipkart.com",
+    "desc": "印度Flipkart卖家中心。",
+    "desc_en": "Flipkart seller India.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://seller.flipkart.com 注册。 2. GST与银行。 3. 上架并选F-Assured仓。 4. 处理退货。 5. 看结算。",
+    "free": true
+  },
+  {
+    "name": "IndiaMART卖家",
+    "url": "https://seller.indiamart.com",
+    "desc": "印度B2B询盘平台。",
+    "desc_en": "IndiaMART B2B seller.",
+    "cat": false,
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://seller.indiamart.com 注册。 2. 做公司目录。 3. 回询盘。 4. 电话/WhatsApp成交。 5. 可买会员提曝光。",
+    "free": true
+  },
+  {
+    "name": "亚马逊印度卖家",
+    "url": "https://sellercentral.amazon.in",
+    "desc": "Amazon.in 本地卖家后台。",
+    "desc_en": "Amazon.in Seller Central.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://sellercentral.amazon.in 注册。 2. 交GST资料。 3. 上架FBA或自发货。 4. 跟广告。 5. 按亚马逊账期回款。",
+    "free": true
+  },
+  {
+    "name": "CrowdWorks",
+    "url": "https://crowdworks.jp",
+    "desc": "日本威客接单。",
+    "desc_en": "CrowdWorks Japan freelance.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "接单"
+    ],
+    "how": "1. 打开 https://crowdworks.jp 注册。 2. 完善作品集。 3. 投设计/翻译/开发任务。 4. 交付验收。 5. 提现到日本银行。",
+    "free": true
+  },
+  {
+    "name": "Lancers",
+    "url": "https://www.lancers.jp",
+    "desc": "日本外包接单平台。",
+    "desc_en": "Lancers.jp freelance gigs.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "接单"
+    ],
+    "how": "1. 打开 https://www.lancers.jp 注册。 2. 投提案。 3. 合同工作。 4. 交付。 5. 平台抽成后打款。",
+    "free": true
+  },
+  {
+    "name": "Kmong",
+    "url": "https://kmong.com",
+    "desc": "韩国技能市场（크몽）。",
+    "desc_en": "Kmong Korean freelance market.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "接单"
+    ],
+    "how": "1. 打开 https://kmong.com 注册专家。 2. 上架服务套餐。 3. 接待客户。 4. 交付文件。 5. 看评价和结算。",
+    "free": true
+  },
+  {
+    "name": "minne手作",
+    "url": "https://minne.com",
+    "desc": "日本手作市集。",
+    "desc_en": "minne handmade marketplace JP.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://minne.com 注册作家。 2. 上架手作。 3. 接订单制作。 4. 发日本邮便。 5. 平台结算。",
+    "free": true
+  },
+  {
+    "name": "Creema",
+    "url": "https://www.creema.jp",
+    "desc": "日本手作/设计售卖。",
+    "desc_en": "Creema handmade JP.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.creema.jp 开店。 2. 上架作品。 3. 处理订单。 4. 发货。 5. 提现。",
+    "free": true
+  },
+  {
+    "name": "得物商家",
+    "url": "https://www.dewu.com",
+    "desc": "得物潮品商家入驻。",
+    "desc_en": "Dewu/Poizon seller.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.dewu.com 找商家入驻。 2. 提交品牌/鉴定资料。 3. 寄售或现货。 4. 平台鉴定发货。 5. 按账期结算。",
+    "free": true
+  },
+  {
+    "name": "B站创作中心",
+    "url": "https://member.bilibili.com",
+    "desc": "B站稿酬、充电、带货。",
+    "desc_en": "Bilibili creator studio.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "接单",
+      "直播"
+    ],
+    "how": "1. 打开 https://member.bilibili.com 登录。 2. 投视频过审。 3. 开通激励计划/充电。 4. 可挂橱窗带货。 5. 看创作中心收益。",
+    "free": true
+  },
+  {
+    "name": "视频号创作者",
+    "url": "https://channels.weixin.qq.com",
+    "desc": "微信视频号直播与带货。",
+    "desc_en": "WeChat Channels creator.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "亚洲",
+      "变现",
+      "电商",
+      "直播",
+      "跨境"
+    ],
+    "how": "1. 打开微信「视频号」或 https://channels.weixin.qq.com 。 2. 发短视频涨粉。 3. 开通直播和礼物。 4. 挂小店购物车。 5. 收益进微信支付。",
+    "free": true
+  },
+  {
+    "name": "亚马逊卖家中心",
+    "url": "https://sellercentral.amazon.com",
+    "desc": "Amazon.com 北美卖家后台。",
+    "desc_en": "Amazon.com Seller Central.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://sellercentral.amazon.com 注册专业卖家。 2. 填税务与收款。 3. 上架FBA。 4. 投Sponsored Ads。 5. 看付款报告。",
+    "free": true
+  },
+  {
+    "name": "eBay卖家",
+    "url": "https://www.ebay.com/sl/sell",
+    "desc": "eBay全球拍卖/一口价。",
+    "desc_en": "eBay selling hub.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.ebay.com/sl/sell 注册。 2. 上架拍卖或一口价。 3. 设国际运费。 4. 用托管收款。 5. 处理纠纷。",
+    "free": true
+  },
+  {
+    "name": "Meta Shops",
+    "url": "https://www.facebook.com/business/shops",
+    "desc": "Facebook/Instagram 小店。",
+    "desc_en": "Meta Shops on FB/IG.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.facebook.com/business/shops 创建商店。 2. 同步商品目录。 3. 挂到主页和IG。 4. 开购物广告。 5. 用Checkout或跳转成交。",
+    "free": true
+  },
+  {
+    "name": "Vinted",
+    "url": "https://www.vinted.com",
+    "desc": "欧洲二手衣橱C2C。",
+    "desc_en": "Vinted EU secondhand fashion.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.vinted.com 注册。 2. 拍照上架衣服。 3. 买家付款后发货。 4. Vinted保护交易。 5. 余额提现。",
+    "free": true
+  },
+  {
+    "name": "Whatnot",
+    "url": "https://www.whatnot.com",
+    "desc": "欧美直播拍卖潮玩卡牌。",
+    "desc_en": "Whatnot live auction selling.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "直播",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.whatnot.com 申请卖家。 2. 通过审核。 3. 开直播拍卖。 4. 成交后发货。 5. 平台打款。",
+    "free": true
+  },
+  {
+    "name": "OfferUp",
+    "url": "https://www.offerup.com",
+    "desc": "美国本地闲置买卖。",
+    "desc_en": "OfferUp US local selling.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.offerup.com 发商品。 2. 本地面交或邮寄。 3. 谈价。 4. 成交。 5. 注意当面安全。",
+    "free": true
+  },
+  {
+    "name": "StockX卖家",
+    "url": "https://stockx.com/selling",
+    "desc": "球鞋/潮品寄售。",
+    "desc_en": "StockX selling sneakers/collectibles.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://stockx.com/selling 开通卖家。 2. 上架要价。 3. 成交后寄StockX鉴定。 4. 通过后平台发货。 5. 打款到银行。",
+    "free": true
+  },
+  {
+    "name": "Grailed",
+    "url": "https://www.grailed.com",
+    "desc": "欧美男装高端二手。",
+    "desc_en": "Grailed menswear resale.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.grailed.com 注册卖家。 2. 上架成衣。 3. 谈价发货。 4. 用Grailed支付。 5. 处理退货政策。",
+    "free": true
+  },
+  {
+    "name": "WooCommerce",
+    "url": "https://woocommerce.com",
+    "desc": "WordPress 独立站开店。",
+    "desc_en": "WooCommerce for WordPress stores.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://woocommerce.com 安装到WordPress。 2. 选主题和支付。 3. 上架SKU。 4. 接Stripe/PayPal。 5. 自己做流量。",
+    "free": true
+  },
+  {
+    "name": "BigCommerce",
+    "url": "https://www.bigcommerce.com",
+    "desc": "欧美独立站SaaS。",
+    "desc_en": "BigCommerce hosted store.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.bigcommerce.com 注册试用。 2. 导入商品。 3. 接支付和物流。 4. 做SEO/广告。 5. 看转化报表。",
+    "free": true
+  },
+  {
+    "name": "Squarespace商店",
+    "url": "https://www.squarespace.com",
+    "desc": "Squarespace 自带结账开店。",
+    "desc_en": "Squarespace commerce.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.squarespace.com 选Commerce模板。 2. 上架产品。 3. 接支付。 4. 绑域名。 5. 发货或数字交付。",
+    "free": true
+  },
+  {
+    "name": "Printify",
+    "url": "https://printify.com",
+    "desc": "按需印花，欧美POD。",
+    "desc_en": "Printify print-on-demand.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://printify.com 注册。 2. 接Etsy/Shopify店铺。 3. 上架印花品。 4. 顾客下单工厂代发。 5. 差价即利润。",
+    "free": true
+  },
+  {
+    "name": "Redbubble",
+    "url": "https://www.redbubble.com",
+    "desc": "设计师上传图案分成。",
+    "desc_en": "Redbubble artist marketplace.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://www.redbubble.com 开艺术家账号。 2. 上传图案。 3. 平台印到服饰。 4. 全球发货。 5. 按季版税。",
+    "free": true
+  },
+  {
+    "name": "Spring印花",
+    "url": "https://www.spring.com",
+    "desc": "原Teespring，粉丝周边。",
+    "desc_en": "Spring (Teespring) merch.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://www.spring.com 注册。 2. 做T恤/贴纸店。 3. 把链接放到社媒。 4. Spring代发。 5. 看分成。",
+    "free": true
+  },
+  {
+    "name": "Amazon KDP",
+    "url": "https://kdp.amazon.com",
+    "desc": "亚马逊电子书/平装自出版。",
+    "desc_en": "Amazon Kindle Direct Publishing.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://kdp.amazon.com 用亚马逊账号登录。 2. 上传稿件和封面。 3. 定价。 4. 上架Kindle/平装。 5. 看版税报告。",
+    "free": true
+  },
+  {
+    "name": "ShareASale",
+    "url": "https://www.shareasale.com",
+    "desc": "美国联盟网络。",
+    "desc_en": "ShareASale affiliate network.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "接单",
+      "欧美"
+    ],
+    "how": "1. 打开 https://www.shareasale.com 注册联盟客。 2. 申请商家计划。 3. 布置链接。 4. 按成交佣金。 5. PayPal/ACH提现。",
+    "free": true
+  },
+  {
+    "name": "CJ Affiliate",
+    "url": "https://www.cj.com",
+    "desc": "原Commission Junction 联盟。",
+    "desc_en": "CJ Affiliate network.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "接单",
+      "欧美"
+    ],
+    "how": "1. 打开 https://www.cj.com 注册Publisher。 2. 申请广告主。 3. 拿追踪链。 4. 内容/比价导流。 5. 按月结算。",
+    "free": true
+  },
+  {
+    "name": "Impact联盟",
+    "url": "https://impact.com",
+    "desc": "Impact 合作伙伴营销。",
+    "desc_en": "Impact.com partner marketing.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "接单",
+      "欧美"
+    ],
+    "how": "1. 打开 https://impact.com 注册合作伙伴。 2. 申请品牌计划。 3. 用深度链接。 4. 看转化。 5. 按合同结算。",
+    "free": true
+  },
+  {
+    "name": "ClickBank",
+    "url": "https://www.clickbank.com",
+    "desc": "数字产品联盟（课程/软件）。",
+    "desc_en": "ClickBank digital affiliate.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "接单",
+      "欧美"
+    ],
+    "how": "1. 打开 https://www.clickbank.com 注册。 2. 选数字产品推广。 3. 用跳转链。 4. 按高佣金CPA。 5. Payoneer/Direct结算。",
+    "free": true
+  },
+  {
+    "name": "YouTube工作室",
+    "url": "https://studio.youtube.com",
+    "desc": "YouTube广告分成与会员。",
+    "desc_en": "YouTube Studio monetization.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://studio.youtube.com 登录。 2. 达到YPP门槛后申请。 3. 开广告、会员、超级感谢。 4. 看收益分析。 5. 绑AdSense收款。",
+    "free": true
+  },
+  {
+    "name": "Twitch联盟",
+    "url": "https://www.twitch.tv/p/en/affiliates/",
+    "desc": "Twitch Affiliate 订阅与礼物。",
+    "desc_en": "Twitch Affiliate program.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "直播"
+    ],
+    "how": "1. 打开 https://www.twitch.tv/p/en/affiliates/ 看条件。 2. 直播攒时长和平均观众。 3. 申请Affiliate。 4. 开订阅与Bits。 5. 绑PayPal收款。",
+    "free": true
+  },
+  {
+    "name": "Buy Me a Coffee",
+    "url": "https://www.buymeacoffee.com",
+    "desc": "小费/会员支持创作者。",
+    "desc_en": "Buy Me a Coffee tips & memberships.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://www.buymeacoffee.com 注册。 2. 设小费和会员档。 3. 把链接放到主页。 4. 粉丝付款。 5. Stripe/PayPal到账。",
+    "free": true
+  },
+  {
+    "name": "Substack",
+    "url": "https://substack.com",
+    "desc": "新闻通讯付费订阅。",
+    "desc_en": "Substack paid newsletters.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://substack.com 开刊。 2. 写免费期涨名单。 3. 开付费墙。 4. Stripe订阅。 5. 看打开率和收入。",
+    "free": true
+  },
+  {
+    "name": "Medium Partner",
+    "url": "https://medium.com/creators",
+    "desc": "Medium 会员阅读分成。",
+    "desc_en": "Medium Partner Program.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://medium.com/creators 申请Partner。 2. 把文章设为会员可读。 3. 按阅读时长分成。 4. 看Partner后台。 5. Stripe打款。",
+    "free": true
+  },
+  {
+    "name": "Teachable",
+    "url": "https://teachable.com",
+    "desc": "卖网课/会员。",
+    "desc_en": "Teachable course platform.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://teachable.com 注册。 2. 上传课程视频。 3. 设价格。 4. 用邮件和社媒卖课。 5. Stripe收款。",
+    "free": true
+  },
+  {
+    "name": "Kajabi",
+    "url": "https://kajabi.com",
+    "desc": "课程+邮件+支付一体（付费）。",
+    "desc_en": "Kajabi paid course platform.",
+    "cat": "1. 打开 https://kajabi.com 看套餐。 2. 付费开站。 3. 上课程和邮件漏斗。 4. 接支付。 5. 看销售额。",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": false,
+    "free": true
+  },
+  {
+    "name": "Whop",
+    "url": "https://whop.com",
+    "desc": "卖Discord会员/工具订阅。",
+    "desc_en": "Whop digital products & Discord access.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://whop.com 开店。 2. 上架Discord/文件/软件。 3. 设订阅价。 4. 用Whop结账。 5. 自动拉人进群。",
+    "free": true
+  },
+  {
+    "name": "Stan Store",
+    "url": "https://stan.store",
+    "desc": "网红链接商店（欧美）。",
+    "desc_en": "Stan Store creator storefront.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://stan.store 注册。 2. 挂数字产品/预约。 3. 一个手机页收款。 4. 接Instagram。 5. 看订单。",
+    "free": true
+  },
+  {
+    "name": "Beacons",
+    "url": "https://beacons.ai",
+    "desc": "创作者主页+商店。",
+    "desc_en": "Beacons.ai creator page + store.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://beacons.ai 做主页。 2. 加商店和邮件。 3. 把链接放到IG。 4. 卖数字产品。 5. 看转化。",
+    "free": true
+  },
+  {
+    "name": "Linktree商店",
+    "url": "https://linktr.ee",
+    "desc": "Linktree 加商品和支付。",
+    "desc_en": "Linktree shop links.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://linktr.ee 注册。 2. 加商品/支付链。 3. 放到社媒简介。 4. 点进成交。 5. 可升级付费功能。",
+    "free": true
+  },
+  {
+    "name": "Shutterstock投稿",
+    "url": "https://submit.shutterstock.com",
+    "desc": "图/视频素材投稿分成。",
+    "desc_en": "Shutterstock contributor.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://submit.shutterstock.com 申请作者。 2. 过审后上传图或视频。 3. 填关键词。 4. 客户下载即分成。 5. PayPal月结。",
+    "free": true
+  },
+  {
+    "name": "Adobe Stock投稿",
+    "url": "https://contributor.stock.adobe.com",
+    "desc": "Adobe Stock 素材分成。",
+    "desc_en": "Adobe Stock contributor.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://contributor.stock.adobe.com 注册。 2. 上传并过审。 3. 设关键词。 4. 下载分成。 5. Adobe打款。",
+    "free": true
+  },
+  {
+    "name": "Envato",
+    "url": "https://www.envato.com",
+    "desc": "主题/素材/视频模板售卖。",
+    "desc_en": "Envato market for digital assets.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://www.envato.com 进作者。 2. 上传主题或素材。 3. 过审上架。 4. 按下载分成。 5. 提现。",
+    "free": true
+  },
+  {
+    "name": "Wise Business",
+    "url": "https://wise.com/business",
+    "desc": "跨境收款与多币种账户。",
+    "desc_en": "Wise Business multi-currency account.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "支付",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://wise.com/business 注册企业。 2. 完成认证。 3. 开当地收款账号。 4. 客户打本地款。 5. 换成人民币或美元提出。",
+    "free": true
+  },
+  {
+    "name": "Stripe收款",
+    "url": "https://stripe.com",
+    "desc": "欧美卡支付收款（独立站）。",
+    "desc_en": "Stripe payments for online sellers.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "支付",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://stripe.com 注册。 2. 完成企业认证。 3. 把支付接到Shopify/自建站。 4. 收信用卡。 5. 打款到银行。",
+    "free": true
+  },
+  {
+    "name": "PayPal商业",
+    "url": "https://www.paypal.com/business",
+    "desc": "PayPal 商家收款。",
+    "desc_en": "PayPal Business checkout.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "支付",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.paypal.com/business 升级商家。 2. 接网站或发付款链。 3. 顾客PayPal结账。 4. 处理拒付。 5. 提现到卡或银行。",
+    "free": true
+  },
+  {
+    "name": "PeoplePerHour",
+    "url": "https://www.peopleperhour.com",
+    "desc": "英国/欧洲技能接单。",
+    "desc_en": "PeoplePerHour EU freelance.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "接单",
+      "欧美"
+    ],
+    "how": "1. 打开 https://www.peopleperhour.com 注册。 2. 上架小时服务。 3. 投提案。 4. 交付。 5. 平台放款。",
+    "free": true
+  },
+  {
+    "name": "Guru接单",
+    "url": "https://www.guru.com",
+    "desc": "Guru.com 外包。",
+    "desc_en": "Guru.com freelance.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "接单",
+      "欧美"
+    ],
+    "how": "1. 打开 https://www.guru.com 注册。 2. 完善档案。 3. 投工作。 4. SafePay托管。 5. 完成验收打款。",
+    "free": true
+  },
+  {
+    "name": "Freelancer接单",
+    "url": "https://www.freelancer.com",
+    "desc": "Freelancer.com 全球竞标。",
+    "desc_en": "Freelancer.com bidding gigs.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "接单",
+      "欧美"
+    ],
+    "how": "1. 打开 https://www.freelancer.com 注册。 2. 投项目。 3. 中标交付。 4. Milestone打款。 5. 提现PayPal/Wise。",
+    "free": true
+  },
+  {
+    "name": "Allegro卖家",
+    "url": "https://allegro.pl",
+    "desc": "波兰Allegro电商。",
+    "desc_en": "Allegro marketplace Poland.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://allegro.pl 注册卖家。 2. 上架商品。 3. 用InPost等物流。 4. Allegro保护交易。 5. 结算到波兰账户。",
+    "free": true
+  },
+  {
+    "name": "Bol.com卖家",
+    "url": "https://partner.bol.com",
+    "desc": "荷兰/比利时Bol.com。",
+    "desc_en": "Bol.com seller NL/BE.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://partner.bol.com 申请。 2. 上架。 3. 用Bol仓或自发货。 4. 处理退货。 5. 结算欧元。",
+    "free": true
+  },
+  {
+    "name": "Cdiscount卖家",
+    "url": "https://www.cdiscount.com",
+    "desc": "法国Cdiscount开店。",
+    "desc_en": "Cdiscount marketplace France.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.cdiscount.com 找卖家入驻。 2. 提交资料。 3. 上架法国站。 4. 用法兰西物流。 5. 按账期结算。",
+    "free": true
+  },
+  {
+    "name": "ManoMano商家",
+    "url": "https://www.manomano.com",
+    "desc": "欧洲建材家居平台。",
+    "desc_en": "ManoMano DIY marketplace EU.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.manomano.com 找卖家。 2. 提交五金/家居类目。 3. 上架。 4. 欧洲仓发货。 5. 对账。",
+    "free": true
+  },
+  {
+    "name": "Kleinanzeigen",
+    "url": "https://www.kleinanzeigen.de",
+    "desc": "德国分类信息/二手。",
+    "desc_en": "Kleinanzeigen (DE classifieds).",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.kleinanzeigen.de 注册。 2. 发分类广告。 3. 站内聊天。 4. 面交或邮寄。 5. 可开商业账号。",
+    "free": true
+  },
+  {
+    "name": "Leboncoin",
+    "url": "https://www.leboncoin.fr",
+    "desc": "法国分类与二手。",
+    "desc_en": "Leboncoin France classifieds.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.leboncoin.fr 发帖。 2. 上架二手或服务。 3. 聊天成交。 4. 可用Leboncoin支付。 5. 注意面交安全。",
+    "free": true
+  },
+  {
+    "name": "Wallapop",
+    "url": "https://es.wallapop.com",
+    "desc": "西班牙/意大利附近二手。",
+    "desc_en": "Wallapop C2C Spain/Italy.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://es.wallapop.com 注册。 2. 发附近商品。 3. 聊天面交或寄送。 4. Wallapop支付。 5. 完成后评价。",
+    "free": true
+  },
+  {
+    "name": "Pinterest商业",
+    "url": "https://www.pinterest.com/business",
+    "desc": "Pinterest 商品图针带货。",
+    "desc_en": "Pinterest Business shopping.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.pinterest.com/business 开商业号。 2. 接商品目录。 3. 做商品Pin。 4. 开购物广告。 5. 跳转独立站成交。",
+    "free": true
+  },
+  {
+    "name": "Instagram创作者",
+    "url": "https://creators.instagram.com",
+    "desc": "Instagram 星标/带货/礼物。",
+    "desc_en": "Instagram creator monetization.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "直播"
+    ],
+    "how": "1. 打开 https://creators.instagram.com 看资格。 2. 转专业账号。 3. 开购物标签或礼物。 4. 接品牌商单。 5. 用Meta打款或站外收款。",
+    "free": true
+  },
+  {
+    "name": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace",
+    "desc": "Facebook 本地市场。",
+    "desc_en": "Facebook Marketplace selling.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.facebook.com/marketplace 发商品。 2. 填价格地点。 3. 聊天议价。 4. 本地成交。 5. 可同步到Shops。",
+    "free": true
+  },
+  {
+    "name": "TikTok创作者基金",
+    "url": "https://www.tiktok.com/creativity",
+    "desc": "TikTok Creativity Program 播放分成。",
+    "desc_en": "TikTok Creativity Program.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美"
+    ],
+    "how": "1. 打开 https://www.tiktok.com/creativity 看地区资格。 2. 达到粉丝和播放门槛。 3. 申请Creativity Program。 4. 发原创视频。 5. 按播放结算。",
+    "free": true
+  },
+  {
+    "name": "GOAT卖家",
+    "url": "https://www.goat.com",
+    "desc": "球鞋鉴定转卖。",
+    "desc_en": "GOAT sneaker selling.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.goat.com 开卖家。 2. 上架要价。 3. 成交寄GOAT鉴定。 4. 通过后平台发买家。 5. 打款。",
+    "free": true
+  },
+  {
+    "name": "Discogs卖家",
+    "url": "https://www.discogs.com/sell",
+    "desc": "黑胶/唱片全球买卖。",
+    "desc_en": "Discogs music marketplace.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://www.discogs.com/sell 开卖家。 2. 上架唱片。 3. 国际发货。 4. PayPal收款。 5. 处理评分。",
+    "free": true
+  },
+  {
+    "name": "Folksy",
+    "url": "https://folksy.com",
+    "desc": "英国手作市集。",
+    "desc_en": "Folksy UK handmade market.",
+    "cat": "变现",
+    "pack": "变现",
+    "tags": [
+      "变现",
+      "欧美",
+      "电商",
+      "跨境"
+    ],
+    "how": "1. 打开 https://folksy.com 开店。 2. 上架手作。 3. 英国邮寄。 4. 平台抽成。 5. 提现。",
+    "free": true
+  }
+]
