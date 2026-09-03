@@ -103,7 +103,7 @@ function allInnerTags(){
   return src;
 }
 function sortedTags(){
-  const src=allInnerTags();
+  const src=TAGS.slice();
   return src.sort((a,b)=>{const A=lang==='zh'?a[0]:a[1];const B=lang==='zh'?b[0]:b[1];const la=tagLen(A),lb=tagLen(B);if(la!==lb)return la-lb;return A.localeCompare(B,lang==='zh'?'zh':'en');});
 }
 async function load(){selected.clear();tags.clear();applyChrome();const files=['data/tools.json','data/packs.json','data/more.json'];for(let i=2;i<=183;i++)files.push('data/more'+i+'.json');const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));const seenName=new Set();const seenUrl=new Set();tools=[];for(const x of arrs.flat()){if(!x||!x.name||DROP_NAME.has(x.name))continue;if(deadPath(x.url))continue;const h=hostOf(x.url);if(h&&DROP_HOST.has(h))continue;if(seenName.has(x.name))continue;const uk=isHttp(x.url)?urlKey(x.url):'';if(uk&&seenUrl.has(uk))continue;seenName.add(x.name);if(uk)seenUrl.add(uk);tools.push(x);}pickHot();metaEl.textContent=tools.length+t().tools;renderHot();renderSide();render();}
