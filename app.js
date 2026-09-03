@@ -13,13 +13,19 @@ const GROUPS=[
 const GROUP_SUBS={
 pc:[['系统应用','System'],['模型应用','Models'],['视频制作','Video'],['自动工作流','Workflow']],
 adult:[['直播','Live'],['视频','Video'],['语音','Voice'],['聊天','Chat'],['交友','Dating']],
-gig:[['接单','Gigs'],['威客','Witkey'],['众包','Crowd'],['外包','Outsrc'],['兼职','Jobs']],
+gig:[['视频','Video'],['设计','Design'],['文案','Copy'],['编程','Code'],['翻译','Translate'],['问卷','Survey'],['带货','Shop'],['威客','Witkey'],['兼职','Jobs']],
 draw:[['绘画','Draw'],['设计','Design'],['PS','PS'],['生图','T2I']],
 make:[['剪映','CapCut'],['即梦','Jimeng'],['配音','Dub'],['生视频','T2V']],
 life:[['交友','Dating'],['外卖','Food'],['二手','Used'],['旅行','Travel']],
 work:[['办公','Office'],['代码','Code'],['部署','Deploy'],['开店','Shop']],
 learn:[['教程','Guide'],['学习','Study']],
 free:[['免费','Free'],['收费','Paid']]
+};
+const TAG_DEEP={
+'视频':[['成人','Adult'],['东南亚','SEA'],['欧美','West'],['日韩','JP/KR'],['亚洲','Asia']],
+'生视频':[['成人','Adult'],['东南亚','SEA'],['欧美','West'],['日韩','JP/KR'],['亚洲','Asia']],
+'直播':[['成人','Adult'],['东南亚','SEA'],['欧美','West'],['日韩','JP/KR']],
+'交友':[['东南亚','SEA'],['欧美','West'],['日韩','JP/KR'],['亚洲','Asia']]
 };
 const TAGS=[['免费','Free'],['收费','Paid'],['对话','Chat'],['聊天','Talk'],['插件','Plugin'],['陪伴','Buddy'],['学习','Study'],['健身','Fit'],['美妆','Beauty'],['宠物','Pets'],['美食','Food'],['旅行','Travel'],['拼车','Carpool'],['租车','Rental'],['法律','Legal'],['管理','Manage'],['绘画','Draw'],['视频','Video'],['成人','Adult'],['直播','Live'],['交友','Dating'],['约炮','Hookup'],['办公','Office'],['编程','Code'],['游戏','Games'],['音乐','Music'],['语音','Voice'],['设计','Design'],['搜索','Search'],['写作','Write'],['接单','Gigs'],['兼职','Part-time'],['招聘','Jobs'],['社区','Forum'],['开店','Shop'],['API','API'],['图书','Books'],['小说','Novels'],['漫画','Manga'],['星座','Zodiac'],['塔罗','Tarot'],['云盘','Cloud'],['换脸','Face'],['打扮','Style'],['隐私','Privacy'],['资讯','News'],['短剧','Short'],['漫剧','Toon'],['故事','Story'],['创业','Startup'],['名人','Bio'],['八卦','Gossip'],['亲子','Kids'],['宝妈','Moms'],['主播','Stream'],['融资','Fund'],['理财','Money'],['种植','Farm'],['搭伙','Buddy'],['爬山','Hike'],['陪聊','Talk'],['情感','Feel'],['厨房','Kitchen'],['菜谱','Recipe'],['酒店','Hotel'],['房产','Realty'],['电影','Film'],['私影','Cinema'],['附近','Nearby'],['美剧','US TV'],['韩剧','KR TV'],['日剧','JP TV'],['监控','Cams'],['学生','Student'],['女心','Her'],['语录','Quotes'],['富婆','Sugar'],['人设','Persona'],['套图','Sets'],['文案','Copy'],['外贸','Trade'],['铺货','Dropship'],['网店','Store'],['养成','Raise'],['婚恋','Dating'],['出轨','Affair'],['检测','Detect'],['检验','Inspect'],['获粉','Grow'],['投票','Vote'],['数据','Stats'],['无审核','Open'],['小商品','Goods'],['机器人','Robot'],['无障碍','Access'],['模型包','Weights'],['数字人','Avatar'],['电视台','TV'],['虚拟人','Virtual'],['AI音乐','AI music'],['翻唱','Cover'],['夜生活','Nightlife'],['线下交','Meetup'],['羊毛','Deals'],['外卖','Delivery'],['陪护','Care'],['问卷','Survey'],['二手','Used'],['跑腿','Errand'],['维修','Repair'],['美容','Salon'],['矩阵','Matrix'],['转发','Repost'],['定时','Schedule'],['教程','Guide'],['Comfy','Comfy'],['纹身','Tattoo'],['舌钉','Pierce'],['短链','Short'],['飞机','Telegram'],['频道','Channel'],['医疗','Health'],['保险','Insurance'],['物流','Shipping'],['会计','Accounting'],['汽车','Auto'],['建筑','Build'],['科学','Science'],['天气','Weather'],['地图','Maps'],['支付','Pay'],['税务','Tax'],['体育','Sports'],['时尚','Fashion'],['家居','Home'],['摄影','Photo'],['会议','Meet'],['日历','Calendar'],['存储','Storage'],['电子书','Ebook'],['播客','Podcast'],['签名','Sign'],['调查','Polls'],['统计','Stats'],['农业','Farm'],['能源','Energy'],['制造','Make'],['航空','Aviation'],['海事','Marine'],['群发','Blast'],['多开','Multi'],['群控','Control'],['云手机','Cloud'],['指纹','Fingerprint'],['翻译','Translate'],['手机','Phone'],['电脑','PC'],['代码','Code'],['部署','Deploy'],['打包','Pack'],['大款','SugarD'],['小妹','Women'],['帅哥','Men'],['灰产','Gray'],['网盘','Drive'],['邮箱','Mail'],['接码','SMS'],['加密','Crypto'],['偶遇','Encounter'],['偷情','Affair'],['变现','Earn'],['全球','Global'],['租妻','RentWife'],['租女友','RentGF'],['租男友','RentBF'],['陪游','Tour'],['定位','GPS'],['模拟','Mock'],['虚拟定位','FakeGPS'],['居家','WFH'],['远程','Remote'],['威客','Witkey'],['众包','Crowd'],['外包','Outsrc'],['客服','CS'],['剪辑','Edit'],['跨境','XBorder'],['脚本','Script'],['分镜','Board'],['生图','T2I'],['生视频','T2V'],['配音','Dub'],['字幕','Captions'],['封面','Cover'],['发布','Post'],['豆包','Doubao'],['即梦','Jimeng'],['剪映','Jianying'],['本地','Local'],['端侧','Edge'],['离线','Offline'],['GGUF','GGUF'],['CoreML','CoreML'],['运行时','Runtime'],['申请','Apply'],['备案','ICP'],['认证','Verify'],['小程序','Mini App'],['扣子','Coze'],['电台','Radio'],['工作流','Workflow'],['ComfyUI','ComfyUI'],['安装包','Installer']];
 const DROP_NAME=new Set(['Cron Calendar','Brilliant Practice','Quizlet Learn','Tuta Mail','Navidrome Demo','Stream Music','Primephonic 已并','Google Jules Agent','OpenDevin 旧名','Cursor.sh 旧域','Fig Term 已并','Amazon CodeWhisperer','Lyuceum','Mentat AI','Safari 技术预览','Character.AI+','Odakyu? skip','CopyMeThat Recipes','Privacy.com Cards Note','Ashley Madison Affairs Plus','SSL Labs Recheck']);
@@ -88,7 +94,13 @@ window.sortLangChips=sortLangChips;
 function watchChips(box){if(!box||box._chipWatch)return;box._chipWatch=1;let t=null;new MutationObserver(()=>{clearTimeout(t);t=setTimeout(sortLangChips,80);}).observe(box,{subtree:true,childList:true,characterData:true});}
 function sortedTags(){
   const id=[...selected][0];
-  const src=(id&&GROUP_SUBS[id])?GROUP_SUBS[id].slice():[];
+  let src=(id&&GROUP_SUBS[id])?GROUP_SUBS[id].slice():[];
+  const seen=new Set(src.map(p=>p[0]));
+  tags.forEach(function(k){
+    const extra=TAG_DEEP[k];
+    if(!extra) return;
+    extra.forEach(function(p){ if(!seen.has(p[0])){ seen.add(p[0]); src.push(p); } });
+  });
   return src.sort((a,b)=>{const A=lang==='zh'?a[0]:a[1];const B=lang==='zh'?b[0]:b[1];const la=tagLen(A),lb=tagLen(B);if(la!==lb)return la-lb;return A.localeCompare(B,lang==='zh'?'zh':'en');});
 }
 async function load(){selected.clear();tags.clear();applyChrome();const files=['data/tools.json','data/packs.json','data/more.json'];for(let i=2;i<=183;i++)files.push('data/more'+i+'.json');const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));const seenName=new Set();const seenUrl=new Set();tools=[];for(const x of arrs.flat()){if(!x||!x.name||DROP_NAME.has(x.name))continue;if(deadPath(x.url))continue;const h=hostOf(x.url);if(h&&DROP_HOST.has(h))continue;if(seenName.has(x.name))continue;const uk=isHttp(x.url)?urlKey(x.url):'';if(uk&&seenUrl.has(uk))continue;seenName.add(x.name);if(uk)seenUrl.add(uk);tools.push(x);}pickHot();metaEl.textContent=tools.length+t().tools;renderHot();renderSide();render();}
