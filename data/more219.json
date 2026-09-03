@@ -4,13 +4,12 @@
     "url": "https://ollama.com",
     "desc": "本机一条命令跑开源大模型，普通人手搓入门。",
     "desc_en": "Run open models locally with one command.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "本地",
       "电脑",
-      "大模型",
-      "安装包"
+      "模型应用"
     ],
     "how": "1. 打开 https://ollama.com 下官方安装包。 2. 安装后终端运行 ollama run llama3.2 。 3. 第一次会下载权重，用Wi-Fi。 4. 浏览器可再装 Open WebUI 做聊天界面。 5. 不要下快手私包模型，只拉 ollama.com 上的库。",
     "free": true
@@ -20,13 +19,13 @@
     "url": "https://lmstudio.ai",
     "desc": "图形界面本机跑GGUF大模型，不用写命令。",
     "desc_en": "GUI local LLM runner for GGUF.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "本地",
       "电脑",
       "GGUF",
-      "大模型"
+      "模型应用"
     ],
     "how": "1. 打开 https://lmstudio.ai 下官方客户端。 2. 在Discover搜模型。 3. 下GGUF（选小量化如Q4）。 4. 加载后聊天。 5. 也可开本地API给其它软件用。",
     "free": true
@@ -36,11 +35,11 @@
     "url": "https://huggingface.co/models",
     "desc": "开源大模型权重库，手搓模型从这下。",
     "desc_en": "Hugging Face model hub.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "本地",
-      "大模型"
+      "模型应用"
     ],
     "how": "1. 打开 https://huggingface.co/models 。 2. 筛 Text Generation。 3. 选许可允许的模型。 4. 用huggingface-cli或LM Studio下载。 5. 不要下不明网盘转存的权重。",
     "free": true
@@ -50,13 +49,13 @@
     "url": "https://github.com/ggml-org/llama.cpp",
     "desc": "CPU/GPU本地推理引擎，GGUF格式。",
     "desc_en": "llama.cpp local inference.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "本地",
       "电脑",
       "GGUF",
-      "大模型"
+      "模型应用"
     ],
     "how": "1. 打开 https://github.com/ggml-org/llama.cpp 。 2. 按README编译或下Release。 3. 准备GGUF权重。 4. 运行 llama-cli 或 llama-server。 5. 手机请用更小的量化，电脑再用7B+。",
     "free": true
@@ -66,13 +65,13 @@
     "url": "https://jan.ai",
     "desc": "开源本地ChatGPT界面，可离线。",
     "desc_en": "Jan local ChatGPT-style app.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "本地",
-      "离线",
       "电脑",
-      "大模型"
+      "离线",
+      "模型应用"
     ],
     "how": "1. 打开 https://jan.ai 下官方安装。 2. 在Hub选模型下载。 3. 新建对话。 4. 可完全离线。 5. 只认jan.ai安装包。",
     "free": true
@@ -82,13 +81,12 @@
     "url": "https://www.nomic.ai/gpt4all",
     "desc": "一键安装本机聊天大模型。",
     "desc_en": "GPT4All local chat installer.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "本地",
       "电脑",
-      "大模型",
-      "安装包"
+      "模型应用"
     ],
     "how": "1. 打开 https://www.nomic.ai/gpt4all 。 2. 下官方安装器。 3. 选一个小模型下载。 4. 本地聊天。 5. 不要第三方精简包。",
     "free": true
@@ -98,13 +96,12 @@
     "url": "https://openwebui.com",
     "desc": "给Ollama做网页聊天界面。",
     "desc_en": "Web UI for Ollama.",
-    "cat": "工作流",
-    "pack": "工作流",
+    "cat": "自动工作流",
+    "pack": "自动工作流",
     "tags": [
       "本地",
       "电脑",
-      "大模型",
-      "工作流"
+      "自动工作流"
     ],
     "how": "1. 打开 https://openwebui.com 看安装说明。 2. 先装好Ollama。 3. 用Docker或pip按官方装Open WebUI。 4. 浏览器打开本地端口。 5. 选已下载的模型聊天。",
     "free": true
@@ -114,11 +111,11 @@
     "url": "https://github.com/hiyouga/LLaMA-Factory",
     "desc": "开源微调训练，普通人也能炼小模型。",
     "desc_en": "LLaMA-Factory fine-tuning.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "电脑",
-      "大模型"
+      "模型应用"
     ],
     "how": "1. 打开 https://github.com/hiyouga/LLaMA-Factory 。 2. 按README装Python环境。 3. 准备自己的对话数据。 4. 用WebUI选基座模型开始微调。 5. 导出GGUF后再丢给Ollama/LM Studio用。电脑要有显卡。",
     "free": true
@@ -128,11 +125,11 @@
     "url": "https://unsloth.ai",
     "desc": "更快更省显存的开源微调。",
     "desc_en": "Unsloth fast fine-tuning.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "电脑",
-      "大模型"
+      "模型应用"
     ],
     "how": "1. 打开 https://unsloth.ai 。 2. 按官方Colab或本地安装。 3. 选小基座模型。 4. 喂自己的数据训练。 5. 导出给Ollama。需要NVIDIA显卡或云端GPU。",
     "free": true
@@ -142,11 +139,11 @@
     "url": "https://colab.research.google.com",
     "desc": "浏览器里租免费GPU练/跑模型。",
     "desc_en": "Google Colab free GPU.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
-      "大模型",
-      "代码"
+      "代码",
+      "模型应用"
     ],
     "how": "1. 打开 https://colab.research.google.com 登录Google。 2. 新笔记本。 3. 运行时选T4 GPU。 4. 粘贴Unsloth或transformers示例。 5. 免费有时长限制，重要文件下载走。",
     "free": true
@@ -156,12 +153,12 @@
     "url": "https://www.modelscope.cn",
     "desc": "国产开源模型库，可下通义/DeepSeek等。",
     "desc_en": "ModelScope model hub.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "亚洲",
       "本地",
-      "大模型"
+      "模型应用"
     ],
     "how": "1. 打开 https://www.modelscope.cn 注册。 2. 搜大模型。 3. 按模型页的Studio或下载。 4. 本地用transformers/Ollama加载。 5. 遵守模型许可证。",
     "free": true
@@ -171,11 +168,11 @@
     "url": "https://siliconflow.cn",
     "desc": "国内API跑开源大模型，免本地显卡。",
     "desc_en": "SiliconFlow model APIs.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "亚洲",
-      "大模型"
+      "模型应用"
     ],
     "how": "1. 打开 https://siliconflow.cn 注册。 2. 建API Key。 3. 在文档里选DeepSeek/Qwen等。 4. 用OpenAI兼容接口调用。 5. 免费额度用完再充值，别把Key发到快手。",
     "free": true
@@ -185,11 +182,11 @@
     "url": "https://openrouter.ai",
     "desc": "一个Key调用多家大模型。",
     "desc_en": "OpenRouter multi-model API.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "欧美",
-      "大模型"
+      "模型应用"
     ],
     "how": "1. 打开 https://openrouter.ai 注册。 2. 建API Key。 3. 选模型。 4. 按OpenAI格式调用。 5. 设额度上限防止刷爆。",
     "free": true
@@ -199,11 +196,11 @@
     "url": "https://platform.deepseek.com",
     "desc": "DeepSeek官方API。",
     "desc_en": "DeepSeek official API.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "亚洲",
-      "大模型"
+      "模型应用"
     ],
     "how": "1. 打开 https://platform.deepseek.com 注册。 2. 创建API Key。 3. 看官方文档对接。 4. 可接自己的Agent。 5. Key不要发给任何人。",
     "free": true
@@ -213,11 +210,11 @@
     "url": "https://groq.com",
     "desc": "高速开源模型推理API。",
     "desc_en": "Groq fast inference API.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "欧美",
-      "大模型"
+      "模型应用"
     ],
     "how": "1. 打开 https://groq.com 注册。 2. 进console拿Key。 3. 选Llama等模型。 4. 用官方playground试。 5. 再接到自己的应用。",
     "free": true
@@ -227,12 +224,12 @@
     "url": "https://anythingllm.com",
     "desc": "本地知识库+大模型，自己的文档也能问。",
     "desc_en": "AnythingLLM local RAG.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "本地",
       "电脑",
-      "大模型"
+      "模型应用"
     ],
     "how": "1. 打开 https://anythingllm.com 下桌面版。 2. 安装。 3. 接Ollama或云API。 4. 上传自己的PDF。 5. 对文档提问。",
     "free": true
@@ -242,13 +239,11 @@
     "url": "https://pinokio.computer",
     "desc": "一键装各类AI应用，别用快手不明整合包。",
     "desc_en": "Pinokio AI app installer.",
-    "cat": "工作流",
-    "pack": "工作流",
+    "cat": "自动工作流",
+    "pack": "自动工作流",
     "tags": [
       "电脑",
-      "大模型",
-      "安装包",
-      "工作流"
+      "自动工作流"
     ],
     "how": "1. 打开 https://pinokio.computer 下官方。 2. 安装。 3. 在脚本市场装Ollama/Comfy等。 4. 点Run启动。 5. 只跑官方脚本，不跑评论区乱贴的。",
     "free": true
@@ -258,13 +253,13 @@
     "url": "https://github.com/ml-explore/mlx",
     "desc": "苹果芯片本地跑模型。",
     "desc_en": "Apple MLX local ML.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "本地",
       "电脑",
-      "CoreML",
-      "大模型"
+      "模型应用",
+      "CoreML"
     ],
     "how": "1. 打开 https://github.com/ml-explore/mlx 。 2. Mac ARM上pip install mlx。 3. 用mlx-lm加载模型。 4. 选小量化以免内存爆。 5. iPhone请用Draw Things，不要硬上电脑级权重。",
     "free": true
@@ -274,12 +269,12 @@
     "url": "https://continue.dev",
     "desc": "VS Code里接本地或云端大模型写代码。",
     "desc_en": "Continue.dev coding agent.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
-      "电脑",
       "代码",
-      "大模型",
+      "电脑",
+      "模型应用",
       "Agent"
     ],
     "how": "1. 打开 https://continue.dev 。 2. 给VS Code装Continue插件。 3. 配Ollama或OpenRouter。 4. 用侧边栏问代码。 5. 不要把仓库密钥写进提示词。",
@@ -290,12 +285,12 @@
     "url": "https://aider.chat",
     "desc": "终端里的编程Agent，可对仓库改代码。",
     "desc_en": "Aider terminal coding agent.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
-      "电脑",
       "代码",
-      "大模型",
+      "电脑",
+      "模型应用",
       "Agent"
     ],
     "how": "1. 打开 https://aider.chat 看安装。 2. pip install aider-chat。 3. 配API Key或本地Ollama。 4. 在仓库目录运行aider。 5. 每次改动先看diff再确认。",
@@ -306,12 +301,11 @@
     "url": "https://dify.ai",
     "desc": "可视化做Agent和工作流。",
     "desc_en": "Dify agent workflows.",
-    "cat": "工作流",
-    "pack": "工作流",
+    "cat": "自动工作流",
+    "pack": "自动工作流",
     "tags": [
-      "大模型",
-      "工作流",
-      "Agent"
+      "Agent",
+      "自动工作流"
     ],
     "how": "1. 打开 https://dify.ai 注册云版，或GitHub自建。 2. 新建应用。 3. 接模型供应商。 4. 拖节点做工作流。 5. 发布成API或网页。",
     "free": true
@@ -321,12 +315,12 @@
     "url": "https://n8n.io",
     "desc": "自动化工作流，可接大模型。",
     "desc_en": "n8n automation.",
-    "cat": "工作流",
-    "pack": "工作流",
+    "cat": "自动工作流",
+    "pack": "自动工作流",
     "tags": [
       "电脑",
-      "工作流",
-      "Agent"
+      "Agent",
+      "自动工作流"
     ],
     "how": "1. 打开 https://n8n.io 。 2. 用云或Docker自建。 3. 新建workflow。 4. 加HTTP/AI节点。 5. 打开执行开关。",
     "free": true
@@ -336,13 +330,12 @@
     "url": "https://www.crewai.com",
     "desc": "多Agent协作框架。",
     "desc_en": "CrewAI multi-agent.",
-    "cat": "工作流",
-    "pack": "工作流",
+    "cat": "自动工作流",
+    "pack": "自动工作流",
     "tags": [
       "代码",
-      "大模型",
-      "工作流",
-      "Agent"
+      "Agent",
+      "自动工作流"
     ],
     "how": "1. 打开 https://www.crewai.com 。 2. 按文档pip安装。 3. 定义角色Agent。 4. 给任务跑Crew。 5. 需要API或本地模型。",
     "free": true
@@ -352,11 +345,11 @@
     "url": "https://www.kaggle.com",
     "desc": "免费GPU笔记本，可练模型。",
     "desc_en": "Kaggle notebooks and GPU.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
-      "大模型",
-      "代码"
+      "代码",
+      "模型应用"
     ],
     "how": "1. 打开 https://www.kaggle.com 注册。 2. 新Notebook。 3. 打开GPU加速。 4. 跑公开的LLM notebook。 5. 输出下载到本地。",
     "free": true
@@ -366,11 +359,11 @@
     "url": "https://www.together.ai",
     "desc": "开源模型云端推理/微调。",
     "desc_en": "Together AI inference.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "模型应用",
+    "pack": "模型应用",
     "tags": [
       "欧美",
-      "大模型"
+      "模型应用"
     ],
     "how": "1. 打开 https://www.together.ai 注册。 2. 拿API Key。 3. 选开源模型。 4. playground试。 5. 再接到自己的应用。",
     "free": true
