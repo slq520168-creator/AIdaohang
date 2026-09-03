@@ -1,0 +1,441 @@
+[
+  {
+    "name": "Windows 11 官网",
+    "url": "https://www.microsoft.com/zh-cn/software-download/windows11",
+    "desc": "微软官方 Windows 11 安装镜像，不要下快手系统包。",
+    "desc_en": "Official Windows 11 ISO.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开 https://www.microsoft.com/zh-cn/software-download/windows11 。 2. 下官方 Media Creation Tool 或 ISO。 3. 用 Rufus 或微软工具做启动U盘。 4. 备份后安装。 5. 只认 microsoft.com。",
+    "free": true
+  },
+  {
+    "name": "Windows 10 官网",
+    "url": "https://www.microsoft.com/zh-cn/software-download/windows10",
+    "desc": "微软官方 Windows 10 安装工具。",
+    "desc_en": "Official Windows 10 installer.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开 https://www.microsoft.com/zh-cn/software-download/windows10 。 2. 下 Media Creation Tool。 3. 做启动盘或升级。 4. 备份文件。 5. 不要网盘 Ghost 系统。",
+    "free": true
+  },
+  {
+    "name": "Ubuntu 桌面版",
+    "url": "https://ubuntu.com/download/desktop",
+    "desc": "Ubuntu 官方桌面系统镜像。",
+    "desc_en": "Official Ubuntu Desktop ISO.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开 https://ubuntu.com/download/desktop 。 2. 下官方 ISO。 3. 用 balenaEtcher 或 Ventoy 写U盘。 4. U盘启动安装。 5. 校验 SHA256。",
+    "free": true
+  },
+  {
+    "name": "Fedora Workstation",
+    "url": "https://fedoraproject.org/workstation/download",
+    "desc": "Fedora 官方工作站镜像。",
+    "desc_en": "Official Fedora Workstation.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开 https://fedoraproject.org/workstation/download 。 2. 下官方 ISO。 3. 写U盘安装。 4. 选工作站版。 5. 只认 fedoraproject.org。",
+    "free": true
+  },
+  {
+    "name": "Debian",
+    "url": "https://www.debian.org/distrib/",
+    "desc": "Debian 官方安装镜像。",
+    "desc_en": "Official Debian ISO.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开 https://www.debian.org/distrib/ 。 2. 下 netinst 或完整 ISO。 3. 写U盘。 4. 按安装向导。 5. 校验签名。",
+    "free": true
+  },
+  {
+    "name": "Linux Mint",
+    "url": "https://linuxmint.com/download.php",
+    "desc": "Linux Mint 官方下载。",
+    "desc_en": "Official Linux Mint.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开 https://linuxmint.com/download.php 。 2. 选 Cinnamon 版 ISO。 3. 写U盘安装。 4. 适合从 Windows 过来的人。 5. 只认 linuxmint.com。",
+    "free": true
+  },
+  {
+    "name": "Rufus",
+    "url": "https://rufus.ie",
+    "desc": "Windows 下做系统启动U盘。",
+    "desc_en": "Rufus bootable USB.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开 https://rufus.ie 下官方便携版。 2. 插入U盘（会清空）。 3. 选 Windows/Ubuntu ISO。 4. 开始写入。 5. 不要第三方修改版 Rufus。",
+    "free": true
+  },
+  {
+    "name": "Ventoy",
+    "url": "https://www.ventoy.net",
+    "desc": "U盘丢多个系统ISO直接选。",
+    "desc_en": "Ventoy multi-ISO USB.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开 https://www.ventoy.net 下官方。 2. 安装到U盘。 3. 把多个 ISO 拷进去。 4. U盘启动选系统。 5. 只认 ventoy.net。",
+    "free": true
+  },
+  {
+    "name": "balenaEtcher",
+    "url": "https://etcher.balena.io",
+    "desc": "跨平台写系统镜像。",
+    "desc_en": "balenaEtcher ISO writer.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开 https://etcher.balena.io 下载。 2. 选 ISO。 3. 选U盘。 4. Flash。 5. 官方安装包无广告。",
+    "free": true
+  },
+  {
+    "name": "NVIDIA 驱动官网",
+    "url": "https://www.nvidia.com/Download/index.aspx",
+    "desc": "NVIDIA 显卡官方驱动。",
+    "desc_en": "Official NVIDIA drivers.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开 https://www.nvidia.com/Download/index.aspx 。 2. 选显卡型号。 3. 下 Game Ready 或 Studio。 4. 安装后重启。 5. 不要驱动精灵强制包。",
+    "free": true
+  },
+  {
+    "name": "AMD 驱动官网",
+    "url": "https://www.amd.com/en/support/download/drivers.html",
+    "desc": "AMD 显卡/芯片组官方驱动。",
+    "desc_en": "Official AMD drivers.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开 https://www.amd.com/en/support/download/drivers.html 。 2. 自动检测或选手动。 3. 安装 Adrenalin。 4. 重启。 5. 只认 amd.com。",
+    "free": true
+  },
+  {
+    "name": "Intel 驱动中心",
+    "url": "https://www.intel.com/content/www/us/en/download-center/home.html",
+    "desc": "Intel 核显/芯片组官方驱动。",
+    "desc_en": "Intel Driver & Support.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开 Intel Download Center。 2. 下 Intel Driver & Support Assistant 或按型号搜。 3. 安装。 4. 重启。 5. 只认 intel.com。",
+    "free": true
+  },
+  {
+    "name": "Visual C++ 运行库",
+    "url": "https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist",
+    "desc": "微软官方 VC++ 运行库，很多软件要它。",
+    "desc_en": "Official VC++ redistributable.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开微软文档 Latest supported VC++ 。 2. 下 x64 和 x86。 3. 安装。 4. 不要下「运行库合集」网盘包。 5. 只认 microsoft.com。",
+    "free": true
+  },
+  {
+    "name": ".NET 官网",
+    "url": "https://dotnet.microsoft.com/download",
+    "desc": "微软 .NET 官方运行时。",
+    "desc_en": "Official .NET download.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开 https://dotnet.microsoft.com/download 。 2. 下 Desktop Runtime。 3. 安装。 4. 需要开发再装 SDK。 5. 只认微软。",
+    "free": true
+  },
+  {
+    "name": "DirectX 官网",
+    "url": "https://www.microsoft.com/zh-cn/download/details.aspx?id=35",
+    "desc": "微软 DirectX 最终用户运行时。",
+    "desc_en": "Official DirectX runtime.",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
+    "tags": [
+      "电脑",
+      "游戏",
+      "安装包",
+      "电脑软件"
+    ],
+    "how": "1. 打开微软 DirectX 最终用户运行时页。 2. 下载安装。 3. 游戏缺 dx 时用这个。 4. Win10/11 多数已自带。 5. 不要游戏站捆绑包。",
+    "free": true
+  },
+  {
+    "name": "剪映专业版电脑",
+    "url": "https://www.capcut.cn/",
+    "desc": "剪映电脑专业版官网。",
+    "desc_en": "CapCut/Jianying Pro desktop.",
+    "cat": "视频制作",
+    "pack": "视频制作",
+    "tags": [
+      "电脑",
+      "剪映",
+      "视频制作"
+    ],
+    "how": "1. 打开 https://www.capcut.cn/ 或剪映官网。 2. 下专业版电脑端。 3. 登录抖音/剪映账号。 4. 导入素材剪辑字幕。 5. 不要破解去水印包。",
+    "free": true
+  },
+  {
+    "name": "必剪电脑版",
+    "url": "https://bcut.bilibili.cn",
+    "desc": "B站必剪电脑端。",
+    "desc_en": "Bilibili BCut editor.",
+    "cat": "视频制作",
+    "pack": "视频制作",
+    "tags": [
+      "电脑",
+      "视频制作"
+    ],
+    "how": "1. 打开 https://bcut.bilibili.cn 下载。 2. 安装。 3. 登录B站账号。 4. 剪辑后可一键投稿。 5. 只认 bcut.bilibili.cn。",
+    "free": true
+  },
+  {
+    "name": "Kdenlive",
+    "url": "https://kdenlive.org/download/",
+    "desc": "免费开源电脑剪辑。",
+    "desc_en": "Official Kdenlive.",
+    "cat": "视频制作",
+    "pack": "视频制作",
+    "tags": [
+      "电脑",
+      "视频制作"
+    ],
+    "how": "1. 打开 https://kdenlive.org/download/ 。 2. 下官方包。 3. 安装。 4. 导入时间线导出。 5. 不要第三方精简版。",
+    "free": true
+  },
+  {
+    "name": "Topaz Video AI",
+    "url": "https://www.topazlabs.com/topaz-video-ai",
+    "desc": "电脑端视频超分补帧。",
+    "desc_en": "Topaz Video AI.",
+    "cat": "视频制作",
+    "pack": "视频制作",
+    "tags": [
+      "电脑",
+      "视频制作"
+    ],
+    "how": "1. 打开 https://www.topazlabs.com/topaz-video-ai 。 2. 下官方试用。 3. 需要较好显卡。 4. 导入视频增强。 5. 买授权走官网，不要破解。",
+    "free": true
+  },
+  {
+    "name": "会声会影",
+    "url": "https://www.videostudiopro.com",
+    "desc": "Corel VideoStudio 电脑剪辑。",
+    "desc_en": "Corel VideoStudio.",
+    "cat": "视频制作",
+    "pack": "视频制作",
+    "tags": [
+      "电脑",
+      "视频制作"
+    ],
+    "how": "1. 打开 https://www.videostudiopro.com 下载试用。 2. 安装。 3. 用官方账号。 4. 订阅以官网为准。 5. 绿色版是盗版。",
+    "free": true
+  },
+  {
+    "name": "Stability Matrix",
+    "url": "https://github.com/LykosAI/StabilityMatrix",
+    "desc": "电脑一键管 ComfyUI/SD 工作流。",
+    "desc_en": "Stability Matrix Comfy/SD launcher.",
+    "cat": "工作流",
+    "pack": "工作流",
+    "tags": [
+      "电脑",
+      "工作流",
+      "ComfyUI"
+    ],
+    "how": "1. 打开 https://github.com/LykosAI/StabilityMatrix/releases 。 2. 下官方安装包。 3. 用它安装 ComfyUI 或 A1111。 4. 工作流在界面里开。 5. 不要快手整合包 exe。",
+    "free": true
+  },
+  {
+    "name": "ComfyUI 桌面工作流",
+    "url": "https://www.comfy.org/download/",
+    "desc": "Comfy 官方桌面，电脑节点工作流。",
+    "desc_en": "Comfy Desktop workflows.",
+    "cat": "工作流",
+    "pack": "工作流",
+    "tags": [
+      "电脑",
+      "工作流",
+      "ComfyUI"
+    ],
+    "how": "1. 打开 https://www.comfy.org/download/ 。 2. 安装 Comfy Desktop。 3. 打开工作流 JSON。 4. 装节点后出图/出视频。 5. 只认 comfy.org 和秋葉自己发的盘。",
+    "free": true
+  },
+  {
+    "name": "Automatic1111",
+    "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+    "desc": "电脑 SD WebUI 工作流。",
+    "desc_en": "A1111 WebUI.",
+    "cat": "工作流",
+    "pack": "工作流",
+    "tags": [
+      "电脑",
+      "工作流"
+    ],
+    "how": "1. 打开 GitHub AUTOMATIC1111/stable-diffusion-webui。 2. 按官方 README 安装。 3. 放模型到 models。 4. 浏览器开 7860。 5. 不要来路不明一键包。",
+    "free": true
+  },
+  {
+    "name": "Forge WebUI",
+    "url": "https://github.com/lllyasviel/stable-diffusion-webui-forge",
+    "desc": "电脑 Forge，更省显存的 SD 工作流。",
+    "desc_en": "Forge WebUI.",
+    "cat": "工作流",
+    "pack": "工作流",
+    "tags": [
+      "电脑",
+      "工作流"
+    ],
+    "how": "1. 打开 GitHub lllyasviel/stable-diffusion-webui-forge。 2. 按官方安装。 3. 导入模型。 4. 跑文生图。 5. 只认作者仓库。",
+    "free": true
+  },
+  {
+    "name": "Fooocus",
+    "url": "https://github.com/lllyasviel/Fooocus",
+    "desc": "电脑简化版 SD 出图工作流。",
+    "desc_en": "Fooocus.",
+    "cat": "工作流",
+    "pack": "工作流",
+    "tags": [
+      "电脑",
+      "工作流"
+    ],
+    "how": "1. 打开 GitHub lllyasviel/Fooocus。 2. 下官方包运行。 3. 写提示词出图。 4. 适合不想搭节点的人。 5. 不要第三方 Fooocus 精简。",
+    "free": true
+  },
+  {
+    "name": "InvokeAI",
+    "url": "https://invoke-ai.github.io/InvokeAI/",
+    "desc": "电脑 Invoke 出图工作流。",
+    "desc_en": "InvokeAI.",
+    "cat": "工作流",
+    "pack": "工作流",
+    "tags": [
+      "电脑",
+      "工作流"
+    ],
+    "how": "1. 打开 https://invoke-ai.github.io/InvokeAI/ 。 2. 按官方安装器装。 3. 下载模型。 4. 用画布和提示词。 5. 只认官方文档。",
+    "free": true
+  },
+  {
+    "name": "Langflow",
+    "url": "https://www.langflow.org",
+    "desc": "电脑/云端可视化大模型工作流。",
+    "desc_en": "Langflow.",
+    "cat": "工作流",
+    "pack": "工作流",
+    "tags": [
+      "电脑",
+      "工作流",
+      "大模型"
+    ],
+    "how": "1. 打开 https://www.langflow.org 。 2. 云端或 Docker 自建。 3. 拖节点接模型。 4. 跑通后发布 API。 5. 密钥不要发到快手。",
+    "free": true
+  },
+  {
+    "name": "Flowise",
+    "url": "https://flowiseai.com",
+    "desc": "低代码 LLM 工作流。",
+    "desc_en": "Flowise.",
+    "cat": "工作流",
+    "pack": "工作流",
+    "tags": [
+      "电脑",
+      "工作流",
+      "大模型"
+    ],
+    "how": "1. 打开 https://flowiseai.com 。 2. 按文档 npx 或 Docker 安装。 3. 拖 Agent 节点。 4. 接 OpenAI/Ollama。 5. 自建注意端口别暴露公网。",
+    "free": true
+  },
+  {
+    "name": "Make 自动化",
+    "url": "https://www.make.com",
+    "desc": "电脑浏览器里做自动化工作流。",
+    "desc_en": "Make.com scenarios.",
+    "cat": "工作流",
+    "pack": "工作流",
+    "tags": [
+      "工作流"
+    ],
+    "how": "1. 打开 https://www.make.com 注册。 2. 新建 scenario。 3. 连应用节点。 4. 打开开关运行。 5. 免费额度看官网。",
+    "free": true
+  },
+  {
+    "name": "Zapier",
+    "url": "https://zapier.com",
+    "desc": "应用之间自动工作流。",
+    "desc_en": "Zapier zaps.",
+    "cat": "工作流",
+    "pack": "工作流",
+    "tags": [
+      "工作流"
+    ],
+    "how": "1. 打开 https://zapier.com 注册。 2. 新建 Zap。 3. 选触发和动作。 4. 测试后开启。 5. 按任务量付费。",
+    "free": true
+  }
+]

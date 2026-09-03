@@ -4,13 +4,14 @@
     "url": "https://www.adobe.com/creativecloud/desktop-app.html",
     "desc": "Adobe官方桌面端，PS/PR/AE从这里装，不要下快手私包。",
     "desc_en": "Official Adobe Creative Cloud desktop app.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "PS",
       "电脑",
-      "Adobe",
-      "安装包"
+      "安装包",
+      "电脑软件",
+      "Adobe"
     ],
     "how": "1. 打开 https://www.adobe.com/creativecloud/desktop-app.html 下载桌面端。 2. 用Adobe账号登录。 3. 安装Photoshop、Premiere、Illustrator等。 4. 按官方订阅或试用，不要破解补丁。 5. 更新只在Creative Cloud里点。",
     "free": true
@@ -20,13 +21,14 @@
     "url": "https://www.adobe.com/products/photoshop.html",
     "desc": "PS官网安装（走Creative Cloud）。",
     "desc_en": "Official Photoshop download.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "PS",
       "电脑",
-      "Adobe",
-      "安装包"
+      "安装包",
+      "电脑软件",
+      "Adobe"
     ],
     "how": "1. 打开 https://www.adobe.com/products/photoshop.html 。 2. 点下载会唤起Creative Cloud。 3. 登录后安装Photoshop。 4. 试用或订阅以官网为准。 5. 不要下绿色版/精简包。",
     "free": true
@@ -36,13 +38,14 @@
     "url": "https://www.adobe.com/products/illustrator.html",
     "desc": "AI矢量图官网安装。",
     "desc_en": "Official Illustrator.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "电脑",
-      "Adobe",
+      "设计",
       "安装包",
-      "设计"
+      "电脑软件",
+      "Adobe"
     ],
     "how": "1. 打开 https://www.adobe.com/products/illustrator.html 。 2. 用Creative Cloud安装。 3. 登录Adobe账号。 4. 试用或订阅。 5. 不要第三方汉化破解包。",
     "free": true
@@ -52,13 +55,14 @@
     "url": "https://www.adobe.com/products/premiere.html",
     "desc": "PR剪辑官网安装。",
     "desc_en": "Official Premiere Pro.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "视频制作",
+    "pack": "视频制作",
     "tags": [
       "电脑",
-      "Adobe",
+      "视频",
       "安装包",
-      "视频"
+      "视频制作",
+      "Adobe"
     ],
     "how": "1. 打开 https://www.adobe.com/products/premiere.html 。 2. Creative Cloud安装Premiere Pro。 3. 建议同时装Media Encoder。 4. 工程放英文路径更稳。 5. 只从官网更新。",
     "free": true
@@ -68,13 +72,14 @@
     "url": "https://www.adobe.com/products/aftereffects.html",
     "desc": "AE动效官网安装。",
     "desc_en": "Official After Effects.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "视频制作",
+    "pack": "视频制作",
     "tags": [
       "电脑",
-      "Adobe",
+      "视频",
       "安装包",
-      "视频"
+      "视频制作",
+      "Adobe"
     ],
     "how": "1. 打开 https://www.adobe.com/products/aftereffects.html 。 2. Creative Cloud安装AE。 3. 插件只用官方或正版。 4. 打开自动保存。 5. 别装来路不明汉化包。",
     "free": true
@@ -84,13 +89,14 @@
     "url": "https://www.adobe.com/products/photoshop-lightroom.html",
     "desc": "Lr修图官网安装。",
     "desc_en": "Official Lightroom.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "PS",
       "电脑",
-      "Adobe",
-      "安装包"
+      "安装包",
+      "电脑软件",
+      "Adobe"
     ],
     "how": "1. 打开 https://www.adobe.com/products/photoshop-lightroom.html 。 2. 选Lightroom或Classic。 3. Creative Cloud安装。 4. 目录放本地硬盘。 5. 云同步按官方说明。",
     "free": true
@@ -100,13 +106,14 @@
     "url": "https://www.adobe.com/acrobat.html",
     "desc": "PDF官方阅读/编辑。",
     "desc_en": "Official Adobe Acrobat.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
-      "电脑",
       "办公",
-      "Adobe",
-      "安装包"
+      "电脑",
+      "安装包",
+      "电脑软件",
+      "Adobe"
     ],
     "how": "1. 打开 https://www.adobe.com/acrobat.html 。 2. 阅读用免费Acrobat Reader，编辑用Pro。 3. 只从adobe.com下载。 4. 登录Adobe。 5. 搜索广告里的安装包多半是假的。",
     "free": true
@@ -116,12 +123,13 @@
     "url": "https://www.photopea.com",
     "desc": "网页版PS，不用安装。",
     "desc_en": "In-browser Photoshop alternative.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "PS",
       "设计",
-      "安装包"
+      "安装包",
+      "电脑软件"
     ],
     "how": "1. 打开 https://www.photopea.com 。 2. 拖入PSD/JPG。 3. 用图层后导出。 4. 可登录云存。 5. 手机浏览器也能应急修图。",
     "free": true
@@ -131,13 +139,14 @@
     "url": "https://www.gimp.org/downloads/",
     "desc": "免费开源修图，官网安装包。",
     "desc_en": "Official GIMP.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "PS",
       "电脑",
+      "设计",
       "安装包",
-      "设计"
+      "电脑软件"
     ],
     "how": "1. 打开 https://www.gimp.org/downloads/ 。 2. 按系统下官方包。 3. 安装。 4. 可装官方语言包。 5. 不要捆绑导航的优化版。",
     "free": true
@@ -147,12 +156,13 @@
     "url": "https://krita.org/en/download/",
     "desc": "免费绘画软件官网。",
     "desc_en": "Official Krita.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "电脑",
+      "设计",
       "安装包",
-      "设计"
+      "电脑软件"
     ],
     "how": "1. 打开 https://krita.org/en/download/ 。 2. 下对应系统包。 3. 安装。 4. 画板驱动另装官方驱动。 5. 保存kra或导出png。",
     "free": true
@@ -162,12 +172,13 @@
     "url": "https://www.figma.com/downloads/",
     "desc": "Figma官方桌面安装。",
     "desc_en": "Official Figma desktop.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "电脑",
+      "设计",
       "安装包",
-      "设计"
+      "电脑软件"
     ],
     "how": "1. 打开 https://www.figma.com/downloads/ 。 2. 安装桌面端。 3. 登录。 4. 打开设计文件。 5. 字体用官方或已授权字体。",
     "free": true
@@ -177,13 +188,14 @@
     "url": "https://www.canva.com/download/",
     "desc": "Canva桌面端官方下载。",
     "desc_en": "Official Canva desktop.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
-      "电脑",
       "办公",
+      "电脑",
+      "设计",
       "安装包",
-      "设计"
+      "电脑软件"
     ],
     "how": "1. 打开 https://www.canva.com/download/ 。 2. 下Win或Mac客户端。 3. 登录Canva。 4. 做海报演示。 5. 导出PNG/PDF。",
     "free": true
@@ -193,12 +205,13 @@
     "url": "https://www.blackmagicdesign.com/products/davinciresolve",
     "desc": "达芬奇官网免费/Studio。",
     "desc_en": "Official DaVinci Resolve.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "视频制作",
+    "pack": "视频制作",
     "tags": [
       "电脑",
+      "视频",
       "安装包",
-      "视频"
+      "视频制作"
     ],
     "how": "1. 打开 https://www.blackmagicdesign.com/products/davinciresolve 。 2. 填邮箱下免费版或Studio。 3. 先装GPU驱动再装Resolve。 4. 新建1080p或4K项目。 5. 只从Blackmagic官网更新。",
     "free": true
@@ -208,12 +221,13 @@
     "url": "https://www.capcut.com/tools/desktop-video-editor",
     "desc": "CapCut电脑端官网。",
     "desc_en": "Official CapCut desktop.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "视频制作",
+    "pack": "视频制作",
     "tags": [
       "电脑",
+      "视频",
       "安装包",
-      "视频"
+      "视频制作"
     ],
     "how": "1. 打开 https://www.capcut.com/tools/desktop-video-editor 。 2. 下官方安装包。 3. 登录。 4. 导入素材剪辑。 5. 不要去水印破解包。",
     "free": true
@@ -223,13 +237,14 @@
     "url": "https://obsproject.com/download",
     "desc": "开源直播推流官网。",
     "desc_en": "Official OBS Studio.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "视频制作",
+    "pack": "视频制作",
     "tags": [
       "电脑",
       "直播",
+      "视频",
       "安装包",
-      "视频"
+      "视频制作"
     ],
     "how": "1. 打开 https://obsproject.com/download 。 2. 选系统下载。 3. 跑自动配置向导。 4. 加显示器或窗口采集。 5. 插件只用OBS官方论坛。",
     "free": true
@@ -239,12 +254,13 @@
     "url": "https://www.blender.org/download/",
     "desc": "3D官网安装包。",
     "desc_en": "Official Blender.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "电脑",
+      "设计",
       "安装包",
-      "设计"
+      "电脑软件"
     ],
     "how": "1. 打开 https://www.blender.org/download/ 。 2. 下LTS或最新版。 3. 安装。 4. 用官方启动文件。 5. 插件从extensions.blender.org装。",
     "free": true
@@ -254,12 +270,13 @@
     "url": "https://www.microsoft.com/microsoft-365",
     "desc": "Office官方订阅安装。",
     "desc_en": "Official Microsoft 365.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
-      "电脑",
       "办公",
-      "安装包"
+      "电脑",
+      "安装包",
+      "电脑软件"
     ],
     "how": "1. 打开 https://www.microsoft.com/microsoft-365 。 2. 登录微软账号。 3. 安装Word/Excel/PPT。 4. 从office.com管理设备。 5. 不要永久激活包。",
     "free": true
@@ -269,12 +286,13 @@
     "url": "https://www.wps.cn",
     "desc": "WPS国内官网安装包。",
     "desc_en": "Official WPS Office.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
-      "电脑",
       "办公",
-      "安装包"
+      "电脑",
+      "安装包",
+      "电脑软件"
     ],
     "how": "1. 打开 https://www.wps.cn 。 2. 下个人版。 3. 安装时可取消捆绑。 4. 登录WPS账号。 5. 企业版走官网商务。",
     "free": true
@@ -284,12 +302,13 @@
     "url": "https://www.libreoffice.org/download/",
     "desc": "免费办公套件官网。",
     "desc_en": "Official LibreOffice.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
-      "电脑",
       "办公",
-      "安装包"
+      "电脑",
+      "安装包",
+      "电脑软件"
     ],
     "how": "1. 打开 https://www.libreoffice.org/download/ 。 2. 选系统下载。 3. 安装。 4. 打开docx/xlsx。 5. 扩展用官方。",
     "free": true
@@ -299,12 +318,13 @@
     "url": "https://code.visualstudio.com/Download",
     "desc": "VS Code官网。",
     "desc_en": "Official VS Code.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
-      "电脑",
       "代码",
-      "安装包"
+      "电脑",
+      "安装包",
+      "电脑软件"
     ],
     "how": "1. 打开 https://code.visualstudio.com/Download 。 2. 下稳定版。 3. 安装。 4. 扩展只从扩展市场装。 5. 别下绿色破解版。",
     "free": true
@@ -314,11 +334,12 @@
     "url": "https://ninite.com",
     "desc": "一次勾选装一堆正版常用软件，不是破解合集。",
     "desc_en": "Ninite bulk official installer.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "电脑",
-      "安装包"
+      "安装包",
+      "电脑软件"
     ],
     "how": "1. 打开 https://ninite.com 。 2. 勾选需要的软件。 3. 下载它生成的安装器。 4. 运行等它装完。 5. 只认 ninite.com。",
     "free": true
@@ -328,11 +349,12 @@
     "url": "https://brew.sh",
     "desc": "Mac官方常用包管理。",
     "desc_en": "Homebrew.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "电脑",
-      "安装包"
+      "安装包",
+      "电脑软件"
     ],
     "how": "1. 打开 https://brew.sh 。 2. 复制官方安装命令到终端。 3. brew install 软件。 4. brew upgrade 更新。 5. 不要跑快手评论里的一键脚本。",
     "free": true
@@ -342,11 +364,12 @@
     "url": "https://apps.microsoft.com",
     "desc": "Windows官方应用商店。",
     "desc_en": "Microsoft Store.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "电脑",
-      "安装包"
+      "安装包",
+      "电脑软件"
     ],
     "how": "1. 打开 https://apps.microsoft.com 或系统里的 Microsoft Store。 2. 搜软件。 3. 点获取安装。 4. 自动更新。 5. 比随便下exe安全。",
     "free": true
@@ -356,11 +379,12 @@
     "url": "https://www.7-zip.org",
     "desc": "压缩软件官网。",
     "desc_en": "Official 7-Zip.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "电脑",
-      "安装包"
+      "安装包",
+      "电脑软件"
     ],
     "how": "1. 打开 https://www.7-zip.org 。 2. 下64-bit安装包。 3. 安装。 4. 解压前确认来自官网。 5. 不要捆绑版。",
     "free": true
@@ -370,12 +394,13 @@
     "url": "https://www.videolan.org/vlc/",
     "desc": "VLC官网。",
     "desc_en": "Official VLC.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "电脑",
+      "视频",
       "安装包",
-      "视频"
+      "电脑软件"
     ],
     "how": "1. 打开 https://www.videolan.org/vlc/ 。 2. 下对应系统。 3. 安装。 4. 打开本地视频。 5. 只认videolan.org。",
     "free": true
@@ -385,11 +410,12 @@
     "url": "https://pc.weixin.qq.com",
     "desc": "微信PC官方安装。",
     "desc_en": "Official WeChat for Windows.",
-    "cat": "安装包",
-    "pack": "安装包",
+    "cat": "电脑软件",
+    "pack": "电脑软件",
     "tags": [
       "电脑",
-      "安装包"
+      "安装包",
+      "电脑软件"
     ],
     "how": "1. 打开 https://pc.weixin.qq.com 。 2. 下载安装。 3. 手机扫码登录。 4. 文件传输助手可收文件。 5. 假微信安装包会盗号。",
     "free": true

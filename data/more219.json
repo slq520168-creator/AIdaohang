@@ -98,12 +98,13 @@
     "url": "https://openwebui.com",
     "desc": "给Ollama做网页聊天界面。",
     "desc_en": "Web UI for Ollama.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "工作流",
+    "pack": "工作流",
     "tags": [
       "本地",
       "电脑",
-      "大模型"
+      "大模型",
+      "工作流"
     ],
     "how": "1. 打开 https://openwebui.com 看安装说明。 2. 先装好Ollama。 3. 用Docker或pip按官方装Open WebUI。 4. 浏览器打开本地端口。 5. 选已下载的模型聊天。",
     "free": true
@@ -241,12 +242,13 @@
     "url": "https://pinokio.computer",
     "desc": "一键装各类AI应用，别用快手不明整合包。",
     "desc_en": "Pinokio AI app installer.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "工作流",
+    "pack": "工作流",
     "tags": [
       "电脑",
       "大模型",
-      "安装包"
+      "安装包",
+      "工作流"
     ],
     "how": "1. 打开 https://pinokio.computer 下官方。 2. 安装。 3. 在脚本市场装Ollama/Comfy等。 4. 点Run启动。 5. 只跑官方脚本，不跑评论区乱贴的。",
     "free": true
@@ -304,11 +306,11 @@
     "url": "https://dify.ai",
     "desc": "可视化做Agent和工作流。",
     "desc_en": "Dify agent workflows.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "工作流",
+    "pack": "工作流",
     "tags": [
-      "工作流",
       "大模型",
+      "工作流",
       "Agent"
     ],
     "how": "1. 打开 https://dify.ai 注册云版，或GitHub自建。 2. 新建应用。 3. 接模型供应商。 4. 拖节点做工作流。 5. 发布成API或网页。",
@@ -319,11 +321,11 @@
     "url": "https://n8n.io",
     "desc": "自动化工作流，可接大模型。",
     "desc_en": "n8n automation.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "工作流",
+    "pack": "工作流",
     "tags": [
-      "工作流",
       "电脑",
+      "工作流",
       "Agent"
     ],
     "how": "1. 打开 https://n8n.io 。 2. 用云或Docker自建。 3. 新建workflow。 4. 加HTTP/AI节点。 5. 打开执行开关。",
@@ -334,11 +336,12 @@
     "url": "https://www.crewai.com",
     "desc": "多Agent协作框架。",
     "desc_en": "CrewAI multi-agent.",
-    "cat": "大模型",
-    "pack": "大模型",
+    "cat": "工作流",
+    "pack": "工作流",
     "tags": [
       "代码",
       "大模型",
+      "工作流",
       "Agent"
     ],
     "how": "1. 打开 https://www.crewai.com 。 2. 按文档pip安装。 3. 定义角色Agent。 4. 给任务跑Crew。 5. 需要API或本地模型。",
