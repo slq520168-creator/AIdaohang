@@ -1,0 +1,107 @@
+[
+  {
+    "name": "AI漫剧全流程（剧本分镜到成片）",
+    "url": "https://slq520168-creator.github.io/AIdaohang/create.html",
+    "desc": "手机做AI漫剧：角色定妆、剧本分镜、参考图锁脸、即梦/可灵出片、剪映配音字幕到发布。",
+    "desc_en": "Phone AI comic-drama pipeline: character sheet, storyboard, consistent face, video, dub, publish.",
+    "cat": "漫剧",
+    "pack": "生视频",
+    "tags": [
+      "漫剧",
+      "分镜",
+      "生视频",
+      "配音",
+      "剪辑",
+      "教程",
+      "即梦",
+      "剪映",
+      "封面",
+      "发布"
+    ],
+    "how": "1. 先做一张角色定妆图（正脸、半身、发色瞳色服装写死成角色卡），后面每一镜都用这张图当参考，不要每镜重新形容长相。 2. 剧本一集45到90秒：人物、冲突、每15秒一个反转、结尾钩子；豆包出草稿再改口吻。 3. 分镜表每镜一行：镜号、远中近、谁在干什么、台词、时长2到4秒；动作写简单。 4. 人物一致性：同一角色卡+同一张定妆图全片复用，换场景只改背景和动作；多角色各一张定妆图。电脑LoRA不是必做，手机用即梦参考图锁脸。 5. 每镜用定妆图或静帧在即梦/可灵图生视频2到4秒，720p H.264；崩了只重出这一镜。 6. 剪映按分镜接上，一条角色一个声，字幕烧进画面，封面一张，发快手标题带AI漫剧。",
+    "free": true
+  },
+  {
+    "name": "豆包写漫剧剧本",
+    "url": "https://www.doubao.com/",
+    "desc": "用豆包出漫剧草稿：人物、冲突、15秒反转、结尾钩子，再人工改口吻。",
+    "desc_en": "Doubao drafts comic-drama scripts.",
+    "cat": "脚本",
+    "pack": "漫剧",
+    "tags": [
+      "漫剧",
+      "脚本",
+      "豆包",
+      "教程"
+    ],
+    "how": "1. 打开 https://www.doubao.com/ 。 2. 说明一集45到90秒、要钩子和反转。 3. 要它按镜号输出，不要长篇小说。 4. 你改口吻和人名。 5. 把定稿贴进分镜表。",
+    "free": true
+  },
+  {
+    "name": "即梦角色参考图（锁脸）",
+    "url": "https://jimeng.jianying.com/",
+    "desc": "即梦用同一张定妆图当参考，锁住漫剧人物脸和衣服。",
+    "desc_en": "Jimeng reference image to keep comic-drama faces consistent.",
+    "cat": "生图",
+    "pack": "漫剧",
+    "tags": [
+      "漫剧",
+      "生图",
+      "即梦",
+      "教程"
+    ],
+    "how": "1. 打开 https://jimeng.jianying.com/ 。 2. 先生成或上传一张正脸定妆图。 3. 后续每镜都把这张图设为参考，只改动作和场景词。 4. 不要每镜换发色瞳色描述。 5. 导出静帧再去图生视频。",
+    "free": true
+  },
+  {
+    "name": "可灵图生视频（漫剧分镜）",
+    "url": "https://klingai.com/",
+    "desc": "可灵把分镜静帧生成2到4秒镜头，动作写简单避免崩脸。",
+    "desc_en": "Kling image-to-video for short comic-drama shots.",
+    "cat": "生视频",
+    "pack": "漫剧",
+    "tags": [
+      "漫剧",
+      "生视频",
+      "教程"
+    ],
+    "how": "1. 打开 https://klingai.com/ 。 2. 上传该镜静帧。 3. 动作只写转头、抬手、走路。 4. 出2到4秒。 5. 下720p H.264到相册。",
+    "free": true
+  },
+  {
+    "name": "剪映漫剧配音剪辑发布",
+    "url": "https://www.capcut.cn/",
+    "desc": "剪映把各镜接上，配音、字幕、封面，导出可发快手的成片。",
+    "desc_en": "CapCut/Jianying edit, dub, captions, export for Kuaishou.",
+    "cat": "剪辑",
+    "pack": "漫剧",
+    "tags": [
+      "漫剧",
+      "剪辑",
+      "配音",
+      "字幕",
+      "封面",
+      "发布",
+      "剪映",
+      "教程"
+    ],
+    "how": "1. 打开 https://www.capcut.cn/ 或手机剪映。 2. 按分镜顺序导入各段视频。 3. 一条角色一个音色配音。 4. 字幕烧进画面。 5. 封面一张，导出后发快手，标题带AI漫剧。",
+    "free": true
+  },
+  {
+    "name": "导航创作台（漫剧分镜出图）",
+    "url": "https://slq520168-creator.github.io/AIdaohang/create.html",
+    "desc": "导航站内做图做视频入口，可当漫剧静帧和试片。",
+    "desc_en": "In-site create studio for stills and test clips.",
+    "cat": "生视频",
+    "pack": "漫剧",
+    "tags": [
+      "漫剧",
+      "生图",
+      "生视频",
+      "教程"
+    ],
+    "how": "1. 打开创作台。 2. 用角色卡提示词出定妆图。 3. 再出各镜静帧。 4. 能出短视频就当试片。 5. 成片仍用即梦/可灵+剪映。",
+    "free": true
+  }
+]
