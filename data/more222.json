@@ -1,7 +1,7 @@
 [
   {
     "name": "Agent接单赚钱全流程（步骤）",
-    "url": "https://www.coze.com/",
+    "url": "",
     "desc": "把接单包装成「会自己赚钱的AI」：定人设→搭Agent→接需求→自动出稿→交付收款。只写步骤，不挂第三方收费软件。",
     "desc_en": "Step-only Agent gig pipeline: persona, build agent, take orders, auto draft, deliver and collect. No third-party paid app listing.",
     "cat": "接单变现",
@@ -65,14 +65,13 @@
   },
   {
     "name": "软件教学口播壳（步骤）",
-    "url": "https://slq520168-creator.github.io/AIdaohang/",
+    "url": "",
     "desc": "软件类教学内容只写口播与步骤壳：钩子、演示顺序、小标签，不挂第三方安装包。",
     "desc_en": "Software-teaching VO and step shell only; no third-party installer links.",
     "cat": "学习教程",
     "pack": "教程",
     "tags": [
       "软件教学",
-      "视频教学",
       "教程",
       "Agent教学",
       "发布",
