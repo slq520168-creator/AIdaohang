@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Agent接单赚钱全流程（步骤）",
+    "url": "https://www.coze.com/",
+    "desc": "把接单包装成「会自己赚钱的AI」：定人设→搭Agent→接需求→自动出稿→交付收款。只写步骤，不挂第三方收费软件。",
+    "desc_en": "Step-only Agent gig pipeline: persona, build agent, take orders, auto draft, deliver and collect. No third-party paid app listing.",
+    "cat": "接单变现",
+    "pack": "Agent",
+    "tags": [
+      "Agent教学",
+      "软件教学",
+      "接单教学",
+      "接单",
+      "变现",
+      "Agent",
+      "工作流",
+      "教程",
+      "客服",
+      "文案"
+    ],
+    "how": "1. 定人设：鱼老板/工作室工坊，只接一类单（文案、客服、PPT、简单脚本），标题写成「24小时出稿·不满意改」。2. 搭Agent：扣子/Coze或Dify建一个专用Bot，系统提示写死角色、字数、语气、禁区；接单话术和交付模板做成工作流节点。3. 接需求：闲鱼/威客/Fiverr收单，把客户原话原样丢进Agent，先出一版再人工过一眼。4. 自动出稿：写作/改写/客服回复走同一条链路，输出带修改点，不直接裸发。5. 交付收款：按平台规则交文件，好评后再提价；引流款低价攒评价，利润款再上。6. 短视频包装：钩子用「假如我做了一个会自己赚钱的AI，你想不想看」，片里只演示步骤，不卖来路不明安装包。",
+    "free": true
+  },
+  {
+    "name": "短视频教学包装公式（步骤）",
+    "url": "https://slq520168-creator.github.io/AIdaohang/create.html",
+    "desc": "快手教学片通用壳：假设句钩子→利益点→反问逼停→人设→热词→步骤演示。适合Agent/漫剧/软件类教学内容。",
+    "desc_en": "Kuaishou teaching-video packaging formula: hook, benefit, question, persona, tags, step demo.",
+    "cat": "创作媒体",
+    "pack": "教程",
+    "tags": [
+      "视频教学",
+      "教程",
+      "发布",
+      "封面",
+      "脚本",
+      "矩阵",
+      "Agent教学",
+      "漫剧教学"
+    ],
+    "how": "1. 标题壳：「假如我做了一个会自己××的AI，你想不想看一下？」××换成接单/客服/漫剧/写文案。2. 前3秒只抛好奇，不讲课。3. 中间按步骤演示：每步一句口播+字幕，全程同一出镜，不切无关漫画页。4. 单独写小标签：视频教学/漫剧教学/Agent教学/软件教学，不要只用泛标签。5. 结尾收口：收藏+评论区扣关键词，引流到步骤页或自己的流程，不挂别人收费软件。",
+    "free": true
+  },
+  {
+    "name": "漫剧教学五步（步骤）",
+    "url": "https://slq520168-creator.github.io/AIdaohang/create.html",
+    "desc": "AI漫剧只写步骤：定妆锁脸→剧本分镜→同一张脸→即梦/可灵出片→剪映配音发布。",
+    "desc_en": "AI comic-drama teaching steps only: lock face, script board, same face, gen video, dub and post.",
+    "cat": "创作媒体",
+    "pack": "漫剧",
+    "tags": [
+      "漫剧教学",
+      "视频教学",
+      "漫剧",
+      "分镜",
+      "生视频",
+      "配音",
+      "剪辑",
+      "教程",
+      "即梦",
+      "可灵"
+    ],
+    "how": "1. 定妆锁脸：一张正脸定妆图写死发色瞳色服装。2. 剧本分镜：豆包出45–90秒剧本，每镜2–4秒。3. 同一张脸出片：全程复用定妆图，只改场景动作。4. 即梦/可灵：每镜短视频，崩了只重出这一镜。5. 剪映配音字幕封面发布，标题带AI漫剧。",
+    "free": true
+  },
+  {
+    "name": "软件教学口播壳（步骤）",
+    "url": "https://slq520168-creator.github.io/AIdaohang/",
+    "desc": "软件类教学内容只写口播与步骤壳：钩子、演示顺序、小标签，不挂第三方安装包。",
+    "desc_en": "Software-teaching VO and step shell only; no third-party installer links.",
+    "cat": "学习教程",
+    "pack": "教程",
+    "tags": [
+      "软件教学",
+      "视频教学",
+      "教程",
+      "Agent教学",
+      "发布",
+      "脚本"
+    ],
+    "how": "1. 钩子：痛点一句+「手把手/零基础」或「假如…你想不想看」。2. 演示顺序：打开→关键设置→出第一个结果→常见翻车→收藏。3. 口播短句，字幕同步。4. 小标签用软件教学/视频教学，官方入口另挂，不塞破解包。5. 结尾只给步骤清单，不承诺暴富。",
+    "free": true
+  }
+]
