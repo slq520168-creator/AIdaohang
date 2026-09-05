@@ -1,35 +1,47 @@
 (function(){
-  function place(w){ window._toolPlace=w||window._toolPlace||'small'; }
-  function after(){
-    var p=window._toolPlace||'small';
-    var popBig=document.getElementById('popBig');
-    var pop=document.getElementById('pop');
-    var list=document.getElementById('list');
-    var listBig=document.getElementById('listBig');
-    if(!popBig||!listBig||!list) return;
-    if(p==='big'){
-      popBig.hidden=false;
-      if(pop) pop.hidden=true;
-      if(list.innerHTML){ listBig.innerHTML=list.innerHTML; list.innerHTML=''; }
-    } else {
-      popBig.hidden=true;
-      if(pop) pop.hidden=false;
-      if(listBig.innerHTML && !list.innerHTML){ list.innerHTML=listBig.innerHTML; listBig.innerHTML=''; }
-    }
-  }
+  var pop=document.getElementById('pop');
   var side=document.getElementById('side');
   var tags=document.getElementById('tags');
-  if(side) side.addEventListener('click', function(){ place('big'); setTimeout(after,0); }, true);
-  if(tags) tags.addEventListener('click', function(){ place('small'); setTimeout(after,0); }, true);
+  var under=document.getElementById('under');
+  if(!pop||!side||!tags) return;
+  window._toolPlace='';
+  function on(){
+    var hasBig=typeof selected!=='undefined' && selected && selected.size;
+    var hasSmall=typeof tags!=='undefined' && window.tags && window.tags.size;
+    var q=document.getElementById('q');
+    var typed=q && (q.value||'').trim();
+    if(typed){
+      if(under) under.appendChild(pop);
+      pop.hidden=false;
+      return;
+    }
+    if(window._toolPlace==='big' && hasBig){
+      side.insertAdjacentElement('afterend', pop);
+      pop.hidden=false;
+      return;
+    }
+    if(window._toolPlace==='small' && hasSmall){
+      tags.insertAdjacentElement('afterend', pop);
+      pop.hidden=false;
+      return;
+    }
+    pop.hidden=true;
+  }
+  side.addEventListener('click', function(e){
+    if(!e.target.closest('button')) return;
+    window._toolPlace='big';
+    setTimeout(on,0);
+  }, true);
+  tags.addEventListener('click', function(e){
+    if(!e.target.closest('button')) return;
+    window._toolPlace='small';
+    setTimeout(on,0);
+  }, true);
   var _r=window.render;
   if(typeof _r==='function'){
-    window.render=function(){ _r.apply(this,arguments); after(); };
+    window.render=function(){ _r.apply(this,arguments); on(); };
   }
-  var _rs=window.renderSide;
-  if(typeof _rs==='function'){
-    window.renderSide=function(){
-      _rs.apply(this,arguments);
-      setTimeout(after,0);
-    };
-  }
+  pop.hidden=true;
+  setTimeout(on,50);
+  setTimeout(on,400);
 })();
