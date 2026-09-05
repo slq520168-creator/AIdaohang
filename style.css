@@ -44,13 +44,14 @@ html[data-theme="dark"] .cats button{background:#21262d;color:#e6edf3;border-col
 .fine button{border:1px solid #e5e7eb;background:#fff;color:#111827;border-radius:999px;padding:5px 8px;font-size:12px}
 html[data-theme="dark"] .fine button{background:#21262d;color:#e6edf3;border-color:#30363d}
 .fine button.on{background:var(--chip);color:var(--chip-t);border-color:transparent;font-weight:600}
-#pop{position:relative;z-index:1;margin:0 0 10px}
+#pop{position:relative;z-index:1;margin:8px 0 10px}
 .under{display:flex;flex-direction:column}
 .under #tags{order:1}
 .under #pop{order:2}
-.under.open #pop{order:1}
-.under.open #tags{order:2}
 .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;width:100%}
+.grid.nine{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.pop-inline{position:relative;z-index:1;margin:8px 0 10px}
+#popBig{margin:8px 0 10px}
 .card{display:block;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.55);border-radius:14px;padding:10px 8px;text-decoration:none;color:#111827;min-width:0}
 html[data-theme="dark"] .card{background:rgba(22,27,34,.7);border-color:rgba(255,255,255,.14);color:#e6edf3}
 .card .row{display:flex;gap:8px;align-items:center;min-width:0}
