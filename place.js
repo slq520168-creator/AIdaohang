@@ -2,16 +2,15 @@
   var pop=document.getElementById('pop');
   var side=document.getElementById('side');
   var tags=document.getElementById('tags');
-  var under=document.getElementById('under');
   if(!pop||!side||!tags) return;
   window._toolPlace='';
   function on(){
-    var hasBig=typeof selected!=='undefined' && selected && selected.size;
-    var hasSmall=typeof tags!=='undefined' && window.tags && window.tags.size;
     var q=document.getElementById('q');
     var typed=q && (q.value||'').trim();
+    var hasBig=!!side.querySelector('button.on');
+    var hasSmall=!!tags.querySelector('button.on');
     if(typed){
-      if(under) under.appendChild(pop);
+      tags.insertAdjacentElement('afterend', pop);
       pop.hidden=false;
       return;
     }
