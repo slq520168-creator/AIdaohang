@@ -1,0 +1,22 @@
+[
+  {"name":"XSplit Broadcaster","name_en":"XSplit","cat":"视频制作","pack":"电脑软件","url":"https://www.xsplit.com","desc":"专业直播录制","desc_en":"Pro stream and record","tags":["录屏","电脑","直播"],"free":false},
+  {"name":"Medal.tv","name_en":"Medal","cat":"视频制作","pack":"电脑软件","url":"https://medal.tv","desc":"游戏高光剪辑","desc_en":"Game clip recorder","tags":["录屏","电脑","游戏","免费"],"free":true},
+  {"name":"ScreenPal","name_en":"ScreenPal","cat":"视频制作","pack":"电脑软件","url":"https://screenpal.com","desc":"教学录屏分享","desc_en":"Teach and share rec","tags":["录屏","电脑","教程"],"free":true},
+  {"name":"EaseUS RecExperts","name_en":"EaseUS RecExperts","cat":"视频制作","pack":"电脑软件","url":"https://recorder.easeus.com","desc":"全屏窗口定时录","desc_en":"Full/window/schedule rec","tags":["录屏","电脑"],"free":true},
+  {"name":"Movavi Screen Recorder","name_en":"Movavi Recorder","cat":"视频制作","pack":"电脑软件","url":"https://www.movavi.com/screen-recorder/","desc":"简易录剪","desc_en":"Simple rec and edit","tags":["录屏","电脑"],"free":false},
+  {"name":"ScreenFlow","name_en":"ScreenFlow","cat":"视频制作","pack":"电脑软件","url":"https://www.telestream.net/screenflow/","desc":"Mac专业录屏","desc_en":"Mac pro recorder","tags":["录屏","电脑"],"free":false},
+  {"name":"Kap","name_en":"Kap","cat":"视频制作","pack":"电脑软件","url":"https://getkap.co","desc":"Mac开源录屏","desc_en":"Open-source Mac rec","tags":["录屏","电脑","免费"],"free":true},
+  {"name":"CleanShot X","name_en":"CleanShot X","cat":"视频制作","pack":"电脑软件","url":"https://cleanshot.com","desc":"Mac截图短录","desc_en":"Mac shot and rec","tags":["录屏","电脑"],"free":false},
+  {"name":"Greenshot","name_en":"Greenshot","cat":"视频制作","pack":"电脑软件","url":"https://getgreenshot.org","desc":"开源截图标注","desc_en":"Open-source screenshot","tags":["录屏","电脑","免费"],"free":true},
+  {"name":"Flameshot","name_en":"Flameshot","cat":"视频制作","pack":"电脑软件","url":"https://flameshot.org","desc":"跨平台截图","desc_en":"Cross-platform shot","tags":["录屏","电脑","免费"],"free":true},
+  {"name":"oCam","name_en":"oCam","cat":"视频制作","pack":"电脑软件","url":"https://ohsoft.net/eng/ocam/intro.php","desc":"韩国轻量录屏","desc_en":"KR lightweight rec","tags":["录屏","电脑","免费"],"free":true},
+  {"name":"Action!","name_en":"Mirillis Action","cat":"视频制作","pack":"电脑软件","url":"https://mirillis.com/en/products/action.html","desc":"游戏实时编码录","desc_en":"Game instant encode","tags":["录屏","电脑","游戏"],"free":false},
+  {"name":"Fraps","name_en":"Fraps","cat":"视频制作","pack":"电脑软件","url":"https://fraps.com","desc":"老牌游戏录制","desc_en":"Classic game bench rec","tags":["录屏","电脑","游戏"],"free":false},
+  {"name":"SimpleScreenRecorder","name_en":"SimpleScreenRecorder","cat":"视频制作","pack":"电脑软件","url":"https://www.maartenbaert.be/simplescreenrecorder/","desc":"Linux录屏","desc_en":"Linux screen recorder","tags":["录屏","电脑","免费"],"free":true},
+  {"name":"GPU Screen Recorder","name_en":"GPU Screen Recorder","cat":"视频制作","pack":"电脑软件","url":"https://git.dec05eba.com/gpu-screen-recorder/","desc":"Linux硬编码录","desc_en":"Linux GPU recorder","tags":["录屏","电脑","免费"],"free":true},
+  {"name":"屏幕录像专家","name_en":"Screen Expert","cat":"视频制作","pack":"电脑软件","url":"https://www.tlxsoft.com","desc":"国产老牌录屏","desc_en":"Classic CN recorder","tags":["录屏","电脑"],"free":false},
+  {"name":"Zight","name_en":"Zight","cat":"视频制作","pack":"电脑软件","url":"https://zight.com","desc":"团队截图短录","desc_en":"Team shot and rec","tags":["录屏","电脑"],"free":true},
+  {"name":"ManyCam","name_en":"ManyCam","cat":"视频制作","pack":"电脑软件","url":"https://manycam.com","desc":"虚拟摄像头直播","desc_en":"Virtual cam overlay","tags":["录屏","电脑","直播"],"free":true},
+  {"name":"Prism Live Studio","name_en":"Prism Live Studio","cat":"视频制作","pack":"电脑软件","url":"https://prismlive.com","desc":"Naver直播录制","desc_en":"Naver live recorder","tags":["录屏","电脑","直播","免费"],"free":true},
+  {"name":"LICEcap","name_en":"LICEcap","cat":"视频制作","pack":"电脑软件","url":"https://www.cockos.com/licecap/","desc":"录屏出GIF","desc_en":"Screen to GIF","tags":["录屏","电脑","免费"],"free":true}
+]
