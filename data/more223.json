@@ -1,0 +1,22 @@
+[
+  {"name":"OBS Studio","name_en":"OBS Studio","cat":"视频制作","pack":"电脑软件","url":"https://obsproject.com","desc":"免费开源录屏直播","desc_en":"Free open-source recorder","tags":["录屏","电脑","视频","免费","直播"],"free":true},
+  {"name":"Sunwoo录屏大师","name_en":"Sunwoo Cap","cat":"视频制作","pack":"电脑软件","url":"https://sunwoosoft.com/sunwoo-cap","desc":"轻量电脑录屏","desc_en":"Lightweight PC recorder","tags":["录屏","电脑","视频"],"free":false},
+  {"name":"Xbox Game Bar","name_en":"Xbox Game Bar","cat":"视频制作","pack":"电脑软件","url":"https://www.microsoft.com/windows/tips/game-bar","desc":"Win自带录屏","desc_en":"Windows built-in recorder","tags":["录屏","电脑","免费"],"free":true},
+  {"name":"Bandicam","name_en":"Bandicam","cat":"视频制作","pack":"电脑软件","url":"https://www.bandicam.com","desc":"游戏高压缩录屏","desc_en":"Game screen recorder","tags":["录屏","电脑","视频"],"free":false},
+  {"name":"Camtasia","name_en":"Camtasia","cat":"视频制作","pack":"电脑软件","url":"https://www.techsmith.com/camtasia.html","desc":"录剪一体教程","desc_en":"Record and edit tutorials","tags":["录屏","电脑","视频","教程"],"free":false},
+  {"name":"ShareX","name_en":"ShareX","cat":"视频制作","pack":"电脑软件","url":"https://getsharex.com","desc":"开源截图录屏","desc_en":"Open-source capture","tags":["录屏","电脑","免费"],"free":true},
+  {"name":"Snagit","name_en":"Snagit","cat":"视频制作","pack":"电脑软件","url":"https://www.techsmith.com/snagit.html","desc":"截图短录屏","desc_en":"Screenshot and short rec","tags":["录屏","电脑"],"free":false},
+  {"name":"Loom","name_en":"Loom","cat":"视频制作","pack":"电脑软件","url":"https://www.loom.com","desc":"云端分享录屏","desc_en":"Cloud share recorder","tags":["录屏","电脑","视频"],"free":true},
+  {"name":"EV录屏","name_en":"EV Screen Recorder","cat":"视频制作","pack":"电脑软件","url":"https://www.ieway.cn/evcapture.html","desc":"免费无水印录屏","desc_en":"Free no-watermark rec","tags":["录屏","电脑","免费"],"free":true},
+  {"name":"嗨格式录屏大师","name_en":"HiFormat Recorder","cat":"视频制作","pack":"电脑软件","url":"https://www.luping.com","desc":"录剪一体国产","desc_en":"CN record and edit","tags":["录屏","电脑","视频"],"free":false},
+  {"name":"Streamlabs Desktop","name_en":"Streamlabs","cat":"视频制作","pack":"电脑软件","url":"https://streamlabs.com","desc":"直播向OBS套件","desc_en":"Streaming OBS suite","tags":["录屏","电脑","直播","免费"],"free":true},
+  {"name":"NVIDIA App 录制","name_en":"NVIDIA App","cat":"视频制作","pack":"电脑软件","url":"https://www.nvidia.com/geforce/app/","desc":"N卡游戏录制","desc_en":"NVIDIA game capture","tags":["录屏","电脑","免费"],"free":true},
+  {"name":"AMD Software 录制","name_en":"AMD Software","cat":"视频制作","pack":"电脑软件","url":"https://www.amd.com/en/products/software/adrenalin.html","desc":"A卡游戏录制","desc_en":"AMD Relive capture","tags":["录屏","电脑","免费"],"free":true},
+  {"name":"Captura","name_en":"Captura","cat":"视频制作","pack":"电脑软件","url":"https://mathewsachin.github.io/Captura/","desc":"开源轻量录屏","desc_en":"Open-source lightweight","tags":["录屏","电脑","免费"],"free":true},
+  {"name":"ScreenToGif","name_en":"ScreenToGif","cat":"视频制作","pack":"电脑软件","url":"https://www.screentogif.com","desc":"录屏转GIF","desc_en":"Record to GIF","tags":["录屏","电脑","免费"],"free":true},
+  {"name":"Icecream Screen Recorder","name_en":"Icecream Recorder","cat":"视频制作","pack":"电脑软件","url":"https://icecreamapps.com/Screen-Recorder/","desc":"区域录屏标注","desc_en":"Region record annotate","tags":["录屏","电脑"],"free":true},
+  {"name":"FlashBack Express","name_en":"FlashBack Express","cat":"视频制作","pack":"电脑软件","url":"https://www.flashbackrecorder.com/express/","desc":"免费桌面录屏","desc_en":"Free desktop recorder","tags":["录屏","电脑","免费"],"free":true},
+  {"name":"万彩录屏大师","name_en":"Wancai Recorder","cat":"视频制作","pack":"电脑软件","url":"http://www.wcapture.cn","desc":"动画讲解录屏","desc_en":"Animated explainer rec","tags":["录屏","电脑","教程"],"free":false},
+  {"name":"迅捷录屏大师","name_en":"Xunjie Recorder","cat":"视频制作","pack":"电脑软件","url":"https://www.xunjiecad.com/screen-recorder.html","desc":"国产简单录屏","desc_en":"Simple CN recorder","tags":["录屏","电脑"],"free":false},
+  {"name":"Apowersoft录屏","name_en":"Apowersoft Recorder","cat":"视频制作","pack":"电脑软件","url":"https://www.apowersoft.cn/free-online-screen-recorder","desc":"在线/客户端录屏","desc_en":"Online or desktop rec","tags":["录屏","电脑"],"free":true}
+]
