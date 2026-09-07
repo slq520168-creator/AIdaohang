@@ -1,0 +1,732 @@
+[
+  {
+    "name": "MLX Studio iOS",
+    "url": "https://apps.apple.com/us/app/mlx-studio-local-ai-chat/id6757399038",
+    "desc": "App Store 端侧 MLX 聊天",
+    "desc_en": "App Store on-device MLX chat",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "CoreML",
+      "手机模型",
+      "离线"
+    ],
+    "how": "1. App Store 安装。 2. 用 Foundation 或小 MLX。 3. 飞行模式。",
+    "free": true
+  },
+  {
+    "name": "OpenTihui iOS",
+    "url": "https://github.com/cnYui/OpenTihui",
+    "desc": "SwiftUI+llama.cpp iOS 本地聊天",
+    "desc_en": "SwiftUI iOS GGUF chat",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "GGUF",
+      "离线",
+      "手机模型"
+    ],
+    "how": "1. Xcode 编译。 2. 下 Qwen0.5–1.5B GGUF。 3. Files 导入。",
+    "free": true
+  },
+  {
+    "name": "Geist iOS LLM",
+    "url": "https://github.com/Schneewolf-Labs/Geist",
+    "desc": "iOS Metal llama.cpp 本地对话",
+    "desc_en": "iOS Metal llama.cpp local chat",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "GGUF",
+      "离线",
+      "手机模型"
+    ],
+    "how": "1. 编译 Geist。 2. 导入 TinyLlama/Phi 小 GGUF。 3. 控上下文。",
+    "free": true
+  },
+  {
+    "name": "HuggingSnap",
+    "url": "https://github.com/huggingface/HuggingSnap",
+    "desc": "iOS 端侧 SmolVLM2 看图说话",
+    "desc_en": "iOS on-device SmolVLM2 app",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "手机模型",
+      "离线",
+      "CoreML"
+    ],
+    "how": "1. 打开仓库/TestFlight。 2. 下 SmolVLM2。 3. 拍照提问。",
+    "free": true
+  },
+  {
+    "name": "mlx-audio 苹果",
+    "url": "https://github.com/Blaizzy/mlx-audio",
+    "desc": "MLX 音频 TTS/ASR 工具链",
+    "desc_en": "MLX audio TTS/ASR tooling",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "CoreML",
+      "语音手机"
+    ],
+    "how": "1. Mac 试跑。 2. 选 tiny。 3. 再迁 iOS。",
+    "free": true
+  },
+  {
+    "name": "mlx-whisper 苹果",
+    "url": "https://github.com/ml-explore/mlx-examples",
+    "desc": "MLX Whisper 端侧转写示例",
+    "desc_en": "Whisper on-device via MLX examples",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. 打开 mlx-examples。 2. whisper tiny/base。 3. 移植 App。",
+    "free": true
+  },
+  {
+    "name": "SpeechAnalyzer iOS",
+    "url": "https://developer.apple.com/documentation/speech",
+    "desc": "苹果 Speech 端侧语音能力",
+    "desc_en": "Apple Speech on-device capabilities",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. 读 Speech 文档。 2. 优先 on-device。 3. 可结合 WhisperKit。",
+    "free": true
+  },
+  {
+    "name": "Create ML iOS",
+    "url": "https://developer.apple.com/machine-learning/create-ml/",
+    "desc": "Create ML 轻量模型部署 iPhone",
+    "desc_en": "Create ML models for iPhone",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "CoreML"
+    ],
+    "how": "1. Mac 训练。 2. 导出 Core ML。 3. VNCoreMLRequest。",
+    "free": true
+  },
+  {
+    "name": "Natural Language NLModel",
+    "url": "https://developer.apple.com/documentation/naturallanguage",
+    "desc": "NLModel 端侧文本分类",
+    "desc_en": "On-device text classification with NLModel",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "CoreML",
+      "离线"
+    ],
+    "how": "1. Create ML 分类器。 2. 加载 NLModel。 3. 离线预测。",
+    "free": true
+  },
+  {
+    "name": "SoundAnalysis 框架",
+    "url": "https://developer.apple.com/documentation/soundanalysis",
+    "desc": "端侧声音事件分类",
+    "desc_en": "On-device sound classification",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "语音手机",
+      "CoreML"
+    ],
+    "how": "1. 用 SoundAnalysis。 2. 可自定义 Core ML。 3. 后台分类。",
+    "free": true
+  },
+  {
+    "name": "Vision VNCoreMLRequest",
+    "url": "https://developer.apple.com/documentation/vision",
+    "desc": "Vision + Core ML 手机视觉",
+    "desc_en": "Vision + Core ML mobile vision",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "CoreML"
+    ],
+    "how": "1. 包 VNCoreMLRequest。 2. 喂摄像头帧。 3. 看 ANE。",
+    "free": true
+  },
+  {
+    "name": "Foundation Models Framework 文档",
+    "url": "https://developer.apple.com/documentation/foundationmodels",
+    "desc": "Apple Foundation Models 端侧 API",
+    "desc_en": "Apple Foundation Models on-device API",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "手机模型",
+      "离线",
+      "CoreML"
+    ],
+    "how": "1. 检查系统版本。 2. LanguageModelSession。 3. 无需自下大模型。",
+    "free": true
+  },
+  {
+    "name": "SystemLanguageModel API",
+    "url": "https://developer.apple.com/documentation/foundationmodels",
+    "desc": "系统端侧语言模型入口",
+    "desc_en": "System on-device language model entry",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "手机模型",
+      "离线"
+    ],
+    "how": "1. 检查可用性。 2. 摘要/改写。 3. 数据不外传。",
+    "free": true
+  },
+  {
+    "name": "Translation 框架离线",
+    "url": "https://developer.apple.com/documentation/translation",
+    "desc": "苹果 Translation 离线语言包",
+    "desc_en": "Apple Translation offline language packs",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "离线"
+    ],
+    "how": "1. 下载语言包。 2. TranslationSession。 3. 飞行模式验证。",
+    "free": true
+  },
+  {
+    "name": "ONNX Runtime Mobile iOS",
+    "url": "https://onnxruntime.ai/docs/tutorials/mobile/",
+    "desc": "ORT Mobile iOS 集成",
+    "desc_en": "ONNX Runtime Mobile for iOS",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "离线"
+    ],
+    "how": "1. CocoaPods/SPM。 2. int8 ONNX。 3. CoreML EP 可选。",
+    "free": true
+  },
+  {
+    "name": "ml-stable-diffusion CoreML",
+    "url": "https://github.com/apple/ml-stable-diffusion",
+    "desc": "苹果 SD→Core ML 手机推理",
+    "desc_en": "Apple SD to Core ML mobile inference",
+    "cat": "生图",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "CoreML",
+      "生图手机"
+    ],
+    "how": "1. 转 SD1.5/LCM。 2. Split Einsum。 3. 小分辨率。",
+    "free": true
+  },
+  {
+    "name": "SD 1.5 CoreML Split Einsum",
+    "url": "https://huggingface.co/apple/coreml-stable-diffusion-v1-5",
+    "desc": "苹果 SD1.5 Core ML 分包",
+    "desc_en": "Apple SD1.5 Core ML packages",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "CoreML",
+      "生图手机"
+    ],
+    "how": "1. HF 下 Split Einsum。 2. 跑官方示例。 3. 降步数省内存。",
+    "free": true
+  },
+  {
+    "name": "swift-transformers",
+    "url": "https://github.com/huggingface/swift-transformers",
+    "desc": "HF Swift Transformers 端侧",
+    "desc_en": "Hugging Face Swift Transformers",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "手机模型"
+    ],
+    "how": "1. SPM 引入。 2. 小 tokenizer+模型。 3. 结合 MLX/Core ML。",
+    "free": true
+  },
+  {
+    "name": "ml-explore mlx-swift-examples",
+    "url": "https://github.com/ml-explore/mlx-swift-examples",
+    "desc": "官方 MLX Swift 聊天示例",
+    "desc_en": "Official MLX Swift chat examples",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "CoreML",
+      "手机模型"
+    ],
+    "how": "1. 打开示例。 2. 跑 LLM。 3. 换 0.5B–1B。",
+    "free": true
+  },
+  {
+    "name": "whisper.rn React Native",
+    "url": "https://github.com/mybigday/whisper.rn",
+    "desc": "RN 绑定 whisper.cpp 手机转写",
+    "desc_en": "React Native whisper.cpp bindings",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. 安装 whisper.rn。 2. tiny/base。 3. 录音转写。",
+    "free": true
+  },
+  {
+    "name": "AVSpeechSynthesizer",
+    "url": "https://developer.apple.com/documentation/avfaudio/avspeechsynthesizer",
+    "desc": "iOS 系统离线朗读 API",
+    "desc_en": "iOS system offline speech synthesis",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. AVSpeechUtterance。 2. 增强质量语音。 3. 完全端侧。",
+    "free": true
+  },
+  {
+    "name": "Kokoro-82M ONNX 手机",
+    "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+    "desc": "Kokoro-82M 多语 TTS 上手机",
+    "desc_en": "Kokoro-82M multilingual TTS for phone",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "语音手机"
+    ],
+    "how": "1. HF 取权重。 2. 转 ONNX/sherpa。 3. 离线合成。",
+    "free": true
+  },
+  {
+    "name": "Kitten TTS 手机",
+    "url": "https://github.com/k2-fsa/sherpa-onnx/releases",
+    "desc": "sherpa 超小英文 TTS",
+    "desc_en": "Ultra-small English TTS in sherpa",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. Releases 找 Kitten。 2. 装进 Hayai。 3. 低端机优先。",
+    "free": true
+  },
+  {
+    "name": "ZipVoice 手机克隆",
+    "url": "https://github.com/k2-fsa/sherpa-onnx/releases",
+    "desc": "ZipVoice 参考音克隆小包",
+    "desc_en": "ZipVoice reference-audio cloning packs",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "语音手机"
+    ],
+    "how": "1. 下 distill 小包。 2. 录参考音。 3. 本地克隆。",
+    "free": true
+  },
+  {
+    "name": "RHVoice 安卓",
+    "url": "https://github.com/RHVoice/RHVoice",
+    "desc": "开源多语离线 TTS",
+    "desc_en": "Open-source multilingual offline TTS",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. 安装 RHVoice。 2. 下语音包。 3. 无网朗读。",
+    "free": true
+  },
+  {
+    "name": "OpenWakeWord 手机",
+    "url": "https://github.com/dscripka/openWakeWord",
+    "desc": "开源唤醒词上手机",
+    "desc_en": "Open-source wake word for mobile",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. 下唤醒词模型。 2. TFLite/ONNX。 3. 低功耗监听。",
+    "free": true
+  },
+  {
+    "name": "Moonshine ASR Tiny",
+    "url": "https://github.com/usefulsensors/moonshine",
+    "desc": "Moonshine 端侧 ASR",
+    "desc_en": "Moonshine on-device ASR",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. 打开仓库。 2. 选 tiny。 3. 安卓转写。",
+    "free": true
+  },
+  {
+    "name": "Useful Sensors Moonshine",
+    "url": "https://huggingface.co/UsefulSensors/moonshine-tiny",
+    "desc": "Moonshine Tiny 权重卡",
+    "desc_en": "Moonshine Tiny model card",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "语音手机"
+    ],
+    "how": "1. HF 下 tiny。 2. 官方 runtime。 3. 对比 Whisper tiny。",
+    "free": true
+  },
+  {
+    "name": "Vosk Small CN 模型",
+    "url": "https://alphacephei.com/vosk/models",
+    "desc": "Vosk 中文小模型",
+    "desc_en": "Vosk small Chinese ASR model",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. 下 small-cn。 2. Vosk Android。 3. 离线中文。",
+    "free": true
+  },
+  {
+    "name": "vosk-model-small-en-us",
+    "url": "https://alphacephei.com/vosk/models",
+    "desc": "Vosk 英文小模型",
+    "desc_en": "Vosk small English US model",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. 下 small-en-us。 2. 绑定 SDK。 3. 控制词表。",
+    "free": true
+  },
+  {
+    "name": "Chatterbox TTS Mobile",
+    "url": "https://github.com/resemble-ai/chatterbox",
+    "desc": "Chatterbox TTS（手机仅小配置实验）",
+    "desc_en": "Chatterbox TTS tiny configs only on phone",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "语音手机"
+    ],
+    "how": "1. 读仓库。 2. 仅小配置。 3. 不够改 Piper。",
+    "free": true
+  },
+  {
+    "name": "Pocket TTS Android",
+    "url": "https://github.com/HayaiApp/HayaiTTS",
+    "desc": "Pocket 系语音克隆 TTS",
+    "desc_en": "Pocket-family voice-clone TTS",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. Hayai 选 Pocket。 2. 下小权重。 3. 参考音克隆。",
+    "free": true
+  },
+  {
+    "name": "OpenAI Whisper Tiny GGUF",
+    "url": "https://huggingface.co/ggerganov/whisper.cpp",
+    "desc": "Whisper Tiny ggml 手机档",
+    "desc_en": "Whisper Tiny ggml for phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "语音手机",
+      "GGUF"
+    ],
+    "how": "1. 下 ggml-tiny。 2. whisper.cpp/WhisperKit。 3. 中文慎用更大档。",
+    "free": true
+  },
+  {
+    "name": "PhoneLM 0.5B",
+    "url": "https://huggingface.co/mllmTeam/PhoneLM-0.5B",
+    "desc": "专为手机设计的 0.5B 模型",
+    "desc_en": "0.5B LM designed for phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "手机模型",
+      "GGUF"
+    ],
+    "how": "1. HF 下载。 2. 转 GGUF Q4。 3. Maid/PocketPal 加载。",
+    "free": true
+  },
+  {
+    "name": "PhoneLM 1.5B",
+    "url": "https://huggingface.co/mllmTeam/PhoneLM-1.5B",
+    "desc": "PhoneLM 1.5B 手机友好档",
+    "desc_en": "PhoneLM 1.5B phone-friendly",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "手机模型",
+      "GGUF"
+    ],
+    "how": "1. 下 1.5B。 2. Q4_K_M。 3. 6GB+ RAM。",
+    "free": true
+  },
+  {
+    "name": "LFM2.5 350M",
+    "url": "https://huggingface.co/collections/LiquidAI/lfm25",
+    "desc": "Liquid LFM2.5 350M 端侧",
+    "desc_en": "Liquid LFM2.5 350M edge model",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "手机模型",
+      "GGUF"
+    ],
+    "how": "1. 打开集合。 2. 选 350M。 3. 低端机优先。",
+    "free": true
+  },
+  {
+    "name": "LFM2.5 1.2B",
+    "url": "https://huggingface.co/collections/LiquidAI/lfm25",
+    "desc": "Liquid LFM2.5 1.2B 手机平衡档",
+    "desc_en": "Liquid LFM2.5 1.2B balanced phone tier",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "手机模型",
+      "GGUF"
+    ],
+    "how": "1. 集合内选 1.2B。 2. Q4。 3. PocketPal/Maid 试速。",
+    "free": true
+  },
+  {
+    "name": "Liquid AI LFM2",
+    "url": "https://www.liquid.ai/blog/introducing-lfm2-5-the-next-generation-of-on-device-ai",
+    "desc": "Liquid 端侧模型系列介绍",
+    "desc_en": "Liquid on-device model family intro",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "手机模型"
+    ],
+    "how": "1. 读博文。 2. 选 350M–1.2B。 3. 避开更大档。",
+    "free": true
+  },
+  {
+    "name": "IBM Granite Tiny GGUF",
+    "url": "https://huggingface.co/ibm-granite",
+    "desc": "IBM Granite 1B 级 GGUF 入口",
+    "desc_en": "IBM Granite ~1B GGUF entry",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "手机模型",
+      "GGUF"
+    ],
+    "how": "1. 搜 Granite 1B GGUF。 2. Q4_K_M。 3. 本地壳加载。",
+    "free": true
+  },
+  {
+    "name": "SmolLM2 135M GGUF",
+    "url": "https://huggingface.co/collections/HuggingFaceTB/smollm2-6723884218bcda64b34d7db9",
+    "desc": "SmolLM2 135M 极小模型",
+    "desc_en": "SmolLM2 135M ultra-small model",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "手机模型",
+      "GGUF"
+    ],
+    "how": "1. 集合下 135M。 2. 任意手机可跑。 3. 演示/分类。",
+    "free": true
+  }
+]
