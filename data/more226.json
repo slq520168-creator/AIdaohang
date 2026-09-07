@@ -1,0 +1,703 @@
+[
+  {
+    "name": "WhisperKit 示例 App",
+    "url": "https://github.com/argmaxinc/WhisperKit",
+    "desc": "iOS WhisperKit 端侧语音识别",
+    "desc_en": "WhisperKit on-device speech recognition for iOS",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "离线",
+      "CoreML"
+    ],
+    "how": "1. 打开 WhisperKit。 2. 跑 iOS 示例。 3. 下 tiny/base CoreML 包。 4. 录音转写。",
+    "free": true
+  },
+  {
+    "name": "FastVLM Apple",
+    "url": "https://github.com/apple/ml-fastvlm",
+    "desc": "苹果 FastVLM 端侧视觉语言",
+    "desc_en": "Apple FastVLM on-device vision-language",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "CoreML"
+    ],
+    "how": "1. 打开仓库。 2. 跟 iOS/设备说明。 3. 下官方小权重。 4. 真机测图问。",
+    "free": true
+  },
+  {
+    "name": "OpenELM 苹果端侧",
+    "url": "https://huggingface.co/apple/OpenELM",
+    "desc": "Apple OpenELM 小模型权重",
+    "desc_en": "Apple OpenELM small model weights",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "模型包",
+      "CoreML"
+    ],
+    "how": "1. 打开 HF OpenELM。 2. 选 270M/1.1B。 3. 转 Core ML 或用支持 App。 4. iPhone 优先更小档。",
+    "free": true
+  },
+  {
+    "name": "iOS 快捷指令 + 本地 LLM",
+    "url": "https://support.apple.com/guide/shortcuts/welcome/ios",
+    "desc": "快捷指令调用本地 AI App",
+    "desc_en": "Trigger local AI apps via iOS Shortcuts",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "离线"
+    ],
+    "how": "1. 安装 Private LLM/LLM Farm 等。 2. 快捷指令里选对应 App Action。 3. 锁屏也能唤起短问答。",
+    "free": true
+  },
+  {
+    "name": "TestFlight 搜本地 LLM",
+    "url": "https://testflight.apple.com",
+    "desc": "TestFlight 尝鲜端侧 LLM 客户端",
+    "desc_en": "Find beta on-device LLM clients on TestFlight",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果"
+    ],
+    "how": "1. 打开 TestFlight。 2. 搜 Local LLM / on-device。 3. 只装可信开发者。 4. 小模型试跑。",
+    "free": true
+  },
+  {
+    "name": "a-Shell 跑轻量命令",
+    "url": "https://apps.apple.com/app/a-shell/id1473805438",
+    "desc": "iOS 终端配合端侧工具链",
+    "desc_en": "iOS shell used with on-device toolchains",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果"
+    ],
+    "how": "1. 安装 a-Shell。 2. 按文档装轻量脚本。 3. 大模型仍走专用 LLM App。",
+    "free": true
+  },
+  {
+    "name": "Working Copy 拉模型配置",
+    "url": "https://apps.apple.com/app/working-copy-git-client/id896694807",
+    "desc": "iOS Git 客户端同步提示词/配置",
+    "desc_en": "iOS Git client to sync prompts/configs",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果"
+    ],
+    "how": "1. 安装 Working Copy。 2. 拉自己的 prompt 仓库。 3. 配到本地 LLM App。",
+    "free": false
+  },
+  {
+    "name": "Apple 飞行模式离线验收",
+    "url": "https://support.apple.com/zh-cn/105109",
+    "desc": "iPhone 飞行模式验证端侧",
+    "desc_en": "Airplane mode check on iPhone for on-device AI",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "离线"
+    ],
+    "how": "1. 模型下载完成。 2. 开飞行模式。 3. 再打开本地 AI App。 4. 能对话/生图才算过。",
+    "free": true
+  },
+  {
+    "name": "Gemma 2B GGUF 手机档",
+    "url": "https://huggingface.co/collections/ggml-org/gemma-2",
+    "desc": "Gemma 2 小尺寸 GGUF，适手机",
+    "desc_en": "Gemma 2 small GGUF packs for phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Gemma 2 GGUF 集合。 2. 选 2B Q4。 3. 导入 PocketPal/LLM Farm。 4. 安卓/苹果都能试。",
+    "free": true
+  },
+  {
+    "name": "Gemma 3 1B 手机档",
+    "url": "https://huggingface.co/google/gemma-3-1b-it",
+    "desc": "Gemma 3 1B 端侧对话",
+    "desc_en": "Gemma 3 1B for on-device chat",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "模型包"
+    ],
+    "how": "1. 打开模型页。 2. 下量化版。 3. 手机客户端加载。 4. 旧机优先。",
+    "free": true
+  },
+  {
+    "name": "Llama-3.2-1B-Instruct GGUF",
+    "url": "https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF",
+    "desc": "Llama 3.2 1B 手机对话包",
+    "desc_en": "Llama 3.2 1B Instruct GGUF for phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Bartowski 量化页。 2. 选 Q4_K_M。 3. 导入安卓/苹果本地客户端。",
+    "free": true
+  },
+  {
+    "name": "Llama-3.2-3B-Instruct GGUF",
+    "url": "https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF",
+    "desc": "Llama 3.2 3B 旗舰机可试",
+    "desc_en": "Llama 3.2 3B Instruct GGUF for flagship phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 仅 8GB+ 内存机型。 2. 下 Q4。 3. 失败就退回 1B。",
+    "free": true
+  },
+  {
+    "name": "Qwen2.5-0.5B-Instruct GGUF",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF",
+    "desc": "通义 0.5B 手机友好",
+    "desc_en": "Qwen2.5 0.5B Instruct GGUF phone-friendly",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 下载 Q4/Q5。 2. 安卓 PocketPal 或 iOS LLM Farm。 3. 中文短问答很合适。",
+    "free": true
+  },
+  {
+    "name": "Qwen2.5-1.5B-Instruct GGUF",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+    "desc": "通义 1.5B 手机常用档",
+    "desc_en": "Qwen2.5 1.5B Instruct GGUF for phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 下 GGUF。 2. 导入本地客户端。 3. 控上下文 2k–4k。",
+    "free": true
+  },
+  {
+    "name": "Qwen3-0.6B GGUF",
+    "url": "https://huggingface.co/Qwen/Qwen3-0.6B-GGUF",
+    "desc": "Qwen3 0.6B 端侧",
+    "desc_en": "Qwen3 0.6B GGUF on-device",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开量化页。 2. 手机客户端加载。 3. 先短提示。",
+    "free": true
+  },
+  {
+    "name": "Qwen3-1.7B GGUF",
+    "url": "https://huggingface.co/Qwen/Qwen3-1.7B-GGUF",
+    "desc": "Qwen3 1.7B 端侧",
+    "desc_en": "Qwen3 1.7B GGUF on-device",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 旗舰机优先。 2. Q4 量化。 3. 安卓/苹果客户端通用。",
+    "free": true
+  },
+  {
+    "name": "Phi-3.5-mini GGUF 手机",
+    "url": "https://huggingface.co/bartowski/Phi-3.5-mini-instruct-GGUF",
+    "desc": "Phi-3.5 mini 手机档",
+    "desc_en": "Phi-3.5 mini GGUF for phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 下 Q4。 2. 导入本地 App。 3. 英文更稳，中文可短用。",
+    "free": true
+  },
+  {
+    "name": "Phi-4-mini GGUF 手机",
+    "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+    "desc": "Phi-4 mini 端侧",
+    "desc_en": "Phi-4 mini for on-device use",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "模型包"
+    ],
+    "how": "1. 看官方小模型说明。 2. 找 GGUF/端侧格式。 3. 手机只跑 mini。",
+    "free": true
+  },
+  {
+    "name": "SmolLM2-360M 手机",
+    "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct",
+    "desc": "超小 SmolLM 适旧机",
+    "desc_en": "SmolLM2 360M for older phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "模型包"
+    ],
+    "how": "1. 下载 Instruct。 2. 旧安卓/旧 iPhone 优先。 3. 只做短补全。",
+    "free": true
+  },
+  {
+    "name": "SmolLM2-1.7B 手机",
+    "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "desc": "SmolLM2 1.7B 端侧",
+    "desc_en": "SmolLM2 1.7B on-device",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "模型包"
+    ],
+    "how": "1. 下量化。 2. 导入 PocketPal/LLM Farm。",
+    "free": true
+  },
+  {
+    "name": "TinyLlama-1.1B Chat GGUF",
+    "url": "https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+    "desc": "TinyLlama 入门手机包",
+    "desc_en": "TinyLlama 1.1B chat GGUF for phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 选 Q4。 2. 任意本地客户端。 3. 适合试验流程。",
+    "free": true
+  },
+  {
+    "name": "DeepSeek-R1-Distill-Qwen-1.5B GGUF",
+    "url": "https://huggingface.co/bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+    "desc": "DeepSeek 蒸馏 1.5B 手机推理",
+    "desc_en": "DeepSeek R1 distill 1.5B GGUF for phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 下 Q4。 2. 手机客户端加载。 3. 推理题短答。",
+    "free": true
+  },
+  {
+    "name": "InternLM2-1.8B GGUF",
+    "url": "https://huggingface.co/internlm/internlm2-chat-1_8b-gguf",
+    "desc": "书生 1.8B 中文手机档",
+    "desc_en": "InternLM2 1.8B chat GGUF",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 下载 GGUF。 2. 本地客户端导入。 3. 中文短聊。",
+    "free": true
+  },
+  {
+    "name": "MiniCPM-1B 手机",
+    "url": "https://huggingface.co/openbmb/MiniCPM-1B-sft-bf16",
+    "desc": "面壁 MiniCPM 小钢炮 1B 级",
+    "desc_en": "MiniCPM ~1B class for phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "模型包"
+    ],
+    "how": "1. 打开面壁页面。 2. 找端侧/量化发布。 3. 手机客户端加载。",
+    "free": true
+  },
+  {
+    "name": "Stable Diffusion 1.5 手机专用小包",
+    "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5",
+    "desc": "SD1.5 基模（手机请用 8bit/小图）",
+    "desc_en": "SD 1.5 base — use tiny/8-bit packs on phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "生图",
+      "模型包"
+    ],
+    "how": "1. 不要直接上全精度大包。 2. 用 Draw Things/安卓本地 SD 的 8bit 小包。 3. 512、少步数。",
+    "free": true
+  },
+  {
+    "name": "SDXS 极速小图",
+    "url": "https://huggingface.co/IDKiro/sdxs-512-0.9",
+    "desc": "SDXS 高速小图适手机试玩",
+    "desc_en": "SDXS fast tiny image model for phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "生图",
+      "模型包"
+    ],
+    "how": "1. 下小权重。 2. 支持的本地生图 App 加载。 3. 低步数出图。",
+    "free": true
+  },
+  {
+    "name": "LCM Dreamshaper 手机",
+    "url": "https://huggingface.co/SimianLuo/LCM_Dreamshaper_v7",
+    "desc": "LCM 少步数生图更适合手机",
+    "desc_en": "LCM Dreamshaper few-step image gen for phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "生图",
+      "模型包"
+    ],
+    "how": "1. 下载 LCM 包。 2. 本地生图 App。 3. 4–8 步即可。",
+    "free": true
+  },
+  {
+    "name": "Whisper Tiny 多端",
+    "url": "https://huggingface.co/openai/whisper-tiny",
+    "desc": "Whisper Tiny 手机语音",
+    "desc_en": "Whisper Tiny for mobile ASR",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "语音",
+      "离线",
+      "模型包"
+    ],
+    "how": "1. 下 tiny。 2. 安卓 sherpa/Vosk 或 iOS WhisperKit。 3. 短语音先测。",
+    "free": true
+  },
+  {
+    "name": "Whisper Base 手机",
+    "url": "https://huggingface.co/openai/whisper-base",
+    "desc": "Whisper Base 手机语音",
+    "desc_en": "Whisper Base for mobile ASR",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "语音",
+      "离线",
+      "模型包"
+    ],
+    "how": "1. 比 tiny 更准更吃内存。 2. 旗舰机再试。",
+    "free": true
+  },
+  {
+    "name": "Piper TTS 手机",
+    "url": "https://github.com/rhasspy/piper",
+    "desc": "Piper 离线 TTS 可上手机",
+    "desc_en": "Piper offline TTS usable on phones",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "离线",
+      "语音"
+    ],
+    "how": "1. 打开 Piper。 2. 下小语音包。 3. 安卓/嵌入式示例。 4. iOS 需自行集成。",
+    "free": true
+  },
+  {
+    "name": "Kokoro TTS",
+    "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+    "desc": "轻量 TTS 82M 级",
+    "desc_en": "Kokoro 82M lightweight TTS",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "语音",
+      "模型包"
+    ],
+    "how": "1. 打开模型页。 2. 看移动端集成说明。 3. 小内存设备优先。",
+    "free": true
+  },
+  {
+    "name": "Silero TTS",
+    "url": "https://github.com/snakers4/silero-models",
+    "desc": "Silero 语音模型（含 TTS）",
+    "desc_en": "Silero speech models including TTS",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "离线",
+      "语音"
+    ],
+    "how": "1. 打开 silero-models。 2. 选小 TTS。 3. 端侧 demo 验证。",
+    "free": true
+  },
+  {
+    "name": "Moonshine ASR 小模型",
+    "url": "https://huggingface.co/UsefulSensors/moonshine",
+    "desc": "Moonshine 端侧语音识别",
+    "desc_en": "Moonshine on-device ASR",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "离线",
+      "语音",
+      "模型包"
+    ],
+    "how": "1. 打开模型卡。 2. 跟移动部署说明。 3. 短音频测试。",
+    "free": true
+  },
+  {
+    "name": "Parakeet ASR",
+    "url": "https://huggingface.co/nvidia/parakeet-ctc-0.6b",
+    "desc": "Parakeet 语音（选小配置）",
+    "desc_en": "Parakeet ASR — prefer smaller configs",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "语音",
+      "模型包"
+    ],
+    "how": "1. 看官方小配置。 2. 手机只试最小档。 3. 不行就换 Whisper Tiny。",
+    "free": true
+  },
+  {
+    "name": "Hugging Face Smol 系列合集",
+    "url": "https://huggingface.co/collections/HuggingFaceTB/smollm-6695016cad7167254ce79883",
+    "desc": "Smol 系列专为端侧",
+    "desc_en": "Smol model collection for edge devices",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "模型包"
+    ],
+    "how": "1. 打开合集。 2. 选 135M–1.7B。 3. 转 GGUF 或直接用提供格式。",
+    "free": true
+  },
+  {
+    "name": "Bartowski 手机向量化总览",
+    "url": "https://huggingface.co/bartowski",
+    "desc": "常用小模型 GGUF 量化（挑 3B 以下）",
+    "desc_en": "Bartowski GGUF quants — pick ≤3B for phones",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 搜模型名。 2. 只下 ≤3B。 3. Q4_K_M。 4. 导入手机客户端。",
+    "free": true
+  },
+  {
+    "name": "Unsloth 动态量化小模型",
+    "url": "https://huggingface.co/unsloth",
+    "desc": "Unsloth 量化小模型入口",
+    "desc_en": "Unsloth quantized small models entry",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "GGUF",
+      "模型包"
+    ],
+    "how": "1. 打开 Unsloth。 2. 筛小尺寸 Instruct。 3. 下 GGUF。 4. 手机客户端加载。",
+    "free": true
+  },
+  {
+    "name": "ModelScope 手机模型检索",
+    "url": "https://www.modelscope.cn",
+    "desc": "魔搭搜端侧/量化小模型",
+    "desc_en": "ModelScope search for on-device quantized models",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "模型包"
+    ],
+    "how": "1. 打开 modelscope.cn。 2. 搜 GGUF / 端侧 / 手机。 3. 下 3B 以下。 4. 导入本地 App。",
+    "free": true
+  }
+]
