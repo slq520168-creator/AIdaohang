@@ -1,0 +1,663 @@
+[
+  {
+    "name": "MediaPipe LLM Inference Android",
+    "url": "https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/android",
+    "desc": "安卓 MediaPipe 端侧大模型推理",
+    "desc_en": "On-device LLM inference on Android via MediaPipe",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓"
+    ],
+    "how": "1. 打开 MediaPipe LLM Android 文档。 2. 用 Android Studio 跑官方 sample。 3. 按机型选 Gemma 等小模型。 4. 真机调试看延迟。 5. 再接到自己的 App。",
+    "free": true
+  },
+  {
+    "name": "Google AI Edge 文档中文导读",
+    "url": "https://ai.google.dev/edge/litert",
+    "desc": "LiteRT/端侧部署总入口",
+    "desc_en": "LiteRT / AI Edge docs entry for mobile deploy",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓"
+    ],
+    "how": "1. 打开 LiteRT 文档。 2. 选 Android 部署路径。 3. 转模型为端侧格式。 4. 用 demo 验证。 5. 再集成到应用。",
+    "free": true
+  },
+  {
+    "name": "Termux + llama.cpp 安卓",
+    "url": "https://github.com/ggerganov/llama.cpp",
+    "desc": "安卓 Termux 编译/运行 GGUF",
+    "desc_en": "Run GGUF models on Android via Termux and llama.cpp",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "GGUF",
+      "离线"
+    ],
+    "how": "1. 安装 Termux。 2. 按 llama.cpp 文档编译 Android。 3. 下载 0.5B–3B GGUF。 4. 命令行跑对话。 5. 低内存只用 Q4_K_M 以下。",
+    "free": true
+  },
+  {
+    "name": "LayoutLLM 安卓本地聊天壳",
+    "url": "https://github.com/topics/android-llm",
+    "desc": "安卓本地 LLM 客户端合集入口",
+    "desc_en": "Topic hub for Android local LLM clients",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "GGUF"
+    ],
+    "how": "1. 打开 GitHub android-llm 主题。 2. 挑维护中的本地客户端。 3. 装 APK 或自行编译。 4. 导入 GGUF。 5. 只选小模型。",
+    "free": true
+  },
+  {
+    "name": "RikkaHub",
+    "url": "https://github.com/reandroid",
+    "desc": "安卓逆向/工具向（搭配端侧调试）",
+    "desc_en": "Android tooling hub often used with on-device workflows",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓"
+    ],
+    "how": "1. 仅用于学习与合法调试。 2. 搭配端侧 demo 看模型加载。 3. 勿用于侵权。",
+    "free": true
+  },
+  {
+    "name": "F-Droid 本地 AI 分类",
+    "url": "https://f-droid.org",
+    "desc": "F-Droid 搜 offline / LLM 开源安卓客户端",
+    "desc_en": "Find open-source offline LLM apps on F-Droid",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "离线"
+    ],
+    "how": "1. 打开 F-Droid。 2. 搜 LLM / offline AI。 3. 装开源客户端。 4. 导入小模型。 5. 断网验证。",
+    "free": true
+  },
+  {
+    "name": "Obtainium 追踪安卓 AI App",
+    "url": "https://github.com/ImranR98/Obtainium",
+    "desc": "用 Obtainium 跟踪端侧 App 更新",
+    "desc_en": "Track Android on-device AI app updates with Obtainium",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓"
+    ],
+    "how": "1. 安装 Obtainium。 2. 添加 PocketPal/Maid 等 GitHub 发布源。 3. 有新版再更新。 4. 避免来路不明 APK。",
+    "free": true
+  },
+  {
+    "name": "MNN 安卓 Demo",
+    "url": "https://github.com/alibaba/MNN",
+    "desc": "阿里 MNN 安卓端侧推理 Demo",
+    "desc_en": "Alibaba MNN Android on-device inference demos",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓"
+    ],
+    "how": "1. 打开 MNN 仓库 Android demo。 2. Android Studio 编译。 3. 加载官方示例模型。 4. 看 CPU/GPU 后端。 5. 再换自己的小模型。",
+    "free": true
+  },
+  {
+    "name": "NCNN 安卓 Demo",
+    "url": "https://github.com/Tencent/ncnn",
+    "desc": "腾讯 NCNN 安卓端侧视觉/小模型",
+    "desc_en": "Tencent NCNN Android demos for on-device models",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓"
+    ],
+    "how": "1. 克隆 ncnn。 2. 跑 Android 示例。 3. 换轻量视觉模型。 4. 真机测帧率。 5. 对话大模型请改用 GGUF 客户端。",
+    "free": true
+  },
+  {
+    "name": "TNN 安卓示例",
+    "url": "https://github.com/Tencent/TNN",
+    "desc": "腾讯 TNN 移动端推理",
+    "desc_en": "Tencent TNN mobile inference examples",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓"
+    ],
+    "how": "1. 打开 TNN 文档。 2. 跑 Android 示例。 3. 转模型后上真机。 4. 对比 CPU/GPU。",
+    "free": true
+  },
+  {
+    "name": "Paddle Lite 安卓示例",
+    "url": "https://www.paddlepaddle.org.cn/lite",
+    "desc": "飞桨 Paddle Lite 安卓部署",
+    "desc_en": "Paddle Lite Android deployment",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓"
+    ],
+    "how": "1. 打开 Paddle Lite 站。 2. 跟 Android 部署教程。 3. 用官方 demo APK/工程。 4. 换小模型。",
+    "free": true
+  },
+  {
+    "name": "Qualcomm AI Hub 安卓模型",
+    "url": "https://aihub.qualcomm.com",
+    "desc": "高通 AI Hub 端侧优化模型",
+    "desc_en": "Qualcomm AI Hub models optimized for Android devices",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "模型包"
+    ],
+    "how": "1. 打开 aihub.qualcomm.com。 2. 筛 Android/骁龙机型。 3. 下载对应量化包。 4. 用官方 App/SDK 跑。 5. 非骁龙机慎选。",
+    "free": true
+  },
+  {
+    "name": "Samsung Gauss / Galaxy AI 端侧",
+    "url": "https://www.samsung.com/global/galaxy/apps/galaxy-ai/",
+    "desc": "三星 Galaxy AI 本机能力入口",
+    "desc_en": "Samsung Galaxy AI on-device features entry",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "离线"
+    ],
+    "how": "1. 更新到支持 Galaxy AI 的系统。 2. 在设置里打开本机 AI 功能。 3. 先试摘要/翻译等离线项。 4. 看是否需额外下载语言模型包。",
+    "free": true
+  },
+  {
+    "name": "Android AICore 说明",
+    "url": "https://developer.android.com/ml/aicore",
+    "desc": "安卓 AICore 系统级端侧能力",
+    "desc_en": "Android AICore system on-device AI",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "离线"
+    ],
+    "how": "1. 打开 AICore 文档。 2. 确认机型/系统支持。 3. 用官方 sample 调本机模型。 4. 无支持则改用 MLC/PocketPal。",
+    "free": true
+  },
+  {
+    "name": "Layla Local LLM Android",
+    "url": "https://play.google.com/store/apps/details?id=com.layla.layla",
+    "desc": "安卓本地/联网混合 LLM 客户端",
+    "desc_en": "Android LLM client with local model options",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "GGUF"
+    ],
+    "how": "1. Play 搜 Layla。 2. 安装后进模型管理。 3. 优先下 1B–3B 本地包。 4. 可关云端只走本地。 5. 内存不够就减上下文。",
+    "free": true
+  },
+  {
+    "name": "Backyard AI 模型浏览",
+    "url": "https://backyard.ai",
+    "desc": "角色模型站（可导出到手机客户端）",
+    "desc_en": "Character model hub exportable to mobile clients",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "模型包"
+    ],
+    "how": "1. 打开 backyard.ai。 2. 选小参数角色卡/模型。 3. 导出到 Maid/ChatterUI 等安卓客户端。 4. 勿下过大权重。",
+    "free": true
+  },
+  {
+    "name": "Local Diffusion Android",
+    "url": "https://github.com/MoeNovel/local-diffusion-android",
+    "desc": "安卓本地扩散生图（轻量）",
+    "desc_en": "Local diffusion image gen on Android",
+    "cat": "生图",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "生图",
+      "离线"
+    ],
+    "how": "1. 看仓库说明与机型要求。 2. 只装轻量 checkpoint。 3. 512 起步、低步数。 4. 发热即停。 5. 勿上大 FLUX。",
+    "free": true
+  },
+  {
+    "name": "Draw Things 安卓替代：Stable Diffusion Android 列表",
+    "url": "https://github.com/topics/stable-diffusion-android",
+    "desc": "安卓本地 SD 客户端主题列表",
+    "desc_en": "GitHub topic for Android Stable Diffusion apps",
+    "cat": "生图",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "生图"
+    ],
+    "how": "1. 打开 topic 页。 2. 挑仍在维护的 App。 3. 只下 8bit/小图模型。 4. 512×512 低步数。 5. 不跑视频大包。",
+    "free": true
+  },
+  {
+    "name": "NHLocal LLM",
+    "url": "https://github.com/topics/local-llm-android",
+    "desc": "安卓 Local LLM 主题合集",
+    "desc_en": "Android local-LLM topic collection",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "GGUF",
+      "离线"
+    ],
+    "how": "1. 打开主题页。 2. 按星标/最近提交筛选。 3. 安装后导入 GGUF。 4. 先测 1B。",
+    "free": true
+  },
+  {
+    "name": "KoboldCPP Android 说明",
+    "url": "https://github.com/LostRuins/koboldcpp",
+    "desc": "KoboldCPP 移动端相关说明与构建",
+    "desc_en": "KoboldCPP notes/builds relevant to mobile",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "GGUF"
+    ],
+    "how": "1. 阅读移动/Android 相关说明。 2. 能编译再上真机。 3. 只加载小 GGUF。 4. 角色卡可后加。",
+    "free": true
+  },
+  {
+    "name": "SillyTavern 安卓远程+本机小模型",
+    "url": "https://sillytavern.app",
+    "desc": "安卓浏览器连本机/局域网小模型",
+    "desc_en": "Use Android browser with a local small model backend",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓"
+    ],
+    "how": "1. 手机浏览器打开 SillyTavern（本机或局域网）。 2. 后端用 PocketPal/MLC 等小模型。 3. 别在手机上硬跑超大后端。",
+    "free": true
+  },
+  {
+    "name": "Acode + 终端跑脚本",
+    "url": "https://acode.app",
+    "desc": "安卓上编辑脚本配合端侧推理",
+    "desc_en": "Android code editor used with on-device runtimes",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓"
+    ],
+    "how": "1. 安装 Acode。 2. 配合 Termux。 3. 调 llama.cpp 命令。 4. 适合调试提示词。",
+    "free": true
+  },
+  {
+    "name": "Shortcut：安卓飞行模式测离线",
+    "url": "https://support.google.com/android/answer/9079115",
+    "desc": "用飞行模式验收端侧是否真离线",
+    "desc_en": "Airplane mode check for true on-device offline",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "离线"
+    ],
+    "how": "1. 下好模型。 2. 开飞行模式。 3. 再打开本地 App 对话/生图。 4. 能用才算端侧成功。",
+    "free": true
+  },
+  {
+    "name": "Private LLM App Store",
+    "url": "https://apps.apple.com/app/private-llm/id1664017316",
+    "desc": "苹果 Private LLM 商店页",
+    "desc_en": "Private LLM on the App Store",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "离线"
+    ],
+    "how": "1. App Store 安装 Private LLM。 2. 按内存选模型下载。 3. 开飞行模式试聊。 4. 可接快捷指令。",
+    "free": false
+  },
+  {
+    "name": "LLM Farm App Store",
+    "url": "https://apps.apple.com/app/llm-farm/id6461589596",
+    "desc": "iOS 本地 GGUF 农场客户端",
+    "desc_en": "LLM Farm iOS local GGUF client",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "GGUF",
+      "离线"
+    ],
+    "how": "1. App Store 装 LLM Farm。 2. 导入/下载小 GGUF。 3. 调上下文长度。 4. 旧机只用 1B 级。",
+    "free": true
+  },
+  {
+    "name": "Enchanted App Store",
+    "url": "https://apps.apple.com/app/enchanted/id6474269555",
+    "desc": "iOS Enchanted 本地/自建后端客户端",
+    "desc_en": "Enchanted iOS client for local or self-hosted LLMs",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果"
+    ],
+    "how": "1. 安装 Enchanted。 2. 可接本机/局域网 Ollama 或端侧后端。 3. iPhone 上优先小模型。",
+    "free": true
+  },
+  {
+    "name": "Full Moon Local LLM",
+    "url": "https://apps.apple.com/app/fullmoon-local-llm/id6503745647",
+    "desc": "iPhone 本地 LLM（Fullmoon）",
+    "desc_en": "Fullmoon on-device local LLM for iPhone",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "离线"
+    ],
+    "how": "1. App Store 搜 Fullmoon Local LLM。 2. 下载内置小模型。 3. 离线对话。 4. 内存紧就别加长上下文。",
+    "free": true
+  },
+  {
+    "name": "Sanctum AI iOS",
+    "url": "https://apps.apple.com/app/sanctum-ai/id6477836515",
+    "desc": "iOS Sanctum 本地 AI",
+    "desc_en": "Sanctum AI local assistant on iOS",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "离线"
+    ],
+    "how": "1. 安装 Sanctum AI。 2. 选本机模型包。 3. 断网测试。",
+    "free": false
+  },
+  {
+    "name": "Locally AI Mac/iOS 生态",
+    "url": "https://locallyai.app",
+    "desc": "Locally 本地模型应用生态",
+    "desc_en": "Locally AI local-model app ecosystem",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "离线"
+    ],
+    "how": "1. 打开 locallyai.app。 2. 看 iOS/Mac 支持说明。 3. 按机型选模型。",
+    "free": false
+  },
+  {
+    "name": "Whisper Memos",
+    "url": "https://apps.apple.com/app/whisper-memos/id6446457655",
+    "desc": "苹果端侧语音转写备忘",
+    "desc_en": "On-device Whisper-style memos on iPhone",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "离线",
+      "CoreML"
+    ],
+    "how": "1. App Store 安装。 2. 下载语音模型包。 3. 录音转写。 4. 可飞行模式用。",
+    "free": false
+  },
+  {
+    "name": "Auri Transcription",
+    "url": "https://apps.apple.com/app/auri-ai-transcription/id6474667038",
+    "desc": "iOS 本地语音转写",
+    "desc_en": "Auri on-device AI transcription for iOS",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "离线"
+    ],
+    "how": "1. 安装 Auri。 2. 选离线模型。 3. 导入音频转写。",
+    "free": false
+  },
+  {
+    "name": "VoiceInk",
+    "url": "https://tryvoiceink.com",
+    "desc": "本机语音输入（苹果生态）",
+    "desc_en": "Local voice typing for Apple devices",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "离线"
+    ],
+    "how": "1. 打开官网看 iOS/Mac 支持。 2. 安装后下载语音包。 3. 系统级听写走本地。",
+    "free": false
+  },
+  {
+    "name": "Whispering 开源听写",
+    "url": "https://github.com/RezaRahemtola/whispering",
+    "desc": "开源 Whisper 听写（可配合苹果设备）",
+    "desc_en": "Open-source Whisper dictation workflows",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "离线"
+    ],
+    "how": "1. 看仓库 iOS/Mac 说明。 2. 能端侧则下 tiny/base。 3. 先短音频试。",
+    "free": true
+  },
+  {
+    "name": "Draw Things App Store",
+    "url": "https://apps.apple.com/app/draw-things-ai-powered-image/id6444050820",
+    "desc": "iPhone 本地生图 Draw Things",
+    "desc_en": "Draw Things on-device image generation for iPhone",
+    "cat": "生图",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "生图",
+      "离线"
+    ],
+    "how": "1. App Store 安装 Draw Things。 2. App 内下载模型，勿用「从文件导入」找不到包。 3. 只用小图模型 8bit/6bit。 4. 512×512、少步数。 5. 不要下 14B/22B/视频大包。",
+    "free": true
+  },
+  {
+    "name": "Draw Things 官方站",
+    "url": "https://drawthings.ai",
+    "desc": "Draw Things 官网与模型说明",
+    "desc_en": "Draw Things official site and model notes",
+    "cat": "生图",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "生图"
+    ],
+    "how": "1. 打开 drawthings.ai。 2. 看 iPhone 支持机型。 3. 回 App 内下载小模型。",
+    "free": true
+  },
+  {
+    "name": "Apple Foundation Models 文档",
+    "url": "https://developer.apple.com/documentation/foundationmodels",
+    "desc": "苹果 Foundation Models 端侧框架",
+    "desc_en": "Apple Foundation Models on-device framework docs",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "CoreML",
+      "离线"
+    ],
+    "how": "1. 打开文档。 2. 确认系统版本。 3. 用官方 sample。 4. 真机测本机调用。",
+    "free": true
+  },
+  {
+    "name": "Apple Intelligence 开发者页",
+    "url": "https://developer.apple.com/apple-intelligence/",
+    "desc": "Apple Intelligence 端侧能力总览",
+    "desc_en": "Apple Intelligence developer overview",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "离线",
+      "CoreML"
+    ],
+    "how": "1. 打开开发者页。 2. 看本机功能列表。 3. 用支持的 iPhone 系统体验。",
+    "free": true
+  },
+  {
+    "name": "coremltools 转苹果模型",
+    "url": "https://apple.github.io/coremltools/docs-guides/",
+    "desc": "把模型转到 Core ML 供 iPhone 用",
+    "desc_en": "Convert models to Core ML for iPhone",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "CoreML",
+      "模型包"
+    ],
+    "how": "1. 在电脑用 coremltools 转换。 2. 量化到适合手机的大小。 3. 用 Xcode 跑。 4. 再进 Draw Things/自研 App。",
+    "free": true
+  },
+  {
+    "name": "MLX Swift 聊天示例",
+    "url": "https://github.com/ml-explore/mlx-swift-examples",
+    "desc": "苹果 MLX Swift 端侧示例",
+    "desc_en": "MLX Swift on-device examples for Apple devices",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "苹果",
+      "CoreML"
+    ],
+    "how": "1. 打开 mlx-swift-examples。 2. Xcode 跑 iPhone 示例。 3. 选 0.5B–3B 级。 4. 真机看内存。",
+    "free": true
+  }
+]
