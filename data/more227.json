@@ -1,0 +1,702 @@
+[
+  {
+    "name": "Maid Android LLM",
+    "url": "https://github.com/Mobile-Artificial-Intelligence/maid",
+    "desc": "F-Droid 安卓本地 GGUF 对话客户端",
+    "desc_en": "F-Droid Android local GGUF LLM chat client",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "GGUF",
+      "离线",
+      "手机模型"
+    ],
+    "how": "1. 从 F-Droid 或 GitHub Releases 安装 Maid。 2. 导入 Q4 小 GGUF（≤3B）。 3. 开飞行模式验证离线。 4. 低内存关掉长上下文。",
+    "free": true
+  },
+  {
+    "name": "OfflineLLM Android",
+    "url": "https://github.com/jegly/OfflineLLM",
+    "desc": "零联网权限的安卓 GGUF 本地聊天",
+    "desc_en": "Android GGUF chat with zero INTERNET permission",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "GGUF",
+      "离线",
+      "手机模型"
+    ],
+    "how": "1. 安装 OfflineLLM APK。 2. 复制 GGUF 到应用可读目录。 3. 可选开 Vulkan。 4. 推荐 Gemma3-270M / Qwen 0.5–1.5B。",
+    "free": true
+  },
+  {
+    "name": "Atomic Chat Mobile",
+    "url": "https://atomic.chat",
+    "desc": "跨平台本地 AI，含手机端离线对话",
+    "desc_en": "Cross-platform local AI app with mobile offline chat",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "离线",
+      "手机模型"
+    ],
+    "how": "1. 打开官网下 iOS/Android。 2. 选 ≤3B 本地模型。 3. 飞行模式试用。",
+    "free": true
+  },
+  {
+    "name": "Ollama Termux 安卓",
+    "url": "https://github.com/ollama/ollama",
+    "desc": "Termux 安装 Ollama 跑手机本地小模型",
+    "desc_en": "Install Ollama in Termux for on-phone local models",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "GGUF",
+      "离线"
+    ],
+    "how": "1. 从 F-Droid 装 Termux。 2. 按指南装 Ollama。 3. 只 pull 0.5B–1.5B。 4. 用 PocketPal/Maid 连本机 API。",
+    "free": true
+  },
+  {
+    "name": "llama-server Termux",
+    "url": "https://github.com/ggml-org/llama.cpp",
+    "desc": "Termux 编译 llama-server 提供本地 API",
+    "desc_en": "Build llama-server in Termux for local OpenAI-compatible API",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "GGUF",
+      "离线"
+    ],
+    "how": "1. Termux 编译 llama.cpp。 2. 启动 llama-server 指向小 GGUF。 3. 本机前端连接。",
+    "free": true
+  },
+  {
+    "name": "ExecuTorch Android",
+    "url": "https://pytorch.org/executorch/",
+    "desc": "PyTorch ExecuTorch 安卓端侧推理",
+    "desc_en": "PyTorch ExecuTorch on-device inference for Android",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓"
+    ],
+    "how": "1. 读 ExecuTorch Android 文档。 2. 导出小模型。 3. 用官方 demo 验证。",
+    "free": true
+  },
+  {
+    "name": "PyTorch ExecuTorch 文档",
+    "url": "https://docs.pytorch.org/executorch/",
+    "desc": "ExecuTorch 导出与手机部署总文档",
+    "desc_en": "ExecuTorch export and mobile deploy docs",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果"
+    ],
+    "how": "1. 按 Export 转小模型。 2. Android/iOS sample。 3. 监控峰值内存。",
+    "free": true
+  },
+  {
+    "name": "react-native-executorch",
+    "url": "https://github.com/software-mansion/react-native-executorch",
+    "desc": "React Native 调 ExecuTorch 端侧模型",
+    "desc_en": "React Native bindings for ExecuTorch",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果"
+    ],
+    "how": "1. 建 RN 工程。 2. 接入包。 3. 放量化小模型。",
+    "free": true
+  },
+  {
+    "name": "MediaPipe Text Embedder",
+    "url": "https://ai.google.dev/edge/mediapipe/solutions/text/text_embedder",
+    "desc": "MediaPipe 端侧文本向量",
+    "desc_en": "On-device text embeddings via MediaPipe",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果",
+      "手机模型"
+    ],
+    "how": "1. 打开文档。 2. 下官方小模型。 3. sample 取向量。",
+    "free": true
+  },
+  {
+    "name": "MediaPipe Image Classifier",
+    "url": "https://ai.google.dev/edge/mediapipe/solutions/vision/image_classifier",
+    "desc": "MediaPipe 手机图像分类",
+    "desc_en": "On-device image classification with MediaPipe",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果"
+    ],
+    "how": "1. 跑 demo。 2. 换 Lite 模型。 3. 真机测帧率。",
+    "free": true
+  },
+  {
+    "name": "MediaPipe Object Detector",
+    "url": "https://ai.google.dev/edge/mediapipe/solutions/vision/object_detector",
+    "desc": "MediaPipe 端侧目标检测",
+    "desc_en": "On-device object detection with MediaPipe",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果"
+    ],
+    "how": "1. 打开 Object Detector。 2. 用 Lite 模型。 3. 摄像头实时框选。",
+    "free": true
+  },
+  {
+    "name": "MediaPipe Face Landmarker 手机",
+    "url": "https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker",
+    "desc": "手机端脸部关键点",
+    "desc_en": "On-device face landmarks for phones",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果"
+    ],
+    "how": "1. 跑 sample。 2. 开 GPU/NPU。 3. 接入应用。",
+    "free": true
+  },
+  {
+    "name": "MediaPipe Pose Landmarker",
+    "url": "https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker",
+    "desc": "手机端人体姿态",
+    "desc_en": "On-device pose landmarker for mobile",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果"
+    ],
+    "how": "1. 装 demo。 2. 选 Lite。 3. 离线健身计数。",
+    "free": true
+  },
+  {
+    "name": "MediaPipe Hand Landmarker",
+    "url": "https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker",
+    "desc": "手机端手势关键点",
+    "desc_en": "On-device hand landmarks",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果"
+    ],
+    "how": "1. 跑 Hand Landmarker。 2. 映射手势。 3. 完全离线。",
+    "free": true
+  },
+  {
+    "name": "MediaPipe Gesture Recognizer",
+    "url": "https://ai.google.dev/edge/mediapipe/solutions/vision/gesture_recognizer",
+    "desc": "MediaPipe 手势识别",
+    "desc_en": "On-device gesture recognition",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果"
+    ],
+    "how": "1. 打开文档。 2. 用内置手势集。 3. 可自定义。",
+    "free": true
+  },
+  {
+    "name": "OnnxStream Android",
+    "url": "https://github.com/vitoplantamura/OnnxStream",
+    "desc": "极低内存 ONNX 流式推理（SD 小图）",
+    "desc_en": "Ultra-low-memory streaming ONNX for small SD",
+    "cat": "生图",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "生图手机",
+      "离线"
+    ],
+    "how": "1. 克隆 OnnxStream。 2. 只用 SD1.5/LCM。 3. 出 256–512 小图。 4. 禁止 FLUX。",
+    "free": true
+  },
+  {
+    "name": "stable-diffusion.cpp Android",
+    "url": "https://github.com/leejet/stable-diffusion.cpp",
+    "desc": "C++ 端侧 SD 推理可编进安卓",
+    "desc_en": "C++ SD runtime for Android builds",
+    "cat": "生图",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "生图手机",
+      "GGUF",
+      "离线"
+    ],
+    "how": "1. 读 README。 2. 转 SD1.5/LCM。 3. NDK 编译。 4. 先 256 分辨率。",
+    "free": true
+  },
+  {
+    "name": "Local Dream Android",
+    "url": "https://play.google.com/store/apps/details?id=com.nightfeather.localdiffusion",
+    "desc": "安卓离线 SD 生图",
+    "desc_en": "Android offline SD app",
+    "cat": "生图",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "生图手机",
+      "离线"
+    ],
+    "how": "1. Play 安装。 2. 只导入 SD1.5/LCM。 3. 飞行模式。 4. 避开 SDXL/FLUX。",
+    "free": true
+  },
+  {
+    "name": "Off Grid 生图安卓",
+    "url": "https://play.google.com/store/apps/details?id=com.offgrid.diffusion",
+    "desc": "NPU 加速安卓离线生图",
+    "desc_en": "NPU-accelerated offline image gen",
+    "cat": "生图",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "生图手机",
+      "离线"
+    ],
+    "how": "1. 安装 Off Grid。 2. 用预转换小模型。 3. 骁龙优先 NPU。",
+    "free": true
+  },
+  {
+    "name": "SDAI Local Diffusion",
+    "url": "https://play.google.com/store/apps/details?id=com.nervesapps.sdai",
+    "desc": "SDAI 本地 Diffusion 离线出图",
+    "desc_en": "SDAI local diffusion offline generation",
+    "cat": "生图",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "生图手机",
+      "离线"
+    ],
+    "how": "1. 安装 SDAI。 2. 切 Local Diffusion。 3. 飞机模式验证。",
+    "free": true
+  },
+  {
+    "name": "MNN Diffusion 安卓",
+    "url": "https://github.com/alibaba/MNN",
+    "desc": "阿里 MNN 端侧扩散/视觉示例",
+    "desc_en": "Alibaba MNN on-device diffusion demos",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "生图手机"
+    ],
+    "how": "1. 打开 MNN。 2. 找 Android demo。 3. 换小模型。",
+    "free": true
+  },
+  {
+    "name": "ncnn-android-yolov8",
+    "url": "https://github.com/nihui/ncnn-android-yolov8",
+    "desc": "ncnn 安卓 YOLOv8 实时检测",
+    "desc_en": "ncnn Android YOLOv8 realtime detection",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "离线"
+    ],
+    "how": "1. 编译 demo APK。 2. 换 yolov8n。 3. 测 FPS。",
+    "free": true
+  },
+  {
+    "name": "YOLOv8n TFLite",
+    "url": "https://github.com/ultralytics/ultralytics",
+    "desc": "YOLOv8n 导出 TFLite 跑手机",
+    "desc_en": "Export YOLOv8n to TFLite",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "离线"
+    ],
+    "how": "1. 导出 tflite。 2. LiteRT 加载。 3. 选 n 档。",
+    "free": true
+  },
+  {
+    "name": "LiteRT GPU Delegate 安卓",
+    "url": "https://ai.google.dev/edge/litert/android",
+    "desc": "LiteRT GPU/NNAPI 加速",
+    "desc_en": "LiteRT GPU/NNAPI delegates",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓"
+    ],
+    "how": "1. 接 GPU Delegate。 2. 再试 NNAPI。 3. 对比延迟。",
+    "free": true
+  },
+  {
+    "name": "Hexagon NNAPI Delegate",
+    "url": "https://developer.android.com/ndk/guides/neuralnetworks",
+    "desc": "安卓 NNAPI 加速通路",
+    "desc_en": "Android NNAPI acceleration path",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓"
+    ],
+    "how": "1. 读 NNAPI 指南。 2. 骁龙开 accelerator。 3. systrace 确认。",
+    "free": true
+  },
+  {
+    "name": "Qualcomm AI Hub 手机模型",
+    "url": "https://aihub.qualcomm.com/",
+    "desc": "高通 AI Hub 预优化手机模型",
+    "desc_en": "Qualcomm AI Hub mobile models",
+    "cat": "模型包",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "手机模型"
+    ],
+    "how": "1. 注册 AI Hub。 2. 下手机档模型。 3. 对应 runtime 部署。",
+    "free": true
+  },
+  {
+    "name": "Arm KleidiAI",
+    "url": "https://github.com/ARM-software/KleidiAI",
+    "desc": "Arm CPU 端侧推理微内核",
+    "desc_en": "Arm CPU micro-kernels for inference",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果"
+    ],
+    "how": "1. 读文档。 2. 集成到 llama.cpp/ORT。 3. 对比 GEMM。",
+    "free": true
+  },
+  {
+    "name": "Apache TVM 手机",
+    "url": "https://tvm.apache.org/",
+    "desc": "TVM 编译模型到手机后端",
+    "desc_en": "Compile models to mobile with TVM",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果"
+    ],
+    "how": "1. TVM 编译小模型。 2. 部署 runtime。 3. 验证数值。",
+    "free": true
+  },
+  {
+    "name": "IREE Android 示例",
+    "url": "https://iree.dev/",
+    "desc": "IREE 端侧运行时安卓示例",
+    "desc_en": "IREE Android on-device examples",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓"
+    ],
+    "how": "1. 跟 Android 指南。 2. 编译小模块。 3. 真机跑。",
+    "free": true
+  },
+  {
+    "name": "ONNX Runtime Mobile Android 包",
+    "url": "https://onnxruntime.ai/docs/tutorials/mobile/",
+    "desc": "ORT Mobile 安卓 AAR",
+    "desc_en": "ONNX Runtime Mobile Android AAR",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "离线"
+    ],
+    "how": "1. 引入 AAR。 2. 放量化 ONNX。 3. NNAPI/XNNPack。",
+    "free": true
+  },
+  {
+    "name": "ORT Extensions 手机",
+    "url": "https://github.com/microsoft/onnxruntime-extensions",
+    "desc": "ORT 扩展分词/预处理手机可用",
+    "desc_en": "ORT Extensions for mobile preprocess",
+    "cat": "运行时",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果"
+    ],
+    "how": "1. 编进 App。 2. 用扩展分词。 3. 减少胶水代码。",
+    "free": true
+  },
+  {
+    "name": "Gemini Nano 端侧",
+    "url": "https://developer.android.com/ai/gemini-nano",
+    "desc": "安卓 Gemini Nano 端侧生成",
+    "desc_en": "Gemini Nano on-device via AICore",
+    "cat": "对话",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "手机模型",
+      "离线"
+    ],
+    "how": "1. 确认 AICore 机型。 2. 接 API。 3. 无网短生成。",
+    "free": true
+  },
+  {
+    "name": "Google ML Kit 本地",
+    "url": "https://developers.google.com/ml-kit",
+    "desc": "ML Kit 端侧视觉/NLP",
+    "desc_en": "ML Kit on-device vision/NLP",
+    "cat": "端侧",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "苹果"
+    ],
+    "how": "1. 选 on-device API。 2. 下模型包。 3. 关云端。",
+    "free": true
+  },
+  {
+    "name": "VoxSherpa TTS",
+    "url": "https://github.com/CodeBySonu95/VoxSherpa-TTS",
+    "desc": "安卓离线 Kokoro/Piper TTS App",
+    "desc_en": "Android offline Kokoro/Piper TTS",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. GitHub 下 APK。 2. 选 Kokoro/Piper。 3. 离线朗读。",
+    "free": true
+  },
+  {
+    "name": "HayaiTTS",
+    "url": "https://github.com/HayaiApp/HayaiTTS",
+    "desc": "系统级安卓 TTS 引擎",
+    "desc_en": "System-wide Android TTS engine",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. 安装 APK。 2. 设系统 TTS。 3. 按需下语音包。",
+    "free": true
+  },
+  {
+    "name": "SherpaOnnx TTS Engine APK",
+    "url": "https://github.com/k2-fsa/sherpa-onnx",
+    "desc": "官方 sherpa-onnx TTS Engine 安卓",
+    "desc_en": "Official sherpa-onnx Android TTS engine",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. 按 scripts/apk 构建。 2. 选 Piper/Kokoro。 3. 注册引擎。",
+    "free": true
+  },
+  {
+    "name": "SherpaOnnx ASR Android",
+    "url": "https://k2-fsa.github.io/sherpa/onnx/android/index.html",
+    "desc": "sherpa-onnx 安卓 ASR 文档",
+    "desc_en": "sherpa-onnx Android ASR docs",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. 打开文档。 2. Releases 找 ASR APK。 3. zipformer 小模型。",
+    "free": true
+  },
+  {
+    "name": "Whisper.cpp Android APK",
+    "url": "https://github.com/ggerganov/whisper.cpp",
+    "desc": "whisper.cpp 安卓示例 APK",
+    "desc_en": "whisper.cpp Android samples",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "语音手机",
+      "离线",
+      "GGUF"
+    ],
+    "how": "1. 编 android 示例。 2. tiny/base。 3. 录音转写。",
+    "free": true
+  },
+  {
+    "name": "Piper Android APK",
+    "url": "https://github.com/rhasspy/piper",
+    "desc": "Piper 轻量 TTS 安卓/sherpa",
+    "desc_en": "Lightweight Piper TTS for Android",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. 选 16–60MB 语音。 2. sherpa 或独立 APK。 3. 中文选 onnx。",
+    "free": true
+  },
+  {
+    "name": "eSpeak NG 安卓",
+    "url": "https://github.com/espeak-ng/espeak-ng",
+    "desc": "经典小体积离线 TTS",
+    "desc_en": "Classic tiny offline TTS",
+    "cat": "语音",
+    "pack": "手机本地",
+    "tags": [
+      "本地",
+      "端侧",
+      "手机",
+      "安卓",
+      "语音手机",
+      "离线"
+    ],
+    "how": "1. F-Droid 搜 eSpeak。 2. 设系统引擎。 3. 极低配可用。",
+    "free": true
+  }
+]
