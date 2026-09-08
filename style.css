@@ -7,9 +7,9 @@ html[data-theme="dark"],html[data-theme="dark"] body{background:#000}
 body{font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif}
 #sitebg{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;height:100lvh;min-height:100dvh;z-index:0;pointer-events:none;background:#000;overflow:hidden}
 #sitebg .slide{position:absolute;inset:0;opacity:0;background-position:center;background-size:cover;background-repeat:no-repeat;animation:bgfade 18s infinite;transform:scale(1.06)}
-#sitebg .s1{background-image:url("bg1.jpg");animation-delay:0s}
-#sitebg .s2{background-image:url("bg2.jpg");animation-delay:6s}
-#sitebg .s3{background-image:url("bg3.jpg");animation-delay:12s}
+#sitebg .s1{background-image:url("IMG_7654.jpeg");animation-delay:0s}
+#sitebg .s2{background-image:url("IMG_7655.jpeg");animation-delay:6s}
+#sitebg .s3{background-image:url("IMG_7656.jpeg");animation-delay:12s}
 @keyframes bgfade{0%{opacity:0;transform:scale(1.08)}8%{opacity:1}30%{opacity:1;transform:scale(1)}38%{opacity:0}100%{opacity:0}}
 #scroll{position:relative;z-index:1;height:100%;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(12px + env(safe-area-inset-top,0px)) 12px calc(80px + env(safe-area-inset-bottom,0px))}
 .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px;position:relative}
