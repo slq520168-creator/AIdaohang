@@ -1,0 +1,5 @@
+[
+{"name":"低配加速跑模型","name_en":"Low-spec speed setup","cat":"模型应用","pack":"模型应用","url":"https://ollama.com","guide":"https://github.com/ollama/ollama","desc":"低配本跑本地大模型的设置要点","desc_en":"Speed settings for weak PCs","how":"8G内存用1.7B~4B；16G用8B Q4_K_M。上下文改成2048。OLLAMA_FLASH_ATTENTION=1、OLLAMA_KV_CACHE_TYPE=q8_0、OLLAMA_NUM_THREADS=物理核数。ollama ps 要100%GPU。模型放NVMe。","free":true},
+{"name":"Ollama加速变量","name_en":"Ollama env vars","cat":"模型应用","pack":"模型应用","url":"https://github.com/ollama/ollama/blob/main/docs/faq.md","guide":"https://github.com/ollama/ollama/blob/main/docs/faq.md","desc":"Ollama环境变量提速","desc_en":"Ollama speed environment variables","how":"Windows用户变量加OLLAMA_FLASH_ATTENTION=1、OLLAMA_CONTEXT_LENGTH=4096、OLLAMA_KV_CACHE_TYPE=q8_0。改完重启Ollama。","free":true},
+{"name":"llama.cpp加速参数","name_en":"llama.cpp flags","cat":"模型应用","pack":"模型应用","url":"https://github.com/ggml-org/llama.cpp","guide":"https://github.com/ggml-org/llama.cpp","desc":"llama.cpp探速参数","desc_en":"llama.cpp speed flags","how":"-ngl 99 全卸GPU；-t 物理核数；--flash-attn on；-c 2048；模型用Q4_K_M。","free":true}
+]
