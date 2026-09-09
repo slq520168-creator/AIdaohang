@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/copy/:id",
+      "destination": "https://drive.usercontent.google.com/uc?export=download&id=:id"
+    }
+  ]
+}
