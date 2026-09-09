@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
 <title>Guide</title>
-<link rel="stylesheet" href="style.css?v=108"/>
+<link rel="stylesheet" href="style.css?v=109"/>
 <style>
 #box{display:block;padding:16px 16px 40px;margin:8px 0 24px;line-height:1.8;background:#fff;border:1px solid #e5e7eb}
 #box h3{font-size:20px;margin-bottom:6px}
@@ -12,21 +12,15 @@
 #box ol{margin:8px 0 0 18px}
 #box li{margin:0 0 12px}
 #box a.btn{display:inline-block;margin-top:12px;background:#2563eb;color:#fff;text-decoration:none;padding:10px 14px;border-radius:12px}
-#gate{position:fixed;inset:0;z-index:99999;background:rgba(20,16,14,.62);display:flex;align-items:center;justify-content:center;padding:18px}
-.gatebox{width:100%;max-width:340px;background:#fff;border-radius:16px;padding:20px 18px 18px}
-.gatet{margin:0 0 12px;font-size:18px;font-weight:600;color:#3b2f2c}
-#gateIn{width:100%;box-sizing:border-box;border:1px solid #d9cfc8;border-radius:12px;padding:12px;font-size:16px;margin:0 0 12px}
-#gateGo{width:100%;border:0;background:#d97888;color:#fff;border-radius:12px;padding:12px;font-size:16px;font-weight:600}
-#gateErr{visibility:hidden;color:#c0392b;font-size:13px;margin:10px 0 0}
 </style>
 </head>
 <body>
 <div id="sitebg" aria-hidden="true"></div>
 <div id="scroll">
-<header class="top"><a href="tools.html?v=108" style="color:inherit;text-decoration:none">← 返回</a></header>
+<header class="top"><a href="tools.html?v=109&home=1" style="color:inherit;text-decoration:none">← 返回</a></header>
 <article class="card" id="box">加载中…</article>
 </div>
-<script src="lock.js?v=108"></script>
+<script src="lock.js?v=109"></script>
 <script>
 function esc(s){return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>').replace(/"/g,'"')}
 function splitHow(how){
@@ -37,12 +31,12 @@ function splitHow(how){
 }
 function isHttp(u){return /^https?:\/\//i.test(u||'')}
 function driveJson(id){
-  return 'https://drive.usercontent.google.com/uc?export=download&id='+id;
+  return '/copy/'+id+'?v=109';
 }
 (async()=>{
   const box=document.getElementById('box');
   const n=decodeURIComponent(new URLSearchParams(location.search).get('n')||'');
-  const v='108';
+  const v='109';
   const guideFiles=[
     driveJson('1LRlrBp0KZp5q2FzHspu_dFfpHfE9qC13'),
     driveJson('1aA6xRVOSkPptL2QbsF2vlnN793s83o1X'),
