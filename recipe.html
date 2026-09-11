@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>菜谱 · TheMealDB</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,sans-serif;background:#111;color:#eee}
+.w{max-width:480px;margin:0 auto;padding:14px 14px 40px}
+h1{font-size:18px;margin:8px 0 12px}
+.row{display:flex;gap:8px}input{flex:1;padding:10px 12px;border-radius:10px;border:0;font-size:16px}
+button{padding:10px 14px;border:0;border-radius:10px;background:#d97888;color:#fff;font-weight:700}
+.card{background:#1c1c1c;border-radius:14px;margin:12px 0;overflow:hidden}
+.card img{width:100%;height:180px;object-fit:cover;display:block}
+.card .p{padding:10px 12px}h2{font-size:16px;margin:0 0 6px}p{margin:0 0 8px;font-size:13px;line-height:1.45;color:#ccc}
+ul{margin:0;padding-left:18px;font-size:13px}
+.err{color:#f88;font-size:13px}
+a.back{color:#d97888;text-decoration:none;font-size:13px}
+</style>
+</head>
+<body>
+<div class="w">
+<a class="back" href="./tools.html">← 导航</a>
+<h1>免费菜谱 TheMealDB</h1>
+<div class="row">
+<input id="q" placeholder="英文菜名，如 chicken / beef"/>
+<button id="go">搜索</button>
+</div>
+<p id="msg" class="err"></p>
+<div id="list"></div>
+</div>
+<script>
+(function(){
+  var KEY='1';
+  var BASE='https://www.themealdb.com/api/json/v1/'+KEY+'/';
+  var list=document.getElementById('list');
+  var msg=document.getElementById('msg');
+  function ingredients(m){
+    var a=[];
+    for(var i=1;i<=20;i++){
+      var n=m['strIngredient'+i], q=m['strMeasure'+i];
+      if(n&&n.trim()) a.push((q||'')+' '+n);
+    }
+    return a;
+  }
+  function card(m){
+    var ings=ingredients(m).slice(0,12).map(function(x){return '<li>'+x+'</li>';}).join('');
+    return '<article class="card"><img src="'+(m.strMealThumb||'')+'" alt=""/><div class="p"><h2>'+m.strMeal+'</h2><p>'+(m.strArea||'')+' · '+(m.strCategory||'')+'</p><ul>'+ings+'</ul><p>'+(m.strInstructions||'').slice(0,280)+(m.strInstructions&&m.strInstructions.length>280?'…':'')+'</p>'+(m.strYoutube?'<p><a class="back" href="'+m.strYoutube+'" target="_blank">YouTube</a></p>':'')+'</div></article>';
+  }
+  function search(s){
+    msg.textContent='加载中…'; list.innerHTML='';
+    var url=s? BASE+'search.php?s='+encodeURIComponent(s): BASE+'random.php';
+    fetch(url).then(function(r){return r.json();}).then(function(d){
+      var meals=d.meals||[];
+      if(!meals.length){ msg.textContent='没有结果，换英文词'; return; }
+      msg.textContent='';
+      list.innerHTML=meals.slice(0,8).map(card).join('');
+    }).catch(function(){ msg.textContent='请求失败'; });
+  }
+  document.getElementById('go').onclick=function(){ search(document.getElementById('q').value.trim()); };
+  document.getElementById('q').addEventListener('keydown',function(e){ if(e.key==='Enter') search(this.value.trim()); });
+  search('');
+})();
+</script>
+</body>
+</html>
