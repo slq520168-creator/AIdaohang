@@ -3,123 +3,137 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-<title>菜谱 · TheMealDB</title>
+<title>菜谱</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,sans-serif;background:#111;color:#eee}
-.w{max-width:480px;margin:0 auto;padding:14px 14px 40px}
-h1{font-size:18px;margin:8px 0 12px}
-.row{display:flex;gap:8px}input{flex:1;padding:10px 12px;border-radius:10px;border:0;font-size:16px}
-button{padding:10px 14px;border:0;border-radius:10px;background:#d97888;color:#fff;font-weight:700}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
-.chips b{background:#2a2a2a;padding:6px 10px;border-radius:999px;font-size:13px;font-weight:500}
-.card{background:#1c1c1c;border-radius:14px;margin:12px 0;overflow:hidden}
-.card img{width:100%;height:180px;object-fit:cover;display:block}
-.card .p{padding:10px 12px}h2{font-size:16px;margin:0 0 6px}p{margin:0 0 8px;font-size:13px;line-height:1.45;color:#ccc}
-ul{margin:0;padding-left:18px;font-size:13px}
-.err{color:#f88;font-size:13px}
-a.back{color:#d97888;text-decoration:none;font-size:13px}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,sans-serif;background:#0f0f10;color:#eee}
+.w{max-width:480px;margin:0 auto;padding:12px 12px 48px}
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+a.back{color:#d97888;text-decoration:none;font-size:14px}
+h1{font-size:18px;margin:0}
+.row{display:flex;gap:8px}input{flex:1;padding:10px 12px;border-radius:10px;border:0;font-size:16px;background:#222;color:#fff}
+button#go,button#rand{padding:10px 12px;border:0;border-radius:10px;background:#d97888;color:#fff;font-weight:700}
+button#rand{background:#374151}
+.sec{font-size:12px;color:#9ca3af;margin:12px 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips b{background:#1f2937;padding:7px 11px;border-radius:999px;font-size:13px;font-weight:500}
+.chips b.on{background:#d97888;color:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.g{background:#1c1c1e;border-radius:12px;overflow:hidden}
+.g img{width:100%;height:110px;object-fit:cover;display:block}
+.g p{margin:0;padding:8px;font-size:13px;line-height:1.3}
+.err{color:#f88;font-size:13px;min-height:18px}
+#mask{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:9;overflow:auto}
+#mask.on{display:block}
+#sheet{background:#161616;margin:12vh 12px 20px;border-radius:16px;overflow:hidden}
+#sheet img{width:100%;height:200px;object-fit:cover}
+#sheet .p{padding:12px}#sheet h2{margin:0 0 6px;font-size:18px}
+#sheet p,#sheet li{font-size:14px;line-height:1.5;color:#ddd}
+#close{display:block;text-align:center;padding:12px;color:#d97888}
 </style>
 </head>
 <body>
 <div class="w">
-<a class="back" href="./tools.html">← 导航</a>
-<h1>免费菜谱</h1>
+<div class="top"><a class="back" href="./tools.html">← 导航</a><h1>菜谱大厅</h1><span></span></div>
 <div class="row">
-<input id="q" placeholder="输入中文，如 鸡肉 牛肉 土豆"/>
-<button id="go">搜索</button>
+<input id="q" placeholder="中文或英文，如 鸡肉"/>
+<button id="go">搜</button>
+<button id="rand">随机</button>
 </div>
-<div class="chips" id="chips"></div>
-<p id="msg" class="err"></p>
-<div id="list"></div>
+<div class="sec">分类</div>
+<div class="chips" id="cats"></div>
+<div class="sec">地区</div>
+<div class="chips" id="areas"></div>
+<p class="err" id="msg"></p>
+<div class="grid" id="list"></div>
 </div>
+<div id="mask"><div id="sheet"></div></div>
 <script>
 (function(){
-  var KEY='1';
-  var BASE='https://www.themealdb.com/api/json/v1/'+KEY+'/';
-  var MAP={
-    '鸡':'chicken','鸡肉':'chicken','鸡腿':'chicken',
-    '牛':'beef','牛肉':'beef',
-    '猪':'pork','猪肉':'pork',
-    '鱼':'fish','虾':'shrimp','虾仁':'shrimp',
-    '蛋':'egg','鸡蛋':'egg',
-    '米':'rice','饭':'rice',
-    '面':'pasta','意大利面':'pasta',
-    '土豆':'potato','马铃薯':'potato',
-    '番茄':'tomato',
-    '牛奶':'milk',
-    '面包':'bread',
-    '蛋糕':'cake','蛋糕甜点':'dessert',
-    '蔬菜':'vegetarian','蔬食':'vegetarian',
-    '海鲜':'seafood',
-    '汤':'soup',
-    '沙拉':'salad',
-    '意大利':'Italian',
-    '中国':'Chinese','中餐':'Chinese',
-    '日本':'Japanese',
-    '泰国':'Thai',
-    '印度':'Indian',
-    '墨西哥':'Mexican',
-    '法国':'French',
-    '拿铁':'Beef','炒饭':'Fried Rice','诅顿':'Pudding'
-  };
-  var AREA={'American':'美式','British':'英式','Canadian':'加拿大','Chinese':'中式','Croatian':'克罗地亚','Dutch':'荷兰','Egyptian':'埃及','Filipino':'菲律宾','French':'法式','Greek':'希腊','Indian':'印度','Irish':'爱尔兰','Italian':'意大利','Jamaican':'牙买加','Japanese':'日式','Kenyan':'肯尼亚','Malaysian':'马来','Mexican':'墨西哥','Moroccan':'摩洛哥','Polish':'波兰','Portuguese':'葡萄牙','Russian':'俄式','Spanish':'西班牙','Thai':'泰式','Tunisian':'突尼斯','Turkish':'土耳其','Vietnamese':'越南','Unknown':'其他'};
-  var CAT={'Beef':'牛肉','Breakfast':'早餐','Chicken':'鸡肉','Dessert':'甜品','Goat':'山羊','Lamb':'羔羊','Miscellaneous':'其他','Pasta':'意面','Pork':'猪肉','Seafood':'海鲜','Side':'配菜','Starter':'开胃','Vegan':'纯素','Vegetarian':'素食'};
-  var chips=[鸡肉,牛肉,猪肉,鱼,虾,土豆,番茄,米饭,意面,蛋糕,海鲜,中餐];
+  var BASE='https://www.themealdb.com/api/json/v1/1/';
+  var MAP={'鸡':'chicken','鸡肉':'chicken','牛':'beef','牛肉':'beef','猪':'pork','猪肉':'pork','鱼':'fish','虾':'shrimp','蛋':'egg','米':'rice','饭':'rice','面':'pasta','土豆':'potato','番茄':'tomato','蛋糕':'cake','蔬':'vegetarian','海鲜':'seafood','汤':'soup','中餐':'Chinese','日本':'Japanese','泰国':'Thai','印度':'Indian'};
+  var CATZ={Beef:'牛肉',Breakfast:'早餐',Chicken:'鸡肉',Dessert:'甜点',Goat:'山羊',Lamb:'羊肉',Miscellaneous:'其它',Pasta:'意面',Pork:'猪肉',Seafood:'海鲜',Side:'配菜',Starter:'开胃',Vegan:'纯素',Vegetarian:'素食'};
+  var AREAZ={American:'美式',British:'英式',Canadian:'加拿大',Chinese:'中餐',Croatian:'克罗地亚',Dutch:'荷兰',Egyptian:'埃及',Filipino:'菲律宾',French:'法式',Greek:'希腊',Indian:'印度',Irish:'爱尔兰',Italian:'意大利',Jamaican:'牙买加',Japanese:'日式',Kenyan:'肯尼亚',Malaysian:'马来',Mexican:'墨西哥',Moroccan:'摩洛哥',Polish:'波兰',Portuguese:'葡萄牙',Russian:'俄式',Spanish:'西班牙',Thai:'泰式',Tunisian:'突尼斯',Turkish:'土耳其',Vietnamese:'越南',Unknown:'其它'};
+  var catsEl=document.getElementById('cats');
+  var areasEl=document.getElementById('areas');
   var list=document.getElementById('list');
   var msg=document.getElementById('msg');
-  document.getElementById('chips').innerHTML=chips.map(function(x){return '<b>'+x+'</b>';}).join('');
-  document.getElementById('chips').onclick=function(e){
-    if(e.target.tagName!=='B') return;
-    document.getElementById('q').value=e.target.textContent;
-    search(e.target.textContent);
-  };
+  var mask=document.getElementById('mask');
+  var sheet=document.getElementById('sheet');
   function toEn(s){
     if(!s) return '';
     if(/^[a-zA-Z]/.test(s)) return s;
     var keys=Object.keys(MAP).sort(function(a,b){return b.length-a.length;});
-    for(var i=0;i<keys.length;i++){ if(s.indexOf(keys[i])!==-1) return MAP[keys[i]]; }
+    for(var i=0;i<keys.length;i++) if(s.indexOf(keys[i])!==-1) return MAP[keys[i]];
     return s;
   }
-  function ingredients(m){
-    var a=[];
-    for(var i=1;i<=20;i++){
-      var n=m['strIngredient'+i], q=m['strMeasure'+i];
-      if(n&&n.trim()) a.push((q||'')+' '+n);
-    }
-    return a;
+  function chip(el, items, kind){
+    el.innerHTML=items.map(function(x){
+      var lab=kind==='c'?(CATZ[x]||x):(AREAZ[x]||x);
+      return '<b data-k="'+kind+'" data-v="'+x+'">'+lab+'</b>';
+    }).join('');
   }
-  function card(m){
-    var ings=ingredients(m).slice(0,12).map(function(x){return '<li>'+x+'</li>';}).join('');
-    var area=AREA[m.strArea]||m.strArea||'';
-    var cat=CAT[m.strCategory]||m.strCategory||'';
-    return '<article class="card"><img src="'+(m.strMealThumb||'')+'" alt=""/><div class="p"><h2>'+m.strMeal+'</h2><p>'+area+' · '+cat+'</p><ul>'+ings+'</ul><p>'+(m.strInstructions||'').slice(0,280)+(m.strInstructions&&m.strInstructions.length>280?'…':'')+'</p>'+(m.strYoutube?'<p><a class="back" href="'+m.strYoutube+'" target="_blank">视频</a></p>':'')+'</div></article>';
+  function mark(el, v){
+    [].forEach.call(el.querySelectorAll('b'), function(b){ b.className=b.getAttribute('data-v')===v?'on':''; });
   }
-  function render(meals, tip){
-    if(!meals||!meals.length){ msg.textContent=tip||'没有结果，换一个词试试'; list.innerHTML=''; return; }
-    msg.textContent='';
-    list.innerHTML=meals.slice(0,8).map(card).join('');
+  function grid(meals){
+    if(!meals||!meals.length){ list.innerHTML=''; msg.textContent='没有菜，换一个分类'; return; }
+    msg.textContent='共 '+meals.length+' 道';
+    list.innerHTML=meals.map(function(m){
+      return '<div class="g" data-id="'+m.idMeal+'"><img src="'+(m.strMealThumb||'')+'" alt=""/><p>'+m.strMeal+'</p></div>';
+    }).join('');
+  }
+  function loadFilter(kind, v){
+    msg.textContent='加载中…'; list.innerHTML='';
+    var q=kind==='c'?'c='+encodeURIComponent(v):'a='+encodeURIComponent(v);
+    fetch(BASE+'filter.php?'+q).then(function(r){return r.json();}).then(function(d){ grid(d.meals||[]); }).catch(function(){ msg.textContent='失败'; });
   }
   function search(s){
     msg.textContent='加载中…'; list.innerHTML='';
-    if(!s){
-      fetch(BASE+'random.php').then(function(r){return r.json();}).then(function(d){ render(d.meals); }).catch(function(){ msg.textContent='请求失败'; });
-      return;
-    }
     var en=toEn(s);
     fetch(BASE+'search.php?s='+encodeURIComponent(en)).then(function(r){return r.json();}).then(function(d){
-      if(d.meals&&d.meals.length){ render(d.meals); return; }
-      return fetch(BASE+'filter.php?i='+encodeURIComponent(en)).then(function(r){return r.json();}).then(function(f){
-        var arr=f.meals||[];
-        if(!arr.length){ render([]); return; }
-        return fetch(BASE+'lookup.php?i='+arr[0].idMeal).then(function(r){return r.json();}).then(function(one){
-          render(one.meals||arr);
-        });
-      });
-    }).catch(function(){ msg.textContent='请求失败'; });
+      if(d.meals){ grid(d.meals); return; }
+      return fetch(BASE+'filter.php?i='+encodeURIComponent(en)).then(function(r){return r.json();}).then(function(f){ grid(f.meals||[]); });
+    }).catch(function(){ msg.textContent='失败'; });
   }
+  function randomOne(){
+    fetch(BASE+'random.php').then(function(r){return r.json();}).then(function(d){ if(d.meals) open(d.meals[0].idMeal); }).catch(function(){});
+  }
+  function ings(m){
+    var a=[];
+    for(var i=1;i<=20;i++){
+      var n=m['strIngredient'+i],q=m['strMeasure'+i];
+      if(n&&n.trim()) a.push('<li>'+(q||'')+' '+n+'</li>');
+    }
+    return a.join('');
+  }
+  function open(id){
+    fetch(BASE+'lookup.php?i='+id).then(function(r){return r.json();}).then(function(d){
+      var m=(d.meals||[])[0]; if(!m) return;
+      sheet.innerHTML='<img src="'+m.strMealThumb+'"/><div class="p"><h2>'+m.strMeal+'</h2><p>'+(AREAZ[m.strArea]||m.strArea)+' · '+(CATZ[m.strCategory]||m.strCategory)+'</p><p><b>食材</b></p><ul>'+ings(m)+'</ul><p><b>做法</b></p><p>'+(m.strInstructions||'')+'</p>'+(m.strYoutube?'<p><a class="back" href="'+m.strYoutube+'" target="_blank">看视频</a></p>':'')+'</div><a id="close" href="javascript:;">关闭</a>';
+      mask.className='on';
+      document.getElementById('close').onclick=function(){ mask.className=''; };
+    });
+  }
+  catsEl.onclick=function(e){
+    var b=e.target.closest('b'); if(!b) return;
+    mark(catsEl,b.getAttribute('data-v')); mark(areasEl,'');
+    loadFilter('c', b.getAttribute('data-v'));
+  };
+  areasEl.onclick=function(e){
+    var b=e.target.closest('b'); if(!b) return;
+    mark(areasEl,b.getAttribute('data-v')); mark(catsEl,'');
+    loadFilter('a', b.getAttribute('data-v'));
+  };
+  list.onclick=function(e){
+    var g=e.target.closest('.g'); if(g) open(g.getAttribute('data-id'));
+  };
+  mask.onclick=function(e){ if(e.target===mask) mask.className=''; };
   document.getElementById('go').onclick=function(){ search(document.getElementById('q').value.trim()); };
+  document.getElementById('rand').onclick=randomOne;
   document.getElementById('q').addEventListener('keydown',function(e){ if(e.key==='Enter') search(this.value.trim()); });
-  search('');
+  chip(catsEl,['Chicken','Beef','Pork','Seafood','Pasta','Dessert','Vegetarian','Breakfast','Side','Starter'],'c');
+  chip(areasEl,['Chinese','Japanese','Thai','Indian','Italian','French','Mexican','American','British','Vietnamese'],'a');
+  loadFilter('c','Chicken');
 })();
 </script>
 </body>
