@@ -1,5 +1,11 @@
 (function(){
   if(document.getElementById('tabbar')) return;
+  if(!document.getElementById('tabbar-css')){
+    var s=document.createElement('style');
+    s.id='tabbar-css';
+    s.textContent='#tabbar{position:fixed;left:0;right:0;bottom:0;z-index:9999;display:flex!important;align-items:stretch;justify-content:space-around;height:calc(56px + env(safe-area-inset-bottom,0px));padding:4px 2px env(safe-area-inset-bottom,0px);background:#fff!important;border-top:1px solid #e5e7eb;box-sizing:border-box}#tabbar a{flex:1!important;min-width:0!important;margin:0!important;padding:6px 0 0!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:2px!important;text-decoration:none!important;color:#6b7280!important;font-size:10px!important;line-height:1!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}#tabbar a svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;display:block}#tabbar a.on,#tabbar a:active{color:#2563eb!important;background:transparent!important}body.has-tab{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))!important}.fab,.topbtn{bottom:calc(72px + env(safe-area-inset-bottom,0px))!important}';
+    document.head.appendChild(s);
+  }
   var items=[
     {id:'pic',href:'./peach.html',t:'图片',p:'M4 5h16v14H4zM4 15l4-4 3 3 3-4 6 5'},
     {id:'novel',href:'./novel.html',t:'小说',p:'M5 4h10a3 3 0 013 3v13H8a3 3 0 00-3 3V4zM8 20a3 3 0 013-3h10'},
@@ -17,7 +23,6 @@
   else if(file==='soft') cur='soft';
   else if(file==='order') cur='order';
   else if(file==='near') cur='near';
-  else cur='home';
   var bar=document.createElement('nav');
   bar.id='tabbar';
   bar.innerHTML=items.map(function(it){
@@ -25,5 +30,4 @@
   }).join('');
   document.body.appendChild(bar);
   document.body.classList.add('has-tab');
-  var sc=document.getElementById('scroll'); if(sc) sc.classList.add('has-tab');
 })();
