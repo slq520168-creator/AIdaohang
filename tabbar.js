@@ -9,15 +9,19 @@
     {id:'order',href:'./order.html',t:'接单',p:'M7 7h10v12H7zM9 11h6M9 15h4'},
     {id:'near',href:'./near.html',t:'附近',p:'M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11zM12 11a1.5 1.5 0 110-3 1.5 1.5 0 010 3z'}
   ];
-  var path=(location.pathname.split('/').pop()||'index.html').toLowerCase();
-  var map={peach:'pic','pics.html':'pic',novel:'novel',movie:'movie',tools:'home',index:'home','':'home',soft:'soft',order:'order',near:'near'};
+  var file=(location.pathname.split('/').pop()||'').toLowerCase().replace(/\.html$/,'');
   var cur='home';
-  Object.keys(map).forEach(function(k){ if(path.indexOf(k)!==-1) cur=map[k]; });
+  if(file==='peach'||file==='pics') cur='pic';
+  else if(file==='novel') cur='novel';
+  else if(file==='movie') cur='movie';
+  else if(file==='soft') cur='soft';
+  else if(file==='order') cur='order';
+  else if(file==='near') cur='near';
+  else cur='home';
   var bar=document.createElement('nav');
   bar.id='tabbar';
   bar.innerHTML=items.map(function(it){
-    var on=it.id===cur?' on':'';
-    return '<a class="'+on+'" href="'+it.href+'"><svg viewBox="0 0 24 24"><path d="'+it.p+'"/></svg><span>'+it.t+'</span></a>';
+    return '<a class="'+(it.id===cur?'on':'')+'" href="'+it.href+'"><svg viewBox="0 0 24 24"><path d="'+it.p+'"/></svg><span>'+it.t+'</span></a>';
   }).join('');
   document.body.appendChild(bar);
   document.body.classList.add('has-tab');

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
@@ -7,16 +7,17 @@
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 <meta name="apple-mobile-web-app-title" content="AI Directory"/>
-<meta name="theme-color" content="#000000"/>
+<meta name="theme-color" content="#ffffff"/>
 <meta http-equiv="Cache-Control" content="no-cache"/>
 <title>Global AI Directory</title>
 <link rel="manifest" href="manifest.webmanifest"/>
 <link rel="apple-touch-icon" href="IMG_7049.jpeg"/>
+<link rel="stylesheet" href="tabbar.css?v=3"/>
 <style>
 html,body{margin:0;min-height:100%;min-height:100dvh;font-family:-apple-system,sans-serif;color:#3b2f2c;background:#000}
 body{min-height:100dvh;background:#000 url("IMG_7049.jpeg") center/cover no-repeat fixed}
 body::before{content:"";position:fixed;inset:0;z-index:-1;background:rgba(244,236,230,.08)}
-.w{max-width:430px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 14px calc(28px + env(safe-area-inset-bottom))}
+.w{max-width:430px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 14px calc(80px + env(safe-area-inset-bottom))}
 video{width:100%;border-radius:18px;display:block;margin:12px 0 8px;background:#111}
 .b{background:rgba(255,255,255,.86);color:#111827;border-radius:10px;padding:8px 10px;line-height:1.35;font-size:12px}
 .enter{display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:14px;border-radius:16px;font-weight:700;font-size:16px;margin:10px 0 0}
@@ -49,5 +50,6 @@ video{width:100%;border-radius:18px;display:block;margin:12px 0 8px;background:#
   });
 })();
 </script>
+<script src="tabbar.js?v=3"></script>
 </body>
 </html>
