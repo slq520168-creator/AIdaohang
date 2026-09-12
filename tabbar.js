@@ -7,19 +7,17 @@
     document.head.appendChild(s);
   }
   var items=[
-    {id:'pic',href:'./tools.html?home=1&nav=pic',t:'图片',p:'M4 5h16v14H4zM4 15l4-4 3 3 3-4 6 5'},
-    {id:'novel',href:'./tools.html?home=1&nav=novel',t:'小说',p:'M5 4h10a3 3 0 013 3v13H8a3 3 0 00-3 3V4zM8 20a3 3 0 013-3h10'},
-    {id:'movie',href:'./tools.html?home=1&nav=movie',t:'电影',p:'M4 7h16v10H4zM8 7l-3-3M16 7l3-3M10 12h4'},
+    {id:'pic',href:'./peach.html',t:'图片',p:'M4 5h16v14H4zM4 15l4-4 3 3 3-4 6 5'},
+    {id:'novel',href:'./novel.html',t:'小说',p:'M5 4h10a3 3 0 013 3v13H8a3 3 0 00-3 3V4zM8 20a3 3 0 013-3h10'},
+    {id:'movie',href:'./movie.html',t:'电影',p:'M4 7h16v10H4zM8 7l-3-3M16 7l3-3M10 12h4'},
     {id:'home',href:'./tools.html?home=1',t:'首页',p:'M4 11l8-7 8 7v9H4z'},
-    {id:'soft',href:'./tools.html?home=1&nav=soft',t:'软件',p:'M8 4h8l2 4H6zM6 8h12v12H6z'},
-    {id:'order',href:'./tools.html?home=1&nav=order',t:'接单',p:'M7 7h10v12H7zM9 11h6M9 15h4'},
-    {id:'near',href:'./tools.html?home=1&nav=near',t:'附近',p:'M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11zM12 11a1.5 1.5 0 110-3 1.5 1.5 0 010 3z'}
+    {id:'soft',href:'./soft.html',t:'软件',p:'M8 4h8l2 4H6zM6 8h12v12H6z'},
+    {id:'order',href:'./order.html',t:'接单',p:'M7 7h10v12H7zM9 11h6M9 15h4'},
+    {id:'near',href:'./near.html',t:'附近',p:'M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11zM12 11a1.5 1.5 0 110-3 1.5 1.5 0 010 3z'}
   ];
-  var nav=new URLSearchParams(location.search).get('nav')||'';
   var file=(location.pathname.split('/').pop()||'').toLowerCase().replace(/\.html$/,'');
   var cur='home';
-  if(nav) cur=nav;
-  else if(file==='peach') cur='pic';
+  if(file==='peach'||file==='pics') cur='pic';
   else if(file==='novel'||file==='movie'||file==='soft'||file==='order'||file==='near') cur=file;
   var bar=document.createElement('nav');
   bar.id='tabbar';
