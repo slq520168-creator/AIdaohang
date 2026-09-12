@@ -4,29 +4,23 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
 <meta name="theme-color" content="#000000"/>
-<title>创作台 · 做图 视频 音乐</title>
+<title>免费创作入口</title>
 <link rel="apple-touch-icon" href="IMG_7049.jpeg"/>
 <style>
-html,body{margin:0;min-height:100%;min-height:100dvh;background:transparent;color:#3b2f2c;font-family:-apple-system,"PingFang SC",sans-serif}
+html,body{margin:0;min-height:100%;min-height:100dvh;background:#000;color:#3b2f2c;font-family:-apple-system,"PingFang SC",sans-serif}
 #sitebg{position:fixed;inset:0;width:100%;height:100%;height:100dvh;object-fit:cover;z-index:0;pointer-events:none}
-.w{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:calc(12px + env(safe-area-inset-top)) 14px calc(24px + env(safe-area-inset-bottom))}
+.w{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:calc(12px + env(safe-area-inset-top)) 14px calc(28px + env(safe-area-inset-bottom))}
 .top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .back{color:#fff;text-decoration:none;background:rgba(0,0,0,.35);border-radius:999px;padding:8px 12px;font-size:14px}
 h1{font-size:18px;margin:0;flex:1;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}
-.tabs{display:flex;gap:8px;margin:0 0 12px}
-.tabs button{flex:1;border:0;border-radius:12px;padding:10px 0;font-size:15px;font-weight:700;background:rgba(255,255,255,.55);color:#111}
-.tabs button.on{background:#d97888;color:#fff}
-.panel{background:rgba(255,255,255,.78);border-radius:16px;padding:12px}
-textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;font-size:15px;resize:vertical;box-sizing:border-box;background:#fff;line-height:1.4}
-.styles{display:flex;gap:8px;margin:10px 0 0}
-.styles button{flex:1;border:0;border-radius:12px;padding:8px 0;font-size:14px;font-weight:700;background:rgba(255,255,255,.9);color:#111}
-.styles button.on{background:#111;color:#fff}
-.go{width:100%;margin-top:10px;border:0;border-radius:14px;padding:14px;font-size:16px;font-weight:700;background:#d97888;color:#fff}
-.go[disabled]{opacity:.55}
-.box{margin-top:14px;background:rgba(255,255,255,.88);color:#111;border-radius:16px;padding:10px}
-.box img,.box video,.box audio{width:100%;border-radius:12px;display:block;background:#111}
-.cap{margin:8px 2px 0;font-size:12px;opacity:.7}
-.wait{text-align:center;padding:16px 8px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}
+.note{color:#fff;font-size:12px;opacity:.9;margin:0 0 14px;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+.sec{background:rgba(255,255,255,.82);border-radius:16px;padding:12px;margin:0 0 12px}
+.sec h2{margin:0 0 10px;font-size:16px}
+a.card{display:block;background:#fff;border-radius:12px;padding:10px 12px;margin:0 0 8px;text-decoration:none;color:#111}
+a.card:last-child{margin:0}
+.n{font-weight:700;font-size:15px}
+.t{font-size:12px;opacity:.72;margin-top:3px;line-height:1.4}
+.tag{display:inline-block;font-size:11px;background:#d97888;color:#fff;border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:1px}
 </style>
 </head>
 <body>
@@ -34,305 +28,49 @@ textarea{width:100%;min-height:96px;border:0;border-radius:14px;padding:12px;fon
 <div class="w">
   <div class="top">
     <a class="back" href="./">返回</a>
-    <h1>创作台</h1>
+    <h1>免费创作</h1>
   </div>
-  <div class="tabs">
-    <button type="button" class="on" data-k="img">做图</button>
-    <button type="button" data-k="vid">视频</button>
-    <button type="button" data-k="mus">音乐</button>
-  </div>
-  <div class="panel">
-    <textarea id="p"></textarea>
-    <div class="styles" id="styles">
-      <button type="button" class="on" data-s="photo">写真</button>
-      <button type="button" data-s="cartoon">卡通</button>
-    </div>
-    <button class="go" id="go" type="button">生成</button>
-  </div>
-  <div id="out"></div>
+  <p class="note">点击新页打开对方网站。本站不接 API、不在服务器生成。登录、额度、下载都在对方站完成。</p>
+
+  <section class="sec">
+    <h2>音乐创作</h2>
+    <a class="card" href="https://suno.com" target="_blank" rel="noopener">
+      <div class="n">Suno<span class="tag">主入口</span></div>
+      <div class="t">每日50积分，约10首完整歌。适合客户/商户做歌。免费版不能商用。</div>
+    </a>
+    <a class="card" href="https://boomy.com" target="_blank" rel="noopener">
+      <div class="n">Boomy<span class="tag">额度最多</span></div>
+      <div class="t">无限生成可下载MP3。变现/商用要付费。</div>
+    </a>
+    <a class="card" href="https://soundful.com" target="_blank" rel="noopener">
+      <div class="n">Soundful</div>
+      <div class="t">无限生成，免费每月1次MP3。店铺风格试做。免费仅个人使用。</div>
+    </a>
+    <a class="card" href="https://pixabay.com/music/" target="_blank" rel="noopener">
+      <div class="n">Pixabay Music</div>
+      <div class="t">不算积分，可反复下载。店内/网站/宣传视频选曲。非AI生成，限制最少。</div>
+    </a>
+    <a class="card" href="https://www.flow-music.app" target="_blank" rel="noopener">
+      <div class="n">Flow Music</div>
+      <div class="t">每日自动补积分，2个同时生成。免费商用授权不清楚。</div>
+    </a>
+  </section>
+
+  <section class="sec">
+    <h2>菜单与菜品图</h2>
+    <a class="card" href="https://leonardo.ai" target="_blank" rel="noopener">
+      <div class="n">Leonardo AI<span class="tag">菜品图</span></div>
+      <div class="t">每天150积分。菜品图、餐厅宣传图。免费图公开，允许商用。</div>
+    </a>
+    <a class="card" href="https://express.adobe.com" target="_blank" rel="noopener">
+      <div class="n">Adobe Express<span class="tag">菜单主入口</span></div>
+      <div class="t">免费菜单模板 + 每日AI生成。手机可操作。</div>
+    </a>
+    <a class="card" href="https://www.canva.com" target="_blank" rel="noopener">
+      <div class="n">Canva</div>
+      <div class="t">基础制作长期免费，AI约20次/月。注意区分免费/收费素材。</div>
+    </a>
+  </section>
 </div>
-<script src="https://js.puter.com/v2/"></script>
-<script>
-(function(){
-  var k='img', style='photo', busy=false, abortCtl=null;
-  var FLUX='https://black-forest-labs-flux-1-schnell.hf.space';
-  var ACE='https://ace-step-ace-step-v1-5.hf.space';
-  var LTX='https://lightricks-ltx-video-distilled.hf.space';
-  var MGEN='https://facebook-musicgen.hf.space';
-  var preset={
-    img:'窗边侧脸特写，东亚年轻女人，金色夕阳光只打在脸颊，眼睛对焦，锁骨在暗部，浅景深',
-    vid:'黄昏海边女主角回眸，金色轮廓光，慢速向前推镜头，发丝随风',
-    mus:'电影级中文抒情主题曲，管弦乐铺底，钢琴主旋律，高保真录音，温暖女声，雨夜城市，史诗而克制'
-  };
-  var q=document.getElementById('p');
-  q.value=preset.img;
-  document.querySelectorAll('.tabs button').forEach(function(b){
-    b.onclick=function(){
-      document.querySelectorAll('.tabs button').forEach(function(x){x.classList.remove('on')});
-      b.classList.add('on');
-      k=b.getAttribute('data-k');
-      q.value=preset[k];
-      document.getElementById('styles').style.display = (k==='mus') ? 'none' : '';
-      if(abortCtl) try{abortCtl.abort()}catch(e){}
-    };
-  });
-  document.querySelectorAll('#styles button').forEach(function(b){
-    b.onclick=function(){
-      document.querySelectorAll('#styles button').forEach(function(x){x.classList.remove('on')});
-      b.classList.add('on');
-      style=b.getAttribute('data-s');
-    };
-  });
-  var styleHint={
-    photo:' , RAW photo of a real person, photorealistic portrait photography, natural skin pores, 85mm, Kodak Portra, live-action movie still, not cartoon, not anime, not illustration',
-    cartoon:' , cute 2D cartoon illustration, anime key visual, vibrant colors, clean line art, studio animation still, not photorealistic, not live action'
-  };
-  function styled(prompt){ return (prompt||'') + (styleHint[style]||styleHint.photo); }
-  var styleName={photo:'写真', cartoon:'卡通'};
-  function showWait(t){document.getElementById('out').innerHTML='<p class="wait">'+(t||'正在生成…')+'</p>'}
-  function showBox(html){document.getElementById('out').innerHTML='<div class="box">'+html+'</div>'}
-  function esc(s){ return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]}); }
-  function fileUrl(x, base){
-    function abs(u){
-      if(!u) return '';
-      u=String(u);
-      if(/^https?:/i.test(u)) return u;
-      if(u.indexOf('//')===0) return location.protocol+u;
-      if(base && u.charAt(0)==='/') return base+u;
-      if(base && u.indexOf('gradio_api/file')===-1) return base+'/gradio_api/file='+u;
-      return u;
-    }
-    if(!x) return '';
-    if(typeof x==='string'){
-      if(/^https?:/i.test(x) || /\.(png|jpe?g|webp|gif|mp3|mp4|wav|webm|flac)(\?|$)/i.test(x)) return abs(x);
-      return '';
-    }
-    if(Array.isArray(x)){
-      for(var i=0;i<x.length;i++){ var u=fileUrl(x[i], base); if(u) return u; }
-      return '';
-    }
-    if(typeof x==='object'){
-      if(x.url) return abs(x.url);
-      if(x.path) return abs(x.path);
-      return fileUrl(x.video, base)||fileUrl(x.image, base)||fileUrl(x.value, base);
-    }
-    return '';
-  }
-  async function readSse(res, onInfo){
-    var reader=res.body.getReader(), dec=new TextDecoder(), buf='', result=null, lastErr=null;
-    while(true){
-      var chunk=await reader.read();
-      if(chunk.done) break;
-      buf+=dec.decode(chunk.value,{stream:true});
-      var parts=buf.split('\n\n');
-      buf=parts.pop();
-      for(var i=0;i<parts.length;i++){
-        var event='message', dataStr='', lines=parts[i].split('\n');
-        for(var j=0;j<lines.length;j++){
-          var line=lines[j];
-          if(line.indexOf('event:')===0) event=line.slice(6).trim();
-          else if(line.indexOf('data:')===0) dataStr+=line.slice(5).trim();
-        }
-        if(event==='error'){ lastErr=String(dataStr||'').replace(/^"|"$/g,''); continue; }
-        if(!dataStr) continue;
-        var msg; try{ msg=JSON.parse(dataStr); }catch(e){ continue; }
-        if(msg.msg==='estimation' && onInfo) onInfo('排队第 '+(msg.rank||0)+' 位 · 约 '+Math.round(msg.rank_eta||0)+' 秒');
-        if(msg.msg==='process_starts' && onInfo) onInfo('模型正在跑…');
-        if(msg.msg==='progress' && onInfo) onInfo('生成中…');
-        if(msg.msg==='log' && onInfo && msg.log) onInfo(String(msg.log).slice(0,80));
-        if(msg.msg==='process_completed'){
-          var err=msg.output && msg.output.error;
-          if(msg.success===false || err) lastErr=String(err||msg.title||'失败');
-          else result=(msg.output && msg.output.data)||[];
-        }
-        if(msg.msg==='close_stream'){ i=parts.length; break; }
-      }
-      if(result || (lastErr && result===null && /quota|needed:|not in the list|ZeroGPU/i.test(String(lastErr)))){
-        if(result) return result;
-      }
-    }
-    if(result) return result;
-    throw new Error(lastErr||'没返回结果');
-  }
-  async function runGradio(base, apiName, fnIndex, data, onInfo){
-    if(abortCtl) try{abortCtl.abort()}catch(e){}
-    abortCtl=new AbortController();
-    var session=Math.random().toString(36).slice(2)+Date.now().toString(36);
-    var join=await fetch(base+'/gradio_api/queue/join',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({data:data, fn_index:fnIndex, session_hash:session, api_name:apiName}),
-      signal:abortCtl.signal
-    });
-    var j=await join.json();
-    if(!join.ok || !j.event_id) throw new Error(j.error||j.detail||j.message||('排队失败 '+join.status));
-    var res=await fetch(base+'/gradio_api/queue/data?session_hash='+encodeURIComponent(session),{
-      headers:{'Accept':'text/event-stream'},
-      signal:abortCtl.signal
-    });
-    if(!res.ok || !res.body) throw new Error('连接失败');
-    return readSse(res, onInfo);
-  }
-  function niceErr(e){
-    var s=String((e && e.message)||e||'失败');
-    if(/ZeroGPU|quota/i.test(s)) return '免费 GPU 额度用完了，过几分钟再试。模型是真的。';
-    if(/insufficient|funds|402|credit/i.test(s)) return '这次要额度，没出成。做图可以再试，视频有时要付费。';
-    if(/login|auth|token|unauthor/i.test(s)) return '这个模型要登录才能用，这一次没拿到结果。';
-    if(/AbortError/i.test(s)) return '已取消';
-    return s.replace(/https?:\/\/\S+/g,'').slice(0,180);
-  }
-
-  function hasPuter(){ return typeof puter!=='undefined' && puter.ai; }
-  function mediaSrc(el){
-    if(!el) return '';
-    if(typeof el==='string') return el;
-    if(el.src) return el.src;
-    if(el.getAttribute){ var u=el.getAttribute('src'); if(u) return u; }
-    return '';
-  }
-  function sleep(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
-  async function hordeImg(prompt, models, w, h){
-    var body={
-      prompt: prompt,
-      params:{ width:w, height:h, steps:12, n:1, sampler_name:'k_euler_a', cfg_scale:7 },
-      models: models,
-      nsfw: true,
-      censor_nsfw: false,
-      r2: true,
-      slow_workers: true
-    };
-    var headers={
-      'Content-Type':'application/json',
-      'apikey':'0000000000',
-      'Client-Agent':'AIdaohang:1.0:github.com/slq520168-creator'
-    };
-    var join=await fetch('https://stablehorde.net/api/v2/generate/async',{method:'POST', headers:headers, body:JSON.stringify(body)});
-    var j=await join.json();
-    if(!j.id){
-      var msg=j.message||j.rc||('排队失败 '+join.status);
-      var err=new Error(msg); err.rc=j.rc; throw err;
-    }
-    for(var i=0;i<60;i++){
-      await sleep(2500);
-      var c=await fetch('https://stablehorde.net/api/v2/generate/check/'+j.id,{headers:headers}).then(function(r){return r.json();});
-      var q=c.queue_position||0, wt=c.wait_time||0;
-      showWait('AI Horde · 排队 '+(q)+' · 约 '+wt+' 秒');
-      if(c.done || c.faulted) break;
-    }
-    var st=await fetch('https://stablehorde.net/api/v2/generate/status/'+j.id,{headers:headers}).then(function(r){return r.json();});
-    var g=(st.generations||[])[0];
-    if(!g || !g.img) throw new Error(st.message||'没返回图片');
-    return g;
-  }
-  async function makeImg(){
-    var raw=q.value.trim()||preset.img;
-    var prompt, models;
-    if(style==='cartoon'){
-      prompt=raw+' ### photo, realistic, 3d, blurry';
-      models=['WAI-NSFW-illustrious-SDXL','Abyss OrangeMix','AMPonyXL'];
-    }else{
-      prompt=raw+' , sharp focus on the eyes, 85mm ### blurry, out of focus, cartoon, anime, illustration, cgi, extra fingers';
-      models=['AlbedoBase XL (SDXL)','ICBINP - I Can\'t Believe It\'s Not Photography','Deliberate'];
-    }
-    if(hasPuter()){
-      try{
-        showWait('FLUX.1-schnell');
-        var fluxPrompt=style==='cartoon'? raw : (raw+' , sharp focus on the eyes, 85mm');
-        var im=await puter.ai.txt2img({prompt:fluxPrompt, model:'black-forest-labs/flux-schnell', width:768, height:1024});
-        var pu=mediaSrc(im);
-        if(pu){
-          showBox('<img alt="" src="'+esc(pu)+'"><p class="cap">FLUX.1-schnell · '+(styleName[style]||'')+'</p>');
-          return;
-        }
-      }catch(e){}
-    }
-    showWait('AI Horde 排队中');
-    var g;
-    try{
-      g=await hordeImg(prompt, models, 512, 768);
-    }catch(e){
-      if(String(e.rc||e.message||e).indexOf('Kudos')===-1) throw e;
-      g=await hordeImg(prompt, models, 512, 512);
-    }
-    var url=g.img;
-    if(url && url.indexOf('http')!==0 && url.indexOf('data:')!==0) url='data:image/webp;base64,'+url;
-    showBox('<img alt="" src="'+esc(url)+'"><p class="cap">'+esc(g.model||'AI Horde')+' · '+(styleName[style]||'')+'</p>');
-  }
-
-  function aceData(prompt){
-    return [
-      'acestep-v15-xl-turbo','simple',prompt,'zh',
-      prompt,'',0,'','','zh',
-      8,7.0,true,'-1',null,
-      -1,1,null,null,0.0,
-      -1,'Fill the audio semantic mask based on the given conditions:',1.0,'text2music',false,
-      0.0,1.0,3.0,'ode','',
-      'mp3',0.85,false,2.0,0,
-      0.9,'NO USER INPUT',true,true,true,
-      null,
-      false,true,false,false,0.5,
-      8,null,[],false,
-      null,null,null,null
-    ];
-  }
-
-  async function makeMus(){
-    var prompt=q.value.trim()||preset.mus;
-    showWait('ACE-Step v1.5 排队中');
-    try{
-      var data=await runGradio(ACE, '/generation_wrapper', 77, aceData(prompt), function(t){ showWait('ACE-Step v1.5 · '+t); });
-      var url=fileUrl(data, ACE);
-      if(!url) throw new Error('没返回音频');
-      showBox('<audio controls src="'+esc(url)+'"></audio><p class="cap">ACE-Step v1.5 XL Turbo</p>');
-      return;
-    }catch(e){
-      if(!/quota|ZeroGPU|额度/i.test(String(e&&e.message||e))) throw e;
-    }
-    showWait('ACE 额度满了，改走 MusicGen');
-    var data2=await runGradio(MGEN, '/predict_batched', 0, [prompt, null], function(t){ showWait('MusicGen · '+t); });
-    var url2=fileUrl(data2, MGEN);
-    if(!url2) throw new Error('没返回音频');
-    showBox('<audio controls src="'+esc(url2)+'"></audio><p class="cap">MusicGen · ACE 额度满了才用这个</p>');
-  }
-
-  async function makeVid(){
-    var prompt=styled(q.value.trim()||preset.vid);
-    var neg='worst quality, inconsistent motion, blurry, jittery, distorted, watermark';
-    var h=style==='photo'?768:640, w=style==='photo'?512:512;
-    if(hasPuter()){
-      try{
-        showWait('Wan 出片中，要等一会儿');
-        var vid=await puter.ai.txt2vid(prompt, {model:'wan'});
-        var vu=mediaSrc(vid);
-        if(vu){
-          showBox('<video controls playsinline src="'+esc(vu)+'"></video><p class="cap">Wan · '+(styleName[style]||'')+'</p>');
-          return;
-        }
-      }catch(e){
-        if(/insufficient|funds|402|credit/i.test(String(e&&e.message||e))) throw e;
-      }
-    }
-    showWait('LTX-Video 排队中');
-    var payload=[prompt, neg, null, null, h, w, 'text-to-video', 2, 9, 42, true, 1, false];
-    var data=await runGradio(LTX, '/text_to_video', 4, payload, function(t){ showWait('LTX-Video · '+t); });
-    var url=fileUrl(data, LTX);
-    if(!url) throw new Error('LTX 这次没给出视频。不会用静图假装成片。');
-    showBox('<video controls playsinline src="'+esc(url)+'"></video><p class="cap">LTX-Video Distilled · '+(styleName[style]||'')+' · '+w+'×'+h+'</p>');
-  }
-
-  document.getElementById('go').onclick=async function(){
-    if(busy) return;
-    busy=true; this.disabled=true;
-    try{
-      if(k==='img') await makeImg();
-      else if(k==='vid') await makeVid();
-      else await makeMus();
-    }catch(e){
-      showBox('<p>'+esc(niceErr(e))+'</p>');
-    }
-    busy=false; this.disabled=false;
-  };
-})();
-</script>
 </body>
 </html>
