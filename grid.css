@@ -1,0 +1,7 @@
+html,body{margin:0;background:#f5f5f7;color:#111;font-family:-apple-system,"PingFang SC",sans-serif}
+html,body{color-scheme:light}
+h1{margin:0;padding:14px 14px 8px;font-size:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 10px 80px}
+.grid a{display:block;background:#fff;border-radius:12px;overflow:hidden;text-decoration:none;color:#111;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.grid img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;background:#e5e7eb}
+.grid span{display:block;padding:8px 8px 10px;font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
