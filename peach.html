@@ -1,50 +1,37 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="light">
+<html lang="zh-CN" data-theme="light" data-nav="pic">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
 <meta name="theme-color" content="#ffffff"/>
 <title>图片</title>
-<style>
-body{margin:0;font-family:-apple-system,"PingFang SC",sans-serif;background:#fff;color:#111;padding-bottom:80px}
-header{padding:16px}
-h1{margin:0;font-size:20px}
-.sub{display:flex;gap:12px;overflow-x:auto;padding:8px 16px;border-bottom:1px solid #eee;position:sticky;top:0;background:#fff}
-.sub a{color:#333;text-decoration:none;white-space:nowrap}
-main{padding:12px 16px}
-h2{font-size:16px;margin:18px 0 8px;border-left:3px solid #2563eb;padding-left:8px}
-.list a{display:block;padding:12px;border:1px solid #e5e7eb;border-bottom:0;color:#111;text-decoration:none;background:#fff}
-.list a:first-child{border-radius:10px 10px 0 0}
-.list a:last-child{border-bottom:1px solid #e5e7eb;border-radius:0 0 10px 10px}
-</style>
+<link rel="stylesheet" href="style.css?v=241"/>
+<style>.extra{margin:0 0 14px}.extra a{display:block;padding:10px 12px;background:#fff;border:1px solid #e5e7eb;color:#111;text-decoration:none}.extra a+a{border-top:0}#theme,#lang{display:none}</style>
 </head>
 <body>
-<header><h1>图片</h1></header>
-<nav class="sub">
-<a href="#tm">图萌</a><a href="#mt">蜜桃社</a><a href="#xr">秀人</a><a href="#wm">微密圈</a><a href="#tg">TG</a>
-</nav>
-<main>
-<section id="tm"><h2>图萌 / Cos</h2><div class="list">
-<a href="https://acg.bi/tags/104.html">图萌社 蜜桃臀 29套</a>
-<a href="https://acg.coser.love/tags/104.html">CoserBox 蜜桃臀 33套</a>
-</div></section>
-<section id="mt"><h2>MiiTao 蜜桃社</h2><div class="list">
-<a href="https://www.mengtuji.com/miitaomitaoshe/">萌图集 全套合集</a>
-<a href="https://www.chaotuji.com/miitaomitaoshe/">潮图集合集</a>
-<a href="https://www.v2ph.com/album/MiiTao-117">林柔柔 VOL.117</a>
-</div></section>
-<section id="xr"><h2>秀人网</h2><div class="list">
-<a href="https://m.meitu131.com/hot/etagid228-0.html">美图131 蜜桃臀专题</a>
-<a href="https://www.meijuntu.com/beauty/fangkonglily_hunyuanchaodachuntianranmitaotunmeizi_xiurenxiuren_no_1553.html">放空lily No.1553</a>
-</div></section>
-<section id="wm"><h2>微密圈</h2><div class="list">
-<a href="https://www.siyingguan.com/mirendewuyitai/">迷人的五姨太合集</a>
-<a href="https://www.siyingguan.com/shuimitaomimi/">水蜜桃米米合集</a>
-<a href="https://www.xiurenz.com/27238.html">俏娜 黑丝蜜桃臀</a>
-</div></section>
-<section id="tg"><h2>Telegram</h2><div class="list">
-<a href="https://t.me/s/liantun_1">大屁股蜜桃臀精选</a>
-</div></section>
-</main>
-<script src="tabbar.js?v=7"></script>
+<div id="scroll">
+<header class="top"><div><h1 id="brand">图片</h1><p class="sub" id="meta"></p></div></header>
+<form class="search" id="sf"><div class="box"><input id="q" type="search" autocomplete="off"/><button type="submit" id="go">🔍</button></div></form>
+<section class="block extra">
+<div class="block-h"><h2>套图站</h2></div>
+<a href="https://acg.bi/tags/104.html">图萌社 蜜桃臀</a>
+<a href="https://www.mengtuji.com/miitaomitaoshe/">蜜桃社合集</a>
+<a href="https://m.meitu131.com/hot/etagid228-0.html">美图131</a>
+<a href="https://www.siyingguan.com/shuimitaomimi/">微密圈合集</a>
+<a href="https://t.me/s/liantun_1">Telegram 精选</a>
+</section>
+<section class="block" id="hotBlock" style="display:none"><div class="block-h"><h2 id="hotTitle"></h2></div><ol id="hot" class="rank"></ol></section>
+<section class="block">
+<div class="block-h"><h2 id="listTitle">成人内容</h2><span class="count" id="count"></span></div>
+<div id="side" class="cats"></div>
+<div class="under" id="under"><div id="tags" class="fine"></div><div id="pop"><main id="list" class="grid"></main></div></div>
+</section>
+</div>
+<button type="button" id="theme"></button><button type="button" id="lang"></button>
+<script src="lock.js?v=179"></script>
+<script src="https://cdn.jsdelivr.net/gh/slq520168-creator/AIdaohang@f042296930443e7971dd9141c737f21af0942883/app.js"></script>
+<script src="tagsplus.js?v=242"></script>
+<script src="loadmore.js?v=245"></script>
+<script src="tabbar.js?v=8"></script>
+<script src="catpage.js?v=8"></script>
 </body></html>
