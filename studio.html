@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
+<meta name="theme-color" content="#0b0b0f"/>
+<title>优选创作</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;background:#0b0b0f;color:#eee;font-family:-apple-system,"PingFang SC",sans-serif}
+body{min-height:100dvh;background:radial-gradient(800px 400px at 50% -10%,rgba(255,47,146,.18),transparent 55%),#0b0b0f}
+.w{max-width:480px;margin:0 auto;padding:calc(10px + env(safe-area-inset-top)) 14px calc(24px + env(safe-area-inset-bottom))}
+.nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.nav a{color:#fff;text-decoration:none;background:#1c1c22;border-radius:999px;padding:7px 12px;font-size:13px}
+h1{margin:8px 0 16px;font-size:22px;text-align:center;line-height:1.45}
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.modes button{background:#17171d;border:1px solid #2a2a33;color:#ddd;border-radius:12px;padding:12px 8px;font-size:14px}
+.modes button.on{border-color:#ff2f92;background:#21101a;color:#fff}
+.box{border:1.5px solid #ff2f92;border-radius:18px;padding:14px;background:#121218}
+.up{width:92px;height:92px;border:1.5px dashed #555;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#999;font-size:13px;overflow:hidden;background:#1a1a22}
+.up img{width:100%;height:100%;object-fit:cover}
+textarea{width:100%;margin-top:12px;min-height:72px;background:transparent;border:0;color:#fff;font-size:15px;resize:vertical;outline:none}
+.sel{width:100%;margin-top:8px;background:#1c1c24;border:0;color:#eee;border-radius:10px;padding:12px;font-size:14px}
+.row{display:flex;align-items:center;gap:10px;margin-top:12px}
+.pts{color:#ff8fbf;font-size:13px;white-space:nowrap}
+button.go{flex:1;border:0;border-radius:12px;padding:12px;background:linear-gradient(90deg,#ff4da6,#c44bff);color:#fff;font-size:16px}
+.hint{font-size:12px;color:#888;margin-top:10px;line-height:1.5}
+video,#stage{width:100%;border-radius:12px;margin-top:12px;background:#000;display:none}
+a.dl{display:none;margin-top:10px;text-align:center;color:#ff8fbf}
+</style>
+</head>
+<body>
+<div class="w">
+  <div class="nav"><a href="./">返回导航</a><a href="create.html">创作入口</a></div>
+  <h1>一张图，一句话，<br>生成可发布的短视频</h1>
+  <div class="modes">
+    <button class="on" data-m="i2v">图生视频</button>
+    <button data-m="t2v">文生视频</button>
+    <button data-m="t2i">文生图</button>
+    <button data-m="i2i">图生图</button>
+  </div>
+  <div class="box">
+    <label class="up" id="up"><input id="file" type="file" accept="image/*" hidden><span id="uptxt">+<br>上传</span></label>
+    <textarea id="prompt" placeholder="请输入你的想象，例如：缓慢推近，微风吹动头发"></textarea>
+    <select class="sel" id="model"><option>本地运镜 · Ken Burns</option></select>
+    <select class="sel" id="spec">
+      <option value="6">16:9 / 720p / 6秒 / 1个</option>
+      <option value="4">9:16 / 720p / 4秒 / 1个</option>
+      <option value="8">1:1 / 720p / 8秒 / 1个</option>
+    </select>
+    <div class="row"><span class="pts">本地免费</span><button class="go" id="go">生成</button></div>
+    <p class="hint">本页在浏览器本地把图片做成运镜短视频，不调别人云模型。文生需云端 API，当前先做图生视频。</p>
+    <canvas id="stage" width="1280" height="720"></canvas>
+    <video id="out" controls playsinline></video>
+    <a class="dl" id="dl" download="youxuan-i2v.webm">下载视频</a>
+  </div>
+</div>
+<script>
+const file=document.getElementById('file'), up=document.getElementById('up'), go=document.getElementById('go');
+const canvas=document.getElementById('stage'), ctx=canvas.getContext('2d');
+const video=document.getElementById('out'), dl=document.getElementById('dl');
+let img=null, mode='i2v';
+document.querySelectorAll('.modes button').forEach(b=>{
+  b.onclick=()=>{document.querySelectorAll('.modes button').forEach(x=>x.classList.remove('on'));b.classList.add('on');mode=b.dataset.m;}
+});
+file.onchange=()=>{
+  const f=file.files[0]; if(!f) return;
+  const url=URL.createObjectURL(f);
+  img=new Image();
+  img.onload=()=>{up.innerHTML='';up.appendChild(img.cloneNode());};
+  img.src=url;
+};
+up.onclick=()=>file.click();
+function fitSpec(){
+  const v=document.getElementById('spec').value;
+  if(v==='4'){canvas.width=720;canvas.height=1280;}
+  else if(v==='8'){canvas.width=720;canvas.height=720;}
+  else {canvas.width=1280;canvas.height=720;}
+}
+go.onclick=async()=>{
+  if(mode!=='i2v'&&mode!=='i2i'){alert('当前只做图生视频，请先上传图片。');return;}
+  if(!img){alert('先上传一张图');return;}
+  fitSpec();
+  const sec=parseInt(document.getElementById('spec').value,10)||6;
+  const fps=20, frames=sec*fps;
+  canvas.style.display='block';
+  const stream=canvas.captureStream(fps);
+  const rec=new MediaRecorder(stream,{mimeType:MediaRecorder.isTypeSupported('video/webm;codecs=vp9')?'video/webm;codecs=vp9':'video/webm'});
+  const chunks=[];
+  rec.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
+  const done=new Promise(r=>rec.onstop=r);
+  rec.start();
+  const cw=canvas.width, ch=canvas.height;
+  const ir=img.width/img.height, cr=cw/ch;
+  let dw,dh;
+  if(ir>cr){dh=ch*1.18;dw=dh*ir;} else {dw=cw*1.18;dh=dw/ir;}
+  for(let i=0;i<=frames;i++){
+    const t=i/frames;
+    const s=1+0.12*t;
+    const x=(cw-dw*s)/2 - 20*t;
+    const y=(ch-dh*s)/2 - 10*t;
+    ctx.fillStyle='#000'; ctx.fillRect(0,0,cw,ch);
+    ctx.drawImage(img,x,y,dw*s,dh*s);
+    await new Promise(r=>setTimeout(r,1000/fps));
+  }
+  rec.stop(); await done;
+  const blob=new Blob(chunks,{type:'video/webm'});
+  const url=URL.createObjectURL(blob);
+  video.src=url; video.style.display='block'; video.play();
+  dl.href=url; dl.style.display='block';
+};
+</script>
+</body>
+</html>
