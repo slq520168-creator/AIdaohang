@@ -1,6 +1,0 @@
-[
-  {"name":"全球优选餐饮","name_en":"Youxuan Food","cat":"餐饮","pack":"餐饮","url":"https://youxuanfood.com/","guide":"https://youxuanfood.com/","desc":"点餐首页：定位、分类、搜索、下单","desc_en":"Order home: locate, categories, search","how":"打开后点获取位置看附近商家","free":true,"tags":["餐饮","点餐","全球优选"]},
-  {"name":"优选餐饮商家页","name_en":"Youxuan Shop","cat":"餐饮","pack":"餐饮","url":"https://youxuanfood.com/shop","guide":"https://youxuanfood.com/shop","desc":"商家菜单与进店","desc_en":"Merchant menu and shop","how":"从首页点商家进入","free":true,"tags":["餐饮","商家"]},
-  {"name":"毛血旺点餐","name_en":"Mao Xue Wang","cat":"餐饮","pack":"餐饮","url":"https://youxuanfood.com/d/2l661b6w1r3b6t2g","guide":"https://youxuanfood.com/d/2l661b6w1r3b6t2g","desc":"菜品详情页，可直接加购","desc_en":"Dish page with add-to-cart","how":"打开后点立即点餐","free":true,"tags":["餐饮","菜品"]},
-  {"name":"天府之国","name_en":"Tianfu Restaurant","cat":"餐饮","pack":"餐饮","url":"https://youxuanfood.com/shop.html?merchantId=92f0997c78d3","guide":"https://youxuanfood.com/shop.html?merchantId=92f0997c78d3","desc":"天府之国商家店，电话 885587455","desc_en":"Tianfu merchant shop","how":"进店看全部菜品","free":true,"tags":["餐饮","商家"]}
-]
