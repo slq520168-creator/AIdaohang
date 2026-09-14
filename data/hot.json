@@ -1,12 +1,12 @@
 [
+  {"title":"全球优选餐饮点餐首页","url":"https://youxuanfood.com/","tag":"餐饮"},
+  {"title":"全球优选商家店铺","url":"https://youxuanfood.com/shop","tag":"餐饮"},
+  {"title":"毛血旺 · 天府之国","url":"https://youxuanfood.com/d/2l661b6w1r3b6t2g","tag":"餐饮"},
   {"title":"即梦出画面，剪映成片（完整操作）","url":"guide.html?n=%E5%8D%B3%E6%A2%A6%2B%E5%89%AA%E6%98%A0%E6%88%90%E7%89%87","tag":"教程"},
   {"title":"可灵出运镜，剪映收尾（完整操作）","url":"guide.html?n=%E5%8F%AF%E7%81%B5%2B%E5%89%AA%E6%98%A0","tag":"教程"},
   {"title":"n8n 从注册到第一条正式自动化","url":"guide.html?n=n8n%E5%B7%A5%E4%BD%9C%E6%B5%81","tag":"教程"},
-  {"title":"扣子从人设、知识库到发布","url":"guide.html?n=%E6%89%A3%E5%AD%90%E5%B7%A5%E4%BD%9C%E6%B5%81","tag":"教程"},
+  {"title":"扣子从人设、知识库到发布","url":"guide.html?n=%E6%89%A3%E5%AD%90%E5%B7%A5%E4%BD%9C流","tag":"教程"},
   {"title":"Unity Muse 从安装到第一批能用资源","url":"guide.html?n=Unity%20Muse","tag":"教程"},
-  {"title":"Meshy 从提示词到引擎里能摆","url":"guide.html?n=Meshy%E6%B8%B8%E6%88%8F%E8%B5%84%E4%BA%A7","tag":"教程"},
-  {"title":"Dify 从知识库到可调用 API","url":"guide.html?n=Dify","tag":"教程"},
-  {"title":"Suno 配乐 + 剪映口播整段流程","url":"guide.html?n=Suno%2B%E5%89%AA%E6%98%A0%E5%8F%A3%u64ad","tag":"教程"},
-  {"title":"HeyGen 数字人从形象、脚本到成片","url":"guide.html?n=HeyGen%E6%95%B0%E5%AD%97%E4%BA%BA","tag":"教程"},
-  {"title":"GDevelop 做出能通关的第一关","url":"guide.html?n=GDevelop","tag":"教程"}
+  {"title":"Meshy 从提示词到引擎里能摆","url":"guide.html?n=Meshy%E6%B8%B8%E6%88%8F%E8%B5%84产","tag":"教程"},
+  {"title":"Dify 从知识库到可调用 API","url":"guide.html?n=Dify","tag":"教程"}
 ]
