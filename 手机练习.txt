@@ -1,0 +1,6 @@
+这是练习文件。
+
+请在手机 GitHub App 里把下面这行改成你的名字：
+我是：_____
+
+改完后点 Commit，再点 Commit changes。
