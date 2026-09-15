@@ -1,0 +1,6 @@
+[
+  {"name":"PakePlus","cat":"APP打包","url":"https://ppofficial.netlify.app/zh","guide":"https://github.com/Sjj1024/PakePlus","desc":"网页打成桌面/安卓/苹果包","how":"开官网或GitHub按说明打包","free":true,"tags":["APP打包"]},
+  {"name":"ToApp","cat":"APP打包","url":"https://toapp.website/","guide":"https://toapp.website/","desc":"网址/本地HTML打安卓APK","how":"贴网址一键生成APK","free":true,"tags":["APP打包"]},
+  {"name":"PWABuilder","cat":"APP打包","url":"https://www.pwabuilder.com","guide":"https://docs.pwabuilder.com","desc":"微软免费PWA打包","how":"输入已是PWA的网址出安卓包","free":true,"tags":["APP打包"]},
+  {"name":"WebToApp","cat":"APP打包","url":"https://github.com/shiahonb777/web-to-app","guide":"https://github.com/shiahonb777/web-to-app","desc":"安卓手机上把网站打成APK","how":"安装后输入网址生成","free":true,"tags":["APP打包"]}
+]
