@@ -66,7 +66,7 @@ const OCR={"zh-CN":"chi_sim",en:"eng","km-KM":"khm"};
 const SPEECH={"zh-CN":"zh-CN",en:"en-US","km-KM":"km-KH"};
 const EN=["qwertyuiop","asdfghjkl","zxcvbnm"], KM=["កខគងចឆជញ","តថទនបផពម","យរលវសហអ","ាិីុូេោំ់"];
 const $=id=>document.getElementById(id);
-let draftA="", ocrSide="B", live=null, heard="", rec=null, raf=0, actx=null, an=null, stream=null, done=false;
+let draftA="", ocrSide="B", live=null, heard="", rec=null, raf=0, actx=null, an=null, stream=null, done=false, lock=0;
 function code(l){return String(l).indexOf("zh")===0?"zh-CN":String(l).indexOf("km")===0?"km":"en";}
 function otherLang(v){return v==="zh-CN"?"en":"zh-CN";}
 function preventSame(w){if($("fromLang").value===$("toLang").value){if(w==="from")$("toLang").value=otherLang($("fromLang").value);else $("fromLang").value=otherLang($("toLang").value);}}
@@ -126,10 +126,9 @@ function finish(side){
   if(side&&text)send(side,text);
 }
 function begin(side){
-  if(live===side){finish(side);return;}
-  if(live)finish(live);
   done=false;heard="";live=side;paint();
   startRec(side);
+  if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia)return;
   navigator.mediaDevices.getUserMedia({audio:true,video:false}).then(async function(s){
     if(live!==side){s.getTracks().forEach(t=>t.stop());return;}
     stream=s;
@@ -140,9 +139,14 @@ function begin(side){
     draw(side);
   }).catch(function(){});
 }
-$("micA").onclick=function(){live==="A"?finish("A"):begin("A");};
-$("micB").onclick=function(){live==="B"?finish("B"):begin("B");};
-document.addEventListener("visibilitychange",function(){if(document.hidden){done=true;live=null;hardStop();paint();}});
+function tap(side){
+  const now=Date.now();
+  if(now-lock<500)return;
+  lock=now;
+  if(live===side)finish(side);else begin(side);
+}
+$("micA").onclick=function(e){e.preventDefault();tap("A");};
+$("micB").onclick=function(e){e.preventDefault();tap("B");};
 $("camA").onclick=function(){ocrSide="A";$("file").click();};
 $("camB").onclick=function(){ocrSide="B";$("file").click();};
 $("file").onchange=async function(e){const file=e.target.files&&e.target.files[0];if(!file)return;const from=ocrSide==="B"?$("fromLang").value:$("toLang").value;try{const worker=await Tesseract.createWorker(OCR[from]||"eng");const result=await worker.recognize(file);await worker.terminate();const cleaned=(result.data.text||"").replace(/\s+/g," ").trim();if(cleaned)await send(ocrSide,cleaned);}catch(err){}e.target.value="";};
