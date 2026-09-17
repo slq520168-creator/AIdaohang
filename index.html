@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="zh" data-theme="light">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-<title>Global AI Directory</title>
+<title>全球优选AI导航</title>
 <link rel="manifest" href="manifest.webmanifest"/>
 <link rel="stylesheet" href="tabbar.css?v=3"/>
 <style>
@@ -13,35 +13,16 @@ body{min-height:100dvh;background:#000 url("IMG_7049.jpeg") center/cover no-repe
 .b{background:rgba(255,255,255,.86);color:#111827;border-radius:10px;padding:8px 10px;line-height:1.35;font-size:12px}
 .enter{display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:14px;border-radius:16px;font-weight:700;font-size:16px;margin:10px 0 0}
 .rh{background:linear-gradient(135deg,#7c5cff,#ff5ea8);color:#fff}
-.langs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
-.langs button{border:0;background:rgba(255,255,255,.9);border-radius:999px;padding:6px 10px;font-size:12px}
 </style>
 </head>
 <body>
 <div class="w">
-<a class="enter rh" href="https://www.runninghub.ai/" id="goRh" target="_blank" rel="noopener" data-i18n="rh">Web Image · RunningHub</a>
-<div class="b" id="hello" data-i18n="hello">Hello. Welcome to Global AI Directory.</div>
-<div class="langs">
-<button type="button" onclick="I18N.set('zh')">中文</button>
-<button type="button" onclick="I18N.set('en')">EN</button>
-<button type="button" onclick="I18N.set('km')">ភាសាខ្មែរ</button>
-<button type="button" onclick="I18N.set('th')">ไทย</button>
-<button type="button" onclick="I18N.set('vi')">Vi</button>
-<button type="button" onclick="I18N.set('ja')">日</button>
-<button type="button" onclick="I18N.set('ko')">한</button>
+<a class="enter rh" href="https://www.runninghub.ai/" target="_blank" rel="noopener">网页出图 · RunningHub</a>
+<div class="b">你好，欢迎来到全球优选AI导航</div>
+<a class="enter" href="./tools.html?v=252&home=1">进入主页</a>
+<a class="enter" href="./create.html" style="background:#1f2937">图片 · 视频 · 音乐</a>
 </div>
-<a class="enter" id="goHome" href="./tools.html?v=251&home=1" data-i18n="enter">Enter home</a>
-<a class="enter" id="goMake" href="./create.html" style="background:#1f2937" data-i18n="create">Image · Video · Music</a>
-</div>
-<script src="./i18n.js?v=2"></script>
-<script>
-(function(){
-  try{if(window.speechSynthesis)speechSynthesis.cancel();}catch(e){}
-  document.title = I18N.t('brand');
-  var h=document.getElementById('goHome');
-  if(h) h.href='./tools.html?v=251&home=1&lang='+I18N.lang;
-})();
-</script>
+<script>try{if(window.speechSynthesis)speechSynthesis.cancel();}catch(e){}</script>
 <script src="tabbar.js?v=6"></script>
 </body>
 </html>
