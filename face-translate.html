@@ -67,7 +67,7 @@ const OCR={"zh-CN":"chi_sim",en:"eng","km-KM":"khm"};
 const SPEECH={"zh-CN":"zh-CN",en:"en-US","km-KM":"km-KH"};
 const EN=["qwertyuiop","asdfghjkl","zxcvbnm"], KM=["កខគងចឆជញ","តថទនបផពម","យរលវសហអ","ាិីុូេោំ់"];
 const $=id=>document.getElementById(id);
-let draftA="", ocrSide="B", live=null, heard="", rec=null, raf=0, actx=null, an=null, stream=null, done=false, lock=0;
+let draftA="", ocrSide="B", live=null, heard="", rec=null, raf=0, actx=null, an=null, stream=null, done=false, lock=0, hideT=0;
 function code(l){return String(l).indexOf("zh")===0?"zh-CN":String(l).indexOf("km")===0?"km":"en";}
 function otherLang(v){return v==="zh-CN"?"en":"zh-CN";}
 function preventSame(w){if($("fromLang").value===$("toLang").value){if(w==="from")$("toLang").value=otherLang($("fromLang").value);else $("fromLang").value=otherLang($("toLang").value);}}
@@ -92,11 +92,12 @@ $("inputB").addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.pr
 function hardStop(){
   if(raf){cancelAnimationFrame(raf);raf=0;}
   ["A","B"].forEach(s=>{const c=$("wave"+s);if(c)c.getContext("2d").clearRect(0,0,c.width,c.height);});
-  if(rec){rec.onresult=rec.onerror=rec.onend=null;try{rec.stop();}catch(e){}rec=null;}
-  if(stream){stream.getTracks().forEach(t=>t.stop());stream=null;}
+  if(rec){rec.onresult=rec.onerror=rec.onend=null;try{rec.abort?rec.abort():rec.stop();}catch(e){}rec=null;}
+  if(stream){stream.getTracks().forEach(t=>{try{t.stop();}catch(e){}});stream=null;}
   try{if(actx)actx.close();}catch(e){}
   actx=null;an=null;
 }
+function dropMic(){done=true;live=null;hardStop();paint();}
 function draw(side){
   const c=$("wave"+side);if(!c||!an)return;
   const g=c.getContext("2d");
@@ -152,6 +153,12 @@ function bindMic(side){
   el.addEventListener("click",function(e){e.preventDefault();tap(side);});
 }
 bindMic("A");bindMic("B");
+window.addEventListener("pagehide",dropMic);
+window.addEventListener("freeze",dropMic);
+document.addEventListener("visibilitychange",function(){
+  if(document.hidden){hideT=setTimeout(dropMic,800);}
+  else if(hideT){clearTimeout(hideT);hideT=0;}
+});
 $("camA").onclick=function(){ocrSide="A";$("file").click();};
 $("camB").onclick=function(){ocrSide="B";$("file").click();};
 $("file").onchange=async function(e){const file=e.target.files&&e.target.files[0];if(!file)return;const from=ocrSide==="B"?$("fromLang").value:$("toLang").value;try{const worker=await Tesseract.createWorker(OCR[from]||"eng");const result=await worker.recognize(file);await worker.terminate();const cleaned=(result.data.text||"").replace(/\s+/g," ").trim();if(cleaned)await send(ocrSide,cleaned);}catch(err){}e.target.value="";};
