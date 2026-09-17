@@ -76,71 +76,48 @@
 const UI = {
   "zh-CN": { name:"中文", mic:"语音", stop:"停", speak:"播报", cam:"拍照", clear:"清空", send:"翻译", space:"空格" },
   "en":    { name:"English", mic:"Voice", stop:"Stop", speak:"Speak", cam:"Photo", clear:"Clear", send:"Translate", space:"space" },
-  "km-KM": { name:"ភាសាខ្មែរ", mic:"សំឡេង", stop:"ឈាំ", speak:"អាន", cam:"ថត", clear:"លុប", send:"បកប្រែ", space:"ចោះ" }
+  "km-KM": { name:"ភាសាខ្មែរ", mic:"សំឡេង", stop:"ឈាំ", speak:"អាន", cam:"ថត", clear:"លុប", send:"បកប្រែ", space:"space" }
 };
 const OCR = {"zh-CN":"chi_sim","en":"eng","km-KM":"khm"};
 const SPEECH = {"zh-CN":"zh-CN","en":"en-US","km-KM":"km-KH"};
 const ROWS = ["qwertyuiop","asdfghjkl","zxcvbnm"];
 const $ = id => document.getElementById(id);
 let ocrSide="B", draftA="", recs={A:null,B:null};
-
 function applyLang(){
-  const a = UI[$("toLang").value];
-  const b = UI[$("fromLang").value];
-  $("nameA").textContent=a.name;
-  $("micA").textContent=recs.A?a.stop:a.mic;
-  $("speakA").textContent=a.speak;
-  $("camA").textContent=a.cam;
-  $("clearA").textContent=a.clear;
-  $("sendA").textContent=a.send;
-  $("nameB").textContent=b.name;
-  $("micB").textContent=recs.B?b.stop:b.mic;
-  $("speakB").textContent=b.speak;
-  $("camB").textContent=b.cam;
-  $("clearB").textContent=b.clear;
-  $("sendB").textContent=b.send;
+  const a = UI[$("toLang").value], b = UI[$("fromLang").value];
+  $("nameA").textContent=a.name; $("micA").textContent=recs.A?a.stop:a.mic; $("speakA").textContent=a.speak; $("camA").textContent=a.cam; $("clearA").textContent=a.clear; $("sendA").textContent=a.send;
+  $("nameB").textContent=b.name; $("micB").textContent=recs.B?b.stop:b.mic; $("speakB").textContent=b.speak; $("camB").textContent=b.cam; $("clearB").textContent=b.clear; $("sendB").textContent=b.send;
   $("inputB").lang=$("fromLang").value;
   const sp=$("spaceA"); if(sp) sp.textContent=a.space;
 }
 $("fromLang").onchange=$("toLang").onchange=applyLang;
-
 function addA(ch){ draftA+=ch; $("boxA").textContent=draftA; }
 function delA(){ draftA=draftA.slice(0,-1); $("boxA").textContent=draftA; }
 (function(){
   const root=$("kbA");
-  ROWS.forEach(row=>{
-    const r=document.createElement("div"); r.className="kr";
-    [...row].forEach(ch=>{ const b=document.createElement("button"); b.className="k"; b.type="button"; b.textContent=ch; b.onclick=()=>addA(ch); r.appendChild(b); });
-    root.appendChild(r);
-  });
+  ROWS.forEach(row=>{ const r=document.createElement("div"); r.className="kr"; [...row].forEach(ch=>{ const b=document.createElement("button"); b.className="k"; b.type="button"; b.textContent=ch; b.onclick=()=>addA(ch); r.appendChild(b); }); root.appendChild(r); });
   const last=document.createElement("div"); last.className="kr";
   const d=document.createElement("button"); d.className="k act"; d.type="button"; d.textContent="⌫"; d.onclick=delA;
   const s=document.createElement("button"); s.className="k wide act"; s.type="button"; s.id="spaceA"; s.textContent="space"; s.onclick=()=>addA(" ");
   last.appendChild(d); last.appendChild(s); root.appendChild(last);
 })();
-
 function speakNow(text, lang){
   text=String(text||"").trim();
-  if(!text){ alert("empty"); return; }
-  if(!window.speechSynthesis){ alert("no tts"); return; }
+  if(!text || !window.speechSynthesis) return;
   speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(text);
-  u.lang=SPEECH[lang]||"en-US";
-  u.rate=1; u.volume=1;
-  const voices=speechSynthesis.getVoices()||[];
+  u.lang=SPEECH[lang]||"en-US"; u.rate=1; u.volume=1;
   const pre=u.lang.slice(0,2).toLowerCase();
-  const v=voices.find(x=>(x.lang||"").toLowerCase().startsWith(pre));
+  const v=(speechSynthesis.getVoices()||[]).find(x=>(x.lang||"").toLowerCase().startsWith(pre));
   if(v) u.voice=v;
   speechSynthesis.speak(u);
 }
 speechSynthesis.getVoices();
 speechSynthesis.onvoiceschanged=function(){ speechSynthesis.getVoices(); };
-
 $("speakA").onclick=function(){ speakNow($("boxA").textContent, $("toLang").value); };
 $("speakB").onclick=function(){ speakNow($("boxB").textContent||$("inputB").value, $("fromLang").value); };
 $("clearA").onclick=function(){ draftA=""; $("boxA").textContent=""; speechSynthesis.cancel(); };
 $("clearB").onclick=function(){ $("boxB").textContent=""; $("inputB").value=""; speechSynthesis.cancel(); };
-
 async function translate(text,from,to){
   if(from===to) return text;
   const url="https://api.mymemory.translated.net/get?q="+encodeURIComponent(text)+"&langpair="+encodeURIComponent(from+"|"+to);
@@ -150,32 +127,26 @@ async function translate(text,from,to){
   return out;
 }
 async function send(side,text){
-  text=(text||(side==="A"?draftA:$("inputB").value)||"").trim();
-  if(!text) return;
+  text=(text||(side==="A"?draftA:$("inputB").value)||"").trim(); if(!text) return;
   const fromMain=$("fromLang").value,toMain=$("toLang").value;
   const from=side==="B"?fromMain:toMain, to=side==="B"?toMain:fromMain, other=side==="A"?"B":"A";
   $("box"+side).textContent=text; $("box"+other).textContent="...";
   try{
     const dst=await translate(text,from,to);
-    $("box"+other).textContent=dst;
-    speakNow(dst,to);
+    $("box"+other).textContent=dst; speakNow(dst,to);
     if(side==="A") draftA=""; else $("inputB").value="";
   }catch(e){ $("box"+other).textContent="fail"; }
 }
 $("sendA").onclick=function(){ send("A"); };
 $("sendB").onclick=function(){ send("B"); };
 $("inputB").addEventListener("keydown",e=>{ if(e.key==="Enter"&&!e.shiftKey){ e.preventDefault(); send("B"); }});
-
 function bindMic(side){
   $("mic"+side).onclick=function(){
-    const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-    if(!SR){ alert("no mic"); return; }
+    const SR=window.SpeechRecognition||window.webkitSpeechRecognition; if(!SR) return;
     const lang=side==="B"?$("fromLang").value:$("toLang").value;
     if(recs[side]){ recs[side].stop(); recs[side]=null; applyLang(); return; }
-    const rec=new SR();
-    rec.lang=SPEECH[lang]; rec.interimResults=false;
+    const rec=new SR(); rec.lang=SPEECH[lang]; rec.interimResults=false;
     rec.onresult=ev=>send(side, ev.results[0][0].transcript);
-    rec.onerror=ev=>alert(ev.error||"mic");
     rec.onend=function(){ recs[side]=null; applyLang(); };
     rec.start(); recs[side]=rec; applyLang();
   };
@@ -186,14 +157,12 @@ $("camB").onclick=function(){ ocrSide="B"; $("file").click(); };
 $("file").onchange=async function(e){
   const file=e.target.files&&e.target.files[0]; if(!file) return;
   const from=ocrSide==="B"?$("fromLang").value:$("toLang").value;
-  $("box"+ocrSide).textContent="OCR...";
   try{
     const worker=await Tesseract.createWorker(OCR[from]||"eng");
     const result=await worker.recognize(file); await worker.terminate();
     const cleaned=(result.data.text||"").replace(/\s+/g," ").trim();
     if(cleaned) await send(ocrSide, cleaned);
-    else $("box"+ocrSide).textContent="";
-  }catch(err){ $("box"+ocrSide).textContent="ocr fail"; }
+  }catch(err){}
   e.target.value="";
 };
 applyLang();
