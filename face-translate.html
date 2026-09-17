@@ -82,13 +82,15 @@ const OCR = {"zh-CN":"chi_sim","en":"eng","km-KM":"khm"};
 const SPEECH = {"zh-CN":"zh-CN","en":"en-US","km-KM":"km-KH"};
 const ROWS = ["qwertyuiop","asdfghjkl","zxcvbnm"];
 const $ = id => document.getElementById(id);
-let ocrSide="B", draftA="", recs={A:null,B:null};
+let ocrSide="B", draftA="", recs={A:null,B:null}, starting={A:false,B:false};
 function applyLang(){
   const a = UI[$("toLang").value], b = UI[$("fromLang").value];
   $("nameA").textContent=a.name; $("micA").textContent=recs.A?a.stop:a.mic; $("speakA").textContent=a.speak; $("camA").textContent=a.cam; $("clearA").textContent=a.clear; $("sendA").textContent=a.send;
   $("nameB").textContent=b.name; $("micB").textContent=recs.B?b.stop:b.mic; $("speakB").textContent=b.speak; $("camB").textContent=b.cam; $("clearB").textContent=b.clear; $("sendB").textContent=b.send;
   $("inputB").lang=$("fromLang").value;
   const sp=$("spaceA"); if(sp) sp.textContent=a.space;
+  $("micA").classList.toggle("live", !!recs.A);
+  $("micB").classList.toggle("live", !!recs.B);
 }
 $("fromLang").onchange=$("toLang").onchange=applyLang;
 function addA(ch){ draftA+=ch; $("boxA").textContent=draftA; }
@@ -130,7 +132,7 @@ function putText(side, text){
   if(side==="A"){ draftA=text; $("boxA").textContent=text; }
   else { $("inputB").value=text; $("boxB").textContent=text; }
 }
-async function send(side,text){
+async function send(side,text,autoSpeak){
   text=(text||(side==="A"?draftA:$("inputB").value)||"").trim(); if(!text) return;
   putText(side, text);
   const fromMain=$("fromLang").value,toMain=$("toLang").value;
@@ -138,41 +140,60 @@ async function send(side,text){
   $("box"+other).textContent="...";
   try{
     const dst=await translate(text,from,to);
-    $("box"+other).textContent=dst; speakNow(dst,to);
+    $("box"+other).textContent=dst;
+    if(autoSpeak!==false) speakNow(dst,to);
   }catch(e){ $("box"+other).textContent="fail"; }
 }
 $("sendA").onclick=function(){ send("A"); };
 $("sendB").onclick=function(){ send("B"); };
 $("inputB").addEventListener("keydown",e=>{ if(e.key==="Enter"&&!e.shiftKey){ e.preventDefault(); send("B"); }});
+function killMic(side){
+  if(!recs[side]) return;
+  try{ recs[side].onresult=null; recs[side].onend=null; recs[side].onerror=null; recs[side].abort(); }catch(e){}
+  recs[side]=null;
+}
+function startMic(side){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){ $("box"+side).textContent="Safari only"; return; }
+  const lang=side==="B"?$("fromLang").value:$("toLang").value;
+  try{ speechSynthesis.cancel(); }catch(e){}
+  killMic(side);
+  const rec=new SR();
+  rec.lang=SPEECH[lang]||"zh-CN";
+  rec.continuous=false;
+  rec.interimResults=true;
+  rec.maxAlternatives=1;
+  $("box"+side).textContent=UI[lang].listen;
+  rec.onresult=function(ev){
+    let t="";
+    for(let i=0;i<ev.results.length;i++) t += ev.results[i][0].transcript;
+    t=t.trim();
+    if(!t) return;
+    putText(side, t);
+    if(ev.results[ev.results.length-1].isFinal) send(side, t, false);
+  };
+  rec.onerror=function(){};
+  rec.onend=function(){
+    recs[side]=null;
+    starting[side]=false;
+    applyLang();
+  };
+  try{
+    rec.start();
+    recs[side]=rec;
+    applyLang();
+  }catch(e){
+    recs[side]=null;
+    setTimeout(function(){ if(!recs[side]) startMic(side); }, 400);
+  }
+}
 function bindMic(side){
   $("mic"+side).onclick=function(){
-    const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-    if(!SR){ $("box"+side).textContent="Safari only"; return; }
-    const lang=side==="B"?$("fromLang").value:$("toLang").value;
-    if(recs[side]){ try{recs[side].stop();}catch(e){} recs[side]=null; applyLang(); return; }
-    const rec=new SR();
-    rec.lang=SPEECH[lang]||"zh-CN";
-    rec.continuous=false;
-    rec.interimResults=true;
-    rec.maxAlternatives=1;
-    $("box"+side).textContent=UI[lang].listen;
-    rec.onresult=function(ev){
-      let t="";
-      for(let i=0;i<ev.results.length;i++) t += ev.results[i][0].transcript;
-      t=t.trim();
-      if(!t) return;
-      putText(side, t);
-      if(ev.results[ev.results.length-1].isFinal){
-        try{rec.stop();}catch(e){}
-        send(side, t);
-      }
-    };
-    rec.onerror=function(ev){
-      $("box"+side).textContent = ev.error==="not-allowed" ? "mic off" : (ev.error||"mic");
-    };
-    rec.onend=function(){ recs[side]=null; applyLang(); };
-    try{ rec.start(); recs[side]=rec; applyLang(); $("mic"+side).classList.add("live"); }
-    catch(e){ $("box"+side).textContent="mic fail"; }
+    if(recs[side] || starting[side]){
+      killMic(side); starting[side]=false; applyLang(); return;
+    }
+    starting[side]=true;
+    setTimeout(function(){ startMic(side); }, 280);
   };
 }
 bindMic("A"); bindMic("B");
