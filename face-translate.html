@@ -11,7 +11,7 @@
   .pane { display:flex; flex-direction:column; padding:8px 10px; min-height:0; background:#f6f3ee; }
   .flip { transform:rotate(180deg); }
   .name { text-align:center; font-size:18px; font-weight:700; letter-spacing:.18em; color:#6a4e2e; }
-  .box { flex:1; min-height:40px; margin:6px 0; padding:8px; border:1px solid #e4d8c6; border-radius:10px; background:#fff; color:#1f1b16; font-size:clamp(18px,5vw,26px); font-weight:650; text-align:center; overflow:auto; }
+  .box { flex:1; min-height:36px; margin:4px 0; padding:8px; border:1px solid #e4d8c6; border-radius:10px; background:#fff; color:#1f1b16; font-size:clamp(16px,4.6vw,24px); font-weight:650; text-align:center; overflow:auto; }
   .bar { display:grid; grid-template-columns:repeat(5,1fr); gap:4px; margin-top:6px; }
   .btn { height:34px; border:1px solid #e0d3bf; border-radius:8px; background:#fff; color:#5a442c; font-weight:700; font-size:11px; }
   .btn.live { background:#c44; color:#fff; }
@@ -19,9 +19,9 @@
   .mid { padding:8px 10px; border-top:1px solid #e4d8c6; border-bottom:1px solid #e4d8c6; background:#efe8dc; }
   .pick { display:flex; align-items:center; gap:8px; }
   select { flex:1; height:34px; border-radius:8px; background:#fff; color:#3d2e1c; border:1px solid #e0d3bf; font-size:14px; font-weight:700; text-align:center; }
-  .kb { display:grid; gap:4px; }
-  .kr { display:flex; gap:4px; }
-  .k { flex:1; height:30px; border:0; border-radius:6px; background:#fff; color:#2a2418; font-size:13px; font-weight:700; box-shadow:0 0 0 1px #e4d8c6; }
+  .kb { display:grid; gap:3px; }
+  .kr { display:flex; gap:3px; }
+  .k { flex:1; height:28px; border:0; border-radius:6px; background:#fff; color:#2a2418; font-size:13px; font-weight:700; box-shadow:0 0 0 1px #e4d8c6; }
   .k.act { background:#efe8dc; color:#5a442c; }
   .k.wide { flex:2; }
   input[type=file] { display:none; }
@@ -75,54 +75,60 @@
 const UI = {
   "zh-CN": { name:"中文", mic:"语音", stop:"停", speak:"播报", cam:"拍照", clear:"清空", send:"翻译", space:"空格", listen:"正在听..." },
   "en":    { name:"English", mic:"Voice", stop:"Stop", speak:"Speak", cam:"Photo", clear:"Clear", send:"Translate", space:"space", listen:"Listening..." },
-  "km-KM": { name:"ភាសាខ្មែរ", mic:"សំឡេង", stop:"ឈាំ", speak:"អាន", cam:"ថត", clear:"លុប", send:"បកប្រែ", space:"space", listen:"..." }
+  "km-KM": { name:"ភាសាខ្មែរ", mic:"សំឡេង", stop:"ឈាំ", speak:"អាន", cam:"ថត", clear:"លុប", send:"បកប្រែ", space:"ដកំ", listen:"..." }
 };
 const OCR = {"zh-CN":"chi_sim","en":"eng","km-KM":"khm"};
 const SPEECH = {"zh-CN":"zh-CN","en":"en-US","km-KM":"km-KH"};
-const ROWS = ["qwertyuiop","asdfghjkl","zxcvbnm"];
+const EN = ["qwertyuiop","asdfghjkl","zxcvbnm"];
+const KM = ["កខគងចឆជញ","តថទនបផពម","យរលវសហអ","ាិីុូេោំ់"];
 const $ = id => document.getElementById(id);
 let ocrSide="B", draftA="", recs={A:null,B:null}, micTimer={A:0,B:0};
 function unlockTTS(){
   try{
     const u=new SpeechSynthesisUtterance(" ");
     u.volume=0; u.rate=1; u.lang="en-US";
-    speechSynthesis.speak(u);
-    speechSynthesis.cancel();
+    speechSynthesis.speak(u); speechSynthesis.cancel();
   }catch(e){}
 }
 document.addEventListener("touchstart", unlockTTS, {passive:true});
 document.addEventListener("click", unlockTTS);
+function addA(ch){ draftA+=ch; $("boxA").textContent=draftA; }
+function delA(){ draftA=draftA.slice(0,-1); $("boxA").textContent=draftA; }
+function makeKb(){
+  const root=$("kbA"); root.innerHTML="";
+  const lang=$("toLang").value;
+  const rows = lang==="km-KM" ? KM : EN;
+  rows.forEach(row=>{
+    const r=document.createElement("div"); r.className="kr";
+    [...row].forEach(ch=>{
+      const b=document.createElement("button"); b.className="k"; b.type="button"; b.textContent=ch;
+      b.onclick=()=>addA(ch); r.appendChild(b);
+    });
+    root.appendChild(r);
+  });
+  const last=document.createElement("div"); last.className="kr";
+  const d=document.createElement("button"); d.className="k act"; d.type="button"; d.textContent="⌫"; d.onclick=delA;
+  const s=document.createElement("button"); s.className="k wide act"; s.type="button"; s.id="spaceA"; s.textContent=UI[lang].space; s.onclick=()=>addA(" ");
+  last.appendChild(d); last.appendChild(s); root.appendChild(last);
+}
 function applyLang(){
   const a = UI[$("toLang").value], b = UI[$("fromLang").value];
   $("nameA").textContent=a.name; $("micA").textContent=recs.A?a.stop:a.mic; $("speakA").textContent=a.speak; $("camA").textContent=a.cam; $("clearA").textContent=a.clear; $("sendA").textContent=a.send;
   $("nameB").textContent=b.name; $("micB").textContent=recs.B?b.stop:b.mic; $("speakB").textContent=b.speak; $("camB").textContent=b.cam; $("clearB").textContent=b.clear; $("sendB").textContent=b.send;
   $("inputB").lang=$("fromLang").value;
-  const sp=$("spaceA"); if(sp) sp.textContent=a.space;
   $("micA").classList.toggle("live", !!recs.A);
   $("micB").classList.toggle("live", !!recs.B);
+  makeKb();
 }
 $("fromLang").onchange=$("toLang").onchange=applyLang;
-function addA(ch){ draftA+=ch; $("boxA").textContent=draftA; }
-function delA(){ draftA=draftA.slice(0,-1); $("boxA").textContent=draftA; }
-(function(){
-  const root=$("kbA");
-  ROWS.forEach(row=>{ const r=document.createElement("div"); r.className="kr"; [...row].forEach(ch=>{ const b=document.createElement("button"); b.className="k"; b.type="button"; b.textContent=ch; b.onclick=()=>addA(ch); r.appendChild(b); }); root.appendChild(r); });
-  const last=document.createElement("div"); last.className="kr";
-  const d=document.createElement("button"); d.className="k act"; d.type="button"; d.textContent="⌫"; d.onclick=delA;
-  const s=document.createElement("button"); s.className="k wide act"; s.type="button"; s.id="spaceA"; s.textContent="space"; s.onclick=()=>addA(" ");
-  last.appendChild(d); last.appendChild(s); root.appendChild(last);
-})();
 function speakNow(text, lang){
   text=String(text||"").trim();
-  if(!text) return;
-  if(lang==="km-KM") return;
+  if(!text || lang==="km-KM") return;
   try{ speechSynthesis.cancel(); }catch(e){}
   const u=new SpeechSynthesisUtterance(text);
-  u.lang=SPEECH[lang]||"en-US";
-  u.rate=1; u.volume=1;
+  u.lang=SPEECH[lang]||"en-US"; u.rate=1; u.volume=1;
   const pre=u.lang.slice(0,2).toLowerCase();
-  const list=speechSynthesis.getVoices()||[];
-  const v=list.find(x=>(x.lang||"").toLowerCase().startsWith(pre));
+  const v=(speechSynthesis.getVoices()||[]).find(x=>(x.lang||"").toLowerCase().startsWith(pre));
   if(v) u.voice=v;
   speechSynthesis.speak(u);
 }
@@ -162,53 +168,30 @@ $("sendB").onclick=function(){ send("B"); };
 $("inputB").addEventListener("keydown",e=>{ if(e.key==="Enter"&&!e.shiftKey){ e.preventDefault(); send("B"); }});
 function killMic(side){
   if(micTimer[side]){ clearTimeout(micTimer[side]); micTimer[side]=0; }
-  const rec=recs[side];
-  recs[side]=null;
-  if(rec){
-    rec.onresult=null; rec.onend=null; rec.onerror=null;
-    try{rec.stop();}catch(e){}
-    try{rec.abort();}catch(e){}
-  }
+  const rec=recs[side]; recs[side]=null;
+  if(rec){ rec.onresult=null; rec.onend=null; rec.onerror=null; try{rec.stop();}catch(e){} try{rec.abort();}catch(e){} }
   applyLang();
 }
 function killAllMic(){ killMic("A"); killMic("B"); }
 function startMic(side){
-  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  if(!SR) return;
-  killMic(side);
-  unlockTTS();
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition; if(!SR) return;
+  killMic(side); unlockTTS();
   const lang=side==="B"?$("fromLang").value:$("toLang").value;
   const rec=new SR();
-  rec.lang=SPEECH[lang]||"zh-CN";
-  rec.continuous=false;
-  rec.interimResults=true;
-  rec.maxAlternatives=1;
+  rec.lang=SPEECH[lang]||"zh-CN"; rec.continuous=false; rec.interimResults=true; rec.maxAlternatives=1;
   $("box"+side).textContent=UI[lang].listen;
   rec.onresult=function(ev){
-    let t="";
-    for(let i=0;i<ev.results.length;i++) t += ev.results[i][0].transcript;
-    t=t.trim();
-    if(!t) return;
+    let t=""; for(let i=0;i<ev.results.length;i++) t += ev.results[i][0].transcript; t=t.trim(); if(!t) return;
     putText(side, t);
-    if(ev.results[ev.results.length-1].isFinal){
-      killMic(side);
-      send(side, t);
-    }
+    if(ev.results[ev.results.length-1].isFinal){ killMic(side); send(side, t); }
   };
   rec.onerror=function(){ killMic(side); };
   rec.onend=function(){ recs[side]=null; applyLang(); };
-  try{
-    rec.start();
-    recs[side]=rec;
-    applyLang();
-    micTimer[side]=setTimeout(function(){ killMic(side); }, 8000);
-  }catch(e){ killMic(side); }
+  try{ rec.start(); recs[side]=rec; applyLang(); micTimer[side]=setTimeout(function(){ killMic(side); }, 8000); }
+  catch(e){ killMic(side); }
 }
 function bindMic(side){
-  $("mic"+side).onclick=function(){
-    if(recs[side]){ killMic(side); return; }
-    startMic(side);
-  };
+  $("mic"+side).onclick=function(){ if(recs[side]){ killMic(side); return; } startMic(side); };
 }
 bindMic("A"); bindMic("B");
 document.addEventListener("visibilitychange", function(){ if(document.hidden) killAllMic(); });
