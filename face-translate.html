@@ -25,11 +25,9 @@
   .k.act { background:#efe8dc; color:#5a442c; }
   .k.wide { flex:2; }
   input[type=file] { display:none; }
-  #tts { position:absolute; width:1px; height:1px; opacity:0; }
 </style>
 </head>
 <body>
-<audio id="tts" playsinline></audio>
 <div class="wrap">
   <section class="pane flip">
     <div class="name" id="nameA">English</div>
@@ -84,6 +82,16 @@ const SPEECH = {"zh-CN":"zh-CN","en":"en-US","km-KM":"km-KH"};
 const ROWS = ["qwertyuiop","asdfghjkl","zxcvbnm"];
 const $ = id => document.getElementById(id);
 let ocrSide="B", draftA="", recs={A:null,B:null}, micTimer={A:0,B:0};
+function unlockTTS(){
+  try{
+    const u=new SpeechSynthesisUtterance(" ");
+    u.volume=0; u.rate=1; u.lang="en-US";
+    speechSynthesis.speak(u);
+    speechSynthesis.cancel();
+  }catch(e){}
+}
+document.addEventListener("touchstart", unlockTTS, {passive:true});
+document.addEventListener("click", unlockTTS);
 function applyLang(){
   const a = UI[$("toLang").value], b = UI[$("fromLang").value];
   $("nameA").textContent=a.name; $("micA").textContent=recs.A?a.stop:a.mic; $("speakA").textContent=a.speak; $("camA").textContent=a.cam; $("clearA").textContent=a.clear; $("sendA").textContent=a.send;
@@ -104,40 +112,26 @@ function delA(){ draftA=draftA.slice(0,-1); $("boxA").textContent=draftA; }
   const s=document.createElement("button"); s.className="k wide act"; s.type="button"; s.id="spaceA"; s.textContent="space"; s.onclick=()=>addA(" ");
   last.appendChild(d); last.appendChild(s); root.appendChild(last);
 })();
-function stopAudio(){
-  try{speechSynthesis.cancel();}catch(e){}
-  const a=$("tts"); try{a.pause(); a.removeAttribute("src"); a.load();}catch(e){}
-}
-function kmUrl(text){
-  return "https://translate.googleapis.com/translate_tts?ie=UTF-8&client=gtx&tl=km&q="+encodeURIComponent(text.slice(0,160));
-}
-function speakKm(text){
-  const a=$("tts");
-  a.src=kmUrl(text);
-  const p=a.play();
-  if(p) p.catch(function(){
-    a.src="https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=km&q="+encodeURIComponent(text.slice(0,160));
-    a.play().catch(function(){});
-  });
-}
 function speakNow(text, lang){
   text=String(text||"").trim();
   if(!text) return;
-  stopAudio();
-  if(lang==="km-KM"){ speakKm(text); return; }
+  if(lang==="km-KM") return;
+  try{ speechSynthesis.cancel(); }catch(e){}
   const u=new SpeechSynthesisUtterance(text);
-  u.lang=SPEECH[lang]||"en-US"; u.rate=1; u.volume=1;
+  u.lang=SPEECH[lang]||"en-US";
+  u.rate=1; u.volume=1;
   const pre=u.lang.slice(0,2).toLowerCase();
-  const v=(speechSynthesis.getVoices()||[]).find(x=>(x.lang||"").toLowerCase().startsWith(pre));
+  const list=speechSynthesis.getVoices()||[];
+  const v=list.find(x=>(x.lang||"").toLowerCase().startsWith(pre));
   if(v) u.voice=v;
   speechSynthesis.speak(u);
 }
 speechSynthesis.getVoices();
 speechSynthesis.onvoiceschanged=function(){ speechSynthesis.getVoices(); };
-$("speakA").onclick=function(){ speakNow($("boxA").textContent, $("toLang").value); };
-$("speakB").onclick=function(){ speakNow($("boxB").textContent||$("inputB").value, $("fromLang").value); };
-$("clearA").onclick=function(){ draftA=""; $("boxA").textContent=""; stopAudio(); };
-$("clearB").onclick=function(){ $("boxB").textContent=""; $("inputB").value=""; stopAudio(); };
+$("speakA").onclick=function(){ unlockTTS(); speakNow($("boxA").textContent, $("toLang").value); };
+$("speakB").onclick=function(){ unlockTTS(); speakNow($("boxB").textContent||$("inputB").value, $("fromLang").value); };
+$("clearA").onclick=function(){ draftA=""; $("boxA").textContent=""; try{speechSynthesis.cancel();}catch(e){} };
+$("clearB").onclick=function(){ $("boxB").textContent=""; $("inputB").value=""; try{speechSynthesis.cancel();}catch(e){} };
 async function translate(text,from,to){
   if(from===to) return text;
   const url="https://api.mymemory.translated.net/get?q="+encodeURIComponent(text)+"&langpair="+encodeURIComponent(from+"|"+to);
@@ -151,6 +145,7 @@ function putText(side, text){
   else { $("inputB").value=text; $("boxB").textContent=text; }
 }
 async function send(side,text){
+  unlockTTS();
   text=(text||(side==="A"?draftA:$("inputB").value)||"").trim(); if(!text) return;
   putText(side, text);
   const fromMain=$("fromLang").value,toMain=$("toLang").value;
@@ -159,7 +154,7 @@ async function send(side,text){
   try{
     const dst=await translate(text,from,to);
     $("box"+other).textContent=dst;
-    setTimeout(function(){ speakNow(dst,to); }, 250);
+    speakNow(dst,to);
   }catch(e){ $("box"+other).textContent="fail"; }
 }
 $("sendA").onclick=function(){ send("A"); };
@@ -181,6 +176,7 @@ function startMic(side){
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
   if(!SR) return;
   killMic(side);
+  unlockTTS();
   const lang=side==="B"?$("fromLang").value:$("toLang").value;
   const rec=new SR();
   rec.lang=SPEECH[lang]||"zh-CN";
