@@ -11,10 +11,10 @@
   .wrap { height:100dvh; max-width:480px; margin:0 auto; display:grid; grid-template-rows:1fr auto 1fr; background:radial-gradient(900px 360px at 50% 0,rgba(212,176,122,.14),transparent 55%),linear-gradient(180deg,#14161c,#0c0d12 50%,#14161c); }
   .pane { display:flex; flex-direction:column; padding:8px 10px; min-height:0; }
   .flip { transform:rotate(180deg); }
-  .name { text-align:center; font-size:18px; font-weight:700; letter-spacing:.24em; color:var(--gold2); }
+  .name { text-align:center; font-size:18px; font-weight:700; letter-spacing:.18em; color:var(--gold2); }
   .box { flex:1; min-height:40px; margin:6px 0; padding:8px; border:1px solid rgba(212,176,122,.28); border-radius:10px; background:rgba(255,255,255,.04); font-size:clamp(18px,5vw,26px); font-weight:650; text-align:center; overflow:auto; }
   .bar { display:grid; grid-template-columns:repeat(5,1fr); gap:4px; margin-top:6px; }
-  .btn { height:34px; border:1px solid rgba(212,176,122,.35); border-radius:8px; background:rgba(255,255,255,.04); color:var(--gold2); font-weight:700; font-size:12px; }
+  .btn { height:34px; border:1px solid rgba(212,176,122,.35); border-radius:8px; background:rgba(255,255,255,.04); color:var(--gold2); font-weight:700; font-size:11px; }
   .btn.live { background:#8a2a2a; color:#fff; }
   textarea { margin-top:6px; width:100%; min-height:42px; resize:none; border-radius:10px; padding:8px 10px; font-size:16px; background:#fff; color:#111; border:1px solid rgba(212,176,122,.35); }
   .mid { padding:8px 10px; border-top:1px solid rgba(212,176,122,.28); border-bottom:1px solid rgba(212,176,122,.28); background:rgba(8,8,12,.55); }
@@ -31,29 +31,29 @@
 <body>
 <div class="wrap">
   <section class="pane flip">
-    <div class="name" id="nameA">英语</div>
+    <div class="name" id="nameA">English</div>
     <div class="box" id="boxA"></div>
     <div class="kb" id="kbA"></div>
     <div class="bar">
-      <button class="btn" id="micA" type="button">语音</button>
-      <button class="btn" id="speakA" type="button">播报</button>
-      <button class="btn" id="camA" type="button">拍照</button>
-      <button class="btn" id="clearA" type="button">清空</button>
-      <button class="btn" id="sendA" type="button">翻译</button>
+      <button class="btn" id="micA" type="button">Voice</button>
+      <button class="btn" id="speakA" type="button">Speak</button>
+      <button class="btn" id="camA" type="button">Photo</button>
+      <button class="btn" id="clearA" type="button">Clear</button>
+      <button class="btn" id="sendA" type="button">Translate</button>
     </div>
   </section>
   <div class="mid">
     <div class="pick">
       <select id="fromLang">
         <option value="zh-CN">中文</option>
-        <option value="en">英语</option>
-        <option value="km-KM">高棉语</option>
+        <option value="en">English</option>
+        <option value="km-KM">ភាសាខ្មែរ</option>
       </select>
       <div>→</div>
       <select id="toLang">
-        <option value="en" selected>英语</option>
+        <option value="en" selected>English</option>
         <option value="zh-CN">中文</option>
-        <option value="km-KM">高棉语</option>
+        <option value="km-KM">ភាសាខ្មែរ</option>
       </select>
     </div>
   </div>
@@ -73,18 +73,37 @@
 <input id="file" type="file" accept="image/*" capture="environment">
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 <script>
-const NAME={"zh-CN":"中文","en":"英语","km-KM":"高棉语"};
-const OCR={"zh-CN":"chi_sim","en":"eng","km-KM":"khm"};
-const SPEECH={"zh-CN":"zh-CN","en":"en-US","km-KM":"km-KH"};
-const ROWS=["qwertyuiop","asdfghjkl","zxcvbnm"];
+const UI = {
+  "zh-CN": { name:"中文", mic:"语音", stop:"停", speak:"播报", cam:"拍照", clear:"清空", send:"翻译", space:"空格" },
+  "en":    { name:"English", mic:"Voice", stop:"Stop", speak:"Speak", cam:"Photo", clear:"Clear", send:"Translate", space:"space" },
+  "km-KM": { name:"ភាសាខ្មែរ", mic:"សំឡេង", stop:"ឈាំ", speak:"អាន", cam:"ថត", clear:"លុប", send:"បកប្រែ", space:"ចោះ" }
+};
+const OCR = {"zh-CN":"chi_sim","en":"eng","km-KM":"khm"};
+const SPEECH = {"zh-CN":"zh-CN","en":"en-US","km-KM":"km-KH"};
+const ROWS = ["qwertyuiop","asdfghjkl","zxcvbnm"];
 const $ = id => document.getElementById(id);
-let ocrSide="B", draftA="";
+let ocrSide="B", draftA="", recs={A:null,B:null};
+
 function applyLang(){
-  $("nameB").textContent=NAME[$("fromLang").value];
-  $("nameA").textContent=NAME[$("toLang").value];
+  const a = UI[$("toLang").value];
+  const b = UI[$("fromLang").value];
+  $("nameA").textContent=a.name;
+  $("micA").textContent=recs.A?a.stop:a.mic;
+  $("speakA").textContent=a.speak;
+  $("camA").textContent=a.cam;
+  $("clearA").textContent=a.clear;
+  $("sendA").textContent=a.send;
+  $("nameB").textContent=b.name;
+  $("micB").textContent=recs.B?b.stop:b.mic;
+  $("speakB").textContent=b.speak;
+  $("camB").textContent=b.cam;
+  $("clearB").textContent=b.clear;
+  $("sendB").textContent=b.send;
   $("inputB").lang=$("fromLang").value;
+  const sp=$("spaceA"); if(sp) sp.textContent=a.space;
 }
 $("fromLang").onchange=$("toLang").onchange=applyLang;
+
 function addA(ch){ draftA+=ch; $("boxA").textContent=draftA; }
 function delA(){ draftA=draftA.slice(0,-1); $("boxA").textContent=draftA; }
 (function(){
@@ -96,23 +115,32 @@ function delA(){ draftA=draftA.slice(0,-1); $("boxA").textContent=draftA; }
   });
   const last=document.createElement("div"); last.className="kr";
   const d=document.createElement("button"); d.className="k act"; d.type="button"; d.textContent="⌫"; d.onclick=delA;
-  const s=document.createElement("button"); s.className="k wide act"; s.type="button"; s.textContent="space"; s.onclick=()=>addA(" ");
+  const s=document.createElement("button"); s.className="k wide act"; s.type="button"; s.id="spaceA"; s.textContent="space"; s.onclick=()=>addA(" ");
   last.appendChild(d); last.appendChild(s); root.appendChild(last);
 })();
-function speakNow(text,lang){
-  text=String(text||"").trim(); if(!text) return;
-  try{speechSynthesis.cancel();}catch(e){}
+
+function speakNow(text, lang){
+  text=String(text||"").trim();
+  if(!text){ alert("empty"); return; }
+  if(!window.speechSynthesis){ alert("no tts"); return; }
+  speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(text);
   u.lang=SPEECH[lang]||"en-US";
-  const pre=u.lang.slice(0,2);
-  const v=(speechSynthesis.getVoices()||[]).find(x=>(x.lang||"").toLowerCase().startsWith(pre));
+  u.rate=1; u.volume=1;
+  const voices=speechSynthesis.getVoices()||[];
+  const pre=u.lang.slice(0,2).toLowerCase();
+  const v=voices.find(x=>(x.lang||"").toLowerCase().startsWith(pre));
   if(v) u.voice=v;
-  setTimeout(()=>speechSynthesis.speak(u),40);
+  speechSynthesis.speak(u);
 }
-$("speakA").onclick=()=>speakNow($("boxA").textContent,$("toLang").value);
-$("speakB").onclick=()=>speakNow($("boxB").textContent||$("inputB").value,$("fromLang").value);
-$("clearA").onclick=()=>{ draftA=""; $("boxA").textContent=""; speechSynthesis.cancel(); };
-$("clearB").onclick=()=>{ $("boxB").textContent=""; $("inputB").value=""; speechSynthesis.cancel(); };
+speechSynthesis.getVoices();
+speechSynthesis.onvoiceschanged=function(){ speechSynthesis.getVoices(); };
+
+$("speakA").onclick=function(){ speakNow($("boxA").textContent, $("toLang").value); };
+$("speakB").onclick=function(){ speakNow($("boxB").textContent||$("inputB").value, $("fromLang").value); };
+$("clearA").onclick=function(){ draftA=""; $("boxA").textContent=""; speechSynthesis.cancel(); };
+$("clearB").onclick=function(){ $("boxB").textContent=""; $("inputB").value=""; speechSynthesis.cancel(); };
+
 async function translate(text,from,to){
   if(from===to) return text;
   const url="https://api.mymemory.translated.net/get?q="+encodeURIComponent(text)+"&langpair="+encodeURIComponent(from+"|"+to);
@@ -122,43 +150,53 @@ async function translate(text,from,to){
   return out;
 }
 async function send(side,text){
-  text=(text||(side==="A"?draftA:$("inputB").value)||"").trim(); if(!text) return;
+  text=(text||(side==="A"?draftA:$("inputB").value)||"").trim();
+  if(!text) return;
   const fromMain=$("fromLang").value,toMain=$("toLang").value;
   const from=side==="B"?fromMain:toMain, to=side==="B"?toMain:fromMain, other=side==="A"?"B":"A";
-  $("box"+side).textContent=text; $("box"+other).textContent="…";
+  $("box"+side).textContent=text; $("box"+other).textContent="...";
   try{
     const dst=await translate(text,from,to);
-    $("box"+other).textContent=dst; speakNow(dst,to);
-    if(side==="A"){ draftA=""; } else $("inputB").value="";
-  }catch(e){ $("box"+other).textContent="翻译失败"; }
+    $("box"+other).textContent=dst;
+    speakNow(dst,to);
+    if(side==="A") draftA=""; else $("inputB").value="";
+  }catch(e){ $("box"+other).textContent="fail"; }
 }
-$("sendA").onclick=()=>send("A"); $("sendB").onclick=()=>send("B");
+$("sendA").onclick=function(){ send("A"); };
+$("sendB").onclick=function(){ send("B"); };
 $("inputB").addEventListener("keydown",e=>{ if(e.key==="Enter"&&!e.shiftKey){ e.preventDefault(); send("B"); }});
-const recs={A:null,B:null};
+
 function bindMic(side){
   $("mic"+side).onclick=function(){
-    const SR=window.SpeechRecognition||window.webkitSpeechRecognition; if(!SR) return;
-    if(recs[side]){ recs[side].stop(); recs[side]=null; $("mic"+side).textContent="语音"; $("mic"+side).classList.remove("live"); return; }
-    const rec=new SR(); rec.lang=SPEECH[side==="B"?$("fromLang").value:$("toLang").value];
+    const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+    if(!SR){ alert("no mic"); return; }
+    const lang=side==="B"?$("fromLang").value:$("toLang").value;
+    if(recs[side]){ recs[side].stop(); recs[side]=null; applyLang(); return; }
+    const rec=new SR();
+    rec.lang=SPEECH[lang]; rec.interimResults=false;
     rec.onresult=ev=>send(side, ev.results[0][0].transcript);
-    rec.onend=()=>{ recs[side]=null; $("mic"+side).textContent="语音"; $("mic"+side).classList.remove("live"); };
-    rec.start(); recs[side]=rec; $("mic"+side).textContent="停"; $("mic"+side).classList.add("live");
+    rec.onerror=ev=>alert(ev.error||"mic");
+    rec.onend=function(){ recs[side]=null; applyLang(); };
+    rec.start(); recs[side]=rec; applyLang();
   };
 }
-bindMic("A"); bindMic("B"); applyLang();
-$("camA").onclick=()=>{ ocrSide="A"; $("file").click(); };
-$("camB").onclick=()=>{ ocrSide="B"; $("file").click(); };
-$("file").onchange=async e=>{
+bindMic("A"); bindMic("B");
+$("camA").onclick=function(){ ocrSide="A"; $("file").click(); };
+$("camB").onclick=function(){ ocrSide="B"; $("file").click(); };
+$("file").onchange=async function(e){
   const file=e.target.files&&e.target.files[0]; if(!file) return;
   const from=ocrSide==="B"?$("fromLang").value:$("toLang").value;
+  $("box"+ocrSide).textContent="OCR...";
   try{
     const worker=await Tesseract.createWorker(OCR[from]||"eng");
     const result=await worker.recognize(file); await worker.terminate();
     const cleaned=(result.data.text||"").replace(/\s+/g," ").trim();
     if(cleaned) await send(ocrSide, cleaned);
-  }catch(err){}
+    else $("box"+ocrSide).textContent="";
+  }catch(err){ $("box"+ocrSide).textContent="ocr fail"; }
   e.target.value="";
 };
+applyLang();
 </script>
 </body>
 </html>
