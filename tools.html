@@ -2,41 +2,27 @@
 <html lang="zh-CN" data-theme="light">
 <head>
 <meta http-equiv="Cache-Control" content="no-cache"/>
-<meta http-equiv="Pragma" content="no-cache"/>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
-<meta name="mobile-web-app-capable" content="yes"/>
-<meta name="apple-mobile-web-app-capable" content="yes"/>
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<meta name="apple-mobile-web-app-title" content="AI导航"/>
-<meta name="theme-color" content="#ffffff"/>
 <title>全球优选AI导航</title>
 <link rel="manifest" href="manifest.webmanifest"/>
-<link rel="apple-touch-icon" href="IMG_7049.jpeg"/>
 <link rel="stylesheet" href="style.css?v=241"/>
 <style>
-#fraudBtn,#makeBtn{border:1px solid #e5e7eb;background:#fff;color:#111827;border-radius:999px;padding:7px 10px;font-size:13px;text-decoration:none;white-space:nowrap}html[data-theme="dark"] #fraudBtn,html[data-theme="dark"] #makeBtn{background:#1f2937;color:#e6edf3;border-color:rgba(255,255,255,.12)}
-.acts{align-items:center}
+#fraudBtn,#makeBtn,#faceBtn{border:1px solid #e5e7eb;background:#fff;color:#111827;border-radius:999px;padding:7px 10px;font-size:13px;text-decoration:none;white-space:nowrap}
+.faceban{display:block;margin:0 0 10px;padding:14px 12px;border-radius:16px;text-decoration:none;color:#062014;background:linear-gradient(135deg,#2ee59d,#4da3ff);font-weight:800;font-size:16px;text-align:center}
+.faceban small{display:block;font-weight:600;font-size:12px;opacity:.9;margin-top:3px}
 #pop{display:block!important}
 .rank{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(5,auto);grid-auto-flow:column;gap:0 8px}
-.rank a{padding:8px 2px}
-.rank strong{font-size:13px}
-.rank em{font-size:11px}
 </style>
 </head>
 <body>
-<div id="sitebg" aria-hidden="true">
-  <div class="slide s1"></div>
-  <div class="slide s2"></div>
-  <div class="slide s3"></div>
-</div>
+<div id="sitebg" aria-hidden="true"><div class="slide s1"></div><div class="slide s2"></div><div class="slide s3"></div></div>
 <div id="scroll">
+<a class="faceban" id="faceBan" href="./face-translate.html">面对面翻译 · 中英柬<small>语音 / 打字 / 拍照 · 双方都能说</small></a>
 <header class="top">
-  <div>
-    <h1 id="brand">全球优选AI导航</h1>
-    <p class="sub" id="meta"></p>
-  </div>
+  <div><h1 id="brand">全球优选AI导航</h1><p class="sub" id="meta"></p></div>
   <div class="acts">
+    <a id="faceBtn" href="./face-translate.html">翻译</a>
     <a id="makeBtn" href="./create.html">创作</a>
     <a id="fraudBtn" href="./fraud.html">防骗指南</a>
     <button id="lang" type="button">中文</button>
@@ -44,31 +30,12 @@
   </div>
   <div id="langBar" class="langbar"></div>
 </header>
-<form class="search" id="sf">
-  <div class="box">
-    <input id="q" type="search" placeholder="" autocomplete="off" enterkeyhint="search"/>
-    <button type="submit" id="go" aria-label="search">🔍</button>
-  </div>
-</form>
-<section class="block" id="hotBlock">
-  <div class="block-h"><h2 id="hotTitle">今日热点</h2></div>
-  <ol id="hot" class="rank"></ol>
-</section>
-<section class="block">
-  <div class="block-h"><h2 id="listTitle">全部工具</h2><span class="count" id="count"></span></div>
-  <div id="side" class="cats"></div>
-  <div class="under" id="under">
-    <div id="tags" class="fine"></div>
-    <div id="pop">
-      <main id="list" class="grid"></main>
-    </div>
-  </div>
-</section>
+<form class="search" id="sf"><div class="box"><input id="q" type="search" autocomplete="off"/><button type="submit" id="go">🔍</button></div></form>
+<section class="block" id="hotBlock"><div class="block-h"><h2 id="hotTitle">今日热点</h2></div><ol id="hot" class="rank"></ol></section>
+<section class="block"><div class="block-h"><h2 id="listTitle">全部工具</h2><span class="count" id="count"></span></div><div id="side" class="cats"></div><div class="under" id="under"><div id="tags" class="fine"></div><div id="pop"><main id="list" class="grid"></main></div></div></section>
 </div>
-<button type="button" id="topBtn" class="topbtn" aria-label="top">↑</button>
-<a class="fab" href="https://t.me/globalyouxuanaibot" target="_blank" rel="noopener" title="@globalyouxuanaibot">
-<svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M9.04 15.3l-.37 5.2c.53 0 .76-.23 1.04-.5l2.5-2.4 5.18 3.8c.95.52 1.63.25 1.89-.88l3.42-16.08h.01c.3-1.41-.51-1.96-1.44-1.62L1.3 9.3C-.07 9.84-.05 10.6 1.06 10.95l5.5 1.72 12.77-8.04c.6-.36 1.15-.16.7.2z"/></svg>
-</a>
+<button type="button" id="topBtn" class="topbtn">↑</button>
+<a class="fab" href="https://t.me/globalyouxuanaibot" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M9.04 15.3l-.37 5.2c.53 0 .76-.23 1.04-.5l2.5-2.4 5.18 3.8c.95.52 1.63.25 1.89-.88l3.42-16.08h.01c.3-1.41-.51-1.96-1.44-1.62L1.3 9.3C-.07 9.84-.05 10.6 1.06 10.95l5.5 1.72 12.77-8.04c.6-.36 1.15-.16.7.2z"/></svg></a>
 <script src="langboot.js?v=190"></script>
 <script src="langset.js?v=190"></script>
 <script src="lock.js?v=179"></script>
@@ -79,20 +46,5 @@
 <script src="gtrans.js?v=196"></script>
 <script src="tabbar.js?v=5"></script>
 <script src="navapply.js?v=5"></script>
-<script>
-(function(){
-  function setFraud(){
-    var a=document.getElementById('fraudBtn');
-    if(!a) return;
-    a.textContent=(typeof lang!=='undefined' && lang==='en')?'Scam guide':'防骗指南';
-    var m=document.getElementById('makeBtn'); if(m) m.textContent=(typeof lang!=='undefined' && lang==='en')?'Create':'创作';
-  }
-  if(typeof applyChrome==='function'){
-    var old=applyChrome;
-    applyChrome=function(){old();setFraud();};
-  }
-  setFraud();
-})();
-</script>
 </body>
 </html>

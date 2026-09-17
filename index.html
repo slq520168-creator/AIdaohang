@@ -3,32 +3,26 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-<meta name="mobile-web-app-capable" content="yes"/>
-<meta name="apple-mobile-web-app-capable" content="yes"/>
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<meta name="apple-mobile-web-app-title" content="AI Directory"/>
-<meta name="theme-color" content="#ffffff"/>
-<meta http-equiv="Cache-Control" content="no-cache"/>
 <title>Global AI Directory</title>
 <link rel="manifest" href="manifest.webmanifest"/>
-<link rel="apple-touch-icon" href="IMG_7049.jpeg"/>
 <link rel="stylesheet" href="tabbar.css?v=3"/>
 <style>
-html,body{margin:0;min-height:100%;min-height:100dvh;font-family:-apple-system,sans-serif;color:#3b2f2c;background:#000}
+html,body{margin:0;min-height:100%;font-family:-apple-system,sans-serif;color:#3b2f2c;background:#000}
 body{min-height:100dvh;background:#000 url("IMG_7049.jpeg") center/cover no-repeat fixed}
-body::before{content:"";position:fixed;inset:0;z-index:-1;background:rgba(244,236,230,.08)}
 .w{max-width:430px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 14px calc(80px + env(safe-area-inset-bottom))}
 video{width:100%;border-radius:18px;display:block;margin:12px 0 8px;background:#111}
 .b{background:rgba(255,255,255,.86);color:#111827;border-radius:10px;padding:8px 10px;line-height:1.35;font-size:12px}
 .enter{display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:14px;border-radius:16px;font-weight:700;font-size:16px;margin:10px 0 0}
+.face{background:linear-gradient(135deg,#2ee59d,#4da3ff);color:#062014}
 </style>
 </head>
 <body>
 <div class="w">
+<a class="enter face" href="./face-translate.html" id="goFace">Face Translate · ZH / EN / KM</a>
 <video id="v" playsinline webkit-playsinline controls preload="metadata">
   <source src="_users_a225812b-2be1-4613-a32e-8cc822793592_generated_5562c574-e0b1-4b20-8e93-616e70fe0ea6_generated_video.mp4" type="video/mp4"/>
 </video>
-<div class="b" id="hello">Hello. Welcome to Global AI Directory. I am Anan. Watch the video, then tap below to open the home page.</div>
+<div class="b" id="hello">Hello. Welcome to Global AI Directory.</div>
 <a class="enter" id="goHome" href="./tools.html?v=237&home=1&lang=en">Enter home</a>
 <a class="enter" id="goMake" href="./create.html" style="background:#1f2937">Image · Video · Music</a>
 </div>
@@ -39,15 +33,12 @@ video{width:100%;border-radius:18px;display:block;margin:12px 0 8px;background:#
   if(lang==='zh'){
     document.documentElement.lang='zh-CN';
     document.title='全球优选AI导航';
-    document.getElementById('hello').textContent='你好，欢迎来到全球优选AI导航。我是安安。看完视频，点下面进入首页。';
+    document.getElementById('hello').textContent='你好，欢迎来到全球优选AI导航。';
     document.getElementById('goHome').textContent='进入首页';
     document.getElementById('goHome').href='./tools.html?v=237&home=1&lang=zh';
     document.getElementById('goMake').textContent='做图 · 视频 · 音乐';
+    document.getElementById('goFace').textContent='面对面翻译 · 中英柬';
   }
-  document.getElementById('goHome').addEventListener('click',function(){
-    localStorage.setItem('aid_welcome','1');
-    sessionStorage.setItem('aid_welcome','1');
-  });
 })();
 </script>
 <script src="tabbar.js?v=3"></script>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>面对面翻译</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html, body { height: 100%; background: #000; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans Khmer", sans-serif; }
+  .wrap { height: 100dvh; display: grid; grid-template-rows: 1fr 8px 1fr; max-width: 480px; margin: 0 auto; }
+  .pane { display: flex; flex-direction: column; padding: 10px 12px; overflow: hidden; }
+  .a { background: #eef3f8; color: #111; transform: rotate(180deg); }
+  .b { background: #101826; color: #fff; }
+  .mid { background: #2ee59d; }
+  .who { font-size: 12px; opacity: .7; }
+  .big { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; font-size: clamp(20px, 5.8vw, 32px); font-weight: 700; line-height: 1.35; word-break: break-word; padding: 4px; }
+  .src { font-size: 11px; opacity: .55; text-align: center; min-height: 14px; margin-bottom: 6px; }
+  .bar { display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 6px; }
+  .btn { height: 40px; border: 0; border-radius: 11px; font-weight: 700; font-size: 13px; }
+  .mic { background: #2ee59d; color: #062014; }
+  .mic.live { background: #ff4d4f; color: #fff; }
+  .cam { background: #3d4f6a; color: #fff; }
+  .a .cam { background: #c5d0dc; color: #111; }
+  textarea { margin-top: 6px; width: 100%; min-height: 40px; max-height: 72px; resize: none; border-radius: 10px; padding: 8px 10px; font-size: 15px; border: 1px solid #2a3b52; }
+  .a textarea { background: #fff; color: #111; border-color: #c9d3de; }
+  .b textarea { background: #1b2738; color: #fff; }
+  select { width: 100%; margin-top: 4px; border-radius: 8px; padding: 6px 8px; font-size: 12px; border: 1px solid #2a3b52; }
+  .a select { background: #fff; color: #111; border-color: #c9d3de; }
+  .b select { background: #1b2738; color: #fff; }
+  input[type=file] { display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="pane a">
+    <div class="who">对方</div>
+    <select id="langA">
+      <option value="km-KM" selected>ភាសាខ្មែរ</option>
+      <option value="zh-CN">中文</option>
+      <option value="en">English</option>
+    </select>
+    <div class="big" id="textA">对方从这边说 / 打字</div>
+    <div class="src" id="srcA"></div>
+    <div class="bar">
+      <button class="btn mic" id="micA" type="button">语音</button>
+      <button class="btn cam" id="camA" type="button">拍照</button>
+      <button class="btn mic" id="sendA" type="button">翻译</button>
+    </div>
+    <textarea id="inputA" placeholder="对方打字…"></textarea>
+  </section>
+  <div class="mid"></div>
+  <section class="pane b">
+    <div class="who">我</div>
+    <select id="langB">
+      <option value="zh-CN" selected>中文</option>
+      <option value="en">English</option>
+      <option value="km-KM">ភាសាខ្មែរ</option>
+    </select>
+    <div class="big" id="textB">从这边说 / 打字</div>
+    <div class="src" id="srcB"></div>
+    <div class="bar">
+      <button class="btn mic" id="micB" type="button">语音</button>
+      <button class="btn cam" id="camB" type="button">拍照</button>
+      <button class="btn mic" id="sendB" type="button">翻译</button>
+    </div>
+    <textarea id="inputB" placeholder="我打字…"></textarea>
+  </section>
+</div>
+<input id="file" type="file" accept="image/*" capture="environment">
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script>
+const OCR = { "zh-CN": "chi_sim", "en": "eng", "km-KM": "khm" };
+const SPEECH = { "zh-CN": "zh-CN", "en": "en-US", "km-KM": "km-KH" };
+const $ = id => document.getElementById(id);
+let ocrSide = "B";
+async function translate(text, from, to) {
+  if (from === to) return text;
+  const url = "https://api.mymemory.translated.net/get?q=" + encodeURIComponent(text) + "&langpair=" + encodeURIComponent(from + "|" + to);
+  const res = await fetch(url);
+  const data = await res.json();
+  const out = data && data.responseData && data.responseData.translatedText || "";
+  if (!out || /INVALID|QUERY LENGTH|MYMEMORY WARNING/i.test(out)) throw new Error("fail");
+  return out;
+}
+function speak(text, lang) {
+  if (!window.speechSynthesis) return;
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = SPEECH[lang] || "en-US";
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+}
+async function go(side, text) {
+  text = (text || "").trim();
+  if (!text) return;
+  const from = side === "A" ? $("langA").value : $("langB").value;
+  const to   = side === "A" ? $("langB").value : $("langA").value;
+  const other = side === "A" ? "B" : "A";
+  $("src" + side).textContent = "";
+  $("text" + side).textContent = text;
+  $("text" + other).textContent = "…";
+  $("src" + other).textContent = text;
+  try {
+    const dst = await translate(text, from, to);
+    $("text" + other).textContent = dst;
+    speak(dst, to);
+    $("input" + side).value = "";
+  } catch (e) {
+    $("text" + other).textContent = "翻译失败";
+  }
+}
+$("sendA").onclick = () => go("A", $("inputA").value);
+$("sendB").onclick = () => go("B", $("inputB").value);
+["A","B"].forEach(s => {
+  $("input"+s).addEventListener("keydown", e => {
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); go(s, $("input"+s).value); }
+  });
+});
+const recs = { A: null, B: null };
+function bindMic(side) {
+  $("mic"+side).onclick = () => {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) { $("text"+side).textContent = "请打字"; return; }
+    if (recs[side]) { recs[side].stop(); recs[side] = null; $("mic"+side).textContent = "语音"; $("mic"+side).classList.remove("live"); return; }
+    const rec = new SR();
+    rec.lang = SPEECH[$(side==="A"?"langA":"langB").value];
+    rec.interimResults = false;
+    rec.onresult = ev => go(side, ev.results[0][0].transcript);
+    rec.onend = () => { recs[side] = null; $("mic"+side).textContent = "语音"; $("mic"+side).classList.remove("live"); };
+    rec.start();
+    recs[side] = rec;
+    $("mic"+side).textContent = "停";
+    $("mic"+side).classList.add("live");
+  };
+}
+bindMic("A"); bindMic("B");
+$("camA").onclick = () => { ocrSide = "A"; $("file").click(); };
+$("camB").onclick = () => { ocrSide = "B"; $("file").click(); };
+$("file").onchange = async e => {
+  const file = e.target.files && e.target.files[0];
+  if (!file) return;
+  const from = ocrSide === "A" ? $("langA").value : $("langB").value;
+  $("text"+ocrSide).textContent = "识图中…";
+  try {
+    const worker = await Tesseract.createWorker(OCR[from] || "eng");
+    const result = await worker.recognize(file);
+    await worker.terminate();
+    const cleaned = (result.data.text || "").replace(/\s+/g, " ").trim();
+    if (!cleaned) { $("text"+ocrSide).textContent = "没识别到字"; return; }
+    await go(ocrSide, cleaned);
+  } catch (err) {
+    $("text"+ocrSide).textContent = "识图失败";
+  }
+  e.target.value = "";
+};
+</script>
+</body>
+</html>
