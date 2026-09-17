@@ -110,7 +110,7 @@ $("inputB").addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.pr
 function hardStop(){
   if(raf){cancelAnimationFrame(raf);raf=0;}
   ["A","B"].forEach(s=>{const c=$("wave"+s);if(c)c.getContext("2d").clearRect(0,0,c.width,c.height);});
-  if(rec){rec.onresult=rec.onerror=rec.onend=null;try{rec.abort?rec.abort():rec.stop();}catch(e){}rec=null;}
+  if(rec){rec.onresult=rec.onerror=rec.onend=null;try{rec.abort?rec.abort():rec.stop();}catch(e){}rec=null;window.__navRec=null;}
   if(stream){stream.getTracks().forEach(t=>{try{t.stop();}catch(e){}});stream=null;}
   try{if(actx)actx.close();}catch(e){}
   actx=null;an=null;
@@ -133,11 +133,12 @@ function startRec(side){
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
   if(!SR)return;
   rec=new SR();
+  window.__navRec=rec;
   rec.lang=SPEECH[side==="B"?$("fromLang").value:$("toLang").value]||"zh-CN";
   rec.continuous=false;rec.interimResults=true;
   rec.onresult=function(ev){let t="";for(let i=0;i<ev.results.length;i++)t+=ev.results[i][0].transcript;t=t.trim();if(!t)return;heard=t;putText(side,t);if(ev.results[ev.results.length-1].isFinal)finish(side);};
-  rec.onerror=function(){if(heard)finish(side);};
-  rec.onend=function(){if(!done&&heard)finish(side);};
+  rec.onerror=function(){if(heard)finish(side);else dropMic();};
+  rec.onend=function(){if(!done&&heard)finish(side);else if(!done)dropMic();};
   try{rec.start();}catch(e){}
 }
 function finish(side){
@@ -171,11 +172,14 @@ function bindMic(side){
   el.addEventListener("click",function(e){e.preventDefault();tap(side);});
 }
 bindMic("A");bindMic("B");
+dropMic();
 window.addEventListener("pagehide",dropMic);
+window.addEventListener("pageshow",dropMic);
 window.addEventListener("freeze",dropMic);
+window.addEventListener("beforeunload",dropMic);
 document.addEventListener("visibilitychange",function(){
-  if(document.hidden){hideT=setTimeout(dropMic,800);}
-  else if(hideT){clearTimeout(hideT);hideT=0;}
+  if(document.hidden){hideT=setTimeout(dropMic,200);}
+  else if(hideT){clearTimeout(hideT);hideT=0;dropMic();}
 });
 function tip(side,msg){putText(side,msg);}
 $("camA").onclick=function(){ocrSide="A";tip("A","打开相机...");$("file").click();};
