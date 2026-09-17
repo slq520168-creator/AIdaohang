@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-store">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover,user-scalable=no">
+<title>对讲</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;background:#f6f3ee;font-family:-apple-system,"PingFang SC",sans-serif;color:#1f1b16}
+.wrap{height:100dvh;max-width:480px;margin:0 auto;display:grid;grid-template-rows:1fr auto 1fr}
+.pane{padding:10px;display:flex;flex-direction:column;min-height:0}
+.flip{transform:rotate(180deg)}
+.name{text-align:center;font-weight:700;color:#6a4e2e}
+.stage{position:relative;flex:1;min-height:0}
+.box{height:100%;border:1px solid #e4d8c6;border-radius:10px;background:#fff;padding:8px 8px 58px;font-size:22px;font-weight:700;text-align:center;overflow:auto;-webkit-user-select:text;user-select:text}
+.mic{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);width:58px;height:58px;border:0;border-radius:50%;background:#86efac;font-size:22px}
+.mic.live{background:#16a34a;color:#fff}
+.bar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:6px}
+.btn{height:36px;border:1px solid #e0d3bf;border-radius:8px;background:#fff;font-weight:700}
+.mid{text-align:center;padding:8px;background:#efe8dc}
+.tip{font-size:12px;color:#7a6448;margin-top:4px}
+select{height:28px;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="pane flip">
+  <div class="name" id="nameA">English</div>
+  <div class="stage"><div class="box" id="boxA"></div><button class="mic" id="micA" type="button">🎤</button></div>
+</section>
+<div class="mid">
+  <select id="fromLang">
+    <option value="zh-CN">中文</option>
+    <option value="en">English</option>
+    <option value="km-KM">ភាសាខ្មែរ</option>
+    <option value="th-TH">ไทย</option>
+    <option value="vi-VN">Vi</option>
+    <option value="ja-JP">日</option>
+    <option value="ko-KR">한</option>
+  </select>
+  →
+  <select id="toLang">
+    <option value="en" selected>English</option>
+    <option value="zh-CN">中文</option>
+    <option value="km-KM">ភាសាខ្មែរ</option>
+    <option value="th-TH">ไทย</option>
+    <option value="vi-VN">Vi</option>
+    <option value="ja-JP">日</option>
+    <option value="ko-KR">한</option>
+  </select>
+  <div class="tip">按住话筒说话，松手对面播报</div>
+</div>
+<section class="pane">
+  <div class="name" id="nameB">中文</div>
+  <div class="stage"><div class="box" id="boxB"></div><button class="mic" id="micB" type="button">🎤</button></div>
+  <div class="bar">
+    <button class="btn" id="speakB" type="button">播报</button>
+    <button class="btn" id="clearB" type="button">清空</button>
+    <button class="btn" id="sendB" type="button">翻译</button>
+  </div>
+</section>
+</div>
+<audio id="player" playsinline></audio>
+<script>
+const NAMES={"zh-CN":"中文",en:"English","km-KM":"ភាសាខ្មែរ","th-TH":"ไทย","vi-VN":"Vi","ja-JP":"日","ko-KR":"한"};
+const SPEECH={"zh-CN":"zh-CN",en:"en-US","km-KM":"km-KH","th-TH":"th-TH","vi-VN":"vi-VN","ja-JP":"ja-JP","ko-KR":"ko-KR"};
+const TTS={"zh-CN":"zh",en:"en","km-KM":"km","th-TH":"th","vi-VN":"vi","ja-JP":"ja","ko-KR":"ko"};
+const $=id=>document.getElementById(id);
+let live=null,rec=null,heard="",busy=false;
+function code(l){l=String(l||"");if(l.indexOf("zh")===0)return"zh";if(l.indexOf("km")===0)return"km";if(l.indexOf("th")===0)return"th";if(l.indexOf("vi")===0)return"vi";if(l.indexOf("ja")===0)return"ja";if(l.indexOf("ko")===0)return"ko";return"en";}
+function paint(){$("nameA").textContent=NAMES[$("toLang").value];$("nameB").textContent=NAMES[$("fromLang").value];$("micA").classList.toggle("live",live==="A");$("micB").classList.toggle("live",live==="B");}
+function hush(){try{speechSynthesis.cancel();}catch(e){}try{$("player").pause();}catch(e){}}
+function stopRec(){if(!rec)return;rec.onresult=rec.onerror=rec.onend=null;try{rec.stop();}catch(e){}rec=null;}
+function speakNow(text,lang){
+  text=String(text||"").trim();if(!text)return;hush();
+  const u=new SpeechSynthesisUtterance(text);u.lang=SPEECH[lang]||"en-US";u.volume=1;speechSynthesis.speak(u);
+  setTimeout(function(){if(speechSynthesis.speaking)return;$("player").src="https://translate.googleapis.com/translate_tts?ie=UTF-8&client=gtx&tl="+(TTS[lang]||"en")+"&q="+encodeURIComponent(text);$("player").play().catch(function(){});},400);
+}
+async function send(side,text){
+  text=String(text||"").trim();if(!text||busy)return;busy=true;
+  $("box"+side).textContent=text;
+  const from=side==="B"?$("fromLang").value:$("toLang").value;
+  const to=side==="B"?$("toLang").value:$("fromLang").value;
+  const other=side==="A"?"B":"A";
+  $("box"+other).textContent="...";
+  try{
+    const res=await fetch("./api/translate?q="+encodeURIComponent(text)+"&sl="+code(from)+"&tl="+code(to));
+    const data=await res.json();
+    const dst=(data&&data.text)?String(data.text).trim():"";
+    if(!dst)throw 1;
+    $("box"+other).textContent=dst;
+    speakNow(dst,to);
+  }catch(e){$("box"+other).textContent="fail";}
+  busy=false;
+}
+function startHold(side){
+  if(live)return;hush();stopRec();heard="";live=side;paint();
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){$("box"+side).textContent="用Safari打开";live=null;paint();return;}
+  rec=new SR();rec.lang=SPEECH[side==="B"?$("fromLang").value:$("toLang").value];rec.continuous=true;rec.interimResults=true;
+  rec.onresult=function(ev){let t="";for(let i=0;i<ev.results.length;i++)t+=ev.results[i][0].transcript;t=t.trim();if(t){heard=t;$("box"+side).textContent=t;}};
+  try{rec.start();}catch(e){}
+}
+function endHold(side){if(live!==side)return;const t=heard||$("box"+side).textContent;live=null;stopRec();paint();send(side,t);}
+function bind(side){
+  const el=$("mic"+side);
+  el.addEventListener("pointerdown",function(e){e.preventDefault();try{el.setPointerCapture(e.pointerId);}catch(x){}startHold(side);},{passive:false});
+  el.addEventListener("pointerup",function(e){e.preventDefault();endHold(side);},{passive:false});
+  el.addEventListener("pointercancel",function(){endHold(side);});
+}
+bind("A");bind("B");
+$("sendB").onclick=function(){send("B",$("boxB").textContent);};
+$("speakB").onclick=function(){speakNow($("boxB").textContent,$("fromLang").value);};
+$("clearB").onclick=function(){$("boxA").textContent="";$("boxB").textContent="";hush();};
+$("fromLang").onchange=$("toLang").onchange=paint;
+window.addEventListener("pagehide",function(){stopRec();hush();});
+paint();
+</script>
+</body>
+</html>
