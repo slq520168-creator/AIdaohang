@@ -81,7 +81,7 @@ const OCR = {"zh-CN":"chi_sim","en":"eng","km-KM":"khm"};
 const SPEECH = {"zh-CN":"zh-CN","en":"en-US","km-KM":"km-KH"};
 const ROWS = ["qwertyuiop","asdfghjkl","zxcvbnm"];
 const $ = id => document.getElementById(id);
-let ocrSide="B", draftA="", recs={A:null,B:null}, starting={A:false,B:false}, ttsAudio=null, ttsWs=null;
+let ocrSide="B", draftA="", recs={A:null,B:null}, micTimer={A:0,B:0}, ttsAudio=null;
 function applyLang(){
   const a = UI[$("toLang").value], b = UI[$("fromLang").value];
   $("nameA").textContent=a.name; $("micA").textContent=recs.A?a.stop:a.mic; $("speakA").textContent=a.speak; $("camA").textContent=a.cam; $("clearA").textContent=a.clear; $("sendA").textContent=a.send;
@@ -104,34 +104,20 @@ function delA(){ draftA=draftA.slice(0,-1); $("boxA").textContent=draftA; }
 })();
 function stopAudio(){
   try{speechSynthesis.cancel();}catch(e){}
-  if(ttsAudio){ try{ttsAudio.pause(); ttsAudio.src="";}catch(e){} ttsAudio=null; }
-  if(ttsWs){ try{ttsWs.close();}catch(e){} ttsWs=null; }
+  if(ttsAudio){ try{ttsAudio.pause(); ttsAudio.removeAttribute("src"); ttsAudio.load();}catch(e){} ttsAudio=null; }
+}
+function playBlob(blob){
+  stopAudio();
+  ttsAudio=new Audio(URL.createObjectURL(blob));
+  ttsAudio.play();
 }
 function speakKm(text){
-  const id = (crypto.randomUUID?crypto.randomUUID():String(Date.now())).replace(/-/g,"");
-  const url = "wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId="+id;
-  const chunks=[];
-  const ws=new WebSocket(url);
-  ttsWs=ws;
-  ws.binaryType="arraybuffer";
-  ws.onopen=function(){
-    ws.send("X-Timestamp:"+new Date().toISOString()+"\r\nContent-Type:application/json; charset=utf-8\r\nPath:speech.config\r\n\r\n"+JSON.stringify({context:{synthesis:{audio:{metadataoptions:{sentenceBoundaryEnabled:false,wordBoundaryEnabled:false},outputFormat:"audio-24khz-48kbitrate-mono-mp3"}}}}));
-    const safe=text.replace(/[&<>]/g,function(c){return {"&":"&","<":"<",">":">"}[c];});
-    ws.send("X-RequestId:"+id+"\r\nContent-Type:application/ssml+xml\r\nX-Timestamp:"+new Date().toISOString()+"\r\nPath:ssml\r\n\r\n<speak version='1.0' xml:lang='km-KH'><voice name='km-KH-SreymomNeural'>"+safe+"</voice></speak>");
-  };
-  ws.onmessage=function(ev){
-    if(typeof ev.data!=="string"){
-      const u8=new Uint8Array(ev.data);
-      let i=0;
-      for(;i<u8.length-3;i++) if(u8[i]===13&&u8[i+1]===10&&u8[i+2]===13&&u8[i+3]===10){ i+=4; break; }
-      if(i<u8.length) chunks.push(u8.slice(i));
-    } else if(ev.data.indexOf("Path:turn.end")!==-1){
-      try{ws.close();}catch(e){}
-      const blob=new Blob(chunks,{type:"audio/mpeg"});
-      ttsAudio=new Audio(URL.createObjectURL(blob));
-      ttsAudio.play();
-    }
-  };
+  const q=encodeURIComponent(text.slice(0,160));
+  const src="https://corsproxy.io/?"+encodeURIComponent("https://translate.googleapis.com/translate_tts?ie=UTF-8&client=gtx&tl=km&q="+text.slice(0,160));
+  fetch(src).then(function(r){ return r.ok?r.blob():Promise.reject(); }).then(playBlob).catch(function(){
+    const a=new Audio("https://translate.googleapis.com/translate_tts?ie=UTF-8&client=gtx&tl=km&q="+q);
+    ttsAudio=a; a.play().catch(function(){});
+  });
 }
 function speakNow(text, lang){
   text=String(text||"").trim();
@@ -179,16 +165,23 @@ $("sendA").onclick=function(){ send("A"); };
 $("sendB").onclick=function(){ send("B"); };
 $("inputB").addEventListener("keydown",e=>{ if(e.key==="Enter"&&!e.shiftKey){ e.preventDefault(); send("B"); }});
 function killMic(side){
-  if(!recs[side]) return;
-  try{ recs[side].onresult=null; recs[side].onend=null; recs[side].onerror=null; recs[side].abort(); }catch(e){}
+  if(micTimer[side]){ clearTimeout(micTimer[side]); micTimer[side]=0; }
+  const rec=recs[side];
   recs[side]=null;
+  if(rec){
+    rec.onresult=null; rec.onend=null; rec.onerror=null;
+    try{rec.stop();}catch(e){}
+    try{rec.abort();}catch(e){}
+  }
+  applyLang();
 }
+function killAllMic(){ killMic("A"); killMic("B"); }
 function startMic(side){
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  if(!SR){ $("box"+side).textContent="Safari only"; return; }
-  const lang=side==="B"?$("fromLang").value:$("toLang").value;
-  stopAudio();
+  if(!SR) return;
   killMic(side);
+  stopAudio();
+  const lang=side==="B"?$("fromLang").value:$("toLang").value;
   const rec=new SR();
   rec.lang=SPEECH[lang]||"zh-CN";
   rec.continuous=false;
@@ -201,33 +194,29 @@ function startMic(side){
     t=t.trim();
     if(!t) return;
     putText(side, t);
-    if(ev.results[ev.results.length-1].isFinal) send(side, t, false);
+    if(ev.results[ev.results.length-1].isFinal){
+      killMic(side);
+      send(side, t, false);
+    }
   };
-  rec.onerror=function(){};
-  rec.onend=function(){
-    recs[side]=null;
-    starting[side]=false;
-    applyLang();
-  };
+  rec.onerror=function(){ killMic(side); };
+  rec.onend=function(){ recs[side]=null; applyLang(); };
   try{
     rec.start();
     recs[side]=rec;
     applyLang();
-  }catch(e){
-    recs[side]=null;
-    setTimeout(function(){ if(!recs[side]) startMic(side); }, 400);
-  }
+    micTimer[side]=setTimeout(function(){ killMic(side); }, 8000);
+  }catch(e){ killMic(side); }
 }
 function bindMic(side){
   $("mic"+side).onclick=function(){
-    if(recs[side] || starting[side]){
-      killMic(side); starting[side]=false; applyLang(); return;
-    }
-    starting[side]=true;
-    setTimeout(function(){ startMic(side); }, 280);
+    if(recs[side]){ killMic(side); return; }
+    startMic(side);
   };
 }
 bindMic("A"); bindMic("B");
+document.addEventListener("visibilitychange", function(){ if(document.hidden) killAllMic(); });
+window.addEventListener("pagehide", killAllMic);
 $("camA").onclick=function(){ ocrSide="A"; $("file").click(); };
 $("camB").onclick=function(){ ocrSide="B"; $("file").click(); };
 $("file").onchange=async function(e){
