@@ -81,7 +81,7 @@ const OCR = {"zh-CN":"chi_sim","en":"eng","km-KM":"khm"};
 const SPEECH = {"zh-CN":"zh-CN","en":"en-US","km-KM":"km-KH"};
 const ROWS = ["qwertyuiop","asdfghjkl","zxcvbnm"];
 const $ = id => document.getElementById(id);
-let ocrSide="B", draftA="", recs={A:null,B:null}, starting={A:false,B:false};
+let ocrSide="B", draftA="", recs={A:null,B:null}, starting={A:false,B:false}, ttsAudio=null;
 function applyLang(){
   const a = UI[$("toLang").value], b = UI[$("fromLang").value];
   $("nameA").textContent=a.name; $("micA").textContent=recs.A?a.stop:a.mic; $("speakA").textContent=a.speak; $("camA").textContent=a.cam; $("clearA").textContent=a.clear; $("sendA").textContent=a.send;
@@ -102,10 +102,29 @@ function delA(){ draftA=draftA.slice(0,-1); $("boxA").textContent=draftA; }
   const s=document.createElement("button"); s.className="k wide act"; s.type="button"; s.id="spaceA"; s.textContent="space"; s.onclick=()=>addA(" ");
   last.appendChild(d); last.appendChild(s); root.appendChild(last);
 })();
+function stopAudio(){
+  try{speechSynthesis.cancel();}catch(e){}
+  if(ttsAudio){ try{ttsAudio.pause(); ttsAudio.src="";}catch(e){} ttsAudio=null; }
+}
+function speakKm(text){
+  const q=encodeURIComponent(text.slice(0,180));
+  const urls=[
+    "https://translate.googleapis.com/translate_tts?ie=UTF-8&client=gtx&tl=km&q="+q,
+    "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=km&q="+q
+  ];
+  let i=0;
+  const tryPlay=function(){
+    if(i>=urls.length) return;
+    ttsAudio=new Audio(urls[i++]);
+    ttsAudio.play().catch(tryPlay);
+  };
+  tryPlay();
+}
 function speakNow(text, lang){
   text=String(text||"").trim();
-  if(!text || !window.speechSynthesis) return;
-  speechSynthesis.cancel();
+  if(!text) return;
+  stopAudio();
+  if(lang==="km-KM"){ speakKm(text); return; }
   const u=new SpeechSynthesisUtterance(text);
   u.lang=SPEECH[lang]||"en-US"; u.rate=1; u.volume=1;
   const pre=u.lang.slice(0,2).toLowerCase();
@@ -117,8 +136,8 @@ speechSynthesis.getVoices();
 speechSynthesis.onvoiceschanged=function(){ speechSynthesis.getVoices(); };
 $("speakA").onclick=function(){ speakNow($("boxA").textContent, $("toLang").value); };
 $("speakB").onclick=function(){ speakNow($("boxB").textContent||$("inputB").value, $("fromLang").value); };
-$("clearA").onclick=function(){ draftA=""; $("boxA").textContent=""; speechSynthesis.cancel(); };
-$("clearB").onclick=function(){ $("boxB").textContent=""; $("inputB").value=""; speechSynthesis.cancel(); };
+$("clearA").onclick=function(){ draftA=""; $("boxA").textContent=""; stopAudio(); };
+$("clearB").onclick=function(){ $("boxB").textContent=""; $("inputB").value=""; stopAudio(); };
 async function translate(text,from,to){
   if(from===to) return text;
   const url="https://api.mymemory.translated.net/get?q="+encodeURIComponent(text)+"&langpair="+encodeURIComponent(from+"|"+to);
@@ -155,7 +174,7 @@ function startMic(side){
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
   if(!SR){ $("box"+side).textContent="Safari only"; return; }
   const lang=side==="B"?$("fromLang").value:$("toLang").value;
-  try{ speechSynthesis.cancel(); }catch(e){}
+  stopAudio();
   killMic(side);
   const rec=new SR();
   rec.lang=SPEECH[lang]||"zh-CN";
