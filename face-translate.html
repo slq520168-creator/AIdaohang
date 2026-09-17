@@ -43,9 +43,25 @@ input[type=file]{display:none}
   </div>
 </section>
 <div class="mid"><div class="pick">
-  <select id="fromLang"><option value="zh-CN">中文</option><option value="en">English</option><option value="km-KM">ភាសាខ្មែរ</option></select>
+  <select id="fromLang">
+    <option value="zh-CN">中文</option>
+    <option value="en">English</option>
+    <option value="km-KM">ភាសាខ្មែរ</option>
+    <option value="th-TH">ไทย</option>
+    <option value="vi-VN">Vi</option>
+    <option value="ja-JP">日</option>
+    <option value="ko-KR">한</option>
+  </select>
   <div>→</div>
-  <select id="toLang"><option value="en" selected>English</option><option value="zh-CN">中文</option><option value="km-KM">ភាសាខ្មែរ</option></select>
+  <select id="toLang">
+    <option value="km-KM" selected>ភាសាខ្មែរ</option>
+    <option value="zh-CN">中文</option>
+    <option value="en">English</option>
+    <option value="th-TH">ไทย</option>
+    <option value="vi-VN">Vi</option>
+    <option value="ja-JP">日</option>
+    <option value="ko-KR">한</option>
+  </select>
 </div></div>
 <section class="pane">
   <div class="name" id="nameB">中文</div>
@@ -63,15 +79,33 @@ input[type=file]{display:none}
 <audio id="player" playsinline></audio>
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 <script>
-const UI={"zh-CN":{name:"中文",speak:"播报",cam:"拍照",clear:"清空",send:"翻译",space:"空格"},en:{name:"English",speak:"Speak",cam:"Photo",clear:"Clear",send:"Translate",space:"space"},"km-KM":{name:"ភាសាខ្មែរ",speak:"អាន",cam:"ថត",clear:"លុប",send:"បកប្រែ",space:"ដកំ"}};
-const OCR={"zh-CN":"chi_sim+eng",en:"eng","km-KM":"khm+eng"};
-const SPEECH={"zh-CN":"zh-CN",en:"en-US","km-KM":"km-KH"};
-const TTS={"zh-CN":"zh-CN",en:"en", "km-KM":"km"};
+const ORDER=["zh-CN","en","km-KM","th-TH","vi-VN","ja-JP","ko-KR"];
+const UI={
+  "zh-CN":{name:"中文",speak:"播报",cam:"拍照",clear:"清空",send:"翻译",space:"空格"},
+  en:{name:"English",speak:"Speak",cam:"Photo",clear:"Clear",send:"Translate",space:"space"},
+  "km-KM":{name:"ភាសាខ្មែរ",speak:"អាន",cam:"ថត",clear:"លុប",send:"បកប្រែ",space:"ដក"},
+  "th-TH":{name:"ไทย",speak:"พูด",cam:"ถ่าย",clear:"ลบ",send:"แปล",space:"ว่าง"},
+  "vi-VN":{name:"Việt",speak:"Đọc",cam:"Ảnh",clear:"Xóa",send:"Dịch",space:"cách"},
+  "ja-JP":{name:"日本語",speak:"読む",cam:"写真",clear:"消す",send:"翻訳",space:"空白"},
+  "ko-KR":{name:"한국어",speak:"듣기",cam:"사진",clear:"지우기",send:"번역",space:"띠"}
+};
+const OCR={"zh-CN":"chi_sim+eng",en:"eng","km-KM":"khm+eng","th-TH":"tha+eng","vi-VN":"vie+eng","ja-JP":"jpn+eng","ko-KR":"kor+eng"};
+const SPEECH={"zh-CN":"zh-CN",en:"en-US","km-KM":"km-KH","th-TH":"th-TH","vi-VN":"vi-VN","ja-JP":"ja-JP","ko-KR":"ko-KR"};
+const TTS={"zh-CN":"zh",en:"en","km-KM":"km","th-TH":"th","vi-VN":"vi","ja-JP":"ja","ko-KR":"ko"};
 const EN=["qwertyuiop","asdfghjkl","zxcvbnm"], KM=["កខគងចឆជញ","តថទនបផពម","យរលវសហអ","ាិីុូេោំ់"];
 const $=id=>document.getElementById(id);
 let draftA="", ocrSide="B", live=null, heard="", rec=null, raf=0, actx=null, an=null, stream=null, done=false, lock=0, hideT=0;
-function code(l){return String(l).indexOf("zh")===0?"zh-CN":String(l).indexOf("km")===0?"km":"en";}
-function otherLang(v){return v==="zh-CN"?"en":"zh-CN";}
+function code(l){
+  l=String(l||"");
+  if(l.indexOf("zh")===0)return "zh";
+  if(l.indexOf("km")===0)return "km";
+  if(l.indexOf("th")===0)return "th";
+  if(l.indexOf("vi")===0)return "vi";
+  if(l.indexOf("ja")===0)return "ja";
+  if(l.indexOf("ko")===0)return "ko";
+  return "en";
+}
+function otherLang(v){const i=ORDER.indexOf(v);return ORDER[(i<0?0:i+1)%ORDER.length];}
 function preventSame(w){if($("fromLang").value===$("toLang").value){if(w==="from")$("toLang").value=otherLang($("fromLang").value);else $("fromLang").value=otherLang($("toLang").value);}}
 function pickVoice(lang){const list=speechSynthesis.getVoices()||[],p=(SPEECH[lang]||"en-US").slice(0,2).toLowerCase();return list.find(v=>(v.lang||"").toLowerCase().startsWith(p))||null;}
 function speakNow(text,lang){
@@ -92,8 +126,8 @@ function speakNow(text,lang){
   },700);
 }
 function addA(ch){draftA+=ch;$("boxA").textContent=draftA;}function delA(){draftA=draftA.slice(0,-1);$("boxA").textContent=draftA;}
-function makeKb(){const root=$("kbA");root.innerHTML="";const lang=$("toLang").value;(lang==="km-KM"?KM:EN).forEach(row=>{const r=document.createElement("div");r.className="kr";[...row].forEach(ch=>{const b=document.createElement("button");b.className="k";b.type="button";b.textContent=ch;b.onclick=()=>addA(ch);r.appendChild(b);});root.appendChild(r);});const last=document.createElement("div");last.className="kr";const d=document.createElement("button");d.className="k act";d.type="button";d.textContent="⌫";d.onclick=delA;const s=document.createElement("button");s.className="k wide act";s.type="button";s.textContent=UI[lang].space;s.onclick=()=>addA(" ");last.appendChild(d);last.appendChild(s);root.appendChild(last);}
-function paint(){const a=UI[$("toLang").value],b=UI[$("fromLang").value];$("nameA").textContent=a.name;$("speakA").textContent=a.speak;$("camA").textContent=a.cam;$("clearA").textContent=a.clear;$("sendA").textContent=a.send;$("nameB").textContent=b.name;$("speakB").textContent=b.speak;$("camB").textContent=b.cam;$("clearB").textContent=b.clear;$("sendB").textContent=b.send;$("micA").classList.toggle("live",live==="A");$("micB").classList.toggle("live",live==="B");}
+function makeKb(){const root=$("kbA");root.innerHTML="";const lang=$("toLang").value;(lang==="km-KM"?KM:EN).forEach(row=>{const r=document.createElement("div");r.className="kr";[...row].forEach(ch=>{const b=document.createElement("button");b.className="k";b.type="button";b.textContent=ch;b.onclick=()=>addA(ch);r.appendChild(b);});root.appendChild(r);});const last=document.createElement("div");last.className="kr";const d=document.createElement("button");d.className="k act";d.type="button";d.textContent="⌫";d.onclick=delA;const s=document.createElement("button");s.className="k wide act";s.type="button";s.textContent=(UI[lang]||UI.en).space;s.onclick=()=>addA(" ");last.appendChild(d);last.appendChild(s);root.appendChild(last);}
+function paint(){const a=UI[$("toLang").value]||UI.en,b=UI[$("fromLang").value]||UI["zh-CN"];$("nameA").textContent=a.name;$("speakA").textContent=a.speak;$("camA").textContent=a.cam;$("clearA").textContent=a.clear;$("sendA").textContent=a.send;$("nameB").textContent=b.name;$("speakB").textContent=b.speak;$("camB").textContent=b.cam;$("clearB").textContent=b.clear;$("sendB").textContent=b.send;$("micA").classList.toggle("live",live==="A");$("micB").classList.toggle("live",live==="B");}
 function applyLang(){preventSame("to");paint();makeKb();$("inputB").lang=$("fromLang").value;}
 $("fromLang").onchange=function(){preventSame("from");applyLang();};
 $("toLang").onchange=function(){preventSame("to");applyLang();};
@@ -101,8 +135,15 @@ $("speakA").onclick=()=>speakNow($("boxA").textContent,$("toLang").value);
 $("speakB").onclick=()=>speakNow($("boxB").textContent||$("inputB").value,$("fromLang").value);
 $("clearA").onclick=function(){draftA="";$("boxA").textContent="";try{speechSynthesis.cancel();}catch(e){}$("player").pause();};
 $("clearB").onclick=function(){$("boxB").textContent="";$("inputB").value="";try{speechSynthesis.cancel();}catch(e){}$("player").pause();};
-function readGoogle(data){if(!data||data.error)return"";if(typeof data==="string")return data;if(Array.isArray(data)){if(typeof data[0]==="string")return data[0];return data.map(row=>Array.isArray(row)?(row[0]||""):String(row||"")).join("");}return"";}
-async function translate(text,from,to){if(from===to)return text;const sl=code(from),tl=code(to);const urls=["./api/translate?q="+encodeURIComponent(text)+"&sl="+sl+"&tl="+tl,"https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl="+sl+"&tl="+tl+"&q="+encodeURIComponent(text)];for(const url of urls){try{const res=await fetch(url);const data=await res.json();const out=readGoogle(data).trim();if(out)return out;}catch(e){}}throw new Error("fail");}
+async function translate(text,from,to){
+  if(from===to)return text;
+  const sl=code(from),tl=code(to);
+  const res=await fetch("./api/translate?q="+encodeURIComponent(text)+"&sl="+sl+"&tl="+tl);
+  const data=await res.json();
+  const out=(data&&data.text)?String(data.text).trim():"";
+  if(!out)throw new Error("fail");
+  return out;
+}
 function putText(side,text){if(side==="A"){draftA=text;$("boxA").textContent=text;}else{$("inputB").value=text;$("boxB").textContent=text;}}
 async function send(side,text){text=(text||(side==="A"?draftA:$("inputB").value)||"").trim();if(!text)return;putText(side,text);const from=side==="B"?$("fromLang").value:$("toLang").value,to=side==="B"?$("toLang").value:$("fromLang").value,other=side==="A"?"B":"A";$("box"+other).textContent="...";try{const dst=await translate(text,from,to);$("box"+other).textContent=dst;speakNow(dst,to);}catch(e){$("box"+other).textContent="fail";}}
 $("sendA").onclick=()=>send("A");$("sendB").onclick=()=>send("B");
