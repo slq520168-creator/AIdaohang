@@ -66,7 +66,7 @@ const OCR={"zh-CN":"chi_sim",en:"eng","km-KM":"khm"};
 const SPEECH={"zh-CN":"zh-CN",en:"en-US","km-KM":"km-KH"};
 const EN=["qwertyuiop","asdfghjkl","zxcvbnm"], KM=["កខគងចឆជញ","តថទនបផពម","យរលវសហអ","ាិីុូេោំ់"];
 const $=id=>document.getElementById(id);
-let draftA="", ocrSide="B", live=null, heard="", rec=null, raf=0, actx=null, an=null, stream=null, done=false;
+let draftA="", ocrSide="B", live=null, heard="", rec=null, raf=0, amp=0.12, done=false;
 function code(l){return String(l).indexOf("zh")===0?"zh-CN":String(l).indexOf("km")===0?"km":"en";}
 function otherLang(v){return v==="zh-CN"?"en":"zh-CN";}
 function preventSame(w){if($("fromLang").value===$("toLang").value){if(w==="from")$("toLang").value=otherLang($("fromLang").value);else $("fromLang").value=otherLang($("toLang").value);}}
@@ -88,51 +88,56 @@ function putText(side,text){if(side==="A"){draftA=text;$("boxA").textContent=tex
 async function send(side,text){text=(text||(side==="A"?draftA:$("inputB").value)||"").trim();if(!text)return;putText(side,text);const from=side==="B"?$("fromLang").value:$("toLang").value,to=side==="B"?$("toLang").value:$("fromLang").value,other=side==="A"?"B":"A";$("box"+other).textContent="...";try{const dst=await translate(text,from,to);$("box"+other).textContent=dst;speakNow(dst,to);}catch(e){$("box"+other).textContent="fail";}}
 $("sendA").onclick=()=>send("A");$("sendB").onclick=()=>send("B");
 $("inputB").addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();send("B");}});
-function stopMicHardware(){
-  if(raf){cancelAnimationFrame(raf);raf=0;}
-  ["A","B"].forEach(s=>{const c=$("wave"+s);if(c)c.getContext("2d").clearRect(0,0,c.width,c.height);});
-  if(rec){rec.onresult=rec.onerror=rec.onend=null;try{rec.stop();}catch(e){}rec=null;}
-  if(stream){stream.getTracks().forEach(t=>t.stop());stream=null;}
-  try{if(actx)actx.close();}catch(e){}
-  actx=null;an=null;
+function stopWave(){if(raf)cancelAnimationFrame(raf);raf=0;["A","B"].forEach(s=>{const c=$("wave"+s);if(c)c.getContext("2d").clearRect(0,0,c.width,c.height);});}
+function startWave(side){
+  stopWave();
+  const c=$("wave"+side);if(!c)return;
+  const g=c.getContext("2d");
+  (function tick(t){
+    if(live!==side)return;
+    const w=c.width=Math.max(140,c.clientWidth*2),h=c.height=Math.max(48,c.clientHeight*2);
+    g.clearRect(0,0,w,h);g.beginPath();g.lineWidth=3;g.strokeStyle="#16a34a";
+    const level=Math.max(0.08,amp);
+    for(let i=0;i<=40;i++){
+      const x=(i/40)*w;
+      const y=h/2+Math.sin(i*0.55+t/90)*h*0.42*level;
+      i?g.lineTo(x,y):g.moveTo(x,y);
+    }
+    g.stroke();
+    amp*=0.96;
+    raf=requestAnimationFrame(tick);
+  })(0);
 }
-function draw(side){const c=$("wave"+side);if(!c||!an)return;const g=c.getContext("2d");(function tick(){if(live!==side||!an)return;const w=c.width=Math.max(140,c.clientWidth*2),h=c.height=Math.max(48,c.clientHeight*2);const data=new Uint8Array(an.fftSize);an.getByteTimeDomainData(data);g.clearRect(0,0,w,h);g.beginPath();g.lineWidth=3;g.strokeStyle="#16a34a";const step=w/data.length;for(let i=0;i<data.length;i++){const x=i*step,y=(data[i]/255)*h;i?g.lineTo(x,y):g.moveTo(x,y);}g.stroke();raf=requestAnimationFrame(tick);})();}
 function finish(side){
   if(done)return;done=true;
   const text=heard;
-  live=null;stopMicHardware();paint();
+  live=null;
+  if(rec){rec.onresult=rec.onerror=rec.onend=null;try{rec.stop();}catch(e){}rec=null;}
+  stopWave();paint();
   if(side&&text)send(side,text);
 }
-async function begin(side){
+function begin(side){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR)return;
   if(live===side){finish(side);return;}
   if(live)finish(live);
-  done=false;heard="";live=side;paint();
-  try{
-    stream=await navigator.mediaDevices.getUserMedia({audio:true,video:false});
-    const AC=window.AudioContext||window.webkitAudioContext;
-    actx=new AC();if(actx.state==="suspended")await actx.resume();
-    an=actx.createAnalyser();an.fftSize=256;
-    actx.createMediaStreamSource(stream).connect(an);
-    draw(side);
-  }catch(e){live=null;paint();return;}
-  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  if(!SR){return;}
+  done=false;heard="";amp=0.35;live=side;paint();startWave(side);
   rec=new SR();
   rec.lang=SPEECH[side==="B"?$("fromLang").value:$("toLang").value]||"zh-CN";
   rec.continuous=false;
   rec.interimResults=true;
   rec.onresult=function(ev){
     let t="";for(let i=0;i<ev.results.length;i++)t+=ev.results[i][0].transcript;
-    t=t.trim();if(!t)return;heard=t;putText(side,t);
+    t=t.trim();if(!t)return;heard=t;amp=0.9;putText(side,t);
     if(ev.results[ev.results.length-1].isFinal)finish(side);
   };
-  rec.onerror=function(){if(heard)finish(side);else{live=null;stopMicHardware();paint();}};
-  rec.onend=function(){if(!done&&heard)finish(side);else if(!done){live=null;stopMicHardware();paint();}};
-  try{rec.start();}catch(e){}
+  rec.onerror=function(){if(heard)finish(side);else{done=true;live=null;if(rec){try{rec.stop();}catch(e){}rec=null;}stopWave();paint();}};
+  rec.onend=function(){if(!done){if(heard)finish(side);else{done=true;live=null;rec=null;stopWave();paint();}}};
+  try{rec.start();}catch(e){live=null;stopWave();paint();}
 }
-$("micA").onclick=function(){live==="A"?finish("A"):begin("A");};
-$("micB").onclick=function(){live==="B"?finish("B"):begin("B");};
-document.addEventListener("visibilitychange",function(){if(document.hidden){done=true;live=null;stopMicHardware();paint();}});
+$("micA").onclick=function(){begin("A");};
+$("micB").onclick=function(){begin("B");};
+document.addEventListener("visibilitychange",function(){if(document.hidden&&live)finish(live);});
 $("camA").onclick=function(){ocrSide="A";$("file").click();};
 $("camB").onclick=function(){ocrSide="B";$("file").click();};
 $("file").onchange=async function(e){const file=e.target.files&&e.target.files[0];if(!file)return;const from=ocrSide==="B"?$("fromLang").value:$("toLang").value;try{const worker=await Tesseract.createWorker(OCR[from]||"eng");const result=await worker.recognize(file);await worker.terminate();const cleaned=(result.data.text||"").replace(/\s+/g," ").trim();if(cleaned)await send(ocrSide,cleaned);}catch(err){}e.target.value="";};
