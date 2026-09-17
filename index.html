@@ -10,7 +10,6 @@
 html,body{margin:0;min-height:100%;font-family:-apple-system,sans-serif;color:#3b2f2c;background:#000}
 body{min-height:100dvh;background:#000 url("IMG_7049.jpeg") center/cover no-repeat fixed}
 .w{max-width:430px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 14px calc(80px + env(safe-area-inset-bottom))}
-video{width:100%;border-radius:18px;display:block;margin:12px 0 8px;background:#111}
 .b{background:rgba(255,255,255,.86);color:#111827;border-radius:10px;padding:8px 10px;line-height:1.35;font-size:12px}
 .enter{display:block;text-align:center;background:#d97888;color:#fff;text-decoration:none;padding:14px;border-radius:16px;font-weight:700;font-size:16px;margin:10px 0 0}
 .face{background:linear-gradient(135deg,#2ee59d,#4da3ff);color:#062014}
@@ -21,15 +20,13 @@ video{width:100%;border-radius:18px;display:block;margin:12px 0 8px;background:#
 <div class="w">
 <a class="enter face" href="./face-translate.html" id="goFace">Face Translate · ZH / EN / KM</a>
 <a class="enter rh" href="https://www.runninghub.ai/" id="goRh" target="_blank" rel="noopener">Web Image · RunningHub</a>
-<video id="v" playsinline webkit-playsinline controls preload="metadata">
-  <source src="_users_a225812b-2be1-4613-a32e-8cc822793592_generated_5562c574-e0b1-4b20-8e93-616e70fe0ea6_generated_video.mp4" type="video/mp4"/>
-</video>
 <div class="b" id="hello">Hello. Welcome to Global AI Directory.</div>
 <a class="enter" id="goHome" href="./tools.html?v=237&home=1&lang=en">Enter home</a>
 <a class="enter" id="goMake" href="./create.html" style="background:#1f2937">Image · Video · Music</a>
 </div>
 <script>
 (function(){
+  try{if(window.speechSynthesis)speechSynthesis.cancel();}catch(e){}
   var q=new URLSearchParams(location.search).get('lang');
   var lang=q||localStorage.getItem('lang')||'en';
   if(lang==='zh'){
