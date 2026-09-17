@@ -161,6 +161,7 @@ $("speakB").onclick=function(){ unlockTTS(); speakNow($("boxB").textContent||$("
 $("clearA").onclick=function(){ draftA=""; $("boxA").textContent=""; speakQ=[]; try{speechSynthesis.cancel();}catch(e){} };
 $("clearB").onclick=function(){ $("boxB").textContent=""; $("inputB").value=""; speakQ=[]; try{speechSynthesis.cancel();}catch(e){} };
 function readGoogle(data){
+  if(!data || data.error) return "";
   if(typeof data==="string") return data;
   if(Array.isArray(data)){
     if(typeof data[0]==="string") return data[0];
@@ -171,12 +172,19 @@ function readGoogle(data){
 async function translate(text,from,to){
   if(from===to) return text;
   const sl=code(from), tl=code(to);
-  const url="https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl="+sl+"&tl="+tl+"&q="+encodeURIComponent(text);
-  const res=await fetch(url);
-  const data=await res.json();
-  const out=readGoogle(data).trim();
-  if(!out) throw new Error("fail");
-  return out;
+  const urls=[
+    "./api/translate?q="+encodeURIComponent(text)+"&sl="+encodeURIComponent(sl)+"&tl="+encodeURIComponent(tl),
+    "https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl="+sl+"&tl="+tl+"&q="+encodeURIComponent(text)
+  ];
+  for(let i=0;i<urls.length;i++){
+    try{
+      const res=await fetch(urls[i]);
+      const data=await res.json();
+      const out=readGoogle(data).trim();
+      if(out) return out;
+    }catch(e){}
+  }
+  throw new Error("fail");
 }
 function putText(side, text){
   if(side==="A"){ draftA=text; $("boxA").textContent=text; }
