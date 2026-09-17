@@ -8,17 +8,20 @@
   * { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
   html,body { height:100%; background:#f6f3ee; color:#1f1b16; font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans Khmer",sans-serif; }
   .wrap { height:100dvh; max-width:480px; margin:0 auto; display:grid; grid-template-rows:1fr auto 1fr; background:#f6f3ee; }
-  .pane { display:flex; flex-direction:column; padding:8px 10px; min-height:0; background:#f6f3ee; }
+  .pane { display:flex; flex-direction:column; padding:8px 10px; min-height:0; }
   .flip { transform:rotate(180deg); }
-  .name { text-align:center; font-size:18px; font-weight:700; letter-spacing:.18em; color:#6a4e2e; }
-  .box { flex:1; min-height:36px; margin:4px 0; padding:8px; border:1px solid #e4d8c6; border-radius:10px; background:#fff; color:#1f1b16; font-size:clamp(16px,4.6vw,24px); font-weight:650; text-align:center; overflow:auto; }
-  .bar { display:grid; grid-template-columns:repeat(5,1fr); gap:4px; margin-top:6px; }
+  .name { text-align:center; font-size:16px; font-weight:700; letter-spacing:.14em; color:#6a4e2e; }
+  .stage { position:relative; flex:1; min-height:72px; margin:4px 0; }
+  .box { height:100%; padding:8px 8px 52px; border:1px solid #e4d8c6; border-radius:10px; background:#fff; font-size:clamp(16px,4.6vw,24px); font-weight:650; text-align:center; overflow:auto; }
+  .mic { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:56px; height:56px; border:0; border-radius:50%; background:#e10600; color:#fff; font-size:28px; line-height:56px; box-shadow:0 2px 8px rgba(225,6,0,.35); }
+  .mic.live { background:#7a0000; transform:translate(-50%,-50%) scale(1.06); }
+  .bar { display:grid; grid-template-columns:repeat(4,1fr); gap:4px; margin-top:6px; }
   .btn { height:34px; border:1px solid #e0d3bf; border-radius:8px; background:#fff; color:#5a442c; font-weight:700; font-size:11px; }
-  .btn.live { background:#c44; color:#fff; }
   textarea { margin-top:6px; width:100%; min-height:42px; resize:none; border-radius:10px; padding:8px 10px; font-size:16px; background:#fff; color:#111; border:1px solid #e0d3bf; }
-  .mid { padding:8px 10px; border-top:1px solid #e4d8c6; border-bottom:1px solid #e4d8c6; background:#efe8dc; }
-  .pick { display:flex; align-items:center; gap:8px; }
-  select { flex:1; height:34px; border-radius:8px; background:#fff; color:#3d2e1c; border:1px solid #e0d3bf; font-size:14px; font-weight:700; text-align:center; }
+  .mid { padding:4px 10px; border-top:1px solid #e4d8c6; border-bottom:1px solid #e4d8c6; background:#efe8dc; }
+  .pick { display:flex; align-items:center; justify-content:center; gap:6px; }
+  select { width:42%; height:26px; border-radius:6px; background:#fff; color:#3d2e1c; border:1px solid #e0d3bf; font-size:12px; font-weight:700; text-align:center; }
+  .arrow { font-size:12px; opacity:.7; }
   .kb { display:grid; gap:3px; }
   .kr { display:flex; gap:3px; }
   .k { flex:1; height:28px; border:0; border-radius:6px; background:#fff; color:#2a2418; font-size:13px; font-weight:700; box-shadow:0 0 0 1px #e4d8c6; }
@@ -31,10 +34,12 @@
 <div class="wrap">
   <section class="pane flip">
     <div class="name" id="nameA">English</div>
-    <div class="box" id="boxA"></div>
+    <div class="stage">
+      <div class="box" id="boxA"></div>
+      <button class="mic" id="micA" type="button">🎙️</button>
+    </div>
     <div class="kb" id="kbA"></div>
     <div class="bar">
-      <button class="btn" id="micA" type="button">Voice</button>
       <button class="btn" id="speakA" type="button">Speak</button>
       <button class="btn" id="camA" type="button">Photo</button>
       <button class="btn" id="clearA" type="button">Clear</button>
@@ -48,7 +53,7 @@
         <option value="en">English</option>
         <option value="km-KM">ភាសាខ្មែរ</option>
       </select>
-      <div>→</div>
+      <div class="arrow">→</div>
       <select id="toLang">
         <option value="en" selected>English</option>
         <option value="zh-CN">中文</option>
@@ -58,9 +63,11 @@
   </div>
   <section class="pane">
     <div class="name" id="nameB">中文</div>
-    <div class="box" id="boxB"></div>
+    <div class="stage">
+      <div class="box" id="boxB"></div>
+      <button class="mic" id="micB" type="button">🎙️</button>
+    </div>
     <div class="bar">
-      <button class="btn" id="micB" type="button">语音</button>
       <button class="btn" id="speakB" type="button">播报</button>
       <button class="btn" id="camB" type="button">拍照</button>
       <button class="btn" id="clearB" type="button">清空</button>
@@ -73,32 +80,36 @@
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 <script>
 const UI = {
-  "zh-CN": { name:"中文", mic:"语音", stop:"停", speak:"播报", cam:"拍照", clear:"清空", send:"翻译", space:"空格", listen:"正在听..." },
-  "en":    { name:"English", mic:"Voice", stop:"Stop", speak:"Speak", cam:"Photo", clear:"Clear", send:"Translate", space:"space", listen:"Listening..." },
-  "km-KM": { name:"ភាសាខ្មែរ", mic:"សំឡេង", stop:"ឈាំ", speak:"អាន", cam:"ថត", clear:"លុប", send:"បកប្រែ", space:"ដកំ", listen:"..." }
+  "zh-CN": { name:"中文", speak:"播报", cam:"拍照", clear:"清空", send:"翻译", space:"空格", listen:"正在听..." },
+  "en":    { name:"English", speak:"Speak", cam:"Photo", clear:"Clear", send:"Translate", space:"space", listen:"Listening..." },
+  "km-KM": { name:"ភាសាខ្មែរ", speak:"អាន", cam:"ថត", clear:"លុប", send:"បកប្រែ", space:"ដកំ", listen:"..." }
 };
 const OCR = {"zh-CN":"chi_sim","en":"eng","km-KM":"khm"};
 const SPEECH = {"zh-CN":"zh-CN","en":"en-US","km-KM":"km-KH"};
 const EN = ["qwertyuiop","asdfghjkl","zxcvbnm"];
 const KM = ["កខគងចឆជញ","តថទនបផពម","យរលវសហអ","ាិីុូេោំ់"];
 const $ = id => document.getElementById(id);
-let ocrSide="B", draftA="", recs={A:null,B:null}, micTimer={A:0,B:0}, lastHeard={A:"",B:""}, speakQ=[], speakBusy=false;
+let ocrSide="B", draftA="", recs={A:null,B:null}, micTimer={A:0,B:0}, lastHeard={A:"",B:""}, speakQ=[];
 function code(lang){ if(String(lang).indexOf("zh")===0) return "zh-CN"; if(String(lang).indexOf("km")===0) return "km"; return "en"; }
+function otherLang(v){ return v==="zh-CN" ? "en" : "zh-CN"; }
+function preventSame(which){
+  if($("fromLang").value===$("toLang").value){
+    if(which==="from") $("toLang").value=otherLang($("fromLang").value);
+    else $("fromLang").value=otherLang($("toLang").value);
+  }
+}
 function pickVoice(lang){
   const list=speechSynthesis.getVoices()||[];
   const pre=(SPEECH[lang]||"en-US").slice(0,2).toLowerCase();
   return list.find(v=>/en-US/i.test(v.lang)&&/Samantha|Siri|Karen|Daniel|Google US English/i.test(v.name))
-    || list.find(v=>(v.lang||"").toLowerCase().startsWith(pre)&&v.localService)
     || list.find(v=>(v.lang||"").toLowerCase().startsWith(pre))
     || null;
 }
 function unlockTTS(){
   try{
     if(speechSynthesis.paused) speechSynthesis.resume();
-    const u=new SpeechSynthesisUtterance(".");
-    u.volume=0; u.rate=1; u.lang="en-US";
-    const v=pickVoice("en"); if(v) u.voice=v;
-    speechSynthesis.speak(u);
+    const u=new SpeechSynthesisUtterance("."); u.volume=0; u.lang="en-US";
+    const v=pickVoice("en"); if(v) u.voice=v; speechSynthesis.speak(u);
   }catch(e){}
 }
 document.addEventListener("touchstart", unlockTTS, {passive:true});
@@ -106,14 +117,11 @@ document.addEventListener("click", unlockTTS);
 speechSynthesis.getVoices();
 speechSynthesis.onvoiceschanged=function(){ speechSynthesis.getVoices(); };
 function nextSpeak(){
-  if(!speakQ.length){ speakBusy=false; return; }
-  speakBusy=true;
+  if(!speakQ.length) return;
   try{ if(speechSynthesis.paused) speechSynthesis.resume(); }catch(e){}
   const job=speakQ.shift();
   const u=new SpeechSynthesisUtterance(job.text);
-  u.lang=SPEECH[job.lang]||"en-US";
-  u.rate=job.lang==="en"?0.92:1;
-  u.volume=1;
+  u.lang=SPEECH[job.lang]||"en-US"; u.rate=job.lang==="en"?0.92:1; u.volume=1;
   const v=pickVoice(job.lang); if(v) u.voice=v;
   u.onend=function(){ setTimeout(nextSpeak, 60); };
   u.onerror=function(){ setTimeout(nextSpeak, 60); };
@@ -125,7 +133,6 @@ function speakNow(text, lang){
   const parts=text.split(/(?<=[.!?。！？])\s+/).map(s=>s.trim()).filter(Boolean);
   speakQ=(parts.length?parts:[text]).map(t=>({text:t, lang:lang}));
   try{ speechSynthesis.cancel(); }catch(e){}
-  speakBusy=false;
   setTimeout(nextSpeak, 100);
 }
 function addA(ch){ draftA+=ch; $("boxA").textContent=draftA; }
@@ -136,10 +143,7 @@ function makeKb(){
   const rows = lang==="km-KM" ? KM : EN;
   rows.forEach(row=>{
     const r=document.createElement("div"); r.className="kr";
-    [...row].forEach(ch=>{
-      const b=document.createElement("button"); b.className="k"; b.type="button"; b.textContent=ch;
-      b.onclick=()=>addA(ch); r.appendChild(b);
-    });
+    [...row].forEach(ch=>{ const b=document.createElement("button"); b.className="k"; b.type="button"; b.textContent=ch; b.onclick=()=>addA(ch); r.appendChild(b); });
     root.appendChild(r);
   });
   const last=document.createElement("div"); last.className="kr";
@@ -149,13 +153,14 @@ function makeKb(){
 }
 function paintBtns(){
   const a = UI[$("toLang").value], b = UI[$("fromLang").value];
-  $("nameA").textContent=a.name; $("micA").textContent=recs.A?a.stop:a.mic; $("speakA").textContent=a.speak; $("camA").textContent=a.cam; $("clearA").textContent=a.clear; $("sendA").textContent=a.send;
-  $("nameB").textContent=b.name; $("micB").textContent=recs.B?b.stop:b.mic; $("speakB").textContent=b.speak; $("camB").textContent=b.cam; $("clearB").textContent=b.clear; $("sendB").textContent=b.send;
+  $("nameA").textContent=a.name; $("speakA").textContent=a.speak; $("camA").textContent=a.cam; $("clearA").textContent=a.clear; $("sendA").textContent=a.send;
+  $("nameB").textContent=b.name; $("speakB").textContent=b.speak; $("camB").textContent=b.cam; $("clearB").textContent=b.clear; $("sendB").textContent=b.send;
   $("micA").classList.toggle("live", !!recs.A);
   $("micB").classList.toggle("live", !!recs.B);
 }
-function applyLang(){ paintBtns(); makeKb(); $("inputB").lang=$("fromLang").value; }
-$("fromLang").onchange=$("toLang").onchange=applyLang;
+function applyLang(){ preventSame("to"); paintBtns(); makeKb(); $("inputB").lang=$("fromLang").value; }
+$("fromLang").onchange=function(){ preventSame("from"); applyLang(); };
+$("toLang").onchange=function(){ preventSame("to"); applyLang(); };
 $("speakA").onclick=function(){ unlockTTS(); speakNow($("boxA").textContent, $("toLang").value); };
 $("speakB").onclick=function(){ unlockTTS(); speakNow($("boxB").textContent||$("inputB").value, $("fromLang").value); };
 $("clearA").onclick=function(){ draftA=""; $("boxA").textContent=""; speakQ=[]; try{speechSynthesis.cancel();}catch(e){} };
@@ -178,10 +183,8 @@ async function translate(text,from,to){
   ];
   for(let i=0;i<urls.length;i++){
     try{
-      const res=await fetch(urls[i]);
-      const data=await res.json();
-      const out=readGoogle(data).trim();
-      if(out) return out;
+      const res=await fetch(urls[i]); const data=await res.json();
+      const out=readGoogle(data).trim(); if(out) return out;
     }catch(e){}
   }
   throw new Error("fail");
@@ -219,43 +222,23 @@ function startMic(side){
   const lang=side==="B"?$("fromLang").value:$("toLang").value;
   lastHeard[side]="";
   const rec=new SR();
-  rec.lang=SPEECH[lang]||"zh-CN";
-  rec.continuous=false;
-  rec.interimResults=true;
-  rec.maxAlternatives=1;
+  rec.lang=SPEECH[lang]||"zh-CN"; rec.continuous=false; rec.interimResults=true; rec.maxAlternatives=1;
   $("box"+side).textContent=UI[lang].listen;
   rec.onresult=function(ev){
     let t=""; for(let i=0;i<ev.results.length;i++) t += ev.results[i][0].transcript;
     t=t.trim(); if(!t) return;
     lastHeard[side]=t; putText(side, t);
     if(ev.results[ev.results.length-1].isFinal){
-      recs[side]=null; paintBtns();
-      try{rec.stop();}catch(e){}
-      send(side, t);
+      recs[side]=null; paintBtns(); try{rec.stop();}catch(e){}; send(side, t);
     }
   };
-  rec.onerror=function(){
-    recs[side]=null; paintBtns();
-    if(lastHeard[side]) send(side, lastHeard[side]);
-  };
-  rec.onend=function(){
-    recs[side]=null; paintBtns();
-    if(lastHeard[side] && $("box"+(side==="A"?"B":"A")).textContent==="") send(side, lastHeard[side]);
-  };
-  try{
-    rec.start();
-    recs[side]=rec;
-    paintBtns();
-    micTimer[side]=setTimeout(function(){ if(recs[side]){ try{recs[side].stop();}catch(e){} } }, 12000);
-  }catch(e){ recs[side]=null; paintBtns(); }
+  rec.onerror=function(){ recs[side]=null; paintBtns(); if(lastHeard[side]) send(side, lastHeard[side]); };
+  rec.onend=function(){ recs[side]=null; paintBtns(); if(lastHeard[side] && $("box"+(side==="A"?"B":"A")).textContent==="") send(side, lastHeard[side]); };
+  try{ rec.start(); recs[side]=rec; paintBtns(); micTimer[side]=setTimeout(function(){ if(recs[side]){ try{recs[side].stop();}catch(e){} } }, 12000); }
+  catch(e){ recs[side]=null; paintBtns(); }
 }
-function bindMic(side){
-  $("mic"+side).onclick=function(){
-    if(recs[side]){ killMic(side); return; }
-    startMic(side);
-  };
-}
-bindMic("A"); bindMic("B");
+$("micA").onclick=function(){ recs.A?killMic("A"):startMic("A"); };
+$("micB").onclick=function(){ recs.B?killMic("B"):startMic("B"); };
 document.addEventListener("visibilitychange", function(){
   if(document.hidden){ killMic("A"); killMic("B"); }
   else { try{ if(speechSynthesis.paused) speechSynthesis.resume(); }catch(e){} }
