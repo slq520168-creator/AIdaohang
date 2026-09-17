@@ -8,9 +8,11 @@
 <link rel="manifest" href="manifest.webmanifest"/>
 <link rel="stylesheet" href="style.css?v=241"/>
 <style>
-#fraudBtn,#makeBtn,#faceBtn{border:1px solid #e5e7eb;background:#fff;color:#111827;border-radius:999px;padding:7px 10px;font-size:13px;text-decoration:none;white-space:nowrap}
+#fraudBtn,#makeBtn,#faceBtn,#rhBtn{border:1px solid #e5e7eb;background:#fff;color:#111827;border-radius:999px;padding:7px 10px;font-size:13px;text-decoration:none;white-space:nowrap}
 .faceban{display:block;margin:0 0 10px;padding:14px 12px;border-radius:16px;text-decoration:none;color:#062014;background:linear-gradient(135deg,#2ee59d,#4da3ff);font-weight:800;font-size:16px;text-align:center}
 .faceban small{display:block;font-weight:600;font-size:12px;opacity:.9;margin-top:3px}
+.rhban{display:block;margin:0 0 10px;padding:14px 12px;border-radius:16px;text-decoration:none;color:#fff;background:linear-gradient(135deg,#7c5cff,#ff5ea8);font-weight:800;font-size:16px;text-align:center}
+.rhban small{display:block;font-weight:600;font-size:12px;opacity:.92;margin-top:3px}
 #pop{display:block!important}
 .rank{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(5,auto);grid-auto-flow:column;gap:0 8px}
 </style>
@@ -18,10 +20,12 @@
 <body>
 <div id="sitebg" aria-hidden="true"><div class="slide s1"></div><div class="slide s2"></div><div class="slide s3"></div></div>
 <div id="scroll">
+<a class="rhban" id="rhBan" href="https://www.runninghub.ai/" target="_blank" rel="noopener">网页出图 · RunningHub<small>工作流可用 · 有额度</small></a>
 <a class="faceban" id="faceBan" href="./face-translate.html">面对面翻译 · 中英柬<small>语音 / 打字 / 拍照 · 双方都能说</small></a>
 <header class="top">
   <div><h1 id="brand">全球优选AI导航</h1><p class="sub" id="meta"></p></div>
   <div class="acts">
+    <a id="rhBtn" href="https://www.runninghub.ai/" target="_blank" rel="noopener">出图</a>
     <a id="faceBtn" href="./face-translate.html">翻译</a>
     <a id="makeBtn" href="./create.html">创作</a>
     <a id="fraudBtn" href="./fraud.html">防骗指南</a>
