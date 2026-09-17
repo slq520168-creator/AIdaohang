@@ -5,25 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no">
 <title>面对面翻译</title>
 <style>
-  :root { --gold:#d4b07a; --gold2:#f0d7a8; --ink:#f6f1e8; }
   * { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
-  html,body { height:100%; background:#0b0c10; color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans Khmer",sans-serif; }
-  .wrap { height:100dvh; max-width:480px; margin:0 auto; display:grid; grid-template-rows:1fr auto 1fr; background:radial-gradient(900px 360px at 50% 0,rgba(212,176,122,.14),transparent 55%),linear-gradient(180deg,#14161c,#0c0d12 50%,#14161c); }
-  .pane { display:flex; flex-direction:column; padding:8px 10px; min-height:0; }
+  html,body { height:100%; background:#f6f3ee; color:#1f1b16; font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans Khmer",sans-serif; }
+  .wrap { height:100dvh; max-width:480px; margin:0 auto; display:grid; grid-template-rows:1fr auto 1fr; background:#f6f3ee; }
+  .pane { display:flex; flex-direction:column; padding:8px 10px; min-height:0; background:#f6f3ee; }
   .flip { transform:rotate(180deg); }
-  .name { text-align:center; font-size:18px; font-weight:700; letter-spacing:.18em; color:var(--gold2); }
-  .box { flex:1; min-height:40px; margin:6px 0; padding:8px; border:1px solid rgba(212,176,122,.28); border-radius:10px; background:rgba(255,255,255,.04); font-size:clamp(18px,5vw,26px); font-weight:650; text-align:center; overflow:auto; }
+  .name { text-align:center; font-size:18px; font-weight:700; letter-spacing:.18em; color:#6a4e2e; }
+  .box { flex:1; min-height:40px; margin:6px 0; padding:8px; border:1px solid #e4d8c6; border-radius:10px; background:#fff; color:#1f1b16; font-size:clamp(18px,5vw,26px); font-weight:650; text-align:center; overflow:auto; }
   .bar { display:grid; grid-template-columns:repeat(5,1fr); gap:4px; margin-top:6px; }
-  .btn { height:34px; border:1px solid rgba(212,176,122,.35); border-radius:8px; background:rgba(255,255,255,.04); color:var(--gold2); font-weight:700; font-size:11px; }
-  .btn.live { background:#8a2a2a; color:#fff; }
-  textarea { margin-top:6px; width:100%; min-height:42px; resize:none; border-radius:10px; padding:8px 10px; font-size:16px; background:#fff; color:#111; border:1px solid rgba(212,176,122,.35); }
-  .mid { padding:8px 10px; border-top:1px solid rgba(212,176,122,.28); border-bottom:1px solid rgba(212,176,122,.28); background:rgba(8,8,12,.55); }
+  .btn { height:34px; border:1px solid #e0d3bf; border-radius:8px; background:#fff; color:#5a442c; font-weight:700; font-size:11px; }
+  .btn.live { background:#c44; color:#fff; }
+  textarea { margin-top:6px; width:100%; min-height:42px; resize:none; border-radius:10px; padding:8px 10px; font-size:16px; background:#fff; color:#111; border:1px solid #e0d3bf; }
+  .mid { padding:8px 10px; border-top:1px solid #e4d8c6; border-bottom:1px solid #e4d8c6; background:#efe8dc; }
   .pick { display:flex; align-items:center; gap:8px; }
-  select { flex:1; height:34px; border-radius:8px; background:#17181e; color:var(--gold2); border:1px solid rgba(212,176,122,.4); font-size:14px; font-weight:700; text-align:center; }
+  select { flex:1; height:34px; border-radius:8px; background:#fff; color:#3d2e1c; border:1px solid #e0d3bf; font-size:14px; font-weight:700; text-align:center; }
   .kb { display:grid; gap:4px; }
   .kr { display:flex; gap:4px; }
-  .k { flex:1; height:30px; border:0; border-radius:6px; background:#1c1e26; color:#f3ead8; font-size:13px; font-weight:700; }
-  .k.act { background:#2a2418; color:var(--gold2); }
+  .k { flex:1; height:30px; border:0; border-radius:6px; background:#fff; color:#2a2418; font-size:13px; font-weight:700; box-shadow:0 0 0 1px #e4d8c6; }
+  .k.act { background:#efe8dc; color:#5a442c; }
   .k.wide { flex:2; }
   input[type=file] { display:none; }
 </style>
