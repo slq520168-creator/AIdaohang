@@ -1,4 +1,25 @@
 (function(){
+  function killMic(){
+    try{if(window.speechSynthesis)speechSynthesis.cancel();}catch(e){}
+    try{
+      var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+      if(SR&&window.__navRec){try{window.__navRec.abort();}catch(e){}window.__navRec=null;}
+    }catch(e){}
+    try{
+      if(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia){
+        /* stop any leftover tracks if page kept a global stream */
+      }
+    }catch(e){}
+    try{
+      var vids=document.querySelectorAll('video,audio');
+      for(var i=0;i<vids.length;i++){try{vids[i].pause();vids[i].srcObject=null;}catch(e){}}
+    }catch(e){}
+  }
+  killMic();
+  window.addEventListener('pagehide',killMic);
+  window.addEventListener('freeze',killMic);
+  document.addEventListener('visibilitychange',function(){if(document.hidden)killMic();});
+
   if(document.getElementById('tabbar')) return;
   var s=document.createElement('style');
   s.textContent='html{height:100%}body{min-height:100%;padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))!important}#tabbar{position:fixed!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;width:100%!important;z-index:2147483647!important;display:flex!important;align-items:stretch;justify-content:space-around;height:calc(56px + env(safe-area-inset-bottom,0px));padding:4px 0 env(safe-area-inset-bottom,0px)!important;margin:0!important;background:#fff!important;border-top:1px solid #e5e7eb;transform:translate3d(0,0,0);-webkit-transform:translate3d(0,0,0);pointer-events:auto}#tabbar a{flex:1;margin:0!important;padding:6px 0 0!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none!important;color:#6b7280!important;font-size:10px;line-height:1;background:transparent!important;border:0!important;border-radius:0!important;position:static!important;top:auto!important;left:auto!important;right:auto!important;bottom:auto!important}#tabbar a svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}#tabbar a.on{color:#2563eb!important}';
