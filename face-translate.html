@@ -82,16 +82,52 @@ const SPEECH = {"zh-CN":"zh-CN","en":"en-US","km-KM":"km-KH"};
 const EN = ["qwertyuiop","asdfghjkl","zxcvbnm"];
 const KM = ["កខគងចឆជញ","តថទនបផពម","យរលវសហអ","ាិីុូេោំ់"];
 const $ = id => document.getElementById(id);
-let ocrSide="B", draftA="", recs={A:null,B:null}, micTimer={A:0,B:0};
+let ocrSide="B", draftA="", recs={A:null,B:null}, micTimer={A:0,B:0}, lastHeard={A:"",B:""}, speakQ=[], speakBusy=false;
+function pickVoice(lang){
+  const list=speechSynthesis.getVoices()||[];
+  const pre=(SPEECH[lang]||"en-US").slice(0,2).toLowerCase();
+  return list.find(v=>/en-US/i.test(v.lang)&&/Samantha|Siri|Karen|Daniel/i.test(v.name))
+    || list.find(v=>(v.lang||"").toLowerCase().startsWith(pre)&&v.localService)
+    || list.find(v=>(v.lang||"").toLowerCase().startsWith(pre))
+    || null;
+}
 function unlockTTS(){
   try{
+    if(speechSynthesis.paused) speechSynthesis.resume();
     const u=new SpeechSynthesisUtterance(" ");
     u.volume=0; u.rate=1; u.lang="en-US";
-    speechSynthesis.speak(u); speechSynthesis.cancel();
+    const v=pickVoice("en"); if(v) u.voice=v;
+    speechSynthesis.speak(u);
   }catch(e){}
 }
 document.addEventListener("touchstart", unlockTTS, {passive:true});
 document.addEventListener("click", unlockTTS);
+speechSynthesis.getVoices();
+speechSynthesis.onvoiceschanged=function(){ speechSynthesis.getVoices(); };
+function nextSpeak(){
+  if(!speakQ.length){ speakBusy=false; return; }
+  speakBusy=true;
+  try{ if(speechSynthesis.paused) speechSynthesis.resume(); }catch(e){}
+  const job=speakQ.shift();
+  const u=new SpeechSynthesisUtterance(job.text);
+  u.lang=SPEECH[job.lang]||"en-US";
+  u.rate=job.lang==="en"?0.92:1;
+  u.volume=1;
+  const v=pickVoice(job.lang); if(v) u.voice=v;
+  u.onend=function(){ setTimeout(nextSpeak, 80); };
+  u.onerror=function(){ setTimeout(nextSpeak, 80); };
+  speechSynthesis.speak(u);
+}
+function speakNow(text, lang){
+  text=String(text||"").trim();
+  if(!text || lang==="km-KM") return;
+  const parts=text.split(/(?<=[.!?。！？])\s+/).map(s=>s.trim()).filter(Boolean);
+  const chunks=parts.length?parts:[text];
+  speakQ=chunks.map(t=>({text:t, lang:lang}));
+  try{ speechSynthesis.cancel(); }catch(e){}
+  speakBusy=false;
+  setTimeout(nextSpeak, 120);
+}
 function addA(ch){ draftA+=ch; $("boxA").textContent=draftA; }
 function delA(){ draftA=draftA.slice(0,-1); $("boxA").textContent=draftA; }
 function makeKb(){
@@ -108,36 +144,22 @@ function makeKb(){
   });
   const last=document.createElement("div"); last.className="kr";
   const d=document.createElement("button"); d.className="k act"; d.type="button"; d.textContent="⌫"; d.onclick=delA;
-  const s=document.createElement("button"); s.className="k wide act"; s.type="button"; s.id="spaceA"; s.textContent=UI[lang].space; s.onclick=()=>addA(" ");
+  const s=document.createElement("button"); s.className="k wide act"; s.type="button"; s.textContent=UI[lang].space; s.onclick=()=>addA(" ");
   last.appendChild(d); last.appendChild(s); root.appendChild(last);
 }
-function applyLang(){
+function paintBtns(){
   const a = UI[$("toLang").value], b = UI[$("fromLang").value];
   $("nameA").textContent=a.name; $("micA").textContent=recs.A?a.stop:a.mic; $("speakA").textContent=a.speak; $("camA").textContent=a.cam; $("clearA").textContent=a.clear; $("sendA").textContent=a.send;
   $("nameB").textContent=b.name; $("micB").textContent=recs.B?b.stop:b.mic; $("speakB").textContent=b.speak; $("camB").textContent=b.cam; $("clearB").textContent=b.clear; $("sendB").textContent=b.send;
-  $("inputB").lang=$("fromLang").value;
   $("micA").classList.toggle("live", !!recs.A);
   $("micB").classList.toggle("live", !!recs.B);
-  makeKb();
 }
+function applyLang(){ paintBtns(); makeKb(); $("inputB").lang=$("fromLang").value; }
 $("fromLang").onchange=$("toLang").onchange=applyLang;
-function speakNow(text, lang){
-  text=String(text||"").trim();
-  if(!text || lang==="km-KM") return;
-  try{ speechSynthesis.cancel(); }catch(e){}
-  const u=new SpeechSynthesisUtterance(text);
-  u.lang=SPEECH[lang]||"en-US"; u.rate=1; u.volume=1;
-  const pre=u.lang.slice(0,2).toLowerCase();
-  const v=(speechSynthesis.getVoices()||[]).find(x=>(x.lang||"").toLowerCase().startsWith(pre));
-  if(v) u.voice=v;
-  speechSynthesis.speak(u);
-}
-speechSynthesis.getVoices();
-speechSynthesis.onvoiceschanged=function(){ speechSynthesis.getVoices(); };
 $("speakA").onclick=function(){ unlockTTS(); speakNow($("boxA").textContent, $("toLang").value); };
 $("speakB").onclick=function(){ unlockTTS(); speakNow($("boxB").textContent||$("inputB").value, $("fromLang").value); };
-$("clearA").onclick=function(){ draftA=""; $("boxA").textContent=""; try{speechSynthesis.cancel();}catch(e){} };
-$("clearB").onclick=function(){ $("boxB").textContent=""; $("inputB").value=""; try{speechSynthesis.cancel();}catch(e){} };
+$("clearA").onclick=function(){ draftA=""; $("boxA").textContent=""; speakQ=[]; try{speechSynthesis.cancel();}catch(e){} };
+$("clearB").onclick=function(){ $("boxB").textContent=""; $("inputB").value=""; speakQ=[]; try{speechSynthesis.cancel();}catch(e){} };
 async function translate(text,from,to){
   if(from===to) return text;
   const url="https://api.mymemory.translated.net/get?q="+encodeURIComponent(text)+"&langpair="+encodeURIComponent(from+"|"+to);
@@ -160,7 +182,7 @@ async function send(side,text){
   try{
     const dst=await translate(text,from,to);
     $("box"+other).textContent=dst;
-    speakNow(dst,to);
+    setTimeout(function(){ speakNow(dst,to); }, 280);
   }catch(e){ $("box"+other).textContent="fail"; }
 }
 $("sendA").onclick=function(){ send("A"); };
@@ -169,33 +191,57 @@ $("inputB").addEventListener("keydown",e=>{ if(e.key==="Enter"&&!e.shiftKey){ e.
 function killMic(side){
   if(micTimer[side]){ clearTimeout(micTimer[side]); micTimer[side]=0; }
   const rec=recs[side]; recs[side]=null;
-  if(rec){ rec.onresult=null; rec.onend=null; rec.onerror=null; try{rec.stop();}catch(e){} try{rec.abort();}catch(e){} }
-  applyLang();
+  if(rec){ try{rec.stop();}catch(e){} }
+  paintBtns();
 }
-function killAllMic(){ killMic("A"); killMic("B"); }
 function startMic(side){
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition; if(!SR) return;
-  killMic(side); unlockTTS();
+  killMic("A"); killMic("B");
+  speakQ=[]; try{speechSynthesis.cancel();}catch(e){}
   const lang=side==="B"?$("fromLang").value:$("toLang").value;
+  lastHeard[side]="";
   const rec=new SR();
-  rec.lang=SPEECH[lang]||"zh-CN"; rec.continuous=false; rec.interimResults=true; rec.maxAlternatives=1;
+  rec.lang=SPEECH[lang]||"zh-CN";
+  rec.continuous=false;
+  rec.interimResults=true;
+  rec.maxAlternatives=1;
   $("box"+side).textContent=UI[lang].listen;
   rec.onresult=function(ev){
-    let t=""; for(let i=0;i<ev.results.length;i++) t += ev.results[i][0].transcript; t=t.trim(); if(!t) return;
-    putText(side, t);
-    if(ev.results[ev.results.length-1].isFinal){ killMic(side); send(side, t); }
+    let t=""; for(let i=0;i<ev.results.length;i++) t += ev.results[i][0].transcript;
+    t=t.trim(); if(!t) return;
+    lastHeard[side]=t; putText(side, t);
+    if(ev.results[ev.results.length-1].isFinal){
+      recs[side]=null; paintBtns();
+      try{rec.stop();}catch(e){}
+      send(side, t);
+    }
   };
-  rec.onerror=function(){ killMic(side); };
-  rec.onend=function(){ recs[side]=null; applyLang(); };
-  try{ rec.start(); recs[side]=rec; applyLang(); micTimer[side]=setTimeout(function(){ killMic(side); }, 8000); }
-  catch(e){ killMic(side); }
+  rec.onerror=function(){
+    recs[side]=null; paintBtns();
+    if(lastHeard[side]) send(side, lastHeard[side]);
+  };
+  rec.onend=function(){
+    recs[side]=null; paintBtns();
+    if(lastHeard[side] && $("box"+ (side==="A"?"B":"A")).textContent==="") send(side, lastHeard[side]);
+  };
+  try{
+    rec.start();
+    recs[side]=rec;
+    paintBtns();
+    micTimer[side]=setTimeout(function(){ if(recs[side]){ try{recs[side].stop();}catch(e){} } }, 12000);
+  }catch(e){ recs[side]=null; paintBtns(); }
 }
 function bindMic(side){
-  $("mic"+side).onclick=function(){ if(recs[side]){ killMic(side); return; } startMic(side); };
+  $("mic"+side).onclick=function(){
+    if(recs[side]){ killMic(side); return; }
+    startMic(side);
+  };
 }
 bindMic("A"); bindMic("B");
-document.addEventListener("visibilitychange", function(){ if(document.hidden) killAllMic(); });
-window.addEventListener("pagehide", killAllMic);
+document.addEventListener("visibilitychange", function(){
+  if(document.hidden){ killMic("A"); killMic("B"); }
+  else { try{ if(speechSynthesis.paused) speechSynthesis.resume(); }catch(e){} }
+});
 $("camA").onclick=function(){ ocrSide="A"; $("file").click(); };
 $("camB").onclick=function(){ ocrSide="B"; $("file").click(); };
 $("file").onchange=async function(e){
