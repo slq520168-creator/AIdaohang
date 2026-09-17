@@ -109,32 +109,36 @@ function draw(side){
     g.stroke();raf=requestAnimationFrame(tick);
   })();
 }
-function finish(side){
-  if(done)return;done=true;
-  const text=heard;live=null;hardStop();paint();
-  if(side&&text)send(side,text);
-}
-async function begin(side){
-  if(live===side){finish(side);return;}
-  if(live)finish(live);
-  done=false;heard="";live=side;paint();
-  try{
-    stream=await navigator.mediaDevices.getUserMedia({audio:true,video:false});
-    const AC=window.AudioContext||window.webkitAudioContext;
-    actx=new AC();if(actx.state==="suspended")await actx.resume();
-    an=actx.createAnalyser();an.fftSize=256;
-    actx.createMediaStreamSource(stream).connect(an);
-    draw(side);
-  }catch(e){live=null;paint();return;}
+function startRec(side){
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
   if(!SR)return;
   rec=new SR();
   rec.lang=SPEECH[side==="B"?$("fromLang").value:$("toLang").value]||"zh-CN";
   rec.continuous=false;rec.interimResults=true;
   rec.onresult=function(ev){let t="";for(let i=0;i<ev.results.length;i++)t+=ev.results[i][0].transcript;t=t.trim();if(!t)return;heard=t;putText(side,t);if(ev.results[ev.results.length-1].isFinal)finish(side);};
-  rec.onerror=function(){if(heard)finish(side);else{done=true;live=null;hardStop();paint();}};
-  rec.onend=function(){if(!done){if(heard)finish(side);else{done=true;live=null;hardStop();paint();}}};
+  rec.onerror=function(){if(heard)finish(side);};
+  rec.onend=function(){if(!done&&heard)finish(side);};
   try{rec.start();}catch(e){}
+}
+function finish(side){
+  if(done)return;done=true;
+  const text=heard;live=null;hardStop();paint();
+  if(side&&text)send(side,text);
+}
+function begin(side){
+  if(live===side){finish(side);return;}
+  if(live)finish(live);
+  done=false;heard="";live=side;paint();
+  startRec(side);
+  navigator.mediaDevices.getUserMedia({audio:true,video:false}).then(async function(s){
+    if(live!==side){s.getTracks().forEach(t=>t.stop());return;}
+    stream=s;
+    const AC=window.AudioContext||window.webkitAudioContext;
+    actx=new AC();if(actx.state==="suspended")await actx.resume();
+    an=actx.createAnalyser();an.fftSize=256;
+    actx.createMediaStreamSource(stream).connect(an);
+    draw(side);
+  }).catch(function(){});
 }
 $("micA").onclick=function(){live==="A"?finish("A"):begin("A");};
 $("micB").onclick=function(){live==="B"?finish("B"):begin("B");};
