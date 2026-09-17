@@ -83,10 +83,11 @@ const EN = ["qwertyuiop","asdfghjkl","zxcvbnm"];
 const KM = ["កខគងចឆជញ","តថទនបផពម","យរលវសហអ","ាិីុូេោំ់"];
 const $ = id => document.getElementById(id);
 let ocrSide="B", draftA="", recs={A:null,B:null}, micTimer={A:0,B:0}, lastHeard={A:"",B:""}, speakQ=[], speakBusy=false;
+function code(lang){ if(String(lang).indexOf("zh")===0) return "zh-CN"; if(String(lang).indexOf("km")===0) return "km"; return "en"; }
 function pickVoice(lang){
   const list=speechSynthesis.getVoices()||[];
   const pre=(SPEECH[lang]||"en-US").slice(0,2).toLowerCase();
-  return list.find(v=>/en-US/i.test(v.lang)&&/Samantha|Siri|Karen|Daniel/i.test(v.name))
+  return list.find(v=>/en-US/i.test(v.lang)&&/Samantha|Siri|Karen|Daniel|Google US English/i.test(v.name))
     || list.find(v=>(v.lang||"").toLowerCase().startsWith(pre)&&v.localService)
     || list.find(v=>(v.lang||"").toLowerCase().startsWith(pre))
     || null;
@@ -94,7 +95,7 @@ function pickVoice(lang){
 function unlockTTS(){
   try{
     if(speechSynthesis.paused) speechSynthesis.resume();
-    const u=new SpeechSynthesisUtterance(" ");
+    const u=new SpeechSynthesisUtterance(".");
     u.volume=0; u.rate=1; u.lang="en-US";
     const v=pickVoice("en"); if(v) u.voice=v;
     speechSynthesis.speak(u);
@@ -114,19 +115,18 @@ function nextSpeak(){
   u.rate=job.lang==="en"?0.92:1;
   u.volume=1;
   const v=pickVoice(job.lang); if(v) u.voice=v;
-  u.onend=function(){ setTimeout(nextSpeak, 80); };
-  u.onerror=function(){ setTimeout(nextSpeak, 80); };
+  u.onend=function(){ setTimeout(nextSpeak, 60); };
+  u.onerror=function(){ setTimeout(nextSpeak, 60); };
   speechSynthesis.speak(u);
 }
 function speakNow(text, lang){
   text=String(text||"").trim();
   if(!text || lang==="km-KM") return;
   const parts=text.split(/(?<=[.!?。！？])\s+/).map(s=>s.trim()).filter(Boolean);
-  const chunks=parts.length?parts:[text];
-  speakQ=chunks.map(t=>({text:t, lang:lang}));
+  speakQ=(parts.length?parts:[text]).map(t=>({text:t, lang:lang}));
   try{ speechSynthesis.cancel(); }catch(e){}
   speakBusy=false;
-  setTimeout(nextSpeak, 120);
+  setTimeout(nextSpeak, 100);
 }
 function addA(ch){ draftA+=ch; $("boxA").textContent=draftA; }
 function delA(){ draftA=draftA.slice(0,-1); $("boxA").textContent=draftA; }
@@ -160,12 +160,22 @@ $("speakA").onclick=function(){ unlockTTS(); speakNow($("boxA").textContent, $("
 $("speakB").onclick=function(){ unlockTTS(); speakNow($("boxB").textContent||$("inputB").value, $("fromLang").value); };
 $("clearA").onclick=function(){ draftA=""; $("boxA").textContent=""; speakQ=[]; try{speechSynthesis.cancel();}catch(e){} };
 $("clearB").onclick=function(){ $("boxB").textContent=""; $("inputB").value=""; speakQ=[]; try{speechSynthesis.cancel();}catch(e){} };
+function readGoogle(data){
+  if(typeof data==="string") return data;
+  if(Array.isArray(data)){
+    if(typeof data[0]==="string") return data[0];
+    return data.map(function(row){ return Array.isArray(row)?(row[0]||""):String(row||""); }).join("");
+  }
+  return "";
+}
 async function translate(text,from,to){
   if(from===to) return text;
-  const url="https://api.mymemory.translated.net/get?q="+encodeURIComponent(text)+"&langpair="+encodeURIComponent(from+"|"+to);
-  const res=await fetch(url); const data=await res.json();
-  const out=data&&data.responseData&&data.responseData.translatedText||"";
-  if(!out||/INVALID|QUERY LENGTH|MYMEMORY WARNING/i.test(out)) throw new Error("fail");
+  const sl=code(from), tl=code(to);
+  const url="https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl="+sl+"&tl="+tl+"&q="+encodeURIComponent(text);
+  const res=await fetch(url);
+  const data=await res.json();
+  const out=readGoogle(data).trim();
+  if(!out) throw new Error("fail");
   return out;
 }
 function putText(side, text){
@@ -222,7 +232,7 @@ function startMic(side){
   };
   rec.onend=function(){
     recs[side]=null; paintBtns();
-    if(lastHeard[side] && $("box"+ (side==="A"?"B":"A")).textContent==="") send(side, lastHeard[side]);
+    if(lastHeard[side] && $("box"+(side==="A"?"B":"A")).textContent==="") send(side, lastHeard[side]);
   };
   try{
     rec.start();
