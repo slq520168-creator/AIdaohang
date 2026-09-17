@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
+<title>本站出图</title>
+<style>
+html,body{margin:0;background:#f6f3ee;color:#1f1b16;font-family:-apple-system,"PingFang SC",sans-serif}
+.w{max-width:480px;margin:0 auto;padding:calc(12px + env(safe-area-inset-top)) 14px calc(24px + env(safe-area-inset-bottom))}
+.top{display:flex;gap:10px;align-items:center;margin-bottom:12px}
+.back{color:#5a442c;text-decoration:none;background:#fff;border:1px solid #e4d8c6;border-radius:999px;padding:8px 12px}
+h1{font-size:18px;margin:0}
+textarea{width:100%;min-height:120px;border:1px solid #e4d8c6;border-radius:12px;padding:10px;font-size:15px;box-sizing:border-box}
+.row{display:flex;gap:8px;margin:10px 0}
+select,.go{height:40px;border-radius:10px;border:1px solid #e4d8c6;background:#fff}
+select{flex:1}
+.go{flex:1.2;background:#7c5cff;color:#fff;border:0;font-weight:700}
+img{width:100%;border-radius:14px;background:#fff;min-height:200px;object-fit:contain}
+.tip{font-size:12px;opacity:.7;margin:8px 0 12px}
+</style>
+</head>
+<body>
+<div class="w">
+  <div class="top"><a class="back" href="./create.html">返回</a><h1>本站出图</h1></div>
+  <p class="tip">免费 Pollinations 接口，无登录。网络忙时要等几秒。</p>
+  <textarea id="p" placeholder="英文提示词"></textarea>
+  <div class="row">
+    <select id="size">
+      <option value="768x1024">768×1024</option>
+      <option value="1024x1024">1024×1024</option>
+      <option value="1024x768">1024×768</option>
+      <option value="512x768">512×768</option>
+    </select>
+    <button class="go" id="go" type="button">生成</button>
+  </div>
+  <img id="out" alt=""/>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+$("go").onclick=function(){
+  const text=($("p").value||"").trim();
+  if(!text) return;
+  const [w,h]=$("size").value.split("x");
+  const url="https://image.pollinations.ai/prompt/"+encodeURIComponent(text)+"?model=flux&width="+w+"&height="+h+"&nologo=true&safe=false&enhance=false&seed="+Date.now();
+  $("out").src=url;
+};
+</script>
+</body>
+</html>
