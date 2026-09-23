@@ -27,10 +27,10 @@ select{height:26px;border-radius:6px;font-weight:700;font-size:12px}
 <div class="wrap">
 <section class="pane flip">
   <div class="bar">
-    <button class="btn" id="speakA" type="button">Speak</button>
-    <button class="btn" id="camA" type="button">Photo</button>
-    <button class="btn" id="clearA" type="button">Clear</button>
-    <button class="btn" id="sendA" type="button">Translate</button>
+    <button class="btn" id="speakA" type="button" data-i18n="ft_speak">Speak</button>
+    <button class="btn" id="camA" type="button" data-i18n="ft_photo">Photo</button>
+    <button class="btn" id="clearA" type="button" data-i18n="ft_clear">Clear</button>
+    <button class="btn" id="sendA" type="button" data-i18n="ft_go">Translate</button>
   </div>
   <div class="name" id="nameA">English</div>
   <div class="stage"><div class="box" id="boxA"></div><button class="mic" id="micA" type="button">🎤</button></div>
@@ -55,22 +55,23 @@ select{height:26px;border-radius:6px;font-weight:700;font-size:12px}
     <option value="ja-JP">日</option>
     <option value="ko-KR">한</option>
   </select>
-  <div class="tip">按住话筒说话，松手发出</div>
+  <div class="tip" data-i18n="ft_tip">按住话筒说话，松手发出</div>
 </div>
 <section class="pane">
   <div class="name" id="nameB">中文</div>
   <div class="stage"><div class="box" id="boxB"></div><button class="mic" id="micB" type="button">🎤</button></div>
   <div class="bar">
-    <button class="btn" id="speakB" type="button">播报</button>
-    <button class="btn" id="camB" type="button">拍照</button>
-    <button class="btn" id="clearB" type="button">清空</button>
-    <button class="btn" id="sendB" type="button">翻译</button>
+    <button class="btn" id="speakB" type="button" data-i18n="ft_speak">播报</button>
+    <button class="btn" id="camB" type="button" data-i18n="ft_photo">拍照</button>
+    <button class="btn" id="clearB" type="button" data-i18n="ft_clear">清空</button>
+    <button class="btn" id="sendB" type="button" data-i18n="ft_go">翻译</button>
   </div>
   <textarea id="inputB"></textarea>
 </section>
 </div>
 <input id="file" type="file" accept="image/*" capture="environment" hidden>
 <audio id="player" playsinline></audio>
+<script src="./i18n.js?v=260"></script>
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 <script>
 const NAMES={"zh-CN":"中文",en:"English","km-KM":"ភាសាខ្មែរ","th-TH":"ไทย","vi-VN":"Việt","ja-JP":"日","ko-KR":"한"};
