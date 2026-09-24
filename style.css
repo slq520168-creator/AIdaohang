@@ -99,7 +99,7 @@ body{top:0!important}
 .detail{grid-column:1/-1;background:var(--card);border:1px solid var(--acc);border-radius:12px;padding:12px;margin:0 0 4px;line-height:1.6;color:var(--txt)}
 html[data-theme="dark"] .detail{background:rgba(22,27,34,.92);color:#e6edf3}
 .detail p{margin:0 0 6px;font-size:14px}
-.detail .d-url{color:var(--muted);font-size:12px;word-break:break-all}
+.detail .d-url{color:var(--muted);font-size:12px;word-break:break-all;max-height:3.6em;overflow:hidden}
 .detail .d-go{display:inline-block;margin-top:4px;padding:8px 16px;border-radius:10px;background:var(--acc);color:#fff;text-decoration:none;font-size:14px}
 #hot li .detail{margin:6px 0 8px}
 
