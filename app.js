@@ -91,7 +91,7 @@ function sortButtons(box){if(!box)return;const btns=[...box.querySelectorAll(':s
 let sortingChips=false;
 function sortLangChips(){if(sortingChips)return;sortingChips=true;sortButtons(sideEl);sortButtons(tagsEl);sortingChips=false;}
 window.sortLangChips=sortLangChips;
-function watchChips(box){if(!box||box._chipWatch)return;box._chipWatch=1;let t=null;new MutationObserver(()=>{clearTimeout(t);t=setTimeout(sortLangChips,80);}).observe(box,{subtree:true,childList:true,characterData:true});}
+function watchChips(box){/* no-op: observer caused chip reorder flicker on load */}
 function allInnerTags(){
   const src=[]; const seen=new Set();
   Object.keys(GROUP_SUBS).forEach(function(id){
@@ -124,7 +124,7 @@ function card(x){const title=showName(x);const desc=showDesc(x);const href=isHtt
 function render(){const q=(qEl.value||'').trim().toLowerCase();const s=t();const key=[...selected].join(',')+'|'+[...tags].join(',')+'|'+q;if(key!==lastKey){shown=80;lastKey=key;}if(hotBlock)hotBlock.style.display=q?'none':'block';if(listTitle)listTitle.textContent=s.all;if(popEl){popEl.hidden=false;popEl.classList.remove('cover');}var under=document.getElementById('under');if(under)under.classList.remove('open');metaEl.textContent=tools.length+s.tools;filtered=tools.filter(x=>{const hit=!q||[x.name,x.desc,x.desc_en||'',x.cat,x.how||'',x.url||''].join(' ').toLowerCase().includes(q);return hit&&(q||(matchGroup(x)&&matchTag(x)));});countEl.textContent=filtered.length+s.hit;listEl.innerHTML=filtered.slice(0,shown).map(card).join('')||`<p class="count">${s.empty}</p>`;}
 function onScroll(){if(shown>=filtered.length)return;const top=scroller===window?window.scrollY:scroller.scrollTop;const h=scroller===window?window.innerHeight:scroller.clientHeight;const sh=scroller===window?document.body.offsetHeight:scroller.scrollHeight;if(h+top>sh-240){shown+=80;listEl.innerHTML=filtered.slice(0,shown).map(card).join('');}}
 scroller.addEventListener('scroll',onScroll,{passive:true});
-function goTop(){if(scroller===window)window.scrollTo({top:0,behavior:'smooth'});else scroller.scrollTo({top:0,behavior:'smooth'});}
+function goTop(){if(scroller===window)window.scrollTo(0,0);else scroller.scrollTo(0,0);}
 if(topBtn)topBtn.onclick=goTop;
 document.getElementById('brand').onclick=goTop;
 sf.addEventListener('submit',e=>{e.preventDefault();shown=80;render();qEl.blur();goTop();});

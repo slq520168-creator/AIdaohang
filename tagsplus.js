@@ -4,5 +4,5 @@
     if(!TAGS.some(function(t){return t[0]===p[0]})) TAGS.push(p);
     if(typeof TAG_EN!=='undefined') TAG_EN[p[0]]=p[1];
   });
-  if(typeof renderSide==='function') renderSide();
+  /* tags merged; renderSide runs once after load */
 })();

@@ -41,6 +41,4 @@
     window.render=function(){ _r.apply(this,arguments); on(); };
   }
   pop.hidden=true;
-  setTimeout(on,50);
-  setTimeout(on,400);
 })();
