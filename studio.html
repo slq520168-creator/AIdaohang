@@ -1,89 +1,59 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
-<title>优选创作</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
+<title>免费做视频</title>
+<script>try{var _t=localStorage.getItem('theme');if(_t==='dark'||_t==='light')document.documentElement.setAttribute('data-theme',_t);}catch(e){}</script>
+<link rel="stylesheet" href="./sub.css?v=280"/>
 <style>
-*{box-sizing:border-box}
-html,body{margin:0;background:#0b0b0f;color:#eee;font-family:-apple-system,"PingFang SC",sans-serif}
-body{min-height:100dvh;background:radial-gradient(800px 400px at 50% -10%,rgba(255,47,146,.18),transparent 55%),#0b0b0f}
-.w{max-width:480px;margin:0 auto;padding:calc(10px + env(safe-area-inset-top)) 14px 24px}
-.nav{display:flex;justify-content:space-between;margin-bottom:16px}
-.nav a{color:#fff;text-decoration:none;background:#1c1c22;border-radius:999px;padding:7px 12px;font-size:13px}
-h1{margin:0 0 16px;font-size:22px;text-align:center;line-height:1.45}
-.modes{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
-.modes button{background:#17171d;border:1px solid #2a2a33;color:#ddd;border-radius:12px;padding:12px 8px;font-size:14px}
-.modes button.on{border-color:#ff2f92;background:#21101a;color:#fff}
-.box{border:1.5px solid #ff2f92;border-radius:18px;padding:14px;background:#121218}
-.up{width:100%;min-height:120px;border:1.5px dashed #555;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#999;overflow:hidden;background:#1a1a22}
-.up img{width:100%;height:180px;object-fit:cover;display:block}
-textarea,.sel{width:100%;margin-top:10px;background:#1c1c24;border:0;color:#fff;border-radius:10px;padding:12px;font-size:15px}
-button.go{width:100%;margin-top:10px;border:0;border-radius:12px;padding:14px;background:linear-gradient(90deg,#ff4da6,#c44bff);color:#fff;font-size:16px}
-.hint{font-size:12px;color:#888;margin-top:10px;line-height:1.5}
-.stage{display:none;margin-top:12px;border-radius:12px;overflow:hidden;background:#000;aspect-ratio:16/9}
-.stage.on{display:block}
-.stage.v{aspect-ratio:9/16;max-height:70vh}
-.stage.s{aspect-ratio:1/1}
-.stage img{width:120%;height:120%;object-fit:cover;animation:kb 6s ease-in-out forwards}
-@keyframes kb{from{transform:translate(-4%,-4%) scale(1)}to{transform:translate(-12%,-8%) scale(1.18)}}
-.ok{display:none;margin-top:8px;color:#86efac;font-size:13px}
+.vid .card{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin:0 0 10px}
+.vid .card .tx{flex:1;min-width:0}
+.vid .card .n{font-weight:700;font-size:15px}
+.vid .card .d{font-size:12px;line-height:1.45;color:var(--muted);margin-top:3px}
+.vid .card .b{display:inline-block;font-size:11px;line-height:1.4;border-radius:999px;padding:1px 8px;margin-top:5px;background:var(--soft);color:var(--muted)}
+.vid .card .b.free{background:#dcfce7;color:#166534}
+html[data-theme="dark"] .vid .card .b.free{background:#14532d;color:#bbf7d0}
+.vid .card .open{flex:none;text-decoration:none;background:var(--btn);color:#fff;font-weight:700;font-size:14px;border-radius:10px;padding:9px 14px;white-space:nowrap}
 </style>
 </head>
 <body>
-<div class="w">
-  <div class="nav"><a href="./">返回导航</a><a href="create.html">创作入口</a></div>
-  <h1>一张图，一句话，<br>生成可发布的短视频</h1>
-  <div class="modes">
-    <button class="on" data-m="i2v">图生视频</button>
-    <button data-m="t2v">文生视频</button>
-    <button data-m="t2i">文生图</button>
-    <button data-m="i2i">图生图</button>
-  </div>
-  <div class="box">
-    <div class="up" id="up">点这里上传图片</div>
-    <input id="file" type="file" accept="image/*" hidden>
-    <textarea id="prompt" placeholder="请输入你的想象，例如：缓慢推近"></textarea>
-    <select class="sel" id="spec">
-      <option value="16">16:9 / 6秒</option>
-      <option value="9">9:16 / 6秒</option>
-      <option value="1">1:1 / 6秒</option>
-    </select>
-    <button class="go" id="go">生成</button>
-    <p class="hint">点上传 → 点生成，图片会推镜运动。iPhone Safari 录不了文件，用系统录屏保存。</p>
-    <div class="stage" id="stage"><img id="anim" alt=""></div>
-    <div class="ok" id="ok">已生成运镜预览</div>
-  </div>
+<div id="sitebg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<div class="w vid">
+  <div class="top"><a class="back" href="./tools.html?home=1" data-i18n="back">返回</a><h1 data-i18n="vid_title">免费做视频</h1></div>
+  <p class="tip" data-i18n="vid_intro">说明：目前没有“免登录、免密钥、能直接在本站里生成”的免费视频接口。下面是能免费做视频的正规网站，点“打开”在新窗口使用。</p>
+  <div id="list"></div>
 </div>
+<script src="./i18n.js?v=280"></script>
 <script>
-var imgURL='', mode='i2v';
-document.querySelectorAll('.modes button').forEach(function(b){
-  b.onclick=function(){
-    document.querySelectorAll('.modes button').forEach(function(x){x.classList.remove('on')});
-    b.classList.add('on'); mode=b.dataset.m;
-  };
-});
-document.getElementById('up').onclick=function(){document.getElementById('file').click();};
-document.getElementById('file').onchange=function(){
-  var f=this.files&&this.files[0]; if(!f) return;
-  if(imgURL) URL.revokeObjectURL(imgURL);
-  imgURL=URL.createObjectURL(f);
-  document.getElementById('up').innerHTML='<img src="'+imgURL+'">';
-};
-document.getElementById('go').onclick=function(){
-  if(mode!=='i2v'&&mode!=='i2i'){alert('当前只开通图生视频，请先上传图片');return;}
-  if(!imgURL){alert('先点上面上传一张图');return;}
-  var stage=document.getElementById('stage');
-  var anim=document.getElementById('anim');
-  var spec=document.getElementById('spec').value;
-  stage.className='stage on'+(spec==='9'?' v':spec==='1'?' s':'');
-  anim.style.animation='none';
-  anim.src=imgURL;
-  void anim.offsetWidth;
-  anim.style.animation='kb 6s ease-in-out forwards';
-  document.getElementById('ok').style.display='block';
-  stage.scrollIntoView({behavior:'smooth',block:'center'});
-};
+(function(){
+  function T(k){return (window.I18N&&window.I18N.t)?window.I18N.t(k):k;}
+  function zh(){return ((window.I18N&&window.I18N.lang)||'zh')==='zh';}
+  /* real sites, each URL checked to load (v280). cn = URL for Chinese users, g = global */
+  var SITES=[
+    {k:'jimeng',cn:'https://jimeng.jianying.com/',g:'https://dreamina.capcut.com/',free:0},
+    {k:'kling',cn:'https://app.klingai.com/cn/',g:'https://klingai.com/',free:0},
+    {k:'hailuo',cn:'https://hailuoai.com/',g:'https://hailuoai.video/',free:0},
+    {k:'vidu',cn:'https://www.vidu.cn/',g:'https://www.vidu.com/',free:0},
+    {k:'wan',cn:'https://tongyi.aliyun.com/wan/',g:'https://wan.video/',free:0},
+    {k:'pixverse',cn:'https://app.pixverse.ai/',g:'https://app.pixverse.ai/',free:0},
+    {k:'hfwan',cn:'https://huggingface.co/spaces/zerogpu-aoti/wan2-2-fp8da-aoti-faster',g:'https://huggingface.co/spaces/zerogpu-aoti/wan2-2-fp8da-aoti-faster',free:1},
+    {k:'hfltx',cn:'https://huggingface.co/spaces/Lightricks/ltx-video-distilled',g:'https://huggingface.co/spaces/Lightricks/ltx-video-distilled',free:1}
+  ];
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function paint(){
+    try{document.title=T('vid_title');}catch(e){}
+    var z=zh();
+    document.getElementById('list').innerHTML=SITES.map(function(s){
+      return '<div class="card"><div class="tx"><div class="n">'+esc(T('vid_n_'+s.k))+'</div><div class="d">'+esc(T('vid_d_'+s.k))+'</div>'+
+        '<span class="b'+(s.free?' free':'')+'">'+esc(T(s.free?'vid_nologin':'vid_login'))+'</span></div>'+
+        '<a class="open" href="'+esc(z?s.cn:s.g)+'" target="_blank" rel="noopener noreferrer">'+esc(T('vid_open'))+'</a></div>';
+    }).join('');
+  }
+  paint();
+  window.paintVid=paint;
+})();
 </script>
+<script src="./tabbar.js?v=280"></script>
 </body>
 </html>
