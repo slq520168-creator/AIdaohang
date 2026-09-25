@@ -27,7 +27,7 @@
   var keys={pic:'tab_pic',novel:'tab_novel',movie:'tab_movie',home:'home',xiaonuan:'tab_xiaonuan',order:'tab_order',near:'tab_near'};
   var fbs={pic:'图片',novel:'小说',movie:'电影',home:'首页',xiaonuan:'小暖',order:'接单',near:'附近'};
   var items=[
-    {id:'pic',href:'https://www.runninghub.cn/ai-generator',img:'./img/tab-pic.jpg?v=282',p:'M4 5h16v14H4zM4 15l4-4 3 3 3-4 6 5'},
+    {id:'pic',href:'./draw.html',img:'./img/tab-pic.jpg?v=283',p:'M4 5h16v14H4zM4 15l4-4 3 3 3-4 6 5'},
     {id:'novel',href:'./novel.html',img:'./img/tab-novel.jpg?v=279',p:'M5 4h10a3 3 0 013 3v13H8a3 3 0 00-3 3V4zM8 20a3 3 0 013-3h10'},
     {id:'movie',href:'./movie.html',img:'./img/tab-movie.jpg?v=279',p:'M4 7h16v10H4zM8 7l-3-3M16 7l3-3M10 12h4'},
     {id:'home',href:'./tools.html?home=1',img:'./img/tab-home.jpg?v=279',p:'M4 11l8-7 8 7v9H4z'},
@@ -36,7 +36,7 @@
     {id:'near',href:'./near.html',img:'./img/tab-near.jpg?v=279',p:'M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11zM12 11a1.5 1.5 0 110-3 1.5 1.5 0 010 3z'}
   ];
   var file=(location.pathname.split('/').pop()||'').replace(/\.html$/,'');
-  var cur=(file==='tools'||file===''||file==='index')?'home':file;
+  var cur=(file==='draw'||file==='create')?'pic':((file==='tools'||file===''||file==='index')?'home':file);
   function htmlOf(){
     return items.map(function(it){
       var k=keys[it.id];
