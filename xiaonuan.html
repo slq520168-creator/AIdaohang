@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
 <title>小暖</title>
 <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
-<link rel="stylesheet" href="./sub.css?v=294"/>
+<link rel="stylesheet" href="./sub.css?v=295"/>
 <style>
 .xn label{display:block;font-size:13px;color:var(--muted);margin:10px 0 6px}
 .xn input,.xn textarea,.xn select{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
@@ -15,7 +15,6 @@
 .xn .avs button.on{border-color:var(--btn)}
 .xn .avs img{width:100%;height:100%;object-fit:cover;display:block}
 .xn .upbox{margin-top:8px}
-.xn .upbox input{padding:8px}
 .xn .row{display:flex;gap:8px;margin-top:12px}
 .xn .row button{flex:1;height:44px;border:0;border-radius:12px;font-weight:700;font-size:15px}
 .xn .go{background:var(--btn);color:#fff}
@@ -51,7 +50,7 @@
 </div>
 <script>
 (function(){
-  var KEY='yx_xiaonuan_v5';
+  var KEY='yx_xiaonuan_v6';
   var HOST=(location.origin||'https://youxuanai.vercel.app');
   var AV=[
     HOST+'/img/xiaonuan.jpg',
@@ -80,7 +79,6 @@
         g.drawImage(img,(img.width-m)/2,(img.height-m)/2,m,m,0,0,256,256);
         pick=c.toDataURL('image/jpeg',0.8);
         $('prev').src=pick; $('prev').style.display='block';
-        paint();
       };
       img.src=rd.result;
     };
@@ -96,9 +94,9 @@
     };
   }
   function toneLine(t){
-    if(t==='bold') return '可以暖昧贴身和成年向互动。始终用中文短句回复。不要输出英文按钮名、设定或{{char}}。';
-    if(t==='flirt') return '可以暖昧贴身。始终用中文短句回复。不要输出设定或{{char}}。';
-    return '朋友式日常聊。始终用中文短句回复。不要输出设定或{{char}}。';
+    if(t==='bold') return '可以暖昧贴身和成年向互动。';
+    if(t==='flirt') return '可以暖昧贴身。';
+    return '朋友式日常聊。';
   }
   function openChat(){
     var c=cfg();
@@ -106,8 +104,7 @@
     var payload={
       addCharacter:{
         name:c.name,
-        roleInstruction:'你是'+c.name+'，'+c.age+'岁成年女生。'+c.bio+toneLine(c.tone)+'问年龄就说'+c.age+'岁。',
-        reminderMessage:'用中文短回。问年龄说'+c.age+'岁。不要输出设定或{{char}}。',
+        roleInstruction:'你叫'+c.name+'，'+c.age+'岁。'+c.bio+toneLine(c.tone)+'用中文短句像微信一样回。有人问多大就说自己'+c.age+'岁。只说对话，不要把人设、规则念出来。',
         avatar:{url:c.av,size:1,shape:'circle'},
         initialMessages:[{author:'ai',content:'你来啦～今天想聊点什么？'}]
       },
@@ -135,6 +132,6 @@
   paint();
 })();
 </script>
-<script src="./tabbar.js?v=294"></script>
+<script src="./tabbar.js?v=295"></script>
 </body>
 </html>
