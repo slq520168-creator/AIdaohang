@@ -6,23 +6,24 @@
 <meta name="referrer" content="no-referrer"/>
 <title>本站出图</title>
 <script>try{var _t=localStorage.getItem('theme');if(_t==='dark'||_t==='light')document.documentElement.setAttribute('data-theme',_t);}catch(e){}</script>
-<link rel="stylesheet" href="./sub.css?v=281"/>
+<link rel="stylesheet" href="./sub.css?v=282"/>
 <style>
-.draw textarea{display:block;width:100%;min-height:120px;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
+.draw textarea{display:block;width:100%;min-height:110px;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
 .draw .row{display:flex;gap:8px;margin:10px 0}
-.draw select,.draw .go{height:42px;border-radius:10px;font-size:15px}
-.draw select{flex:1;border:1px solid var(--line);background:var(--card);color:var(--txt);padding:0 8px}
-.draw .go{flex:1.2;background:var(--btn);color:#fff;border:0;font-weight:700}
+.draw select,.draw .go{height:42px;border-radius:10px;font-size:14px}
+.draw select{flex:1;border:1px solid var(--line);background:var(--card);color:var(--txt);padding:0 8px;min-width:0}
+.draw .go{flex:0 0 88px;background:var(--btn);color:#fff;border:0;font-weight:700}
 .draw .go:disabled{opacity:.6}
+.draw .chk{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);margin:0 0 8px}
 .draw .st{min-height:20px;font-size:13px;line-height:1.5;color:var(--muted);margin:2px 0 8px}
 .draw .st.err{color:#dc2626}
 html[data-theme="dark"] .draw .st.err{color:#f87171}
 .draw .st.ok{color:#16a34a}
 html[data-theme="dark"] .draw .st.ok{color:#4ade80}
-.draw .res{display:none;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);margin-bottom:10px}
+.draw .res{display:none;border-radius:14px;overflow:hidden;background:#111;border:1px solid var(--line);margin-bottom:10px}
 .draw .res.on{display:block}
-.draw .res img.out{display:block;width:100%;height:auto;min-height:220px;background:#111;object-fit:contain}
-.draw .wait{display:none;align-items:center;justify-content:center;gap:10px;height:80px;border-radius:14px;background:var(--card);border:1px dashed var(--line);color:var(--muted);font-size:13px}
+.draw .res img.out{display:block;width:100%;height:auto;min-height:240px;background:#111;object-fit:contain}
+.draw .wait{display:none;align-items:center;justify-content:center;gap:10px;height:72px;border-radius:14px;background:var(--card);border:1px dashed var(--line);color:var(--muted);font-size:13px}
 .draw .wait.on{display:flex}
 .draw .spin{width:22px;height:22px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--btn);animation:sp 1s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
@@ -35,40 +36,49 @@ html[data-theme="dark"] .draw .st.ok{color:#4ade80}
 <div id="sitebg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
 <div class="w draw">
   <div class="top"><a class="back" href="./tools.html?home=1" data-i18n="back">返回</a><h1 data-i18n="draw_title">本站出图</h1></div>
-  <p class="tip" data-i18n="draw_tip">免费 Pollinations。不用登录。排队 30–90 秒。长按图可保存。</p>
-  <textarea id="p" maxlength="600" placeholder="写提示词，中英文都可" data-i18n-placeholder="draw_ph"></textarea>
+  <p class="tip">默认用 Z-Image / Flux 高清。越好的模型越慢，可能 1–2 分钟。英文提示词更稳。</p>
+  <textarea id="p" maxlength="800" placeholder="photorealistic East Asian woman, natural skin pores, soft window light..."></textarea>
   <div class="row">
-    <select id="size">
-      <option value="768x1024">768×1024</option>
-      <option value="1024x1024">1024×1024</option>
-      <option value="1024x768">1024×768</option>
-      <option value="512x768">512×768</option>
+    <select id="model">
+      <option value="zimage" selected>Z-Image 高清</option>
+      <option value="flux">Flux</option>
+      <option value="gptimage">GPT Image</option>
+      <option value="seedream">Seedream</option>
+      <option value="kontext">Kontext</option>
+      <option value="turbo">Turbo 快</option>
     </select>
-    <button class="go" id="go" type="button" data-i18n="draw_go">生成</button>
+    <select id="size">
+      <option value="1024x1024">1024²</option>
+      <option value="768x1024" selected>768×1024</option>
+      <option value="1024x768">1024×768</option>
+      <option value="1280x720">1280×720</option>
+    </select>
+    <button class="go" id="go" type="button">生成</button>
   </div>
+  <label class="chk"><input type="checkbox" id="boost" checked/> 自动补画质词（细节/真实皮肤/锚利）</label>
   <div class="st" id="st" aria-live="polite"></div>
   <div class="wait" id="wait"><span class="spin"></span><span id="waitTxt"></span></div>
   <div class="res" id="res"><img class="out" id="out" alt="" referrerpolicy="no-referrer" decoding="async"/></div>
   <div class="acts" id="acts"><a id="open" href="#" target="_blank" rel="noopener">新窗口打开</a><button type="button" id="save">下载</button></div>
 </div>
-<script src="./i18n.js?v=281"></script>
+<script src="./i18n.js?v=282"></script>
 <script>
 (function(){
   var $=function(id){return document.getElementById(id);};
-  var TIMEOUT=180000;
-  var busy=false,timer=null,cur='';
+  var TIMEOUT=180000, busy=false, timer=null;
+  var BOOST=', highly detailed, sharp focus, 8k uhd, professional photography, natural skin pores, realistic lighting, no watermark';
   function T(k,s){var v=(window.I18N&&window.I18N.t)?window.I18N.t(k):k;return s==null?v:String(v).replace('{s}',s);}
-  try{document.title=T('draw_title');}catch(e){}
   function status(txt,cls){var el=$('st');el.textContent=txt||'';el.className='st'+(cls?' '+cls:'');}
   function urls(text){
     var wh=$('size').value.split('x');
+    var model=$('model').value;
     var seed=Math.floor(Math.random()*2000000000);
     var q=encodeURIComponent(text);
-    var qs='width='+wh[0]+'&height='+wh[1]+'&seed='+seed+'&model=flux';
+    var qs='width='+wh[0]+'&height='+wh[1]+'&seed='+seed+'&model='+encodeURIComponent(model)+'&enhance=true&quality=hd&private=true';
     return [
       'https://image.pollinations.ai/prompt/'+q+'?'+qs,
-      'https://image.pollinations.ai/prompt/'+q+'?'+qs+'&nologo=true',
-      'https://gen.pollinations.ai/image/'+q+'?'+qs
+      'https://image.pollinations.ai/prompt/'+q+'?width='+wh[0]+'&height='+wh[1]+'&seed='+seed+'&model=flux&enhance=true',
+      'https://gen.pollinations.ai/image/'+q+'?width='+wh[0]+'&height='+wh[1]+'&model='+encodeURIComponent(model)
     ];
   }
   function bind(img, url, cb){
@@ -81,46 +91,35 @@ html[data-theme="dark"] .draw .st.ok{color:#4ade80}
   }
   function tryList(list, i, img, cb){
     if(i>=list.length) return cb(false,'');
-    cur=list[i];
-    $('open').href=cur;
-    bind(img, cur, function(ok){
-      if(ok) cb(true, cur);
-      else tryList(list, i+1, img, cb);
+    $('open').href=list[i];
+    bind(img, list[i], function(ok){
+      if(ok) cb(true, list[i]); else tryList(list, i+1, img, cb);
     });
   }
   $('go').onclick=function(){
     if(busy) return;
     var text=($('p').value||'').trim();
-    if(!text){status(T('draw_empty'),'err');$('p').focus();return;}
-    busy=true;$('go').disabled=true;
-    $('acts').className='acts';status('');
-    var img=$('out');
-    img.removeAttribute('src');
-    $('res').className='res on';
+    if(!text){status(T('draw_empty')||'先写提示词','err');$('p').focus();return;}
+    if($('boost').checked && text.indexOf('highly detailed')<0) text+=BOOST;
+    busy=true;$('go').disabled=true;$('acts').className='acts';status('');
+    var img=$('out'); img.removeAttribute('src'); $('res').className='res on';
     var t0=Date.now();
-    function tick(){var s=Math.round((Date.now()-t0)/1000);$('waitTxt').textContent=T('draw_wait',s);}
+    function tick(){$('waitTxt').textContent='出图中 '+Math.round((Date.now()-t0)/1000)+'s，请勿切页';}
     function end(ok,url){
       clearInterval(timer);busy=false;$('go').disabled=false;$('wait').className='wait';
-      if(ok){
-        $('res').className='res on';
-        $('acts').className='acts on';
-        $('open').href=url;
-        status(T('draw_done',Math.round((Date.now()-t0)/1000)),'ok');
-      } else {
-        status(T('draw_fail'),'err');
-      }
+      if(ok){$('res').className='res on';$('acts').className='acts on';$('open').href=url;status('完成 '+Math.round((Date.now()-t0)/1000)+'s','ok');}
+      else status('失败，换 Z-Image 或 Flux 再试','err');
     }
     $('wait').className='wait on';tick();timer=setInterval(tick,1000);
-    tryList(urls(text), 0, img, end);
+    tryList(urls(text),0,img,end);
   };
   $('save').onclick=function(){
     var u=$('out').src; if(!u) return;
-    var a=document.createElement('a');
-    a.href=u; a.download='ai.png'; a.target='_blank'; a.rel='noopener';
+    var a=document.createElement('a'); a.href=u; a.download='ai.png'; a.target='_blank'; a.rel='noopener';
     document.body.appendChild(a); a.click(); a.remove();
   };
 })();
 </script>
-<script src="./tabbar.js?v=281"></script>
+<script src="./tabbar.js?v=282"></script>
 </body>
 </html>
