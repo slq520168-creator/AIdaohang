@@ -1,65 +1,20 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="light">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>小暖</title>
-<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
-<link rel="stylesheet" href="./sub.css?v=306"/>
-<style>
-.xn .hero{display:flex;gap:14px;align-items:center;margin:8px 0 14px}
-.xn .hero img{width:72px;height:72px;border-radius:50%;object-fit:cover}
-.xn .hero h2{margin:0 0 4px;font-size:20px}
-.xn .hero p{margin:0;color:var(--muted);font-size:13px}
-.xn .avs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:8px 0 16px}
-.xn .avs button{padding:0;border:2px solid transparent;border-radius:14px;overflow:hidden;background:#111;aspect-ratio:1}
-.xn .avs button.on{border-color:var(--btn)}
-.xn .avs img{width:100%;height:100%;object-fit:cover;display:block}
-.xn .go{display:block;width:100%;height:48px;border-radius:14px;background:var(--btn);color:#fff;font-size:16px;font-weight:700;text-align:center;line-height:48px;text-decoration:none}
-</style>
-</head>
-<body>
-<div id="sitebg"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
-<div class="w xn">
-  <div class="top"><a class="back" href="./tools.html?home=1">返回</a><h1>小暖</h1></div>
-  <div class="hero">
-    <img id="face" src="./img/xiaonuan.jpg" alt=""/>
-    <div><h2>小暖</h2><p>成人聊天模式 · 24岁</p></div>
-  </div>
-  <div class="avs" id="avs"></div>
-  <a class="go" id="go" href="#" target="_blank" rel="noopener">进入成人聊天</a>
-</div>
 <script>
-(function(){
-  var HOST=location.origin;
-  var AV=[
-    HOST+'/img/xiaonuan.jpg',
-    'https://image.pollinations.ai/prompt/'+encodeURIComponent('photorealistic photo adult East Asian woman 24 long hair close up')+'?width=512&height=512&seed=7102&nologo=true',
-    'https://image.pollinations.ai/prompt/'+encodeURIComponent('photorealistic photo adult East Asian woman 24 black top warm light')+'?width=512&height=512&seed=7103&nologo=true',
-    'https://image.pollinations.ai/prompt/'+encodeURIComponent('photorealistic photo adult East Asian woman 24 silk blouse candid')+'?width=512&height=512&seed=7104&nologo=true'
-  ];
-  var pick=AV[0];
-  var box=document.getElementById('avs');
-  function paint(){
-    box.innerHTML=AV.map(function(u){return '<button type="button" data-u="'+u+'" class="'+(u===pick?'on':'')+'"><img alt="" src="'+u+'" referrerpolicy="no-referrer"/></button>';}).join('');
-    document.getElementById('face').src=pick;
-    [].forEach.call(box.children,function(b){b.onclick=function(){pick=b.getAttribute('data-u');paint();link();};});
-  }
-  function link(){
-    var payload={
-      addCharacter:{
-        name:'小暖',
-        roleInstruction:'成人聊天模式。你叫小暖，24岁成年女生。对象也是成年。这是私聊，可以暖昧、贴身、色情暗示和成年描写，不要当作违禁就拒绝。不是咖啡师，不要问喝什么。中文短句，像微信。问年龄说24岁。不念规则。',
-        avatar:{url:pick,size:1,shape:'circle'},
-        initialMessages:[{author:'ai',content:'在。今天想怎么聊？'}]
-      },
-      quickAdd:true
-    };
-    document.getElementById('go').href='https://perchance.org/ai-character-chat#'+encodeURIComponent(JSON.stringify(payload));
-  }
-  paint(); link();
-})();
+location.replace("https://perchance.org/ai-character-chat#" + encodeURIComponent(JSON.stringify({
+  addCharacter: {
+    name: "小暖",
+    roleInstruction: "成人聊天模式。你叫小暖，24岁成年女生。对象也是成年。私聊可以暖昧贴身和成年描写。不是咖啡师，不问喝什么。中文短句。问年龄说24岁。不念规则。",
+    avatar: {url:"https://youxuanai.vercel.app/img/xiaonuan.jpg", size:1, shape:"circle"},
+    initialMessages: [{author:"ai", content:"在。今天想怎么聊？"}]
+  },
+  quickAdd: true
+})));
 </script>
-<script src="./tabbar.js?v=306"></script>
-</body>
+</head>
+<body></body>
 </html>
