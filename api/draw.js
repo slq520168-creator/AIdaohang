@@ -1,62 +1,44 @@
 module.exports = async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS");
   if (req.method === "OPTIONS") { res.status(204).end(); return; }
   const q = req.query || {};
-  let prompt = String(q.p || "").trim().slice(0, 800);
-  const model = String(q.model || "flux").replace(/[^a-z0-9._\/-]/gi, "").slice(0, 40) || "flux";
-  let width = clamp(q.w, 768, 1280, 1024);
-  let height = clamp(q.h, 768, 1280, 1024);
-  if (width * height < 1024 * 768) { width = 1024; height = 1024; }
-  const seed = String(parseInt(q.seed, 10) || Date.now() % 2000000000);
+  let prompt = String(q.p || "").trim().slice(0, 500);
   if (!prompt) { res.status(400).send("empty"); return; }
   if (/[\u3400-\u9fff]/.test(prompt)) {
     const en = await zhEn(prompt);
     if (en) prompt = en;
   }
-  prompt = expand(prompt);
-  const paths = [
-    "https://image.pollinations.ai/prompt/" + encodeURIComponent(prompt) +
-      "?width=" + width + "&height=" + height + "&seed=" + seed + "&model=flux&enhance=true&nologo=true&quality=hd",
-    "https://image.pollinations.ai/prompt/" + encodeURIComponent(prompt) +
-      "?width=" + width + "&height=" + height + "&seed=" + seed + "&model=" + encodeURIComponent(model) + "&enhance=true",
-    "https://image.pollinations.ai/prompt/" + encodeURIComponent(prompt) +
-      "?width=1024&height=1024&seed=" + seed + "&model=flux"
+  if (prompt.length < 60) {
+    prompt += ", cinematic photo, photorealistic, detailed, sharp";
+  }
+  const w = 1024;
+  const h = String(q.h || "1024") === "768" ? 768 : 1024;
+  const seed = String(Date.now() % 1999999999);
+  const enc = encodeURIComponent(prompt);
+  const list = [
+    "https://gen.pollinations.ai/image/" + enc + "?width=" + w + "&height=" + w + "&seed=" + seed,
+    "https://image.pollinations.ai/prompt/" + enc + "?width=" + w + "&height=" + w + "&seed=" + seed + "&model=flux",
+    "https://image.pollinations.ai/prompt/" + enc + "?width=768&height=768&model=turbo"
   ];
-  for (let i = 0; i < paths.length; i++) {
+  for (let i = 0; i < list.length; i++) {
     try {
-      const r = await fetch(paths[i], {
-        headers: { "User-Agent": "Mozilla/5.0", Accept: "image/*" },
+      const r = await fetch(list[i], {
+        headers: { "User-Agent": "Mozilla/5.0", Accept: "image/jpeg,image/png,image/*,*/*" },
         redirect: "follow"
       });
-      const ct = String(r.headers.get("content-type") || "");
-      if (!r.ok || ct.indexOf("image") < 0) continue;
+      if (!r.ok) continue;
       const buf = Buffer.from(await r.arrayBuffer());
-      if (buf.length < 3000) continue;
-      res.setHeader("Content-Type", ct.indexOf("png") >= 0 ? "image/png" : "image/jpeg");
-      res.setHeader("Cache-Control", "public, max-age=3600");
+      if (buf.length < 2500) continue;
+      const ct = String(r.headers.get("content-type") || "image/jpeg");
+      res.setHeader("Content-Type", ct.indexOf("image/") === 0 ? ct : "image/jpeg");
+      res.setHeader("Cache-Control", "public, max-age=600");
       res.status(200).send(buf);
       return;
     } catch (e) {}
   }
-  res.status(502).send("fail");
+  res.writeHead(302, { Location: list[0], "Cache-Control": "no-store" });
+  res.end();
 };
-
-function clamp(v, min, max, d) {
-  const n = parseInt(v, 10);
-  if (!n) return d;
-  return Math.max(min, Math.min(max, n));
-}
-
-function expand(p) {
-  var s = String(p || "").trim();
-  if (s.length < 80) {
-    s += ", cinematic still, photorealistic, highly detailed, sharp focus, 8k, shallow depth of field, natural skin texture, realistic rain and reflections, volumetric lighting, shot on 35mm film";
-  } else if (s.indexOf("photoreal") < 0 && s.indexOf("detailed") < 0) {
-    s += ", photorealistic, highly detailed, sharp focus, 8k";
-  }
-  return s;
-}
 
 async function zhEn(q) {
   try {
