@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
+<meta name="referrer" content="no-referrer"/>
 <title>本站出图</title>
 <script>try{var _t=localStorage.getItem('theme');if(_t==='dark'||_t==='light')document.documentElement.setAttribute('data-theme',_t);}catch(e){}</script>
-<link rel="stylesheet" href="./sub.css?v=280"/>
+<link rel="stylesheet" href="./sub.css?v=281"/>
 <style>
 .draw textarea{display:block;width:100%;min-height:120px;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
 .draw .row{display:flex;gap:8px;margin:10px 0}
@@ -18,22 +19,23 @@
 html[data-theme="dark"] .draw .st.err{color:#f87171}
 .draw .st.ok{color:#16a34a}
 html[data-theme="dark"] .draw .st.ok{color:#4ade80}
-.draw .res{display:none;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+.draw .res{display:none;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);margin-bottom:10px}
 .draw .res.on{display:block}
-.draw .res img.out{display:block;width:100%;height:auto;min-height:0}
-.draw .wait{display:none;align-items:center;justify-content:center;gap:10px;height:180px;border-radius:14px;background:var(--card);border:1px dashed var(--line);color:var(--muted);font-size:13px}
+.draw .res img.out{display:block;width:100%;height:auto;min-height:220px;background:#111;object-fit:contain}
+.draw .wait{display:none;align-items:center;justify-content:center;gap:10px;height:80px;border-radius:14px;background:var(--card);border:1px dashed var(--line);color:var(--muted);font-size:13px}
 .draw .wait.on{display:flex}
 .draw .spin{width:22px;height:22px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--btn);animation:sp 1s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
-.draw .dl{display:none;margin-top:10px;text-align:center;text-decoration:none;color:var(--txt);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;font-size:14px}
-.draw .dl.on{display:block}
+.draw .acts{display:none;gap:8px;margin-top:8px}
+.draw .acts.on{display:flex}
+.draw .acts a,.draw .acts button{flex:1;text-align:center;text-decoration:none;color:var(--txt);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;font-size:14px}
 </style>
 </head>
 <body>
 <div id="sitebg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
 <div class="w draw">
   <div class="top"><a class="back" href="./tools.html?home=1" data-i18n="back">返回</a><h1 data-i18n="draw_title">本站出图</h1></div>
-  <p class="tip" data-i18n="draw_tip">免费 Pollinations，不用登录、不用手机号、不用密钥。免费通道要排队，一般 30–60 秒；图片右下角带小水印。</p>
+  <p class="tip" data-i18n="draw_tip">免费 Pollinations。不用登录。排队 30–90 秒。长按图可保存。</p>
   <textarea id="p" maxlength="600" placeholder="写提示词，中英文都可" data-i18n-placeholder="draw_ph"></textarea>
   <div class="row">
     <select id="size">
@@ -46,52 +48,79 @@ html[data-theme="dark"] .draw .st.ok{color:#4ade80}
   </div>
   <div class="st" id="st" aria-live="polite"></div>
   <div class="wait" id="wait"><span class="spin"></span><span id="waitTxt"></span></div>
-  <div class="res" id="res"><img class="out" id="out" alt=""/></div>
+  <div class="res" id="res"><img class="out" id="out" alt="" referrerpolicy="no-referrer" decoding="async"/></div>
+  <div class="acts" id="acts"><a id="open" href="#" target="_blank" rel="noopener">新窗口打开</a><button type="button" id="save">下载</button></div>
 </div>
-<script src="./i18n.js?v=280"></script>
+<script src="./i18n.js?v=281"></script>
 <script>
 (function(){
   var $=function(id){return document.getElementById(id);};
-  var API='https://image.pollinations.ai/prompt/';   /* legacy anonymous endpoint, no key; plain <img>, no fetch/CORS */
-  var TIMEOUT=120000;                               /* per attempt */
-  var busy=false,timer=null;
+  var TIMEOUT=180000;
+  var busy=false,timer=null,cur='';
   function T(k,s){var v=(window.I18N&&window.I18N.t)?window.I18N.t(k):k;return s==null?v:String(v).replace('{s}',s);}
   try{document.title=T('draw_title');}catch(e){}
   function status(txt,cls){var el=$('st');el.textContent=txt||'';el.className='st'+(cls?' '+cls:'');}
-  function buildUrl(text){
+  function urls(text){
     var wh=$('size').value.split('x');
     var seed=Math.floor(Math.random()*2000000000);
-    return API+encodeURIComponent(text)+'?width='+wh[0]+'&height='+wh[1]+'&nologo=true&seed='+seed;
+    var q=encodeURIComponent(text);
+    var qs='width='+wh[0]+'&height='+wh[1]+'&seed='+seed+'&model=flux';
+    return [
+      'https://image.pollinations.ai/prompt/'+q+'?'+qs,
+      'https://image.pollinations.ai/prompt/'+q+'?'+qs+'&nologo=true',
+      'https://gen.pollinations.ai/image/'+q+'?'+qs
+    ];
   }
-  function once(url,cb){
-    var im=new Image(),done=false;
-    var to=setTimeout(function(){if(done)return;done=true;im.onload=im.onerror=null;im.src='';cb(false,url);},TIMEOUT);
-    im.onload=function(){if(done)return;done=true;clearTimeout(to);cb(im.naturalWidth>0,url);};
-    im.onerror=function(){if(done)return;done=true;clearTimeout(to);cb(false,url);};
-    im.src=url;
+  function bind(img, url, cb){
+    var done=false;
+    var to=setTimeout(function(){if(done)return;done=true;cb(false);},TIMEOUT);
+    img.onload=function(){if(done)return;done=true;clearTimeout(to);cb(img.naturalWidth>8);};
+    img.onerror=function(){if(done)return;done=true;clearTimeout(to);cb(false);};
+    img.referrerPolicy='no-referrer';
+    img.src=url;
+  }
+  function tryList(list, i, img, cb){
+    if(i>=list.length) return cb(false,'');
+    cur=list[i];
+    $('open').href=cur;
+    bind(img, cur, function(ok){
+      if(ok) cb(true, cur);
+      else tryList(list, i+1, img, cb);
+    });
   }
   $('go').onclick=function(){
     if(busy) return;
     var text=($('p').value||'').trim();
     if(!text){status(T('draw_empty'),'err');$('p').focus();return;}
     busy=true;$('go').disabled=true;
-    $('res').className='res';status('');
-    var t0=Date.now(),phase='draw_wait';
-    function tick(){var s=Math.round((Date.now()-t0)/1000);$('waitTxt').textContent=T(phase,s);}
+    $('acts').className='acts';status('');
+    var img=$('out');
+    img.removeAttribute('src');
+    $('res').className='res on';
+    var t0=Date.now();
+    function tick(){var s=Math.round((Date.now()-t0)/1000);$('waitTxt').textContent=T('draw_wait',s);}
     function end(ok,url){
       clearInterval(timer);busy=false;$('go').disabled=false;$('wait').className='wait';
-      if(ok){$('out').src=url;$('res').className='res on';status(T('draw_done',Math.round((Date.now()-t0)/1000)),'ok');}
-      else status(T('draw_fail'),'err');
+      if(ok){
+        $('res').className='res on';
+        $('acts').className='acts on';
+        $('open').href=url;
+        status(T('draw_done',Math.round((Date.now()-t0)/1000)),'ok');
+      } else {
+        status(T('draw_fail'),'err');
+      }
     }
     $('wait').className='wait on';tick();timer=setInterval(tick,1000);
-    once(buildUrl(text),function(ok,url){
-      if(ok) return end(true,url);
-      phase='draw_retry';tick();
-      setTimeout(function(){once(buildUrl(text),end);},4000);
-    });
+    tryList(urls(text), 0, img, end);
+  };
+  $('save').onclick=function(){
+    var u=$('out').src; if(!u) return;
+    var a=document.createElement('a');
+    a.href=u; a.download='ai.png'; a.target='_blank'; a.rel='noopener';
+    document.body.appendChild(a); a.click(); a.remove();
   };
 })();
 </script>
-<script src="./tabbar.js?v=280"></script>
+<script src="./tabbar.js?v=281"></script>
 </body>
 </html>
