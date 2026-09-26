@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
 <title>小暖</title>
 <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
-<link rel="stylesheet" href="./sub.css?v=300"/>
+<link rel="stylesheet" href="./sub.css?v=301"/>
 <style>
 .xn label{display:block;font-size:13px;color:var(--muted);margin:10px 0 6px}
 .xn input,.xn textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
@@ -23,9 +23,7 @@
 .xn .save{flex:1;background:var(--card);color:var(--txt);border:1px solid var(--line)!important}
 .xn .go{flex:1}
 .xn .hid{display:none!important}
-html.chaton #tabbar,html.chaton #sitebg{display:none!important}
-html.chaton body{padding-bottom:0!important;background:#f3f0ea}
-.xn .log{height:calc(100dvh - 150px);overflow:auto;padding:8px 2px}
+.xn .log{height:calc(100dvh - 220px);overflow:auto;padding:8px 2px}
 .xn .m{display:flex;gap:8px;margin:0 0 12px;align-items:flex-end}
 .xn .m.me{flex-direction:row-reverse}
 .xn .m img.av{width:36px;height:36px;border-radius:50%;object-fit:cover;flex:none}
@@ -101,7 +99,6 @@ html.chaton body{padding-bottom:0!important;background:#f3f0ea}
   function showChat(on){
     $('setup').className=on?'hid':'';
     $('chat').className=on?'':'hid';
-    document.documentElement.classList.toggle('chaton', on);
   }
   function esc(s){return String(s).replace(/[&<>]/g,function(x){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[x];});}
   function render(){
@@ -123,7 +120,7 @@ html.chaton body{padding-bottom:0!important;background:#f3f0ea}
     var p=sys(c)+'\n用户：'+text+'\n'+c.name+'：';
     var a=await pull('/api/chat?q='+encodeURIComponent(text)+'&sys='+encodeURIComponent(sys(c)));
     if(a) return a;
-    a=await pull('https://text.pollinations.ai/'+encodeURIComponent(p));
+    a=await pull('https://text.pollinations.ai/'+encodeURIComponent(p)+'?model=openai-fast');
     return a || '这一句没接上，再发一次。';
   }
   $('save').onclick=function(){ var c=cfg(); if(parseInt(c.age,10)<18){$('st').textContent='年龄≥18';return;} try{localStorage.setItem(KEY,JSON.stringify(c));$('st').textContent='已保存';}catch(e){$('st').textContent='图太大';} };
@@ -146,6 +143,6 @@ html.chaton body{padding-bottom:0!important;background:#f3f0ea}
   paintAv(); paintTone();
 })();
 </script>
-<script src="./tabbar.js?v=300"></script>
+<script src="./tabbar.js?v=301"></script>
 </body>
 </html>
