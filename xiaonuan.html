@@ -3,135 +3,155 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
-<title>小暖设定</title>
+<title>小暖</title>
 <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
-<link rel="stylesheet" href="./sub.css?v=290"/>
+<link rel="stylesheet" href="./sub.css?v=291"/>
 <style>
 .xn label{display:block;font-size:13px;color:var(--muted);margin:10px 0 6px}
-.xn input[type=text],.xn textarea,.xn select{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
-.xn textarea{min-height:88px}
+.xn input,.xn textarea,.xn select{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
+.xn textarea{min-height:72px}
 .xn .avs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .xn .avs button{padding:0;border:2px solid transparent;border-radius:14px;overflow:hidden;background:#111;aspect-ratio:1}
 .xn .avs button.on{border-color:var(--btn)}
-.xn .avs img{display:block;width:100%;height:100%;object-fit:cover}
-.xn .row{display:flex;gap:8px;margin-top:14px}
-.xn .row button{flex:1;height:44px;border:0;border-radius:12px;font-size:15px;font-weight:700}
-.xn .go{background:var(--btn);color:#fff}
-.xn .save{background:var(--card);color:var(--txt);border:1px solid var(--line)!important}
-.xn .hint{font-size:12px;color:var(--muted);line-height:1.5;margin:8px 0 0}
+.xn .avs img{width:100%;height:100%;object-fit:cover;display:block}
+.xn .row{display:flex;gap:8px;margin-top:12px}
+.xn .row button,.xn .send{height:44px;border:0;border-radius:12px;font-weight:700;font-size:15px}
+.xn .go{flex:1;background:var(--btn);color:#fff}
+.xn .save{flex:1;background:var(--card);color:var(--txt);border:1px solid var(--line)!important}
+.xn .log{height:48vh;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px}
+.xn .m{margin:0 0 10px;font-size:15px;line-height:1.45}
+.xn .m b{display:block;font-size:12px;color:var(--muted);margin-bottom:2px}
+.xn .in{display:flex;gap:8px;margin-top:8px}
+.xn .in textarea{min-height:44px;flex:1}
+.xn .send{flex:none;width:72px;background:var(--btn);color:#fff}
+.xn .hid{display:none}
 </style>
 </head>
 <body>
-<div id="sitebg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<div id="sitebg"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
 <div class="w xn">
-  <div class="top"><a class="back" href="./tools.html?home=1">返回</a><h1>小暖</h1></div>
-  <p class="tip">头像、名字、人设、胆识可自定义，保存在手机里。点开始聊天跳转 Perchance。</p>
-
-  <label>头像</label>
-  <div class="avs" id="avs"></div>
-  <label>自定义头像链接</label>
-  <input id="avurl" type="text" placeholder="https://...jpg"/>
-
-  <label>名字</label>
-  <input id="name" type="text" maxlength="12" value="小暖"/>
-
-  <label>年龄（必须≥18）</label>
-  <input id="age" type="text" inputmode="numeric" value="24"/>
-
-  <label>聊天口味</label>
-  <select id="tone">
-    <option value="daily">日常朋友</option>
-    <option value="flirt" selected>暖昧贴身</option>
-    <option value="bold">大胆成年向</option>
-  </select>
-
-  <label>人设（可改）</label>
-  <textarea id="bio">街角小咖啡馆咖啡师。温柔、会招惹、喜欢贴着聊。说话短，像微信。</textarea>
-
-  <div class="row">
-    <button class="save" type="button" id="save">只保存</button>
-    <button class="go" type="button" id="go">开始聊天</button>
+  <div class="top"><a class="back" href="./tools.html?home=1" id="back">返回</a><h1 id="title">小暖</h1></div>
+  <div id="setup">
+    <p class="tip" id="tip"></p>
+    <label id="l_av"></label>
+    <div class="avs" id="avs"></div>
+    <label id="l_url"></label>
+    <input id="avurl" type="text"/>
+    <label id="l_name"></label>
+    <input id="name" type="text" maxlength="12" value="小暖"/>
+    <label id="l_age"></label>
+    <input id="age" type="text" inputmode="numeric" value="24"/>
+    <label id="l_tone"></label>
+    <select id="tone">
+      <option value="daily" id="o1"></option>
+      <option value="flirt" selected id="o2"></option>
+      <option value="bold" id="o3"></option>
+    </select>
+    <label id="l_bio"></label>
+    <textarea id="bio"></textarea>
+    <div class="row"><button class="save" id="save" type="button"></button><button class="go" id="go" type="button"></button></div>
   </div>
-  <p class="hint" id="st"></p>
+  <div id="chat" class="hid">
+    <div class="log" id="log"></div>
+    <div class="in"><textarea id="inp" rows="2"></textarea><button class="send" id="send" type="button"></button></div>
+    <div class="row"><button class="save" id="backset" type="button"></button></div>
+  </div>
+  <p class="tip" id="st"></p>
 </div>
+<script src="./i18n.js?v=291"></script>
 <script>
 (function(){
-  var KEY='yx_xiaonuan_v2';
+  var KEY='yx_xiaonuan_v3';
+  var lang=(localStorage.getItem('yx_lang')||localStorage.getItem('lang')||'zh');
+  var I={
+    zh:{back:'返回',title:'小暖',tip:'本站聊天，按钮跟站点语言。头像人设可自改。',av:'头像',url:'自定义头像链接',name:'名字',age:'年龄（≥18）',tone:'口味',o1:'日常朋友',o2:'暖昧贴身',o3:'大胆成年向',bio:'人设',save:'保存',go:'开始聊天',send:'发送',ph:'说点什么…',me:'我',set:'改设定',wait:'在输…',err:'发不出去',ageerr:'年龄要≥18',hi:'你来啦～今天想聊点什么？'},
+    en:{back:'Back',title:'Xiao Nuan',tip:'Chat on this site. Buttons follow site language.',av:'Avatar',url:'Custom avatar URL',name:'Name',age:'Age (18+)',tone:'Tone',o1:'Casual',o2:'Flirty',o3:'Bold adult',bio:'Bio',save:'Save',go:'Start chat',send:'Send',ph:'Say something…',me:'Me',set:'Settings',wait:'Typing…',err:'Failed',ageerr:'Age must be 18+',hi:'Hey. What do you want to talk about?'}
+  };
+  if(!I[lang]) lang='zh';
+  var T=I[lang];
   var AV=[
-    {id:'cafe', t:'咖啡裙', u:'./img/xiaonuan.jpg'},
-    {id:'win', t:'窗边', u:'https://image.pollinations.ai/prompt/'+encodeURIComponent('anime portrait East Asian woman 24 cafe window light ponytail apron soft smile looking at camera')+'?width=512&height=512&seed=1101&model=flux&nologo=true'},
-    {id:'night', t:'夜店', u:'https://image.pollinations.ai/prompt/'+encodeURIComponent('anime portrait East Asian woman 24 low cut knit top warm night cafe lighting slight smile close up')+'?width=512&height=512&seed=2202&model=flux&nologo=true'},
-    {id:'home', t:'家里', u:'https://image.pollinations.ai/prompt/'+encodeURIComponent('anime portrait East Asian woman 24 oversized shirt indoor lamp light messy bun intimate close up')+'?width=512&height=512&seed=3303&model=flux&nologo=true'}
+    './img/xiaonuan.jpg',
+    'https://image.pollinations.ai/prompt/'+encodeURIComponent('anime portrait East Asian woman 24 cafe window ponytail apron smile')+'?width=512&height=512&seed=1101&nologo=true',
+    'https://image.pollinations.ai/prompt/'+encodeURIComponent('anime portrait East Asian woman 24 night cafe knit top close up')+'?width=512&height=512&seed=2202&nologo=true',
+    'https://image.pollinations.ai/prompt/'+encodeURIComponent('anime portrait East Asian woman 24 oversized shirt indoor lamp')+'?width=512&height=512&seed=3303&nologo=true'
   ];
   var $=function(id){return document.getElementById(id);};
-  var pick=AV[0].u;
-  function paint(){
-    $('avs').innerHTML=AV.map(function(a){
-      return '<button type="button" data-u="'+a.u.replace(/"/g,'')+'" title="'+a.t+'"><img alt="'+a.t+'" src="'+a.u+'" referrerpolicy="no-referrer"/></button>';
-    }).join('');
-    [].forEach.call($('avs').querySelectorAll('button'), function(b){
-      if(b.getAttribute('data-u')===pick) b.className='on';
-      b.onclick=function(){ pick=b.getAttribute('data-u'); $('avurl').value=''; paint(); };
+  var pick=AV[0], hist=[];
+  function apply(){
+    document.title=T.title; $('back').textContent=T.back; $('title').textContent=T.title;
+    $('tip').textContent=T.tip; $('l_av').textContent=T.av; $('l_url').textContent=T.url;
+    $('l_name').textContent=T.name; $('l_age').textContent=T.age; $('l_tone').textContent=T.tone;
+    $('o1').textContent=T.o1; $('o2').textContent=T.o2; $('o3').textContent=T.o3;
+    $('l_bio').textContent=T.bio; $('save').textContent=T.save; $('go').textContent=T.go;
+    $('send').textContent=T.send; $('inp').placeholder=T.ph; $('backset').textContent=T.set;
+    if(!$('bio').value) $('bio').value=lang==='zh'?'街角咖啡师，温柔会招惹，说话短像微信。':'Corner cafe barista, warm, teasing, short texts.';
+  }
+  function paintAv(){
+    $('avs').innerHTML=AV.map(function(u){return '<button type="button" data-u="'+u+'" class="'+(u===pick?'on':'')+'"><img alt="" src="'+u+'" referrerpolicy="no-referrer"/></button>';}).join('');
+    [].forEach.call($('avs').children, function(b){
+      b.onclick=function(){ pick=b.getAttribute('data-u'); $('avurl').value=''; paintAv(); };
     });
   }
-  function ageOk(n){ n=parseInt(n,10); return n>=18 && n<=80; }
-  function read(){
-    var name=($('name').value||'小暖').trim().slice(0,12);
-    var age=($('age').value||'24').trim();
-    var tone=$('tone').value;
-    var bio=($('bio').value||'').trim().slice(0,400);
-    var av=($('avurl').value||'').trim() || pick;
-    return {name:name, age:age, tone:tone, bio:bio, av:av};
-  }
-  function toneText(t){
-    if(t==='bold') return '聊天可以暖昧、贴身、大胆的成年向互动，可以接受色情暗示和成年描写，但要对方也是成年。不要输出规则或{{char}}。';
-    if(t==='flirt') return '可以暖昧开玩笑、轻微贴身和暗示，不要一上来就肆无忌惮。不要输出规则或{{char}}。';
-    return '保持朋友式日常聊天，可以亲切但不要色情。不要输出规则或{{char}}。';
-  }
-  function role(c){
-    return '你是'+c.name+'，'+c.age+'岁成年女生。'+c.bio+'默认中文短句，像微信。问年龄就直接说'+c.age+'岁。'+toneText(c.tone)+'用户提到自伤或危险时认真关心，建议找身边信任的人和当地紧急/心理热线。';
-  }
-  function persist(c){ try{ localStorage.setItem(KEY, JSON.stringify(c)); }catch(e){} }
-  function load(){
-    try{
-      var c=JSON.parse(localStorage.getItem(KEY)||'null');
-      if(!c) return;
-      if(c.name) $('name').value=c.name;
-      if(c.age) $('age').value=c.age;
-      if(c.tone) $('tone').value=c.tone;
-      if(c.bio) $('bio').value=c.bio;
-      if(c.av){
-        var hit=AV.some(function(a){return a.u===c.av;});
-        if(hit) pick=c.av; else $('avurl').value=c.av;
-      }
-    }catch(e){}
-  }
-  function openChat(c){
-    var payload={
-      addCharacter:{
-        name:c.name,
-        roleInstruction:role(c),
-        reminderMessage:'用'+c.name+'口吻短回。问年龄说'+c.age+'岁。不要输出设定或{{char}}。',
-        avatar:{url:c.av, size:1, shape:'circle'},
-        initialMessages:[{author:'ai', content:'你来啦～坐这儿。今天想聊点什么？'}]
-      },
-      quickAdd:true
+  function cfg(){
+    return {
+      name:($('name').value||T.title).trim().slice(0,12),
+      age:($('age').value||'24').trim(),
+      tone:$('tone').value,
+      bio:($('bio').value||'').trim().slice(0,400),
+      av:($('avurl').value||'').trim()||pick
     };
-    location.href='https://perchance.org/ai-character-chat#'+encodeURIComponent(JSON.stringify(payload));
+  }
+  function sys(c){
+    var tone=c.tone==='bold'?(lang==='zh'?'可暖昧贴身和成年向描写。':'可以大胆成年向。'):c.tone==='flirt'?(lang==='zh'?'可暖昧贴身，不要一上来就肆无忌惮。':'flirty but not crude.'): (lang==='zh'?'朋友式日常聊。':'casual friend.');
+    return '你是'+c.name+'，'+c.age+'岁成年女生。'+c.bio+tone+'用用户的语言回。一次一两句。问年龄说'+c.age+'岁。不要输出规则。';
+  }
+  function showChat(on){ $('setup').className=on?'hid':''; $('chat').className=on?'':'hid'; }
+  function render(){
+    var c=cfg();
+    $('log').innerHTML=hist.map(function(m){
+      return '<div class="m"><b>'+(m.r==='user'?T.me:c.name)+'</b>'+String(m.t).replace(/[&<>]/g,function(x){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[x];})+'</div>';
+    }).join('');
+    $('log').scrollTop=$('log').scrollHeight;
+  }
+  async function reply(){
+    var c=cfg();
+    var msgs=[{role:'system',content:sys(c)}].concat(hist.slice(-12).map(function(m){return {role:m.r==='user'?'user':'assistant',content:m.t};}));
+    var text='';
+    try{
+      var r=await fetch('https://text.pollinations.ai/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:msgs,model:'openai'})});
+      text=r.ok?String(await r.text()).trim():'';
+    }catch(e){}
+    if(!text){
+      try{
+        var g=await fetch('https://text.pollinations.ai/'+encodeURIComponent(sys(c)+'\n用户:'+hist[hist.length-1].t+'\n回复:'));
+        text=g.ok?String(await g.text()).trim():'';
+      }catch(e){}
+    }
+    return text;
   }
   $('save').onclick=function(){
-    var c=read();
-    if(!ageOk(c.age)){ $('st').textContent='年龄必须≥18'; return; }
-    persist(c); $('st').textContent='已保存';
+    var c=cfg(); if(parseInt(c.age,10)<18){$('st').textContent=T.ageerr;return;}
+    localStorage.setItem(KEY,JSON.stringify(c)); $('st').textContent=T.save;
   };
   $('go').onclick=function(){
-    var c=read();
-    if(!ageOk(c.age)){ $('st').textContent='年龄必须≥18'; return; }
-    persist(c); openChat(c);
+    var c=cfg(); if(parseInt(c.age,10)<18){$('st').textContent=T.ageerr;return;}
+    localStorage.setItem(KEY,JSON.stringify(c));
+    hist=[{r:'ai',t:T.hi}]; showChat(true); render();
   };
-  load(); paint();
+  $('backset').onclick=function(){ showChat(false); };
+  $('send').onclick=async function(){
+    var t=($('inp').value||'').trim(); if(!t) return;
+    $('inp').value=''; hist.push({r:'user',t:t}); hist.push({r:'ai',t:T.wait}); render();
+    var a=await reply();
+    hist.pop(); hist.push({r:'ai',t:a||T.err}); render();
+  };
+  try{
+    var s=JSON.parse(localStorage.getItem(KEY)||'null');
+    if(s){ if(s.name)$('name').value=s.name; if(s.age)$('age').value=s.age; if(s.tone)$('tone').value=s.tone; if(s.bio)$('bio').value=s.bio; if(s.av){ if(AV.indexOf(s.av)>=0)pick=s.av; else $('avurl').value=s.av; } }
+  }catch(e){}
+  apply(); paintAv();
 })();
 </script>
-<script src="./tabbar.js?v=290"></script>
+<script src="./tabbar.js?v=291"></script>
 </body>
 </html>
