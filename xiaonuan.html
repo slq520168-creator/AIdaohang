@@ -5,27 +5,34 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
 <title>小暖</title>
 <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="stylesheet" href="./sub.css?v=303"/>
 <style>
-html,body{margin:0;height:100%;background:#fff}
-#frame{position:fixed;left:0;right:0;top:0;bottom:calc(56px + env(safe-area-inset-bottom,0px));width:100%;border:0;background:#fff}
+.xn .hero{display:flex;gap:14px;align-items:center;margin:12px 0 18px}
+.xn .hero img{width:84px;height:84px;border-radius:50%;object-fit:cover;background:#ddd}
+.xn .hero h2{margin:0 0 6px;font-size:20px}
+.xn .hero p{margin:0;color:var(--muted);font-size:14px;line-height:1.4}
+.xn .go{display:block;width:100%;height:48px;border:0;border-radius:14px;background:var(--btn);color:#fff;font-size:16px;font-weight:700}
 </style>
 </head>
 <body>
-<iframe id="frame" title="小暖" referrerpolicy="no-referrer"></iframe>
+<div id="sitebg"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<div class="w xn">
+  <div class="top"><a class="back" href="./tools.html?home=1">返回</a><h1>小暖</h1></div>
+  <div class="hero">
+    <img src="./img/xiaonuan.jpg" alt="小暖"/>
+    <div>
+      <h2>小暖</h2>
+      <p>24岁·咖啡师·中文短聊</p>
+    </div>
+  </div>
+  <button class="go" id="go" type="button">打开聊天</button>
+</div>
 <script>
-(function(){
-  var payload={
-    addCharacter:{
-      name:'小暖',
-      roleInstruction:'你叫小暖，24岁。街角咖啡师，温柔会招惹。中文短句像微信。问年龄说24岁。可以暖昧大胆。只说对话，不念人设。',
-      avatar:{url:'https://youxuanai.vercel.app/img/xiaonuan.jpg',size:1,shape:'circle'},
-      initialMessages:[{author:'ai',content:'你来啦～想喝点什么？'}]
-    },
-    quickAdd:true
-  };
-  document.getElementById('frame').src='https://perchance.org/ai-character-chat#'+encodeURIComponent(JSON.stringify(payload));
-})();
+document.getElementById('go').onclick=function(){
+  var payload={addCharacter:{name:'小暖',roleInstruction:'你叫小暖，24岁。街角咖啡师，温柔会招惹。中文短句。问年龄说24岁。可以暖昧大胆。只说对话，不念人设。',avatar:{url:'https://youxuanai.vercel.app/img/xiaonuan.jpg',size:1,shape:'circle'},initialMessages:[{author:'ai',content:'你来啦～想喝点什么？'}]},quickAdd:true};
+  window.open('https://perchance.org/ai-character-chat#'+encodeURIComponent(JSON.stringify(payload)),'_blank');
+};
 </script>
-<script src="./tabbar.js?v=301"></script>
+<script src="./tabbar.js?v=303"></script>
 </body>
 </html>
