@@ -8,17 +8,14 @@ module.exports = async function handler(req, res) {
     const en = await zhEn(prompt);
     if (en) prompt = en;
   }
-  if (prompt.length < 60) {
-    prompt += ", cinematic photo, photorealistic, detailed, sharp";
-  }
+  prompt = "photorealistic photograph, real human, real skin pores, natural makeup, 35mm film, sharp eyes, " + prompt + ", no anime, no cartoon, no illustration, no 3d render, no cgi";
   const w = 1024;
-  const h = String(q.h || "1024") === "768" ? 768 : 1024;
   const seed = String(Date.now() % 1999999999);
   const enc = encodeURIComponent(prompt);
   const list = [
+    "https://image.pollinations.ai/prompt/" + enc + "?width=" + w + "&height=" + w + "&seed=" + seed + "&model=flux&nologo=true&enhance=true",
     "https://gen.pollinations.ai/image/" + enc + "?width=" + w + "&height=" + w + "&seed=" + seed,
-    "https://image.pollinations.ai/prompt/" + enc + "?width=" + w + "&height=" + w + "&seed=" + seed + "&model=flux",
-    "https://image.pollinations.ai/prompt/" + enc + "?width=768&height=768&model=turbo"
+    "https://image.pollinations.ai/prompt/" + enc + "?width=768&height=768&model=flux"
   ];
   for (let i = 0; i < list.length; i++) {
     try {
@@ -39,12 +36,9 @@ module.exports = async function handler(req, res) {
   res.writeHead(302, { Location: list[0], "Cache-Control": "no-store" });
   res.end();
 };
-
 async function zhEn(q) {
   try {
-    const url =
-      "https://translate.googleapis.com/translate_a/single?client=gtx&dt=t&sl=zh&tl=en&q=" +
-      encodeURIComponent(q);
+    const url = "https://translate.googleapis.com/translate_a/single?client=gtx&dt=t&sl=zh&tl=en&q=" + encodeURIComponent(q);
     const r = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0" } });
     if (!r.ok) return "";
     const data = await r.json();

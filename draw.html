@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
 <title>本站出图</title>
 <script>try{var _t=localStorage.getItem('theme');if(_t==='dark'||_t==='light')document.documentElement.setAttribute('data-theme',_t);}catch(e){}</script>
-<link rel="stylesheet" href="./sub.css?v=284"/>
+<link rel="stylesheet" href="./sub.css?v=299"/>
 <style>
 .draw textarea{display:block;width:100%;min-height:110px;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
 .draw .row{display:flex;gap:8px;margin:10px 0}
@@ -32,19 +32,14 @@
 <div id="sitebg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
 <div class="w draw">
   <div class="top"><a class="back" href="./tools.html?home=1">返回</a><h1>本站出图</h1></div>
-  <p class="tip">现在固定 1024 出图并自动扩写短句。「雨中漫步」会变成完整英文镜头。</p>
-  <textarea id="p" maxlength="800" placeholder="雨中漫步，夜景街灯，女人棒球体大衣"></textarea>
+  <textarea id="p" maxlength="800" placeholder="夜景街灯，女人长外套"></textarea>
   <div class="row">
-    <select id="model">
-      <option value="flux" selected>Flux 高清</option>
-      <option value="turbo">Turbo 快</option>
-    </select>
     <select id="size">
       <option value="1024x1024" selected>1024²</option>
       <option value="768x1024">竖图</option>
       <option value="1024x768">横图</option>
     </select>
-    <button class="go" id="go" type="button">生成</button>
+    <button class="go" id="go" type="button">写真</button>
   </div>
   <div class="st" id="st"></div>
   <div class="wait" id="wait"><span class="spin"></span><span id="waitTxt"></span></div>
@@ -61,11 +56,11 @@
     var text=($('p').value||'').trim();
     if(!text){status('先写提示词','err');return;}
     var wh=$('size').value.split('x');
-    var url='/api/draw?p='+encodeURIComponent(text)+'&model='+encodeURIComponent($('model').value)+'&w='+wh[0]+'&h='+wh[1]+'&seed='+Date.now();
+    var url='/api/draw?p='+encodeURIComponent(text)+'&w='+wh[0]+'&h='+wh[1]+'&seed='+Date.now();
     busy=true;$('go').disabled=true;$('acts').className='acts';$('res').className='res';
     $('out').removeAttribute('src');
     var t0=Date.now();
-    function tick(){$('waitTxt').textContent='出图中 '+Math.round((Date.now()-t0)/1000)+'s';}
+    function tick(){$('waitTxt').textContent='写真中 '+Math.round((Date.now()-t0)/1000)+'s';}
     $('wait').className='wait on';tick();timer=setInterval(tick,1000);
     var img=$('out'), done=false;
     var to=setTimeout(fail,90000);
@@ -77,11 +72,11 @@
   };
   $('save').onclick=function(){
     var u=$('out').src; if(!u) return;
-    var a=document.createElement('a'); a.href=u; a.download='ai.jpg'; a.target='_blank';
+    var a=document.createElement('a'); a.href=u; a.download='photo.jpg'; a.target='_blank';
     document.body.appendChild(a); a.click(); a.remove();
   };
 })();
 </script>
-<script src="./tabbar.js?v=284"></script>
+<script src="./tabbar.js?v=299"></script>
 </body>
 </html>
