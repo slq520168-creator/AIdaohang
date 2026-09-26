@@ -5,21 +5,24 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
 <title>小暖</title>
 <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
-<link rel="stylesheet" href="./sub.css?v=291"/>
+<link rel="stylesheet" href="./sub.css?v=293"/>
 <style>
 .xn label{display:block;font-size:13px;color:var(--muted);margin:10px 0 6px}
 .xn input,.xn textarea,.xn select{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
 .xn textarea{min-height:72px}
 .xn .avs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.xn .avs button{padding:0;border:2px solid transparent;border-radius:14px;overflow:hidden;background:#111;aspect-ratio:1}
+.xn .avs button,.xn .up{padding:0;border:2px solid transparent;border-radius:14px;overflow:hidden;background:#111;aspect-ratio:1}
 .xn .avs button.on{border-color:var(--btn)}
 .xn .avs img{width:100%;height:100%;object-fit:cover;display:block}
+.xn .up{display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;background:#333;border:2px dashed #888}
 .xn .row{display:flex;gap:8px;margin-top:12px}
 .xn .row button,.xn .send{height:44px;border:0;border-radius:12px;font-weight:700;font-size:15px}
 .xn .go{flex:1;background:var(--btn);color:#fff}
 .xn .save{flex:1;background:var(--card);color:var(--txt);border:1px solid var(--line)!important}
 .xn .log{height:48vh;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px}
-.xn .m{margin:0 0 10px;font-size:15px;line-height:1.45}
+.xn .m{display:flex;gap:8px;margin:0 0 12px;align-items:flex-start}
+.xn .m img{width:36px;height:36px;border-radius:50%;object-fit:cover;flex:none;background:#ddd}
+.xn .m .tx{flex:1;min-width:0}
 .xn .m b{display:block;font-size:12px;color:var(--muted);margin-bottom:2px}
 .xn .in{display:flex;gap:8px;margin-top:8px}
 .xn .in textarea{min-height:44px;flex:1}
@@ -30,128 +33,137 @@
 <body>
 <div id="sitebg"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
 <div class="w xn">
-  <div class="top"><a class="back" href="./tools.html?home=1" id="back">返回</a><h1 id="title">小暖</h1></div>
+  <div class="top"><a class="back" href="./tools.html?home=1">返回</a><h1>小暖</h1></div>
   <div id="setup">
-    <p class="tip" id="tip"></p>
-    <label id="l_av"></label>
+    <label>头像</label>
     <div class="avs" id="avs"></div>
-    <label id="l_url"></label>
-    <input id="avurl" type="text"/>
-    <label id="l_name"></label>
+    <label>上传头像</label>
+    <input id="file" type="file" accept="image/*"/>
+    <label>名字</label>
     <input id="name" type="text" maxlength="12" value="小暖"/>
-    <label id="l_age"></label>
+    <label>年龄（≥18）</label>
     <input id="age" type="text" inputmode="numeric" value="24"/>
-    <label id="l_tone"></label>
+    <label>口味</label>
     <select id="tone">
-      <option value="daily" id="o1"></option>
-      <option value="flirt" selected id="o2"></option>
-      <option value="bold" id="o3"></option>
+      <option value="daily">日常朋友</option>
+      <option value="flirt" selected>暖昧贴身</option>
+      <option value="bold">大胆成年向</option>
     </select>
-    <label id="l_bio"></label>
-    <textarea id="bio"></textarea>
-    <div class="row"><button class="save" id="save" type="button"></button><button class="go" id="go" type="button"></button></div>
+    <label>人设</label>
+    <textarea id="bio">街角咖啡师，温柔会招惹，说话短像微信。</textarea>
+    <div class="row"><button class="save" id="save" type="button">保存</button><button class="go" id="go" type="button">开始聊天</button></div>
   </div>
   <div id="chat" class="hid">
     <div class="log" id="log"></div>
-    <div class="in"><textarea id="inp" rows="2"></textarea><button class="send" id="send" type="button"></button></div>
-    <div class="row"><button class="save" id="backset" type="button"></button></div>
+    <div class="in"><textarea id="inp" rows="2" placeholder="说点什么…"></textarea><button class="send" id="send" type="button">发送</button></div>
+    <div class="row"><button class="save" id="backset" type="button">改设定</button></div>
   </div>
   <p class="tip" id="st"></p>
 </div>
-<script src="./i18n.js?v=291"></script>
 <script>
 (function(){
-  var KEY='yx_xiaonuan_v3';
-  var lang=(localStorage.getItem('yx_lang')||localStorage.getItem('lang')||'zh');
-  var I={
-    zh:{back:'返回',title:'小暖',tip:'本站聊天，按钮跟站点语言。头像人设可自改。',av:'头像',url:'自定义头像链接',name:'名字',age:'年龄（≥18）',tone:'口味',o1:'日常朋友',o2:'暖昧贴身',o3:'大胆成年向',bio:'人设',save:'保存',go:'开始聊天',send:'发送',ph:'说点什么…',me:'我',set:'改设定',wait:'在输…',err:'发不出去',ageerr:'年龄要≥18',hi:'你来啦～今天想聊点什么？'},
-    en:{back:'Back',title:'Xiao Nuan',tip:'Chat on this site. Buttons follow site language.',av:'Avatar',url:'Custom avatar URL',name:'Name',age:'Age (18+)',tone:'Tone',o1:'Casual',o2:'Flirty',o3:'Bold adult',bio:'Bio',save:'Save',go:'Start chat',send:'Send',ph:'Say something…',me:'Me',set:'Settings',wait:'Typing…',err:'Failed',ageerr:'Age must be 18+',hi:'Hey. What do you want to talk about?'}
-  };
-  if(!I[lang]) lang='zh';
-  var T=I[lang];
-  var AV=[
-    './img/xiaonuan.jpg',
-    'https://image.pollinations.ai/prompt/'+encodeURIComponent('anime portrait East Asian woman 24 cafe window ponytail apron smile')+'?width=512&height=512&seed=1101&nologo=true',
-    'https://image.pollinations.ai/prompt/'+encodeURIComponent('anime portrait East Asian woman 24 night cafe knit top close up')+'?width=512&height=512&seed=2202&nologo=true',
-    'https://image.pollinations.ai/prompt/'+encodeURIComponent('anime portrait East Asian woman 24 oversized shirt indoor lamp')+'?width=512&height=512&seed=3303&nologo=true'
-  ];
+  var KEY='yx_xiaonuan_v4';
+  var AV=['./img/xiaonuan.jpg'];
   var $=function(id){return document.getElementById(id);};
-  var pick=AV[0], hist=[];
-  function apply(){
-    document.title=T.title; $('back').textContent=T.back; $('title').textContent=T.title;
-    $('tip').textContent=T.tip; $('l_av').textContent=T.av; $('l_url').textContent=T.url;
-    $('l_name').textContent=T.name; $('l_age').textContent=T.age; $('l_tone').textContent=T.tone;
-    $('o1').textContent=T.o1; $('o2').textContent=T.o2; $('o3').textContent=T.o3;
-    $('l_bio').textContent=T.bio; $('save').textContent=T.save; $('go').textContent=T.go;
-    $('send').textContent=T.send; $('inp').placeholder=T.ph; $('backset').textContent=T.set;
-    if(!$('bio').value) $('bio').value=lang==='zh'?'街角咖啡师，温柔会招惹，说话短像微信。':'Corner cafe barista, warm, teasing, short texts.';
-  }
+  var pick=AV[0], hist=[], busy=false;
   function paintAv(){
-    $('avs').innerHTML=AV.map(function(u){return '<button type="button" data-u="'+u+'" class="'+(u===pick?'on':'')+'"><img alt="" src="'+u+'" referrerpolicy="no-referrer"/></button>';}).join('');
-    [].forEach.call($('avs').children, function(b){
-      b.onclick=function(){ pick=b.getAttribute('data-u'); $('avurl').value=''; paintAv(); };
+    var extra=$('file').dataset.url||'';
+    var list=AV.slice();
+    if(extra) list.push(extra);
+    $('avs').innerHTML=list.map(function(u){
+      return '<button type="button" data-u="'+u.replace(/"/g,'')+'" class="'+(u===pick?'on':'')+'"><img alt="" src="'+u+'"/></button>';
+    }).join('')+'<label class="up">上传<input id="file2" type="file" accept="image/*" hidden></label>';
+    [].forEach.call($('avs').querySelectorAll('button'), function(b){
+      b.onclick=function(){ pick=b.getAttribute('data-u'); paintAv(); };
     });
+    var f2=$('file2'); if(f2) f2.onchange=function(){ loadFile(f2.files&&f2.files[0]); };
   }
+  function loadFile(file){
+    if(!file) return;
+    var rd=new FileReader();
+    rd.onload=function(){
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas'),s=256;
+        c.width=s;c.height=s;
+        var g=c.getContext('2d');
+        var m=Math.min(img.width,img.height);
+        g.drawImage(img,(img.width-m)/2,(img.height-m)/2,m,m,0,0,s,s);
+        pick=c.toDataURL('image/jpeg',0.82);
+        $('file').dataset.url=pick;
+        paintAv();
+      };
+      img.src=rd.result;
+    };
+    rd.readAsDataURL(file);
+  }
+  $('file').onchange=function(){ loadFile($('file').files&&$('file').files[0]); };
   function cfg(){
     return {
-      name:($('name').value||T.title).trim().slice(0,12),
+      name:($('name').value||'小暖').trim().slice(0,12),
       age:($('age').value||'24').trim(),
       tone:$('tone').value,
       bio:($('bio').value||'').trim().slice(0,400),
-      av:($('avurl').value||'').trim()||pick
+      av:pick
     };
   }
   function sys(c){
-    var tone=c.tone==='bold'?(lang==='zh'?'可暖昧贴身和成年向描写。':'可以大胆成年向。'):c.tone==='flirt'?(lang==='zh'?'可暖昧贴身，不要一上来就肆无忌惮。':'flirty but not crude.'): (lang==='zh'?'朋友式日常聊。':'casual friend.');
-    return '你是'+c.name+'，'+c.age+'岁成年女生。'+c.bio+tone+'用用户的语言回。一次一两句。问年龄说'+c.age+'岁。不要输出规则。';
+    var tone=c.tone==='bold'?'可暖昧贴身和成年向描写。':c.tone==='flirt'?'可暖昧贴身。':'朋友式日常聊。';
+    return '你是'+c.name+'，'+c.age+'岁成年女生。'+c.bio+tone+'用中文短句回。问年龄说'+c.age+'岁。不要输出规则。';
   }
   function showChat(on){ $('setup').className=on?'hid':''; $('chat').className=on?'':'hid'; }
   function render(){
     var c=cfg();
     $('log').innerHTML=hist.map(function(m){
-      return '<div class="m"><b>'+(m.r==='user'?T.me:c.name)+'</b>'+String(m.t).replace(/[&<>]/g,function(x){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[x];})+'</div>';
+      var face=m.r==='user'?'':'<img alt="" src="'+c.av+'"/>';
+      var who=m.r==='user'?'我':c.name;
+      return '<div class="m">'+face+'<div class="tx"><b>'+who+'</b>'+String(m.t).replace(/[&<>]/g,function(x){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[x];})+'</div></div>';
     }).join('');
     $('log').scrollTop=$('log').scrollHeight;
   }
   async function reply(){
     var c=cfg();
-    var msgs=[{role:'system',content:sys(c)}].concat(hist.slice(-12).map(function(m){return {role:m.r==='user'?'user':'assistant',content:m.t};}));
-    var text='';
+    var messages=[{role:'system',content:sys(c)}].concat(hist.filter(function(m){return m.t!=='在输…';}).slice(-12).map(function(m){return {role:m.r==='user'?'user':'assistant',content:m.t};}));
     try{
-      var r=await fetch('https://text.pollinations.ai/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:msgs,model:'openai'})});
-      text=r.ok?String(await r.text()).trim():'';
+      var r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:messages})});
+      var t=String(await r.text()).trim();
+      if(t) return t;
     }catch(e){}
-    if(!text){
-      try{
-        var g=await fetch('https://text.pollinations.ai/'+encodeURIComponent(sys(c)+'\n用户:'+hist[hist.length-1].t+'\n回复:'));
-        text=g.ok?String(await g.text()).trim():'';
-      }catch(e){}
-    }
-    return text;
+    return '';
   }
   $('save').onclick=function(){
-    var c=cfg(); if(parseInt(c.age,10)<18){$('st').textContent=T.ageerr;return;}
-    localStorage.setItem(KEY,JSON.stringify(c)); $('st').textContent=T.save;
+    var c=cfg(); if(parseInt(c.age,10)<18){$('st').textContent='年龄要≥18';return;}
+    try{localStorage.setItem(KEY,JSON.stringify(c));}catch(e){$('st').textContent='图片太大，换小图';return;}
+    $('st').textContent='已保存';
   };
   $('go').onclick=function(){
-    var c=cfg(); if(parseInt(c.age,10)<18){$('st').textContent=T.ageerr;return;}
-    localStorage.setItem(KEY,JSON.stringify(c));
-    hist=[{r:'ai',t:T.hi}]; showChat(true); render();
+    var c=cfg(); if(parseInt(c.age,10)<18){$('st').textContent='年龄要≥18';return;}
+    try{localStorage.setItem(KEY,JSON.stringify(c));}catch(e){}
+    hist=[{r:'ai',t:'你来啦～今天想聊点什么？'}]; showChat(true); render();
   };
   $('backset').onclick=function(){ showChat(false); };
   $('send').onclick=async function(){
+    if(busy) return;
     var t=($('inp').value||'').trim(); if(!t) return;
-    $('inp').value=''; hist.push({r:'user',t:t}); hist.push({r:'ai',t:T.wait}); render();
+    $('inp').value=''; hist.push({r:'user',t:t}); hist.push({r:'ai',t:'在输…'}); render();
+    busy=true; $('send').disabled=true;
     var a=await reply();
-    hist.pop(); hist.push({r:'ai',t:a||T.err}); render();
+    hist.pop(); hist.push({r:'ai',t:a||'网络忙，再发一次'}); render();
+    busy=false; $('send').disabled=false;
   };
   try{
     var s=JSON.parse(localStorage.getItem(KEY)||'null');
-    if(s){ if(s.name)$('name').value=s.name; if(s.age)$('age').value=s.age; if(s.tone)$('tone').value=s.tone; if(s.bio)$('bio').value=s.bio; if(s.av){ if(AV.indexOf(s.av)>=0)pick=s.av; else $('avurl').value=s.av; } }
+    if(s){
+      if(s.name)$('name').value=s.name;
+      if(s.age)$('age').value=s.age;
+      if(s.tone)$('tone').value=s.tone;
+      if(s.bio)$('bio').value=s.bio;
+      if(s.av){ pick=s.av; if(s.av.indexOf('data:')===0) $('file').dataset.url=s.av; }
+    }
   }catch(e){}
-  apply(); paintAv();
+  paintAv();
 })();
 </script>
-<script src="./tabbar.js?v=291"></script>
+<script src="./tabbar.js?v=293"></script>
 </body>
 </html>
