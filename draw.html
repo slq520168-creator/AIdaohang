@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
-<meta name="referrer" content="no-referrer"/>
 <title>本站出图</title>
 <script>try{var _t=localStorage.getItem('theme');if(_t==='dark'||_t==='light')document.documentElement.setAttribute('data-theme',_t);}catch(e){}</script>
-<link rel="stylesheet" href="./sub.css?v=282"/>
+<link rel="stylesheet" href="./sub.css?v=283"/>
 <style>
 .draw textarea{display:block;width:100%;min-height:110px;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
 .draw .row{display:flex;gap:8px;margin:10px 0}
@@ -17,13 +16,11 @@
 .draw .chk{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);margin:0 0 8px}
 .draw .st{min-height:20px;font-size:13px;line-height:1.5;color:var(--muted);margin:2px 0 8px}
 .draw .st.err{color:#dc2626}
-html[data-theme="dark"] .draw .st.err{color:#f87171}
 .draw .st.ok{color:#16a34a}
-html[data-theme="dark"] .draw .st.ok{color:#4ade80}
-.draw .res{display:none;border-radius:14px;overflow:hidden;background:#111;border:1px solid var(--line);margin-bottom:10px}
+.draw .res{display:none;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);margin-bottom:10px}
 .draw .res.on{display:block}
-.draw .res img.out{display:block;width:100%;height:auto;min-height:240px;background:#111;object-fit:contain}
-.draw .wait{display:none;align-items:center;justify-content:center;gap:10px;height:72px;border-radius:14px;background:var(--card);border:1px dashed var(--line);color:var(--muted);font-size:13px}
+.draw .res img.out{display:block;width:100%;height:auto;background:#0b0b0b}
+.draw .wait{display:none;align-items:center;justify-content:center;gap:10px;min-height:72px;border-radius:14px;background:var(--card);border:1px dashed var(--line);color:var(--muted);font-size:13px;margin-bottom:8px}
 .draw .wait.on{display:flex}
 .draw .spin{width:22px;height:22px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--btn);animation:sp 1s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
@@ -35,91 +32,69 @@ html[data-theme="dark"] .draw .st.ok{color:#4ade80}
 <body>
 <div id="sitebg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
 <div class="w draw">
-  <div class="top"><a class="back" href="./tools.html?home=1" data-i18n="back">返回</a><h1 data-i18n="draw_title">本站出图</h1></div>
-  <p class="tip">默认用 Z-Image / Flux 高清。越好的模型越慢，可能 1–2 分钟。英文提示词更稳。</p>
-  <textarea id="p" maxlength="800" placeholder="photorealistic East Asian woman, natural skin pores, soft window light..."></textarea>
+  <div class="top"><a class="back" href="./tools.html?home=1">返回</a><h1>本站出图</h1></div>
+  <p class="tip">站内中转出图。中文会先译英文。默认 Flux，约 20–60 秒。</p>
+  <textarea id="p" maxlength="800" placeholder="雨中漫步，夜景街灯，电影感"></textarea>
   <div class="row">
     <select id="model">
-      <option value="zimage" selected>Z-Image 高清</option>
-      <option value="flux">Flux</option>
-      <option value="gptimage">GPT Image</option>
-      <option value="seedream">Seedream</option>
-      <option value="kontext">Kontext</option>
+      <option value="flux" selected>Flux</option>
+      <option value="zimage">Z-Image</option>
       <option value="turbo">Turbo 快</option>
     </select>
     <select id="size">
-      <option value="1024x1024">1024²</option>
       <option value="768x1024" selected>768×1024</option>
+      <option value="1024x1024">1024²</option>
       <option value="1024x768">1024×768</option>
-      <option value="1280x720">1280×720</option>
     </select>
     <button class="go" id="go" type="button">生成</button>
   </div>
-  <label class="chk"><input type="checkbox" id="boost" checked/> 自动补画质词（细节/真实皮肤/锚利）</label>
-  <div class="st" id="st" aria-live="polite"></div>
+  <label class="chk"><input type="checkbox" id="boost" checked/> 补画质词</label>
+  <div class="st" id="st"></div>
   <div class="wait" id="wait"><span class="spin"></span><span id="waitTxt"></span></div>
-  <div class="res" id="res"><img class="out" id="out" alt="" referrerpolicy="no-referrer" decoding="async"/></div>
+  <div class="res" id="res"><img class="out" id="out" alt=""/></div>
   <div class="acts" id="acts"><a id="open" href="#" target="_blank" rel="noopener">新窗口打开</a><button type="button" id="save">下载</button></div>
 </div>
-<script src="./i18n.js?v=282"></script>
 <script>
 (function(){
   var $=function(id){return document.getElementById(id);};
-  var TIMEOUT=180000, busy=false, timer=null;
-  var BOOST=', highly detailed, sharp focus, 8k uhd, professional photography, natural skin pores, realistic lighting, no watermark';
-  function T(k,s){var v=(window.I18N&&window.I18N.t)?window.I18N.t(k):k;return s==null?v:String(v).replace('{s}',s);}
-  function status(txt,cls){var el=$('st');el.textContent=txt||'';el.className='st'+(cls?' '+cls:'');}
-  function urls(text){
-    var wh=$('size').value.split('x');
-    var model=$('model').value;
-    var seed=Math.floor(Math.random()*2000000000);
-    var q=encodeURIComponent(text);
-    var qs='width='+wh[0]+'&height='+wh[1]+'&seed='+seed+'&model='+encodeURIComponent(model)+'&enhance=true&quality=hd&private=true';
-    return [
-      'https://image.pollinations.ai/prompt/'+q+'?'+qs,
-      'https://image.pollinations.ai/prompt/'+q+'?width='+wh[0]+'&height='+wh[1]+'&seed='+seed+'&model=flux&enhance=true',
-      'https://gen.pollinations.ai/image/'+q+'?width='+wh[0]+'&height='+wh[1]+'&model='+encodeURIComponent(model)
-    ];
-  }
-  function bind(img, url, cb){
-    var done=false;
-    var to=setTimeout(function(){if(done)return;done=true;cb(false);},TIMEOUT);
-    img.onload=function(){if(done)return;done=true;clearTimeout(to);cb(img.naturalWidth>8);};
-    img.onerror=function(){if(done)return;done=true;clearTimeout(to);cb(false);};
-    img.referrerPolicy='no-referrer';
-    img.src=url;
-  }
-  function tryList(list, i, img, cb){
-    if(i>=list.length) return cb(false,'');
-    $('open').href=list[i];
-    bind(img, list[i], function(ok){
-      if(ok) cb(true, list[i]); else tryList(list, i+1, img, cb);
-    });
-  }
+  var busy=false,timer=null;
+  function status(t,c){var el=$('st');el.textContent=t||'';el.className='st'+(c?' '+c:'');}
   $('go').onclick=function(){
     if(busy) return;
     var text=($('p').value||'').trim();
-    if(!text){status(T('draw_empty')||'先写提示词','err');$('p').focus();return;}
-    if($('boost').checked && text.indexOf('highly detailed')<0) text+=BOOST;
-    busy=true;$('go').disabled=true;$('acts').className='acts';status('');
-    var img=$('out'); img.removeAttribute('src'); $('res').className='res on';
+    if(!text){status('先写提示词','err');return;}
+    var wh=$('size').value.split('x');
+    var url='/api/draw?p='+encodeURIComponent(text)+'&model='+encodeURIComponent($('model').value)+'&w='+wh[0]+'&h='+wh[1]+'&boost='+($('boost').checked?'1':'0')+'&seed='+Date.now();
+    busy=true;$('go').disabled=true;$('acts').className='acts';$('res').className='res';
+    $('out').removeAttribute('src');
     var t0=Date.now();
-    function tick(){$('waitTxt').textContent='出图中 '+Math.round((Date.now()-t0)/1000)+'s，请勿切页';}
-    function end(ok,url){
-      clearInterval(timer);busy=false;$('go').disabled=false;$('wait').className='wait';
-      if(ok){$('res').className='res on';$('acts').className='acts on';$('open').href=url;status('完成 '+Math.round((Date.now()-t0)/1000)+'s','ok');}
-      else status('失败，换 Z-Image 或 Flux 再试','err');
-    }
+    function tick(){$('waitTxt').textContent='出图中 '+Math.round((Date.now()-t0)/1000)+'s';}
     $('wait').className='wait on';tick();timer=setInterval(tick,1000);
-    tryList(urls(text),0,img,end);
+    var img=$('out');
+    var done=false;
+    var to=setTimeout(function(){fail();},90000);
+    function ok(){
+      if(done)return;done=true;clearTimeout(to);clearInterval(timer);
+      busy=false;$('go').disabled=false;$('wait').className='wait';
+      $('res').className='res on';$('acts').className='acts on';$('open').href=url;
+      status('完成 '+Math.round((Date.now()-t0)/1000)+'s','ok');
+    }
+    function fail(){
+      if(done)return;done=true;clearTimeout(to);clearInterval(timer);
+      busy=false;$('go').disabled=false;$('wait').className='wait';$('res').className='res';
+      status('失败，换 Flux 再试','err');
+    }
+    img.onload=function(){if(img.naturalWidth>8)ok();else fail();};
+    img.onerror=fail;
+    img.src=url;
   };
   $('save').onclick=function(){
     var u=$('out').src; if(!u) return;
-    var a=document.createElement('a'); a.href=u; a.download='ai.png'; a.target='_blank'; a.rel='noopener';
+    var a=document.createElement('a'); a.href=u; a.download='ai.jpg'; a.target='_blank';
     document.body.appendChild(a); a.click(); a.remove();
   };
 })();
 </script>
-<script src="./tabbar.js?v=282"></script>
+<script src="./tabbar.js?v=283"></script>
 </body>
 </html>

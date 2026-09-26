@@ -1,4 +1,7 @@
 {
+  "functions": {
+    "api/draw.js": { "maxDuration": 60 }
+  },
   "rewrites": [
     {
       "source": "/copy/:id",
