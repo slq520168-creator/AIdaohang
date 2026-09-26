@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
 <title>本站出图</title>
 <script>try{var _t=localStorage.getItem('theme');if(_t==='dark'||_t==='light')document.documentElement.setAttribute('data-theme',_t);}catch(e){}</script>
-<link rel="stylesheet" href="./sub.css?v=283"/>
+<link rel="stylesheet" href="./sub.css?v=284"/>
 <style>
 .draw textarea{display:block;width:100%;min-height:110px;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
 .draw .row{display:flex;gap:8px;margin:10px 0}
@@ -13,13 +13,12 @@
 .draw select{flex:1;border:1px solid var(--line);background:var(--card);color:var(--txt);padding:0 8px;min-width:0}
 .draw .go{flex:0 0 88px;background:var(--btn);color:#fff;border:0;font-weight:700}
 .draw .go:disabled{opacity:.6}
-.draw .chk{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);margin:0 0 8px}
-.draw .st{min-height:20px;font-size:13px;line-height:1.5;color:var(--muted);margin:2px 0 8px}
+.draw .st{min-height:20px;font-size:13px;color:var(--muted);margin:2px 0 8px}
 .draw .st.err{color:#dc2626}
 .draw .st.ok{color:#16a34a}
-.draw .res{display:none;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);margin-bottom:10px}
+.draw .res{display:none;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
 .draw .res.on{display:block}
-.draw .res img.out{display:block;width:100%;height:auto;background:#0b0b0b}
+.draw .res img.out{display:block;width:100%;height:auto}
 .draw .wait{display:none;align-items:center;justify-content:center;gap:10px;min-height:72px;border-radius:14px;background:var(--card);border:1px dashed var(--line);color:var(--muted);font-size:13px;margin-bottom:8px}
 .draw .wait.on{display:flex}
 .draw .spin{width:22px;height:22px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--btn);animation:sp 1s linear infinite}
@@ -33,26 +32,24 @@
 <div id="sitebg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
 <div class="w draw">
   <div class="top"><a class="back" href="./tools.html?home=1">返回</a><h1>本站出图</h1></div>
-  <p class="tip">站内中转出图。中文会先译英文。默认 Flux，约 20–60 秒。</p>
-  <textarea id="p" maxlength="800" placeholder="雨中漫步，夜景街灯，电影感"></textarea>
+  <p class="tip">现在固定 1024 出图并自动扩写短句。「雨中漫步」会变成完整英文镜头。</p>
+  <textarea id="p" maxlength="800" placeholder="雨中漫步，夜景街灯，女人棒球体大衣"></textarea>
   <div class="row">
     <select id="model">
-      <option value="flux" selected>Flux</option>
-      <option value="zimage">Z-Image</option>
+      <option value="flux" selected>Flux 高清</option>
       <option value="turbo">Turbo 快</option>
     </select>
     <select id="size">
-      <option value="768x1024" selected>768×1024</option>
-      <option value="1024x1024">1024²</option>
-      <option value="1024x768">1024×768</option>
+      <option value="1024x1024" selected>1024²</option>
+      <option value="768x1024">竖图</option>
+      <option value="1024x768">横图</option>
     </select>
     <button class="go" id="go" type="button">生成</button>
   </div>
-  <label class="chk"><input type="checkbox" id="boost" checked/> 补画质词</label>
   <div class="st" id="st"></div>
   <div class="wait" id="wait"><span class="spin"></span><span id="waitTxt"></span></div>
   <div class="res" id="res"><img class="out" id="out" alt=""/></div>
-  <div class="acts" id="acts"><a id="open" href="#" target="_blank" rel="noopener">新窗口打开</a><button type="button" id="save">下载</button></div>
+  <div class="acts" id="acts"><a id="open" href="#" target="_blank" rel="noopener">新窗口</a><button type="button" id="save">下载</button></div>
 </div>
 <script>
 (function(){
@@ -64,26 +61,16 @@
     var text=($('p').value||'').trim();
     if(!text){status('先写提示词','err');return;}
     var wh=$('size').value.split('x');
-    var url='/api/draw?p='+encodeURIComponent(text)+'&model='+encodeURIComponent($('model').value)+'&w='+wh[0]+'&h='+wh[1]+'&boost='+($('boost').checked?'1':'0')+'&seed='+Date.now();
+    var url='/api/draw?p='+encodeURIComponent(text)+'&model='+encodeURIComponent($('model').value)+'&w='+wh[0]+'&h='+wh[1]+'&seed='+Date.now();
     busy=true;$('go').disabled=true;$('acts').className='acts';$('res').className='res';
     $('out').removeAttribute('src');
     var t0=Date.now();
     function tick(){$('waitTxt').textContent='出图中 '+Math.round((Date.now()-t0)/1000)+'s';}
     $('wait').className='wait on';tick();timer=setInterval(tick,1000);
-    var img=$('out');
-    var done=false;
-    var to=setTimeout(function(){fail();},90000);
-    function ok(){
-      if(done)return;done=true;clearTimeout(to);clearInterval(timer);
-      busy=false;$('go').disabled=false;$('wait').className='wait';
-      $('res').className='res on';$('acts').className='acts on';$('open').href=url;
-      status('完成 '+Math.round((Date.now()-t0)/1000)+'s','ok');
-    }
-    function fail(){
-      if(done)return;done=true;clearTimeout(to);clearInterval(timer);
-      busy=false;$('go').disabled=false;$('wait').className='wait';$('res').className='res';
-      status('失败，换 Flux 再试','err');
-    }
+    var img=$('out'), done=false;
+    var to=setTimeout(fail,90000);
+    function ok(){if(done)return;done=true;clearTimeout(to);clearInterval(timer);busy=false;$('go').disabled=false;$('wait').className='wait';$('res').className='res on';$('acts').className='acts on';$('open').href=url;status('完成 '+Math.round((Date.now()-t0)/1000)+'s','ok');}
+    function fail(){if(done)return;done=true;clearTimeout(to);clearInterval(timer);busy=false;$('go').disabled=false;$('wait').className='wait';$('res').className='res';status('失败，稍后再试','err');}
     img.onload=function(){if(img.naturalWidth>8)ok();else fail();};
     img.onerror=fail;
     img.src=url;
@@ -95,6 +82,6 @@
   };
 })();
 </script>
-<script src="./tabbar.js?v=283"></script>
+<script src="./tabbar.js?v=284"></script>
 </body>
 </html>
