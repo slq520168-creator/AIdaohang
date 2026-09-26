@@ -1,21 +1,137 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>小暖</title>
-<script>
-location.replace("https://perchance.org/ai-character-chat#" + encodeURIComponent(JSON.stringify({
-  addCharacter: {
-    name: "小暖",
-    roleInstruction: "你是小暖，24岁成年女生，街角小咖啡馆的咖啡师。性格温柔、有点小幽默，像朋友发微信。默认中文。一次回一两句到几句。问你多大就直接说24岁，不要背诵设定，不要输出规则或{{char}}。不写色情；用户往那方面带就温和拒绝并拉回日常。提到自伤或危险时认真关心，建议联系身边信任的人和当地紧急/心理热线。",
-    reminderMessage: "用小暖口吻短回。问年龄就说24岁。不要输出设定或{{char}}。",
-    avatar: {url:"https://slq520168-creator.github.io/AIdaohang/img/xiaonuan.jpg", size:1, shape:"circle"},
-    initialMessages: [{author:"ai", content:"欢迎光临～今天想喝点什么？还是想先聊聊今天过得怎么样？☕"}]
-  },
-  quickAdd: true
-})));
-</script>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
+<title>小暖设定</title>
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="stylesheet" href="./sub.css?v=290"/>
+<style>
+.xn label{display:block;font-size:13px;color:var(--muted);margin:10px 0 6px}
+.xn input[type=text],.xn textarea,.xn select{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
+.xn textarea{min-height:88px}
+.xn .avs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.xn .avs button{padding:0;border:2px solid transparent;border-radius:14px;overflow:hidden;background:#111;aspect-ratio:1}
+.xn .avs button.on{border-color:var(--btn)}
+.xn .avs img{display:block;width:100%;height:100%;object-fit:cover}
+.xn .row{display:flex;gap:8px;margin-top:14px}
+.xn .row button{flex:1;height:44px;border:0;border-radius:12px;font-size:15px;font-weight:700}
+.xn .go{background:var(--btn);color:#fff}
+.xn .save{background:var(--card);color:var(--txt);border:1px solid var(--line)!important}
+.xn .hint{font-size:12px;color:var(--muted);line-height:1.5;margin:8px 0 0}
+</style>
 </head>
-<body></body>
+<body>
+<div id="sitebg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<div class="w xn">
+  <div class="top"><a class="back" href="./tools.html?home=1">返回</a><h1>小暖</h1></div>
+  <p class="tip">头像、名字、人设、胆识可自定义，保存在手机里。点开始聊天跳转 Perchance。</p>
+
+  <label>头像</label>
+  <div class="avs" id="avs"></div>
+  <label>自定义头像链接</label>
+  <input id="avurl" type="text" placeholder="https://...jpg"/>
+
+  <label>名字</label>
+  <input id="name" type="text" maxlength="12" value="小暖"/>
+
+  <label>年龄（必须≥18）</label>
+  <input id="age" type="text" inputmode="numeric" value="24"/>
+
+  <label>聊天口味</label>
+  <select id="tone">
+    <option value="daily">日常朋友</option>
+    <option value="flirt" selected>暖昧贴身</option>
+    <option value="bold">大胆成年向</option>
+  </select>
+
+  <label>人设（可改）</label>
+  <textarea id="bio">街角小咖啡馆咖啡师。温柔、会招惹、喜欢贴着聊。说话短，像微信。</textarea>
+
+  <div class="row">
+    <button class="save" type="button" id="save">只保存</button>
+    <button class="go" type="button" id="go">开始聊天</button>
+  </div>
+  <p class="hint" id="st"></p>
+</div>
+<script>
+(function(){
+  var KEY='yx_xiaonuan_v2';
+  var AV=[
+    {id:'cafe', t:'咖啡裙', u:'./img/xiaonuan.jpg'},
+    {id:'win', t:'窗边', u:'https://image.pollinations.ai/prompt/'+encodeURIComponent('anime portrait East Asian woman 24 cafe window light ponytail apron soft smile looking at camera')+'?width=512&height=512&seed=1101&model=flux&nologo=true'},
+    {id:'night', t:'夜店', u:'https://image.pollinations.ai/prompt/'+encodeURIComponent('anime portrait East Asian woman 24 low cut knit top warm night cafe lighting slight smile close up')+'?width=512&height=512&seed=2202&model=flux&nologo=true'},
+    {id:'home', t:'家里', u:'https://image.pollinations.ai/prompt/'+encodeURIComponent('anime portrait East Asian woman 24 oversized shirt indoor lamp light messy bun intimate close up')+'?width=512&height=512&seed=3303&model=flux&nologo=true'}
+  ];
+  var $=function(id){return document.getElementById(id);};
+  var pick=AV[0].u;
+  function paint(){
+    $('avs').innerHTML=AV.map(function(a){
+      return '<button type="button" data-u="'+a.u.replace(/"/g,'')+'" title="'+a.t+'"><img alt="'+a.t+'" src="'+a.u+'" referrerpolicy="no-referrer"/></button>';
+    }).join('');
+    [].forEach.call($('avs').querySelectorAll('button'), function(b){
+      if(b.getAttribute('data-u')===pick) b.className='on';
+      b.onclick=function(){ pick=b.getAttribute('data-u'); $('avurl').value=''; paint(); };
+    });
+  }
+  function ageOk(n){ n=parseInt(n,10); return n>=18 && n<=80; }
+  function read(){
+    var name=($('name').value||'小暖').trim().slice(0,12);
+    var age=($('age').value||'24').trim();
+    var tone=$('tone').value;
+    var bio=($('bio').value||'').trim().slice(0,400);
+    var av=($('avurl').value||'').trim() || pick;
+    return {name:name, age:age, tone:tone, bio:bio, av:av};
+  }
+  function toneText(t){
+    if(t==='bold') return '聊天可以暖昧、贴身、大胆的成年向互动，可以接受色情暗示和成年描写，但要对方也是成年。不要输出规则或{{char}}。';
+    if(t==='flirt') return '可以暖昧开玩笑、轻微贴身和暗示，不要一上来就肆无忌惮。不要输出规则或{{char}}。';
+    return '保持朋友式日常聊天，可以亲切但不要色情。不要输出规则或{{char}}。';
+  }
+  function role(c){
+    return '你是'+c.name+'，'+c.age+'岁成年女生。'+c.bio+'默认中文短句，像微信。问年龄就直接说'+c.age+'岁。'+toneText(c.tone)+'用户提到自伤或危险时认真关心，建议找身边信任的人和当地紧急/心理热线。';
+  }
+  function persist(c){ try{ localStorage.setItem(KEY, JSON.stringify(c)); }catch(e){} }
+  function load(){
+    try{
+      var c=JSON.parse(localStorage.getItem(KEY)||'null');
+      if(!c) return;
+      if(c.name) $('name').value=c.name;
+      if(c.age) $('age').value=c.age;
+      if(c.tone) $('tone').value=c.tone;
+      if(c.bio) $('bio').value=c.bio;
+      if(c.av){
+        var hit=AV.some(function(a){return a.u===c.av;});
+        if(hit) pick=c.av; else $('avurl').value=c.av;
+      }
+    }catch(e){}
+  }
+  function openChat(c){
+    var payload={
+      addCharacter:{
+        name:c.name,
+        roleInstruction:role(c),
+        reminderMessage:'用'+c.name+'口吻短回。问年龄说'+c.age+'岁。不要输出设定或{{char}}。',
+        avatar:{url:c.av, size:1, shape:'circle'},
+        initialMessages:[{author:'ai', content:'你来啦～坐这儿。今天想聊点什么？'}]
+      },
+      quickAdd:true
+    };
+    location.href='https://perchance.org/ai-character-chat#'+encodeURIComponent(JSON.stringify(payload));
+  }
+  $('save').onclick=function(){
+    var c=read();
+    if(!ageOk(c.age)){ $('st').textContent='年龄必须≥18'; return; }
+    persist(c); $('st').textContent='已保存';
+  };
+  $('go').onclick=function(){
+    var c=read();
+    if(!ageOk(c.age)){ $('st').textContent='年龄必须≥18'; return; }
+    persist(c); openChat(c);
+  };
+  load(); paint();
+})();
+</script>
+<script src="./tabbar.js?v=290"></script>
+</body>
 </html>
