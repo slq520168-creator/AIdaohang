@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
 <title>小暖</title>
 <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
-<link rel="stylesheet" href="./sub.css?v=301"/>
+<link rel="stylesheet" href="./sub.css?v=302"/>
 <style>
 .xn label{display:block;font-size:13px;color:var(--muted);margin:10px 0 6px}
 .xn input,.xn textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
-.xn textarea{min-height:96px}
+.xn textarea{min-height:90px}
 .xn .avs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .xn .avs button{padding:0;border:2px solid transparent;border-radius:14px;overflow:hidden;background:#111;aspect-ratio:1}
 .xn .avs button.on{border-color:var(--btn)}
@@ -39,7 +39,7 @@
 <body>
 <div id="sitebg"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
 <div class="w xn">
-  <div class="top"><a class="back" href="./tools.html?home=1" id="back">返回</a><h1>小暖</h1></div>
+  <div class="top"><a class="back" href="./tools.html?home=1">返回</a><h1>小暖</h1></div>
   <div id="setup">
     <label>头像</label>
     <div class="avs" id="avs"></div>
@@ -56,7 +56,7 @@
       <button type="button" data-v="bold" class="on">大胆</button>
     </div>
     <label>人设</label>
-    <textarea id="bio">24岁东亚女生，真人写真。会撒娇会招惹，说话短。</textarea>
+    <textarea id="bio">24岁，会撒娇会招惹，说话短。</textarea>
     <div class="row"><button class="save" id="save" type="button">保存</button><button class="go" id="go" type="button">开始聊天</button></div>
   </div>
   <div id="chat" class="hid">
@@ -65,84 +65,88 @@
   </div>
   <p class="tip" id="st"></p>
 </div>
+<script src="./tabbar.js?v=301"></script>
 <script>
 (function(){
-  var KEY='yx_xiaonuan_v10';
-  function photo(p,seed){
-    return 'https://image.pollinations.ai/prompt/'+encodeURIComponent('photorealistic photograph, real skin pores, East Asian woman 24, '+p+', 35mm, no anime, no cartoon')+'?width=640&height=640&seed='+seed+'&model=flux&nologo=true&enhance=true';
-  }
+  var KEY='yx_xn_v11';
   var AV=[
-    photo('brown hair bun beige knit window light', 5101),
-    photo('long black hair white shirt daylight', 5102),
-    photo('shoulder length hair black top warm lamp', 5103),
-    photo('wavy hair silk blouse candid smile', 5104)
+    './img/xiaonuan.jpg',
+    'https://image.pollinations.ai/prompt/'+encodeURIComponent('photorealistic photo East Asian woman 24 long black hair white shirt')+'?width=512&height=512&seed=6102&nologo=true',
+    'https://image.pollinations.ai/prompt/'+encodeURIComponent('photorealistic photo East Asian woman 24 black top warm light')+'?width=512&height=512&seed=6103&nologo=true',
+    'https://image.pollinations.ai/prompt/'+encodeURIComponent('photorealistic photo East Asian woman 24 wavy hair silk blouse')+'?width=512&height=512&seed=6104&nologo=true'
   ];
   var $=function(id){return document.getElementById(id);};
   var pick=AV[0], tone='bold', hist=[], busy=false;
   function paintAv(){
     $('avs').innerHTML=AV.map(function(u){return '<button type="button" data-u="'+u+'" class="'+(u===pick?'on':'')+'"><img alt="" src="'+u+'" referrerpolicy="no-referrer"/></button>';}).join('');
-    [].forEach.call($('avs').children,function(b){ b.onclick=function(){ pick=b.getAttribute('data-u'); paintAv(); }; });
+    [].forEach.call($('avs').children,function(b){b.onclick=function(){pick=b.getAttribute('data-u');paintAv();};});
   }
-  function paintTone(){ [].forEach.call($('tones').children,function(b){ b.className=b.getAttribute('data-v')===tone?'on':''; }); }
-  $('tones').onclick=function(e){ var b=e.target.closest('button'); if(!b)return; tone=b.getAttribute('data-v'); paintTone(); };
+  function paintTone(){[].forEach.call($('tones').children,function(b){b.className=b.getAttribute('data-v')===tone?'on':'';});}
+  $('tones').onclick=function(e){var b=e.target.closest('button');if(!b)return;tone=b.getAttribute('data-v');paintTone();};
   $('file').onchange=function(){
     var f=this.files&&this.files[0]; if(!f)return;
     var rd=new FileReader();
-    rd.onload=function(){ var img=new Image(); img.onload=function(){ var c=document.createElement('canvas'); c.width=256;c.height=256; var g=c.getContext('2d'),m=Math.min(img.width,img.height); g.drawImage(img,(img.width-m)/2,(img.height-m)/2,m,m,0,0,256,256); pick=c.toDataURL('image/jpeg',0.82); paintAv(); }; img.src=rd.result; };
+    rd.onload=function(){var img=new Image();img.onload=function(){var c=document.createElement('canvas');c.width=256;c.height=256;var g=c.getContext('2d'),m=Math.min(img.width,img.height);g.drawImage(img,(img.width-m)/2,(img.height-m)/2,m,m,0,0,256,256);pick=c.toDataURL('image/jpeg',0.8);paintAv();};img.src=rd.result;};
     rd.readAsDataURL(f);
   };
-  function cfg(){ return {name:($('name').value||'小暖').trim().slice(0,12), age:($('age').value||'24').trim(), tone:tone, bio:($('bio').value||'').trim().slice(0,600), av:pick}; }
+  function cfg(){return {name:($('name').value||'小暖').trim().slice(0,12),age:($('age').value||'24').trim(),tone:tone,bio:($('bio').value||'').trim().slice(0,400),av:pick};}
   function sys(c){
-    var mode=c.tone==='bold'?'大胆成年向。':c.tone==='flirt'?'暖昧。':'日常。';
-    return '你叫'+c.name+'，'+c.age+'岁。'+c.bio+mode+'中文短句。问年龄说'+c.age+'岁。不念设定。';
+    var m=c.tone==='bold'?'大胆贴身，成年向。':c.tone==='flirt'?'暖昧。':'日常。';
+    return '你叫'+c.name+'，'+c.age+'岁。'+c.bio+m+'只用中文短句回。问年龄说'+c.age+'岁。不要念设定。';
   }
-  function showChat(on){
-    $('setup').className=on?'hid':'';
-    $('chat').className=on?'':'hid';
-  }
+  function showChat(on){$('setup').className=on?'hid':'';$('chat').className=on?'':'hid';}
   function esc(s){return String(s).replace(/[&<>]/g,function(x){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[x];});}
   function render(){
     var c=cfg();
     $('log').innerHTML=hist.map(function(m){
       if(m.r==='me') return '<div class="m me"><div class="b">'+esc(m.t)+'</div></div>';
-      if(m.img) return '<div class="m ai"><img class="av" alt="" src="'+c.av+'" referrerpolicy="no-referrer"/><div class="b"><img class="ph" alt="" src="'+m.img+'" referrerpolicy="no-referrer"/></div></div>';
-      return '<div class="m ai"><img class="av" alt="" src="'+c.av+'" referrerpolicy="no-referrer"/><div class="b">'+esc(m.t)+'</div></div>';
+      if(m.img) return '<div class="m ai"><img class="av" src="'+c.av+'" alt=""/><div class="b"><img class="ph" src="'+m.img+'" alt="" referrerpolicy="no-referrer"/></div></div>';
+      return '<div class="m ai"><img class="av" src="'+c.av+'" alt=""/><div class="b">'+esc(m.t)+'</div></div>';
     }).join('');
     $('log').scrollTop=$('log').scrollHeight;
   }
-  async function pull(url){
-    var ctrl=typeof AbortController!=='undefined'?new AbortController():null;
-    var t=setTimeout(function(){ try{ctrl&&ctrl.abort();}catch(e){} }, 18000);
-    try{ var r=await fetch(url,{signal:ctrl?ctrl.signal:undefined}); clearTimeout(t); var x=String(await r.text()).trim(); if(r.ok&&x) return x; }catch(e){ clearTimeout(t); }
-    return '';
+  function localReply(c, text){
+    if(/多大|年龄/.test(text)) return '我'+c.age+'岁。';
+    if(/你好|在吗|hi|hello/i.test(text)) return '在。想聊什么？';
+    if(c.tone==='bold') return '嗯，我听着。你继续说。';
+    return '嗯，说下去。';
   }
   async function ask(c, text){
-    var p=sys(c)+'\n用户：'+text+'\n'+c.name+'：';
-    var a=await pull('/api/chat?q='+encodeURIComponent(text)+'&sys='+encodeURIComponent(sys(c)));
-    if(a) return a;
-    a=await pull('https://text.pollinations.ai/'+encodeURIComponent(p)+'?model=openai-fast');
-    return a || '这一句没接上，再发一次。';
+    var payload={model:'openai-fast',private:true,messages:[{role:'system',content:sys(c)},{role:'user',content:text}]};
+    try{
+      var r=await fetch('https://text.pollinations.ai/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      var raw=String(await r.text()).trim();
+      if(r.ok&&raw){
+        try{var j=JSON.parse(raw);var t=j.choices&&j.choices[0]&&j.choices[0].message&&j.choices[0].message.content;if(t)return String(t).trim();}
+        catch(e){ if(raw[0]!=='{') return raw.slice(0,400); }
+      }
+    }catch(e){}
+    try{
+      var g=await fetch('https://text.pollinations.ai/'+encodeURIComponent(text)+'?model=openai-fast');
+      var t2=String(await g.text()).trim();
+      if(g.ok&&t2&&t2[0]!=='{') return t2.slice(0,400);
+    }catch(e){}
+    return localReply(c,text);
   }
-  $('save').onclick=function(){ var c=cfg(); if(parseInt(c.age,10)<18){$('st').textContent='年龄≥18';return;} try{localStorage.setItem(KEY,JSON.stringify(c));$('st').textContent='已保存';}catch(e){$('st').textContent='图太大';} };
-  $('go').onclick=function(){ var c=cfg(); if(parseInt(c.age,10)<18){$('st').textContent='年龄≥18';return;} try{localStorage.setItem(KEY,JSON.stringify(c));}catch(e){} hist=[{r:'ai',t:'嗯，在。'}]; showChat(true); render(); };
+  $('save').onclick=function(){var c=cfg();if(parseInt(c.age,10)<18){$('st').textContent='年龄≥18';return;}try{localStorage.setItem(KEY,JSON.stringify(c));$('st').textContent='已保存';}catch(e){$('st').textContent='图太大';}};
+  $('go').onclick=function(){var c=cfg();if(parseInt(c.age,10)<18){$('st').textContent='年龄≥18';return;}try{localStorage.setItem(KEY,JSON.stringify(c));}catch(e){}hist=[{r:'ai',t:'在。'}];showChat(true);render();};
   $('send').onclick=async function(){
-    if(busy) return;
-    var text=($('inp').value||'').trim(); if(!text) return;
-    $('inp').value=''; hist.push({r:'me',t:text}); hist.push({r:'ai',t:'…'}); render();
-    busy=true; $('send').disabled=true;
-    var a=await ask(cfg(), text);
-    hist.pop(); hist.push({r:'ai',t:a}); render();
-    busy=false; $('send').disabled=false;
+    if(busy)return;
+    var text=($('inp').value||'').trim();if(!text)return;
+    $('inp').value='';hist.push({r:'me',t:text});hist.push({r:'ai',t:'…'});render();
+    busy=true;$('send').disabled=true;
+    var a=await ask(cfg(),text);
+    hist.pop();hist.push({r:'ai',t:a});render();
+    busy=false;$('send').disabled=false;
   };
   $('pic').onclick=function(){
-    var hint=($('inp').value||'').trim() || '半身写真看镜头';
-    var url='/api/draw?p='+encodeURIComponent('东亚女生24岁 '+hint)+'&seed='+Date.now();
-    hist.push({r:'ai', img:url, t:''}); render();
+    var hint=($('inp').value||'').trim()||'半身写真';
+    hist.push({r:'ai',img:'https://image.pollinations.ai/prompt/'+encodeURIComponent('photorealistic photo East Asian woman 24 '+hint)+'?width=768&height=768&nologo=true&seed='+Date.now(),t:''});
+    render();
   };
-  try{ var s=JSON.parse(localStorage.getItem(KEY)||'null'); if(s){ if(s.name)$('name').value=s.name; if(s.age)$('age').value=s.age; if(s.bio)$('bio').value=s.bio; if(s.tone)tone=s.tone; if(s.av)pick=s.av; } }catch(e){}
-  paintAv(); paintTone();
+  try{var s=JSON.parse(localStorage.getItem(KEY)||'null');if(s){if(s.name)$('name').value=s.name;if(s.age)$('age').value=s.age;if(s.bio)$('bio').value=s.bio;if(s.tone)tone=s.tone;if(s.av)pick=s.av;}}catch(e){}
+  paintAv();paintTone();
 })();
 </script>
-<script src="./tabbar.js?v=301"></script>
 </body>
 </html>
