@@ -62,7 +62,7 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
     }).join('');
   }
   function load(url){return fetch(url).then(function(r){if(!r.ok)throw 1;return r.json();});}
-  load('./data/jobs.json?v=314').then(function(d){paint(d.jobs);}).catch(function(){
+  load('./data/jobs.json?v=315').then(function(d){paint(d.jobs);}).catch(function(){
     return load('/api/jobs').then(function(d){paint(d.jobs);});
   }).catch(function(){tip.textContent='加载失败';});
   list.onclick=function(e){
@@ -82,5 +82,5 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
   function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return ({'&':'&','<':'<','>':'>','"':'"'}[c]);});}
 })();
 </script>
-<script src="tabbar.js?v=314"></script>
+<script src="tabbar.js?v=315"></script>
 </body></html>
