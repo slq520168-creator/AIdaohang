@@ -5,15 +5,21 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
 <title>小暖</title>
 <style>
-  html,body{margin:0;height:100%;background:#111}
-  #bar{position:fixed;top:0;left:0;right:0;z-index:9;display:flex;align-items:center;gap:10px;height:calc(44px + env(safe-area-inset-top));padding:env(safe-area-inset-top) 12px 0;background:#161b22;color:#fff;font:16px/1 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
-  #bar a{color:#58a6ff;text-decoration:none;padding:8px 4px}
-  #frame{position:fixed;top:calc(44px + env(safe-area-inset-top));left:0;right:0;bottom:0;border:0;width:100%;height:calc(100% - 44px - env(safe-area-inset-top));background:#fff}
+  html,body{margin:0;height:100%;background:#111;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+  #bar{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;gap:12px;height:calc(48px + env(safe-area-inset-top));padding:env(safe-area-inset-top) 12px 0;background:#161b22;color:#fff;box-sizing:border-box}
+  #bar a{color:#58a6ff;text-decoration:none;font-size:16px;padding:8px 4px;flex:0 0 auto}
+  #bar span{flex:1;font-size:16px}
+  #open{color:#fff;background:#2563eb;border:0;border-radius:8px;padding:8px 12px;font-size:14px}
+  #frame{position:fixed;top:calc(48px + env(safe-area-inset-top));left:0;right:0;bottom:0;border:0;width:100%;height:calc(100% - 48px - env(safe-area-inset-top));background:#fff}
 </style>
 </head>
 <body>
-<div id="bar"><a href="./tools.html?home=1">← 返回导航</a><span>小暖</span></div>
-<iframe id="frame" title="小暖" allow="clipboard-read; clipboard-write"></iframe>
+<div id="bar">
+  <a href="./tools.html?home=1">← 返回导航</a>
+  <span>小暖</span>
+  <button id="open" type="button">新窗打开</button>
+</div>
+<iframe id="frame" title="小暖" referrerpolicy="no-referrer-when-downgrade"></iframe>
 <script>
 (function(){
   var payload = {
@@ -26,22 +32,8 @@
     quickAdd: true
   };
   var url = "https://perchance.org/ai-character-chat#" + encodeURIComponent(JSON.stringify(payload));
-  var frame = document.getElementById("frame");
-  frame.src = url;
-  var tried = false;
-  setTimeout(function(){
-    if(tried) return;
-    try{
-      var doc = frame.contentDocument;
-      if(!doc || !doc.body || !doc.body.childElementCount){
-        tried = true;
-        location.href = url;
-      }
-    }catch(e){
-      tried = true;
-      location.href = url;
-    }
-  }, 1800);
+  document.getElementById("frame").src = url;
+  document.getElementById("open").onclick = function(){ window.open(url, "_blank"); };
 })();
 </script>
 </body>
