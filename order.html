@@ -18,7 +18,7 @@ h1{margin:6px 0 4px;font-size:18px}
 .mask.on{display:flex}
 .sheet{width:100%;background:#fff;border-radius:16px 16px 0 0;padding:16px 16px 28px}
 .sheet h3{margin:0 0 8px;font-size:16px}
-.sheet p{margin:0 0 14px;color:#6b7280;font-size:13px;line-height:1.5}
+.sheet p{margin:0 0 14px;color:#6b7280;font-size:13px;line-height:1.5;white-space:pre-line}
 .sheet .row{display:flex;gap:8px}
 .sheet button{flex:1;height:44px;border-radius:10px;border:0;font-weight:700}
 .ok{background:#111;color:#fff}
@@ -33,7 +33,7 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
 <body>
 <div class="w">
   <h1>真实任务</h1>
-  <p class="tip" id="tip">正在抓取最新任务…</p>
+  <p class="tip" id="tip">正在加载任务…</p>
   <div id="list"></div>
 </div>
 <div class="mask" id="mask">
@@ -52,21 +52,25 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
   var tip=document.getElementById('tip');
   var mask=document.getElementById('mask');
   var cur=null;
-  fetch('/api/jobs').then(function(r){return r.json();}).then(function(d){
-    var jobs=(d&&d.jobs)||[];
-    if(!jobs.length){tip.textContent='暂时抓不到，稍后刷';return;}
-    tip.textContent='当前 '+jobs.length+'条真实任务，点开后可接单';
+  function paint(jobs){
+    jobs=(jobs||[]).filter(function(j){return j&&j.title&&j.url;});
+    if(!jobs.length){tip.textContent='没有任务';return;}
+    tip.textContent='当前 '+jobs.length+'条真实任务，点接单后跳原平台';
+    window.__jobs=jobs;
     list.innerHTML=jobs.map(function(j,i){
       return '<div class="card" data-i="'+i+'"><b>'+esc(j.title)+'</b><em>'+esc([j.company,j.cat,j.pay,j.from].filter(Boolean).join(' · '))+'</em><button type="button">接单</button></div>';
     }).join('');
-    window.__jobs=jobs;
-  }).catch(function(){tip.textContent='抓取失败';});
+  }
+  function load(url){return fetch(url).then(function(r){if(!r.ok)throw 1;return r.json();});}
+  load('./data/jobs.json?v=314').then(function(d){paint(d.jobs);}).catch(function(){
+    return load('/api/jobs').then(function(d){paint(d.jobs);});
+  }).catch(function(){tip.textContent='加载失败';});
   list.onclick=function(e){
     var card=e.target.closest('.card'); if(!card)return;
     var j=(window.__jobs||[])[+card.dataset.i]; if(!j)return;
     cur=j;
     document.getElementById('mt').textContent=j.title;
-    document.getElementById('md').textContent=(j.company||'')+' · '+(j.from||'')+'\n接单后会打开原平台去投递。';
+    document.getElementById('md').textContent=(j.company||'')+' · '+(j.from||'')+'\n确认接单后打开原站投递。';
     mask.className='mask on';
   };
   document.getElementById('cancel').onclick=function(){mask.className='mask';cur=null;};
@@ -75,8 +79,8 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
     mask.className='mask';
     location.href=cur.url;
   };
-  function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]);});}
+  function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return ({'&':'&','<':'<','>':'>','"':'"'}[c]);});}
 })();
 </script>
-<script src="tabbar.js?v=313"></script>
+<script src="tabbar.js?v=314"></script>
 </body></html>
