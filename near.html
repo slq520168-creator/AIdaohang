@@ -2,21 +2,54 @@
 <html lang="zh-CN" data-theme="light">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
-<meta name="theme-color" content="#f5f5f7"/>
-<script>try{var _t=localStorage.getItem('theme');if(_t==='dark'||_t==='light')document.documentElement.setAttribute('data-theme',_t);}catch(e){}</script>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
 <title>附近</title>
-<link rel="stylesheet" href="grid.css?v=280"/>
-<script src="./noscale.js?v=280"></script>
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="stylesheet" href="grid.css?v=310"/>
+<style>
+body{padding:12px 12px 88px;font-family:-apple-system,"PingFang SC",sans-serif}
+h1{font-size:18px;margin:8px 0 4px}
+h2{font-size:14px;margin:18px 0 8px;color:#374151}
+.tip{color:#6b7280;font-size:13px;margin:0 0 12px}
+.grid a em{display:block;font-style:normal;font-size:11px;color:#6b7280;margin-top:4px}
+</style>
 </head>
 <body>
 <h1>附近</h1>
+<p class="tip">全部跳转真实平台，用定位看身边人、二手、餐厅、酒店。</p>
+
+<h2>聊天 / 附近的人</h2>
 <div class="grid">
-<a href="https://map.baidu.com/" target="_blank" rel="noopener"><img src="https://picsum.photos/seed/baidumap/480/640" alt=""><span>百度地图</span></a>
-<a href="https://www.google.com/maps" target="_blank" rel="noopener"><img src="https://picsum.photos/seed/gmaps/480/640" alt=""><span>Google 地图</span></a>
-<a href="https://www.amap.com/" target="_blank" rel="noopener"><img src="https://picsum.photos/seed/amap/480/640" alt=""><span>高德地图</span></a>
-<a href="https://www.dianping.com/" target="_blank" rel="noopener"><img src="https://picsum.photos/seed/dianping/480/640" alt=""><span>大众点评</span></a>
+<a href="https://tinder.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=tinder.com" alt=""><span>Tinder</span><em>附近搭言</em></a>
+<a href="https://badoo.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=badoo.com" alt=""><span>Badoo</span><em>附近人</em></a>
+<a href="https://www.bumble.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=bumble.com" alt=""><span>Bumble</span><em>交友</em></a>
+<a href="https://www.meetup.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=meetup.com" alt=""><span>Meetup</span><em>线下活动</em></a>
 </div>
-<script src="./i18n.js?v=280"></script>
-<script src="tabbar.js?v=280"></script>
+
+<h2>二手交易</h2>
+<div class="grid">
+<a href="https://www.goofish.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=goofish.com" alt=""><span>闲鱼</span><em>二手</em></a>
+<a href="https://www.facebook.com/marketplace/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=facebook.com" alt=""><span>FB Marketplace</span><em>本地二手</em></a>
+<a href="https://www.carousell.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=carousell.com" alt=""><span>Carousell</span><em>东南亚二手</em></a>
+<a href="https://www.craigslist.org/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=craigslist.org" alt=""><span>Craigslist</span><em>分类信息</em></a>
+</div>
+
+<h2>附近餐厅</h2>
+<div class="grid">
+<a href="https://www.google.com/maps/search/restaurants/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=maps.google.com" alt=""><span>Google 餐厅</span><em>定位附近餐馆</em></a>
+<a href="https://www.tripadvisor.com/Restaurants" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=tripadvisor.com" alt=""><span>Tripadvisor</span><em>餐厅评分</em></a>
+<a href="https://www.dianping.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=dianping.com" alt=""><span>大众点评</span><em>吃喝玩乐</em></a>
+<a href="https://www.opentable.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=opentable.com" alt=""><span>OpenTable</span><em>订餐桌</em></a>
+</div>
+
+<h2>酒店</h2>
+<div class="grid">
+<a href="https://www.booking.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=booking.com" alt=""><span>Booking</span><em>订酒店</em></a>
+<a href="https://www.agoda.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=agoda.com" alt=""><span>Agoda</span><em>亚洲酒店</em></a>
+<a href="https://www.airbnb.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=airbnb.com" alt=""><span>Airbnb</span><em>民宿</em></a>
+<a href="https://www.trip.com/hotels/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=trip.com" alt=""><span>携程</span><em>酒店机票</em></a>
+</div>
+
+<script src="./i18n.js?v=310"></script>
+<script src="tabbar.js?v=310"></script>
 </body></html>
