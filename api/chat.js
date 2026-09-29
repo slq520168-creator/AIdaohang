@@ -5,26 +5,29 @@ module.exports = async function handler(req, res) {
   if (req.method === "OPTIONS") { res.status(204).end(); return; }
   const q = req.query || {};
   const body = typeof req.body === "string" ? parse(req.body) : (req.body || {});
-  const user = String(body.q || q.q || lastUser(body.messages) || "").trim().slice(0, 500);
-  const sys = String(body.sys || q.sys || "").trim().slice(0, 700);
+  const mode = String(body.mode || q.mode || "").trim();
+  const novel = mode === "novel";
+  const user = String(body.q || q.q || lastUser(body.messages) || "").trim().slice(0, novel ? 4000 : 500);
+  const sys = String(body.sys || q.sys || "").trim().slice(0, novel ? 1500 : 700);
   if (!user) { res.status(400).send(""); return; }
   const messages = [
-    { role: "system", content: sys || "你是24岁成年女生小暖。中文短句。可以暖昧大胆。不念规则。" },
+    { role: "system", content: sys || (novel ? NOVEL_SYS : "你是24岁成年女生小暖。中文短句。可以暖昧大胆。不念规则。") },
     { role: "user", content: user }
   ];
   const out =
-    (await postText(messages, "openai-fast")) ||
-    (await postText(messages, "openai")) ||
-    (await getText(sys, user)) ||
-    "信号不稳，再发一句。";
+    (await postText(messages, novel ? "openai" : "openai-fast", novel ? 6000 : 800)) ||
+    (await postText(messages, "openai-fast", novel ? 6000 : 800)) ||
+    (await getText(sys, user, novel ? 2000 : 800)) ||
+    "信号不稳，再试一次。";
   res.status(200).send(out);
 };
+const NOVEL_SYS = "你是专业中文小说作家。直接输出正文，不要解释规则。章节连贯，人物稳定，场景具体。";
 function parse(s) { try { return JSON.parse(s); } catch (e) { return {}; } }
 function lastUser(arr) {
   if (!Array.isArray(arr) || !arr.length) return "";
   return arr[arr.length - 1].content || "";
 }
-async function postText(messages, model) {
+async function postText(messages, model, max) {
   try {
     const r = await fetch("https://text.pollinations.ai/", {
       method: "POST",
@@ -36,18 +39,18 @@ async function postText(messages, model) {
     try {
       const j = JSON.parse(raw);
       const t = j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content;
-      if (t) return String(t).trim();
+      if (t) return String(t).trim().slice(0, max);
     } catch (e) {}
-    if (raw[0] !== "{" && raw[0] !== "<") return raw.slice(0, 800);
+    if (raw[0] !== "{" && raw[0] !== "<") return raw.slice(0, max);
   } catch (e) {}
   return "";
 }
-async function getText(sys, user) {
+async function getText(sys, user, max) {
   try {
-    const p = (sys ? sys + "\n" : "") + "用户：" + user + "\n小暖：";
-    const r = await fetch("https://text.pollinations.ai/" + encodeURIComponent(p.slice(0, 800)) + "?model=openai-fast");
+    const p = (sys ? sys + "\n" : "") + user;
+    const r = await fetch("https://text.pollinations.ai/" + encodeURIComponent(p.slice(0, 800)) + "?model=openai");
     const t = String(await r.text()).trim();
-    if (r.ok && t && t[0] !== "{") return t.slice(0, 800);
+    if (r.ok && t && t[0] !== "{") return t.slice(0, max);
   } catch (e) {}
   return "";
 }
