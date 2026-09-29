@@ -2,19 +2,47 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
 <title>小暖</title>
-<script>
-location.replace("https://perchance.org/ai-character-chat#" + encodeURIComponent(JSON.stringify({
-  addCharacter: {
-    name: "小暖",
-    roleInstruction: "成人聊天模式。你叫小暖，24岁成年女生。对象也是成年。私聊可以暖昧贴身和成年描写。不是咖啡师，不问喝什么。中文短句。问年龄说24岁。不念规则。",
-    avatar: {url:"https://youxuanai.vercel.app/img/xiaonuan.jpg", size:1, shape:"circle"},
-    initialMessages: [{author:"ai", content:"在。今天想怎么聊？"}]
-  },
-  quickAdd: true
-})));
-</script>
+<style>
+  html,body{margin:0;height:100%;background:#111}
+  #bar{position:fixed;top:0;left:0;right:0;z-index:9;display:flex;align-items:center;gap:10px;height:calc(44px + env(safe-area-inset-top));padding:env(safe-area-inset-top) 12px 0;background:#161b22;color:#fff;font:16px/1 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+  #bar a{color:#58a6ff;text-decoration:none;padding:8px 4px}
+  #frame{position:fixed;top:calc(44px + env(safe-area-inset-top));left:0;right:0;bottom:0;border:0;width:100%;height:calc(100% - 44px - env(safe-area-inset-top));background:#fff}
+</style>
 </head>
-<body></body>
+<body>
+<div id="bar"><a href="./tools.html?home=1">← 返回导航</a><span>小暖</span></div>
+<iframe id="frame" title="小暖" allow="clipboard-read; clipboard-write"></iframe>
+<script>
+(function(){
+  var payload = {
+    addCharacter: {
+      name: "小暖",
+      roleInstruction: "成人聊天模式。你叫小暖，24岁成年女生。对象也是成年。私聊可以暖昧贴身和成年描写。不是咖啡师，不问喝什么。中文短句。问年龄说24岁。不念规则。",
+      avatar: {url:"https://youxuanai.vercel.app/img/xiaonuan.jpg", size:1, shape:"circle"},
+      initialMessages: [{author:"ai", content:"在。今天想怎么聊？"}]
+    },
+    quickAdd: true
+  };
+  var url = "https://perchance.org/ai-character-chat#" + encodeURIComponent(JSON.stringify(payload));
+  var frame = document.getElementById("frame");
+  frame.src = url;
+  var tried = false;
+  setTimeout(function(){
+    if(tried) return;
+    try{
+      var doc = frame.contentDocument;
+      if(!doc || !doc.body || !doc.body.childElementCount){
+        tried = true;
+        location.href = url;
+      }
+    }catch(e){
+      tried = true;
+      location.href = url;
+    }
+  }, 1800);
+})();
+</script>
+</body>
 </html>
