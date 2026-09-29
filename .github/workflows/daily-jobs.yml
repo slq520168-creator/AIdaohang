@@ -1,0 +1,51 @@
+name: daily-jobs
+on:
+  schedule:
+    - cron: "0 16 * * *"
+  workflow_dispatch:
+jobs:
+  grab:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: fetch jobs
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request
+          def get(url):
+            req=urllib.request.Request(url, headers={"User-Agent":"AIdaohang-jobs","Accept":"application/json"})
+            with urllib.request.urlopen(req, timeout=30) as r:
+              return json.loads(r.read().decode("utf-8","replace"))
+          jobs=[]
+          try:
+            d=get("https://remotive.com/api/remote-jobs")
+            for x in d.get("jobs",[])[:40]:
+              jobs.append({"title":x.get("title") or "","company":x.get("company_name") or "","pay":x.get("salary") or "","cat":x.get("category") or "","from":"Remotive","url":x.get("url") or ""})
+          except Exception as e:
+            print("remotive",e)
+          try:
+            arr=get("https://remoteok.com/api")
+            if isinstance(arr,list):
+              for x in arr[1:35]:
+                pay="-".join(str(v) for v in [x.get("salary_min"),x.get("salary_max")] if v)
+                jobs.append({"title":x.get("position") or x.get("title") or "","company":x.get("company") or "","pay":pay,"cat":(x.get("tags") or ["Remote"])[0],"from":"RemoteOK","url":x.get("url") or x.get("apply_url") or ""})
+          except Exception as e:
+            print("remoteok",e)
+          seen=set(); out=[]
+          for j in jobs:
+            if not j["title"] or not str(j["url"]).startswith("http"): continue
+            k=j["url"].split("?")[0]
+            if k in seen: continue
+            seen.add(k); out.append(j)
+          open("data/jobs.json","w",encoding="utf-8").write(json.dumps({"ok":True,"n":len(out),"jobs":out[:80]},ensure_ascii=False))
+          print("wrote",len(out))
+          PY
+      - name: commit
+        run: |
+          git config user.name "jobs-bot"
+          git config user.email "jobs-bot@users.noreply.github.com"
+          git add data/jobs.json
+          git diff --cached --quiet || git commit -m "chore: daily jobs refresh"
+          git push
