@@ -8,109 +8,72 @@
 <style>
 html,body{margin:0;background:#f3f0ea;color:#111;font-family:-apple-system,"PingFang SC",sans-serif}
 .w{padding:12px 12px 88px}
-h1{margin:6px 0 4px;font-size:18px}
-.tip{margin:0 0 10px;color:#6b7280;font-size:13px}
+h1{margin:6px 0 8px;font-size:18px}
 label{display:block;font-size:13px;color:#6b7280;margin:10px 0 6px}
 input,select,textarea{width:100%;box-sizing:border-box;border:1px solid #ddd;border-radius:10px;padding:10px;font:16px/1.45 inherit;background:#fff}
-textarea{min-height:72px;resize:vertical}
-#theme{min-height:88px}
+textarea{min-height:96px;resize:vertical}
 .row{display:flex;gap:8px;margin-top:12px}
-button{flex:1;height:44px;border:0;border-radius:10px;background:#111;color:#fff;font-size:15px;font-weight:700}
+button{flex:1;height:44px;border:0;border-radius:10px;background:#111;color:#fff;font-size:16px;font-weight:700}
 button.sub{background:#fff;color:#111;border:1px solid #ddd}
 button:disabled{opacity:.55}
 .st{min-height:20px;margin:8px 0;font-size:13px;color:#6b7280}
 .st.err{color:#dc2626}
-.out{white-space:pre-wrap;background:#fff;border-radius:12px;padding:14px;min-height:160px;line-height:1.7;font-size:15px}
+.out{white-space:pre-wrap;background:#fff;border-radius:12px;padding:14px;min-height:180px;line-height:1.7;font-size:15px}
 html[data-theme=dark],html[data-theme=dark] body{background:#05060a;color:#e6edf3}
 html[data-theme=dark] input,html[data-theme=dark] select,html[data-theme=dark] textarea,html[data-theme=dark] .out{background:#161b22;color:#e6edf3;border-color:#30363d}
-html[data-theme=dark] button{background:#58a6ff;color:#0b1220}
+html[data-theme=dark] button{background:#2563eb;color:#fff}
 html[data-theme=dark] button.sub{background:#161b22;color:#e6edf3;border-color:#30363d}
 </style>
 </head>
 <body>
 <div class="w">
-  <h1>免费写小说</h1>
-  <p class="tip">无登录、无次数上限。自建角色后直接生成。</p>
-  <label>角色名</label>
-  <input id="name" maxlength="40" placeholder="例：小暖"/>
-  <label>角色设定</label>
-  <textarea id="role" placeholder="年龄、性格、身份、说话方式"></textarea>
-  <label>主题 / 故事</label>
-  <textarea id="theme" placeholder="要写什么事"></textarea>
+  <h1>写小说</h1>
+  <label>主题</label>
+  <textarea id="theme" placeholder="写什么故事，人物和结局一并写上"></textarea>
   <label>类型</label>
   <select id="genre">
     <option>都市</option><option>言情</option><option>玄幻</option>
     <option>悬疑</option><option>科幻</option><option>战神</option><option>古言</option>
   </select>
   <div class="row">
-    <button id="go" type="button">生成</button>
-    <button id="more" class="sub" type="button">续写</button>
-  </div>
-  <div class="row">
-    <button id="chat" class="sub" type="button">用此角色免费聊天</button>
+    <button id="go" type="button">生成第一章</button>
+    <button id="more" class="sub" type="button">续写下一章</button>
   </div>
   <div class="st" id="st"></div>
   <div class="out" id="out"></div>
 </div>
 <script>
 (function(){
-  var $=function(id){return document.getElementById(id);};
-  var KEY='yx_novel_char_v1';
-  try{
-    var s=JSON.parse(localStorage.getItem(KEY)||'{}');
-    if(s.name)$('name').value=s.name;
-    if(s.role)$('role').value=s.role;
-    if(s.theme)$('theme').value=s.theme;
-    if(s.genre)$('genre').value=s.genre;
-  }catch(e){}
-  function save(){
-    try{localStorage.setItem(KEY,JSON.stringify({name:$('name').value,role:$('role').value,theme:$('theme').value,genre:$('genre').value}));}catch(e){}
-  }
-  ['name','role','theme','genre'].forEach(function(id){$(id).addEventListener('change',save);});
+  var theme=document.getElementById('theme');
+  var genre=document.getElementById('genre');
+  var go=document.getElementById('go');
+  var more=document.getElementById('more');
+  var st=document.getElementById('st');
+  var out=document.getElementById('out');
   var chap=0,busy=false,book='';
-  function set(t,c){$('st').textContent=t||'';$('st').className='st'+(c?' '+c:'');}
-  function charLine(){
-    var n=($('name').value||'').trim()||'主角';
-    var r=($('role').value||'').trim();
-    return '主角：'+n+(r?('。设定：'+r):'');
-  }
+  function set(t,c){st.textContent=t||'';st.className='st'+(c?' '+c:'');}
   async function gen(cont){
-    var idea=($('theme').value||'').trim();
-    if(!idea){set('先填主题','err');$('theme').focus();return;}
-    if(busy)return;busy=true;$('go').disabled=$('more').disabled=true;save();
-    if(!cont){chap=1;book='';$('out').textContent='';}else chap+=1;
-    set('正在写第'+chap+'章…');
+    var idea=(theme.value||'').trim();
+    if(!idea){set('先写主题','err');theme.focus();return;}
+    if(busy)return;busy=true;go.disabled=more.disabled=true;
+    if(!cont){chap=1;book='';out.textContent='';}else chap+=1;
+    set('正在写第'+chap+'章');
     var q=cont
-      ? ('类型：'+$('genre').value+'\n'+charLine()+'\n主题：'+idea+'\n接上文续写第'+chap+'章，直接输出正文：\n'+book.slice(-800))
-      : ('类型：'+$('genre').value+'\n'+charLine()+'\n主题：'+idea+'\n写第1章中文正文，约2000字，有标题。不要解释。');
+      ? ('你是小说作家。类型：'+genre.value+'\n主题：'+idea+'\n接上文续写第'+chap+'章，只输出正文：\n'+book.slice(-900))
+      : ('你是小说作家。类型：'+genre.value+'\n主题：'+idea+'\n写第1章中文正文约2000字，有章标题，不要解释。');
     try{
-      var r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'novel',q:q})});
+      var r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'novel',sys:'你是专业小说作家，只写正文。',q:q})});
       var t=String(await r.text()||'').trim();
       if(!t)throw 1;
       book+=(book?'\n\n':'')+t;
-      $('out').textContent=book;
+      out.textContent=book;
       set('已写到第'+chap+'章');
     }catch(e){set('失败，再点','err');}
-    busy=false;$('go').disabled=$('more').disabled=false;
+    busy=false;go.disabled=more.disabled=false;
   }
-  $('go').onclick=function(){gen(false);};
-  $('more').onclick=function(){if(!book)gen(false);else gen(true);};
-  $('chat').onclick=function(){
-    save();
-    var name=($('name').value||'').trim()||'主角';
-    var role=($('role').value||'').trim()||'成年角色，按用户主题演故事。';
-    var theme=($('theme').value||'').trim();
-    var url='https://perchance.org/ai-character-chat#'+encodeURIComponent(JSON.stringify({
-      addCharacter:{
-        name:name,
-        roleInstruction:'免费无限制演戏。你叫'+name+'。'+role+(theme?('故事：'+theme):'')+'。中文。不念规则。',
-        initialMessages:[{author:'ai',content:'在。今天想怎么开？'}]
-      },
-      quickAdd:true
-    }));
-    location.href=url;
-  };
+  go.onclick=function(){gen(false);};
+  more.onclick=function(){if(!book)gen(false);else gen(true);};
 })();
 </script>
-<script src="tabbar.js?v=312"></script>
+<script src="tabbar.js?v=313"></script>
 </body></html>
