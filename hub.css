@@ -41,3 +41,16 @@ html[data-theme=dark] .site:active{background:#2d3542}
 html[data-theme=dark] .site .fv{background:#30363d;color:#c9d1d9}
 html[data-theme=dark] .site .go{color:#58a6ff}
 html[data-theme=dark] .hubnote{color:#6e7681}
+/* v283: 18+ inline gate for adult category */
+.agegate{padding:12px 10px 10px;text-align:center}
+.agegate p{margin:0 0 12px;font-size:14px;line-height:1.5;color:#374151}
+.agebtns{display:flex;gap:8px}
+.agebtns button{flex:1;height:42px;border-radius:10px;border:1px solid #d1d5db;background:#fff;color:#111;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer}
+.agebtns .ageY{background:#dc2626;border-color:#dc2626;color:#fff}
+.cat.adult>button .ic{background:#fee2e2}
+.cat.adult>button .ct{background:#fee2e2;color:#b91c1c}
+html[data-theme=dark] .agegate p{color:#c9d1d9}
+html[data-theme=dark] .agebtns button{background:#21262d;border-color:#30363d;color:#e6edf3}
+html[data-theme=dark] .agebtns .ageY{background:#b91c1c;border-color:#b91c1c;color:#fff}
+html[data-theme=dark] .cat.adult>button .ic{background:#3b1d1d}
+html[data-theme=dark] .cat.adult>button .ct{background:#3b1d1d;color:#fca5a5}

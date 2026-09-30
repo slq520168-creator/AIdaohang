@@ -14,9 +14,10 @@ h1{margin:6px 0 4px;font-size:18px}
 .card b{display:block;font-size:15px;line-height:1.35}
 .card em{display:block;margin-top:4px;font-style:normal;color:#6b7280;font-size:12px}
 .card button{margin-top:10px;height:36px;padding:0 14px;border:0;border-radius:8px;background:#111;color:#fff;font-weight:700}
-.mask{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:20;align-items:flex-end}
+/* sheet sits above the fixed #tabbar (56px + safe-area) so its buttons are never covered */
+.mask{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:20;align-items:flex-end;justify-content:center;box-sizing:border-box;padding:0 8px calc(66px + env(safe-area-inset-bottom,0px));overscroll-behavior:contain}
 .mask.on{display:flex}
-.sheet{width:100%;background:#fff;border-radius:16px 16px 0 0;padding:16px 16px 28px}
+.sheet{box-sizing:border-box;width:100%;max-width:560px;max-height:calc(100% - 16px - env(safe-area-inset-top,0px));overflow:auto;background:#fff;border-radius:16px;padding:16px;box-shadow:0 8px 28px rgba(0,0,0,.22)}
 .sheet h3{margin:0 0 8px;font-size:16px}
 .sheet p{margin:0 0 14px;color:#6b7280;font-size:13px;line-height:1.5;white-space:pre-line}
 .sheet .row{display:flex;gap:8px}
@@ -35,7 +36,7 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
 </head>
 <body>
 <div class="w">
-  <h1>真实任务</h1>
+  <h1>接单</h1>
   <p class="tip" id="tip">正在加载任务…</p>
   <div id="list"></div>
 </div>
@@ -45,7 +46,7 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
     <p id="md"></p>
     <div class="row">
       <button class="no" id="cancel" type="button">取消</button>
-      <button class="ok" id="take" type="button">接单并打开平台</button>
+      <button class="ok" id="take" type="button">确认接单</button>
     </div>
   </div>
 </div>
@@ -58,10 +59,10 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
   function paint(jobs){
     jobs=(jobs||[]).filter(function(j){return j&&j.title&&j.url;});
     if(!jobs.length){tip.textContent='没有任务';return;}
-    tip.textContent='当前 '+jobs.length+'条真实任务，点接单后跳原平台';
+    tip.textContent='';tip.style.display='none';
     window.__jobs=jobs;
     list.innerHTML=jobs.map(function(j,i){
-      return '<div class="card" data-i="'+i+'"><b>'+esc(j.title)+'</b><em>'+esc([j.company,j.cat,j.pay,j.from].filter(Boolean).join(' · '))+'</em><button type="button">接单</button></div>';
+      return '<div class="card" data-i="'+i+'"><b>'+esc(j.title)+'</b><em>'+esc([j.company,j.cat,j.pay].filter(Boolean).join(' · '))+'</em><button type="button">接单</button></div>';
     }).join('');
   }
   function load(url){return fetch(url).then(function(r){if(!r.ok)throw 1;return r.json();});}
@@ -73,16 +74,19 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
     var j=(window.__jobs||[])[+card.dataset.i]; if(!j)return;
     cur=j;
     document.getElementById('mt').textContent=j.title;
-    document.getElementById('md').textContent=(j.company||'')+' · '+(j.from||'')+'\n确认接单后打开原站投递。';
+    document.getElementById('md').textContent=[j.company,j.pay].filter(Boolean).join(' · ');
     mask.className='mask on';
   };
-  document.getElementById('cancel').onclick=function(){mask.className='mask';cur=null;};
+  function closeSheet(){mask.className='mask';cur=null;}
+  document.getElementById('cancel').onclick=closeSheet;
+  mask.addEventListener('click',function(e){if(e.target===mask)closeSheet();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mask.className.indexOf('on')>=0)closeSheet();});
   document.getElementById('take').onclick=function(){
     if(!cur||!cur.url)return;
     mask.className='mask';
     location.href=cur.url;
   };
-  function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return ({'&':'&','<':'<','>':'>','"':'"'}[c]);});}
+  function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]);});}
 })();
 </script>
 <script src="tabbar.js?v=315"></script>

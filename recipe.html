@@ -59,9 +59,9 @@ html[data-theme=dark] a.back{color:#d97888}
 <button id="rand">随机</button>
 <button id="all">全部</button>
 </div>
-<div class="sec">分类（接口全部）</div>
+<div class="sec">分类</div>
 <div class="chips" id="cats"></div>
-<div class="sec">地区（接口全部）</div>
+<div class="sec">地区</div>
 <div class="chips" id="areas"></div>
 <p class="err" id="msg"></p>
 <div class="grid" id="list"></div>
@@ -100,7 +100,7 @@ html[data-theme=dark] a.back{color:#d97888}
     if(!meals||!meals.length){ list.innerHTML=''; msg.textContent='没有菜'; return; }
     var seen={}; var u=[];
     meals.forEach(function(m){ if(m&&m.idMeal&&!seen[m.idMeal]){ seen[m.idMeal]=1; u.push(m); } });
-    msg.textContent='本库共 '+u.length+'道（TheMealDB 免费库全量，大约 300 道）';
+    msg.textContent='';
     list.innerHTML=u.map(function(m){
       return '<div class="g" data-id="'+m.idMeal+'"><img src="'+(m.strMealThumb||'')+'" alt=""/><p>'+m.strMeal+'</p></div>';
     }).join('');
@@ -111,7 +111,7 @@ html[data-theme=dark] a.back{color:#d97888}
     fetch(BASE+'filter.php?'+q).then(function(r){return r.json();}).then(function(d){ grid(d.meals||[]); }).catch(function(){ msg.textContent='失败'; });
   }
   function loadAll(){
-    msg.textContent='正在拉全部菜…'; list.innerHTML='';
+    msg.textContent='加载中…'; list.innerHTML='';
     var letters='abcdefghijklmnopqrstuvwxyz'.split('');
     Promise.all(letters.map(function(ch){
       return fetch(BASE+'search.php?f='+ch).then(function(r){return r.json();}).then(function(d){ return d.meals||[]; }).catch(function(){ return []; });
@@ -176,7 +176,7 @@ html[data-theme=dark] a.back{color:#d97888}
   loadAll();
 })();
 </script>
-<script src="./i18n.js?v=281"></script>
+<script src="./i18n.js?v=283"></script>
 <script src="tabbar.js?v=281"></script>
 </body>
 </html>

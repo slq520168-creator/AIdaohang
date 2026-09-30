@@ -58,7 +58,7 @@ function driveJson(id){
   }
   if(g&&Array.isArray(g.steps)&&g.steps.length){
     document.title=g.title||n;
-    box.innerHTML='<h3>'+esc(g.title||n)+'</h3><p class="sub">通宵教程</p><ol>'+g.steps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol>';
+    box.innerHTML='<h3>'+esc(g.title||n)+'</h3><ol>'+g.steps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol>';
     return;
   }
   const files=['data/packs.json?v='+v,'data/tools.json?v='+v,'data/more.json?v='+v];
@@ -66,16 +66,16 @@ function driveJson(id){
   const arrs=await Promise.all(files.map(f=>fetch(f).then(r=>r.ok?r.json():[]).catch(()=>[])));
   const t=arrs.flat().find(x=>x&&x.name===n)||{name:n,url:'',desc:'',how:''};
   let steps=splitHow(t.how);
-  if(!steps.length) steps=[t.desc||'点下面打开官网'];
+  /* no how-to steps: desc is already shown under the title */
   document.title=t.name||n;
   const url=isHttp(t.url)?t.url:'';
   const btn=url
     ?('<p class="sub">'+esc(url)+'</p><p><a class="btn" href="'+esc(url)+'" target="_blank" rel="noopener">打开官网</a></p>')
-    :'<p class="sub">这条没有网址</p>';
-  box.innerHTML='<h3>'+esc(t.name||n)+'</h3><p class="sub">'+esc(t.desc||t.cat||'')+'</p><ol>'+steps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol>'+btn;
+    :'';
+  box.innerHTML='<h3>'+esc(t.name||n)+'</h3><p class="sub">'+esc(t.desc||t.cat||'')+'</p>'+(steps.length?'<ol>'+steps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol>':'')+btn;
 })();
 </script>
-<script src="./i18n.js?v=281"></script>
+<script src="./i18n.js?v=283"></script>
 <script src="tabbar.js?v=281"></script>
 </body>
 </html>
