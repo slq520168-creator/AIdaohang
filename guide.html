@@ -12,8 +12,13 @@
 #box ol{margin:8px 0 0 18px}
 #box li{margin:0 0 12px}
 #box a.btn{display:inline-block;margin-top:12px;background:#2563eb;color:#fff;text-decoration:none;padding:10px 14px;border-radius:12px}
+html[data-theme=dark] #box{background:var(--card);border-color:var(--line);color:var(--txt)}
+html[data-theme=dark] #box .sub{color:var(--muted)}
 </style>
-<script src="./noscale.js?v=280"></script>
+<script src="./noscale.js?v=281"></script>
+<script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");}catch(e){}</script>
+<link rel="icon" href="favicon.ico"/>
+<link rel="stylesheet" href="oldtheme.css?v=281"/>
 </head>
 <body>
 <div id="sitebg" aria-hidden="true"></div>
@@ -23,7 +28,7 @@
 </div>
 <script src="lock.js?v=109"></script>
 <script>
-function esc(s){return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>').replace(/"/g,'"')}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 function splitHow(how){
   const t=String(how||'').trim();
   if(!t) return [];
@@ -70,5 +75,7 @@ function driveJson(id){
   box.innerHTML='<h3>'+esc(t.name||n)+'</h3><p class="sub">'+esc(t.desc||t.cat||'')+'</p><ol>'+steps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol>'+btn;
 })();
 </script>
+<script src="./i18n.js?v=281"></script>
+<script src="tabbar.js?v=281"></script>
 </body>
 </html>

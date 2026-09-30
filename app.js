@@ -75,7 +75,7 @@ themeBtn.onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'l
 function hostOf(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
 function urlKey(u){try{const x=new URL(u);return x.hostname.replace(/^www\./,'').toLowerCase()+x.pathname.replace(/\/+$/,'')}catch(e){return String(u||'').toLowerCase()}}
 function deadPath(u){const s=String(u||'').toLowerCase();return DROP_PATH.some(p=>s.includes(p))}
-function esc(s){return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>').replace(/"/g,'"')}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 function isHttp(u){return /^https?:\/\//i.test(u||'')}
 function iconTag(url,letter){const h=hostOf(url);const L=(letter||'T').slice(0,1);if(!h)return hasHan(L)?'T':L;return `<img alt="" src="https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(h)}" onerror="this.style.display='none'">`;}
 function hourBucket(){return Math.floor(Date.now()/3600000)}
@@ -157,7 +157,7 @@ window.setAidLang=function(code){
   document.addEventListener('click',function(){bar.classList.remove('show');});
 })();
 function byName(n){return tools.find(x=>x.name===n)||hotList.find(x=>x.name===n);}
-function detailHtml(x){const zh=lang==='zh';const desc=showDesc(x);const how=zh?(x.how||''):(x.how_en||'');const open=isHttp(x.url);return `<div class="detail"><p class="d-desc">${esc(desc)}</p>${how?`<p class="d-how">${esc(how)}</p>`:''}${open?`<p class="d-url">${esc(x.url)}</p><a class="d-go" href="${esc(x.url)}" target="_blank" rel="noopener">${zh?'打开网站':'Open site'}</a>`:''}</div>`;}
+function detailHtml(x){const zh=lang==='zh';const desc=showDesc(x);const how=zh?(x.how||''):(x.how_en||'');const open=isHttp(x.url);const local=!open&&/^\.?\/?[\w-]+\.html(\?|#|$)/.test(x.url||'');return `<div class="detail"><p class="d-desc">${esc(desc)}</p>${how?`<p class="d-how">${esc(how)}</p>`:''}${open?`<p class="d-url">${esc(x.url)}</p><a class="d-go" href="${esc(x.url)}" target="_blank" rel="noopener">${zh?'打开网站':'Open site'}</a>`:''}${local?`<a class="d-go" href="${esc(x.url)}">${zh?'打开':'Open'}</a>`:''}</div>`;}
 function closeDetails(){document.querySelectorAll('.detail').forEach(d=>d.remove());document.querySelectorAll('.card.open,#hot li.open').forEach(c=>c.classList.remove('open'));}
 listEl.addEventListener('click',e=>{if(e.target.closest('.detail'))return;const c=e.target.closest('.card');if(!c)return;e.preventDefault();const was=c.classList.contains('open');closeDetails();if(was)return;const x=byName(c.dataset.n);if(!x)return;c.classList.add('open');const cards=[...listEl.querySelectorAll('.card')];const i=cards.indexOf(c);const cols=getComputedStyle(listEl).gridTemplateColumns.split(' ').length||1;const last=cards[Math.min(cards.length-1,i-(i%cols)+cols-1)]||c;last.insertAdjacentHTML('afterend',detailHtml(x));});
 hotEl.addEventListener('click',e=>{if(e.target.closest('.detail'))return;const li=e.target.closest('li');if(!li)return;e.preventDefault();const was=li.classList.contains('open');closeDetails();if(was)return;const x=byName(li.dataset.n);if(!x)return;li.classList.add('open');li.insertAdjacentHTML('beforeend',detailHtml(x));});

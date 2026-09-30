@@ -3,53 +3,81 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
-<title>附近</title>
+<title>附近 · 全球优选AI导航</title>
 <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
-<link rel="stylesheet" href="grid.css?v=310"/>
-<style>
-body{padding:12px 12px 88px;font-family:-apple-system,"PingFang SC",sans-serif}
-h1{font-size:18px;margin:8px 0 4px}
-h2{font-size:14px;margin:18px 0 8px;color:#374151}
-.tip{color:#6b7280;font-size:13px;margin:0 0 12px}
-.grid a em{display:block;font-style:normal;font-size:11px;color:#6b7280;margin-top:4px}
-</style>
+<link rel="stylesheet" href="grid.css?v=281"/>
+<link rel="stylesheet" href="hub.css?v=281"/>
+<script src="./noscale.js?v=281"></script>
+<link rel="icon" href="favicon.ico"/>
 </head>
 <body>
-<h1>附近</h1>
-<p class="tip">全部跳转真实平台，用定位看身边人、二手、餐厅、酒店。</p>
-
-<h2>聊天 / 附近的人</h2>
-<div class="grid">
-<a href="https://tinder.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=tinder.com" alt=""><span>Tinder</span><em>附近搭言</em></a>
-<a href="https://badoo.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=badoo.com" alt=""><span>Badoo</span><em>附近人</em></a>
-<a href="https://www.bumble.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=bumble.com" alt=""><span>Bumble</span><em>交友</em></a>
-<a href="https://www.meetup.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=meetup.com" alt=""><span>Meetup</span><em>线下活动</em></a>
-</div>
-
-<h2>二手交易</h2>
-<div class="grid">
-<a href="https://www.goofish.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=goofish.com" alt=""><span>闲鱼</span><em>二手</em></a>
-<a href="https://www.facebook.com/marketplace/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=facebook.com" alt=""><span>FB Marketplace</span><em>本地二手</em></a>
-<a href="https://www.carousell.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=carousell.com" alt=""><span>Carousell</span><em>东南亚二手</em></a>
-<a href="https://www.craigslist.org/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=craigslist.org" alt=""><span>Craigslist</span><em>分类信息</em></a>
-</div>
-
-<h2>附近餐厅</h2>
-<div class="grid">
-<a href="https://www.google.com/maps/search/restaurants/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=maps.google.com" alt=""><span>Google 餐厅</span><em>定位附近餐馆</em></a>
-<a href="https://www.tripadvisor.com/Restaurants" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=tripadvisor.com" alt=""><span>Tripadvisor</span><em>餐厅评分</em></a>
-<a href="https://www.dianping.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=dianping.com" alt=""><span>大众点评</span><em>吃喝玩乐</em></a>
-<a href="https://www.opentable.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=opentable.com" alt=""><span>OpenTable</span><em>订餐桌</em></a>
-</div>
-
-<h2>酒店</h2>
-<div class="grid">
-<a href="https://www.booking.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=booking.com" alt=""><span>Booking</span><em>订酒店</em></a>
-<a href="https://www.agoda.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=agoda.com" alt=""><span>Agoda</span><em>亚洲酒店</em></a>
-<a href="https://www.airbnb.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=airbnb.com" alt=""><span>Airbnb</span><em>民宿</em></a>
-<a href="https://www.trip.com/hotels/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?sz=128&domain=trip.com" alt=""><span>携程</span><em>酒店机票</em></a>
-</div>
-
-<script src="./i18n.js?v=310"></script>
-<script src="tabbar.js?v=310"></script>
+<header class="hubtop" id="hubtop"><a class="back" href="./tools.html?home=1">‹ 返回首页</a><h1>附近</h1></header>
+<p class="hubtip" id="hubtip"></p>
+<main class="hubwrap" id="hubwrap"></main>
+<p class="hubnote" id="hubnote"></p>
+<script>
+window.HUB={
+title:{zh:'附近',en:'Nearby'},
+tip:{zh:'带「附近 / 同城」功能的主流平台。点分类展开，点平台直接打开；按浏览器「返回」回到这里。',en:'Mainstream platforms with nearby / local features. Tap a category, then a platform; use browser Back to return.'},
+note:{zh:'附近功能需在平台内允许定位。线下见面请选公共场所，交易先验货，谨防诈骗。',en:'Allow location inside each app for nearby results. Meet in public places, inspect goods before paying, beware of scams.'},
+cats:[
+{id:'used',ic:'♻️',zh:'二手交易',en:'Second-hand',sites:[
+['闲鱼','Xianyu (Goofish)','https://www.goofish.com/','阿里二手平台，可看同城闲置','Alibaba marketplace, local listings'],
+['转转','Zhuanzhuan','https://www.zhuanzhuan.com/','二手手机数码，官方验机','Used phones & electronics, inspected'],
+['58同城','58.com','https://www.58.com/','同城二手、租房、招聘、服务','Local classifieds, rentals, jobs'],
+['Facebook Marketplace','Facebook Marketplace','https://www.facebook.com/marketplace/','按距离看附近的人卖什么','Browse items for sale near you'],
+['Craigslist','Craigslist','https://www.craigslist.org/','北美按城市的分类信息','City classifieds (N. America)'],
+['OfferUp','OfferUp','https://offerup.com/','美国本地买卖，面交','Local buy & sell in the US'],
+['Mercari (美国)','Mercari US','https://www.mercari.com/','美国二手，邮寄或本地','US marketplace, ship or local'],
+['メルカリ (日本)','Mercari Japan','https://jp.mercari.com/','日本最大二手平台','Japan\'s largest flea market app'],
+['Kijiji','Kijiji','https://www.kijiji.ca/','加拿大本地分类信息','Canada local classifieds']]},
+{id:'date',ic:'💞',zh:'交友约会',en:'Dating & Friends',dz:'附近的人 · 同城交友',de:'People nearby · local dating',sites:[
+['探探','Tantan','https://www.tantanapp.com/','左滑右滑，匹配附近的人','Swipe to match with people nearby'],
+['陌陌','Momo','https://www.immomo.com/','附近的人、附近动态','People & posts nearby'],
+['Soul','Soul','https://www.soulapp.cn/','兴趣匹配的年轻社交','Interest-based social app'],
+['Blued','Blued','https://www.blued.cn/','男性同志社交，附近的人','Gay social app, people nearby'],
+['Tinder','Tinder','https://tinder.com/','全球最大约会应用，按距离匹配','World\'s biggest dating app'],
+['Bumble','Bumble','https://bumble.com/','女生先开口的约会应用','Women make the first move'],
+['Hinge','Hinge','https://hinge.co/','偏认真恋爱的约会应用','Dating app for relationships'],
+['Grindr','Grindr','https://www.grindr.com/','LGBTQ 社交，按距离显示','LGBTQ social, sorted by distance'],
+['Badoo','Badoo','https://badoo.com/','附近的人、视频聊天','People nearby, video chat'],
+['happn','happn','https://www.happn.com/','遇见和你擦肩而过的人','Meet people you crossed paths with'],
+['OkCupid','OkCupid','https://www.okcupid.com/','问答匹配的约会平台','Question-based matching'],
+['Coffee Meets Bagel','Coffee Meets Bagel','https://www.coffeemeetsbagel.com/','每天精选推荐','Curated daily matches']]},
+{id:'social',ic:'🧑‍🤝‍🧑',zh:'同城社交 / 活动',en:'Local Social & Events',sites:[
+['小红书','Xiaohongshu (RED)','https://www.xiaohongshu.com/','同城笔记、探店、找搭子','Local posts, spots & buddies'],
+['豆瓣同城','Douban Local','https://www.douban.com/location/','演出、展览、同城活动','Shows, exhibitions, local events'],
+['Meetup','Meetup','https://www.meetup.com/','按兴趣参加线下聚会','Join local interest groups'],
+['Nextdoor','Nextdoor','https://nextdoor.com/','邻里社区，附近动态','Neighborhood community feed'],
+['Bumble BFF','Bumble BFF','https://bumble.com/bff','在附近交朋友','Make friends nearby'],
+['Eventbrite','Eventbrite','https://www.eventbrite.com/','附近的活动与门票','Events & tickets near you'],
+['Facebook 群组','Facebook Groups','https://www.facebook.com/groups/','本地群、同城群','Local community groups']]},
+{id:'food',ic:'🍜',zh:'吃喝玩乐 / 外卖',en:'Food & Fun',sites:[
+['美团','Meituan','https://www.meituan.com/','附近美食、外卖、团购','Nearby food, delivery, deals'],
+['大众点评','Dianping','https://www.dianping.com/','附近餐厅评分、探店','Reviews of places nearby'],
+['饿了么','Ele.me','https://www.ele.me/','外卖到家','Food delivery'],
+['Google 地图·附近','Google Maps Nearby','https://www.google.com/maps/search/nearby/','定位查看附近餐馆和店铺','Restaurants & shops around you'],
+['Uber Eats','Uber Eats','https://www.ubereats.com/','海外外卖','Food delivery abroad'],
+['foodpanda','foodpanda','https://www.foodpanda.com/','东南亚/台湾外卖','Delivery in Asia'],
+['Grab','Grab','https://www.grab.com/','东南亚外卖、打车','Delivery & rides in SE Asia']]},
+{id:'map',ic:'🗺️',zh:'地图导航',en:'Maps',sites:[
+['高德地图','Amap','https://www.amap.com/','搜周边、导航、打车','Nearby search, navigation'],
+['百度地图','Baidu Maps','https://map.baidu.com/','周边查询、公交路线','Nearby places, transit'],
+['Google 地图','Google Maps','https://www.google.com/maps/search/nearby/','全球地图与附近搜索','Global maps & nearby search']]},
+{id:'svc',ic:'🧰',zh:'本地服务 / 出行',en:'Local Services & Rides',sites:[
+['天鹅到家','Daojia','https://www.daojia.com/','家政保洁、搬家','Cleaning & moving services'],
+['滴滴出行','DiDi','https://www.didiglobal.com/','打车、代驾','Rides & designated drivers'],
+['Uber','Uber','https://www.uber.com/','海外打车','Rides abroad'],
+['TaskRabbit','TaskRabbit','https://www.taskrabbit.com/','找附近的人帮忙干活','Hire local help for tasks'],
+['Thumbtack','Thumbtack','https://www.thumbtack.com/','找本地装修维修师傅','Find local pros']]},
+{id:'stay',ic:'🏨',zh:'住宿',en:'Stays',sites:[
+['携程酒店','Trip.com Hotels','https://www.trip.com/hotels/','附近酒店、机票','Hotels & flights nearby'],
+['Booking','Booking.com','https://www.booking.com/','全球订酒店','Hotels worldwide'],
+['Agoda','Agoda','https://www.agoda.com/','亚洲酒店优惠','Asian hotel deals'],
+['Airbnb','Airbnb','https://www.airbnb.com/','民宿短租','Homes & rooms']]}
+]};
+</script>
+<script src="./i18n.js?v=281"></script>
+<script src="./hub.js?v=281"></script>
+<script src="tabbar.js?v=281"></script>
 </body></html>
