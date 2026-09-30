@@ -68,9 +68,10 @@ function driveJson(id){
   let steps=splitHow(t.how);
   /* no how-to steps: desc is already shown under the title */
   document.title=t.name||n;
-  const url=isHttp(t.url)?t.url:'';
+  let url=isHttp(t.url)?t.url:'';
+  try{ if(/^(apps\.apple\.com|itunes\.apple\.com|play\.google\.com|t\.me|telegram\.me)$/i.test(new URL(url).hostname)) url=''; }catch(e){} /* store / Telegram links leave Safari */
   const btn=url
-    ?('<p class="sub">'+esc(url)+'</p><p><a class="btn" href="'+esc(url)+'" target="_blank" rel="noopener">打开官网</a></p>')
+    ?('<p class="sub">'+esc(url)+'</p><p><a class="btn" href="'+esc(url)+'" rel="noopener">打开官网</a></p>')
     :'';
   box.innerHTML='<h3>'+esc(t.name||n)+'</h3><p class="sub">'+esc(t.desc||t.cat||'')+'</p>'+(steps.length?'<ol>'+steps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol>':'')+btn;
 })();

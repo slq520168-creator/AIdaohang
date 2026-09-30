@@ -96,7 +96,7 @@
   genre.addEventListener('change',touch);
   out.addEventListener('input',function(){grow();touch();});
   window.addEventListener('pagehide',saveNow);
-  window.addEventListener('beforeunload',saveNow);
+  /* v284: no beforeunload (keeps bfcache); pagehide + visibilitychange already save */
   document.addEventListener('visibilitychange',function(){if(document.hidden)saveNow();});
   window.addEventListener('resize',grow);
 

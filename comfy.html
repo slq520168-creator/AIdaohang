@@ -39,7 +39,7 @@ html[lang="en"] .bar a span.en{display:inline}
 </div>
 <h1 class="zh">ComfyUI 傻瓜式全教程</h1>
 <h1 class="en">ComfyUI foolproof tutorial</h1>
-<p class="zh">这页把安装、多语言、文案、图、视频、配乐、剪辑写在一起。官方下载：<a href="https://comfy.org/download/" target="_blank" rel="noopener">comfy.org/download</a> 文档：<a href="https://docs.comfy.org/" target="_blank" rel="noopener">docs.comfy.org</a></p>
+<p class="zh">这页把安装、多语言、文案、图、视频、配乐、剪辑写在一起。官方下载：<a href="https://comfy.org/download/" rel="noopener">comfy.org/download</a> 文档：<a href="https://docs.comfy.org/" rel="noopener">docs.comfy.org</a></p>
 <p class="en">Install, language, copy, image, video, music, edit. Official: comfy.org/download</p>
 
 <nav class="toc box">
@@ -59,7 +59,7 @@ html[lang="en"] .bar a span.en{display:inline}
 <div class="box">
 <h3>方案 A：Comfy Desktop（推荐小白）</h3>
 <ol>
-<li>打开 <a href="https://comfy.org/download/" target="_blank" rel="noopener">https://comfy.org/download/</a> 下 Windows 或 macOS。</li>
+<li>打开 <a href="https://comfy.org/download/" rel="noopener">https://comfy.org/download/</a> 下 Windows 或 macOS。</li>
 <li>系统：Windows 10+，或 macOS 13+ Apple Silicon。Linux 官方还没有安装包。</li>
 <li>磁盘预留 20GB+（软件约 5GB，模型还要几十 GB）。内存 16GB 更稳。</li>
 <li>跑安装程序，开启后在 Welcome 里新建一个 Installation。</li>
@@ -70,7 +70,7 @@ html[lang="en"] .bar a span.en{display:inline}
 <div class="box">
 <h3>方案 B：Stability Matrix 一键</h3>
 <ol>
-<li>打开 <a href="https://github.com/LykosAI/StabilityMatrix" target="_blank" rel="noopener">github.com/LykosAI/StabilityMatrix</a> 下 Releases。</li>
+<li>打开 <a href="https://github.com/LykosAI/StabilityMatrix" rel="noopener">github.com/LykosAI/StabilityMatrix</a> 下 Releases。</li>
 <li>解压到非 C 盘的空文件夹，双击运行。</li>
 <li>包管理里选 ComfyUI → Install。</li>
 <li>等绿灯，点 Launch。模型以后都丢进 Data/Models，不要丢乱。</li>
@@ -79,7 +79,7 @@ html[lang="en"] .bar a span.en{display:inline}
 <div class="box">
 <h3>方案 C：官方 Portable（Windows NVIDIA）</h3>
 <ol>
-<li>到 <a href="https://github.com/comfyanonymous/ComfyUI/releases" target="_blank" rel="noopener">ComfyUI Releases</a> 下 7z。</li>
+<li>到 <a href="https://github.com/comfyanonymous/ComfyUI/releases" rel="noopener">ComfyUI Releases</a> 下 7z。</li>
 <li>解压后双击 <code>run_nvidia_gpu.bat</code>。没显卡用 <code>run_cpu.bat</code>，会很慢。</li>
 </ol>
 </div>
@@ -139,7 +139,7 @@ html[lang="en"] .bar a span.en{display:inline}
 <h2 id="video">6. 视频工作流</h2>
 <p class="zh">不要一上来 4K。先 5 秒 480p 跑通。</p>
 <ol>
-<li>文档范例：<a href="https://docs.comfy.org/tutorials/video/hunyuan/hunyuan-video" target="_blank" rel="noopener">Hunyuan Video</a>。把官方示例图拖进 ComfyUI，红色节点按提示下模型。</li>
+<li>文档范例：<a href="https://docs.comfy.org/tutorials/video/hunyuan/hunyuan-video" rel="noopener">Hunyuan Video</a>。把官方示例图拖进 ComfyUI，红色节点按提示下模型。</li>
 <li>Wan 2.1 / 2.2：文生视频和图生视频都有现成图。显存 8–12GB 选 GGUF。</li>
 <li>LTX Video：更快，画质略弱，适合试镜头。</li>
 <li>图生视频：Load Image → I2V 模型 → 帧数 49–81 先，再接 Video Combine。</li>

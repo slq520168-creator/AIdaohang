@@ -64,7 +64,13 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
     list.innerHTML=jobs.map(function(j,i){
       return '<div class="card" data-i="'+i+'"><b>'+esc(j.title)+'</b><em>'+esc([j.company,j.cat,j.pay].filter(Boolean).join(' · '))+'</em><button type="button">接单</button></div>';
     }).join('');
+    /* v284: Back from the job site returns to the same place in the list */
+    var back=false;try{var n=performance.getEntriesByType('navigation')[0];back=!!n&&n.type==='back_forward';}catch(e){}
+    var y=+(sessionStorage.getItem('order_y')||0);
+    if(back&&y) requestAnimationFrame(function(){window.scrollTo(0,y);});
   }
+  function saveY(){try{sessionStorage.setItem('order_y',String(Math.round(window.scrollY||0)));}catch(e){}}
+  window.addEventListener('pagehide',saveY);
   function load(url){return fetch(url).then(function(r){if(!r.ok)throw 1;return r.json();});}
   load('./data/jobs.json?v=315').then(function(d){paint(d.jobs);}).catch(function(){
     return load('/api/jobs').then(function(d){paint(d.jobs);});
@@ -84,7 +90,8 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
   document.getElementById('take').onclick=function(){
     if(!cur||!cur.url)return;
     mask.className='mask';
-    location.href=cur.url;
+    saveY();
+    location.href=cur.url; /* same tab: browser Back returns here */
   };
   function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]);});}
 })();

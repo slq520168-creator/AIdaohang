@@ -44,7 +44,7 @@
   <div class="st" id="st"></div>
   <div class="wait" id="wait"><span class="spin"></span><span id="waitTxt"></span></div>
   <div class="res" id="res"><img class="out" id="out" alt=""/></div>
-  <div class="acts" id="acts"><a id="open" href="#" target="_blank" rel="noopener">新窗口</a><button type="button" id="save">下载</button></div>
+  <div class="acts" id="acts"><a id="open" href="#" rel="noopener">查看大图</a><button type="button" id="save">下载</button></div>
 </div>
 <script>
 (function(){
@@ -64,15 +64,24 @@
     $('wait').className='wait on';tick();timer=setInterval(tick,1000);
     var img=$('out'), done=false;
     var to=setTimeout(fail,90000);
-    function ok(){if(done)return;done=true;clearTimeout(to);clearInterval(timer);busy=false;$('go').disabled=false;$('wait').className='wait';$('res').className='res on';$('acts').className='acts on';$('open').href=url;status('完成 '+Math.round((Date.now()-t0)/1000)+'s','ok');}
+    function ok(){if(done)return;done=true;clearTimeout(to);clearInterval(timer);busy=false;$('go').disabled=false;$('wait').className='wait';$('res').className='res on';$('acts').className='acts on';$('open').href=url;status('完成 '+Math.round((Date.now()-t0)/1000)+'s','ok');try{sessionStorage.setItem('draw_last',JSON.stringify({p:text,size:$('size').value,url:url}));}catch(e){}}
     function fail(){if(done)return;done=true;clearTimeout(to);clearInterval(timer);busy=false;$('go').disabled=false;$('wait').className='wait';$('res').className='res';status('失败，稍后再试','err');}
     img.onload=function(){if(img.naturalWidth>8)ok();else fail();};
     img.onerror=fail;
     img.src=url;
   };
+  /* v284: after opening 查看大图 / any link in the same tab, Back restores the last result */
+  (function(){
+    var back=false;try{var n=performance.getEntriesByType('navigation')[0];back=!!n&&n.type==='back_forward';}catch(e){}
+    if(!back) return;
+    var o=null;try{o=JSON.parse(sessionStorage.getItem('draw_last')||'null');}catch(e){}
+    if(!o||!o.url) return;
+    $('p').value=o.p||'';if(o.size)$('size').value=o.size;
+    var img=$('out');img.onload=function(){$('res').className='res on';$('acts').className='acts on';};img.src=o.url;$('open').href=o.url;
+  })();
   $('save').onclick=function(){
     var u=$('out').src; if(!u) return;
-    var a=document.createElement('a'); a.href=u; a.download='photo.jpg'; a.target='_blank';
+    var a=document.createElement('a'); a.href=u; a.download='photo.jpg';
     document.body.appendChild(a); a.click(); a.remove();
   };
 })();

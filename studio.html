@@ -46,7 +46,7 @@ html[data-theme="dark"] .vid .card .b.free{background:#14532d;color:#bbf7d0}
     document.getElementById('list').innerHTML=SITES.map(function(s){
       return '<div class="card"><div class="tx"><div class="n">'+esc(T('vid_n_'+s.k))+'</div><div class="d">'+esc(T('vid_d_'+s.k))+'</div>'+
         '<span class="b'+(s.free?' free':'')+'">'+esc(T(s.free?'vid_nologin':'vid_login'))+'</span></div>'+
-        '<a class="open" href="'+esc(z?s.cn:s.g)+'" target="_blank" rel="noopener noreferrer">'+esc(T('vid_open'))+'</a></div>';
+        '<a class="open" href="'+esc(z?s.cn:s.g)+'" rel="noopener noreferrer">'+esc(T('vid_open'))+'</a></div>';
     }).join('');
   }
   paint();

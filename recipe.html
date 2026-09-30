@@ -52,7 +52,7 @@ html[data-theme=dark] a.back{color:#d97888}
 </head>
 <body>
 <div class="w">
-<div class="top"><a class="back" href="./tools.html">← 导航</a><h1>菜谱大厅</h1><span></span></div>
+<div class="top"><a class="back" href="./tools.html?home=1">← 导航</a><h1>菜谱大厅</h1><span></span></div>
 <div class="row">
 <input id="q" placeholder="中文如 鸡肉"/>
 <button id="go">搜</button>
@@ -80,6 +80,12 @@ html[data-theme=dark] a.back{color:#d97888}
   var mask=document.getElementById('mask');
   var sheet=document.getElementById('sheet');
   var allCats=[];
+  /* v284: remember view so Back (e.g. from 看视频) restores it */
+  var view={m:'all'},openId=null,pendingY=0;
+  var BACK=false;try{var nv=performance.getEntriesByType('navigation')[0];BACK=!!nv&&nv.type==='back_forward';}catch(e){}
+  function saveView(){try{sessionStorage.setItem('recipe_view',JSON.stringify({view:view,open:openId,y:Math.round(window.scrollY||0),my:mask.scrollTop}));}catch(e){}}
+  window.addEventListener('pagehide',saveView);
+  document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('a[href]'))saveView();},true);
   function toEn(s){
     if(!s) return '';
     if(/^[a-zA-Z]/.test(s)) return s;
@@ -101,16 +107,19 @@ html[data-theme=dark] a.back{color:#d97888}
     var seen={}; var u=[];
     meals.forEach(function(m){ if(m&&m.idMeal&&!seen[m.idMeal]){ seen[m.idMeal]=1; u.push(m); } });
     msg.textContent='';
+    setTimeout(function(){if(pendingY){window.scrollTo(0,pendingY);pendingY=0;}},0);
     list.innerHTML=u.map(function(m){
       return '<div class="g" data-id="'+m.idMeal+'"><img src="'+(m.strMealThumb||'')+'" alt=""/><p>'+m.strMeal+'</p></div>';
     }).join('');
   }
   function loadFilter(kind, v){
+    view={m:kind,v:v};
     msg.textContent='加载中…'; list.innerHTML='';
     var q=kind==='c'?'c='+encodeURIComponent(v):'a='+encodeURIComponent(v);
     fetch(BASE+'filter.php?'+q).then(function(r){return r.json();}).then(function(d){ grid(d.meals||[]); }).catch(function(){ msg.textContent='失败'; });
   }
   function loadAll(){
+    view={m:'all'};
     msg.textContent='加载中…'; list.innerHTML='';
     var letters='abcdefghijklmnopqrstuvwxyz'.split('');
     Promise.all(letters.map(function(ch){
@@ -122,6 +131,7 @@ html[data-theme=dark] a.back{color:#d97888}
   }
   function search(s){
     if(!s){ loadAll(); return; }
+    view={m:'s',v:s};
     msg.textContent='加载中…'; list.innerHTML='';
     var en=toEn(s);
     fetch(BASE+'search.php?s='+encodeURIComponent(en)).then(function(r){return r.json();}).then(function(d){
@@ -140,12 +150,13 @@ html[data-theme=dark] a.back{color:#d97888}
     }
     return a.join('');
   }
-  function open(id){
+  function open(id,my){
+    openId=id;
     fetch(BASE+'lookup.php?i='+id).then(function(r){return r.json();}).then(function(d){
       var m=(d.meals||[])[0]; if(!m) return;
-      sheet.innerHTML='<img src="'+m.strMealThumb+'"/><div class="p"><h2>'+m.strMeal+'</h2><p>'+(AREAZ[m.strArea]||m.strArea)+' · '+(CATZ[m.strCategory]||m.strCategory)+'</p><p><b>食材</b></p><ul>'+ings(m)+'</ul><p><b>做法</b></p><p>'+(m.strInstructions||'')+'</p>'+(m.strYoutube?'<p><a class="back" href="'+m.strYoutube+'" target="_blank">看视频</a></p>':'')+'</div><a id="close" href="javascript:;">关闭</a>';
-      mask.className='on';
-      document.getElementById('close').onclick=function(){ mask.className=''; };
+      sheet.innerHTML='<img src="'+m.strMealThumb+'"/><div class="p"><h2>'+m.strMeal+'</h2><p>'+(AREAZ[m.strArea]||m.strArea)+' · '+(CATZ[m.strCategory]||m.strCategory)+'</p><p><b>食材</b></p><ul>'+ings(m)+'</ul><p><b>做法</b></p><p>'+(m.strInstructions||'')+'</p>'+(m.strYoutube?'<p><a class="back" href="'+m.strYoutube+'">看视频</a></p>':'')+'</div><a id="close" href="javascript:;">关闭</a>';
+      mask.className='on'; if(my) mask.scrollTop=my;
+      document.getElementById('close').onclick=function(){ mask.className=''; openId=null; };
     });
   }
   catsEl.onclick=function(e){
@@ -161,7 +172,7 @@ html[data-theme=dark] a.back{color:#d97888}
   list.onclick=function(e){
     var g=e.target.closest('.g'); if(g) open(g.getAttribute('data-id'));
   };
-  mask.onclick=function(e){ if(e.target===mask) mask.className=''; };
+  mask.onclick=function(e){ if(e.target===mask){ mask.className=''; openId=null; } };
   document.getElementById('go').onclick=function(){ search(document.getElementById('q').value.trim()); };
   document.getElementById('rand').onclick=randomOne;
   document.getElementById('all').onclick=loadAll;
@@ -169,11 +180,20 @@ html[data-theme=dark] a.back{color:#d97888}
   fetch(BASE+'categories.php').then(function(r){return r.json();}).then(function(d){
     allCats=(d.categories||[]).map(function(x){return x.strCategory;});
     chip(catsEl, allCats, 'c');
+    if(view.m==='c') mark(catsEl,view.v);
   });
   fetch(BASE+'list.php?a=list').then(function(r){return r.json();}).then(function(d){
     chip(areasEl, (d.meals||[]).map(function(x){return x.strArea;}), 'a');
+    if(view.m==='a') mark(areasEl,view.v);
   });
-  loadAll();
+  var sv=null;if(BACK){try{sv=JSON.parse(sessionStorage.getItem('recipe_view')||'null');}catch(e){}}
+  if(sv&&sv.view){
+    pendingY=sv.y||0;
+    if(sv.view.m==='c'||sv.view.m==='a') loadFilter(sv.view.m,sv.view.v);
+    else if(sv.view.m==='s'){ document.getElementById('q').value=sv.view.v||''; search(sv.view.v); }
+    else loadAll();
+    if(sv.open) open(sv.open,sv.my);
+  } else loadAll();
 })();
 </script>
 <script src="./i18n.js?v=283"></script>
