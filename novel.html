@@ -4,76 +4,90 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
 <title>小说</title>
+<!-- v282: 本地自动保存 / 继续写 / 我的作品 / 导出 txt -->
 <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <style>
-html,body{margin:0;background:#f3f0ea;color:#111;font-family:-apple-system,"PingFang SC",sans-serif}
-.w{padding:12px 12px 88px}
-h1{margin:6px 0 8px;font-size:18px}
+html,body{margin:0;background:#f3f0ea;color:#111;font-family:-apple-system,"PingFang SC",sans-serif;overflow-x:hidden}
+.w{padding:12px 12px 88px;max-width:760px;margin:0 auto;box-sizing:border-box}
+.hd{display:flex;align-items:center;gap:8px;margin:6px 0 8px}
+h1{margin:0;font-size:18px;flex:1;min-width:0}
 label{display:block;font-size:13px;color:#6b7280;margin:10px 0 6px}
-input,select,textarea{width:100%;box-sizing:border-box;border:1px solid #ddd;border-radius:10px;padding:10px;font:16px/1.45 inherit;background:#fff}
+input,select,textarea{width:100%;box-sizing:border-box;border:1px solid #ddd;border-radius:10px;padding:10px;font:16px/1.45 inherit;background:#fff;color:inherit}
 textarea{min-height:96px;resize:vertical}
 .row{display:flex;gap:8px;margin-top:12px}
-button{flex:1;height:44px;border:0;border-radius:10px;background:#111;color:#fff;font-size:16px;font-weight:700}
+button{flex:1;min-width:0;height:44px;border:0;border-radius:10px;background:#111;color:#fff;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer}
 button.sub{background:#fff;color:#111;border:1px solid #ddd}
+button.sm{flex:0 0 auto;height:34px;padding:0 12px;font-size:14px;font-weight:600}
 button:disabled{opacity:.55}
 .st{min-height:20px;margin:8px 0;font-size:13px;color:#6b7280}
 .st.err{color:#dc2626}
-.out{white-space:pre-wrap;background:#fff;border-radius:12px;padding:14px;min-height:180px;line-height:1.7;font-size:15px}
+.st.ok{color:#15803d}
+.out{white-space:pre-wrap;background:#fff;border-radius:12px;padding:14px;min-height:180px;line-height:1.7;font-size:16px;border:1px solid #ddd;overflow:hidden;resize:none;word-break:break-word}
+.bar2{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:14px 0 6px;font-size:13px;color:#6b7280}
+.bar2 b{color:inherit;font-weight:600}
+.sv{font-size:12px;color:#6b7280;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.resume{display:none;margin:8px 0 0;padding:10px 12px;border-radius:12px;background:#fff7e6;border:1px solid #f5d9a6;font-size:14px;line-height:1.5;color:#7a4b00}
+.resume.on{display:block}
+.lib{display:none;margin:4px 0 10px;background:#fff;border:1px solid #ddd;border-radius:12px;padding:10px}
+.lib.on{display:block}
+.lib .lt{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.lib .lt b{flex:1;font-size:15px}
+.it{border-top:1px solid #eee;padding:10px 0}
+.it:first-of-type{border-top:0}
+.it .nm{font-size:15px;font-weight:600;word-break:break-all}
+.it.cur .nm::after{content:" ●";color:#2563eb;font-size:11px;vertical-align:middle}
+.it .mt{font-size:12px;color:#6b7280;margin:2px 0 8px}
+.it .ac{display:flex;gap:6px;flex-wrap:wrap}
+.it .ac button{flex:1 1 0;height:34px;font-size:14px;font-weight:600}
+.it .ac button.del{background:#fff;color:#dc2626;border:1px solid #f1b4b4}
+.it .ac button.del.sure{background:#dc2626;color:#fff;border-color:#dc2626}
+.it .rn{display:flex;gap:6px;margin-bottom:8px}
+.it .rn input{flex:1;height:36px;padding:6px 10px}
+.it .rn button{flex:0 0 auto;height:36px;padding:0 12px;font-size:14px}
+.empty{font-size:13px;color:#6b7280;padding:6px 0}
 html[data-theme=dark],html[data-theme=dark] body{background:#05060a;color:#e6edf3}
-html[data-theme=dark] input,html[data-theme=dark] select,html[data-theme=dark] textarea,html[data-theme=dark] .out{background:#161b22;color:#e6edf3;border-color:#30363d}
+html[data-theme=dark] input,html[data-theme=dark] select,html[data-theme=dark] textarea,html[data-theme=dark] .out,html[data-theme=dark] .lib{background:#161b22;color:#e6edf3;border-color:#30363d}
 html[data-theme=dark] button{background:#2563eb;color:#fff}
 html[data-theme=dark] button.sub{background:#161b22;color:#e6edf3;border-color:#30363d}
+html[data-theme=dark] .it{border-top-color:#30363d}
+html[data-theme=dark] .it .ac button.del{background:#161b22;color:#f87171;border-color:#7f1d1d}
+html[data-theme=dark] .it .ac button.del.sure{background:#dc2626;color:#fff;border-color:#dc2626}
+html[data-theme=dark] .resume{background:#2a2111;border-color:#5c4617;color:#f5d38a}
+html[data-theme=dark] .st,html[data-theme=dark] label,html[data-theme=dark] .bar2,html[data-theme=dark] .sv,html[data-theme=dark] .it .mt,html[data-theme=dark] .empty{color:#9aa8b6}
+html[data-theme=dark] .st.err{color:#f87171}
+html[data-theme=dark] .st.ok{color:#4ade80}
 </style>
 </head>
 <body>
 <div class="w">
-  <h1>写小说</h1>
-  <label>主题</label>
-  <textarea id="theme" placeholder="写什么故事，人物和结局一并写上"></textarea>
-  <label>类型</label>
-  <select id="genre">
-    <option>都市</option><option>言情</option><option>玄幻</option>
-    <option>悬疑</option><option>科幻</option><option>战神</option><option>古言</option>
-  </select>
+  <div class="hd">
+    <h1 data-n="h1">写小说</h1>
+    <button id="newW" class="sub sm" type="button" data-n="new">新建</button>
+    <button id="libB" class="sub sm" type="button" data-n="lib">我的作品</button>
+  </div>
+  <div class="lib" id="lib">
+    <div class="lt"><b data-n="lib">我的作品</b><button id="libX" class="sub sm" type="button" data-n="close">收起</button></div>
+    <div id="libL"></div>
+  </div>
+  <div class="resume" id="resume"></div>
+  <label data-n="lTitle">书名</label>
+  <input id="title" type="text" maxlength="60" data-np="phTitle" placeholder="可不填，自动取名"/>
+  <label data-n="lTheme">主题</label>
+  <textarea id="theme" data-np="phTheme" placeholder="写什么故事，人物和结局一并写上"></textarea>
+  <label data-n="lGenre">类型</label>
+  <select id="genre"></select>
   <div class="row">
     <button id="go" type="button">生成第一章</button>
-    <button id="more" class="sub" type="button">续写下一章</button>
+    <button id="exp" class="sub" type="button" data-n="export">导出 .txt</button>
   </div>
   <div class="st" id="st"></div>
-  <div class="out" id="out"></div>
+  <div class="bar2"><b id="cnt"></b><span class="sv" id="sv"></span></div>
+  <textarea class="out" id="out" data-np="phOut" placeholder="生成的正文会出现在这里，也可以自己直接写、随便改，都会自动保存到本机。"></textarea>
+  <div class="row"><button id="go2" type="button">继续写</button><button id="redo" class="sub" type="button" data-n="redo">重写第一章</button></div>
+  <div class="st" id="st2"></div>
 </div>
-<script>
-(function(){
-  var theme=document.getElementById('theme');
-  var genre=document.getElementById('genre');
-  var go=document.getElementById('go');
-  var more=document.getElementById('more');
-  var st=document.getElementById('st');
-  var out=document.getElementById('out');
-  var chap=0,busy=false,book='';
-  function set(t,c){st.textContent=t||'';st.className='st'+(c?' '+c:'');}
-  async function gen(cont){
-    var idea=(theme.value||'').trim();
-    if(!idea){set('先写主题','err');theme.focus();return;}
-    if(busy)return;busy=true;go.disabled=more.disabled=true;
-    if(!cont){chap=1;book='';out.textContent='';}else chap+=1;
-    set('正在写第'+chap+'章');
-    var q=cont
-      ? ('你是小说作家。类型：'+genre.value+'\n主题：'+idea+'\n接上文续写第'+chap+'章，只输出正文：\n'+book.slice(-900))
-      : ('你是小说作家。类型：'+genre.value+'\n主题：'+idea+'\n写第1章中文正文约2000字，有章标题，不要解释。');
-    try{
-      var r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'novel',sys:'你是专业小说作家，只写正文。',q:q})});
-      var t=String(await r.text()||'').trim();
-      if(!t)throw 1;
-      book+=(book?'\n\n':'')+t;
-      out.textContent=book;
-      set('已写到第'+chap+'章');
-    }catch(e){set('失败，再点','err');}
-    busy=false;go.disabled=more.disabled=false;
-  }
-  go.onclick=function(){gen(false);};
-  more.onclick=function(){if(!book)gen(false);else gen(true);};
-})();
-</script>
+<script src="./noscale.js?v=281"></script>
+<script src="./i18n.js?v=281"></script>
+<script src="./novel.js?v=282"></script>
 <script src="tabbar.js?v=313"></script>
 </body></html>
