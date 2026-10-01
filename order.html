@@ -62,7 +62,7 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
     tip.textContent='';tip.style.display='none';
     window.__jobs=jobs;
     list.innerHTML=jobs.map(function(j,i){
-      return '<div class="card" data-i="'+i+'"><b>'+esc(j.title)+'</b><em>'+esc([j.company,j.cat,j.pay].filter(Boolean).join(' · '))+'</em><button type="button" data-i18n="order_take">接单</button></div>';
+      return '<div class="card" data-i="'+i+'"><b>'+esc(j.title)+'</b><em>'+esc([j.company,j.cat,j.pay].filter(Boolean).join(' · '))+'</em><button type="button">'+(window.I18N&&I18N.t("order_take")||"Take")+'</button></div>';
     }).join('');
     /* v284: Back from the job site returns to the same place in the list */
     var back=false;try{var n=performance.getEntriesByType('navigation')[0];back=!!n&&n.type==='back_forward';}catch(e){}
