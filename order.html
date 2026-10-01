@@ -37,7 +37,7 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
 <body>
 <div class="w">
   <h1>接单</h1>
-  <p class="tip" id="tip">正在加载任务…</p>
+  <p class="tip" id="tip" data-i18n="loading">正在加载任务…</p>
   <div id="list"></div>
 </div>
 <div class="mask" id="mask">
@@ -58,7 +58,7 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
   var cur=null;
   function paint(jobs){
     jobs=(jobs||[]).filter(function(j){return j&&j.title&&j.url;});
-    if(!jobs.length){tip.textContent='没有任务';return;}
+    if(!jobs.length){tip.textContent=(window.I18N&&I18N.t('empty'))||'没有任务';return;}
     tip.textContent='';tip.style.display='none';
     window.__jobs=jobs;
     list.innerHTML=jobs.map(function(j,i){
