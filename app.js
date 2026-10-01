@@ -153,6 +153,7 @@ window.setAidLang=function(code){
   try{localStorage.setItem('lang',lang);localStorage.setItem('yx_lang',lang);localStorage.setItem('aid_tl',lang)}catch(e){}
   applyChrome();renderSide();renderHot();render();
   if(typeof aidTranslate==='function') aidTranslate();
+  document.querySelectorAll('a.chip').forEach(function(a){var base=a.getAttribute('href').split('?')[0];a.setAttribute('href',base+'?lang='+encodeURIComponent(lang));});
   var bar=document.getElementById('langBar');
   if(bar)[...bar.querySelectorAll('button[data-l]')].forEach(function(x){x.classList.toggle('on',x.dataset.l===lang)});
 };

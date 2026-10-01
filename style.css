@@ -26,7 +26,7 @@ html[data-theme="dark"] #sitebg .grain{opacity:.35;mix-blend-mode:overlay;backgr
 @keyframes orbB{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-6%,8%,0) scale(1.1)}}
 @keyframes orbC{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(5%,-7%,0) scale(1.06)}}
 #scroll{position:relative;z-index:1;height:100%;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(12px + env(safe-area-inset-top,0px)) 12px calc(80px + env(safe-area-inset-bottom,0px))}
-.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px;position:relative}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px;position:relative;flex-wrap:wrap}.top h1{font-size:18px;line-height:1.2;margin:0}.top .acts{margin-left:auto}
 .acts{display:flex;gap:6px;flex:none}
 h1{font-size:18px;color:#0f172a;text-shadow:none}
 .sub{color:#475569;font-size:12px;margin-top:2px;text-shadow:none}
