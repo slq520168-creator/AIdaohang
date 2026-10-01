@@ -196,7 +196,7 @@
   function boot(){
     apply();
     var root=document.getElementById('scroll')||document.body;
-    mo.observe(root,{childList:true,subtree:true});
+    /* observer removed: it fought I18N.apply */
   }
   window.aidTranslate=apply;
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot);

@@ -1,6 +1,35 @@
+
+const ALLOW = ["youxuanai.vercel.app","ainav-seven.vercel.app","slq520168-creator.github.io","localhost","127.0.0.1"];
+const hits = new Map();
+function clientIp(req){
+  const x = req.headers["x-forwarded-for"] || req.headers["x-real-ip"] || "";
+  return String(x).split(",")[0].trim() || "0";
+}
+function originHost(req){
+  const o = req.headers.origin || req.headers.referer || "";
+  try { return new URL(o).hostname; } catch (e) { return ""; }
+}
+function guard(req, res){
+  const host = originHost(req);
+  const ok = !host || ALLOW.indexOf(host) >= 0;
+  if (host && ALLOW.indexOf(host) >= 0) res.setHeader("Access-Control-Allow-Origin", req.headers.origin || "null");
+  res.setHeader("Vary", "Origin");
+  res.setHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS");
+  if (!ok) { res.status(403).end("forbidden"); return false; }
+  const ip = clientIp(req);
+  const now = Date.now();
+  const row = hits.get(ip) || [];
+  const recent = row.filter(function(t){ return now - t < 60000; });
+  if (recent.length >= 20) { res.status(429).end("rate"); return false; }
+  recent.push(now);
+  hits.set(ip, recent);
+  return true;
+}
+
 module.exports = async function handler(req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+  if (req.method === "OPTIONS") { res.status(204).end(); return; }
+  if (!guard(req, res)) return;
+    res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
   res.setHeader("Cache-Control", "no-store");
   if (req.method === "OPTIONS") {
     res.status(204).end();

@@ -1,13 +1,7 @@
 {
   "functions": {
-    "api/draw.js": { "maxDuration": 60 },
-    "api/chat.js": { "maxDuration": 60 },
-    "api/jobs.js": { "maxDuration": 20 }
-  },
-  "rewrites": [
-    {
-      "source": "/copy/:id",
-      "destination": "https://drive.usercontent.google.com/uc?export=download&id=:id"
-    }
-  ]
+    "api/draw.js": { "maxDuration": 20 },
+    "api/chat.js": { "maxDuration": 20 },
+    "api/jobs.js": { "maxDuration": 15 }
+  }
 }
