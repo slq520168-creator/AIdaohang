@@ -22,10 +22,10 @@ ul,ol{padding-left:1.2em}
 .src{display:block;margin-top:10px;font-size:12px;color:#6b7280}
 a{color:#2563eb}
 .en{display:none}
-html[lang="en"] .zh{display:none}
-html[lang="en"] .en{display:block}
-html[lang="en"] li.en,html[lang="en"] h1.en,html[lang="en"] h2.en,html[lang="en"] h3.en,html[lang="en"] p.en{display:revert}
-html[lang="en"] .bar a span.en{display:inline}
+html:not([lang="zh-CN"]) .zh{display:none}
+html:not([lang="zh-CN"]) .en{display:block}
+html:not([lang="zh-CN"]) li.en,html:not([lang="zh-CN"]) h1.en,html:not([lang="zh-CN"]) h2.en,html:not([lang="zh-CN"]) h3.en,html:not([lang="zh-CN"]) p.en{display:revert}
+html:not([lang="zh-CN"]) .bar a span.en{display:inline}
 </style>
 <script src="./noscale.js?v=281"></script>
 <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");}catch(e){}</script>
@@ -266,9 +266,9 @@ html[lang="en"] .bar a span.en{display:inline}
   var lang=(new URLSearchParams(location.search).get('lang'))||localStorage.getItem('lang')||'zh';
   var btns=[].slice.call(document.querySelectorAll('.langs button'));
   function apply(){
-    document.documentElement.lang=lang==='en'?'en':'zh-CN';
-    document.title=lang==='en'?'Scam guide':'防骗指南';
-    btns.forEach(function(b){b.classList.toggle('on',b.dataset.l===(lang==='en'?'en':'zh'));});
+    document.documentElement.lang=(lang==='zh'||lang==='zh-CN')?'zh-CN':'en';
+    document.title=(lang==='zh'||lang==='zh-CN')?'防骗指南':'Scam guide';
+    btns.forEach(function(b){b.classList.toggle('on',b.dataset.l===((lang==='zh'||lang==='zh-CN')?'zh':'en'));});
   }
   btns.forEach(function(b){
     b.onclick=function(){
@@ -281,7 +281,7 @@ html[lang="en"] .bar a span.en{display:inline}
 })();
 </script>
 <script src="./i18n.js?v=283"></script>
-<script>(function(){function fix(){var b=document.querySelector(".langs button.on");if(b)document.documentElement.lang=b.getAttribute("data-l")==="en"?"en":"zh-CN";}document.addEventListener("DOMContentLoaded",fix);document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".langs button[data-l]");if(!b)return;try{if(window.I18N&&I18N.set)I18N.set(b.getAttribute("data-l"));}catch(err){}setTimeout(fix,0);setTimeout(fix,40);});})();</script>
+<script>(function(){function fix(){var b=document.querySelector(".langs button.on");if(b)var l=b.getAttribute("data-l");document.documentElement.lang=(l==="zh"||l==="zh-CN")?"zh-CN":"en";}document.addEventListener("DOMContentLoaded",fix);document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".langs button[data-l]");if(!b)return;try{if(window.I18N&&I18N.set)I18N.set(b.getAttribute("data-l"));}catch(err){}setTimeout(fix,0);setTimeout(fix,40);});})();</script>
 <script src="tabbar.js?v=281"></script>
 </body>
 </html>

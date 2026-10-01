@@ -169,7 +169,7 @@ async function send(side,text){
     $("box"+other).textContent=dst;
     if(other==="B")$("inputB").value=dst;
     speakNow(dst,to);
-  }catch(e){$("box"+other).textContent="fail";}
+  }catch(e){$("box"+other).textContent=(window.I18N&&I18N.t("empty"))||"fail";}
   sending=false;
 }
 function startHold(side){
