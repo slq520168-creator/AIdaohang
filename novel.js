@@ -4,7 +4,7 @@
   var titleI=$('title'),theme=$('theme'),genre=$('genre'),go=$('go'),exp=$('exp'),redo=$('redo');
   var go2=$('go2'),st2=$('st2'),st=$('st'),out=$('out'),cnt=$('cnt'),sv=$('sv'),resume=$('resume');
   var lib=$('lib'),libL=$('libL'),libB=$('libB'),libX=$('libX'),newW=$('newW');
-  var LANG=(function(){var l='zh';try{l=(window.I18N&&window.I18N.lang)||localStorage.getItem('yx_lang')||'zh';}catch(e){}return l==='zh'?'zh':'en';})();
+  var LANG=(function(){var l='zh';try{l=(window.I18N&&window.I18N.lang)||localStorage.getItem('yx_lang')||'zh';}catch(e){}return (l==='zh'||l==='zh-CN')?'zh':'en';})();
   var TX={
     zh:{h1:'写小说',new:'新建',lib:'我的作品',close:'收起',lTitle:'书名',lTheme:'主题',lGenre:'类型',export:'导出 .txt',redo:'重写第一章',
       phTitle:'选填',phTheme:'写什么故事，人物和结局一并写上',phOut:'正文',

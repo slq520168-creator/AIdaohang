@@ -31,20 +31,20 @@
 <body>
 <div id="sitebg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
 <div class="w draw">
-  <div class="top"><a class="back" href="./tools.html?home=1" data-i18n="back">返回</a><h1>本站出图</h1></div>
-  <textarea id="p" maxlength="800" placeholder="夜景街灯，女人长外套"></textarea>
+  <div class="top"><a class="back" href="./tools.html?home=1" data-i18n="back">返回</a><h1 data-i18n="draw_title">本站出图</h1></div>
+  <textarea id="p" maxlength="800" data-i18n-placeholder="draw_ph" placeholder="夜景街灯，女人长外套"></textarea>
   <div class="row">
     <select id="size">
       <option value="1024x1024" selected>1024²</option>
-      <option value="768x1024">竖图</option>
-      <option value="1024x768">横图</option>
+      <option value="768x1024" data-i18n="draw_portrait">竖图</option>
+      <option value="1024x768" data-i18n="draw_land">横图</option>
     </select>
-    <button class="go" id="go" type="button">写真</button>
+    <button class="go" id="go" type="button" data-i18n="draw_photo">写真</button>
   </div>
   <div class="st" id="st"></div>
   <div class="wait" id="wait"><span class="spin"></span><span id="waitTxt"></span></div>
   <div class="res" id="res"><img class="out" id="out" alt=""/></div>
-  <div class="acts" id="acts"><a id="open" href="#" rel="noopener">查看大图</a><button type="button" id="save">下载</button></div>
+  <div class="acts" id="acts"><a id="open" href="#" rel="noopener" data-i18n="draw_open">查看大图</a><button type="button" id="save" data-i18n="draw_save">下载</button></div>
 </div>
 <script>
 (function(){
