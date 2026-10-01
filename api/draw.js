@@ -11,7 +11,7 @@ function originHost(req){
 }
 function guard(req, res){
   const host = originHost(req);
-  const ok = !host || ALLOW.indexOf(host) >= 0;
+  const ok = ALLOW.indexOf(host) >= 0;
   if (host && ALLOW.indexOf(host) >= 0) res.setHeader("Access-Control-Allow-Origin", req.headers.origin || "null");
   res.setHeader("Vary", "Origin");
   res.setHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS");
