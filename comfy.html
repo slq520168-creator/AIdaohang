@@ -21,10 +21,10 @@ ol,ul{padding-left:1.25em}
 code{background:#f3f4f6;padding:0 4px;border-radius:4px;font-size:13px;word-break:break-all}
 .src{font-size:12px;color:#6b7280}
 .en{display:none}
-html[lang="en"] .zh{display:none}
-html[lang="en"] .en{display:block}
-html[lang="en"] li.en{display:list-item}
-html[lang="en"] .bar a span.en{display:inline}
+html:not([lang="zh-CN"]) .zh{display:none}
+html:not([lang="zh-CN"]) .en{display:block}
+html:not([lang="zh-CN"]) li.en{display:list-item}
+html:not([lang="zh-CN"]) .bar a span.en{display:inline}
 </style>
 <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");}catch(e){}</script>
 <link rel="icon" href="favicon.ico"/>

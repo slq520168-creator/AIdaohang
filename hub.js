@@ -2,7 +2,7 @@
 (function(){
   var H=window.HUB; if(!H) return;
   function lang(){try{return (window.I18N&&I18N.lang)||'zh';}catch(e){return 'zh';}}
-  function L(o){ if(!o) return ''; return lang()==='zh'?o.zh:(o.en||o.zh); }
+  function L(o){ if(!o) return ''; return (lang()==='zh'||lang()==='zh-CN')?o.zh:(o.en||o.zh); }
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
   var UI={back:{zh:'返回首页',en:'Home'},open:{zh:'打开',en:'Open'},n:{zh:'个',en:''},
     ageQ:{zh:'以下内容仅限 18 岁以上成年人。你已年满 18 岁吗？',en:'The following is for adults 18+ only. Are you 18 or older?'},
@@ -13,10 +13,10 @@
   var CH='<svg class="ch" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>';
   function openId(){ var m=/[#&]c=([\w-]+)/.exec(location.hash); return m?m[1]:''; }
   function render(){
-    var zh=lang()==='zh';
+    var zh=lang()==='zh'||lang()==='zh-CN';
     document.title=L(H.title)+' · '+(zh?'全球优选AI导航':'AI Directory');
     var top=document.getElementById('hubtop');
-    top.innerHTML='<a class="back" href="./tools.html?home=1"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>'+esc(L(UI.back))+'</a><h1>'+esc(L(H.title))+'</h1>';
+    top.innerHTML='<a class="back" href="./tools.html?home=1&lang='+encodeURIComponent(lang())+'><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>'+esc(L(UI.back))+'</a><h1>'+esc(L(H.title))+'</h1>';
     var tip=document.getElementById('hubtip'); if(tip){ tip.textContent=L(H.tip); tip.hidden=!tip.textContent; }
     var note=document.getElementById('hubnote'); if(note){ note.textContent=L(H.note); note.hidden=!note.textContent; }
     var cur=openId();
