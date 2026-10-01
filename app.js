@@ -185,6 +185,7 @@ window.setAidLang=function(code){
     bar.classList.remove('show');
   };
   document.addEventListener('click',function(){bar.classList.remove('show');});
+  document.querySelectorAll('a.chip').forEach(function(a){var base=a.getAttribute('href').split('?')[0];a.setAttribute('href',base+'?lang='+encodeURIComponent(lang));});
 })();
 function byName(n){return tools.find(x=>x.name===n)||hotList.find(x=>x.name===n);}
 function detailHtml(x){const zh=lang==='zh';const desc=showDesc(x);const how=zh?(x.how||''):(x.how_en||'');const open=isHttp(x.url);const local=!open&&/^\.?\/?[\w-]+\.html(\?|#|$)/.test(x.url||'');return `<div class="detail"><p class="d-desc">${esc(desc)}</p>${how?`<p class="d-how">${esc(how)}</p>`:''}${open?`<p class="d-url">${esc(x.url)}</p><a class="d-go" href="${esc(x.url)}" rel="noopener noreferrer">${esc((window.I18N&&I18N.t('open'))||'Open')}</a>`:''}${local?`<a class="d-go" href="${esc(x.url)}">${esc((window.I18N&&I18N.t('open'))||'Open')}</a>`:''}</div>`;}

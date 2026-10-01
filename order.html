@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
-<title>接单</title>
+<title data-i18n="order_title">接单</title>
 <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <style>
 html,body{margin:0;background:#f3f0ea;color:#111;font-family:-apple-system,"PingFang SC",sans-serif}
@@ -36,7 +36,7 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
 </head>
 <body>
 <div class="w">
-  <h1>接单</h1>
+  <h1 data-i18n="order_title">接单</h1>
   <p class="tip" id="tip" data-i18n="loading">正在加载任务…</p>
   <div id="list"></div>
 </div>
@@ -45,8 +45,8 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
     <h3 id="mt"></h3>
     <p id="md"></p>
     <div class="row">
-      <button class="no" id="cancel" type="button">取消</button>
-      <button class="ok" id="take" type="button">确认接单</button>
+      <button class="no" id="cancel" type="button" data-i18n="order_cancel">取消</button>
+      <button class="ok" id="take" type="button" data-i18n="order_ok">确认接单</button>
     </div>
   </div>
 </div>
@@ -74,7 +74,7 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
   function load(url){return fetch(url).then(function(r){if(!r.ok)throw 1;return r.json();});}
   load('./data/jobs.json?v=315').then(function(d){paint(d.jobs);}).catch(function(){
     return load('/api/jobs').then(function(d){paint(d.jobs);}).catch(function(){return load('data/jobs.json').then(function(d){paint(d.jobs||d);});});
-  }).catch(function(){tip.textContent='加载失败';});
+  }).catch(function(){tip.textContent=(window.I18N&&I18N.t('order_fail'))||'Failed to load';});
   list.onclick=function(e){
     var card=e.target.closest('.card'); if(!card)return;
     var j=(window.__jobs||[])[+card.dataset.i]; if(!j)return;
