@@ -61,7 +61,13 @@ th:{pc:'คอมพิวเตอร์',gig:'งาน',adult:'ผู้ใ�
 vi:{pc:'Máy tính',gig:'Việc',adult:'Người lớn',draw:'Vẽ',make:'Video',life:'Đời sống',work:'Văn phòng',learn:'Học',free:'Miễn phí'},
 km:{pc:'កុំព្យូទ័រ',gig:'ការងារ',adult:'មនុស្សពេញវ័យ',draw:'គំនូរ',make:'វីដេអូ',life:'ជីវិត',work:'ការិយាល័យ',learn:'រៀន',free:'ឥតគិតថ្លៃ'},
 id:{pc:'PC',gig:'Order',adult:'Dewasa',draw:'Gambar',make:'Video',life:'Hidup',work:'Kerja',learn:'Belajar',free:'Gratis'},
-es:{pc:'PC',gig:'Encargos',adult:'Adultos',draw:'Arte',make:'Video',life:'Vida',work:'Trabajo',learn:'Aprender',free:'Gratis'}
+es:{pc:'PC',gig:'Encargos',adult:'Adultos',draw:'Arte',make:'Video',life:'Vida',work:'Trabajo',learn:'Aprender',free:'Gratis'},
+lo:{pc:'ຄອມ',gig:'ວຽກ',adult:'ຜູ້ໃຫຍ່',draw:'ຮູບ',make:'ວິດີໂອ',life:'ຊີວິດ',work:'ຫ້ອງການ',learn:'ຮຽນ',free:'ຟຣີ'},
+my:{pc:'ကွန်ပျူတာ',gig:'အလုပ်',adult:'လူကြီး',draw:'ပုံ',make:'ဗီဒီယို',life:'ဘဝ',work:'ရုံး',learn:'သင်ယူ',free:'အခမဲ့'},
+ms:{pc:'PC',gig:'Kerja',adult:'Dewasa',draw:'Lukis',make:'Video',life:'Hidup',work:'Pejabat',learn:'Belajar',free:'Percuma'},
+hi:{pc:'पीसी',gig:'काम',adult:'वयस्क',draw:'चित्र',make:'वीडियो',life:'जीवन',work:'दफ्तर',learn:'सीखें',free:'मुफ्त'},
+si:{pc:'පරිගණක',gig:'වැඩ',adult:'වැඩිහිටි',draw:'චිත්‍ර',make:'වීඩියෝ',life:'ජීවිතය',work:'කාර්යාල',learn:'ඉගෙනීම',free:'නොමිලේ'},
+ta:{pc:'கணினி',gig:'வேலை',adult:'பெரியோர்',draw:'படம்',make:'வீடியோ',life:'வாழ்க்கை',work:'அலுவலகம்',learn:'கற்றல்',free:'இலவசம்'}
 };
 function groupLabel(g){if(lang==='zh')return g.k;const pack=GROUP_L[lang];if(pack&&pack[g.id])return pack[g.id];return g.en;}
 function t(){if(window.I18N&&window.I18N.t){return {brand:window.I18N.t("brand"),hot:window.I18N.t("hot"),all:window.I18N.t("allTools"),themeD:window.I18N.t("themeD"),themeL:window.I18N.t("themeL"),empty:window.I18N.t("empty"),ph:"",res:"",close:"Close"};}return UI_I18N[lang]||UI_I18N.zh}
@@ -81,7 +87,7 @@ function gidOf(x){
   if(/办公|编程|管理|API|物流|会计|建筑|科学|支付|税务|会议|日历|存储|签名|调查|统计|能源|制造|航空|海事|法律|翻译|矩阵|群发|多开|群控|云手机|指纹|开店|跨境|东南亚|Shopee|Lazada|淘宝|拼多多/.test(s)) return 'work';
   return 'work';
 }
-function applyChrome(){const s=t();if(window.I18N){window.I18N.lang=lang;window.I18N.apply(document);}else{const b=document.getElementById('brand');if(b)b.textContent=s.brand;const ht=document.getElementById('hotTitle');if(ht)ht.textContent=s.hot;if(listTitle)listTitle.textContent=s.all;}document.title=s.brand;qEl.placeholder='';qEl.removeAttribute('placeholder');if(themeBtn)themeBtn.textContent=document.documentElement.dataset.theme==='dark'?s.themeL:s.themeD;const LABELS={zh:'中文',en:'EN',km:'ខ្មែរ',th:'ไทย',vi:'VI',id:'ID',lo:'ລາວ',my:'MY',ms:'MS',hi:'HI',si:'SI',ta:'TA',ja:'日本語',ko:'한국어',es:'ES'};if(langBtn)langBtn.textContent=LABELS[lang]||String(lang).toUpperCase();document.documentElement.lang=lang==='zh'?'zh-CN':lang;}
+function applyChrome(){const s=t();if(window.I18N){window.I18N.lang=lang;window.I18N.apply(document);}else{const b=document.getElementById('brand');if(b)b.textContent=s.brand;const ht=document.getElementById('hotTitle');if(ht)ht.textContent=s.hot;if(listTitle)listTitle.textContent=s.all;}document.title=s.brand;qEl.placeholder=(window.I18N&&I18N.t('search'))||'';if(themeBtn)themeBtn.textContent=document.documentElement.dataset.theme==='dark'?s.themeL:s.themeD;const LABELS={zh:'中文',en:'EN',km:'ខ្មែរ',th:'ไทย',vi:'VI',id:'ID',lo:'ລາວ',my:'MY',ms:'MS',hi:'HI',si:'SI',ta:'TA',ja:'日本語',ko:'한국어',es:'ES'};if(langBtn)langBtn.textContent=LABELS[lang]||String(lang).toUpperCase();document.documentElement.lang=lang==='zh'?'zh-CN':lang;}
 themeBtn.onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n);applyChrome()};
 function hostOf(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
 function urlKey(u){try{const x=new URL(u);return x.hostname.replace(/^www\./,'').toLowerCase()+x.pathname.replace(/\/+$/,'')}catch(e){return String(u||'').toLowerCase()}}
