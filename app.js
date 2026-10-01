@@ -72,6 +72,17 @@ ta:{pc:'கணினி',gig:'வேலை',adult:'பெரியோர்',dra
 function groupLabel(g){if(lang==='zh')return g.k;const pack=GROUP_L[lang];if(pack&&pack[g.id])return pack[g.id];return g.en;}
 function t(){if(window.I18N&&window.I18N.t){return {brand:window.I18N.t("brand"),hot:window.I18N.t("hot"),all:window.I18N.t("allTools"),themeD:window.I18N.t("themeD"),themeL:window.I18N.t("themeL"),empty:window.I18N.t("empty"),ph:"",res:"",close:"Close"};}return UI_I18N[lang]||UI_I18N.zh}
 function hasHan(s){return /[\u3400-\u9FFF]/.test(String(s||''))}
+
+const NAME_EN={
+'豆包':'Doubao','通义千问':'Qwen','文心一言':'ERNIE Bot','讯飞星火':'iFlytek Spark','智谱清言':'ChatGLM','腾讯元宝':'Yuanbao','秘塔AI':'Metaso','纳米AI搜索':'Nano Search','即梦':'Dreamina','可灵':'Kling','剪映':'CapCut','扣子':'Coze','腾讯智影':'ZenVideo','海螺':'Hailuo','优选创作':'Studio','即梦+剪映成片':'Dreamina + CapCut','可灵+剪映':'Kling + CapCut','Suno+剪映口播':'Suno + CapCut','HeyGen数字人':'HeyGen','CapCut一键成片':'CapCut','Sora电影级':'Sora','Meshy游戏资产':'Meshy','n8n工作流':'n8n','扣子工作流':'Coze','Midjourney付费':'Midjourney','Runway付费':'Runway','Bing生图':'Bing Image','通义万相':'Wan','文心一格':'ERNIE-ViLG','天工':'Tiangong','百川':'Baichuan','商量':'SenseChat','海螺AI':'Hailuo','即梦AI':'Dreamina','剪映专业版':'CapCut Pro','抖音':'Douyin','快手':'Kuaishou','小红书':'Xiaohongshu','美团':'Meituan','淘宝':'Taobao','京东':'JD','拼多多':'Pinduoduo','支付宝':'Alipay','微信支付':'WeChat Pay'
+};
+function latinName(name){
+  const s=String(name||'').trim();
+  if(NAME_EN[s]) return NAME_EN[s];
+  const lead=s.replace(/[\u3400-\u9fff].*$/,'').replace(/[+\s]+$/,'').trim();
+  if(lead && !hasHan(lead)) return lead;
+  return '';
+}
 function enOnly(){for(let i=0;i<arguments.length;i++){const s=arguments[i];if(s&&!hasHan(s))return String(s);}return 'Tool';}
 function blob(x){return [x.name,x.desc,x.desc_en,x.cat,x.pack,x.how].join(' ')}
 function gidOf(x){
@@ -98,7 +109,7 @@ function safeUrl(u){u=String(u||'').trim();if(!u)return false;if(/^javascript:|^
 function iconTag(url,letter){const h=hostOf(url);const L=(letter||'T').slice(0,1);if(!h)return hasHan(L)?'T':L;return `<img alt="" src="https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(h)}" onerror="this.style.display='none'">`;}
 function hourBucket(){return Math.floor(Date.now()/3600000)}
 function pickHot(){const HK='aid_hot_hour_v1';const hid=hourBucket();try{const raw=localStorage.getItem(HK);if(raw){const o=JSON.parse(raw);if(o&&o.h===hid&&Array.isArray(o.names)&&o.names.length){const by=new Map(tools.map(x=>[x.name,x]));const restored=o.names.map(n=>by.get(n)).filter(Boolean);if(restored.length>=8){hotList=restored.slice(0,10);return;}}}}catch(e){}const buckets={learn:[],gig:[],draw:[],make:[],life:[],work:[],adult:[],pc:[],free:[]};for(const x of tools){const g=gidOf(x);(buckets[g]||buckets.work).push(x);if(x.free)buckets.free.push(x);}const order=['free','learn','gig','draw','make','life','work','adult','pc','free'];const seed=hid;const used=new Set();const out=[];for(let i=0;i<10;i++){const arr=buckets[order[i]]||tools;if(!arr.length)continue;let n=arr.length,idx=(seed*17+i*31)%n,hit=null;for(let k=0;k<n;k++){const x=arr[(idx+k)%n];if(!used.has(x.name)){hit=x;break;}}if(hit){used.add(hit.name);out.push(hit);}}hotList=out;try{localStorage.setItem(HK,JSON.stringify({h:hid,names:hotList.map(x=>x.name)}));}catch(e){}}
-function showName(x){const host=hostOf(x.url);if(lang==='zh')return x.name||host||'';return enOnly(x.name_en,hasHan(x.name)?'':x.name,host);}
+function showName(x){const host=hostOf(x.url);if(lang==='zh')return x.name||host||'';return enOnly(x.name_en,latinName(x.name),hasHan(x.name)?'':x.name,host);}
 function showDesc(x){const host=hostOf(x.url);if(lang==='zh')return x.desc||x.cat||host||'';if(x.desc_en&&!hasHan(x.desc_en))return x.desc_en;const cat=TAG_EN[x.cat]||TAG_EN[x.pack]||'';if(cat&&host)return cat+' · '+host;return enOnly(cat,host,'Tool');}
 function renderHot(){hotEl.innerHTML=hotList.map((h,i)=>{const href=isHttp(h.url)?h.url:('guide.html?n='+encodeURIComponent(h.name||''));return `<li data-n="${esc(h.name||'')}"><a href="#" role="button"><i>${i+1}</i><span class="ht"><strong>${esc(showName(h))}</strong><em>${esc(showDesc(h))}</em></span></a></li>`;}).join('');}
 function matchGroup(x){if(!selected.size)return true;if(selected.has('free')&&!x.free)return false;const topics=[...selected].filter(id=>id!=='free');if(!topics.length)return true;return topics.includes(gidOf(x));}
