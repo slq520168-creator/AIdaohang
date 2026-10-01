@@ -1,7 +1,7 @@
 [
   {
     "name": "Lazada卖家中心",
-    "url": "https://sellercenter.lazada.com",
+    "url": "https://sellercenter.lazada.sg",
     "desc": "东南亚Lazada开店，覆盖泰马新印菲越。",
     "desc_en": "Lazada Seller Center for SEA marketplaces.",
     "cat": "开店",
@@ -154,7 +154,7 @@
   },
   {
     "name": "LINE MyShop",
-    "url": "https://myshop.line.me",
+    "url": "https://shop.line.me",
     "desc": "LINE内开小店，东南亚聊天成交。",
     "desc_en": "LINE MyShop in-chat storefront.",
     "cat": "开店",
@@ -237,7 +237,7 @@
   },
   {
     "name": "AccessTrade",
-    "url": "https://www.accesstrade.asia",
+    "url": "https://www.accesstrade.me",
     "desc": "日韩东南亚联盟（AccessTrade）。",
     "desc_en": "AccessTrade affiliate Asia.",
     "cat": "开店",
@@ -671,7 +671,7 @@
   },
   {
     "name": "SHEIN卖家",
-    "url": "https://seller.shein.com",
+    "url": "https://sellerhub.shein.com",
     "desc": "SHEIN商家/柔性供应链。",
     "desc_en": "SHEIN seller portal.",
     "cat": "开店",

@@ -23,7 +23,7 @@
   },
   {
     "name": "短视频教学包装公式（步骤）",
-    "url": "https://slq520168-creator.github.io/AIdaohang/create.html",
+    "url": "./create.html",
     "desc": "快手教学片通用壳：假设句钩子→利益点→反问逼停→人设→热词→步骤演示。适合Agent/漫剧/软件类教学内容。",
     "desc_en": "Kuaishou teaching-video packaging formula: hook, benefit, question, persona, tags, step demo.",
     "cat": "创作媒体",
@@ -43,7 +43,7 @@
   },
   {
     "name": "漫剧教学五步（步骤）",
-    "url": "https://slq520168-creator.github.io/AIdaohang/create.html",
+    "url": "./create.html",
     "desc": "AI漫剧只写步骤：定妆锁脸→剧本分镜→同一张脸→即梦/可灵出片→剪映配音发布。",
     "desc_en": "AI comic-drama teaching steps only: lock face, script board, same face, gen video, dub and post.",
     "cat": "创作媒体",

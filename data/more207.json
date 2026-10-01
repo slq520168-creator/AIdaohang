@@ -117,15 +117,6 @@
     "how": "打开官网，仅限18岁以上。"
   },
   {
-    "name": "ChineseCupid",
-    "url": "https://www.chinesecupid.com",
-    "desc": "华语交友陪伴",
-    "cat": "租妻",
-    "pack": "社交",
-    "free": true,
-    "how": "打开官网，仅限18岁以上。"
-  },
-  {
     "name": "InternationalCupid",
     "url": "https://www.internationalcupid.com",
     "desc": "国际交友陪伴",

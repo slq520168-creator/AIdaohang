@@ -1,7 +1,7 @@
 [
   {
     "name": "AI漫剧全流程（剧本分镜到成片）",
-    "url": "https://slq520168-creator.github.io/AIdaohang/create.html",
+    "url": "./create.html",
     "desc": "手机做AI漫剧：角色定妆、剧本分镜、参考图锁脸、即梦/可灵出片、剪映配音字幕到发布。",
     "desc_en": "Phone AI comic-drama pipeline: character sheet, storyboard, consistent face, video, dub, publish.",
     "cat": "漫剧",
@@ -90,7 +90,7 @@
   },
   {
     "name": "导航创作台（漫剧分镜出图）",
-    "url": "https://slq520168-creator.github.io/AIdaohang/create.html",
+    "url": "./create.html",
     "desc": "导航站内做图做视频入口，可当漫剧静帧和试片。",
     "desc_en": "In-site create studio for stills and test clips.",
     "cat": "生视频",

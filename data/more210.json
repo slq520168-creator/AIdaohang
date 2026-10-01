@@ -585,15 +585,6 @@
     "how": "打开官网注册开店上架。"
   },
   {
-    "name": "Nuvemshop",
-    "url": "https://www.nuvemshop.com",
-    "desc": "拉美独立站",
-    "cat": "开店",
-    "pack": "社交",
-    "free": true,
-    "how": "打开官网注册开店上架。"
-  },
-  {
     "name": "搜款网17网",
     "url": "https://www.17zwd.com",
     "desc": "女装批发搜款",
@@ -954,15 +945,6 @@
     "how": "打开官网查询使用。"
   },
   {
-    "name": "中华会计网校",
-    "url": "https://www.chinaacc.com",
-    "desc": "会计职称学习",
-    "cat": "会计",
-    "pack": "社交",
-    "free": true,
-    "how": "打开官网注册使用。"
-  },
-  {
     "name": "诺诺发票",
     "url": "https://www.nuonuo.com",
     "desc": "电子发票开具",
@@ -1261,7 +1243,7 @@
   },
   {
     "name": "GoodShort短剧",
-    "url": "https://www.goodshort.tv",
+    "url": "https://www.goodshort.com",
     "desc": "海外短剧平台",
     "cat": "短剧",
     "pack": "社交",
@@ -1306,7 +1288,7 @@
   },
   {
     "name": "FlickReels短剧",
-    "url": "https://www.flickreels.com",
+    "url": "https://www.reelshort.com",
     "desc": "短剧内容平台",
     "cat": "短剧",
     "pack": "社交",
@@ -1404,24 +1386,6 @@
     "how": "打开官网注册观看。"
   },
   {
-    "name": "Rephrase.ai",
-    "url": "https://www.rephrase.ai",
-    "desc": "文本驱动数字人",
-    "cat": "数字人",
-    "pack": "社交",
-    "free": true,
-    "how": "打开官网注册制作数字人。"
-  },
-  {
-    "name": "Beyond Presence",
-    "url": "https://www.beyondpresence.io",
-    "desc": "实时虚拟分身",
-    "cat": "虚拟人",
-    "pack": "社交",
-    "free": true,
-    "how": "打开官网注册制作数字人。"
-  },
-  {
     "name": "Vyond动画",
     "url": "https://www.vyond.com",
     "desc": "企业动画视频",
@@ -1432,7 +1396,7 @@
   },
   {
     "name": "Hypic修图",
-    "url": "https://www.hypic.com",
+    "url": "https://www.capcut.com",
     "desc": "手机修图剪辑",
     "cat": "剪辑",
     "pack": "社交",
@@ -1585,7 +1549,7 @@
   },
   {
     "name": "竹间智能",
-    "url": "https://www.emotibot.com",
+    "url": "https://www.emotibot.com.cn",
     "desc": "情感对话数字人",
     "cat": "数字人",
     "pack": "社交",

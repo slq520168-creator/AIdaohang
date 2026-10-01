@@ -676,7 +676,7 @@
   },
   {
     "name": "SMS-Activate",
-    "url": "https://sms-activate.io",
+    "url": "https://sms-activate.org",
     "desc": "接码租号",
     "cat": "接码",
     "pack": "工具",

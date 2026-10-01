@@ -63,15 +63,6 @@
     "how": "打开官网注册接单，仅限合法劳务。"
   },
   {
-    "name": "WFH Jobs",
-    "url": "https://www.wfh.io",
-    "desc": "居家办公聚合",
-    "cat": "居家",
-    "pack": "社交",
-    "free": true,
-    "how": "打开官网注册接单，仅限合法劳务。"
-  },
-  {
     "name": "X-Team",
     "url": "https://x-team.com",
     "desc": "远程开发团队",
@@ -658,7 +649,7 @@
   },
   {
     "name": "CloudPeeps",
-    "url": "https://www.cloudpeeps.com",
+    "url": "https://www.upwork.com",
     "desc": "营销自由职业",
     "cat": "接单",
     "pack": "社交",
@@ -1135,7 +1126,7 @@
   },
   {
     "name": "阅文作家助手",
-    "url": "https://writer.yuewen.com",
+    "url": "https://write.qq.com",
     "desc": "网文变现",
     "cat": "变现",
     "pack": "社交",
@@ -1189,7 +1180,7 @@
   },
   {
     "name": "快手聚星",
-    "url": "https://juxing.kuaishou.com",
+    "url": "https://www.kuaishou.com",
     "desc": "达人商单",
     "cat": "变现",
     "pack": "社交",
@@ -1305,15 +1296,6 @@
     "how": "打开官网注册接单，仅限合法劳务。"
   },
   {
-    "name": "SiteStaff",
-    "url": "https://sitestaff.com",
-    "desc": "远程客服",
-    "cat": "客服",
-    "pack": "社交",
-    "free": true,
-    "how": "打开官网注册接单，仅限合法劳务。"
-  },
-  {
     "name": "SupportNinja",
     "url": "https://supportninja.com",
     "desc": "远程客服外包",
@@ -1324,7 +1306,7 @@
   },
   {
     "name": "WeLocalize Jobs",
-    "url": "https://jobs.welocalize.com",
+    "url": "https://www.welocalize.com",
     "desc": "本地化居家岗",
     "cat": "居家",
     "pack": "社交",
