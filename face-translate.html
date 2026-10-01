@@ -150,9 +150,9 @@ function speakNow(text,lang){
 async function translate(text,from,to){
   if(from===to)return text;
   const res=await fetch("./api/translate?q="+encodeURIComponent(text)+"&sl="+code(from)+"&tl="+code(to));
-  const data=await res.json();
+  const data=await res.json().catch(function(){return {};});
   const out=(data&&data.text)?String(data.text).trim():"";
-  if(!out)throw new Error("fail");
+  if(!res.ok||!out)throw new Error("fail");
   return out;
 }
 async function send(side,text){
