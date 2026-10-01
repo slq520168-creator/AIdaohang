@@ -9,11 +9,9 @@
 <link rel="manifest" href="manifest.webmanifest"/>
 <link rel="stylesheet" href="style.css?v=285"/>
 <style>
-#fraudBtn,#makeBtn,#rhBtn{border:1px solid #e5e7eb;background:#fff;color:#111827;border-radius:999px;padding:7px 10px;font-size:13px;text-decoration:none;white-space:nowrap}
-.faceban{display:block;margin:0 0 10px;padding:14px 12px;border-radius:16px;text-decoration:none;color:#062014;background:linear-gradient(135deg,#2ee59d,#4da3ff);font-weight:800;font-size:16px;text-align:center}
-.faceban small{display:block;font-weight:600;font-size:12px;opacity:.9;margin-top:3px}
-.rhban{display:block;margin:0 0 10px;padding:14px 12px;border-radius:16px;text-decoration:none;color:#fff;background:linear-gradient(135deg,#7c5cff,#ff5ea8);font-weight:800;font-size:16px;text-align:center}
-.rhban small{display:block;font-weight:600;font-size:12px;opacity:.92;margin-top:3px}
+#fraudBtn,#makeBtn,#rhBtn,.chip{border:1px solid #e5e7eb;background:#fff;color:#111827;border-radius:999px;padding:6px 10px;font-size:12px;text-decoration:none;white-space:nowrap}
+.chip{display:inline-flex;align-items:center;height:30px}
+html[data-theme="dark"] .chip{background:#21262d;color:#e6edf3;border-color:#30363d}
 .search{background:rgba(244,246,251,.97);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 0 0 100vmax rgba(244,246,251,.97);clip-path:inset(0 -100vmax)}
 .search.stuck{clip-path:inset(calc(-13px - env(safe-area-inset-top,0px)) -100vmax 0 -100vmax)}
 html[data-theme="dark"] .search{background:rgba(7,9,16,.97);box-shadow:0 0 0 100vmax rgba(7,9,16,.97)}
@@ -30,14 +28,14 @@ html[data-theme="dark"] .search.stuck{background:#070910;box-shadow:0 0 0 100vma
 <header class="top" style="position:relative">
   <div><h1 id="brand" data-i18n="brand">全球优选AI导航</h1></div>
   <div class="acts">
+    <a class="chip" href="./face-translate.html" data-i18n="translate">翻译</a>
+    <a class="chip" href="./fraud.html" data-i18n="fraud">防骗</a>
     <button id="lang" type="button">Lang</button>
     <button id="theme" type="button">深色</button>
   </div>
   <div id="langBar" class="langbar"></div>
 </header>
 <form class="search" id="sf"><div class="box"><input id="q" type="search" autocomplete="off"/><button type="submit" id="go">🔍</button></div></form>
-<a class="faceban" href="./face-translate.html"><span data-i18n="translate">面对面翻译</span><small data-i18n="transub">语音 / 打字 / 拍照</small></a>
-<a class="rhban" href="./fraud.html"><span data-i18n="fraud">防骗指南</span><small data-i18n="open">打开</small></a>
 <section class="block" id="hotBlock"><div class="block-h"><h2 id="hotTitle" data-i18n="hot">今日热点</h2></div><ol id="hot" class="rank"></ol></section>
 <section class="block"><div class="block-h"><h2 id="listTitle" data-i18n="allTools">全部工具</h2></div><div id="side" class="cats"></div><div class="under" id="under"><div id="tags" class="fine"></div><div id="pop"><main id="list" class="grid"></main></div></div></section>
 </div>
