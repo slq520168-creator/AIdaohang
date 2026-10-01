@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>打包 App 10 套</title>
 <style>
-body{margin:0;font-family:-apple-system,"PingFang SC",sans-serif;background:#fff;color:#111;line-height:1.75}
+.en{display:none}html:not([lang="zh-CN"]) .zh{display:none}html:not([lang="zh-CN"]) .en{display:block}body{margin:0;font-family:-apple-system,"PingFang SC",sans-serif;background:#fff;color:#111;line-height:1.75}
 .w{max-width:720px;margin:0 auto;padding:16px 16px 56px}
 a{color:#2563eb}
 h1{font-size:22px}h2{font-size:18px;margin-top:28px;scroll-margin-top:8px}h3{font-size:16px}
@@ -21,7 +21,7 @@ code{background:#f3f4f6;padding:0 4px;border-radius:4px;font-size:13px;word-brea
 <body>
 <div class="w">
 <p><a href="./tools.html?v=179&home=1&lang=zh">← 导航</a></p>
-<h1>打包 App：中外各 5 套</h1>
+<h1 class="zh">打包 App：中外各 5 套</h1><h1 class="en">Package an app: 5 China and 5 overseas stacks</h1>
 <p>先选技术栈，再打包。iPhone 上架必须苹果开发者账号和 Xcode，没有正规签名的 ipa 不写。</p>
 <p>
 <a href="#c1">中1 HBuilderX</a> · <a href="#c2">中2 Android Studio</a> · <a href="#c3">中3 应用市场签名</a> · <a href="#c4">中4 小程序</a> · <a href="#c5">中5 网页转桌面</a><br/>
@@ -156,5 +156,6 @@ code{background:#f3f4f6;padding:0 4px;border-radius:4px;font-size:13px;word-brea
 </div>
 <script src="./i18n.js?v=283"></script>
 <script src="tabbar.js?v=281"></script>
+<script>document.documentElement.lang=(localStorage.getItem("yx_lang")||"zh")==="zh"?"zh-CN":"en";</script>
 </body>
 </html>
