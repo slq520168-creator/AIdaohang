@@ -1,0 +1,5 @@
+[
+  {"name":"提示词优化器","cat":"开源本地","url":"https://prompt.always200.com","guide":"https://github.com/linshenkx/prompt-optimizer","desc":"开源提示词优化，作品差先改提示词","how":"打开 prompt.always200.com，粘贴原提示词，选用户提示词优化，点开始优化后复制","free":true,"tags":["提示词","开源","视频"]},
+  {"name":"Prompt Optimizer 源码","cat":"开源本地","url":"https://github.com/linshenkx/prompt-optimizer","guide":"https://docs.always200.com","desc":"linshenkx/prompt-optimizer，Web/插件/Docker","how":"克隆仓库或用 Chrome 插件，配模型 Key 后优化","free":true,"tags":["提示词","GitHub"]},
+  {"name":"Prompt Garden","cat":"开源本地","url":"https://garden.always200.com","guide":"https://garden.always200.com","desc":"提示词库，配合优化器用","how":"打开词库选一条再进优化器改","free":true,"tags":["提示词"]}
+]
