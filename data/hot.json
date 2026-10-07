@@ -1,5 +1,10 @@
 [
   {
+    "title": "Hypit 先用 WhisperX 把台词逐词对齐",
+    "url": "hypit.html",
+    "tag": "视频"
+  },
+  {
     "title": "即梦出画面，剪映成片（完整操作）",
     "url": "guide.html?n=%E5%8D%B3%E6%A2%A6%2B%E5%89%AA%E6%98%A0%E6%88%90%E7%89%87",
     "tag": "教程"
@@ -42,11 +47,6 @@
   {
     "title": "HeyGen 数字人从形象、脚本到成片",
     "url": "guide.html?n=HeyGen%E6%95%B0%E5%AD%97%E4%BA%BA",
-    "tag": "教程"
-  },
-  {
-    "title": "GDevelop 做出能通关的第一关",
-    "url": "guide.html?n=GDevelop",
     "tag": "教程"
   }
 ]

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
+<title>Hypit 逐词对齐</title>
+<link rel="icon" href="favicon.ico"/>
+<style>
+html,body{margin:0;background:#111;color:#111;font-family:-apple-system,"PingFang SC",sans-serif}
+.w{max-width:480px;margin:0 auto;padding:calc(12px + env(safe-area-inset-top)) 14px calc(28px + env(safe-area-inset-bottom))}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.back{color:#fff;text-decoration:none;background:rgba(255,255,255,.12);border-radius:999px;padding:8px 12px;font-size:14px}
+h1{font-size:18px;margin:0;color:#fff}
+.note{color:#ddd;font-size:12px;margin:0 0 12px;line-height:1.5}
+.stage{background:#fff;border-radius:16px;min-height:180px;padding:28px 16px;text-align:center;font-size:22px;font-weight:700;line-height:1.6}
+.wrd{display:inline-block;margin:2px;padding:0 4px;border-radius:6px}
+.wrd.on{background:#f5c518;color:#111}
+.sec{background:#1c1c1e;color:#fff;border-radius:16px;padding:12px;margin-top:12px}
+textarea{width:100%;box-sizing:border-box;border:0;border-radius:10px;padding:10px;font-size:15px;min-height:88px}
+.row{display:flex;gap:8px;margin-top:8px}
+button,a.go{flex:1;text-align:center;background:#2563eb;color:#fff;border:0;border-radius:12px;padding:10px;font-size:15px;text-decoration:none}
+button.alt{background:#333}
+.meta{font-size:12px;color:#aaa;margin-top:8px}
+</style>
+<script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light");}catch(e){}</script>
+</head>
+<body>
+<div class="w">
+  <div class="top"><a class="back" href="create.html">返回</a><h1>Hypit 逐词对齐</h1></div>
+  <p class="note">字幕、卡点挂在词上，不挂秒上。改句子，时间自己重排。本页是站内演示，不跑 GPU。</p>
+  <div class="stage" id="stage"></div>
+  <div class="sec">
+    <textarea id="script">改一句台词 整条时间轴不用重拖 Hypit 先交给 WhisperX 逐词对齐 笑点还在你手里</textarea>
+    <div class="row">
+      <button id="play" type="button">播放对齐</button>
+      <button id="stop" class="alt" type="button">停</button>
+    </div>
+    <div class="meta" id="meta"></div>
+    <div class="row"><a class="go" href="https://github.com/hypit-ai/hypit" rel="noopener">Hypit 开源</a></div>
+  </div>
+</div>
+<script>
+const stage=document.getElementById('stage');
+const box=document.getElementById('script');
+const meta=document.getElementById('meta');
+let words=[], timer=0, t0=0, per=0.28;
+function tokenize(s){
+  return s.trim().split(/\s+/).filter(Boolean).flatMap(p=>/^[A-Za-z0-9.+-]+$/.test(p)?[p]:Array.from(p));
+}
+function build(){
+  words=tokenize(box.value);
+  stage.innerHTML=words.map((w,i)=>'<span class="wrd" data-i="'+i+'">'+w.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</span>').join('');
+  const total=(words.length*per).toFixed(1);
+  meta.textContent=words.length+'词 · 每词'+per+'s · 改句后总长'+total+'s';
+}
+function tick(){
+  const i=Math.floor((performance.now()-t0)/1000/per);
+  stage.querySelectorAll('.wrd').forEach((el,n)=>el.classList.toggle('on', n===i));
+  if(i>=words.length){ clearInterval(timer); timer=0; }
+}
+box.addEventListener('input', ()=>{ build(); });
+document.getElementById('play').onclick=()=>{
+  build();
+  t0=performance.now();
+  clearInterval(timer);
+  timer=setInterval(tick, 40);
+  tick();
+  if('speechSynthesis' in window){
+    speechSynthesis.cancel();
+    const u=new SpeechSynthesisUtterance(words.join(''));
+    u.lang='zh-CN'; u.rate=1;
+    speechSynthesis.speak(u);
+  }
+};
+document.getElementById('stop').onclick=()=>{ clearInterval(timer); timer=0; if('speechSynthesis' in window) speechSynthesis.cancel(); };
+build();
+</script>
+<script src="tabbar.js?v=281"></script>
+</body>
+</html>
