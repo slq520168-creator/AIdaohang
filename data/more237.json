@@ -1,0 +1,21 @@
+[
+  {"name":"Strata","cat":"开源本地","url":"https://github.com/Niko1221/Strata","guide":"https://github.com/Niko1221/Strata/blob/main/README.zh-CN.md","desc":"12GB显卡跑1250亿Qwen3.8 MoE，热专家留显卡","how":"克隆仓库，Windows跑 START-HERE.bat。要12GB显存，64GB内存才能跑全规格","free":true,"tags":["本地","大模型","开源"]},
+  {"name":"llama.cpp","cat":"开源本地","url":"https://github.com/ggml-org/llama.cpp","guide":"https://github.com/ggml-org/llama.cpp","desc":"GGUF推理底座，CPU/显卡/苹果芯片都能跑","how":"编译后 llama-cli 或 llama-server 加载GGUF","free":true,"tags":["本地","大模型","开源"]},
+  {"name":"vLLM","cat":"开源本地","url":"https://github.com/vllm-project/vllm","guide":"https://docs.vllm.ai","desc":"高并发推理服务，多人同时打模型用","how":"pip装vllm，vllm serve 模型名，OpenAI兼容接口","free":true,"tags":["本地","大模型","开源"]},
+  {"name":"SGLang","cat":"开源本地","url":"https://github.com/sgl-project/sglang","guide":"https://docs.sglang.ai","desc":"高吞吐服务，长提示前缀缓存强","how":"按文档启动 server，接OpenAI接口","free":true,"tags":["本地","大模型","开源"]},
+  {"name":"LocalAI","cat":"开源本地","url":"https://github.com/mudler/LocalAI","guide":"https://localai.io","desc":"一个服务兼容OpenAI/Ollama，文本图语音都能接","how":"Docker或二进制启动，local-ai run 模型","free":true,"tags":["本地","开源"]},
+  {"name":"exo","cat":"开源本地","url":"https://github.com/exo-explore/exo","guide":"https://github.com/exo-explore/exo","desc":"多台Mac组成集群分摊大模型","how":"每台装exo，同网自动发现后跑模型","free":true,"tags":["本地","大模型","开源"]},
+  {"name":"KoboldCpp","cat":"开源本地","url":"https://github.com/LostRuins/koboldcpp","guide":"https://github.com/LostRuins/koboldcpp","desc":"单文件跑GGUF，角色扮演长文常用","how":"下对应系统单文件，选GGUF启动","free":true,"tags":["本地","开源"]},
+  {"name":"llamafile","cat":"开源本地","url":"https://github.com/Mozilla-Ocho/llamafile","guide":"https://github.com/Mozilla-Ocho/llamafile","desc":"模型和运行时打成一个可执行文件","how":"下载llamafile直接运行","free":true,"tags":["本地","开源"]},
+  {"name":"MLX LM","cat":"开源本地","url":"https://github.com/ml-explore/mlx-lm","guide":"https://github.com/ml-explore/mlx-lm","desc":"苹果MLX推理，M系列本机优先","how":"pip装mlx-lm，mlx_lm.generate 跑模型","free":true,"tags":["本地","苹果","开源"]},
+  {"name":"ExLlamaV2","cat":"开源本地","url":"https://github.com/turboderp-org/exllamav2","guide":"https://github.com/turboderp-org/exllamav2","desc":"NVIDIA上EXL2量化，单卡速度高","how":"装好后用TabbyAPI或网页前端加载EXL2","free":true,"tags":["本地","开源"]},
+  {"name":"LMDeploy","cat":"开源本地","url":"https://github.com/InternLM/lmdeploy","guide":"https://lmdeploy.readthedocs.io","desc":"书生推理部署，TurboMind后端","how":"pip装lmdeploy，lmdeploy serve api 模型","free":true,"tags":["本地","开源"]},
+  {"name":"GPUStack","cat":"开源本地","url":"https://github.com/gpustack/gpustack","guide":"https://docs.gpustack.ai","desc":"把多张家用卡收成模型集群","how":"按文档起服务，网页里加节点和模型","free":true,"tags":["本地","开源"]},
+  {"name":"Jan","cat":"开源本地","url":"https://github.com/janhq/jan","guide":"https://jan.ai","desc":"开源桌面聊天，无遥测，可开本地API","how":"下载Jan，选模型下载后离线聊","free":true,"tags":["本地","开源"]},
+  {"name":"Open WebUI","cat":"开源本地","url":"https://github.com/open-webui/open-webui","guide":"https://docs.openwebui.com","desc":"接Ollama的网页聊天，多用户知识库","how":"Docker起服务，填Ollama地址","free":true,"tags":["本地","开源"]},
+  {"name":"SillyTavern","cat":"开源本地","url":"https://github.com/SillyTavern/SillyTavern","guide":"https://docs.sillytavern.app","desc":"角色卡前端，接Kobold或Ollama","how":"克隆后npm start，API指向本地模型","free":true,"tags":["本地","开源"]},
+  {"name":"text-generation-webui","cat":"开源本地","url":"https://github.com/oobabooga/text-generation-webui","guide":"https://github.com/oobabooga/text-generation-webui","desc":"参数最多的本地网页前端","how":"按仓库一键脚本安装，加载GGUF","free":true,"tags":["本地","开源"]},
+  {"name":"AnythingLLM","cat":"开源本地","url":"https://github.com/Mintplex-Labs/anything-llm","guide":"https://docs.anythingllm.com","desc":"本地文档问答，接Ollama","how":"下载桌面版，工作区上传文档","free":true,"tags":["本地","开源"]},
+  {"name":"whisper.cpp","cat":"开源本地","url":"https://github.com/ggml-org/whisper.cpp","guide":"https://github.com/ggml-org/whisper.cpp","desc":"本地语音转文字，CPU也能跑","how":"编译后加载ggml模型转写音频","free":true,"tags":["语音","开源"]},
+  {"name":"stable-diffusion.cpp","cat":"开源本地","url":"https://github.com/leejet/stable-diffusion.cpp","guide":"https://github.com/leejet/stable-diffusion.cpp","desc":"C++本地出图，依赖少","how":"编译后指定模型和提示词出图","free":true,"tags":["绘画","开源"]}
+]
