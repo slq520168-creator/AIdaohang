@@ -1,0 +1,5622 @@
+[
+  {
+    "name": "Amazon Associates",
+    "cat": "亚马逊联盟",
+    "url": "https://affiliate-program.amazon.com",
+    "guide": "https://affiliate-program.amazon.com",
+    "desc": "商品销售分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "商品销售分成"
+  },
+  {
+    "name": "ShareASale",
+    "cat": "综合联盟",
+    "url": "https://www.shareasale.com",
+    "guide": "https://www.shareasale.com",
+    "desc": "商家推广分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "商家推广分成"
+  },
+  {
+    "name": "CJ Affiliate",
+    "cat": "效果联盟",
+    "url": "https://www.cj.com",
+    "guide": "https://www.cj.com",
+    "desc": "按成交结算",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "按成交结算"
+  },
+  {
+    "name": "Rakuten Advertising",
+    "cat": "乐天广告",
+    "url": "https://rakutenadvertising.com",
+    "guide": "https://rakutenadvertising.com",
+    "desc": "品牌联盟分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "品牌联盟分成"
+  },
+  {
+    "name": "Impact",
+    "cat": "品牌合作",
+    "url": "https://impact.com",
+    "guide": "https://impact.com",
+    "desc": "合作伙伴分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "合作伙伴分成"
+  },
+  {
+    "name": "Awin",
+    "cat": "欧洲联盟",
+    "url": "https://www.awin.com",
+    "guide": "https://www.awin.com",
+    "desc": "跨境商家分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "跨境商家分成"
+  },
+  {
+    "name": "ClickBank",
+    "cat": "数字商品",
+    "url": "https://www.clickbank.com",
+    "guide": "https://www.clickbank.com",
+    "desc": "信息产品分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "信息产品分成"
+  },
+  {
+    "name": "PartnerStack",
+    "cat": "SaaS联盟",
+    "url": "https://partnerstack.com",
+    "guide": "https://partnerstack.com",
+    "desc": "软件订阅分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "软件订阅分成"
+  },
+  {
+    "name": "Rewardful",
+    "cat": "订阅分成",
+    "url": "https://www.rewardful.com",
+    "guide": "https://www.rewardful.com",
+    "desc": "SaaS推荐奖励",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "SaaS推荐奖励"
+  },
+  {
+    "name": "FirstPromoter",
+    "cat": "推荐计划",
+    "url": "https://firstpromoter.com",
+    "guide": "https://firstpromoter.com",
+    "desc": "推荐注册分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "推荐注册分成"
+  },
+  {
+    "name": "Tapfiliate",
+    "cat": "分销追踪",
+    "url": "https://tapfiliate.com",
+    "guide": "https://tapfiliate.com",
+    "desc": "联盟链接追踪",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "联盟链接追踪"
+  },
+  {
+    "name": "Post Affiliate Pro",
+    "cat": "联盟系统",
+    "url": "https://www.postaffiliatepro.com",
+    "guide": "https://www.postaffiliatepro.com",
+    "desc": "自建联盟后台",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "自建联盟后台"
+  },
+  {
+    "name": "Refersion",
+    "cat": "网红分成",
+    "url": "https://www.refersion.com",
+    "guide": "https://www.refersion.com",
+    "desc": "达人带货结算",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "达人带货结算"
+  },
+  {
+    "name": "Shopify Collabs",
+    "cat": "独立站达人",
+    "url": "https://www.shopify.com/collabs",
+    "guide": "https://www.shopify.com/collabs",
+    "desc": "店铺达人合作",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "店铺达人合作"
+  },
+  {
+    "name": "eBay Partner Network",
+    "cat": "拍卖分成",
+    "url": "https://partnernetwork.ebay.com",
+    "guide": "https://partnernetwork.ebay.com",
+    "desc": "商品点击成交",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "商品点击成交"
+  },
+  {
+    "name": "Walmart Affiliates",
+    "cat": "超市联盟",
+    "url": "https://affiliates.walmart.com",
+    "guide": "https://affiliates.walmart.com",
+    "desc": "商超商品分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "商超商品分成"
+  },
+  {
+    "name": "Target Affiliates",
+    "cat": "百货联盟",
+    "url": "https://www.target.com",
+    "guide": "https://www.target.com",
+    "desc": "百货推广",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "百货推广"
+  },
+  {
+    "name": "Etsy Affiliate",
+    "cat": "手作联盟",
+    "url": "https://www.etsy.com/affiliates",
+    "guide": "https://www.etsy.com/affiliates",
+    "desc": "手作商品分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "手作商品分成"
+  },
+  {
+    "name": "AliExpress Portals",
+    "cat": "速卖通门户",
+    "url": "https://portals.aliexpress.com",
+    "guide": "https://portals.aliexpress.com",
+    "desc": "跨境商品分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "跨境商品分成"
+  },
+  {
+    "name": "Shopee Affiliate",
+    "cat": "虾皮联盟",
+    "url": "https://affiliate.shopee.com",
+    "guide": "https://affiliate.shopee.com",
+    "desc": "东南亚带货",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "东南亚带货"
+  },
+  {
+    "name": "Lazada Affiliate",
+    "cat": "来赞达联盟",
+    "url": "https://www.lazada.com",
+    "guide": "https://www.lazada.com",
+    "desc": "东南亚商城",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "东南亚商城"
+  },
+  {
+    "name": "TikTok Shop Affiliate",
+    "cat": "短视频带货",
+    "url": "https://seller.tiktok.com",
+    "guide": "https://seller.tiktok.com",
+    "desc": "短视频佣金",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "短视频佣金"
+  },
+  {
+    "name": "YouTube Partner",
+    "cat": "视频分成",
+    "url": "https://www.youtube.com/creators",
+    "guide": "https://www.youtube.com/creators",
+    "desc": "播放与会员分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "播放与会员分成"
+  },
+  {
+    "name": "Twitch Affiliate",
+    "cat": "直播分成",
+    "url": "https://affiliate.twitch.tv",
+    "guide": "https://affiliate.twitch.tv",
+    "desc": "订阅打赏分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "订阅打赏分成"
+  },
+  {
+    "name": "Kick Creator",
+    "cat": "直播创作者",
+    "url": "https://kick.com",
+    "guide": "https://kick.com",
+    "desc": "直播收益",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "直播收益"
+  },
+  {
+    "name": "Patreon",
+    "cat": "订阅支持",
+    "url": "https://www.patreon.com",
+    "guide": "https://www.patreon.com",
+    "desc": "粉丝月费分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "粉丝月费分成"
+  },
+  {
+    "name": "Ko-fi",
+    "cat": "打赏页",
+    "url": "https://ko-fi.com",
+    "guide": "https://ko-fi.com",
+    "desc": "一次性打赏",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "一次性打赏"
+  },
+  {
+    "name": "Buy Me a Coffee",
+    "cat": "咖啡打赏",
+    "url": "https://www.buymeacoffee.com",
+    "guide": "https://www.buymeacoffee.com",
+    "desc": "创作者收款",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "创作者收款"
+  },
+  {
+    "name": "Gumroad",
+    "cat": "数字售卖",
+    "url": "https://gumroad.com",
+    "guide": "https://gumroad.com",
+    "desc": "数字商品抽成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数字商品抽成"
+  },
+  {
+    "name": "Lemon Squeezy",
+    "cat": "独立售卖",
+    "url": "https://www.lemonsqueezy.com",
+    "guide": "https://www.lemonsqueezy.com",
+    "desc": "软件与素材售卖",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "软件与素材售卖"
+  },
+  {
+    "name": "Paddle",
+    "cat": "软件收款",
+    "url": "https://www.paddle.com",
+    "guide": "https://www.paddle.com",
+    "desc": "软件订阅结算",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "软件订阅结算"
+  },
+  {
+    "name": "FastSpring",
+    "cat": "软件分销",
+    "url": "https://fastspring.com",
+    "guide": "https://fastspring.com",
+    "desc": "软件销售分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "软件销售分成"
+  },
+  {
+    "name": "Envato Market",
+    "cat": "素材市场",
+    "url": "https://market.envato.com",
+    "guide": "https://market.envato.com",
+    "desc": "模板素材作者分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "模板素材作者分成"
+  },
+  {
+    "name": "Creative Market",
+    "cat": "设计素材",
+    "url": "https://creativemarket.com",
+    "guide": "https://creativemarket.com",
+    "desc": "设计资源分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "设计资源分成"
+  },
+  {
+    "name": "Shutterstock Contributor",
+    "cat": "图片供稿",
+    "url": "https://submit.shutterstock.com",
+    "guide": "https://submit.shutterstock.com",
+    "desc": "图库下载分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图库下载分成"
+  },
+  {
+    "name": "Adobe Stock",
+    "cat": "图片库存",
+    "url": "https://contributor.stock.adobe.com",
+    "guide": "https://contributor.stock.adobe.com",
+    "desc": "库存图分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "库存图分成"
+  },
+  {
+    "name": "Getty Contributors",
+    "cat": "图库供稿",
+    "url": "https://www.gettyimages.com",
+    "guide": "https://www.gettyimages.com",
+    "desc": "商业图库",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "商业图库"
+  },
+  {
+    "name": "Unsplash Plus",
+    "cat": "免费图",
+    "url": "https://unsplash.com",
+    "guide": "https://unsplash.com",
+    "desc": "图片授权",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图片授权"
+  },
+  {
+    "name": "Epidemic Sound",
+    "cat": "音乐授权",
+    "url": "https://www.epidemicsound.com",
+    "guide": "https://www.epidemicsound.com",
+    "desc": "音乐订阅分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "音乐订阅分成"
+  },
+  {
+    "name": "Artlist",
+    "cat": "素材订阅",
+    "url": "https://artlist.io",
+    "guide": "https://artlist.io",
+    "desc": "音乐视频素材",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "音乐视频素材"
+  },
+  {
+    "name": "DistroKid",
+    "cat": "音乐发行",
+    "url": "https://distrokid.com",
+    "guide": "https://distrokid.com",
+    "desc": "流媒体版税",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "流媒体版税"
+  },
+  {
+    "name": "TuneCore",
+    "cat": "音乐分发",
+    "url": "https://www.tunecore.com",
+    "guide": "https://www.tunecore.com",
+    "desc": "音乐发行分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "音乐发行分成"
+  },
+  {
+    "name": "CD Baby",
+    "cat": "独立音乐",
+    "url": "https://cdbaby.com",
+    "guide": "https://cdbaby.com",
+    "desc": "单曲发行",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "单曲发行"
+  },
+  {
+    "name": "Bandcamp",
+    "cat": "音乐直销",
+    "url": "https://bandcamp.com",
+    "guide": "https://bandcamp.com",
+    "desc": "音乐直接销售",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "音乐直接销售"
+  },
+  {
+    "name": "Spotify for Artists",
+    "cat": "流媒体艺人",
+    "url": "https://artists.spotify.com",
+    "guide": "https://artists.spotify.com",
+    "desc": "播放数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "播放数据"
+  },
+  {
+    "name": "Apple Affiliate",
+    "cat": "苹果联盟",
+    "url": "https://www.apple.com/apple-music/apple-affiliate-program",
+    "guide": "https://www.apple.com/apple-music/apple-affiliate-program",
+    "desc": "应用与音乐",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "应用与音乐"
+  },
+  {
+    "name": "Google AdSense",
+    "cat": "网站广告",
+    "url": "https://www.google.com/adsense",
+    "guide": "https://www.google.com/adsense",
+    "desc": "展示广告分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "展示广告分成"
+  },
+  {
+    "name": "Ezoic",
+    "cat": "广告优化",
+    "url": "https://www.ezoic.com",
+    "guide": "https://www.ezoic.com",
+    "desc": "广告收益优化",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告收益优化"
+  },
+  {
+    "name": "Mediavine",
+    "cat": "内容广告",
+    "url": "https://www.mediavine.com",
+    "guide": "https://www.mediavine.com",
+    "desc": "博客广告分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "博客广告分成"
+  },
+  {
+    "name": "Raptive",
+    "cat": "媒体广告",
+    "url": "https://raptive.com",
+    "guide": "https://raptive.com",
+    "desc": "内容站广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "内容站广告"
+  },
+  {
+    "name": "Media.net",
+    "cat": "雅虎广告",
+    "url": "https://www.media.net",
+    "guide": "https://www.media.net",
+    "desc": "上下文广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "上下文广告"
+  },
+  {
+    "name": "PropellerAds",
+    "cat": "流量广告",
+    "url": "https://propellerads.com",
+    "guide": "https://propellerads.com",
+    "desc": "推送与插页",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "推送与插页"
+  },
+  {
+    "name": "Adsterra",
+    "cat": "广告网络",
+    "url": "https://adsterra.com",
+    "guide": "https://adsterra.com",
+    "desc": "站长广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "站长广告"
+  },
+  {
+    "name": "Booking Affiliate",
+    "cat": "酒店分成",
+    "url": "https://www.booking.com/affiliate-program",
+    "guide": "https://www.booking.com/affiliate-program",
+    "desc": "酒店预订佣金",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "酒店预订佣金"
+  },
+  {
+    "name": "Agoda Partners",
+    "cat": "住宿伙伴",
+    "url": "https://partners.agoda.com",
+    "guide": "https://partners.agoda.com",
+    "desc": "住宿分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "住宿分成"
+  },
+  {
+    "name": "Expedia Affiliate",
+    "cat": "旅行联盟",
+    "url": "https://www.expediapartnercentral.com",
+    "guide": "https://www.expediapartnercentral.com",
+    "desc": "机票酒店",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "机票酒店"
+  },
+  {
+    "name": "TripAdvisor",
+    "cat": "点评旅行",
+    "url": "https://www.tripadvisor.com",
+    "guide": "https://www.tripadvisor.com",
+    "desc": "旅行跳转",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "旅行跳转"
+  },
+  {
+    "name": "Airbnb Host",
+    "cat": "民宿房东",
+    "url": "https://www.airbnb.com",
+    "guide": "https://www.airbnb.com",
+    "desc": "房源分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "房源分成"
+  },
+  {
+    "name": "Vrbo",
+    "cat": "度假短租",
+    "url": "https://www.vrbo.com",
+    "guide": "https://www.vrbo.com",
+    "desc": "短租分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "短租分成"
+  },
+  {
+    "name": "Klook Affiliate",
+    "cat": "玩乐门票",
+    "url": "https://affiliate.klook.com",
+    "guide": "https://affiliate.klook.com",
+    "desc": "门票体验",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "门票体验"
+  },
+  {
+    "name": "KKday Affiliate",
+    "cat": "当地玩乐",
+    "url": "https://www.kkday.com",
+    "guide": "https://www.kkday.com",
+    "desc": "活动门票",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "活动门票"
+  },
+  {
+    "name": "GetYourGuide",
+    "cat": "导游体验",
+    "url": "https://partner.getyourguide.com",
+    "guide": "https://partner.getyourguide.com",
+    "desc": "体验分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "体验分成"
+  },
+  {
+    "name": "Viator",
+    "cat": "旅行活动",
+    "url": "https://www.viator.com",
+    "guide": "https://www.viator.com",
+    "desc": "活动预订",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "活动预订"
+  },
+  {
+    "name": "Skyscanner",
+    "cat": "机票比价",
+    "url": "https://www.skyscanner.net",
+    "guide": "https://www.skyscanner.net",
+    "desc": "机票跳转",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "机票跳转"
+  },
+  {
+    "name": "Kayak",
+    "cat": "旅行搜索",
+    "url": "https://www.kayak.com",
+    "guide": "https://www.kayak.com",
+    "desc": "机票酒店搜索",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "机票酒店搜索"
+  },
+  {
+    "name": "NordVPN Affiliate",
+    "cat": "安全加速",
+    "url": "https://nordvpn.com/affiliate",
+    "guide": "https://nordvpn.com/affiliate",
+    "desc": "订阅分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "订阅分成"
+  },
+  {
+    "name": "Surfshark Partners",
+    "cat": "加速伙伴",
+    "url": "https://surfshark.com/partners",
+    "guide": "https://surfshark.com/partners",
+    "desc": "工具订阅",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "工具订阅"
+  },
+  {
+    "name": "ExpressVPN",
+    "cat": "隐私工具",
+    "url": "https://www.expressvpn.com",
+    "guide": "https://www.expressvpn.com",
+    "desc": "订阅推广",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "订阅推广"
+  },
+  {
+    "name": "Namecheap",
+    "cat": "域名主机",
+    "url": "https://www.namecheap.com/affiliates",
+    "guide": "https://www.namecheap.com/affiliates",
+    "desc": "域名主机分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "域名主机分成"
+  },
+  {
+    "name": "Bluehost",
+    "cat": "建站主机",
+    "url": "https://www.bluehost.com/affiliates",
+    "guide": "https://www.bluehost.com/affiliates",
+    "desc": "主机开户",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "主机开户"
+  },
+  {
+    "name": "SiteGround",
+    "cat": "主机联盟",
+    "url": "https://www.siteground.com/affiliates.htm",
+    "guide": "https://www.siteground.com/affiliates.htm",
+    "desc": "主机续费",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "主机续费"
+  },
+  {
+    "name": "Cloudways",
+    "cat": "云主机",
+    "url": "https://www.cloudways.com/en/affiliate-program.php",
+    "guide": "https://www.cloudways.com/en/affiliate-program.php",
+    "desc": "云托管分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "云托管分成"
+  },
+  {
+    "name": "Hostinger",
+    "cat": "便宜主机",
+    "url": "https://www.hostinger.com/affiliates",
+    "guide": "https://www.hostinger.com/affiliates",
+    "desc": "主机与域名",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "主机与域名"
+  },
+  {
+    "name": "GoDaddy",
+    "cat": "域名注册",
+    "url": "https://www.godaddy.com/affiliates",
+    "guide": "https://www.godaddy.com/affiliates",
+    "desc": "域名邮箱",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "域名邮箱"
+  },
+  {
+    "name": "Canva Affiliates",
+    "cat": "设计工具",
+    "url": "https://www.canva.com/affiliates",
+    "guide": "https://www.canva.com/affiliates",
+    "desc": "设计订阅",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "设计订阅"
+  },
+  {
+    "name": "Figma",
+    "cat": "协作设计",
+    "url": "https://www.figma.com",
+    "guide": "https://www.figma.com",
+    "desc": "设计工具",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "设计工具"
+  },
+  {
+    "name": "Notion",
+    "cat": "笔记协作",
+    "url": "https://www.notion.so",
+    "guide": "https://www.notion.so",
+    "desc": "知识库工具",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "知识库工具"
+  },
+  {
+    "name": "Grammarly",
+    "cat": "写作检查",
+    "url": "https://www.grammarly.com/affiliates",
+    "guide": "https://www.grammarly.com/affiliates",
+    "desc": "写作订阅",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "写作订阅"
+  },
+  {
+    "name": "Jasper Partners",
+    "cat": "文案伙伴",
+    "url": "https://www.jasper.ai/partners",
+    "guide": "https://www.jasper.ai/partners",
+    "desc": "AI文案分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "AI文案分成"
+  },
+  {
+    "name": "Writesonic",
+    "cat": "写作工具",
+    "url": "https://writesonic.com",
+    "guide": "https://writesonic.com",
+    "desc": "AI写作",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "AI写作"
+  },
+  {
+    "name": "Copy.ai",
+    "cat": "文案生成",
+    "url": "https://www.copy.ai",
+    "guide": "https://www.copy.ai",
+    "desc": "营销文案",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "营销文案"
+  },
+  {
+    "name": "Semrush",
+    "cat": "搜索营销",
+    "url": "https://www.semrush.com/partner",
+    "guide": "https://www.semrush.com/partner",
+    "desc": "SEO工具分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "SEO工具分成"
+  },
+  {
+    "name": "Ahrefs",
+    "cat": "外链分析",
+    "url": "https://ahrefs.com",
+    "guide": "https://ahrefs.com",
+    "desc": "SEO数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "SEO数据"
+  },
+  {
+    "name": "Surfer SEO",
+    "cat": "内容优化",
+    "url": "https://surferseo.com",
+    "guide": "https://surferseo.com",
+    "desc": "内容评分",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "内容评分"
+  },
+  {
+    "name": "Ubersuggest",
+    "cat": "关键词",
+    "url": "https://neilpatel.com/ubersuggest",
+    "guide": "https://neilpatel.com/ubersuggest",
+    "desc": "关键词工具",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "关键词工具"
+  },
+  {
+    "name": "ConvertKit",
+    "cat": "邮件营销",
+    "url": "https://convertkit.com",
+    "guide": "https://convertkit.com",
+    "desc": "邮件订阅分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮件订阅分成"
+  },
+  {
+    "name": "Beehiiv",
+    "cat": "通讯分成",
+    "url": "https://www.beehiiv.com",
+    "guide": "https://www.beehiiv.com",
+    "desc": "Newsletter推荐",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "Newsletter推荐"
+  },
+  {
+    "name": "Substack",
+    "cat": "专栏订阅",
+    "url": "https://substack.com",
+    "guide": "https://substack.com",
+    "desc": "付费专栏",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "付费专栏"
+  },
+  {
+    "name": "Medium Partner",
+    "cat": "文章分成",
+    "url": "https://medium.com",
+    "guide": "https://medium.com",
+    "desc": "会员阅读分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "会员阅读分成"
+  },
+  {
+    "name": "Teachable",
+    "cat": "课程售卖",
+    "url": "https://teachable.com",
+    "guide": "https://teachable.com",
+    "desc": "在线课分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "在线课分成"
+  },
+  {
+    "name": "Thinkific",
+    "cat": "课程平台",
+    "url": "https://www.thinkific.com",
+    "guide": "https://www.thinkific.com",
+    "desc": "课程销售",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "课程销售"
+  },
+  {
+    "name": "Udemy",
+    "cat": "课程市场",
+    "url": "https://www.udemy.com",
+    "guide": "https://www.udemy.com",
+    "desc": "课程上架分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "课程上架分成"
+  },
+  {
+    "name": "Skillshare",
+    "cat": "技能订阅",
+    "url": "https://www.skillshare.com",
+    "guide": "https://www.skillshare.com",
+    "desc": "课程观看",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "课程观看"
+  },
+  {
+    "name": "Coursera",
+    "cat": "大学课程",
+    "url": "https://www.coursera.org",
+    "guide": "https://www.coursera.org",
+    "desc": "课程跳转",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "课程跳转"
+  },
+  {
+    "name": "AppSumo",
+    "cat": "软件优惠",
+    "url": "https://appsumo.com",
+    "guide": "https://appsumo.com",
+    "desc": "软件终身版",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "软件终身版"
+  },
+  {
+    "name": "Dealify",
+    "cat": "优惠聚合",
+    "url": "https://dealify.com",
+    "guide": "https://dealify.com",
+    "desc": "优惠信息",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "优惠信息"
+  },
+  {
+    "name": "Rakuten Cashback",
+    "cat": "返现购物",
+    "url": "https://www.rakuten.com",
+    "guide": "https://www.rakuten.com",
+    "desc": "购物返现",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "购物返现"
+  },
+  {
+    "name": "TopCashback",
+    "cat": "返现网",
+    "url": "https://www.topcashback.com",
+    "guide": "https://www.topcashback.com",
+    "desc": "商家返现",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "商家返现"
+  },
+  {
+    "name": "Honey",
+    "cat": "优惠插件",
+    "url": "https://www.joinhoney.com",
+    "guide": "https://www.joinhoney.com",
+    "desc": "优惠码",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "优惠码"
+  },
+  {
+    "name": "Capital One Shopping",
+    "cat": "购物比价",
+    "url": "https://capitaloneshopping.com",
+    "guide": "https://capitaloneshopping.com",
+    "desc": "比价返利",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "比价返利"
+  },
+  {
+    "name": "FlexOffers",
+    "cat": "优惠联盟",
+    "url": "https://www.flexoffers.com",
+    "guide": "https://www.flexoffers.com",
+    "desc": "商家优惠",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "商家优惠"
+  },
+  {
+    "name": "Admitad",
+    "cat": "全球联盟",
+    "url": "https://www.admitad.com",
+    "guide": "https://www.admitad.com",
+    "desc": "多商家分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "多商家分成"
+  },
+  {
+    "name": "TradeDoubler",
+    "cat": "交易联盟",
+    "url": "https://www.tradedoubler.com",
+    "guide": "https://www.tradedoubler.com",
+    "desc": "效果广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "效果广告"
+  },
+  {
+    "name": "Webgains",
+    "cat": "零售联盟",
+    "url": "https://www.webgains.com",
+    "guide": "https://www.webgains.com",
+    "desc": "零售分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "零售分成"
+  },
+  {
+    "name": "Partnerize",
+    "cat": "伙伴平台",
+    "url": "https://partnerize.com",
+    "guide": "https://partnerize.com",
+    "desc": "品牌伙伴",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "品牌伙伴"
+  },
+  {
+    "name": "Everflow",
+    "cat": "追踪平台",
+    "url": "https://www.everflow.io",
+    "guide": "https://www.everflow.io",
+    "desc": "联盟追踪",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "联盟追踪"
+  },
+  {
+    "name": "Voluum",
+    "cat": "广告追踪",
+    "url": "https://voluum.com",
+    "guide": "https://voluum.com",
+    "desc": "转化追踪",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "转化追踪"
+  },
+  {
+    "name": "RedTrack",
+    "cat": "归因追踪",
+    "url": "https://www.redtrack.io",
+    "guide": "https://www.redtrack.io",
+    "desc": "广告归因",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告归因"
+  },
+  {
+    "name": "Binom",
+    "cat": "追踪系统",
+    "url": "https://binom.org",
+    "guide": "https://binom.org",
+    "desc": "自建追踪",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "自建追踪"
+  },
+  {
+    "name": "Keitaro",
+    "cat": "自托管追踪",
+    "url": "https://keitaro.io",
+    "guide": "https://keitaro.io",
+    "desc": "点击追踪",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "点击追踪"
+  },
+  {
+    "name": "MaxBounty",
+    "cat": "效果任务",
+    "url": "https://www.maxbounty.com",
+    "guide": "https://www.maxbounty.com",
+    "desc": "CPA任务",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "CPA任务"
+  },
+  {
+    "name": "PeerFly",
+    "cat": "任务联盟",
+    "url": "https://peerfly.com",
+    "guide": "https://peerfly.com",
+    "desc": "任务分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "任务分成"
+  },
+  {
+    "name": "AdWork Media",
+    "cat": "调查任务",
+    "url": "https://adworkmedia.com",
+    "guide": "https://adworkmedia.com",
+    "desc": "任务墙",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "任务墙"
+  },
+  {
+    "name": "CPABuild",
+    "cat": "效果单",
+    "url": "https://cpabuild.com",
+    "guide": "https://cpabuild.com",
+    "desc": "CPA单子",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "CPA单子"
+  },
+  {
+    "name": "OGAds",
+    "cat": "手机任务",
+    "url": "https://ogads.com",
+    "guide": "https://ogads.com",
+    "desc": "应用安装",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "应用安装"
+  },
+  {
+    "name": "CrakRevenue",
+    "cat": "成人联盟",
+    "url": "https://www.crakrevenue.com",
+    "guide": "https://www.crakrevenue.com",
+    "desc": "成人订阅分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "成人订阅分成"
+  },
+  {
+    "name": "OnlyFans",
+    "cat": "订阅创作者",
+    "url": "https://onlyfans.com",
+    "guide": "https://onlyfans.com",
+    "desc": "粉丝订阅",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "粉丝订阅"
+  },
+  {
+    "name": "Fansly",
+    "cat": "粉丝订阅",
+    "url": "https://fansly.com",
+    "guide": "https://fansly.com",
+    "desc": "创作者订阅",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "创作者订阅"
+  },
+  {
+    "name": "Fanvue",
+    "cat": "创作者页",
+    "url": "https://fanvue.com",
+    "guide": "https://fanvue.com",
+    "desc": "付费内容",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "付费内容"
+  },
+  {
+    "name": "Passes",
+    "cat": "粉丝会员",
+    "url": "https://passes.com",
+    "guide": "https://passes.com",
+    "desc": "会员内容",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "会员内容"
+  },
+  {
+    "name": "Gumroad Discover",
+    "cat": "数字发现",
+    "url": "https://gumroad.com/discover",
+    "guide": "https://gumroad.com/discover",
+    "desc": "数字商品",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数字商品"
+  },
+  {
+    "name": "Payhip",
+    "cat": "数字小店",
+    "url": "https://payhip.com",
+    "guide": "https://payhip.com",
+    "desc": "电子书售卖",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "电子书售卖"
+  },
+  {
+    "name": "SendOwl",
+    "cat": "文件售卖",
+    "url": "https://www.sendowl.com",
+    "guide": "https://www.sendowl.com",
+    "desc": "文件交付",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "文件交付"
+  },
+  {
+    "name": "Podia",
+    "cat": "课程会员",
+    "url": "https://www.podia.com",
+    "guide": "https://www.podia.com",
+    "desc": "会员与课",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "会员与课"
+  },
+  {
+    "name": "Mighty Networks",
+    "cat": "社群会员",
+    "url": "https://www.mightynetworks.com",
+    "guide": "https://www.mightynetworks.com",
+    "desc": "社群付费",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "社群付费"
+  },
+  {
+    "name": "Circle",
+    "cat": "社区平台",
+    "url": "https://circle.so",
+    "guide": "https://circle.so",
+    "desc": "付费社区",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "付费社区"
+  },
+  {
+    "name": "Discord",
+    "cat": "社群",
+    "url": "https://discord.com",
+    "guide": "https://discord.com",
+    "desc": "服务器订阅",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "服务器订阅"
+  },
+  {
+    "name": "Telegram Stars",
+    "cat": "即时打赏",
+    "url": "https://telegram.org",
+    "guide": "https://telegram.org",
+    "desc": "频道打赏",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "频道打赏"
+  },
+  {
+    "name": "Stripe",
+    "cat": "收款",
+    "url": "https://stripe.com",
+    "guide": "https://stripe.com",
+    "desc": "在线收款",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "在线收款"
+  },
+  {
+    "name": "PayPal",
+    "cat": "支付",
+    "url": "https://www.paypal.com",
+    "guide": "https://www.paypal.com",
+    "desc": "跨境收款",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "跨境收款"
+  },
+  {
+    "name": "Wise",
+    "cat": "汇款",
+    "url": "https://wise.com",
+    "guide": "https://wise.com",
+    "desc": "低费汇款",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "低费汇款"
+  },
+  {
+    "name": "Payoneer",
+    "cat": "全球收款",
+    "url": "https://www.payoneer.com",
+    "guide": "https://www.payoneer.com",
+    "desc": "联盟收款",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "联盟收款"
+  },
+  {
+    "name": "Printful",
+    "cat": "按需印刷",
+    "url": "https://www.printful.com",
+    "guide": "https://www.printful.com",
+    "desc": "定制商品分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "定制商品分成"
+  },
+  {
+    "name": "Printify",
+    "cat": "印刷选品",
+    "url": "https://printify.com",
+    "guide": "https://printify.com",
+    "desc": "印品利润",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "印品利润"
+  },
+  {
+    "name": "Spring",
+    "cat": "周边商店",
+    "url": "https://spring.com",
+    "guide": "https://spring.com",
+    "desc": "创作者周边",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "创作者周边"
+  },
+  {
+    "name": "Redbubble",
+    "cat": "设计周边",
+    "url": "https://www.redbubble.com",
+    "guide": "https://www.redbubble.com",
+    "desc": "设计商品分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "设计商品分成"
+  },
+  {
+    "name": "TeePublic",
+    "cat": "T恤分成",
+    "url": "https://www.teepublic.com",
+    "guide": "https://www.teepublic.com",
+    "desc": "图案商品",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图案商品"
+  },
+  {
+    "name": "Society6",
+    "cat": "家居图案",
+    "url": "https://society6.com",
+    "guide": "https://society6.com",
+    "desc": "家居分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "家居分成"
+  },
+  {
+    "name": "Zazzle",
+    "cat": "定制商品",
+    "url": "https://www.zazzle.com",
+    "guide": "https://www.zazzle.com",
+    "desc": "定制销售",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "定制销售"
+  },
+  {
+    "name": "Merch by Amazon",
+    "cat": "平台印品",
+    "url": "https://merch.amazon.com",
+    "guide": "https://merch.amazon.com",
+    "desc": "服装印品",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "服装印品"
+  },
+  {
+    "name": "KDP",
+    "cat": "电子书",
+    "url": "https://kdp.amazon.com",
+    "guide": "https://kdp.amazon.com",
+    "desc": "图书版税",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图书版税"
+  },
+  {
+    "name": "Draft2Digital",
+    "cat": "电子书分发",
+    "url": "https://draft2digital.com",
+    "guide": "https://draft2digital.com",
+    "desc": "多平台版税",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "多平台版税"
+  },
+  {
+    "name": "Smashwords",
+    "cat": "电子书",
+    "url": "https://www.smashwords.com",
+    "guide": "https://www.smashwords.com",
+    "desc": "电子书销售",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "电子书销售"
+  },
+  {
+    "name": "Apple Books",
+    "cat": "苹果图书",
+    "url": "https://authors.apple.com",
+    "guide": "https://authors.apple.com",
+    "desc": "图书销售",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图书销售"
+  },
+  {
+    "name": "Google Play Books",
+    "cat": "安卓图书",
+    "url": "https://play.google.com/books/publish",
+    "guide": "https://play.google.com/books/publish",
+    "desc": "图书分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图书分成"
+  },
+  {
+    "name": "Audible ACX",
+    "cat": "有声书",
+    "url": "https://www.acx.com",
+    "guide": "https://www.acx.com",
+    "desc": "有声书版税",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "有声书版税"
+  },
+  {
+    "name": "Findaway",
+    "cat": "有声分发",
+    "url": "https://findawayvoices.com",
+    "guide": "https://findawayvoices.com",
+    "desc": "有声书",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "有声书"
+  },
+  {
+    "name": "Twitch Bits",
+    "cat": "直播打赏",
+    "url": "https://www.twitch.tv",
+    "guide": "https://www.twitch.tv",
+    "desc": "虚拟礼物",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "虚拟礼物"
+  },
+  {
+    "name": "TikTok Creator",
+    "cat": "创作者基金",
+    "url": "https://www.tiktok.com/creators",
+    "guide": "https://www.tiktok.com/creators",
+    "desc": "播放奖励",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "播放奖励"
+  },
+  {
+    "name": "Instagram Bonus",
+    "cat": "短视频奖励",
+    "url": "https://creators.instagram.com",
+    "guide": "https://creators.instagram.com",
+    "desc": "创作者奖励",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "创作者奖励"
+  },
+  {
+    "name": "Snapchat Spotlight",
+    "cat": "短视频聚光",
+    "url": "https://creators.snapchat.com",
+    "guide": "https://creators.snapchat.com",
+    "desc": "播放分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "播放分成"
+  },
+  {
+    "name": "Pinterest",
+    "cat": "图文引流",
+    "url": "https://www.pinterest.com",
+    "guide": "https://www.pinterest.com",
+    "desc": "图文带货",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图文带货"
+  },
+  {
+    "name": "Reddit",
+    "cat": "社区引流",
+    "url": "https://www.reddit.com",
+    "guide": "https://www.reddit.com",
+    "desc": "社区推广",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "社区推广"
+  },
+  {
+    "name": "Quora",
+    "cat": "问答引流",
+    "url": "https://www.quora.com",
+    "guide": "https://www.quora.com",
+    "desc": "问答带链接",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "问答带链接"
+  },
+  {
+    "name": "Product Hunt",
+    "cat": "新品发布",
+    "url": "https://www.producthunt.com",
+    "guide": "https://www.producthunt.com",
+    "desc": "产品曝光",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "产品曝光"
+  },
+  {
+    "name": "Indie Hackers",
+    "cat": "独立产品",
+    "url": "https://www.indiehackers.com",
+    "guide": "https://www.indiehackers.com",
+    "desc": "产品社区",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "产品社区"
+  },
+  {
+    "name": "G2",
+    "cat": "软件评价",
+    "url": "https://www.g2.com",
+    "guide": "https://www.g2.com",
+    "desc": "软件口碑",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "软件口碑"
+  },
+  {
+    "name": "Capterra",
+    "cat": "软件目录",
+    "url": "https://www.capterra.com",
+    "guide": "https://www.capterra.com",
+    "desc": "软件跳转",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "软件跳转"
+  },
+  {
+    "name": "Trustpilot",
+    "cat": "评价站",
+    "url": "https://www.trustpilot.com",
+    "guide": "https://www.trustpilot.com",
+    "desc": "商家评价",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "商家评价"
+  },
+  {
+    "name": "Fiverr Affiliates",
+    "cat": "零工联盟",
+    "url": "https://www.fiverr.com/affiliates",
+    "guide": "https://www.fiverr.com/affiliates",
+    "desc": "服务订单分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "服务订单分成"
+  },
+  {
+    "name": "Upwork",
+    "cat": "远程接单",
+    "url": "https://www.upwork.com",
+    "guide": "https://www.upwork.com",
+    "desc": "项目佣金",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "项目佣金"
+  },
+  {
+    "name": "Freelancer",
+    "cat": "外包平台",
+    "url": "https://www.freelancer.com",
+    "guide": "https://www.freelancer.com",
+    "desc": "项目抽成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "项目抽成"
+  },
+  {
+    "name": "99designs",
+    "cat": "设计竞赛",
+    "url": "https://99designs.com",
+    "guide": "https://99designs.com",
+    "desc": "设计单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "设计单"
+  },
+  {
+    "name": "Toptal",
+    "cat": "高端外包",
+    "url": "https://www.toptal.com",
+    "guide": "https://www.toptal.com",
+    "desc": "专家项目",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "专家项目"
+  },
+  {
+    "name": "Contra",
+    "cat": "无抽成接单",
+    "url": "https://contra.com",
+    "guide": "https://contra.com",
+    "desc": "自由职业",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "自由职业"
+  },
+  {
+    "name": "PeoplePerHour",
+    "cat": "小时单",
+    "url": "https://www.peopleperhour.com",
+    "guide": "https://www.peopleperhour.com",
+    "desc": "小时计费",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "小时计费"
+  },
+  {
+    "name": "Legiit",
+    "cat": "增长服务",
+    "url": "https://legiit.com",
+    "guide": "https://legiit.com",
+    "desc": "营销服务单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "营销服务单"
+  },
+  {
+    "name": "SEOClerk",
+    "cat": "优化小单",
+    "url": "https://www.seoclerk.com",
+    "guide": "https://www.seoclerk.com",
+    "desc": "SEO小任务",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "SEO小任务"
+  },
+  {
+    "name": "Coinbase",
+    "cat": "加密入门",
+    "url": "https://www.coinbase.com",
+    "guide": "https://www.coinbase.com",
+    "desc": "交易跳转",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "交易跳转"
+  },
+  {
+    "name": "Binance",
+    "cat": "加密交易",
+    "url": "https://www.binance.com",
+    "guide": "https://www.binance.com",
+    "desc": "交易手续费",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "交易手续费"
+  },
+  {
+    "name": "KuCoin",
+    "cat": "加密所",
+    "url": "https://www.kucoin.com",
+    "guide": "https://www.kucoin.com",
+    "desc": "交易返佣",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "交易返佣"
+  },
+  {
+    "name": "Bybit",
+    "cat": "合约交易",
+    "url": "https://www.bybit.com",
+    "guide": "https://www.bybit.com",
+    "desc": "邀请返佣",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邀请返佣"
+  },
+  {
+    "name": "OKX",
+    "cat": "数字资产",
+    "url": "https://www.okx.com",
+    "guide": "https://www.okx.com",
+    "desc": "邀请分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邀请分成"
+  },
+  {
+    "name": "TradingView",
+    "cat": "行情图表",
+    "url": "https://www.tradingview.com",
+    "guide": "https://www.tradingview.com",
+    "desc": "图表订阅",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图表订阅"
+  },
+  {
+    "name": "eToro",
+    "cat": "社交交易",
+    "url": "https://www.etoro.com",
+    "guide": "https://www.etoro.com",
+    "desc": "跟单推广",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "跟单推广"
+  },
+  {
+    "name": "Plus500",
+    "cat": "差价合约",
+    "url": "https://www.plus500.com",
+    "guide": "https://www.plus500.com",
+    "desc": "交易推广",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "交易推广"
+  },
+  {
+    "name": "IG",
+    "cat": "金融交易",
+    "url": "https://www.ig.com",
+    "guide": "https://www.ig.com",
+    "desc": "金融开户",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "金融开户"
+  },
+  {
+    "name": "Interactive Brokers",
+    "cat": "券商",
+    "url": "https://www.interactivebrokers.com",
+    "guide": "https://www.interactivebrokers.com",
+    "desc": "开户推广",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "开户推广"
+  },
+  {
+    "name": "Webull",
+    "cat": "美股",
+    "url": "https://www.webull.com",
+    "guide": "https://www.webull.com",
+    "desc": "开户奖励",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "开户奖励"
+  },
+  {
+    "name": "Robinhood",
+    "cat": "美股零佣",
+    "url": "https://robinhood.com",
+    "guide": "https://robinhood.com",
+    "desc": "开户",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "开户"
+  },
+  {
+    "name": "Stake",
+    "cat": "博彩站",
+    "url": "https://stake.com",
+    "guide": "https://stake.com",
+    "desc": "邀请返水",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邀请返水"
+  },
+  {
+    "name": "DraftKings",
+    "cat": "体育竞猜",
+    "url": "https://www.draftkings.com",
+    "guide": "https://www.draftkings.com",
+    "desc": "开户分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "开户分成"
+  },
+  {
+    "name": "FanDuel",
+    "cat": "体育博彩",
+    "url": "https://www.fanduel.com",
+    "guide": "https://www.fanduel.com",
+    "desc": "开户",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "开户"
+  },
+  {
+    "name": "Bet365",
+    "cat": "体育投注",
+    "url": "https://www.bet365.com",
+    "guide": "https://www.bet365.com",
+    "desc": "开户推广",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "开户推广"
+  },
+  {
+    "name": "1xBet",
+    "cat": "综合博彩",
+    "url": "https://1xbet.com",
+    "guide": "https://1xbet.com",
+    "desc": "代理分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "代理分成"
+  },
+  {
+    "name": "Hostinger Horizons",
+    "cat": "建站套餐",
+    "url": "https://www.hostinger.com",
+    "guide": "https://www.hostinger.com",
+    "desc": "建站分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "建站分成"
+  },
+  {
+    "name": "WordPress.com",
+    "cat": "博客托管",
+    "url": "https://wordpress.com",
+    "guide": "https://wordpress.com",
+    "desc": "站点托管",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "站点托管"
+  },
+  {
+    "name": "Wix",
+    "cat": "拖拽建站",
+    "url": "https://www.wix.com/affiliates",
+    "guide": "https://www.wix.com/affiliates",
+    "desc": "建站订阅",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "建站订阅"
+  },
+  {
+    "name": "Squarespace",
+    "cat": "展示站",
+    "url": "https://www.squarespace.com/affiliates",
+    "guide": "https://www.squarespace.com/affiliates",
+    "desc": "建站分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "建站分成"
+  },
+  {
+    "name": "Webflow",
+    "cat": "设计建站",
+    "url": "https://webflow.com",
+    "guide": "https://webflow.com",
+    "desc": "建站工具",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "建站工具"
+  },
+  {
+    "name": "Carrd",
+    "cat": "单页站",
+    "url": "https://carrd.co",
+    "guide": "https://carrd.co",
+    "desc": "单页分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "单页分成"
+  },
+  {
+    "name": "Framer",
+    "cat": "动态站点",
+    "url": "https://www.framer.com",
+    "guide": "https://www.framer.com",
+    "desc": "设计站",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "设计站"
+  },
+  {
+    "name": "Linktree",
+    "cat": "链接页",
+    "url": "https://linktr.ee",
+    "guide": "https://linktr.ee",
+    "desc": "链接主页",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "链接主页"
+  },
+  {
+    "name": "Beacons",
+    "cat": "创作者主页",
+    "url": "https://beacons.ai",
+    "guide": "https://beacons.ai",
+    "desc": "主页工具",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "主页工具"
+  },
+  {
+    "name": "Stan Store",
+    "cat": "达人小店",
+    "url": "https://stan.store",
+    "guide": "https://stan.store",
+    "desc": "达人商品",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "达人商品"
+  },
+  {
+    "name": "Kajabi",
+    "cat": "知识付费",
+    "url": "https://kajabi.com",
+    "guide": "https://kajabi.com",
+    "desc": "课程会员",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "课程会员"
+  },
+  {
+    "name": "Kartra",
+    "cat": "营销漏斗",
+    "url": "https://kartra.com",
+    "guide": "https://kartra.com",
+    "desc": "漏斗工具",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "漏斗工具"
+  },
+  {
+    "name": "ClickFunnels",
+    "cat": "销售漏斗",
+    "url": "https://www.clickfunnels.com",
+    "guide": "https://www.clickfunnels.com",
+    "desc": "漏斗分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "漏斗分成"
+  },
+  {
+    "name": "Systeme.io",
+    "cat": "一体化营销",
+    "url": "https://systeme.io",
+    "guide": "https://systeme.io",
+    "desc": "漏斗邮件",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "漏斗邮件"
+  },
+  {
+    "name": "GetResponse",
+    "cat": "邮件自动化",
+    "url": "https://www.getresponse.com",
+    "guide": "https://www.getresponse.com",
+    "desc": "邮件分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮件分成"
+  },
+  {
+    "name": "MailerLite",
+    "cat": "轻邮件",
+    "url": "https://www.mailerlite.com",
+    "guide": "https://www.mailerlite.com",
+    "desc": "邮件订阅",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮件订阅"
+  },
+  {
+    "name": "ActiveCampaign",
+    "cat": "自动化邮件",
+    "url": "https://www.activecampaign.com",
+    "guide": "https://www.activecampaign.com",
+    "desc": "营销自动化",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "营销自动化"
+  },
+  {
+    "name": "Klaviyo",
+    "cat": "电商邮件",
+    "url": "https://www.klaviyo.com",
+    "guide": "https://www.klaviyo.com",
+    "desc": "店铺邮件",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "店铺邮件"
+  },
+  {
+    "name": "Omnisend",
+    "cat": "电商营销",
+    "url": "https://www.omnisend.com",
+    "guide": "https://www.omnisend.com",
+    "desc": "店铺自动化",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "店铺自动化"
+  },
+  {
+    "name": "ManyChat",
+    "cat": "聊天营销",
+    "url": "https://manychat.com",
+    "guide": "https://manychat.com",
+    "desc": "消息营销",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "消息营销"
+  },
+  {
+    "name": "MobileMonkey",
+    "cat": "聊天机器人",
+    "url": "https://mobilemonkey.com",
+    "guide": "https://mobilemonkey.com",
+    "desc": "机器人",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "机器人"
+  },
+  {
+    "name": "Calendly",
+    "cat": "预约链接",
+    "url": "https://calendly.com",
+    "guide": "https://calendly.com",
+    "desc": "预约工具",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "预约工具"
+  },
+  {
+    "name": "Zoom",
+    "cat": "会议",
+    "url": "https://zoom.us",
+    "guide": "https://zoom.us",
+    "desc": "会议订阅",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "会议订阅"
+  },
+  {
+    "name": "Loom",
+    "cat": "录屏",
+    "url": "https://www.loom.com",
+    "guide": "https://www.loom.com",
+    "desc": "录屏工具",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "录屏工具"
+  },
+  {
+    "name": "Descript",
+    "cat": "剪辑转写",
+    "url": "https://www.descript.com",
+    "guide": "https://www.descript.com",
+    "desc": "视频转写",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "视频转写"
+  },
+  {
+    "name": "CapCut",
+    "cat": "剪辑",
+    "url": "https://www.capcut.com",
+    "guide": "https://www.capcut.com",
+    "desc": "短视频剪辑",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "短视频剪辑"
+  },
+  {
+    "name": "InVideo",
+    "cat": "在线成片",
+    "url": "https://invideo.io",
+    "guide": "https://invideo.io",
+    "desc": "模板成片",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "模板成片"
+  },
+  {
+    "name": "Pictory",
+    "cat": "图转视频",
+    "url": "https://pictory.ai",
+    "guide": "https://pictory.ai",
+    "desc": "文章转视频",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "文章转视频"
+  },
+  {
+    "name": "Synthesia",
+    "cat": "数字人",
+    "url": "https://www.synthesia.io",
+    "guide": "https://www.synthesia.io",
+    "desc": "数字人口播",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数字人口播"
+  },
+  {
+    "name": "HeyGen",
+    "cat": "数字人视频",
+    "url": "https://www.heygen.com",
+    "guide": "https://www.heygen.com",
+    "desc": "口播视频",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "口播视频"
+  },
+  {
+    "name": "ElevenLabs",
+    "cat": "语音合成",
+    "url": "https://elevenlabs.io",
+    "guide": "https://elevenlabs.io",
+    "desc": "配音分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "配音分成"
+  },
+  {
+    "name": "Murf",
+    "cat": "配音",
+    "url": "https://murf.ai",
+    "guide": "https://murf.ai",
+    "desc": "AI配音",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "AI配音"
+  },
+  {
+    "name": "Play.ht",
+    "cat": "文字转语音",
+    "url": "https://play.ht",
+    "guide": "https://play.ht",
+    "desc": "语音生成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "语音生成"
+  },
+  {
+    "name": "Suno",
+    "cat": "音乐生成",
+    "url": "https://suno.com",
+    "guide": "https://suno.com",
+    "desc": "AI音乐",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "AI音乐"
+  },
+  {
+    "name": "Udio",
+    "cat": "音乐生成",
+    "url": "https://www.udio.com",
+    "guide": "https://www.udio.com",
+    "desc": "歌曲生成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "歌曲生成"
+  },
+  {
+    "name": "Midjourney",
+    "cat": "绘图",
+    "url": "https://www.midjourney.com",
+    "guide": "https://www.midjourney.com",
+    "desc": "图像订阅",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图像订阅"
+  },
+  {
+    "name": "Leonardo",
+    "cat": "绘图",
+    "url": "https://leonardo.ai",
+    "guide": "https://leonardo.ai",
+    "desc": "图像生成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图像生成"
+  },
+  {
+    "name": "Ideogram",
+    "cat": "文字出图",
+    "url": "https://ideogram.ai",
+    "guide": "https://ideogram.ai",
+    "desc": "海报文字",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "海报文字"
+  },
+  {
+    "name": "Krea",
+    "cat": "实时出图",
+    "url": "https://www.krea.ai",
+    "guide": "https://www.krea.ai",
+    "desc": "图像生成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图像生成"
+  },
+  {
+    "name": "Runway",
+    "cat": "视频生成",
+    "url": "https://runwayml.com",
+    "guide": "https://runwayml.com",
+    "desc": "视频模型",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "视频模型"
+  },
+  {
+    "name": "Pika",
+    "cat": "短视频生成",
+    "url": "https://pika.art",
+    "guide": "https://pika.art",
+    "desc": "视频生成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "视频生成"
+  },
+  {
+    "name": "Luma",
+    "cat": "视频生成",
+    "url": "https://lumalabs.ai",
+    "guide": "https://lumalabs.ai",
+    "desc": "视频模型",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "视频模型"
+  },
+  {
+    "name": "Kling",
+    "cat": "视频生成",
+    "url": "https://klingai.com",
+    "guide": "https://klingai.com",
+    "desc": "视频生成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "视频生成"
+  },
+  {
+    "name": "Haiper",
+    "cat": "视频生成",
+    "url": "https://haiper.ai",
+    "guide": "https://haiper.ai",
+    "desc": "短视频",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "短视频"
+  },
+  {
+    "name": "Viggle",
+    "cat": "动作视频",
+    "url": "https://viggle.ai",
+    "guide": "https://viggle.ai",
+    "desc": "角色动作",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "角色动作"
+  },
+  {
+    "name": "Captions",
+    "cat": "口播字幕",
+    "url": "https://captions.ai",
+    "guide": "https://captions.ai",
+    "desc": "自动字幕",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "自动字幕"
+  },
+  {
+    "name": "Opus Clip",
+    "cat": "长切短",
+    "url": "https://www.opus.pro",
+    "guide": "https://www.opus.pro",
+    "desc": "切片分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "切片分成"
+  },
+  {
+    "name": "Vizard",
+    "cat": "自动切片",
+    "url": "https://vizard.ai",
+    "guide": "https://vizard.ai",
+    "desc": "长视频切片",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "长视频切片"
+  },
+  {
+    "name": "TubeBuddy",
+    "cat": "频道工具",
+    "url": "https://www.tubebuddy.com",
+    "guide": "https://www.tubebuddy.com",
+    "desc": "频道优化",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "频道优化"
+  },
+  {
+    "name": "vidIQ",
+    "cat": "频道数据",
+    "url": "https://vidiq.com",
+    "guide": "https://vidiq.com",
+    "desc": "视频关键词",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "视频关键词"
+  },
+  {
+    "name": "SocialBlade",
+    "cat": "账号数据",
+    "url": "https://socialblade.com",
+    "guide": "https://socialblade.com",
+    "desc": "账号统计",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "账号统计"
+  },
+  {
+    "name": "HypeAuditor",
+    "cat": "网红数据",
+    "url": "https://hypeauditor.com",
+    "guide": "https://hypeauditor.com",
+    "desc": "达人分析",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "达人分析"
+  },
+  {
+    "name": "Modash",
+    "cat": "达人搜索",
+    "url": "https://www.modash.io",
+    "guide": "https://www.modash.io",
+    "desc": "达人库",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "达人库"
+  },
+  {
+    "name": "Aspire",
+    "cat": "达人合作",
+    "url": "https://www.aspire.io",
+    "guide": "https://www.aspire.io",
+    "desc": "品牌达人",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "品牌达人"
+  },
+  {
+    "name": "Grin",
+    "cat": "达人管理",
+    "url": "https://grin.co",
+    "guide": "https://grin.co",
+    "desc": "达人结算",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "达人结算"
+  },
+  {
+    "name": "Upfluence",
+    "cat": "达人平台",
+    "url": "https://www.upfluence.com",
+    "guide": "https://www.upfluence.com",
+    "desc": "达人搜索",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "达人搜索"
+  },
+  {
+    "name": "Creator.co",
+    "cat": "创作者合作",
+    "url": "https://www.creator.co",
+    "guide": "https://www.creator.co",
+    "desc": "合作对接",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "合作对接"
+  },
+  {
+    "name": "#paid",
+    "cat": "品牌任务",
+    "url": "https://hashtagpaid.com",
+    "guide": "https://hashtagpaid.com",
+    "desc": "品牌单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "品牌单"
+  },
+  {
+    "name": "Cohley",
+    "cat": "内容任务",
+    "url": "https://www.cohley.com",
+    "guide": "https://www.cohley.com",
+    "desc": "内容创作单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "内容创作单"
+  },
+  {
+    "name": "Billo",
+    "cat": "视频任务",
+    "url": "https://billo.app",
+    "guide": "https://billo.app",
+    "desc": "短视频单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "短视频单"
+  },
+  {
+    "name": "Insense",
+    "cat": "素材任务",
+    "url": "https://insense.pro",
+    "guide": "https://insense.pro",
+    "desc": "素材单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "素材单"
+  },
+  {
+    "name": "JoinBrands",
+    "cat": "品牌小单",
+    "url": "https://joinbrands.com",
+    "guide": "https://joinbrands.com",
+    "desc": "产品体验单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "产品体验单"
+  },
+  {
+    "name": "Skeepers",
+    "cat": "测评单",
+    "url": "https://skeepers.io",
+    "guide": "https://skeepers.io",
+    "desc": "测评分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "测评分成"
+  },
+  {
+    "name": "LoudCrowd",
+    "cat": "社群带货",
+    "url": "https://loudcrowd.com",
+    "guide": "https://loudcrowd.com",
+    "desc": "社群分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "社群分成"
+  },
+  {
+    "name": "LTK",
+    "cat": "穿搭带货",
+    "url": "https://www.shopltk.com",
+    "guide": "https://www.shopltk.com",
+    "desc": "商品佣金",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "商品佣金"
+  },
+  {
+    "name": "ShopMy",
+    "cat": "商品架",
+    "url": "https://shopmy.us",
+    "guide": "https://shopmy.us",
+    "desc": "带货链接",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "带货链接"
+  },
+  {
+    "name": "MagicLinks",
+    "cat": "达人链接",
+    "url": "https://magiclinks.com",
+    "guide": "https://magiclinks.com",
+    "desc": "商品链接",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "商品链接"
+  },
+  {
+    "name": "Skimlinks",
+    "cat": "内容变现",
+    "url": "https://www.skimlinks.com",
+    "guide": "https://www.skimlinks.com",
+    "desc": "自动联盟链接",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "自动联盟链接"
+  },
+  {
+    "name": "Sovrn",
+    "cat": "内容货币化",
+    "url": "https://www.sovrn.com",
+    "guide": "https://www.sovrn.com",
+    "desc": "内容分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "内容分成"
+  },
+  {
+    "name": "VigLink",
+    "cat": "自动链接",
+    "url": "https://www.viglink.com",
+    "guide": "https://www.viglink.com",
+    "desc": "内容链接",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "内容链接"
+  },
+  {
+    "name": "Narrativ",
+    "cat": "购物链接",
+    "url": "https://narrativ.com",
+    "guide": "https://narrativ.com",
+    "desc": "内容带货",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "内容带货"
+  },
+  {
+    "name": "Howl",
+    "cat": "达人商务",
+    "url": "https://howl.link",
+    "guide": "https://howl.link",
+    "desc": "达人对接",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "达人对接"
+  },
+  {
+    "name": "Mavely",
+    "cat": "购物返利",
+    "url": "https://www.mavely.app",
+    "guide": "https://www.mavely.app",
+    "desc": "分享返利",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "分享返利"
+  },
+  {
+    "name": "Ibotta",
+    "cat": "购物返现",
+    "url": "https://ibotta.com",
+    "guide": "https://ibotta.com",
+    "desc": "小票返现",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "小票返现"
+  },
+  {
+    "name": "Rakuten Ichiba",
+    "cat": "日本乐天",
+    "url": "https://www.rakuten.co.jp",
+    "guide": "https://www.rakuten.co.jp",
+    "desc": "日本商品",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "日本商品"
+  },
+  {
+    "name": "Yahoo Shopping",
+    "cat": "雅虎购物",
+    "url": "https://shopping.yahoo.co.jp",
+    "guide": "https://shopping.yahoo.co.jp",
+    "desc": "日本购物",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "日本购物"
+  },
+  {
+    "name": "Mercari",
+    "cat": "二手交易",
+    "url": "https://www.mercari.com",
+    "guide": "https://www.mercari.com",
+    "desc": "二手商品",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "二手商品"
+  },
+  {
+    "name": "Poshmark",
+    "cat": "二手服饰",
+    "url": "https://poshmark.com",
+    "guide": "https://poshmark.com",
+    "desc": "服饰转卖",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "服饰转卖"
+  },
+  {
+    "name": "Depop",
+    "cat": "潮流二手",
+    "url": "https://www.depop.com",
+    "guide": "https://www.depop.com",
+    "desc": "潮流转卖",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "潮流转卖"
+  },
+  {
+    "name": "Vinted",
+    "cat": "二手衣物",
+    "url": "https://www.vinted.com",
+    "guide": "https://www.vinted.com",
+    "desc": "衣物转卖",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "衣物转卖"
+  },
+  {
+    "name": "StockX",
+    "cat": "球鞋交易",
+    "url": "https://stockx.com",
+    "guide": "https://stockx.com",
+    "desc": "球鞋成交",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "球鞋成交"
+  },
+  {
+    "name": "GOAT",
+    "cat": "球鞋",
+    "url": "https://www.goat.com",
+    "guide": "https://www.goat.com",
+    "desc": "球鞋交易",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "球鞋交易"
+  },
+  {
+    "name": "Whatnot",
+    "cat": "直播拍卖",
+    "url": "https://www.whatnot.com",
+    "guide": "https://www.whatnot.com",
+    "desc": "直播卖货",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "直播卖货"
+  },
+  {
+    "name": "CommentSold",
+    "cat": "直播带货",
+    "url": "https://commentsold.com",
+    "guide": "https://commentsold.com",
+    "desc": "评论下单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "评论下单"
+  },
+  {
+    "name": "TalkShopLive",
+    "cat": "直播购物",
+    "url": "https://talkshoplive.com",
+    "guide": "https://talkshoplive.com",
+    "desc": "直播销售",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "直播销售"
+  },
+  {
+    "name": "Bambuser",
+    "cat": "直播购物",
+    "url": "https://bambuser.com",
+    "guide": "https://bambuser.com",
+    "desc": "品牌直播",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "品牌直播"
+  },
+  {
+    "name": "Klarna",
+    "cat": "先买后付",
+    "url": "https://www.klarna.com",
+    "guide": "https://www.klarna.com",
+    "desc": "分期支付",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "分期支付"
+  },
+  {
+    "name": "Afterpay",
+    "cat": "分期",
+    "url": "https://www.afterpay.com",
+    "guide": "https://www.afterpay.com",
+    "desc": "购物分期",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "购物分期"
+  },
+  {
+    "name": "Affirm",
+    "cat": "分期付款",
+    "url": "https://www.affirm.com",
+    "guide": "https://www.affirm.com",
+    "desc": "消费分期",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "消费分期"
+  },
+  {
+    "name": "Sezzle",
+    "cat": "小额分期",
+    "url": "https://sezzle.com",
+    "guide": "https://sezzle.com",
+    "desc": "小额分期",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "小额分期"
+  },
+  {
+    "name": "PayPal Pay Later",
+    "cat": "延后支付",
+    "url": "https://www.paypal.com",
+    "guide": "https://www.paypal.com",
+    "desc": "延后付款",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "延后付款"
+  },
+  {
+    "name": "Stripe Tax",
+    "cat": "税务",
+    "url": "https://stripe.com/tax",
+    "guide": "https://stripe.com/tax",
+    "desc": "自动计税",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "自动计税"
+  },
+  {
+    "name": "Quaderno",
+    "cat": "发票税务",
+    "url": "https://quaderno.io",
+    "guide": "https://quaderno.io",
+    "desc": "发票",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "发票"
+  },
+  {
+    "name": "TaxJar",
+    "cat": "销售税",
+    "url": "https://www.taxjar.com",
+    "guide": "https://www.taxjar.com",
+    "desc": "销售税",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "销售税"
+  },
+  {
+    "name": "Avalara",
+    "cat": "税务合规",
+    "url": "https://www.avalara.com",
+    "guide": "https://www.avalara.com",
+    "desc": "税务",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "税务"
+  },
+  {
+    "name": "Chargebee",
+    "cat": "订阅计费",
+    "url": "https://www.chargebee.com",
+    "guide": "https://www.chargebee.com",
+    "desc": "订阅账单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "订阅账单"
+  },
+  {
+    "name": "Recurly",
+    "cat": "续费计费",
+    "url": "https://recurly.com",
+    "guide": "https://recurly.com",
+    "desc": "续费管理",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "续费管理"
+  },
+  {
+    "name": "Chargify",
+    "cat": "订阅",
+    "url": "https://www.chargify.com",
+    "guide": "https://www.chargify.com",
+    "desc": "订阅计费",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "订阅计费"
+  },
+  {
+    "name": "Paddle Billing",
+    "cat": "软件账单",
+    "url": "https://www.paddle.com",
+    "guide": "https://www.paddle.com",
+    "desc": "软件账单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "软件账单"
+  },
+  {
+    "name": "Gumroad Memberships",
+    "cat": "会员售卖",
+    "url": "https://gumroad.com",
+    "guide": "https://gumroad.com",
+    "desc": "会员分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "会员分成"
+  },
+  {
+    "name": "Memberful",
+    "cat": "会员系统",
+    "url": "https://memberful.com",
+    "guide": "https://memberful.com",
+    "desc": "会员费",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "会员费"
+  },
+  {
+    "name": "Memberstack",
+    "cat": "会员门禁",
+    "url": "https://www.memberstack.com",
+    "guide": "https://www.memberstack.com",
+    "desc": "付费门禁",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "付费门禁"
+  },
+  {
+    "name": "Outseta",
+    "cat": "会员一体化",
+    "url": "https://www.outseta.com",
+    "guide": "https://www.outseta.com",
+    "desc": "会员与邮件",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "会员与邮件"
+  },
+  {
+    "name": "Ghost",
+    "cat": "付费博客",
+    "url": "https://ghost.org",
+    "guide": "https://ghost.org",
+    "desc": "会员文章",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "会员文章"
+  },
+  {
+    "name": "Buttondown",
+    "cat": "通讯",
+    "url": "https://buttondown.com",
+    "guide": "https://buttondown.com",
+    "desc": "邮件列表",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮件列表"
+  },
+  {
+    "name": "Revue",
+    "cat": "通讯",
+    "url": "https://www.getrevue.co",
+    "guide": "https://www.getrevue.co",
+    "desc": "通讯",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "通讯"
+  },
+  {
+    "name": "LinkedIn",
+    "cat": "职场",
+    "url": "https://www.linkedin.com",
+    "guide": "https://www.linkedin.com",
+    "desc": "职场内容",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "职场内容"
+  },
+  {
+    "name": "X",
+    "cat": "短内容",
+    "url": "https://x.com",
+    "guide": "https://x.com",
+    "desc": "内容分发",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "内容分发"
+  },
+  {
+    "name": "Facebook",
+    "cat": "社交",
+    "url": "https://www.facebook.com",
+    "guide": "https://www.facebook.com",
+    "desc": "社群与广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "社群与广告"
+  },
+  {
+    "name": "WhatsApp Business",
+    "cat": "客户消息",
+    "url": "https://business.whatsapp.com",
+    "guide": "https://business.whatsapp.com",
+    "desc": "客户沟通",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "客户沟通"
+  },
+  {
+    "name": "Line",
+    "cat": "即时通讯",
+    "url": "https://line.me",
+    "guide": "https://line.me",
+    "desc": "消息渠道",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "消息渠道"
+  },
+  {
+    "name": "WeChat",
+    "cat": "微信",
+    "url": "https://weixin.qq.com",
+    "guide": "https://weixin.qq.com",
+    "desc": "私域",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "私域"
+  },
+  {
+    "name": "Douyin",
+    "cat": "抖音",
+    "url": "https://www.douyin.com",
+    "guide": "https://www.douyin.com",
+    "desc": "短视频",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "短视频"
+  },
+  {
+    "name": "Kuaishou",
+    "cat": "快手",
+    "url": "https://www.kuaishou.com",
+    "guide": "https://www.kuaishou.com",
+    "desc": "短视频",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "短视频"
+  },
+  {
+    "name": "Xiaohongshu",
+    "cat": "小红书",
+    "url": "https://www.xiaohongshu.com",
+    "guide": "https://www.xiaohongshu.com",
+    "desc": "图文种草",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图文种草"
+  },
+  {
+    "name": "Bilibili",
+    "cat": "视频社区",
+    "url": "https://www.bilibili.com",
+    "guide": "https://www.bilibili.com",
+    "desc": "中视频",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "中视频"
+  },
+  {
+    "name": "Zhihu",
+    "cat": "问答",
+    "url": "https://www.zhihu.com",
+    "guide": "https://www.zhihu.com",
+    "desc": "问答内容",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "问答内容"
+  },
+  {
+    "name": "Toutiao",
+    "cat": "资讯",
+    "url": "https://www.toutiao.com",
+    "guide": "https://www.toutiao.com",
+    "desc": "资讯分发",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "资讯分发"
+  },
+  {
+    "name": "Baidu",
+    "cat": "搜索",
+    "url": "https://www.baidu.com",
+    "guide": "https://www.baidu.com",
+    "desc": "搜索流量",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "搜索流量"
+  },
+  {
+    "name": "Google",
+    "cat": "搜索",
+    "url": "https://www.google.com",
+    "guide": "https://www.google.com",
+    "desc": "搜索",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "搜索"
+  },
+  {
+    "name": "Bing",
+    "cat": "搜索",
+    "url": "https://www.bing.com",
+    "guide": "https://www.bing.com",
+    "desc": "搜索",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "搜索"
+  },
+  {
+    "name": "DuckDuckGo",
+    "cat": "隐私搜索",
+    "url": "https://duckduckgo.com",
+    "guide": "https://duckduckgo.com",
+    "desc": "搜索",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "搜索"
+  },
+  {
+    "name": "Perplexity",
+    "cat": "AI搜索",
+    "url": "https://www.perplexity.ai",
+    "guide": "https://www.perplexity.ai",
+    "desc": "AI搜索",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "AI搜索"
+  },
+  {
+    "name": "Phind",
+    "cat": "开发搜索",
+    "url": "https://www.phind.com",
+    "guide": "https://www.phind.com",
+    "desc": "开发搜索",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "开发搜索"
+  },
+  {
+    "name": "You.com",
+    "cat": "AI搜索",
+    "url": "https://you.com",
+    "guide": "https://you.com",
+    "desc": "AI搜索",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "AI搜索"
+  },
+  {
+    "name": "Andi",
+    "cat": "AI搜索",
+    "url": "https://andisearch.com",
+    "guide": "https://andisearch.com",
+    "desc": "AI搜索",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "AI搜索"
+  },
+  {
+    "name": "Kagi",
+    "cat": "付费搜索",
+    "url": "https://kagi.com",
+    "guide": "https://kagi.com",
+    "desc": "无广告搜索",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "无广告搜索"
+  },
+  {
+    "name": "Brave Search",
+    "cat": "隐私搜索",
+    "url": "https://search.brave.com",
+    "guide": "https://search.brave.com",
+    "desc": "搜索",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "搜索"
+  },
+  {
+    "name": "Startpage",
+    "cat": "隐私搜索",
+    "url": "https://www.startpage.com",
+    "guide": "https://www.startpage.com",
+    "desc": "搜索",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "搜索"
+  },
+  {
+    "name": "WolframAlpha",
+    "cat": "计算搜索",
+    "url": "https://www.wolframalpha.com",
+    "guide": "https://www.wolframalpha.com",
+    "desc": "计算",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "计算"
+  },
+  {
+    "name": "Archive.org",
+    "cat": "网页存档",
+    "url": "https://archive.org",
+    "guide": "https://archive.org",
+    "desc": "存档",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "存档"
+  },
+  {
+    "name": "Wayback",
+    "cat": "历史网页",
+    "url": "https://web.archive.org",
+    "guide": "https://web.archive.org",
+    "desc": "历史页面",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "历史页面"
+  },
+  {
+    "name": "Similarweb",
+    "cat": "流量分析",
+    "url": "https://www.similarweb.com",
+    "guide": "https://www.similarweb.com",
+    "desc": "站点流量",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "站点流量"
+  },
+  {
+    "name": "BuiltWith",
+    "cat": "技术栈",
+    "url": "https://builtwith.com",
+    "guide": "https://builtwith.com",
+    "desc": "站点技术",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "站点技术"
+  },
+  {
+    "name": "Wappalyzer",
+    "cat": "技术识别",
+    "url": "https://www.wappalyzer.com",
+    "guide": "https://www.wappalyzer.com",
+    "desc": "技术栈",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "技术栈"
+  },
+  {
+    "name": "Hunter",
+    "cat": "邮箱查找",
+    "url": "https://hunter.io",
+    "guide": "https://hunter.io",
+    "desc": "邮箱",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮箱"
+  },
+  {
+    "name": "Apollo",
+    "cat": "客户数据",
+    "url": "https://www.apollo.io",
+    "guide": "https://www.apollo.io",
+    "desc": "销售线索",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "销售线索"
+  },
+  {
+    "name": "ZoomInfo",
+    "cat": "企业数据",
+    "url": "https://www.zoominfo.com",
+    "guide": "https://www.zoominfo.com",
+    "desc": "企业联系人",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "企业联系人"
+  },
+  {
+    "name": "Clearbit",
+    "cat": "公司数据",
+    "url": "https://clearbit.com",
+    "guide": "https://clearbit.com",
+    "desc": "公司信息",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "公司信息"
+  },
+  {
+    "name": "Lusha",
+    "cat": "联系人",
+    "url": "https://www.lusha.com",
+    "guide": "https://www.lusha.com",
+    "desc": "联系方式",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "联系方式"
+  },
+  {
+    "name": "Snov",
+    "cat": "邮箱验证",
+    "url": "https://snov.io",
+    "guide": "https://snov.io",
+    "desc": "邮箱工具",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮箱工具"
+  },
+  {
+    "name": "NeverBounce",
+    "cat": "邮箱清洗",
+    "url": "https://neverbounce.com",
+    "guide": "https://neverbounce.com",
+    "desc": "邮箱验证",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮箱验证"
+  },
+  {
+    "name": "ZeroBounce",
+    "cat": "邮箱验证",
+    "url": "https://www.zerobounce.net",
+    "guide": "https://www.zerobounce.net",
+    "desc": "验证",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "验证"
+  },
+  {
+    "name": "Mailchimp",
+    "cat": "邮件群发",
+    "url": "https://mailchimp.com",
+    "guide": "https://mailchimp.com",
+    "desc": "邮件营销",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮件营销"
+  },
+  {
+    "name": "Brevo",
+    "cat": "邮件短信",
+    "url": "https://www.brevo.com",
+    "guide": "https://www.brevo.com",
+    "desc": "邮件",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮件"
+  },
+  {
+    "name": "SendGrid",
+    "cat": "邮件接口",
+    "url": "https://sendgrid.com",
+    "guide": "https://sendgrid.com",
+    "desc": "邮件发送",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮件发送"
+  },
+  {
+    "name": "Postmark",
+    "cat": "事务邮件",
+    "url": "https://postmarkapp.com",
+    "guide": "https://postmarkapp.com",
+    "desc": "通知邮件",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "通知邮件"
+  },
+  {
+    "name": "Resend",
+    "cat": "开发邮件",
+    "url": "https://resend.com",
+    "guide": "https://resend.com",
+    "desc": "邮件接口",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮件接口"
+  },
+  {
+    "name": "Twilio",
+    "cat": "短信电话",
+    "url": "https://www.twilio.com",
+    "guide": "https://www.twilio.com",
+    "desc": "消息接口",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "消息接口"
+  },
+  {
+    "name": "MessageBird",
+    "cat": "消息",
+    "url": "https://messagebird.com",
+    "guide": "https://messagebird.com",
+    "desc": "消息",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "消息"
+  },
+  {
+    "name": "Vonage",
+    "cat": "通信",
+    "url": "https://www.vonage.com",
+    "guide": "https://www.vonage.com",
+    "desc": "通信接口",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "通信接口"
+  },
+  {
+    "name": "Telnyx",
+    "cat": "通信接口",
+    "url": "https://telnyx.com",
+    "guide": "https://telnyx.com",
+    "desc": "电话短信",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "电话短信"
+  },
+  {
+    "name": "OpenPhone",
+    "cat": "商务电话",
+    "url": "https://www.openphone.com",
+    "guide": "https://www.openphone.com",
+    "desc": "商务号码",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "商务号码"
+  },
+  {
+    "name": "Aircall",
+    "cat": "呼叫中心",
+    "url": "https://aircall.io",
+    "guide": "https://aircall.io",
+    "desc": "客服电话",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "客服电话"
+  },
+  {
+    "name": "Intercom",
+    "cat": "客服",
+    "url": "https://www.intercom.com",
+    "guide": "https://www.intercom.com",
+    "desc": "在线客服",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "在线客服"
+  },
+  {
+    "name": "Zendesk",
+    "cat": "工单",
+    "url": "https://www.zendesk.com",
+    "guide": "https://www.zendesk.com",
+    "desc": "客服工单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "客服工单"
+  },
+  {
+    "name": "Freshdesk",
+    "cat": "客服台",
+    "url": "https://www.freshworks.com/freshdesk",
+    "guide": "https://www.freshworks.com/freshdesk",
+    "desc": "客服",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "客服"
+  },
+  {
+    "name": "Crisp",
+    "cat": "聊天客服",
+    "url": "https://crisp.chat",
+    "guide": "https://crisp.chat",
+    "desc": "网站聊天",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "网站聊天"
+  },
+  {
+    "name": "Tawk",
+    "cat": "免费客服",
+    "url": "https://www.tawk.to",
+    "guide": "https://www.tawk.to",
+    "desc": "在线聊天",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "在线聊天"
+  },
+  {
+    "name": "LiveChat",
+    "cat": "在线客服",
+    "url": "https://www.livechat.com",
+    "guide": "https://www.livechat.com",
+    "desc": "客服",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "客服"
+  },
+  {
+    "name": "HubSpot",
+    "cat": "客户管理",
+    "url": "https://www.hubspot.com",
+    "guide": "https://www.hubspot.com",
+    "desc": "CRM",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "CRM"
+  },
+  {
+    "name": "Pipedrive",
+    "cat": "销售管道",
+    "url": "https://www.pipedrive.com",
+    "guide": "https://www.pipedrive.com",
+    "desc": "销售",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "销售"
+  },
+  {
+    "name": "Close",
+    "cat": "销售外呼",
+    "url": "https://close.com",
+    "guide": "https://close.com",
+    "desc": "销售电话",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "销售电话"
+  },
+  {
+    "name": "Salesforce",
+    "cat": "客户云",
+    "url": "https://www.salesforce.com",
+    "guide": "https://www.salesforce.com",
+    "desc": "CRM",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "CRM"
+  },
+  {
+    "name": "Zoho",
+    "cat": "办公套件",
+    "url": "https://www.zoho.com",
+    "guide": "https://www.zoho.com",
+    "desc": "办公",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "办公"
+  },
+  {
+    "name": "Airtable",
+    "cat": "表格库",
+    "url": "https://www.airtable.com",
+    "guide": "https://www.airtable.com",
+    "desc": "数据库表格",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据库表格"
+  },
+  {
+    "name": "Monday",
+    "cat": "项目管理",
+    "url": "https://monday.com",
+    "guide": "https://monday.com",
+    "desc": "项目",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "项目"
+  },
+  {
+    "name": "ClickUp",
+    "cat": "任务管理",
+    "url": "https://clickup.com",
+    "guide": "https://clickup.com",
+    "desc": "任务",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "任务"
+  },
+  {
+    "name": "Asana",
+    "cat": "协作",
+    "url": "https://asana.com",
+    "guide": "https://asana.com",
+    "desc": "任务协作",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "任务协作"
+  },
+  {
+    "name": "Trello",
+    "cat": "看板",
+    "url": "https://trello.com",
+    "guide": "https://trello.com",
+    "desc": "看板",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "看板"
+  },
+  {
+    "name": "Linear",
+    "cat": "研发管理",
+    "url": "https://linear.app",
+    "guide": "https://linear.app",
+    "desc": "研发任务",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "研发任务"
+  },
+  {
+    "name": "Jira",
+    "cat": "研发",
+    "url": "https://www.atlassian.com/software/jira",
+    "guide": "https://www.atlassian.com/software/jira",
+    "desc": "研发",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "研发"
+  },
+  {
+    "name": "GitHub",
+    "cat": "代码",
+    "url": "https://github.com",
+    "guide": "https://github.com",
+    "desc": "代码托管",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "代码托管"
+  },
+  {
+    "name": "GitLab",
+    "cat": "代码",
+    "url": "https://gitlab.com",
+    "guide": "https://gitlab.com",
+    "desc": "代码",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "代码"
+  },
+  {
+    "name": "Bitbucket",
+    "cat": "代码",
+    "url": "https://bitbucket.org",
+    "guide": "https://bitbucket.org",
+    "desc": "代码",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "代码"
+  },
+  {
+    "name": "Vercel",
+    "cat": "前端部署",
+    "url": "https://vercel.com",
+    "guide": "https://vercel.com",
+    "desc": "站点部署",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "站点部署"
+  },
+  {
+    "name": "Netlify",
+    "cat": "静态部署",
+    "url": "https://www.netlify.com",
+    "guide": "https://www.netlify.com",
+    "desc": "站点部署",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "站点部署"
+  },
+  {
+    "name": "Cloudflare",
+    "cat": "网络",
+    "url": "https://www.cloudflare.com",
+    "guide": "https://www.cloudflare.com",
+    "desc": "CDN与域名",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "CDN与域名"
+  },
+  {
+    "name": "Render",
+    "cat": "应用托管",
+    "url": "https://render.com",
+    "guide": "https://render.com",
+    "desc": "应用部署",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "应用部署"
+  },
+  {
+    "name": "Railway",
+    "cat": "应用部署",
+    "url": "https://railway.app",
+    "guide": "https://railway.app",
+    "desc": "应用",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "应用"
+  },
+  {
+    "name": "Fly.io",
+    "cat": "边缘部署",
+    "url": "https://fly.io",
+    "guide": "https://fly.io",
+    "desc": "应用",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "应用"
+  },
+  {
+    "name": "Supabase",
+    "cat": "后端",
+    "url": "https://supabase.com",
+    "guide": "https://supabase.com",
+    "desc": "数据库",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据库"
+  },
+  {
+    "name": "Firebase",
+    "cat": "后端",
+    "url": "https://firebase.google.com",
+    "guide": "https://firebase.google.com",
+    "desc": "后端",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "后端"
+  },
+  {
+    "name": "PlanetScale",
+    "cat": "数据库",
+    "url": "https://planetscale.com",
+    "guide": "https://planetscale.com",
+    "desc": "数据库",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据库"
+  },
+  {
+    "name": "Neon",
+    "cat": "数据库",
+    "url": "https://neon.tech",
+    "guide": "https://neon.tech",
+    "desc": "数据库",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据库"
+  },
+  {
+    "name": "Upstash",
+    "cat": "无服务器数据",
+    "url": "https://upstash.com",
+    "guide": "https://upstash.com",
+    "desc": "Redis",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "Redis"
+  },
+  {
+    "name": "Stripe Atlas",
+    "cat": "公司注册",
+    "url": "https://stripe.com/atlas",
+    "guide": "https://stripe.com/atlas",
+    "desc": "公司",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "公司"
+  },
+  {
+    "name": "Firstbase",
+    "cat": "远程公司",
+    "url": "https://www.firstbase.io",
+    "guide": "https://www.firstbase.io",
+    "desc": "公司注册",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "公司注册"
+  },
+  {
+    "name": "Clerky",
+    "cat": "创业法律",
+    "url": "https://www.clerky.com",
+    "guide": "https://www.clerky.com",
+    "desc": "公司文件",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "公司文件"
+  },
+  {
+    "name": "LegalZoom",
+    "cat": "法律服务",
+    "url": "https://www.legalzoom.com",
+    "guide": "https://www.legalzoom.com",
+    "desc": "法律",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "法律"
+  },
+  {
+    "name": "DocuSign",
+    "cat": "电子签",
+    "url": "https://www.docusign.com",
+    "guide": "https://www.docusign.com",
+    "desc": "签约",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "签约"
+  },
+  {
+    "name": "PandaDoc",
+    "cat": "报价签约",
+    "url": "https://www.pandadoc.com",
+    "guide": "https://www.pandadoc.com",
+    "desc": "报价",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "报价"
+  },
+  {
+    "name": "HelloSign",
+    "cat": "电子签",
+    "url": "https://www.hellosign.com",
+    "guide": "https://www.hellosign.com",
+    "desc": "签名",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "签名"
+  },
+  {
+    "name": "Dropbox Sign",
+    "cat": "电子签",
+    "url": "https://sign.dropbox.com",
+    "guide": "https://sign.dropbox.com",
+    "desc": "签名",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "签名"
+  },
+  {
+    "name": "Notion Calendar",
+    "cat": "日历",
+    "url": "https://www.notion.so/product/calendar",
+    "guide": "https://www.notion.so/product/calendar",
+    "desc": "日程",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "日程"
+  },
+  {
+    "name": "Cal.com",
+    "cat": "预约",
+    "url": "https://cal.com",
+    "guide": "https://cal.com",
+    "desc": "预约",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "预约"
+  },
+  {
+    "name": "SavvyCal",
+    "cat": "预约",
+    "url": "https://savvycal.com",
+    "guide": "https://savvycal.com",
+    "desc": "预约",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "预约"
+  },
+  {
+    "name": "Typeform",
+    "cat": "表单",
+    "url": "https://www.typeform.com",
+    "guide": "https://www.typeform.com",
+    "desc": "表单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "表单"
+  },
+  {
+    "name": "Tally",
+    "cat": "表单",
+    "url": "https://tally.so",
+    "guide": "https://tally.so",
+    "desc": "表单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "表单"
+  },
+  {
+    "name": "Jotform",
+    "cat": "表单",
+    "url": "https://www.jotform.com",
+    "guide": "https://www.jotform.com",
+    "desc": "表单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "表单"
+  },
+  {
+    "name": "Fillout",
+    "cat": "表单",
+    "url": "https://www.fillout.com",
+    "guide": "https://www.fillout.com",
+    "desc": "表单",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "表单"
+  },
+  {
+    "name": "Webflow Logic",
+    "cat": "站点逻辑",
+    "url": "https://webflow.com",
+    "guide": "https://webflow.com",
+    "desc": "建站",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "建站"
+  },
+  {
+    "name": "Bubble",
+    "cat": "无代码",
+    "url": "https://bubble.io",
+    "guide": "https://bubble.io",
+    "desc": "无代码应用",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "无代码应用"
+  },
+  {
+    "name": "Softr",
+    "cat": "无代码",
+    "url": "https://www.softr.io",
+    "guide": "https://www.softr.io",
+    "desc": "无代码",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "无代码"
+  },
+  {
+    "name": "Glide",
+    "cat": "无代码应用",
+    "url": "https://www.glideapps.com",
+    "guide": "https://www.glideapps.com",
+    "desc": "应用",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "应用"
+  },
+  {
+    "name": "Adalo",
+    "cat": "无代码",
+    "url": "https://www.adalo.com",
+    "guide": "https://www.adalo.com",
+    "desc": "应用",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "应用"
+  },
+  {
+    "name": "FlutterFlow",
+    "cat": "应用搭建",
+    "url": "https://flutterflow.io",
+    "guide": "https://flutterflow.io",
+    "desc": "应用",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "应用"
+  },
+  {
+    "name": "Retool",
+    "cat": "内部工具",
+    "url": "https://retool.com",
+    "guide": "https://retool.com",
+    "desc": "内部工具",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "内部工具"
+  },
+  {
+    "name": "Appsmith",
+    "cat": "内部工具",
+    "url": "https://www.appsmith.com",
+    "guide": "https://www.appsmith.com",
+    "desc": "内部工具",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "内部工具"
+  },
+  {
+    "name": "Tooljet",
+    "cat": "内部工具",
+    "url": "https://www.tooljet.com",
+    "guide": "https://www.tooljet.com",
+    "desc": "内部工具",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "内部工具"
+  },
+  {
+    "name": "n8n",
+    "cat": "自动化",
+    "url": "https://n8n.io",
+    "guide": "https://n8n.io",
+    "desc": "工作流",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "工作流"
+  },
+  {
+    "name": "Make",
+    "cat": "自动化",
+    "url": "https://www.make.com",
+    "guide": "https://www.make.com",
+    "desc": "自动化",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "自动化"
+  },
+  {
+    "name": "Zapier",
+    "cat": "自动化",
+    "url": "https://zapier.com",
+    "guide": "https://zapier.com",
+    "desc": "连接应用",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "连接应用"
+  },
+  {
+    "name": "Pabbly",
+    "cat": "自动化",
+    "url": "https://www.pabbly.com",
+    "guide": "https://www.pabbly.com",
+    "desc": "自动化",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "自动化"
+  },
+  {
+    "name": "Bardeen",
+    "cat": "浏览器自动化",
+    "url": "https://www.bardeen.ai",
+    "guide": "https://www.bardeen.ai",
+    "desc": "自动化",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "自动化"
+  },
+  {
+    "name": "Browse AI",
+    "cat": "网页抓取",
+    "url": "https://www.browse.ai",
+    "guide": "https://www.browse.ai",
+    "desc": "抓取",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "抓取"
+  },
+  {
+    "name": "Apify",
+    "cat": "网页抓取",
+    "url": "https://apify.com",
+    "guide": "https://apify.com",
+    "desc": "抓取",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "抓取"
+  },
+  {
+    "name": "ScrapingBee",
+    "cat": "抓取接口",
+    "url": "https://www.scrapingbee.com",
+    "guide": "https://www.scrapingbee.com",
+    "desc": "抓取",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "抓取"
+  },
+  {
+    "name": "Bright Data",
+    "cat": "数据代理",
+    "url": "https://brightdata.com",
+    "guide": "https://brightdata.com",
+    "desc": "代理数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "代理数据"
+  },
+  {
+    "name": "Oxylabs",
+    "cat": "代理",
+    "url": "https://oxylabs.io",
+    "guide": "https://oxylabs.io",
+    "desc": "代理",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "代理"
+  },
+  {
+    "name": "Smartproxy",
+    "cat": "代理",
+    "url": "https://smartproxy.com",
+    "guide": "https://smartproxy.com",
+    "desc": "代理",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "代理"
+  },
+  {
+    "name": "IPRoyal",
+    "cat": "代理",
+    "url": "https://iproyal.com",
+    "guide": "https://iproyal.com",
+    "desc": "代理",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "代理"
+  },
+  {
+    "name": "Soax",
+    "cat": "代理",
+    "url": "https://soax.com",
+    "guide": "https://soax.com",
+    "desc": "代理",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "代理"
+  },
+  {
+    "name": "Multilogin",
+    "cat": "多开浏览器",
+    "url": "https://multilogin.com",
+    "guide": "https://multilogin.com",
+    "desc": "多账号",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "多账号"
+  },
+  {
+    "name": "GoLogin",
+    "cat": "多开",
+    "url": "https://gologin.com",
+    "guide": "https://gologin.com",
+    "desc": "指纹浏览器",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "指纹浏览器"
+  },
+  {
+    "name": "AdsPower",
+    "cat": "多开",
+    "url": "https://www.adspower.com",
+    "guide": "https://www.adspower.com",
+    "desc": "指纹浏览器",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "指纹浏览器"
+  },
+  {
+    "name": "Dolphin",
+    "cat": "多开",
+    "url": "https://dolphin-anty.com",
+    "guide": "https://dolphin-anty.com",
+    "desc": "指纹浏览器",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "指纹浏览器"
+  },
+  {
+    "name": "Incogniton",
+    "cat": "多开",
+    "url": "https://incogniton.com",
+    "guide": "https://incogniton.com",
+    "desc": "指纹浏览器",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "指纹浏览器"
+  },
+  {
+    "name": "MoreLogin",
+    "cat": "多开",
+    "url": "https://www.morelogin.com",
+    "guide": "https://www.morelogin.com",
+    "desc": "指纹浏览器",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "指纹浏览器"
+  },
+  {
+    "name": "Lalicat",
+    "cat": "多开",
+    "url": "https://www.lalicat.com",
+    "guide": "https://www.lalicat.com",
+    "desc": "指纹浏览器",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "指纹浏览器"
+  },
+  {
+    "name": "Hubstudio",
+    "cat": "多开",
+    "url": "https://www.hubstudio.cn",
+    "guide": "https://www.hubstudio.cn",
+    "desc": "指纹浏览器",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "指纹浏览器"
+  },
+  {
+    "name": "VMLogin",
+    "cat": "多开",
+    "url": "https://www.vmlogin.com",
+    "guide": "https://www.vmlogin.com",
+    "desc": "指纹浏览器",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "指纹浏览器"
+  },
+  {
+    "name": "Kameleo",
+    "cat": "多开",
+    "url": "https://kameleo.io",
+    "guide": "https://kameleo.io",
+    "desc": "指纹浏览器",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "指纹浏览器"
+  },
+  {
+    "name": "SessionBox",
+    "cat": "多会话",
+    "url": "https://sessionbox.io",
+    "guide": "https://sessionbox.io",
+    "desc": "多账号",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "多账号"
+  },
+  {
+    "name": "Firefox Multi",
+    "cat": "多账户",
+    "url": "https://www.mozilla.org",
+    "guide": "https://www.mozilla.org",
+    "desc": "浏览器",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "浏览器"
+  },
+  {
+    "name": "Bitwarden",
+    "cat": "密码",
+    "url": "https://bitwarden.com",
+    "guide": "https://bitwarden.com",
+    "desc": "密码管理",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "密码管理"
+  },
+  {
+    "name": "1Password",
+    "cat": "密码",
+    "url": "https://1password.com",
+    "guide": "https://1password.com",
+    "desc": "密码",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "密码"
+  },
+  {
+    "name": "LastPass",
+    "cat": "密码",
+    "url": "https://www.lastpass.com",
+    "guide": "https://www.lastpass.com",
+    "desc": "密码",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "密码"
+  },
+  {
+    "name": "Dashlane",
+    "cat": "密码",
+    "url": "https://www.dashlane.com",
+    "guide": "https://www.dashlane.com",
+    "desc": "密码",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "密码"
+  },
+  {
+    "name": "NordPass",
+    "cat": "密码",
+    "url": "https://nordpass.com",
+    "guide": "https://nordpass.com",
+    "desc": "密码",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "密码"
+  },
+  {
+    "name": "Proton",
+    "cat": "隐私套件",
+    "url": "https://proton.me",
+    "guide": "https://proton.me",
+    "desc": "邮箱与存储",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮箱与存储"
+  },
+  {
+    "name": "Tutanota",
+    "cat": "加密邮箱",
+    "url": "https://tutanota.com",
+    "guide": "https://tutanota.com",
+    "desc": "邮箱",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮箱"
+  },
+  {
+    "name": "Fastmail",
+    "cat": "邮箱",
+    "url": "https://www.fastmail.com",
+    "guide": "https://www.fastmail.com",
+    "desc": "邮箱",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮箱"
+  },
+  {
+    "name": "Migadu",
+    "cat": "域名邮箱",
+    "url": "https://migadu.com",
+    "guide": "https://migadu.com",
+    "desc": "邮箱",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮箱"
+  },
+  {
+    "name": "ImprovMX",
+    "cat": "转发邮箱",
+    "url": "https://improvmx.com",
+    "guide": "https://improvmx.com",
+    "desc": "邮箱转发",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮箱转发"
+  },
+  {
+    "name": "Cloudflare Email",
+    "cat": "邮件路由",
+    "url": "https://www.cloudflare.com",
+    "guide": "https://www.cloudflare.com",
+    "desc": "邮件",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮件"
+  },
+  {
+    "name": "Zoho Mail",
+    "cat": "域名邮箱",
+    "url": "https://www.zoho.com/mail",
+    "guide": "https://www.zoho.com/mail",
+    "desc": "邮箱",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮箱"
+  },
+  {
+    "name": "Google Workspace",
+    "cat": "企业邮箱",
+    "url": "https://workspace.google.com",
+    "guide": "https://workspace.google.com",
+    "desc": "邮箱",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "邮箱"
+  },
+  {
+    "name": "Microsoft 365",
+    "cat": "办公邮箱",
+    "url": "https://www.microsoft.com/microsoft-365",
+    "guide": "https://www.microsoft.com/microsoft-365",
+    "desc": "办公",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "办公"
+  },
+  {
+    "name": "Slack",
+    "cat": "团队消息",
+    "url": "https://slack.com",
+    "guide": "https://slack.com",
+    "desc": "协作",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "协作"
+  },
+  {
+    "name": "Discord Stage",
+    "cat": "语音社区",
+    "url": "https://discord.com",
+    "guide": "https://discord.com",
+    "desc": "社区",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "社区"
+  },
+  {
+    "name": "Telegram Ads",
+    "cat": "频道广告",
+    "url": "https://ads.telegram.org",
+    "guide": "https://ads.telegram.org",
+    "desc": "广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告"
+  },
+  {
+    "name": "X Ads",
+    "cat": "信息流广告",
+    "url": "https://ads.x.com",
+    "guide": "https://ads.x.com",
+    "desc": "广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告"
+  },
+  {
+    "name": "Meta Ads",
+    "cat": "社交广告",
+    "url": "https://www.facebook.com/business",
+    "guide": "https://www.facebook.com/business",
+    "desc": "广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告"
+  },
+  {
+    "name": "TikTok Ads",
+    "cat": "短视频广告",
+    "url": "https://ads.tiktok.com",
+    "guide": "https://ads.tiktok.com",
+    "desc": "广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告"
+  },
+  {
+    "name": "Google Ads",
+    "cat": "搜索广告",
+    "url": "https://ads.google.com",
+    "guide": "https://ads.google.com",
+    "desc": "广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告"
+  },
+  {
+    "name": "Bing Ads",
+    "cat": "搜索广告",
+    "url": "https://ads.microsoft.com",
+    "guide": "https://ads.microsoft.com",
+    "desc": "广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告"
+  },
+  {
+    "name": "Taboola",
+    "cat": "内容推荐",
+    "url": "https://www.taboola.com",
+    "guide": "https://www.taboola.com",
+    "desc": "原生广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "原生广告"
+  },
+  {
+    "name": "Outbrain",
+    "cat": "内容推荐",
+    "url": "https://www.outbrain.com",
+    "guide": "https://www.outbrain.com",
+    "desc": "原生广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "原生广告"
+  },
+  {
+    "name": "Revcontent",
+    "cat": "内容广告",
+    "url": "https://www.revcontent.com",
+    "guide": "https://www.revcontent.com",
+    "desc": "原生",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "原生"
+  },
+  {
+    "name": "MGID",
+    "cat": "内容广告",
+    "url": "https://www.mgid.com",
+    "guide": "https://www.mgid.com",
+    "desc": "原生",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "原生"
+  },
+  {
+    "name": "Adcash",
+    "cat": "广告网络",
+    "url": "https://adcash.com",
+    "guide": "https://adcash.com",
+    "desc": "广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告"
+  },
+  {
+    "name": "ExoClick",
+    "cat": "广告",
+    "url": "https://www.exoclick.com",
+    "guide": "https://www.exoclick.com",
+    "desc": "广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告"
+  },
+  {
+    "name": "TrafficJunky",
+    "cat": "广告",
+    "url": "https://www.trafficjunky.com",
+    "guide": "https://www.trafficjunky.com",
+    "desc": "广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告"
+  },
+  {
+    "name": "JuicyAds",
+    "cat": "广告",
+    "url": "https://www.juicyads.com",
+    "guide": "https://www.juicyads.com",
+    "desc": "广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告"
+  },
+  {
+    "name": "PlugRush",
+    "cat": "流量",
+    "url": "https://www.plugrush.com",
+    "guide": "https://www.plugrush.com",
+    "desc": "流量",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "流量"
+  },
+  {
+    "name": "PopAds",
+    "cat": "弹窗",
+    "url": "https://www.popads.net",
+    "guide": "https://www.popads.net",
+    "desc": "流量",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "流量"
+  },
+  {
+    "name": "HilltopAds",
+    "cat": "广告",
+    "url": "https://hilltopads.com",
+    "guide": "https://hilltopads.com",
+    "desc": "广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告"
+  },
+  {
+    "name": "Galaksion",
+    "cat": "推送",
+    "url": "https://galaksion.com",
+    "guide": "https://galaksion.com",
+    "desc": "推送",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "推送"
+  },
+  {
+    "name": "RichAds",
+    "cat": "推送",
+    "url": "https://richads.com",
+    "guide": "https://richads.com",
+    "desc": "推送",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "推送"
+  },
+  {
+    "name": "RollerAds",
+    "cat": "推送",
+    "url": "https://rollerads.com",
+    "guide": "https://rollerads.com",
+    "desc": "推送",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "推送"
+  },
+  {
+    "name": "Clickadu",
+    "cat": "广告",
+    "url": "https://clickadu.com",
+    "guide": "https://clickadu.com",
+    "desc": "广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告"
+  },
+  {
+    "name": "AdMaven",
+    "cat": "广告",
+    "url": "https://ad-maven.com",
+    "guide": "https://ad-maven.com",
+    "desc": "广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告"
+  },
+  {
+    "name": "Monetag",
+    "cat": "站长变现",
+    "url": "https://monetag.com",
+    "guide": "https://monetag.com",
+    "desc": "变现",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "变现"
+  },
+  {
+    "name": "AdSense Alternatives",
+    "cat": "广告替代",
+    "url": "https://www.ezoic.com",
+    "guide": "https://www.ezoic.com",
+    "desc": "广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告"
+  },
+  {
+    "name": "Carbon Ads",
+    "cat": "开发者广告",
+    "url": "https://www.carbonads.net",
+    "guide": "https://www.carbonads.net",
+    "desc": "开发者广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "开发者广告"
+  },
+  {
+    "name": "EthicalAds",
+    "cat": "开发者广告",
+    "url": "https://www.ethicalads.io",
+    "guide": "https://www.ethicalads.io",
+    "desc": "开发者广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "开发者广告"
+  },
+  {
+    "name": "BuySellAds",
+    "cat": "广告位",
+    "url": "https://www.buysellads.com",
+    "guide": "https://www.buysellads.com",
+    "desc": "广告位",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "广告位"
+  },
+  {
+    "name": "Passionfroot",
+    "cat": "创作者广告",
+    "url": "https://www.passionfroot.me",
+    "guide": "https://www.passionfroot.me",
+    "desc": "创作者赞助",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "创作者赞助"
+  },
+  {
+    "name": "Paved",
+    "cat": "通讯广告",
+    "url": "https://www.paved.com",
+    "guide": "https://www.paved.com",
+    "desc": "Newsletter广告",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "Newsletter广告"
+  },
+  {
+    "name": "SparkLoop",
+    "cat": "通讯推荐",
+    "url": "https://sparkloop.app",
+    "guide": "https://sparkloop.app",
+    "desc": "推荐分成",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "推荐分成"
+  },
+  {
+    "name": "Refind",
+    "cat": "内容推荐",
+    "url": "https://refind.com",
+    "guide": "https://refind.com",
+    "desc": "内容",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "内容"
+  },
+  {
+    "name": "Flipboard",
+    "cat": "内容聚合",
+    "url": "https://flipboard.com",
+    "guide": "https://flipboard.com",
+    "desc": "内容",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "内容"
+  },
+  {
+    "name": "Feedly",
+    "cat": "订阅阅读",
+    "url": "https://feedly.com",
+    "guide": "https://feedly.com",
+    "desc": "RSS",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "RSS"
+  },
+  {
+    "name": "Inoreader",
+    "cat": "订阅阅读",
+    "url": "https://www.inoreader.com",
+    "guide": "https://www.inoreader.com",
+    "desc": "RSS",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "RSS"
+  },
+  {
+    "name": "Readwise",
+    "cat": "阅读回顾",
+    "url": "https://readwise.io",
+    "guide": "https://readwise.io",
+    "desc": "阅读",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "阅读"
+  },
+  {
+    "name": "Matter",
+    "cat": "稍后读",
+    "url": "https://hq.getmatter.com",
+    "guide": "https://hq.getmatter.com",
+    "desc": "阅读",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "阅读"
+  },
+  {
+    "name": "Pocket",
+    "cat": "稍后读",
+    "url": "https://getpocket.com",
+    "guide": "https://getpocket.com",
+    "desc": "稍后读",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "稍后读"
+  },
+  {
+    "name": "Instapaper",
+    "cat": "稍后读",
+    "url": "https://www.instapaper.com",
+    "guide": "https://www.instapaper.com",
+    "desc": "稍后读",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "稍后读"
+  },
+  {
+    "name": "Raindrop",
+    "cat": "书签",
+    "url": "https://raindrop.io",
+    "guide": "https://raindrop.io",
+    "desc": "书签",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "书签"
+  },
+  {
+    "name": "Are.na",
+    "cat": "收集",
+    "url": "https://www.are.na",
+    "guide": "https://www.are.na",
+    "desc": "收集",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "收集"
+  },
+  {
+    "name": "Mymind",
+    "cat": "收集",
+    "url": "https://mymind.com",
+    "guide": "https://mymind.com",
+    "desc": "收藏",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "收藏"
+  },
+  {
+    "name": "Notion Web Clipper",
+    "cat": "剪藏",
+    "url": "https://www.notion.so",
+    "guide": "https://www.notion.so",
+    "desc": "剪藏",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "剪藏"
+  },
+  {
+    "name": "Obsidian",
+    "cat": "本地笔记",
+    "url": "https://obsidian.md",
+    "guide": "https://obsidian.md",
+    "desc": "笔记",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "笔记"
+  },
+  {
+    "name": "Logseq",
+    "cat": "大纲笔记",
+    "url": "https://logseq.com",
+    "guide": "https://logseq.com",
+    "desc": "笔记",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "笔记"
+  },
+  {
+    "name": "Roam",
+    "cat": "双向笔记",
+    "url": "https://roamresearch.com",
+    "guide": "https://roamresearch.com",
+    "desc": "笔记",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "笔记"
+  },
+  {
+    "name": "Craft",
+    "cat": "文档",
+    "url": "https://www.craft.do",
+    "guide": "https://www.craft.do",
+    "desc": "文档",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "文档"
+  },
+  {
+    "name": "Coda",
+    "cat": "文档应用",
+    "url": "https://coda.io",
+    "guide": "https://coda.io",
+    "desc": "文档",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "文档"
+  },
+  {
+    "name": "Slite",
+    "cat": "团队文档",
+    "url": "https://slite.com",
+    "guide": "https://slite.com",
+    "desc": "文档",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "文档"
+  },
+  {
+    "name": "GitBook",
+    "cat": "文档站",
+    "url": "https://www.gitbook.com",
+    "guide": "https://www.gitbook.com",
+    "desc": "文档",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "文档"
+  },
+  {
+    "name": "ReadMe",
+    "cat": "接口文档",
+    "url": "https://readme.com",
+    "guide": "https://readme.com",
+    "desc": "文档",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "文档"
+  },
+  {
+    "name": "Docusaurus",
+    "cat": "文档站",
+    "url": "https://docusaurus.io",
+    "guide": "https://docusaurus.io",
+    "desc": "文档",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "文档"
+  },
+  {
+    "name": "Mintlify",
+    "cat": "文档",
+    "url": "https://mintlify.com",
+    "guide": "https://mintlify.com",
+    "desc": "文档",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "文档"
+  },
+  {
+    "name": "Fathom",
+    "cat": "隐私统计",
+    "url": "https://usefathom.com",
+    "guide": "https://usefathom.com",
+    "desc": "统计",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "统计"
+  },
+  {
+    "name": "Plausible",
+    "cat": "隐私统计",
+    "url": "https://plausible.io",
+    "guide": "https://plausible.io",
+    "desc": "统计",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "统计"
+  },
+  {
+    "name": "Umami",
+    "cat": "自托管统计",
+    "url": "https://umami.is",
+    "guide": "https://umami.is",
+    "desc": "统计",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "统计"
+  },
+  {
+    "name": "PostHog",
+    "cat": "产品分析",
+    "url": "https://posthog.com",
+    "guide": "https://posthog.com",
+    "desc": "分析",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "分析"
+  },
+  {
+    "name": "Mixpanel",
+    "cat": "行为分析",
+    "url": "https://mixpanel.com",
+    "guide": "https://mixpanel.com",
+    "desc": "分析",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "分析"
+  },
+  {
+    "name": "Amplitude",
+    "cat": "产品分析",
+    "url": "https://amplitude.com",
+    "guide": "https://amplitude.com",
+    "desc": "分析",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "分析"
+  },
+  {
+    "name": "Heap",
+    "cat": "自动分析",
+    "url": "https://www.heap.io",
+    "guide": "https://www.heap.io",
+    "desc": "分析",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "分析"
+  },
+  {
+    "name": "Hotjar",
+    "cat": "热图",
+    "url": "https://www.hotjar.com",
+    "guide": "https://www.hotjar.com",
+    "desc": "热图",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "热图"
+  },
+  {
+    "name": "Microsoft Clarity",
+    "cat": "热图",
+    "url": "https://clarity.microsoft.com",
+    "guide": "https://clarity.microsoft.com",
+    "desc": "热图",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "热图"
+  },
+  {
+    "name": "FullStory",
+    "cat": "回放",
+    "url": "https://www.fullstory.com",
+    "guide": "https://www.fullstory.com",
+    "desc": "回放",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "回放"
+  },
+  {
+    "name": "LogRocket",
+    "cat": "回放",
+    "url": "https://logrocket.com",
+    "guide": "https://logrocket.com",
+    "desc": "回放",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "回放"
+  },
+  {
+    "name": "Sentry",
+    "cat": "错误监控",
+    "url": "https://sentry.io",
+    "guide": "https://sentry.io",
+    "desc": "错误",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "错误"
+  },
+  {
+    "name": "Datadog",
+    "cat": "监控",
+    "url": "https://www.datadoghq.com",
+    "guide": "https://www.datadoghq.com",
+    "desc": "监控",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "监控"
+  },
+  {
+    "name": "New Relic",
+    "cat": "监控",
+    "url": "https://newrelic.com",
+    "guide": "https://newrelic.com",
+    "desc": "监控",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "监控"
+  },
+  {
+    "name": "Grafana",
+    "cat": "仪表盘",
+    "url": "https://grafana.com",
+    "guide": "https://grafana.com",
+    "desc": "监控",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "监控"
+  },
+  {
+    "name": "UptimeRobot",
+    "cat": "可用性",
+    "url": "https://uptimerobot.com",
+    "guide": "https://uptimerobot.com",
+    "desc": "监控",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "监控"
+  },
+  {
+    "name": "Better Stack",
+    "cat": "状态页",
+    "url": "https://betterstack.com",
+    "guide": "https://betterstack.com",
+    "desc": "监控",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "监控"
+  },
+  {
+    "name": "Statuspage",
+    "cat": "状态页",
+    "url": "https://www.atlassian.com/software/statuspage",
+    "guide": "https://www.atlassian.com/software/statuspage",
+    "desc": "状态",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "状态"
+  },
+  {
+    "name": "Pingdom",
+    "cat": "可用性",
+    "url": "https://www.pingdom.com",
+    "guide": "https://www.pingdom.com",
+    "desc": "监控",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "监控"
+  },
+  {
+    "name": "Oh Dear",
+    "cat": "站点监控",
+    "url": "https://ohdear.app",
+    "guide": "https://ohdear.app",
+    "desc": "监控",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "监控"
+  },
+  {
+    "name": "Cronitor",
+    "cat": "定时任务",
+    "url": "https://cronitor.io",
+    "guide": "https://cronitor.io",
+    "desc": "监控",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "监控"
+  },
+  {
+    "name": "Healthchecks",
+    "cat": "定时监控",
+    "url": "https://healthchecks.io",
+    "guide": "https://healthchecks.io",
+    "desc": "监控",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "监控"
+  },
+  {
+    "name": "IFTTT",
+    "cat": "简单自动化",
+    "url": "https://ifttt.com",
+    "guide": "https://ifttt.com",
+    "desc": "自动化",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "自动化"
+  },
+  {
+    "name": "Albato",
+    "cat": "自动化",
+    "url": "https://albato.com",
+    "guide": "https://albato.com",
+    "desc": "自动化",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "自动化"
+  },
+  {
+    "name": "Integrately",
+    "cat": "自动化",
+    "url": "https://integrately.com",
+    "guide": "https://integrately.com",
+    "desc": "自动化",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "自动化"
+  },
+  {
+    "name": "Workato",
+    "cat": "企业自动化",
+    "url": "https://www.workato.com",
+    "guide": "https://www.workato.com",
+    "desc": "自动化",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "自动化"
+  },
+  {
+    "name": "Tray",
+    "cat": "自动化",
+    "url": "https://tray.io",
+    "guide": "https://tray.io",
+    "desc": "自动化",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "自动化"
+  },
+  {
+    "name": "Parabola",
+    "cat": "数据流",
+    "url": "https://parabola.io",
+    "guide": "https://parabola.io",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "Coupler",
+    "cat": "数据同步",
+    "url": "https://www.coupler.io",
+    "guide": "https://www.coupler.io",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "Coefficient",
+    "cat": "表格同步",
+    "url": "https://coefficient.io",
+    "guide": "https://coefficient.io",
+    "desc": "表格",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "表格"
+  },
+  {
+    "name": "Rows",
+    "cat": "表格",
+    "url": "https://rows.com",
+    "guide": "https://rows.com",
+    "desc": "表格",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "表格"
+  },
+  {
+    "name": "Coda Tables",
+    "cat": "表格",
+    "url": "https://coda.io",
+    "guide": "https://coda.io",
+    "desc": "表格",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "表格"
+  },
+  {
+    "name": "Smartsheet",
+    "cat": "表格",
+    "url": "https://www.smartsheet.com",
+    "guide": "https://www.smartsheet.com",
+    "desc": "表格",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "表格"
+  },
+  {
+    "name": "Excel",
+    "cat": "表格",
+    "url": "https://www.microsoft.com/microsoft-365/excel",
+    "guide": "https://www.microsoft.com/microsoft-365/excel",
+    "desc": "表格",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "表格"
+  },
+  {
+    "name": "Google Sheets",
+    "cat": "表格",
+    "url": "https://sheets.google.com",
+    "guide": "https://sheets.google.com",
+    "desc": "表格",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "表格"
+  },
+  {
+    "name": "Canva Docs",
+    "cat": "文档设计",
+    "url": "https://www.canva.com",
+    "guide": "https://www.canva.com",
+    "desc": "设计",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "设计"
+  },
+  {
+    "name": "Gamma",
+    "cat": "演示文稿",
+    "url": "https://gamma.app",
+    "guide": "https://gamma.app",
+    "desc": "演示",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "演示"
+  },
+  {
+    "name": "Tome",
+    "cat": "演示",
+    "url": "https://tome.app",
+    "guide": "https://tome.app",
+    "desc": "演示",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "演示"
+  },
+  {
+    "name": "Beautiful.ai",
+    "cat": "演示",
+    "url": "https://www.beautiful.ai",
+    "guide": "https://www.beautiful.ai",
+    "desc": "演示",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "演示"
+  },
+  {
+    "name": "Pitch",
+    "cat": "演示",
+    "url": "https://pitch.com",
+    "guide": "https://pitch.com",
+    "desc": "演示",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "演示"
+  },
+  {
+    "name": "Prezi",
+    "cat": "演示",
+    "url": "https://prezi.com",
+    "guide": "https://prezi.com",
+    "desc": "演示",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "演示"
+  },
+  {
+    "name": "Slidesgo",
+    "cat": "模板",
+    "url": "https://slidesgo.com",
+    "guide": "https://slidesgo.com",
+    "desc": "模板",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "模板"
+  },
+  {
+    "name": "Slidebean",
+    "cat": "融资演示",
+    "url": "https://slidebean.com",
+    "guide": "https://slidebean.com",
+    "desc": "演示",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "演示"
+  },
+  {
+    "name": "Visme",
+    "cat": "视觉内容",
+    "url": "https://www.visme.co",
+    "guide": "https://www.visme.co",
+    "desc": "设计",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "设计"
+  },
+  {
+    "name": "Piktochart",
+    "cat": "信息图",
+    "url": "https://piktochart.com",
+    "guide": "https://piktochart.com",
+    "desc": "信息图",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "信息图"
+  },
+  {
+    "name": "Infogram",
+    "cat": "图表",
+    "url": "https://infogram.com",
+    "guide": "https://infogram.com",
+    "desc": "图表",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图表"
+  },
+  {
+    "name": "Flourish",
+    "cat": "数据图",
+    "url": "https://flourish.studio",
+    "guide": "https://flourish.studio",
+    "desc": "图表",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图表"
+  },
+  {
+    "name": "Datawrapper",
+    "cat": "图表",
+    "url": "https://www.datawrapper.de",
+    "guide": "https://www.datawrapper.de",
+    "desc": "图表",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "图表"
+  },
+  {
+    "name": "Observable",
+    "cat": "数据笔记",
+    "url": "https://observablehq.com",
+    "guide": "https://observablehq.com",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "Hex",
+    "cat": "数据",
+    "url": "https://hex.tech",
+    "guide": "https://hex.tech",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "Mode",
+    "cat": "数据",
+    "url": "https://mode.com",
+    "guide": "https://mode.com",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "Metabase",
+    "cat": "开源报表",
+    "url": "https://www.metabase.com",
+    "guide": "https://www.metabase.com",
+    "desc": "报表",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "报表"
+  },
+  {
+    "name": "Looker Studio",
+    "cat": "报表",
+    "url": "https://lookerstudio.google.com",
+    "guide": "https://lookerstudio.google.com",
+    "desc": "报表",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "报表"
+  },
+  {
+    "name": "Power BI",
+    "cat": "报表",
+    "url": "https://powerbi.microsoft.com",
+    "guide": "https://powerbi.microsoft.com",
+    "desc": "报表",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "报表"
+  },
+  {
+    "name": "Tableau",
+    "cat": "报表",
+    "url": "https://www.tableau.com",
+    "guide": "https://www.tableau.com",
+    "desc": "报表",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "报表"
+  },
+  {
+    "name": "Qlik",
+    "cat": "报表",
+    "url": "https://www.qlik.com",
+    "guide": "https://www.qlik.com",
+    "desc": "报表",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "报表"
+  },
+  {
+    "name": "Domo",
+    "cat": "数据",
+    "url": "https://www.domo.com",
+    "guide": "https://www.domo.com",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "Sisense",
+    "cat": "数据",
+    "url": "https://www.sisense.com",
+    "guide": "https://www.sisense.com",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "ThoughtSpot",
+    "cat": "搜索分析",
+    "url": "https://www.thoughtspot.com",
+    "guide": "https://www.thoughtspot.com",
+    "desc": "分析",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "分析"
+  },
+  {
+    "name": "Alteryx",
+    "cat": "数据准备",
+    "url": "https://www.alteryx.com",
+    "guide": "https://www.alteryx.com",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "dbt",
+    "cat": "数据转换",
+    "url": "https://www.getdbt.com",
+    "guide": "https://www.getdbt.com",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "Fivetran",
+    "cat": "数据同步",
+    "url": "https://www.fivetran.com",
+    "guide": "https://www.fivetran.com",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "Airbyte",
+    "cat": "数据同步",
+    "url": "https://airbyte.com",
+    "guide": "https://airbyte.com",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "Stitch",
+    "cat": "数据同步",
+    "url": "https://www.stitchdata.com",
+    "guide": "https://www.stitchdata.com",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "Segment",
+    "cat": "客户数据",
+    "url": "https://segment.com",
+    "guide": "https://segment.com",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "RudderStack",
+    "cat": "客户数据",
+    "url": "https://www.rudderstack.com",
+    "guide": "https://www.rudderstack.com",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "mParticle",
+    "cat": "客户数据",
+    "url": "https://www.mparticle.com",
+    "guide": "https://www.mparticle.com",
+    "desc": "数据",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "数据"
+  },
+  {
+    "name": "Tealium",
+    "cat": "标签管理",
+    "url": "https://tealium.com",
+    "guide": "https://tealium.com",
+    "desc": "标签",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "标签"
+  },
+  {
+    "name": "Google Tag Manager",
+    "cat": "标签",
+    "url": "https://tagmanager.google.com",
+    "guide": "https://tagmanager.google.com",
+    "desc": "标签",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "标签"
+  },
+  {
+    "name": "OneTrust",
+    "cat": "隐私合规",
+    "url": "https://www.onetrust.com",
+    "guide": "https://www.onetrust.com",
+    "desc": "合规",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "合规"
+  },
+  {
+    "name": "Cookiebot",
+    "cat": "Cookie",
+    "url": "https://www.cookiebot.com",
+    "guide": "https://www.cookiebot.com",
+    "desc": "合规",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "合规"
+  },
+  {
+    "name": "Iubenda",
+    "cat": "隐私政策",
+    "url": "https://www.iubenda.com",
+    "guide": "https://www.iubenda.com",
+    "desc": "合规",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "合规"
+  },
+  {
+    "name": "Termly",
+    "cat": "条款生成",
+    "url": "https://termly.io",
+    "guide": "https://termly.io",
+    "desc": "合规",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "合规"
+  },
+  {
+    "name": "Osano",
+    "cat": "隐私",
+    "url": "https://www.osano.com",
+    "guide": "https://www.osano.com",
+    "desc": "合规",
+    "how": "打开官网看联盟或注册入口",
+    "free": true,
+    "desc_en": "合规"
+  }
+]
