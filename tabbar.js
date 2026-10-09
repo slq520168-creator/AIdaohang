@@ -27,7 +27,7 @@
   var keys={pic:'tab_pic',novel:'tab_novel',movie:'tab_movie',home:'home',xiaonuan:'tab_xiaonuan',order:'tab_order',near:'tab_near'};
   var fbs={pic:'图片',novel:'小说',movie:'电影',home:'首页',xiaonuan:'小暖',order:'接单',near:'附近'};
   var items=[
-    {id:'pic',href:'./draw.html?v=319',img:'./img/tab-pic.jpg?v=292',p:'M4 5h16v14H4zM4 15l4-4 3 3 3-4 6 5'},
+    {id:'pic',href:'./draw.html?v=321',img:'./img/tab-pic.jpg?v=292',p:'M4 5h16v14H4zM4 15l4-4 3 3 3-4 6 5'},
     {id:'novel',href:'./novel.html?v=319',img:'./img/tab-novel.jpg?v=292',p:'M5 4h10a3 3 0 013 3v13H8a3 3 0 00-3 3V4zM8 20a3 3 0 013-3h10'},
     {id:'movie',href:'./movie.html?v=319',img:'./img/tab-movie.jpg?v=292',p:'M4 7h16v10H4zM8 7l-3-3M16 7l3-3M10 12h4'},
     {id:'home',href:'./tools.html?home=1',img:'./img/tab-home.jpg?v=292',p:'M4 11l8-7 8 7v9H4z'},
