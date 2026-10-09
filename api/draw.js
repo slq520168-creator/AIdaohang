@@ -43,9 +43,9 @@ module.exports = async function handler(req, res) {
   const seed = String(Date.now() % 1999999999);
   const enc = encodeURIComponent(prompt);
   const list = [
-    "https://image.pollinations.ai/prompt/" + enc + "?width=" + w + "&height=" + h + "&seed=" + seed + "&model=flux&nologo=true&enhance=true",
-    "https://gen.pollinations.ai/image/" + enc + "?model=flux&width=" + w + "&height=" + h + "&seed=" + seed + "&nologo=true",
-    "https://image.pollinations.ai/prompt/" + enc + "?width=" + w + "&height=" + h + "&model=flux&nologo=true"
+    "https://image.pollinations.ai/prompt/" + enc + "?width=" + w + "&height=" + h + "&seed=" + seed + "&model=flux-realism&nologo=true&enhance=true",
+    "https://gen.pollinations.ai/image/" + enc + "?model=flux-realism&width=" + w + "&height=" + h + "&seed=" + seed + "&nologo=true",
+    "https://image.pollinations.ai/prompt/" + enc + "?width=" + w + "&height=" + h + "&model=flux-realism&nologo=true"
   ];
   for (let i = 0; i < list.length; i++) {
     try {

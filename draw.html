@@ -22,7 +22,7 @@ textarea{width:100%;min-height:110px;border:1px solid var(--line);border-radius:
 .bar button.on{border-color:#2563eb}
 .bar span{display:block;font-size:11px;color:var(--muted)}
 .bar b{font-size:14px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.chips[hidden]{display:none}
 .chips button{height:32px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--txt);font-size:13px}
 .chips button.on{background:#2563eb;color:#fff;border:0}
 .out-title{font-size:14px;font-weight:800;margin:8px 2px}
@@ -69,7 +69,13 @@ function fill(box,items,key,cur,label){box.innerHTML=items.map(function(x,i){var
 fill(document.getElementById("pStyle"),STYLES,"style",st.style,"lStyle");
 fill(document.getElementById("pShape"),SHAPES,"shape",st.shape,"lShape");
 fill(document.getElementById("pCount"),COUNTS,"count",st.count,"lCount");
-document.querySelector(".bar").onclick=function(e){var b=e.target.closest("[data-open]");if(!b)return;["pStyle","pShape","pCount"].forEach(function(id){var el=document.getElementById(id);el.hidden=id!=="p"+b.dataset.open[0].toUpperCase()+b.dataset.open.slice(1)||!el.hidden;});};
+document.querySelector(".bar").onclick=function(e){
+  var b=e.target.closest("[data-open]"); if(!b) return;
+  var map={style:"pStyle",shape:"pShape",count:"pCount"};
+  var id=map[b.dataset.open];
+  ["pStyle","pShape","pCount"].forEach(function(x){var el=document.getElementById(x); if(x!==id) el.hidden=true;});
+  var cur=document.getElementById(id); cur.hidden=!cur.hidden;
+};
 document.getElementById("own").onclick=function(){var m=document.getElementById("maker");m.style.display=m.style.display==="none"?"block":"none";};
 document.getElementById("clear").onclick=function(){document.getElementById("p").value="";};
 function card(name,prompt,url){var d=document.createElement("div");d.className="shot";d.innerHTML='<img alt=""><div class="meta"><b></b><button type="button">复制</button></div>';d.querySelector("img").src=url;d.querySelector("b").textContent=name;d.querySelector("button").onclick=function(){navigator.clipboard.writeText(prompt).then(function(){d.querySelector("button").textContent="已复制";});};return d;}
