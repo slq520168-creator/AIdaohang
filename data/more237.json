@@ -1,4 +1,9 @@
 [
+  {"name":"Carling","cat":"视频","url":"https://klingai.com","desc":"快手口播第一个。对应可灵 Kling，文生/图生视频","how":"打开官网，文字或图片生成短视频","free":true,"tags":["视频","短视频"]},
+  {"name":"Seedance","cat":"视频","url":"https://dreamina.capcut.com","desc":"即梦国际视频模型，短视频成片","how":"登录 Dreamina 选视频生成","free":true,"tags":["视频","短视频"]},
+  {"name":"Vidu","cat":"视频","url":"https://www.vidu.cn","desc":"国产视频生成，角色和镜头控制","how":"写提示或上传图生成","free":true,"tags":["视频"]},
+  {"name":"PixVerse","cat":"视频","url":"https://pixverse.ai","desc":"图生视频和特效短片","how":"上传图，选特效生成","free":true,"tags":["视频"]},
+  {"name":"Luma","cat":"视频","url":"https://lumalabs.ai","desc":"Dream Machine 文生视频","how":"输入镜头描述生成","free":true,"tags":["视频"]},
   {"name":"Strata","cat":"开源本地","url":"https://github.com/Niko1221/Strata","guide":"https://github.com/Niko1221/Strata/blob/main/README.zh-CN.md","desc":"12GB显卡跑1250亿Qwen3.8 MoE，热专家留显卡","how":"克隆仓库，Windows跑 START-HERE.bat。要12GB显存，64GB内存才能跑全规格","free":true,"tags":["本地","大模型","开源"]},
   {"name":"llama.cpp","cat":"开源本地","url":"https://github.com/ggml-org/llama.cpp","guide":"https://github.com/ggml-org/llama.cpp","desc":"GGUF推理底座，CPU/显卡/苹果芯片都能跑","how":"编译后 llama-cli 或 llama-server 加载GGUF","free":true,"tags":["本地","大模型","开源"]},
   {"name":"vLLM","cat":"开源本地","url":"https://github.com/vllm-project/vllm","guide":"https://docs.vllm.ai","desc":"高并发推理服务，多人同时打模型用","how":"pip装vllm，vllm serve 模型名，OpenAI兼容接口","free":true,"tags":["本地","大模型","开源"]},
