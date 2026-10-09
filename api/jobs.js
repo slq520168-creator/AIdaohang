@@ -55,6 +55,11 @@ module.exports = async function handler(req, res) {
   }
 };
 
+function fixText(s){
+  s=String(s||"");
+  if(!/[ÃÂâ]/.test(s)) return s;
+  try { return Buffer.from(s,"latin1").toString("utf8"); } catch(e){ return s; }
+}
 async function remotive() {
   try {
     const r = await fetch("https://remotive.com/api/remote-jobs", { headers: { Accept: "application/json" } });
@@ -62,8 +67,8 @@ async function remotive() {
     const arr = (d && d.jobs) || [];
     return arr.slice(0, 40).map(function (x) {
       return {
-        title: x.title || "",
-        company: x.company_name || "",
+        title: fixText(x.title),
+        company: fixText(x.company_name),
         pay: x.salary || "",
         cat: x.category || "Remote",
         from: "Remotive",
@@ -80,8 +85,8 @@ async function remoteok() {
     const arr = await r.json();
     return (Array.isArray(arr) ? arr : []).slice(1, 41).map(function (x) {
       return {
-        title: x.position || x.title || "",
-        company: x.company || "",
+        title: fixText(x.position || x.title),
+        company: fixText(x.company),
         pay: [x.salary_min, x.salary_max].filter(Boolean).join("-") || "",
         cat: (x.tags && x.tags[0]) || "RemoteOK",
         from: "RemoteOK",
@@ -99,8 +104,8 @@ async function arbeitnow() {
     const arr = (d && d.data) || [];
     return arr.slice(0, 30).map(function (x) {
       return {
-        title: x.title || "",
-        company: x.company_name || "",
+        title: fixText(x.title),
+        company: fixText(x.company_name),
         pay: "",
         cat: (x.tags && x.tags[0]) || "Job",
         from: "Arbeitnow",
