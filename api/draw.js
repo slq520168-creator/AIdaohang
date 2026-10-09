@@ -38,13 +38,14 @@ module.exports = async function handler(req, res) {
     if (en) prompt = en;
   }
   prompt = "photorealistic photograph, real human, real skin pores, natural makeup, 35mm film, sharp eyes, " + prompt + ", no anime, no cartoon, no illustration, no 3d render, no cgi";
-  const w = 1024;
+  const w = Math.min(1344, Math.max(512, parseInt(q.w, 10) || 1024));
+  const h = Math.min(1344, Math.max(512, parseInt(q.h, 10) || 1024));
   const seed = String(Date.now() % 1999999999);
   const enc = encodeURIComponent(prompt);
   const list = [
-    "https://image.pollinations.ai/prompt/" + enc + "?width=" + w + "&height=" + w + "&seed=" + seed + "&model=flux&nologo=true&enhance=true",
-    "https://gen.pollinations.ai/image/" + enc + "?width=" + w + "&height=" + w + "&seed=" + seed,
-    "https://image.pollinations.ai/prompt/" + enc + "?width=768&height=768&model=flux"
+    "https://image.pollinations.ai/prompt/" + enc + "?width=" + w + "&height=" + h + "&seed=" + seed + "&model=flux&nologo=true&enhance=true",
+    "https://gen.pollinations.ai/image/" + enc + "?model=flux&width=" + w + "&height=" + h + "&seed=" + seed + "&nologo=true",
+    "https://image.pollinations.ai/prompt/" + enc + "?width=" + w + "&height=" + h + "&model=flux&nologo=true"
   ];
   for (let i = 0; i < list.length; i++) {
     try {

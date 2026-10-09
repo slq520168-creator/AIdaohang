@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="./sub.css?v=321"/>
 <style>
 .top{display:flex;align-items:center;gap:8px}
-.top h1{flex:1;margin:0;font-size:18px}
+.top h1{flex:1;margin:0;font-size:18px}.own{margin-left:auto;height:28px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--txt);font-size:12px;font-weight:700}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin:0 0 10px}
 .kicker{font-size:12px;color:var(--muted)}
 h2{margin:2px 0 4px;font-size:18px}
@@ -37,8 +37,8 @@ textarea{width:100%;min-height:110px;border:1px solid var(--line);border-radius:
 </head>
 <body>
 <div class="w">
-  <div class="top"><a class="back" href="./tools.html?home=1">返回</a><h1>做图</h1></div>
-  <section class="card"><div class="kicker">AI 做图</div><h2>真人写真优先</h2><div class="sub">直接描述人物、服装、环境、镜头和光线。</div></section>
+  <div class="top"><a class="back" href="./tools.html?home=1">返回</a><h1>做图</h1><button class="own" id="own" type="button">自己做图</button></div>
+  <div id="maker" style="display:none"><section class="card"><div class="kicker">AI 做图</div><h2>真人写真优先</h2><div class="sub">直接描述人物、服装、环境、镜头和光线。</div></section>
   <section class="card">
     <div style="font-weight:700;margin-bottom:6px">提示词</div>
     <textarea id="p" placeholder="例如：年轻女性，长发，白色连衣裙，海边落日散步，自然光，真实摄影质感"></textarea>
@@ -54,7 +54,7 @@ textarea{width:100%;min-height:110px;border:1px solid var(--line);border-radius:
     <div class="chips" id="pShape" hidden></div>
     <div class="chips" id="pCount" hidden></div>
   </section>
-  <div class="out-title">出图在这里</div>
+  </div><div class="out-title">出图在这里</div>
   <div class="grid" id="out"></div>
   <div class="out-title">模板</div>
   <div class="grid" id="gallery"></div>
@@ -70,6 +70,7 @@ fill(document.getElementById("pStyle"),STYLES,"style",st.style,"lStyle");
 fill(document.getElementById("pShape"),SHAPES,"shape",st.shape,"lShape");
 fill(document.getElementById("pCount"),COUNTS,"count",st.count,"lCount");
 document.querySelector(".bar").onclick=function(e){var b=e.target.closest("[data-open]");if(!b)return;["pStyle","pShape","pCount"].forEach(function(id){var el=document.getElementById(id);el.hidden=id!=="p"+b.dataset.open[0].toUpperCase()+b.dataset.open.slice(1)||!el.hidden;});};
+document.getElementById("own").onclick=function(){var m=document.getElementById("maker");m.style.display=m.style.display==="none"?"block":"none";};
 document.getElementById("clear").onclick=function(){document.getElementById("p").value="";};
 function card(name,prompt,url){var d=document.createElement("div");d.className="shot";d.innerHTML='<img alt=""><div class="meta"><b></b><button type="button">复制</button></div>';d.querySelector("img").src=url;d.querySelector("b").textContent=name;d.querySelector("button").onclick=function(){navigator.clipboard.writeText(prompt).then(function(){d.querySelector("button").textContent="已复制";});};return d;}
 var samples=[["街灯人像","night street portrait, real skin","https://picsum.photos/id/1011/800/600"],["海边日落","seaside sunset photoreal","https://picsum.photos/id/1015/800/600"],["咖啡馆","cafe window natural light","https://picsum.photos/id/1060/800/600"],["雨夜城市","rainy neon city","https://picsum.photos/id/1016/800/600"],["雪山","snow mountain daylight","https://picsum.photos/id/1018/800/600"],["森林","forest path morning","https://picsum.photos/id/15/800/600"],["天际","city skyline dusk","https://picsum.photos/id/1031/800/600"],["鲜花","flower macro","https://picsum.photos/id/106/800/600"],["书桌","desk window light","https://picsum.photos/id/24/800/600"],["火车","train window","https://picsum.photos/id/133/800/600"],["厨房","kitchen morning","https://picsum.photos/id/292/800/600"],["书店","bookstore aisle","https://picsum.photos/id/367/800/600"],["礁石","coast rocks","https://picsum.photos/id/1015/900/600"],["夜市","night market","https://picsum.photos/id/1036/800/600"],["湖面","alpine lake","https://picsum.photos/id/1011/900/600"],["旧街","old town street","https://picsum.photos/id/1019/800/600"],["人像","studio portrait","https://picsum.photos/id/1027/800/600"],["公路","open road","https://picsum.photos/id/101/800/600"],["图书馆","library hall","https://picsum.photos/id/20/800/600"],["屋顶","rooftop evening","https://picsum.photos/id/1031/900/600"],["花园","garden path","https://picsum.photos/id/106/900/600"],["港口","harbor morning","https://picsum.photos/id/1016/900/600"]];
