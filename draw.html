@@ -3,11 +3,16 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
-<title data-i18n="draw_title">本站出图</title>
+<title>本站出图</title>
 <script>try{var _t=localStorage.getItem('theme');if(_t==='dark'||_t==='light')document.documentElement.setAttribute('data-theme',_t);}catch(e){}</script>
-<link rel="stylesheet" href="./sub.css?v=299"/>
+<link rel="stylesheet" href="./sub.css?v=316"/>
 <style>
-.draw textarea{display:block;width:100%;min-height:110px;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
+.draw .top{display:flex;align-items:center;gap:8px}
+.draw .top h1{flex:1}
+.draw .own{margin-left:auto;height:28px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--txt);font-size:12px;font-weight:700}
+.draw .maker{display:none;margin:8px 0 12px}
+.draw .maker.on{display:block}
+.draw textarea{display:block;width:100%;min-height:90px;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
 .draw .row{display:flex;gap:8px;margin:10px 0}
 .draw select,.draw .go{height:42px;border-radius:10px;font-size:14px}
 .draw select{flex:1;border:1px solid var(--line);background:var(--card);color:var(--txt);padding:0 8px;min-width:0}
@@ -16,78 +21,68 @@
 .draw .st{min-height:20px;font-size:13px;color:var(--muted);margin:2px 0 8px}
 .draw .st.err{color:#dc2626}
 .draw .st.ok{color:#16a34a}
-.draw .res{display:none;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
-.draw .res.on{display:block}
-.draw .res img.out{display:block;width:100%;height:auto}
-.draw .wait{display:none;align-items:center;justify-content:center;gap:10px;min-height:72px;border-radius:14px;background:var(--card);border:1px dashed var(--line);color:var(--muted);font-size:13px;margin-bottom:8px}
-.draw .wait.on{display:flex}
-.draw .spin{width:22px;height:22px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--btn);animation:sp 1s linear infinite}
-@keyframes sp{to{transform:rotate(360deg)}}
-.draw .acts{display:none;gap:8px;margin-top:8px}
-.draw .acts.on{display:flex}
-.draw .acts a,.draw .acts button{flex:1;text-align:center;text-decoration:none;color:var(--txt);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:0 0 12px}
+.card img{display:block;width:100%;height:auto;background:#111}
+.card .p{padding:10px 12px}
+.card .p b{display:block;font-size:13px;margin-bottom:4px}
+.card .p code{display:block;font-size:12px;line-height:1.45;color:var(--muted);word-break:break-word}
+.card .p button{margin-top:8px;height:30px;padding:0 10px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--txt);font-size:12px}
 </style>
 </head>
 <body>
 <div id="sitebg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
 <div class="w draw">
-  <div class="top"><a class="back" href="./tools.html?home=1" data-i18n="back">返回</a><h1 data-i18n="draw_title">本站出图</h1></div>
-  <textarea id="p" maxlength="800" data-i18n-placeholder="draw_ph" placeholder="夜景街灯，女人长外套"></textarea>
-  <div class="row">
-    <select id="size">
-      <option value="1024x1024" selected>1024²</option>
-      <option value="768x1024" data-i18n="draw_portrait">竖图</option>
-      <option value="1024x768" data-i18n="draw_land">横图</option>
-    </select>
-    <button class="go" id="go" type="button" data-i18n="draw_photo">写真</button>
+  <div class="top"><a class="back" href="./tools.html?home=1">返回</a><h1>本站出图</h1><button class="own" id="own" type="button">自己做图</button></div>
+  <div class="maker" id="maker">
+    <textarea id="p" maxlength="800" placeholder="写提示词，中英文都可（英文效果更好）"></textarea>
+    <div class="row">
+      <select id="size">
+        <option value="1024x1024">1024 高清方图</option>
+        <option value="1024x768">1024 高清横图</option>
+        <option value="768x1024">1024 高清竖图</option>
+      </select>
+      <button class="go" id="go" type="button">写真</button>
+    </div>
+    <div class="st" id="st"></div>
   </div>
-  <div class="st" id="st"></div>
-  <div class="wait" id="wait"><span class="spin"></span><span id="waitTxt"></span></div>
-  <div class="res" id="res"><img class="out" id="out" alt=""/></div>
-  <div class="acts" id="acts"><a id="open" href="#" rel="noopener" data-i18n="draw_open">查看大图</a><button type="button" id="save" data-i18n="draw_save">下载</button></div>
+  <div id="gallery"></div>
 </div>
 <script>
 (function(){
-  var $=function(id){return document.getElementById(id);};
-  var busy=false,timer=null;
-  function status(t,c){var el=$('st');el.textContent=t||'';el.className='st'+(c?' '+c:'');}
-  $('go').onclick=function(){
+  var samples=[
+    ['夜景街灯，东亚女性肖像，真实皮肤，电影光','night street lamp, east asian woman portrait, real skin, cinematic light, photoreal'],
+    ['海边日落，写实摄影，高清','seaside sunset, photoreal, sharp detail, natural light'],
+    ['咖啡馆窗边，自然光人像，高清','cafe window portrait, natural light, photoreal, sharp'],
+    ['雨夜城市街道，霓虹倒影，写实','rainy night city street, neon reflection, photoreal']
+  ];
+  var box=document.getElementById('gallery');
+  function imgUrl(prompt){return '/api/draw?p='+encodeURIComponent(prompt)+'&w=1024&h=1024&seed=7';}
+  function card(zh,en,url){
+    var d=document.createElement('div'); d.className='card';
+    d.innerHTML='<img alt="" src="'+url+'"><div class="p"><b>提示词</b><code></code><button type="button">复制提示词</button></div>';
+    d.querySelector('code').textContent=zh+' / '+en;
+    d.querySelector('button').onclick=function(){navigator.clipboard.writeText(en).then(function(){d.querySelector('button').textContent='已复制';});};
+    box.appendChild(d);
+  }
+  samples.forEach(function(s){card(s[0],s[1],imgUrl(s[1]));});
+  document.getElementById('own').onclick=function(){document.getElementById('maker').classList.toggle('on');};
+  var busy=false;
+  document.getElementById('go').onclick=function(){
     if(busy) return;
-    var text=($('p').value||'').trim();
-    if(!text){status('先写提示词','err');return;}
-    var wh=$('size').value.split('x');
+    var text=(document.getElementById('p').value||'').trim();
+    var st=document.getElementById('st');
+    if(!text){st.textContent='先写提示词';st.className='st err';return;}
+    var wh=document.getElementById('size').value.split('x');
     var url='/api/draw?p='+encodeURIComponent(text)+'&w='+wh[0]+'&h='+wh[1]+'&seed='+Date.now();
-    busy=true;$('go').disabled=true;$('acts').className='acts';$('res').className='res';
-    $('out').removeAttribute('src');
-    var t0=Date.now();
-    function tick(){$('waitTxt').textContent='写真中 '+Math.round((Date.now()-t0)/1000)+'s';}
-    $('wait').className='wait on';tick();timer=setInterval(tick,1000);
-    var img=$('out'), done=false;
-    var to=setTimeout(fail,90000);
-    function ok(){if(done)return;done=true;clearTimeout(to);clearInterval(timer);busy=false;$('go').disabled=false;$('wait').className='wait';$('res').className='res on';$('acts').className='acts on';$('open').href=url;status('完成 '+Math.round((Date.now()-t0)/1000)+'s','ok');try{sessionStorage.setItem('draw_last',JSON.stringify({p:text,size:$('size').value,url:url}));}catch(e){}}
-    function fail(){if(done)return;done=true;clearTimeout(to);clearInterval(timer);busy=false;$('go').disabled=false;$('wait').className='wait';$('res').className='res';status('失败，稍后再试','err');}
-    img.onload=function(){if(img.naturalWidth>8)ok();else fail();};
-    img.onerror=fail;
+    busy=true; st.textContent='生成中…'; st.className='st';
+    var img=new Image();
+    img.onload=function(){busy=false;st.textContent='完成';st.className='st ok';card(text,text,url);document.getElementById('maker').classList.remove('on');};
+    img.onerror=function(){busy=false;st.textContent='失败，稍后再试';st.className='st err';};
     img.src=url;
-  };
-  /* v284: after opening 查看大图 / any link in the same tab, Back restores the last result */
-  (function(){
-    var back=false;try{var n=performance.getEntriesByType('navigation')[0];back=!!n&&n.type==='back_forward';}catch(e){}
-    if(!back) return;
-    var o=null;try{o=JSON.parse(sessionStorage.getItem('draw_last')||'null');}catch(e){}
-    if(!o||!o.url) return;
-    $('p').value=o.p||'';if(o.size)$('size').value=o.size;
-    var img=$('out');img.onload=function(){$('res').className='res on';$('acts').className='acts on';};img.src=o.url;$('open').href=o.url;
-  })();
-  $('save').onclick=function(){
-    var u=$('out').src; if(!u) return;
-    var a=document.createElement('a'); a.href=u; a.download='photo.jpg';
-    document.body.appendChild(a); a.click(); a.remove();
   };
 })();
 </script>
-<script src="./i18n.js?v=286"></script>
 <script src="./langboot.js?v=286"></script>
-<script src="./tabbar.js?v=299"></script>
+<script src="tabbar.js?v=316"></script>
 </body>
 </html>

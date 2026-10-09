@@ -14,9 +14,10 @@
   function openId(){ var m=/[#&]c=([\w-]+)/.exec(location.hash); return m?m[1]:''; }
   function render(){
     var zh=lang()==='zh'||lang()==='zh-CN';
-    document.title=L(H.title)+' · '+(zh?'全球优选AI导航':'AI Directory');
+    document.title=(L(H.title)|| (zh?'电影':'Movies'))+' · '+(zh?'全球优选AI导航':'AI Directory');
     var top=document.getElementById('hubtop');
-    top.innerHTML='<a class="back" href="./tools.html?home=1&lang='+encodeURIComponent(lang())+'><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>'+esc(L(UI.back))+'</a><h1>'+esc(L(H.title))+'</h1>';
+    var ttl=L(H.title);
+    top.innerHTML='<a class="back" href="./tools.html?home=1&lang='+encodeURIComponent(lang())+'><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>'+esc(L(UI.back))+'</a>'+(ttl?'<h1>'+esc(ttl)+'</h1>':'');
     var tip=document.getElementById('hubtip'); if(tip){ tip.textContent=L(H.tip); tip.hidden=!tip.textContent; }
     var note=document.getElementById('hubnote'); if(note){ note.textContent=L(H.note); note.hidden=!note.textContent; }
     var cur=openId();

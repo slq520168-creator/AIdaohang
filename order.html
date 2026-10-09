@@ -10,10 +10,11 @@ html,body{margin:0;background:#f3f0ea;color:#111;font-family:-apple-system,"Ping
 .w{padding:12px 12px 88px}
 h1{margin:6px 0 4px;font-size:18px}
 .tip{color:#6b7280;font-size:13px;margin:0 0 12px}
-.card{display:block;background:#fff;border-radius:12px;padding:12px;margin:0 0 10px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.card{display:flex;align-items:center;gap:10px;background:#fff;border-radius:12px;padding:12px;margin:0 0 10px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.card .tx{flex:1;min-width:0}
 .card b{display:block;font-size:15px;line-height:1.35}
 .card em{display:block;margin-top:4px;font-style:normal;color:#6b7280;font-size:12px}
-.card button{margin-top:10px;height:36px;padding:0 14px;border:0;border-radius:8px;background:#111;color:#fff;font-weight:700}
+.card button{flex:0 0 auto;margin:0 0 0 auto;height:32px;padding:0 12px;border:0;border-radius:8px;background:#111;color:#fff;font-weight:700}
 /* sheet sits above the fixed #tabbar (56px + safe-area) so its buttons are never covered */
 .mask{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:20;align-items:flex-end;justify-content:center;box-sizing:border-box;padding:0 8px calc(66px + env(safe-area-inset-bottom,0px));overscroll-behavior:contain}
 .mask.on{display:flex}
@@ -62,7 +63,7 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
     tip.textContent='';tip.style.display='none';
     window.__jobs=jobs;
     list.innerHTML=jobs.map(function(j,i){
-      return '<div class="card" data-i="'+i+'"><b>'+esc(j.title)+'</b><em>'+esc([j.company,j.cat,j.pay].filter(Boolean).join(' · '))+'</em><button type="button">'+(window.I18N&&I18N.t("order_take")||"Take")+'</button></div>';
+      return '<div class="card" data-i="'+i+'"><div class="tx"><b>'+esc(j.title)+'</b><em>'+esc([j.company,j.cat,j.pay].filter(Boolean).join(' · '))+'</em></div><button type="button">'+(window.I18N&&I18N.t("order_take")||"Take")+'</button></div>';
     }).join('');
     /* v284: Back from the job site returns to the same place in the list */
     var back=false;try{var n=performance.getEntriesByType('navigation')[0];back=!!n&&n.type==='back_forward';}catch(e){}
@@ -72,8 +73,8 @@ html[data-theme=dark] .no{background:#30363d;color:#e6edf3}
   function saveY(){try{sessionStorage.setItem('order_y',String(Math.round(window.scrollY||0)));}catch(e){}}
   window.addEventListener('pagehide',saveY);
   function load(url){return fetch(url).then(function(r){if(!r.ok)throw 1;return r.json();});}
-  load('./data/jobs.json?v=315').then(function(d){paint(d.jobs);}).catch(function(){
-    return load('/api/jobs').then(function(d){paint(d.jobs);}).catch(function(){return load('data/jobs.json').then(function(d){paint(d.jobs||d);});});
+  load('/api/jobs').then(function(d){paint(d.jobs); tip.textContent=(d.source||'live')+' · '+((d.jobs&&d.jobs.length)||0);}).catch(function(){
+    return load('./data/jobs.json?v=316').then(function(d){paint(d.jobs||d); tip.textContent='backup';});
   }).catch(function(){tip.textContent=(window.I18N&&I18N.t('order_fail'))||'Failed to load';});
   list.onclick=function(e){
     var card=e.target.closest('.card'); if(!card)return;
