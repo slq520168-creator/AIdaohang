@@ -4,85 +4,60 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
 <title>本站出图</title>
-<script>try{var _t=localStorage.getItem('theme');if(_t==='dark'||_t==='light')document.documentElement.setAttribute('data-theme',_t);}catch(e){}</script>
-<link rel="stylesheet" href="./sub.css?v=316"/>
+<script>try{var _t=localStorage.getItem('theme');if(_t)document.documentElement.setAttribute('data-theme',_t);}catch(e){}</script>
+<link rel="stylesheet" href="./sub.css?v=317"/>
 <style>
-.draw .top{display:flex;align-items:center;gap:8px}
-.draw .top h1{flex:1}
-.draw .own{margin-left:auto;height:28px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--txt);font-size:12px;font-weight:700}
-.draw .maker{display:none;margin:8px 0 12px}
-.draw .maker.on{display:block}
-.draw textarea{display:block;width:100%;min-height:90px;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:16px;background:var(--card);color:var(--txt);font-family:inherit}
-.draw .row{display:flex;gap:8px;margin:10px 0}
-.draw select,.draw .go{height:42px;border-radius:10px;font-size:14px}
-.draw select{flex:1;border:1px solid var(--line);background:var(--card);color:var(--txt);padding:0 8px;min-width:0}
-.draw .go{flex:0 0 88px;background:var(--btn);color:#fff;border:0;font-weight:700}
-.draw .go:disabled{opacity:.6}
-.draw .st{min-height:20px;font-size:13px;color:var(--muted);margin:2px 0 8px}
-.draw .st.err{color:#dc2626}
-.draw .st.ok{color:#16a34a}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:0 0 12px}
-.card img{display:block;width:100%;height:auto;background:#111}
-.card .p{padding:10px 12px}
-.card .p b{display:block;font-size:13px;margin-bottom:4px}
-.card .p code{display:block;font-size:12px;line-height:1.45;color:var(--muted);word-break:break-word}
-.card .p button{margin-top:8px;height:30px;padding:0 10px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--txt);font-size:12px}
+.top{display:flex;align-items:center;gap:8px}
+.top h1{flex:1;font-size:18px;margin:0}
+.own{margin-left:auto;height:28px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--txt);font-size:12px}
+.maker{display:none;margin:8px 0}
+.maker.on{display:block}
+textarea{width:100%;min-height:72px;border:1px solid var(--line);border-radius:12px;padding:8px;font-size:16px;background:var(--card);color:var(--txt)}
+.row{display:flex;gap:8px;margin:8px 0}
+select,.go{height:38px;border-radius:10px}
+select{flex:1;border:1px solid var(--line);background:var(--card);color:var(--txt)}
+.go{flex:0 0 72px;background:var(--btn);color:#fff;border:0;font-weight:700}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.card img{display:block;width:100%;height:132px;object-fit:cover}
+.meta{display:flex;align-items:center;gap:6px;padding:6px 8px}
+.meta b{flex:1;min-width:0;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.meta button{flex:0 0 auto;height:26px;padding:0 8px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--txt);font-size:12px}
 </style>
 </head>
 <body>
-<div id="sitebg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
 <div class="w draw">
   <div class="top"><a class="back" href="./tools.html?home=1">返回</a><h1>本站出图</h1><button class="own" id="own" type="button">自己做图</button></div>
   <div class="maker" id="maker">
-    <textarea id="p" maxlength="800" placeholder="写提示词，中英文都可（英文效果更好）"></textarea>
-    <div class="row">
-      <select id="size">
-        <option value="1024x1024">1024 高清方图</option>
-        <option value="1024x768">1024 高清横图</option>
-        <option value="768x1024">1024 高清竖图</option>
-      </select>
-      <button class="go" id="go" type="button">写真</button>
-    </div>
-    <div class="st" id="st"></div>
+    <textarea id="p" placeholder="写提示词"></textarea>
+    <div class="row"><select id="size"><option value="1024x1024">1024方图</option><option value="1280x720">1280横图</option></select><button class="go" id="go" type="button">写真</button></div>
+    <div id="st"></div>
   </div>
-  <div id="gallery"></div>
+  <div class="grid" id="gallery"></div>
 </div>
 <script>
-(function(){
-  var samples=[
-    ['夜景街灯，东亚女性肖像，真实皮肤，电影光','night street lamp, east asian woman portrait, real skin, cinematic light, photoreal'],
-    ['海边日落，写实摄影，高清','seaside sunset, photoreal, sharp detail, natural light'],
-    ['咖啡馆窗边，自然光人像，高清','cafe window portrait, natural light, photoreal, sharp'],
-    ['雨夜城市街道，霓虹倒影，写实','rainy night city street, neon reflection, photoreal']
-  ];
-  var box=document.getElementById('gallery');
-  function imgUrl(prompt){return '/api/draw?p='+encodeURIComponent(prompt)+'&w=1024&h=1024&seed=7';}
-  function card(zh,en,url){
-    var d=document.createElement('div'); d.className='card';
-    d.innerHTML='<img alt="" src="'+url+'"><div class="p"><b>提示词</b><code></code><button type="button">复制提示词</button></div>';
-    d.querySelector('code').textContent=zh+' / '+en;
-    d.querySelector('button').onclick=function(){navigator.clipboard.writeText(en).then(function(){d.querySelector('button').textContent='已复制';});};
-    box.appendChild(d);
-  }
-  samples.forEach(function(s){card(s[0],s[1],imgUrl(s[1]));});
-  document.getElementById('own').onclick=function(){document.getElementById('maker').classList.toggle('on');};
-  var busy=false;
-  document.getElementById('go').onclick=function(){
-    if(busy) return;
-    var text=(document.getElementById('p').value||'').trim();
-    var st=document.getElementById('st');
-    if(!text){st.textContent='先写提示词';st.className='st err';return;}
-    var wh=document.getElementById('size').value.split('x');
-    var url='/api/draw?p='+encodeURIComponent(text)+'&w='+wh[0]+'&h='+wh[1]+'&seed='+Date.now();
-    busy=true; st.textContent='生成中…'; st.className='st';
-    var img=new Image();
-    img.onload=function(){busy=false;st.textContent='完成';st.className='st ok';card(text,text,url);document.getElementById('maker').classList.remove('on');};
-    img.onerror=function(){busy=false;st.textContent='失败，稍后再试';st.className='st err';};
-    img.src=url;
-  };
-})();
+var S=[["街灯人像","night street portrait, cinematic, real skin","https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80"],["海边日落","seaside sunset photoreal","https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"],["咖啡馆","cafe window natural light","https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"],["雨夜城市","rainy neon city street","https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80"],["雪山","snow mountain clear daylight","https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"],["森林小路","forest path morning light","https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80"],["都市天际","city skyline dusk","https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80"],["鲜花特写","flower macro sharp","https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80"],["书桌","desk still life window light","https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80"],["火车窗外","train window landscape","https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=800&q=80"],["厨房","kitchen morning photoreal","https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80"],["书店","bookstore aisle warm light","https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80"],["海边礁石","coast rocks clear water","https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80"],["夜市","night market lights","https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"],["雪山湖","alpine lake reflection","https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=80"],["旧街","old town street daylight","https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800&q=80"],["工作室","studio portrait soft light","https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80"],["公路","open road desert","https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80"],["图书馆","library reading room","https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80"],["屋顶","rooftop city evening","https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=800&q=80"],["花园","garden path spring","https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80"],["港口","harbor boats morning","https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80"]];
+var box=document.getElementById('gallery');
+function add(name,prompt,url){
+  var d=document.createElement('div'); d.className='card';
+  d.innerHTML='<img alt=""><div class="meta"><b></b><button type="button">复制</button></div>';
+  d.querySelector('img').src=url; d.querySelector('b').textContent=name;
+  d.querySelector('button').onclick=function(){navigator.clipboard.writeText(prompt).then(function(){d.querySelector('button').textContent='已复制';});};
+  box.appendChild(d);
+}
+S.forEach(function(x){add(x[0],x[1],x[2]);});
+document.getElementById('own').onclick=function(){document.getElementById('maker').classList.toggle('on');};
+document.getElementById('go').onclick=function(){
+  var t=(document.getElementById('p').value||'').trim(); if(!t) return;
+  var wh=document.getElementById('size').value.split('x');
+  var url='/api/draw?p='+encodeURIComponent(t)+'&w='+wh[0]+'&h='+wh[1]+'&seed='+Date.now();
+  document.getElementById('st').textContent='生成中';
+  var img=new Image();
+  img.onload=function(){document.getElementById('st').textContent=''; add(t.slice(0,12),t,url);};
+  img.onerror=function(){document.getElementById('st').textContent='失败';};
+  img.src=url;
+};
 </script>
-<script src="./langboot.js?v=286"></script>
-<script src="tabbar.js?v=316"></script>
+<script src="tabbar.js?v=317"></script>
 </body>
 </html>
