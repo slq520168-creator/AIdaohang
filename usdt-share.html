@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+<title>USDT 分成方案</title>
+<link rel="stylesheet" href="style.css?v=316"/>
+<style>
+.wrap{max-width:720px;margin:0 auto;padding:16px 12px 80px}
+h1{font-size:20px;margin:0 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.card h2{font-size:16px;margin:0 0 8px}
+.card p,.card li{font-size:14px;line-height:1.6;margin:4px 0}
+.tag{display:inline-block;background:var(--chip);color:var(--chip-t);border-radius:999px;padding:2px 8px;font-size:12px;margin-right:6px}
+.btn{display:inline-block;margin-top:8px;padding:8px 16px;background:var(--acc);color:#fff;border-radius:10px;text-decoration:none;font-size:14px}
+code{background:#f3f4f6;padding:1px 4px;border-radius:4px;font-size:12px}
+html[data-theme="dark"] code{background:#21262d}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>USDT 分成实操方案</h1>
+<p style="color:var(--muted);font-size:13px;margin:0 0 12px">TRC20 结算 · Telegram 通知 · 可当天落地</p>
+
+<div class="card">
+<h2>1. 核心规则（直接可用）</h2>
+<p><span class="tag">分成比例</span> 产品净收入的 <b>25%</b> 给推荐人（可调）</p>
+<p><span class="tag">结算</span> 每周一结算上周订单，满 <b>10 USDT</b> 起付</p>
+<p><span class="tag">支付</span> TRC20-USDT 直接打到推荐人钱包</p>
+<p><span class="tag">归属</span> 用户点击带 <code>?ref=CODE</code> 的链接下单，且 7 天内完成付款</p>
+</div>
+
+<div class="card">
+<h2>2. 推荐人如何使用</h2>
+<ol>
+<li>联系站长获取专属推荐码（例：<code>ABC123</code>）</li>
+<li>分享链接：<code>https://youxuanai.vercel.app/tools.html?ref=ABC123</code></li>
+<li>用户通过该链接进入并下单付款（TRC20）</li>
+<li>每周一收到 Telegram 结算通知 + 钱包到账</li>
+</ol>
+<a class="btn" href="https://t.me/" target="_blank">联系站长申请推荐码</a>
+</div>
+
+<div class="card">
+<h2>3. 站长实操流程（今天就能跑）</h2>
+<ol>
+<li><b>记录订单</b>：用现有 Telegram 机器人收到新订单通知时，手动记录 <code>ref</code> 参数（或后续加字段）</li>
+<li><b>计算分成</b>：周一把上周已到账订单按推荐码汇总，乘 25%</li>
+<li><b>打款</b>：用钱包发送 TRC20-USDT 到推荐人地址，保留 TXID</li>
+<li><b>通知</b>：Telegram 发送「本周分成 XX USDT，TXID: ...」</li>
+</ol>
+<p>后续可升级：在订单表加 <code>ref</code> 字段 + 自动汇总脚本（仍用 TRC20 监听机器人确认到账）。</p>
+</div>
+
+<div class="card">
+<h2>4. 风险与注意</h2>
+<ul>
+<li>只分已确认到账的订单，退款/争议订单不计</li>
+<li>推荐人不可自己下单刷分成</li>
+<li>保留所有 TXID 和订单截图，方便对账</li>
+<li>最低支付 10 USDT，余额滚入下周</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>5. 示例</h2>
+<p>推荐码 <code>ABC123</code> 上周带来 4 单，合计到账 80 USDT</p>
+<p>分成 = 80 × 25% = <b>20 USDT</b></p>
+<p>周一打款到推荐人 TRC20 地址，Telegram 通知 TXID</p>
+</div>
+
+<p style="margin-top:20px"><a href="tools.html">← 返回导航</a></p>
+</div>
+</body>
+</html>
