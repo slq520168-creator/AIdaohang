@@ -23,6 +23,8 @@ html[data-theme="dark"] .search.stuck{background:#070910;box-shadow:0 0 0 100vma
 .rank i{width:16px;font-size:12px;line-height:1.2}
 .rank strong{font-size:12px;line-height:1.25}
 .rank em{font-size:10px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+#searchResults{margin:0 0 12px}
+#searchResults:empty{display:none}
 </style>
 <script src="./noscale.js?v=285"></script>
 </head>
@@ -40,6 +42,7 @@ html[data-theme="dark"] .search.stuck{background:#070910;box-shadow:0 0 0 100vma
   <div id="langBar" class="langbar"></div>
 </header>
 <form class="search" id="sf"><div class="box"><input id="q" type="search" autocomplete="off" data-i18n-placeholder="search" placeholder="搜索工具"/><button type="submit" id="go">🔍</button></div></form>
+<main id="searchResults" class="grid"></main>
 <section class="block" id="hotBlock"><div class="block-h"><h2 id="hotTitle" data-i18n="hot">今日热点</h2></div><ol id="hot" class="rank"></ol></section>
 <section class="block"><div class="block-h"><h2 id="listTitle" data-i18n="allTools">全部工具</h2></div><div id="side" class="cats"></div><div class="under" id="under"><div id="tags" class="fine"></div><div id="pop"><main id="list" class="grid"></main></div></div></section>
 </div>
