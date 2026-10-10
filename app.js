@@ -59,7 +59,7 @@ ja:{pc:'PC',gig:'受注',adult:'成人',draw:'絵',make:'動画',life:'生活',w
 ko:{pc:'PC',gig:'수주',adult:'성인',draw:'그림',make:'영상',life:'생활',work:'업무',learn:'학습',free:'무료'},
 th:{pc:'คอมพิวเตอร์',gig:'งาน',adult:'ผู้ใหญ่',draw:'ภาพ',make:'วิดีโอ',life:'ชีวิต',work:'งานออฟฟิศ',learn:'เรียน',free:'ฟรี'},
 vi:{pc:'Máy tính',gig:'Việc',adult:'Người lớn',draw:'Vẽ',make:'Video',life:'Đời sống',work:'Văn phòng',learn:'Học',free:'Miễn phí'},
-km:{pc:'កុំព្យូទ័រ',gig:'ការងារ',adult:'មនុស្សពេញវ័យ',draw:'គំនូរ',make:'វីដេអូ',life:'ជីវិត',work:'ការិយាល័យ',learn:'រៀន',free:'ឥតគិតថ្លៃ'},
+km:{pc:'កំព្យូទរ',gig:'ការងារ',adult:'មនុស្សពេញវថ្យ',draw:'គំនូរ',make:'វីដេអូ',life:'ជីវិត',work:'ការិយាល័យ',learn:'រៀន',free:'ឥតគិតថ្លៃ'},
 id:{pc:'PC',gig:'Order',adult:'Dewasa',draw:'Gambar',make:'Video',life:'Hidup',work:'Kerja',learn:'Belajar',free:'Gratis'},
 es:{pc:'PC',gig:'Encargos',adult:'Adultos',draw:'Arte',make:'Video',life:'Vida',work:'Trabajo',learn:'Aprender',free:'Gratis'},
 lo:{pc:'ຄອມ',gig:'ວຽກ',adult:'ຜູ້ໃຫຍ່',draw:'ຮູບ',make:'ວິດີໂອ',life:'ຊີວິດ',work:'ຫ້ອງການ',learn:'ຮຽນ',free:'ຟຣີ'},
@@ -103,10 +103,11 @@ themeBtn.onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'l
 function hostOf(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
 function urlKey(u){try{const x=new URL(u);return x.hostname.replace(/^www\./,'').toLowerCase()+x.pathname.replace(/\/+$/,'')}catch(e){return String(u||'').toLowerCase()}}
 function deadPath(u){const s=String(u||'').toLowerCase();return DROP_PATH.some(p=>s.includes(p))}
-function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function esc(s){return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>').replace(/\"/g,'"')}
 function isHttp(u){return /^https?:\/\//i.test(u||'')}
 function safeUrl(u){u=String(u||'').trim();if(!u)return false;if(/^javascript:|^data:|^vbscript:/i.test(u))return false;if(isHttp(u))return true;return /^\.?\/?[\w.-]+\.html([?#]|$)/.test(u);}
-function iconTag(url,letter){const h=hostOf(url);const L=(letter||'T').slice(0,1);if(!h)return hasHan(L)?'T':L;return `<img alt="" src="https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(h)}" onerror="this.style.display='none'">`;}
+const ICON_MAP={"Hypit":"github.com","剪映":"capcut.cn","即梦":"jimeng.jianying.com","可灵":"klingai.com","海螺AI":"hailuoai.com","Veed":"veed.io","Kapwing":"kapwing.com","Opus Clip":"opus.pro","Descript":"descript.com","Runway":"runwayml.com","HeyGen":"heygen.com","Synthesia":"synthesia.io","ChatGPT":"chatgpt.com","Claude":"claude.ai","Gemini":"gemini.google.com","Grok":"grok.com","DeepSeek":"chat.deepseek.com","豆包":"doubao.com","通义千问":"tongyi.aliyun.com","文心一言":"yiyan.baidu.com"};
+function iconTag(url,letter,name){let h=hostOf(url);if(!h && name && ICON_MAP[name]) h=ICON_MAP[name];const L=(letter||'T').slice(0,1);if(!h)return hasHan(L)?'T':L;return `<img alt="" src="https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(h)}" onerror="this.style.display='none';this.parentNode.textContent='${L}'">`;}
 function hourBucket(){return Math.floor(Date.now()/3600000)}
 
 const PIN_HOME=[
@@ -116,120 +117,6 @@ const PIN_HOME=[
 {name:"可灵",cat:"视频",pack:"视频",url:"https://klingai.com",desc:"免费额度。运镜和角色视频",how:"上传参考或写提示出片",free:true},
 {name:"海螺AI",cat:"视频",pack:"视频",url:"https://hailuoai.com",desc:"免费额度。短视频生成",how:"写提示或上传图生成",free:true},
 {name:"Veed",cat:"视频",pack:"视频",url:"https://www.veed.io",desc:"免费档。浏览器剪辑和自动字幕",how:"上传视频，自动字幕后导出",free:true},
-{name:"Kapwing",cat:"视频",pack:"视频",url:"https://www.kapwing.com",desc:"免费档。在线剪辑、字幕、Resize",how:"上传后选自动字幕",free:true},
-{name:"Opus Clip",cat:"视频",pack:"视频",url:"https://www.opus.pro",desc:"免费试用。长视频切短视频",how:"贴长视频链接，选出高光",free:true},
-{name:"Descript",cat:"视频",pack:"视频",url:"https://www.descript.com",desc:"收费。按文字剪视频，改词即改画面",how:"导入口播，在文稿里删句",free:false},
-{name:"Runway",cat:"视频",pack:"视频",url:"https://runwayml.com",desc:"收费。Gen视频和专业剪辑",how:"用积分生成或编辑镜头",free:false},
-{name:"HeyGen",cat:"视频",pack:"视频",url:"https://www.heygen.com",desc:"收费。数字人口播",how:"选形象贴文案出片",free:false},
-{name:"Synthesia",cat:"视频",pack:"视频",url:"https://www.synthesia.io",desc:"收费。企业数字人视频",how:"选虚拟人，贴脚本生成",free:false},
-{name:"Submagic",cat:"视频",pack:"视频",url:"https://www.submagic.co",desc:"收费。爆款字幕和B-roll",how:"上传口播，套动态字幕",free:false},
-{name:"Captions",cat:"视频",pack:"视频",url:"https://captions.ai",desc:"收费。口播字幕和AI剪辑",how:"上传视频生成字幕成片",free:false},
-{name:"Pictory",cat:"视频",pack:"视频",url:"https://pictory.ai",desc:"收费。文案转视频",how:"贴脚本，自动配画面",free:false},
-{name:"Arcads",cat:"视频",pack:"视频",url:"https://www.arcads.ai",desc:"收费。AI广告口播",how:"选演员贴广告词出片",free:false}
+{name:"Kapwing",cat:"视频",pack:"视频",url:"https://www.kapwing.com",desc:"免费档。在线剪辑、字幕、Resize",how:"上传素材剪辑后导出",free:true}
 ];
-function pickHot(){const by=new Map(tools.map(x=>[x.name,x]));const fresh=tools.filter(x=>x.tags&&x.tags.indexOf("提示词")>=0);const pinned=PIN_HOME.map(x=>by.get(x.name)).filter(Boolean);const pool=fresh.concat(pinned);const used=new Set();const out=[];for(const x of pool){if(!x||used.has(x.name))continue;used.add(x.name);out.push(x);if(out.length>=10)break;}hotList=out.slice(0,10);}
-function showName(x){const host=hostOf(x.url);if(lang==='zh')return x.name||host||'';return enOnly(x.name_en,latinName(x.name),hasHan(x.name)?'':x.name,host);}
-function showDesc(x){const host=hostOf(x.url);if(lang==='zh')return x.desc||x.cat||host||'';if(x.desc_en&&!hasHan(x.desc_en))return x.desc_en;const cat=TAG_EN[x.cat]||TAG_EN[x.pack]||'';if(cat&&host)return cat+' · '+host;return enOnly(cat,host,'Tool');}
-function renderHot(){hotEl.innerHTML=hotList.map((h,i)=>{const href=isHttp(h.url)?h.url:('guide.html?n='+encodeURIComponent(h.name||''));return `<li data-n="${esc(h.name||'')}"><a href="#" role="button"><i>${i+1}</i><span class="ht"><strong>${esc(showName(h))}</strong><em>${esc(showDesc(h))}</em></span></a></li>`;}).join('');}
-function matchGroup(x){if(!selected.size)return true;if(selected.has('free')&&!x.free)return false;const topics=[...selected].filter(id=>id!=='free');if(!topics.length)return true;return topics.includes(gidOf(x));}
-function matchTag(x){if(!tags.size)return true;const s=blob(x);if(tags.has('免费')&&!x.free)return false;if(tags.has('收费')&&x.free)return false;const others=[...tags].filter(k=>k!=='免费'&&k!=='收费');if(!others.length)return true;return others.some(k=>x.cat===k||x.pack===k||s.indexOf(k)>=0);}
-function tagLen(s){return Array.from(String(s||'').replace(/\s+/g,'')).length}
-function visLen(el){return tagLen(el&&el.textContent)}
-function sortButtons(box){if(!box)return;const btns=[...box.querySelectorAll(':scope > button')];btns.sort((a,b)=>{const la=visLen(a),lb=visLen(b);if(la!==lb)return la-lb;return (a.textContent||'').localeCompare(b.textContent||'','en',{numeric:true});});btns.forEach(b=>box.appendChild(b));}
-let sortingChips=false;
-function sortLangChips(){if(sortingChips)return;sortingChips=true;sortButtons(sideEl);sortButtons(tagsEl);sortingChips=false;}
-window.sortLangChips=sortLangChips;
-function watchChips(box){/* no-op: observer caused chip reorder flicker on load */}
-function allInnerTags(){
-  const src=[]; const seen=new Set();
-  Object.keys(GROUP_SUBS).forEach(function(id){
-    GROUP_SUBS[id].forEach(function(p){ if(!seen.has(p[0])){ seen.add(p[0]); src.push(p); } });
-  });
-  Object.keys(TAG_DEEP).forEach(function(k){
-    TAG_DEEP[k].forEach(function(p){ if(!seen.has(p[0])){ seen.add(p[0]); src.push(p); } });
-  });
-  return src;
-}
-function sortedTags(){
-  const src=TAGS.slice();
-  const seen=new Set(src.map(function(p){return p[0];}));
-  (tools||[]).forEach(function(x){
-    (x.tags||[]).forEach(function(zh){
-      if(!zh||seen.has(zh))return;
-      seen.add(zh);
-      var en=(typeof TAG_EN!=='undefined'&&TAG_EN[zh])?TAG_EN[zh]:zh;
-      src.push([zh,en]);
-      if(typeof TAG_EN!=='undefined') TAG_EN[zh]=en;
-    });
-  });
-  return src.sort((a,b)=>{const A=lang==='zh'?a[0]:a[1];const B=lang==='zh'?b[0]:b[1];const la=tagLen(A),lb=tagLen(B);if(la!==lb)return la-lb;return A.localeCompare(B,lang==='zh'?'zh':'en');});
-}
-async function fetchJson(f){try{const r=await fetch(f);return r.ok?await r.json():[];}catch(e){return [];}}
-async function mapPool(items,limit,fn){const out=new Array(items.length);let i=0;async function worker(){while(i<items.length){const idx=i++;out[idx]=await fn(items[idx],idx);}}const n=Math.min(limit,items.length)||1;await Promise.all(Array.from({length:n},()=>worker()));return out;}
-const SNAP='aid_snap_v3';function paintSnap(){try{const o=JSON.parse(localStorage.getItem(SNAP)||'null');if(!o||!Array.isArray(o.cards))return;if(Array.isArray(o.hot)&&o.hot.length){hotList=o.hot;renderHot();}listEl.innerHTML=o.cards.map(card).join('');}catch(e){}}function saveSnap(){try{if(selected.size||tags.size||(qEl.value||'').trim())return;localStorage.setItem(SNAP,JSON.stringify({n:tools.length,hot:hotList,cards:filtered.slice(0,80)}));}catch(e){}}
-async function load(){selected.clear();tags.clear();applyChrome();renderSide();paintSnap();let rows=await fetchJson('data/catalog.json');if(!Array.isArray(rows))rows=[];const extra=await fetchJson('data/more237.json');if(Array.isArray(extra))rows=extra.concat(rows);const extra238=await fetchJson('data/more238.json');if(Array.isArray(extra238))rows=extra238.concat(rows);const extra239=await fetchJson('data/more239.json');if(Array.isArray(extra239))rows=extra239.concat(rows);rows=PIN_HOME.concat(rows);const seenName=new Set();const seenUrl=new Set();tools=[];for(const x of rows){if(!x||!x.name||DROP_NAME.has(x.name))continue;if(deadPath(x.url))continue;if(!safeUrl(x.url))continue;const h=hostOf(x.url);if(h&&DROP_HOST.has(h))continue;if(appOnly(x.url))continue;if(seenName.has(x.name))continue;const uk=isHttp(x.url)?urlKey(x.url):'';if(uk&&seenUrl.has(uk))continue;seenName.add(x.name);if(uk)seenUrl.add(uk);tools.push(x);}if(!tools.length){listEl.innerHTML='<p class="count">目录加载失败，请刷新</p>';return;}pickHot();renderHot();renderSide();render();saveSnap();if(navBack())restoreHome();}
-function renderSide(){{const u=document.getElementById('under');if(popEl&&u&&tagsEl&&tagsEl.contains(popEl)){popEl.classList.remove('inrow');u.appendChild(popEl);}}const groups=GROUPS.slice().sort((a,b)=>{const A=lang==='zh'?a.k:a.en;const B=lang==='zh'?b.k:b.en;const la=tagLen(A),lb=tagLen(B);if(la!==lb)return la-lb;return A.localeCompare(B);});sideEl.innerHTML=groups.map(g=>`<button data-c="${g.id}" class="${selected.has(g.id)?'on':''}">${groupLabel(g)}</button>`).join('');sideEl.onclick=e=>{const b=e.target.closest('button');if(!b)return;const id=b.dataset.c;if(selected.has(id))selected.clear();else{selected.clear();selected.add(id);}tags.clear();shown=80;renderSide();render();};if(!tagsEl)return;tagsEl.innerHTML=sortedTags().map(([zh,en])=>{let lab=zh;if(lang!=='zh'){lab=(en&&!hasHan(en))?en:((TAG_EN[zh]&&!hasHan(TAG_EN[zh]))?TAG_EN[zh]:'');if(!lab)return '';}return `<button data-t="${zh}" class="${tags.has(zh)?'on':''}">${lab}</button>`;}).join('');tagsEl.onclick=e=>{const b=e.target.closest('button');if(!b)return;const k=b.dataset.t;if(tags.has(k))tags.delete(k);else tags.add(k);if(k==='免费')tags.delete('收费');if(k==='收费')tags.delete('免费');shown=80;renderSide();render();};sortLangChips();watchChips(sideEl);watchChips(tagsEl);}
-function card(x){const title=showName(x);const desc=showDesc(x);const href=isHttp(x.url)?x.url:('guide.html?n='+encodeURIComponent(x.name||''));return `<div class="card" data-n="${esc(x.name||'')}" role="button" tabindex="0"><div class="row"><div class="av">${iconTag(x.url,title)}</div><div><h3>${esc(title)}</h3><p>${esc(desc)}</p></div></div></div>`;}
-function render(){const q=(qEl.value||'').trim().toLowerCase();const s=t();const key=[...selected].join(',')+'|'+[...tags].join(',')+'|'+q;if(key!==lastKey){shown=80;lastKey=key;}if(hotBlock)hotBlock.style.display=q?'none':'block';if(listTitle)listTitle.textContent=s.all;if(popEl){popEl.hidden=false;popEl.classList.remove('cover');}var under=document.getElementById('under');if(under)under.classList.remove('open');filtered=tools.filter(x=>{const hit=!q||[x.name,x.desc,x.desc_en||'',x.cat,x.how||'',x.url||''].join(' ').toLowerCase().includes(q);return hit&&(q||(matchGroup(x)&&matchTag(x)));});listEl.innerHTML=filtered.slice(0,shown).map(card).join('')||`<p class="count">${s.empty}</p>`;}
-function onScroll(){if(shown>=filtered.length)return;const top=scroller===window?window.scrollY:scroller.scrollTop;const h=scroller===window?window.innerHeight:scroller.clientHeight;const sh=scroller===window?document.body.offsetHeight:scroller.scrollHeight;if(h+top>sh-240){const from=shown;shown+=80;listEl.insertAdjacentHTML('beforeend',filtered.slice(from,shown).map(card).join(''));}}
-scroller.addEventListener('scroll',onScroll,{passive:true});
-function goTop(){if(scroller===window)window.scrollTo(0,0);else scroller.scrollTo(0,0);}
-if(topBtn)topBtn.onclick=goTop;
-document.getElementById('brand').onclick=goTop;
-sf.addEventListener('submit',e=>{e.preventDefault();shown=80;render();qEl.blur();goTop();});
-qEl.addEventListener('input',()=>{shown=80;render();});
-window.setAidLang=function(code){
-  lang=code||'zh';
-  try{localStorage.setItem('lang',lang);localStorage.setItem('yx_lang',lang);localStorage.setItem('aid_tl',lang)}catch(e){}
-  applyChrome();renderSide();renderHot();render();
-  if(typeof aidTranslate==='function') aidTranslate();
-  document.querySelectorAll('a.chip').forEach(function(a){var base=a.getAttribute('href').split('?')[0];a.setAttribute('href',base+'?lang='+encodeURIComponent(lang));});
-  var bar=document.getElementById('langBar');
-  if(bar)[...bar.querySelectorAll('button[data-l]')].forEach(function(x){x.classList.toggle('on',x.dataset.l===lang)});
-};
-(function wireLang(){
-  var bar=document.getElementById('langBar');
-  if(!langBtn||!bar)return;
-  var LABELS={zh:'中文',en:'EN',km:'ខ្មែរ',th:'ไทย',vi:'VI',id:'ID',lo:'ລາວ',my:'MY',ms:'MS',hi:'HI',si:'SI',ta:'TA',ja:'日本語',ko:'한국어',es:'ES'};
-  var codes=(window.I18N&&window.I18N.supported)||['zh','en','km','th','vi','ja','ko','es'];
-  bar.innerHTML=codes.map(function(c){return '<button type="button" data-l="'+c+'" class="'+(c===lang?'on':'')+'">'+(LABELS[c]||c.toUpperCase())+'</button>';}).join('');
-  langBtn.onclick=function(e){e.preventDefault();e.stopPropagation();bar.classList.toggle('show');};
-  bar.onclick=function(e){
-    var b=e.target.closest('button[data-l]');
-    if(!b)return;
-    e.stopPropagation();
-    var code=b.dataset.l;
-    if(window.I18N&&window.I18N.set){window.I18N.set(code);}
-    else {window.setAidLang(code);}
-    bar.classList.remove('show');
-  };
-  document.addEventListener('click',function(){bar.classList.remove('show');});
-  document.querySelectorAll('a.chip').forEach(function(a){var base=a.getAttribute('href').split('?')[0];a.setAttribute('href',base+'?lang='+encodeURIComponent(lang));});
-})();
-function byName(n){return tools.find(x=>x.name===n)||hotList.find(x=>x.name===n);}
-function detailHtml(x){const zh=lang==='zh';const desc=showDesc(x);const how=zh?(x.how||''):(x.how_en||'');const open=isHttp(x.url);const local=!open&&/^\.?\/?[\w-]+\.html(\?|#|$)/.test(x.url||'');return `<div class="detail"><p class="d-desc">${esc(desc)}</p>${how?`<p class="d-how">${esc(how)}</p>`:''}${open?`<p class="d-url">${esc(x.url)}</p><a class="d-go" href="${esc(x.url)}" rel="noopener noreferrer">${esc((window.I18N&&I18N.t('open'))||'Open')}</a>`:''}${local?`<a class="d-go" href="${esc(x.url)}">${esc((window.I18N&&I18N.t('open'))||'Open')}</a>`:''}</div>`;}
-/* v283: expanded detail must not end up hidden behind the fixed #tabbar */
-function keepVis(d){try{if(!d)return;const r=d.getBoundingClientRect();const tb=document.getElementById('tabbar');const sc=document.getElementById('scroll');const lim=Math.min(tb?tb.getBoundingClientRect().top:innerHeight,sc?sc.getBoundingClientRect().bottom:innerHeight)-8;if(r.bottom<=lim)return;const dy=Math.min(r.bottom-lim,r.top-70);if(dy<=0)return;(sc&&sc.scrollHeight>sc.clientHeight?sc:window).scrollBy({top:dy,behavior:'smooth'});}catch(e){}}
-function closeDetails(){document.querySelectorAll('.detail').forEach(d=>d.remove());document.querySelectorAll('.card.open,#hot li.open').forEach(c=>c.classList.remove('open'));}
-listEl.addEventListener('click',e=>{if(e.target.closest('.detail'))return;const c=e.target.closest('.card');if(!c)return;e.preventDefault();const was=c.classList.contains('open');closeDetails();if(was)return;const x=byName(c.dataset.n);if(!x)return;c.classList.add('open');const cards=[...listEl.querySelectorAll('.card')];const i=cards.indexOf(c);const cols=getComputedStyle(listEl).gridTemplateColumns.split(' ').length||1;const last=cards[Math.min(cards.length-1,i-(i%cols)+cols-1)]||c;last.insertAdjacentHTML('afterend',detailHtml(x));keepVis(last.nextElementSibling);});
-hotEl.addEventListener('click',e=>{if(e.target.closest('.detail'))return;const li=e.target.closest('li');if(!li)return;e.preventDefault();const was=li.classList.contains('open');closeDetails();if(was)return;const x=byName(li.dataset.n);if(!x)return;li.classList.add('open');li.insertAdjacentHTML('beforeend',detailHtml(x));keepVis(li.querySelector('.detail'));});
-(function resultsBelow(){const under=document.getElementById('under');if(!popEl||!under)return;function put(where){if(where==='side'){sideEl.insertAdjacentElement('afterend',popEl);}else{under.appendChild(popEl);}}sideEl.addEventListener('click',e=>{if(!e.target.closest('button'))return;setTimeout(()=>put(selected.size?'side':'home'),0);});if(tagsEl)tagsEl.addEventListener('click',e=>{const b0=e.target.closest('button');if(!b0)return;const k=b0.dataset.t;setTimeout(()=>{if(!tags.size){put('home');return;}const b=[...tagsEl.querySelectorAll('button')].find(x=>x.dataset.t===k&&x.classList.contains('on'))||tagsEl.querySelector('button.on');if(!b){put('home');return;}const top=b.offsetTop;let last=b;for(let n=b.nextElementSibling;n;n=n.nextElementSibling){if(n.tagName!=='BUTTON'||n.offsetTop!==top)break;last=n;}popEl.classList.add('inrow');last.insertAdjacentElement('afterend',popEl);},0);});})();
-/* v284: external links open in the same tab; on Back restore category/tags/search/loaded count/expanded card/scroll (bfcache keeps it anyway; this covers non-bfcache reloads) */
-const HS='aid_home_state_v1';
-function navBack(){try{const n=performance.getEntriesByType('navigation')[0];return !!n&&n.type==='back_forward';}catch(e){return false;}}
-function openInfo(){const c=listEl.querySelector('.card.open');if(c)return {w:'list',n:c.dataset.n};const l=hotEl.querySelector('li.open');if(l)return {w:'hot',n:l.dataset.n};return null;}
-function saveHome(){try{if(!tools.length)return;const sc=document.getElementById('scroll');sessionStorage.setItem(HS,JSON.stringify({sel:[...selected],tags:[...tags],q:qEl.value||'',shown:shown,st:sc?sc.scrollTop:window.scrollY,open:openInfo(),t:Date.now()}));}catch(e){}}
-window.addEventListener('pagehide',saveHome);
-document.addEventListener('visibilitychange',()=>{if(document.hidden)saveHome();});
-document.addEventListener('click',e=>{if(e.target.closest&&e.target.closest('a[href]'))saveHome();},true);
-function restoreHome(){let o=null;try{o=JSON.parse(sessionStorage.getItem(HS)||'null');}catch(e){}if(!o)return;
-  (o.sel||[]).forEach(id=>{const b=sideEl.querySelector('button[data-c="'+id+'"]');if(b&&!b.classList.contains('on'))b.click();});
-  (o.tags||[]).forEach(k=>{const b=tagsEl&&[...tagsEl.querySelectorAll('button')].find(x=>x.dataset.t===k);if(b&&!b.classList.contains('on'))b.click();});
-  if(o.q){qEl.value=o.q;render();}
-  setTimeout(()=>{
-    if(o.shown>shown&&filtered.length>shown){const n=Math.min(o.shown,filtered.length);listEl.insertAdjacentHTML('beforeend',filtered.slice(shown,n).map(card).join(''));shown=n;}
-    if(o.open){const box=o.open.w==='hot'?hotEl:listEl;const el=[...box.querySelectorAll(o.open.w==='hot'?'li':'.card')].find(x=>x.dataset.n===o.open.n);if(el)el.click();}
-    const sc=document.getElementById('scroll');if(sc)sc.scrollTop=o.st||0;else window.scrollTo(0,o.st||0);
-  },60);
-}
-load();
+function card(x){const title=showName(x);const desc=showDesc(x);const href=isHttp(x.url)?x.url:('guide.html?n='+encodeURIComponent(x.name||''));return `<div class="card" data-n="${esc(x.name||'')}" role="button" tabindex="0"><div class="row"><div class="av">${iconTag(x.url,title,x.name)}</div><div><h3>${esc(title)}</h3><p>${esc(desc)}</p></div></div></div>`;}
