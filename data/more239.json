@@ -1,0 +1,4812 @@
+[
+  {
+    "name": "Cobalt",
+    "cat": "万能下载",
+    "url": "https://cobalt.tools",
+    "guide": "https://cobalt.tools",
+    "desc": "油管推特等一键下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管推特等一键下载"
+  },
+  {
+    "name": "yt-dlp",
+    "cat": "开源下载",
+    "url": "https://github.com/yt-dlp/yt-dlp",
+    "guide": "https://github.com/yt-dlp/yt-dlp",
+    "desc": "命令行万能下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "命令行万能下载"
+  },
+  {
+    "name": "youtube-dl",
+    "cat": "开源下载",
+    "url": "https://github.com/ytdl-org/youtube-dl",
+    "guide": "https://github.com/ytdl-org/youtube-dl",
+    "desc": "老牌开源下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "老牌开源下载"
+  },
+  {
+    "name": "Seal",
+    "cat": "安卓下载",
+    "url": "https://github.com/JunkFood02/Seal",
+    "guide": "https://github.com/JunkFood02/Seal",
+    "desc": "手机端 yt-dlp",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "手机端 yt-dlp"
+  },
+  {
+    "name": "NewPipe",
+    "cat": "安卓油管",
+    "url": "https://newpipe.net",
+    "guide": "https://newpipe.net",
+    "desc": "安卓油管客户端下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "安卓油管客户端下载"
+  },
+  {
+    "name": "LibreTube",
+    "cat": "安卓油管",
+    "url": "https://github.com/libre-tube/LibreTube",
+    "guide": "https://github.com/libre-tube/LibreTube",
+    "desc": "无广告油管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "无广告油管"
+  },
+  {
+    "name": "Invidious",
+    "cat": "油管前端",
+    "url": "https://invidious.io",
+    "guide": "https://invidious.io",
+    "desc": "油管备用前端",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管备用前端"
+  },
+  {
+    "name": "Piped",
+    "cat": "油管前端",
+    "url": "https://piped.video",
+    "guide": "https://piped.video",
+    "desc": "油管轻量前端",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管轻量前端"
+  },
+  {
+    "name": "Y2Mate",
+    "cat": "油管下载",
+    "url": "https://www.y2mate.com",
+    "guide": "https://www.y2mate.com",
+    "desc": "油管转 MP4/MP3",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管转 MP4/MP3"
+  },
+  {
+    "name": "SaveFrom",
+    "cat": "视频下载",
+    "url": "https://en.savefrom.net",
+    "guide": "https://en.savefrom.net",
+    "desc": "多站视频下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "多站视频下载"
+  },
+  {
+    "name": "SSYouTube",
+    "cat": "油管下载",
+    "url": "https://ssyoutube.com",
+    "guide": "https://ssyoutube.com",
+    "desc": "油管链接改前缀",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管链接改前缀"
+  },
+  {
+    "name": "Notube",
+    "cat": "油管转码",
+    "url": "https://notube.net",
+    "guide": "https://notube.net",
+    "desc": "油管转 MP3",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管转 MP3"
+  },
+  {
+    "name": "YTMP3",
+    "cat": "油管音频",
+    "url": "https://ytmp3.nu",
+    "guide": "https://ytmp3.nu",
+    "desc": "油管转 MP3",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管转 MP3"
+  },
+  {
+    "name": "Y2Meta",
+    "cat": "油管下载",
+    "url": "https://y2meta.com",
+    "guide": "https://y2meta.com",
+    "desc": "油管视频音频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管视频音频"
+  },
+  {
+    "name": "Loader.to",
+    "cat": "视频下载",
+    "url": "https://loader.to",
+    "guide": "https://loader.to",
+    "desc": "多平台视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "多平台视频"
+  },
+  {
+    "name": "9xbuddy",
+    "cat": "视频下载",
+    "url": "https://9xbuddy.com",
+    "guide": "https://9xbuddy.com",
+    "desc": "油管脸书推特",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管脸书推特"
+  },
+  {
+    "name": "KeepVid",
+    "cat": "视频下载",
+    "url": "https://keepvid.pro",
+    "guide": "https://keepvid.pro",
+    "desc": "在线视频下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "在线视频下载"
+  },
+  {
+    "name": "FLVTO",
+    "cat": "油管音频",
+    "url": "https://www.flvto.biz",
+    "guide": "https://www.flvto.biz",
+    "desc": "油管转音频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管转音频"
+  },
+  {
+    "name": "OnlineVideoConverter",
+    "cat": "在线转码",
+    "url": "https://www.onlinevideoconverter.com",
+    "guide": "https://www.onlinevideoconverter.com",
+    "desc": "视频转码下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "视频转码下载"
+  },
+  {
+    "name": "ClipConverter",
+    "cat": "视频转码",
+    "url": "https://www.clipconverter.cc",
+    "guide": "https://www.clipconverter.cc",
+    "desc": "视频转 MP3",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "视频转 MP3"
+  },
+  {
+    "name": "X2Download",
+    "cat": "视频下载",
+    "url": "https://x2download.app",
+    "guide": "https://x2download.app",
+    "desc": "油管等下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管等下载"
+  },
+  {
+    "name": "SnapSave",
+    "cat": "脸书下载",
+    "url": "https://snapsave.app",
+    "guide": "https://snapsave.app",
+    "desc": "脸书 ins 视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "脸书 ins 视频"
+  },
+  {
+    "name": "SnapInsta",
+    "cat": "ins下载",
+    "url": "https://snapinsta.app",
+    "guide": "https://snapinsta.app",
+    "desc": "Instagram 下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Instagram 下载"
+  },
+  {
+    "name": "iGram",
+    "cat": "ins下载",
+    "url": "https://igram.world",
+    "guide": "https://igram.world",
+    "desc": "Instagram 视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Instagram 视频"
+  },
+  {
+    "name": "FastDL",
+    "cat": "ins下载",
+    "url": "https://fastdl.app",
+    "guide": "https://fastdl.app",
+    "desc": "Instagram 快下",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Instagram 快下"
+  },
+  {
+    "name": "SSSTik",
+    "cat": "抖音国际",
+    "url": "https://ssstik.io",
+    "guide": "https://ssstik.io",
+    "desc": "TikTok 无水印",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "TikTok 无水印"
+  },
+  {
+    "name": "SnapTik",
+    "cat": "抖音国际",
+    "url": "https://snaptik.app",
+    "guide": "https://snaptik.app",
+    "desc": "TikTok 下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "TikTok 下载"
+  },
+  {
+    "name": "MusicalDown",
+    "cat": "抖音国际",
+    "url": "https://musicaldown.com",
+    "guide": "https://musicaldown.com",
+    "desc": "TikTok 音乐视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "TikTok 音乐视频"
+  },
+  {
+    "name": "TikMate",
+    "cat": "抖音国际",
+    "url": "https://tikmate.app",
+    "guide": "https://tikmate.app",
+    "desc": "TikTok 下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "TikTok 下载"
+  },
+  {
+    "name": "Douyin Mate",
+    "cat": "抖音下载",
+    "url": "https://douyin.wtf",
+    "guide": "https://douyin.wtf",
+    "desc": "抖音无水印",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "抖音无水印"
+  },
+  {
+    "name": "Evil0ctal Douyin",
+    "cat": "抖音解析",
+    "url": "https://github.com/Evil0ctal/Douyin_TikTok_Download_API",
+    "guide": "https://github.com/Evil0ctal/Douyin_TikTok_Download_API",
+    "desc": "抖音快手解析接口",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "抖音快手解析接口"
+  },
+  {
+    "name": "Kuaishou Down",
+    "cat": "快手下载",
+    "url": "https://kuaishou.wtf",
+    "guide": "https://kuaishou.wtf",
+    "desc": "快手视频解析",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "快手视频解析"
+  },
+  {
+    "name": "Bilibili Down",
+    "cat": "哔哩下载",
+    "url": "https://github.com/nilaoda/BBDown",
+    "guide": "https://github.com/nilaoda/BBDown",
+    "desc": "哔哩哔哩下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "哔哩哔哩下载"
+  },
+  {
+    "name": "yutto",
+    "cat": "哔哩下载",
+    "url": "https://github.com/yutto-dev/yutto",
+    "guide": "https://github.com/yutto-dev/yutto",
+    "desc": "哔哩命令行下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "哔哩命令行下载"
+  },
+  {
+    "name": "Downkyi",
+    "cat": "哔哩下载",
+    "url": "https://github.com/leiurayer/downkyi",
+    "guide": "https://github.com/leiurayer/downkyi",
+    "desc": "哔哩客户端",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "哔哩客户端"
+  },
+  {
+    "name": "lux",
+    "cat": "哔哩下载",
+    "url": "https://github.com/iawia002/lux",
+    "guide": "https://github.com/iawia002/lux",
+    "desc": "多站视频下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "多站视频下载"
+  },
+  {
+    "name": "annie",
+    "cat": "视频下载",
+    "url": "https://github.com/iawia002/annie",
+    "guide": "https://github.com/iawia002/annie",
+    "desc": "已更名为 lux",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "已更名为 lux"
+  },
+  {
+    "name": "you-get",
+    "cat": "视频下载",
+    "url": "https://github.com/soimort/you-get",
+    "guide": "https://github.com/soimort/you-get",
+    "desc": "国内站视频下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "国内站视频下载"
+  },
+  {
+    "name": "TikTokDownloader",
+    "cat": "抖音批量",
+    "url": "https://github.com/JoeanAmier/TikTokDownloader",
+    "guide": "https://github.com/JoeanAmier/TikTokDownloader",
+    "desc": "抖音批量采集",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "抖音批量采集"
+  },
+  {
+    "name": "XDownloader",
+    "cat": "推特下载",
+    "url": "https://twittervideodownloader.com",
+    "guide": "https://twittervideodownloader.com",
+    "desc": "推特视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "推特视频"
+  },
+  {
+    "name": "TwitterVideoDownloader",
+    "cat": "推特下载",
+    "url": "https://twittervideodownloader.org",
+    "guide": "https://twittervideodownloader.org",
+    "desc": "X 视频下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "X 视频下载"
+  },
+  {
+    "name": "RedditSave",
+    "cat": "红迪下载",
+    "url": "https://redditsave.com",
+    "guide": "https://redditsave.com",
+    "desc": "Reddit 视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Reddit 视频"
+  },
+  {
+    "name": "Vimeo Downloader",
+    "cat": "Vimeo下载",
+    "url": "https://vimeo.com",
+    "guide": "https://vimeo.com",
+    "desc": "Vimeo 原片",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Vimeo 原片"
+  },
+  {
+    "name": "Dailymotion Down",
+    "cat": "视频下载",
+    "url": "https://www.dailymotion.com",
+    "guide": "https://www.dailymotion.com",
+    "desc": "Dailymotion",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Dailymotion"
+  },
+  {
+    "name": "Facebook Video",
+    "cat": "脸书下载",
+    "url": "https://fdown.net",
+    "guide": "https://fdown.net",
+    "desc": "脸书视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "脸书视频"
+  },
+  {
+    "name": "fbdown",
+    "cat": "脸书下载",
+    "url": "https://fbdown.net",
+    "guide": "https://fbdown.net",
+    "desc": "脸书视频另入口",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "脸书视频另入口"
+  },
+  {
+    "name": "Pinterest Down",
+    "cat": "图片下载",
+    "url": "https://pinterestvideodownloader.com",
+    "guide": "https://pinterestvideodownloader.com",
+    "desc": "Pinterest 图视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Pinterest 图视频"
+  },
+  {
+    "name": "LinkedIn Down",
+    "cat": "职场视频",
+    "url": "https://www.linkedin.com",
+    "guide": "https://www.linkedin.com",
+    "desc": "领英视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "领英视频"
+  },
+  {
+    "name": "SpotifyDown",
+    "cat": "音乐下载",
+    "url": "https://spotifydown.com",
+    "guide": "https://spotifydown.com",
+    "desc": "Spotify 转 MP3",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Spotify 转 MP3"
+  },
+  {
+    "name": "SpotifyMate",
+    "cat": "音乐下载",
+    "url": "https://spotifymate.com",
+    "guide": "https://spotifymate.com",
+    "desc": "Spotify 下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Spotify 下载"
+  },
+  {
+    "name": "SpotiDownloader",
+    "cat": "音乐下载",
+    "url": "https://spotidownloader.com",
+    "guide": "https://spotidownloader.com",
+    "desc": "歌曲下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "歌曲下载"
+  },
+  {
+    "name": "FreeMP3",
+    "cat": "音乐搜索",
+    "url": "https://freemp3cloud.com",
+    "guide": "https://freemp3cloud.com",
+    "desc": "免费 MP3 搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费 MP3 搜索"
+  },
+  {
+    "name": "Mp3Juices",
+    "cat": "音乐搜索",
+    "url": "https://www.mp3juices.cc",
+    "guide": "https://www.mp3juices.cc",
+    "desc": "音乐搜索下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "音乐搜索下载"
+  },
+  {
+    "name": "Slider",
+    "cat": "音乐搜索",
+    "url": "https://slider.kz",
+    "guide": "https://slider.kz",
+    "desc": "音乐搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "音乐搜索"
+  },
+  {
+    "name": "Musify",
+    "cat": "音乐搜索",
+    "url": "https://musify.club",
+    "guide": "https://musify.club",
+    "desc": "音乐库",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "音乐库"
+  },
+  {
+    "name": "MyFreeMP3",
+    "cat": "音乐搜索",
+    "url": "https://myfreemp3.icu",
+    "guide": "https://myfreemp3.icu",
+    "desc": "MP3 搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "MP3 搜索"
+  },
+  {
+    "name": "SoundCloud Down",
+    "cat": "音乐下载",
+    "url": "https://soundcloudmp3.cc",
+    "guide": "https://soundcloudmp3.cc",
+    "desc": "SoundCloud 下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "SoundCloud 下载"
+  },
+  {
+    "name": "SCDown",
+    "cat": "音乐下载",
+    "url": "https://sclouddownloader.net",
+    "guide": "https://sclouddownloader.net",
+    "desc": "SoundCloud",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "SoundCloud"
+  },
+  {
+    "name": "Jamendo",
+    "cat": "免费音乐",
+    "url": "https://www.jamendo.com",
+    "guide": "https://www.jamendo.com",
+    "desc": "可商用独立音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "可商用独立音乐"
+  },
+  {
+    "name": "Free Music Archive",
+    "cat": "免费音乐",
+    "url": "https://freemusicarchive.org",
+    "guide": "https://freemusicarchive.org",
+    "desc": "免费音乐库",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费音乐库"
+  },
+  {
+    "name": "ccMixter",
+    "cat": "免费音乐",
+    "url": "https://ccmixter.org",
+    "guide": "https://ccmixter.org",
+    "desc": "可remix音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "可remix音乐"
+  },
+  {
+    "name": "Incompetech",
+    "cat": "免费配乐",
+    "url": "https://incompetech.com",
+    "guide": "https://incompetech.com",
+    "desc": "凯文配乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "凯文配乐"
+  },
+  {
+    "name": "Bensound",
+    "cat": "免费配乐",
+    "url": "https://www.bensound.com",
+    "guide": "https://www.bensound.com",
+    "desc": "免费背景乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费背景乐"
+  },
+  {
+    "name": "Purple Planet",
+    "cat": "免费配乐",
+    "url": "https://www.purple-planet.com",
+    "guide": "https://www.purple-planet.com",
+    "desc": "免费配乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费配乐"
+  },
+  {
+    "name": "YouTube Audio Library",
+    "cat": "免费配乐",
+    "url": "https://studio.youtube.com",
+    "guide": "https://studio.youtube.com",
+    "desc": "油管音频库",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管音频库"
+  },
+  {
+    "name": "Facebook Sound",
+    "cat": "免费音效",
+    "url": "https://www.facebook.com/sound/collection",
+    "guide": "https://www.facebook.com/sound/collection",
+    "desc": "脸书音效库",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "脸书音效库"
+  },
+  {
+    "name": "TikTok Commercial",
+    "cat": "商用音乐",
+    "url": "https://ads.tiktok.com",
+    "guide": "https://ads.tiktok.com",
+    "desc": "抖音商用音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "抖音商用音乐"
+  },
+  {
+    "name": "Freesound",
+    "cat": "音效",
+    "url": "https://freesound.org",
+    "guide": "https://freesound.org",
+    "desc": "免费音效",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费音效"
+  },
+  {
+    "name": "Zapsplat",
+    "cat": "音效",
+    "url": "https://www.zapsplat.com",
+    "guide": "https://www.zapsplat.com",
+    "desc": "免费音效",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费音效"
+  },
+  {
+    "name": "Mixkit",
+    "cat": "素材",
+    "url": "https://mixkit.co",
+    "guide": "https://mixkit.co",
+    "desc": "免费视频音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费视频音乐"
+  },
+  {
+    "name": "Pexels",
+    "cat": "素材",
+    "url": "https://www.pexels.com",
+    "guide": "https://www.pexels.com",
+    "desc": "免费视频图片",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费视频图片"
+  },
+  {
+    "name": "Pixabay",
+    "cat": "素材",
+    "url": "https://pixabay.com",
+    "guide": "https://pixabay.com",
+    "desc": "免费视频音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费视频音乐"
+  },
+  {
+    "name": "Coverr",
+    "cat": "视频素材",
+    "url": "https://coverr.co",
+    "guide": "https://coverr.co",
+    "desc": "免费视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费视频"
+  },
+  {
+    "name": "Videvo",
+    "cat": "视频素材",
+    "url": "https://www.videvo.net",
+    "guide": "https://www.videvo.net",
+    "desc": "免费视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费视频"
+  },
+  {
+    "name": "Dareful",
+    "cat": "视频素材",
+    "url": "https://dareful.com",
+    "guide": "https://dareful.com",
+    "desc": "免费视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费视频"
+  },
+  {
+    "name": "Mazwai",
+    "cat": "视频素材",
+    "url": "https://mazwai.com",
+    "guide": "https://mazwai.com",
+    "desc": "免费视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费视频"
+  },
+  {
+    "name": "Igniter Media",
+    "cat": "视频素材",
+    "url": "https://www.ignitermedia.com",
+    "guide": "https://www.ignitermedia.com",
+    "desc": "视频素材",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "视频素材"
+  },
+  {
+    "name": "Internet Archive Audio",
+    "cat": "音频存档",
+    "url": "https://archive.org/details/audio",
+    "guide": "https://archive.org/details/audio",
+    "desc": "公有领域音频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "公有领域音频"
+  },
+  {
+    "name": "Internet Archive Movies",
+    "cat": "电影存档",
+    "url": "https://archive.org/details/movies",
+    "guide": "https://archive.org/details/movies",
+    "desc": "公有领域电影",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "公有领域电影"
+  },
+  {
+    "name": "Public Domain Movies",
+    "cat": "公版电影",
+    "url": "https://publicdomainmovie.net",
+    "guide": "https://publicdomainmovie.net",
+    "desc": "公版电影",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "公版电影"
+  },
+  {
+    "name": "Open Culture",
+    "cat": "免费影视",
+    "url": "https://www.openculture.com",
+    "guide": "https://www.openculture.com",
+    "desc": "公版电影课程",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "公版电影课程"
+  },
+  {
+    "name": "Tubi",
+    "cat": "免费电影",
+    "url": "https://tubi.tv",
+    "guide": "https://tubi.tv",
+    "desc": "免费正版电影",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费正版电影"
+  },
+  {
+    "name": "Pluto TV",
+    "cat": "免费电视",
+    "url": "https://pluto.tv",
+    "guide": "https://pluto.tv",
+    "desc": "免费频道",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费频道"
+  },
+  {
+    "name": "Crackle",
+    "cat": "免费影视",
+    "url": "https://www.crackle.com",
+    "guide": "https://www.crackle.com",
+    "desc": "免费影视",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费影视"
+  },
+  {
+    "name": "Plex Free",
+    "cat": "免费影视",
+    "url": "https://www.plex.tv",
+    "guide": "https://www.plex.tv",
+    "desc": "免费电影频道",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费电影频道"
+  },
+  {
+    "name": "YouTube Movies",
+    "cat": "免费电影",
+    "url": "https://www.youtube.com/feed/storefront",
+    "guide": "https://www.youtube.com/feed/storefront",
+    "desc": "油管免费电影",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管免费电影"
+  },
+  {
+    "name": "Bilibili 电影",
+    "cat": "免费影视",
+    "url": "https://www.bilibili.com/movie",
+    "guide": "https://www.bilibili.com/movie",
+    "desc": "哔哩电影",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "哔哩电影"
+  },
+  {
+    "name": "Jellyfin",
+    "cat": "本地媒体",
+    "url": "https://jellyfin.org",
+    "guide": "https://jellyfin.org",
+    "desc": "自建媒体库",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自建媒体库"
+  },
+  {
+    "name": "Emby",
+    "cat": "本地媒体",
+    "url": "https://emby.media",
+    "guide": "https://emby.media",
+    "desc": "自建媒体库",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自建媒体库"
+  },
+  {
+    "name": "Plex",
+    "cat": "本地媒体",
+    "url": "https://www.plex.tv",
+    "guide": "https://www.plex.tv",
+    "desc": "媒体服务器",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "媒体服务器"
+  },
+  {
+    "name": "Kodi",
+    "cat": "本地播放",
+    "url": "https://kodi.tv",
+    "guide": "https://kodi.tv",
+    "desc": "本地播放器",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "本地播放器"
+  },
+  {
+    "name": "VLC",
+    "cat": "播放器",
+    "url": "https://www.videolan.org",
+    "guide": "https://www.videolan.org",
+    "desc": "万能播放",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "万能播放"
+  },
+  {
+    "name": "PotPlayer",
+    "cat": "播放器",
+    "url": "https://potplayer.daum.net",
+    "guide": "https://potplayer.daum.net",
+    "desc": "Windows 播放",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Windows 播放"
+  },
+  {
+    "name": "IINA",
+    "cat": "播放器",
+    "url": "https://iina.io",
+    "guide": "https://iina.io",
+    "desc": "Mac 播放",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Mac 播放"
+  },
+  {
+    "name": "mpv",
+    "cat": "播放器",
+    "url": "https://mpv.io",
+    "guide": "https://mpv.io",
+    "desc": "开源播放",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源播放"
+  },
+  {
+    "name": "JDownloader",
+    "cat": "下载器",
+    "url": "https://jdownloader.org",
+    "guide": "https://jdownloader.org",
+    "desc": "链接批量下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "链接批量下载"
+  },
+  {
+    "name": "Free Download Manager",
+    "cat": "下载器",
+    "url": "https://www.freedownloadmanager.org",
+    "guide": "https://www.freedownloadmanager.org",
+    "desc": "多线程下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "多线程下载"
+  },
+  {
+    "name": "Internet Download Manager",
+    "cat": "下载器",
+    "url": "https://www.internetdownloadmanager.com",
+    "guide": "https://www.internetdownloadmanager.com",
+    "desc": "浏览器下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "浏览器下载"
+  },
+  {
+    "name": "Motrix",
+    "cat": "下载器",
+    "url": "https://motrix.app",
+    "guide": "https://motrix.app",
+    "desc": "开源下载器",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源下载器"
+  },
+  {
+    "name": "Aria2",
+    "cat": "下载器",
+    "url": "https://aria2.github.io",
+    "guide": "https://aria2.github.io",
+    "desc": "命令行下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "命令行下载"
+  },
+  {
+    "name": "qBittorrent",
+    "cat": "磁力下载",
+    "url": "https://www.qbittorrent.org",
+    "guide": "https://www.qbittorrent.org",
+    "desc": "磁力客户端",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力客户端"
+  },
+  {
+    "name": "Transmission",
+    "cat": "磁力下载",
+    "url": "https://transmissionbt.com",
+    "guide": "https://transmissionbt.com",
+    "desc": "磁力客户端",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力客户端"
+  },
+  {
+    "name": "Deluge",
+    "cat": "磁力下载",
+    "url": "https://deluge-torrent.org",
+    "guide": "https://deluge-torrent.org",
+    "desc": "磁力客户端",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力客户端"
+  },
+  {
+    "name": "BiglyBT",
+    "cat": "磁力下载",
+    "url": "https://www.biglybt.com",
+    "guide": "https://www.biglybt.com",
+    "desc": "磁力客户端",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力客户端"
+  },
+  {
+    "name": "WebTorrent",
+    "cat": "磁力网页",
+    "url": "https://webtorrent.io",
+    "guide": "https://webtorrent.io",
+    "desc": "浏览器磁力",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "浏览器磁力"
+  },
+  {
+    "name": "Instant.io",
+    "cat": "磁力网页",
+    "url": "https://instant.io",
+    "guide": "https://instant.io",
+    "desc": "网页磁力播放",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "网页磁力播放"
+  },
+  {
+    "name": "The Pirate Bay",
+    "cat": "磁力索引",
+    "url": "https://thepiratebay.org",
+    "guide": "https://thepiratebay.org",
+    "desc": "磁力搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力搜索"
+  },
+  {
+    "name": "1337x",
+    "cat": "磁力索引",
+    "url": "https://1337x.to",
+    "guide": "https://1337x.to",
+    "desc": "磁力搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力搜索"
+  },
+  {
+    "name": "RARBG",
+    "cat": "磁力索引",
+    "url": "https://rarbg.to",
+    "guide": "https://rarbg.to",
+    "desc": "磁力搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力搜索"
+  },
+  {
+    "name": "YTS",
+    "cat": "电影磁力",
+    "url": "https://yts.mx",
+    "guide": "https://yts.mx",
+    "desc": "电影种子",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "电影种子"
+  },
+  {
+    "name": "EZTV",
+    "cat": "剧集磁力",
+    "url": "https://eztv.re",
+    "guide": "https://eztv.re",
+    "desc": "剧集种子",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "剧集种子"
+  },
+  {
+    "name": "Nyaa",
+    "cat": "动漫磁力",
+    "url": "https://nyaa.si",
+    "guide": "https://nyaa.si",
+    "desc": "动漫种子",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫种子"
+  },
+  {
+    "name": "SubsPlease",
+    "cat": "动漫下载",
+    "url": "https://subsplease.org",
+    "guide": "https://subsplease.org",
+    "desc": "动漫字幕组",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫字幕组"
+  },
+  {
+    "name": "Erai-raws",
+    "cat": "动漫下载",
+    "url": "https://www.erai-raws.info",
+    "guide": "https://www.erai-raws.info",
+    "desc": "动漫",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫"
+  },
+  {
+    "name": "Tokyo Tosho",
+    "cat": "动漫索引",
+    "url": "https://www.tokyotosho.info",
+    "guide": "https://www.tokyotosho.info",
+    "desc": "动漫种子",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫种子"
+  },
+  {
+    "name": "Open Subtitles",
+    "cat": "字幕",
+    "url": "https://www.opensubtitles.org",
+    "guide": "https://www.opensubtitles.org",
+    "desc": "字幕下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字幕下载"
+  },
+  {
+    "name": "Subscene",
+    "cat": "字幕",
+    "url": "https://subscene.com",
+    "guide": "https://subscene.com",
+    "desc": "字幕",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字幕"
+  },
+  {
+    "name": "Subdl",
+    "cat": "字幕",
+    "url": "https://subdl.com",
+    "guide": "https://subdl.com",
+    "desc": "字幕搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字幕搜索"
+  },
+  {
+    "name": "Zimuku",
+    "cat": "字幕",
+    "url": "https://zimuku.org",
+    "guide": "https://zimuku.org",
+    "desc": "中文字幕",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "中文字幕"
+  },
+  {
+    "name": "A4k",
+    "cat": "字幕",
+    "url": "https://www.a4k.net",
+    "guide": "https://www.a4k.net",
+    "desc": "中文字幕",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "中文字幕"
+  },
+  {
+    "name": "Shooter",
+    "cat": "字幕",
+    "url": "https://www.shooter.cn",
+    "guide": "https://www.shooter.cn",
+    "desc": "字幕",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字幕"
+  },
+  {
+    "name": "LRC歌词",
+    "cat": "歌词",
+    "url": "https://www.megalobiz.com",
+    "guide": "https://www.megalobiz.com",
+    "desc": "LRC 歌词",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "LRC 歌词"
+  },
+  {
+    "name": "Genius",
+    "cat": "歌词",
+    "url": "https://genius.com",
+    "guide": "https://genius.com",
+    "desc": "歌词",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "歌词"
+  },
+  {
+    "name": "Musixmatch",
+    "cat": "歌词",
+    "url": "https://www.musixmatch.com",
+    "guide": "https://www.musixmatch.com",
+    "desc": "歌词",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "歌词"
+  },
+  {
+    "name": "LRCLIB",
+    "cat": "歌词接口",
+    "url": "https://lrclib.net",
+    "guide": "https://lrclib.net",
+    "desc": "开源歌词",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源歌词"
+  },
+  {
+    "name": "Deemix",
+    "cat": "音乐下载",
+    "url": "https://deemix.app",
+    "guide": "https://deemix.app",
+    "desc": "Deezer 下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Deezer 下载"
+  },
+  {
+    "name": "spotDL",
+    "cat": "音乐下载",
+    "url": "https://github.com/spotDL/spotify-downloader",
+    "guide": "https://github.com/spotDL/spotify-downloader",
+    "desc": "Spotify 歌单下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Spotify 歌单下载"
+  },
+  {
+    "name": "ytmusicapi",
+    "cat": "音乐",
+    "url": "https://github.com/sigma67/ytmusicapi",
+    "guide": "https://github.com/sigma67/ytmusicapi",
+    "desc": "油管音乐接口",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管音乐接口"
+  },
+  {
+    "name": "NewPipe Music",
+    "cat": "音乐",
+    "url": "https://newpipe.net",
+    "guide": "https://newpipe.net",
+    "desc": "油管音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管音乐"
+  },
+  {
+    "name": "Seal Music",
+    "cat": "音乐",
+    "url": "https://github.com/JunkFood02/Seal",
+    "guide": "https://github.com/JunkFood02/Seal",
+    "desc": "手机音乐下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "手机音乐下载"
+  },
+  {
+    "name": "AudioMack",
+    "cat": "独立音乐",
+    "url": "https://audiomack.com",
+    "guide": "https://audiomack.com",
+    "desc": "独立音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "独立音乐"
+  },
+  {
+    "name": "DatPiff",
+    "cat": " mixtape",
+    "url": "https://datpiff.com",
+    "guide": "https://datpiff.com",
+    "desc": "说唱 mixtape",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "说唱 mixtape"
+  },
+  {
+    "name": "Live Music Archive",
+    "cat": "演唱会",
+    "url": "https://archive.org/details/etree",
+    "guide": "https://archive.org/details/etree",
+    "desc": "免费演唱会",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费演唱会"
+  },
+  {
+    "name": "Musopen",
+    "cat": "古典乐",
+    "url": "https://musopen.org",
+    "guide": "https://musopen.org",
+    "desc": "公有领域古典",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "公有领域古典"
+  },
+  {
+    "name": "IMSLP",
+    "cat": "乐谱",
+    "url": "https://imslp.org",
+    "guide": "https://imslp.org",
+    "desc": "公有领域乐谱",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "公有领域乐谱"
+  },
+  {
+    "name": "MuseScore",
+    "cat": "乐谱",
+    "url": "https://musescore.com",
+    "guide": "https://musescore.com",
+    "desc": "乐谱",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "乐谱"
+  },
+  {
+    "name": "Songsterr",
+    "cat": "吉他谱",
+    "url": "https://www.songsterr.com",
+    "guide": "https://www.songsterr.com",
+    "desc": "吉他谱",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "吉他谱"
+  },
+  {
+    "name": "Ultimate Guitar",
+    "cat": "吉他谱",
+    "url": "https://www.ultimate-guitar.com",
+    "guide": "https://www.ultimate-guitar.com",
+    "desc": "吉他谱",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "吉他谱"
+  },
+  {
+    "name": "Chordify",
+    "cat": "和弦",
+    "url": "https://chordify.net",
+    "guide": "https://chordify.net",
+    "desc": "歌曲和弦",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "歌曲和弦"
+  },
+  {
+    "name": "Hooktheory",
+    "cat": "和弦",
+    "url": "https://www.hooktheory.com",
+    "guide": "https://www.hooktheory.com",
+    "desc": "和弦分析",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "和弦分析"
+  },
+  {
+    "name": "Splice",
+    "cat": "采样",
+    "url": "https://splice.com",
+    "guide": "https://splice.com",
+    "desc": "采样包",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "采样包"
+  },
+  {
+    "name": "Looperman",
+    "cat": "免费采样",
+    "url": "https://www.looperman.com",
+    "guide": "https://www.looperman.com",
+    "desc": "免费 loop",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费 loop"
+  },
+  {
+    "name": "Cymatics",
+    "cat": "采样",
+    "url": "https://cymatics.fm",
+    "guide": "https://cymatics.fm",
+    "desc": "免费采样包",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费采样包"
+  },
+  {
+    "name": "LANDR Samples",
+    "cat": "采样",
+    "url": "https://samples.landr.com",
+    "guide": "https://samples.landr.com",
+    "desc": "采样",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "采样"
+  },
+  {
+    "name": "BBC Sound Effects",
+    "cat": "音效",
+    "url": "https://sound-effects.bbcrewind.co.uk",
+    "guide": "https://sound-effects.bbcrewind.co.uk",
+    "desc": "BBC 音效",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "BBC 音效"
+  },
+  {
+    "name": "NASA Audio",
+    "cat": "音效",
+    "url": "https://www.nasa.gov/audio-and-ringtones",
+    "guide": "https://www.nasa.gov/audio-and-ringtones",
+    "desc": "NASA 音效",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "NASA 音效"
+  },
+  {
+    "name": "YouTube Thumbnail",
+    "cat": "封面下载",
+    "url": "https://www.youtubethumbnaildownloader.com",
+    "guide": "https://www.youtubethumbnaildownloader.com",
+    "desc": "油管封面",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管封面"
+  },
+  {
+    "name": "Thumbnail Grabber",
+    "cat": "封面下载",
+    "url": "https://www.thumbnailgrabber.com",
+    "guide": "https://www.thumbnailgrabber.com",
+    "desc": "视频封面",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "视频封面"
+  },
+  {
+    "name": "SaveTweetVid",
+    "cat": "推特下载",
+    "url": "https://www.savetweetvid.com",
+    "guide": "https://www.savetweetvid.com",
+    "desc": "推特视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "推特视频"
+  },
+  {
+    "name": "Twitter Mate",
+    "cat": "推特下载",
+    "url": "https://twmate.com",
+    "guide": "https://twmate.com",
+    "desc": "推特视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "推特视频"
+  },
+  {
+    "name": "InstaSave",
+    "cat": "ins下载",
+    "url": "https://instasave.website",
+    "guide": "https://instasave.website",
+    "desc": "ins 下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "ins 下载"
+  },
+  {
+    "name": "StoriesIG",
+    "cat": "ins故事",
+    "url": "https://storiesig.info",
+    "guide": "https://storiesig.info",
+    "desc": "ins 故事",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "ins 故事"
+  },
+  {
+    "name": "StorySaver",
+    "cat": "ins故事",
+    "url": "https://storysaver.net",
+    "guide": "https://storysaver.net",
+    "desc": "ins 故事",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "ins 故事"
+  },
+  {
+    "name": "Douyin Ies",
+    "cat": "抖音解析",
+    "url": "https://www.iesdouyin.com",
+    "guide": "https://www.iesdouyin.com",
+    "desc": "抖音分享页",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "抖音分享页"
+  },
+  {
+    "name": "Kuaishou",
+    "cat": "快手",
+    "url": "https://www.kuaishou.com",
+    "guide": "https://www.kuaishou.com",
+    "desc": "快手原站",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "快手原站"
+  },
+  {
+    "name": "Xiaohongshu Down",
+    "cat": "小红书",
+    "url": "https://www.xiaohongshu.com",
+    "guide": "https://www.xiaohongshu.com",
+    "desc": "小红书",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "小红书"
+  },
+  {
+    "name": "Weibo Video",
+    "cat": "微博视频",
+    "url": "https://weibo.com",
+    "guide": "https://weibo.com",
+    "desc": "微博视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "微博视频"
+  },
+  {
+    "name": "AcFun",
+    "cat": "视频",
+    "url": "https://www.acfun.cn",
+    "guide": "https://www.acfun.cn",
+    "desc": "A站",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "A站"
+  },
+  {
+    "name": "Niconico",
+    "cat": "视频",
+    "url": "https://www.nicovideo.jp",
+    "guide": "https://www.nicovideo.jp",
+    "desc": "N站",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "N站"
+  },
+  {
+    "name": "Bilibili",
+    "cat": "视频",
+    "url": "https://www.bilibili.com",
+    "guide": "https://www.bilibili.com",
+    "desc": "哔哩原站",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "哔哩原站"
+  },
+  {
+    "name": "YouTube",
+    "cat": "视频",
+    "url": "https://www.youtube.com",
+    "guide": "https://www.youtube.com",
+    "desc": "油管原站",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管原站"
+  },
+  {
+    "name": "TikTok",
+    "cat": "短视频",
+    "url": "https://www.tiktok.com",
+    "guide": "https://www.tiktok.com",
+    "desc": "TikTok 原站",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "TikTok 原站"
+  },
+  {
+    "name": "Instagram",
+    "cat": "短视频",
+    "url": "https://www.instagram.com",
+    "guide": "https://www.instagram.com",
+    "desc": "ins 原站",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "ins 原站"
+  },
+  {
+    "name": "Pinterest",
+    "cat": "图片",
+    "url": "https://www.pinterest.com",
+    "guide": "https://www.pinterest.com",
+    "desc": "图片原站",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "图片原站"
+  },
+  {
+    "name": "Imgur",
+    "cat": "图片",
+    "url": "https://imgur.com",
+    "guide": "https://imgur.com",
+    "desc": "图片",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "图片"
+  },
+  {
+    "name": "RedGIFs",
+    "cat": "动图",
+    "url": "https://www.redgifs.com",
+    "guide": "https://www.redgifs.com",
+    "desc": "动图",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动图"
+  },
+  {
+    "name": "Giphy",
+    "cat": "动图",
+    "url": "https://giphy.com",
+    "guide": "https://giphy.com",
+    "desc": "动图下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动图下载"
+  },
+  {
+    "name": "Tenor",
+    "cat": "动图",
+    "url": "https://tenor.com",
+    "guide": "https://tenor.com",
+    "desc": "动图",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动图"
+  },
+  {
+    "name": "Wallpaper Abyss",
+    "cat": "壁纸",
+    "url": "https://wall.alphacoders.com",
+    "guide": "https://wall.alphacoders.com",
+    "desc": "壁纸下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "壁纸下载"
+  },
+  {
+    "name": "Wallhaven",
+    "cat": "壁纸",
+    "url": "https://wallhaven.cc",
+    "guide": "https://wallhaven.cc",
+    "desc": "壁纸",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "壁纸"
+  },
+  {
+    "name": "Unsplash",
+    "cat": "图片",
+    "url": "https://unsplash.com",
+    "guide": "https://unsplash.com",
+    "desc": "免费图片",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费图片"
+  },
+  {
+    "name": "Pexels Images",
+    "cat": "图片",
+    "url": "https://www.pexels.com",
+    "guide": "https://www.pexels.com",
+    "desc": "免费图片",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费图片"
+  },
+  {
+    "name": "Pixabay Images",
+    "cat": "图片",
+    "url": "https://pixabay.com",
+    "guide": "https://pixabay.com",
+    "desc": "免费图片",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费图片"
+  },
+  {
+    "name": "Wikimedia",
+    "cat": "图片",
+    "url": "https://commons.wikimedia.org",
+    "guide": "https://commons.wikimedia.org",
+    "desc": "公有领域图",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "公有领域图"
+  },
+  {
+    "name": "Flickr",
+    "cat": "图片",
+    "url": "https://www.flickr.com",
+    "guide": "https://www.flickr.com",
+    "desc": "图片",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "图片"
+  },
+  {
+    "name": "500px",
+    "cat": "图片",
+    "url": "https://500px.com",
+    "guide": "https://500px.com",
+    "desc": "图片",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "图片"
+  },
+  {
+    "name": "DeviantArt",
+    "cat": "图片",
+    "url": "https://www.deviantart.com",
+    "guide": "https://www.deviantart.com",
+    "desc": "插画",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "插画"
+  },
+  {
+    "name": "ArtStation",
+    "cat": "图片",
+    "url": "https://www.artstation.com",
+    "guide": "https://www.artstation.com",
+    "desc": "原画",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "原画"
+  },
+  {
+    "name": "Behance",
+    "cat": "设计",
+    "url": "https://www.behance.net",
+    "guide": "https://www.behance.net",
+    "desc": "设计作品",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "设计作品"
+  },
+  {
+    "name": "Dribbble",
+    "cat": "设计",
+    "url": "https://dribbble.com",
+    "guide": "https://dribbble.com",
+    "desc": "设计",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "设计"
+  },
+  {
+    "name": "IconScout",
+    "cat": "图标",
+    "url": "https://iconscout.com",
+    "guide": "https://iconscout.com",
+    "desc": "图标下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "图标下载"
+  },
+  {
+    "name": "Flaticon",
+    "cat": "图标",
+    "url": "https://www.flaticon.com",
+    "guide": "https://www.flaticon.com",
+    "desc": "图标",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "图标"
+  },
+  {
+    "name": "Icons8",
+    "cat": "图标",
+    "url": "https://icons8.com",
+    "guide": "https://icons8.com",
+    "desc": "图标插画",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "图标插画"
+  },
+  {
+    "name": "SVG Repo",
+    "cat": "图标",
+    "url": "https://www.svgrepo.com",
+    "guide": "https://www.svgrepo.com",
+    "desc": "SVG",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "SVG"
+  },
+  {
+    "name": "Heroicons",
+    "cat": "图标",
+    "url": "https://heroicons.com",
+    "guide": "https://heroicons.com",
+    "desc": "SVG 图标",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "SVG 图标"
+  },
+  {
+    "name": "Font Awesome",
+    "cat": "图标",
+    "url": "https://fontawesome.com",
+    "guide": "https://fontawesome.com",
+    "desc": "图标字体",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "图标字体"
+  },
+  {
+    "name": "Google Fonts",
+    "cat": "字体",
+    "url": "https://fonts.google.com",
+    "guide": "https://fonts.google.com",
+    "desc": "免费字体",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费字体"
+  },
+  {
+    "name": "Font Squirrel",
+    "cat": "字体",
+    "url": "https://www.fontsquirrel.com",
+    "guide": "https://www.fontsquirrel.com",
+    "desc": "可商用字体",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "可商用字体"
+  },
+  {
+    "name": "DaFont",
+    "cat": "字体",
+    "url": "https://www.dafont.com",
+    "guide": "https://www.dafont.com",
+    "desc": "字体下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字体下载"
+  },
+  {
+    "name": "1001 Fonts",
+    "cat": "字体",
+    "url": "https://www.1001fonts.com",
+    "guide": "https://www.1001fonts.com",
+    "desc": "字体",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字体"
+  },
+  {
+    "name": "Chinese Fonts",
+    "cat": "中文字体",
+    "url": "https://chinese-font.netlify.app",
+    "guide": "https://chinese-font.netlify.app",
+    "desc": "中文免费字体",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "中文免费字体"
+  },
+  {
+    "name": "猫啃网",
+    "cat": "中文字体",
+    "url": "https://www.maoken.com",
+    "guide": "https://www.maoken.com",
+    "desc": "免费商用字体",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费商用字体"
+  },
+  {
+    "name": "字由",
+    "cat": "字体",
+    "url": "https://www.hellofont.cn",
+    "guide": "https://www.hellofont.cn",
+    "desc": "字体",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字体"
+  },
+  {
+    "name": "Freepik",
+    "cat": "设计素材",
+    "url": "https://www.freepik.com",
+    "guide": "https://www.freepik.com",
+    "desc": "矢量图片",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "矢量图片"
+  },
+  {
+    "name": "Vecteezy",
+    "cat": "矢量",
+    "url": "https://www.vecteezy.com",
+    "guide": "https://www.vecteezy.com",
+    "desc": "矢量",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "矢量"
+  },
+  {
+    "name": "CleanPNG",
+    "cat": "透明图",
+    "url": "https://www.cleanpng.com",
+    "guide": "https://www.cleanpng.com",
+    "desc": "透明背景",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "透明背景"
+  },
+  {
+    "name": "PNGWing",
+    "cat": "透明图",
+    "url": "https://www.pngwing.com",
+    "guide": "https://www.pngwing.com",
+    "desc": "透明图",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "透明图"
+  },
+  {
+    "name": "StickPNG",
+    "cat": "透明图",
+    "url": "https://www.stickpng.com",
+    "guide": "https://www.stickpng.com",
+    "desc": "透明图",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "透明图"
+  },
+  {
+    "name": "Remove.bg",
+    "cat": "抠图",
+    "url": "https://www.remove.bg",
+    "guide": "https://www.remove.bg",
+    "desc": "去背景",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "去背景"
+  },
+  {
+    "name": "Photopea",
+    "cat": "在线PS",
+    "url": "https://www.photopea.com",
+    "guide": "https://www.photopea.com",
+    "desc": "在线修图",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "在线修图"
+  },
+  {
+    "name": "ILoveIMG",
+    "cat": "图片工具",
+    "url": "https://www.iloveimg.com",
+    "guide": "https://www.iloveimg.com",
+    "desc": "图片压缩转换",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "图片压缩转换"
+  },
+  {
+    "name": "TinyPNG",
+    "cat": "图片压缩",
+    "url": "https://tinypng.com",
+    "guide": "https://tinypng.com",
+    "desc": "压缩",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "压缩"
+  },
+  {
+    "name": "Squoosh",
+    "cat": "图片压缩",
+    "url": "https://squoosh.app",
+    "guide": "https://squoosh.app",
+    "desc": "压缩",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "压缩"
+  },
+  {
+    "name": "CloudConvert",
+    "cat": "格式转换",
+    "url": "https://cloudconvert.com",
+    "guide": "https://cloudconvert.com",
+    "desc": "万能转换",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "万能转换"
+  },
+  {
+    "name": "Convertio",
+    "cat": "格式转换",
+    "url": "https://convertio.co",
+    "guide": "https://convertio.co",
+    "desc": "格式转换",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "格式转换"
+  },
+  {
+    "name": "Zamzar",
+    "cat": "格式转换",
+    "url": "https://www.zamzar.com",
+    "guide": "https://www.zamzar.com",
+    "desc": "格式转换",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "格式转换"
+  },
+  {
+    "name": "FreeConvert",
+    "cat": "格式转换",
+    "url": "https://www.freeconvert.com",
+    "guide": "https://www.freeconvert.com",
+    "desc": "格式转换",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "格式转换"
+  },
+  {
+    "name": "123APPS",
+    "cat": "在线工具",
+    "url": "https://123apps.com",
+    "guide": "https://123apps.com",
+    "desc": "音视频工具箱",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "音视频工具箱"
+  },
+  {
+    "name": "MP3Cut",
+    "cat": "音频剪切",
+    "url": "https://mp3cut.net",
+    "guide": "https://mp3cut.net",
+    "desc": "音频剪切",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "音频剪切"
+  },
+  {
+    "name": "AudioTrimmer",
+    "cat": "音频剪切",
+    "url": "https://audiotrimmer.com",
+    "guide": "https://audiotrimmer.com",
+    "desc": "音频剪切",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "音频剪切"
+  },
+  {
+    "name": "Clideo",
+    "cat": "在线剪辑",
+    "url": "https://clideo.com",
+    "guide": "https://clideo.com",
+    "desc": "在线视频工具",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "在线视频工具"
+  },
+  {
+    "name": "Kapwing",
+    "cat": "在线剪辑",
+    "url": "https://www.kapwing.com",
+    "guide": "https://www.kapwing.com",
+    "desc": "在线剪辑",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "在线剪辑"
+  },
+  {
+    "name": "Veed",
+    "cat": "在线剪辑",
+    "url": "https://www.veed.io",
+    "guide": "https://www.veed.io",
+    "desc": "字幕剪辑",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字幕剪辑"
+  },
+  {
+    "name": "FlexClip",
+    "cat": "在线剪辑",
+    "url": "https://www.flexclip.com",
+    "guide": "https://www.flexclip.com",
+    "desc": "模板剪辑",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "模板剪辑"
+  },
+  {
+    "name": "Canva Video",
+    "cat": "模板视频",
+    "url": "https://www.canva.com",
+    "guide": "https://www.canva.com",
+    "desc": "模板视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "模板视频"
+  },
+  {
+    "name": "CapCut Web",
+    "cat": "剪辑",
+    "url": "https://www.capcut.com",
+    "guide": "https://www.capcut.com",
+    "desc": "网页剪辑",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "网页剪辑"
+  },
+  {
+    "name": "Shotcut",
+    "cat": "开源剪辑",
+    "url": "https://shotcut.org",
+    "guide": "https://shotcut.org",
+    "desc": "开源剪辑",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源剪辑"
+  },
+  {
+    "name": "OpenShot",
+    "cat": "开源剪辑",
+    "url": "https://www.openshot.org",
+    "guide": "https://www.openshot.org",
+    "desc": "开源剪辑",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源剪辑"
+  },
+  {
+    "name": "Kdenlive",
+    "cat": "开源剪辑",
+    "url": "https://kdenlive.org",
+    "guide": "https://kdenlive.org",
+    "desc": "开源剪辑",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源剪辑"
+  },
+  {
+    "name": "DaVinci Resolve",
+    "cat": "剪辑",
+    "url": "https://www.blackmagicdesign.com/products/davinciresolve",
+    "guide": "https://www.blackmagicdesign.com/products/davinciresolve",
+    "desc": "免费专业剪辑",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费专业剪辑"
+  },
+  {
+    "name": "Blender",
+    "cat": "三维",
+    "url": "https://www.blender.org",
+    "guide": "https://www.blender.org",
+    "desc": "开源三维",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源三维"
+  },
+  {
+    "name": "Audacity",
+    "cat": "音频编辑",
+    "url": "https://www.audacityteam.org",
+    "guide": "https://www.audacityteam.org",
+    "desc": "开源音频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源音频"
+  },
+  {
+    "name": "Ocenaudio",
+    "cat": "音频编辑",
+    "url": "https://www.ocenaudio.com",
+    "guide": "https://www.ocenaudio.com",
+    "desc": "音频编辑",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "音频编辑"
+  },
+  {
+    "name": "LMMS",
+    "cat": "音乐制作",
+    "url": "https://lmms.io",
+    "guide": "https://lmms.io",
+    "desc": "开源宿主",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源宿主"
+  },
+  {
+    "name": "Cakewalk",
+    "cat": "音乐制作",
+    "url": "https://www.bandlab.com/products/cakewalk",
+    "guide": "https://www.bandlab.com/products/cakewalk",
+    "desc": "免费宿主",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费宿主"
+  },
+  {
+    "name": "BandLab",
+    "cat": "在线音乐",
+    "url": "https://www.bandlab.com",
+    "guide": "https://www.bandlab.com",
+    "desc": "在线制作",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "在线制作"
+  },
+  {
+    "name": "Soundtrap",
+    "cat": "在线音乐",
+    "url": "https://www.soundtrap.com",
+    "guide": "https://www.soundtrap.com",
+    "desc": "在线制作",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "在线制作"
+  },
+  {
+    "name": "GarageBand",
+    "cat": "音乐制作",
+    "url": "https://www.apple.com/mac/garageband",
+    "guide": "https://www.apple.com/mac/garageband",
+    "desc": "苹果音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "苹果音乐"
+  },
+  {
+    "name": "Musescore Download",
+    "cat": "乐谱软件",
+    "url": "https://musescore.org",
+    "guide": "https://musescore.org",
+    "desc": "开源打谱",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源打谱"
+  },
+  {
+    "name": "Hydrogen",
+    "cat": "鼓机",
+    "url": "http://hydrogen-music.org",
+    "guide": "http://hydrogen-music.org",
+    "desc": "开源鼓机",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源鼓机"
+  },
+  {
+    "name": "Ardour",
+    "cat": "录音",
+    "url": "https://ardour.org",
+    "guide": "https://ardour.org",
+    "desc": "开源录音",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源录音"
+  },
+  {
+    "name": "Reaper",
+    "cat": "宿主",
+    "url": "https://www.reaper.fm",
+    "guide": "https://www.reaper.fm",
+    "desc": "低价宿主",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "低价宿主"
+  },
+  {
+    "name": "VCV Rack",
+    "cat": "模块合成",
+    "url": "https://vcvrack.com",
+    "guide": "https://vcvrack.com",
+    "desc": "免费合成器",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费合成器"
+  },
+  {
+    "name": "Vital",
+    "cat": "合成器",
+    "url": "https://vital.audio",
+    "guide": "https://vital.audio",
+    "desc": "免费合成器",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费合成器"
+  },
+  {
+    "name": "Surge XT",
+    "cat": "合成器",
+    "url": "https://surge-synthesizer.github.io",
+    "guide": "https://surge-synthesizer.github.io",
+    "desc": "开源合成器",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源合成器"
+  },
+  {
+    "name": "Spitfire LABS",
+    "cat": "免费音源",
+    "url": "https://labs.spitfireaudio.com",
+    "guide": "https://labs.spitfireaudio.com",
+    "desc": "免费音源",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费音源"
+  },
+  {
+    "name": "Pianobook",
+    "cat": "免费音源",
+    "url": "https://www.pianobook.co.uk",
+    "guide": "https://www.pianobook.co.uk",
+    "desc": "免费采样音源",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费采样音源"
+  },
+  {
+    "name": "Versilian",
+    "cat": "免费音源",
+    "url": "https://vis.versilstudios.com",
+    "guide": "https://vis.versilstudios.com",
+    "desc": "免费音源",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费音源"
+  },
+  {
+    "name": "Karoryfer",
+    "cat": "免费音源",
+    "url": "https://karoryfer.com",
+    "guide": "https://karoryfer.com",
+    "desc": "免费音源",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费音源"
+  },
+  {
+    "name": "Plugin Boutique",
+    "cat": "插件",
+    "url": "https://www.pluginboutique.com",
+    "guide": "https://www.pluginboutique.com",
+    "desc": "免费插件区",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费插件区"
+  },
+  {
+    "name": "KVR Audio",
+    "cat": "插件",
+    "url": "https://www.kvraudio.com",
+    "guide": "https://www.kvraudio.com",
+    "desc": "免费插件",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费插件"
+  },
+  {
+    "name": "Bedroom Producers",
+    "cat": "插件",
+    "url": "https://bedroomproducersblog.com",
+    "guide": "https://bedroomproducersblog.com",
+    "desc": "免费插件评测",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费插件评测"
+  },
+  {
+    "name": "Loopcloud",
+    "cat": "采样",
+    "url": "https://www.loopcloud.com",
+    "guide": "https://www.loopcloud.com",
+    "desc": "采样管理",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "采样管理"
+  },
+  {
+    "name": "Splice Free",
+    "cat": "免费采样",
+    "url": "https://splice.com/sounds",
+    "guide": "https://splice.com/sounds",
+    "desc": "免费采样",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费采样"
+  },
+  {
+    "name": "Bandcamp Discover",
+    "cat": "独立音乐",
+    "url": "https://bandcamp.com",
+    "guide": "https://bandcamp.com",
+    "desc": "独立音乐试听",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "独立音乐试听"
+  },
+  {
+    "name": "SoundCloud",
+    "cat": "音乐",
+    "url": "https://soundcloud.com",
+    "guide": "https://soundcloud.com",
+    "desc": "音乐平台",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "音乐平台"
+  },
+  {
+    "name": "Audius",
+    "cat": "音乐",
+    "url": "https://audius.co",
+    "guide": "https://audius.co",
+    "desc": "去中心音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "去中心音乐"
+  },
+  {
+    "name": "Resonate",
+    "cat": "音乐",
+    "url": "https://resonate.is",
+    "guide": "https://resonate.is",
+    "desc": "合作音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "合作音乐"
+  },
+  {
+    "name": "Jamendo Music",
+    "cat": "免费音乐",
+    "url": "https://www.jamendo.com",
+    "guide": "https://www.jamendo.com",
+    "desc": "可下载独立音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "可下载独立音乐"
+  },
+  {
+    "name": "FreePD",
+    "cat": "公版音乐",
+    "url": "https://freepd.com",
+    "guide": "https://freepd.com",
+    "desc": "公有领域配乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "公有领域配乐"
+  },
+  {
+    "name": "Chosic",
+    "cat": "免费音乐",
+    "url": "https://www.chosic.com",
+    "guide": "https://www.chosic.com",
+    "desc": "免费音乐分类",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费音乐分类"
+  },
+  {
+    "name": "YouTube Music",
+    "cat": "音乐",
+    "url": "https://music.youtube.com",
+    "guide": "https://music.youtube.com",
+    "desc": "油管音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管音乐"
+  },
+  {
+    "name": "Spotify",
+    "cat": "音乐",
+    "url": "https://open.spotify.com",
+    "guide": "https://open.spotify.com",
+    "desc": "音乐流媒体",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "音乐流媒体"
+  },
+  {
+    "name": "Apple Music",
+    "cat": "音乐",
+    "url": "https://music.apple.com",
+    "guide": "https://music.apple.com",
+    "desc": "苹果音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "苹果音乐"
+  },
+  {
+    "name": "Deezer",
+    "cat": "音乐",
+    "url": "https://www.deezer.com",
+    "guide": "https://www.deezer.com",
+    "desc": "音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "音乐"
+  },
+  {
+    "name": "Tidal",
+    "cat": "音乐",
+    "url": "https://tidal.com",
+    "guide": "https://tidal.com",
+    "desc": "无损音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "无损音乐"
+  },
+  {
+    "name": "Qobuz",
+    "cat": "音乐",
+    "url": "https://www.qobuz.com",
+    "guide": "https://www.qobuz.com",
+    "desc": "无损音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "无损音乐"
+  },
+  {
+    "name": "NetEase Music",
+    "cat": "网易云",
+    "url": "https://music.163.com",
+    "guide": "https://music.163.com",
+    "desc": "网易云音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "网易云音乐"
+  },
+  {
+    "name": "QQ Music",
+    "cat": "QQ音乐",
+    "url": "https://y.qq.com",
+    "guide": "https://y.qq.com",
+    "desc": "QQ音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "QQ音乐"
+  },
+  {
+    "name": "Kugou",
+    "cat": "酷狗",
+    "url": "https://www.kugou.com",
+    "guide": "https://www.kugou.com",
+    "desc": "酷狗音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "酷狗音乐"
+  },
+  {
+    "name": "Kuwo",
+    "cat": "酷我",
+    "url": "https://www.kuwo.cn",
+    "guide": "https://www.kuwo.cn",
+    "desc": "酷我音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "酷我音乐"
+  },
+  {
+    "name": "Migu",
+    "cat": "咪咕",
+    "url": "https://music.migu.cn",
+    "guide": "https://music.migu.cn",
+    "desc": "咪咕音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "咪咕音乐"
+  },
+  {
+    "name": "5sing",
+    "cat": "原创",
+    "url": "https://5sing.kugou.com",
+    "guide": "https://5sing.kugou.com",
+    "desc": "原创音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "原创音乐"
+  },
+  {
+    "name": "Bilibili Music",
+    "cat": "音乐",
+    "url": "https://music.bilibili.com",
+    "guide": "https://music.bilibili.com",
+    "desc": "哔哩音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "哔哩音乐"
+  },
+  {
+    "name": "Douyin Music",
+    "cat": "抖音音乐",
+    "url": "https://www.douyin.com",
+    "guide": "https://www.douyin.com",
+    "desc": "抖音热歌",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "抖音热歌"
+  },
+  {
+    "name": "CapCut Music",
+    "cat": "剪辑音乐",
+    "url": "https://www.capcut.com",
+    "guide": "https://www.capcut.com",
+    "desc": "剪辑内音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "剪辑内音乐"
+  },
+  {
+    "name": "Epidemic",
+    "cat": "商用音乐",
+    "url": "https://www.epidemicsound.com",
+    "guide": "https://www.epidemicsound.com",
+    "desc": "商用配乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "商用配乐"
+  },
+  {
+    "name": "Artlist Music",
+    "cat": "商用音乐",
+    "url": "https://artlist.io",
+    "guide": "https://artlist.io",
+    "desc": "商用配乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "商用配乐"
+  },
+  {
+    "name": "Musicbed",
+    "cat": "商用音乐",
+    "url": "https://www.musicbed.com",
+    "guide": "https://www.musicbed.com",
+    "desc": "商用配乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "商用配乐"
+  },
+  {
+    "name": "AudioJungle",
+    "cat": "商用音乐",
+    "url": "https://audiojungle.net",
+    "guide": "https://audiojungle.net",
+    "desc": "付费配乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "付费配乐"
+  },
+  {
+    "name": "PremiumBeat",
+    "cat": "商用音乐",
+    "url": "https://www.premiumbeat.com",
+    "guide": "https://www.premiumbeat.com",
+    "desc": "付费配乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "付费配乐"
+  },
+  {
+    "name": "Uppbeat",
+    "cat": "免费商用",
+    "url": "https://uppbeat.io",
+    "guide": "https://uppbeat.io",
+    "desc": "免费商用音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费商用音乐"
+  },
+  {
+    "name": "Silverman Sound",
+    "cat": "免费商用",
+    "url": "https://www.silvermansound.com",
+    "guide": "https://www.silvermansound.com",
+    "desc": "免费商用",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费商用"
+  },
+  {
+    "name": "Scott Buckley",
+    "cat": "免费商用",
+    "url": "https://www.scottbuckley.com.au",
+    "guide": "https://www.scottbuckley.com.au",
+    "desc": "免费商用配乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费商用配乐"
+  },
+  {
+    "name": "Kevin MacLeod",
+    "cat": "免费商用",
+    "url": "https://incompetech.com",
+    "guide": "https://incompetech.com",
+    "desc": "免费商用配乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费商用配乐"
+  },
+  {
+    "name": "Bensound Download",
+    "cat": "免费商用",
+    "url": "https://www.bensound.com",
+    "guide": "https://www.bensound.com",
+    "desc": "免费商用",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费商用"
+  },
+  {
+    "name": "Mixkit Music",
+    "cat": "免费商用",
+    "url": "https://mixkit.co/free-stock-music",
+    "guide": "https://mixkit.co/free-stock-music",
+    "desc": "免费商用音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费商用音乐"
+  },
+  {
+    "name": "Pixabay Music",
+    "cat": "免费商用",
+    "url": "https://pixabay.com/music",
+    "guide": "https://pixabay.com/music",
+    "desc": "免费商用音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费商用音乐"
+  },
+  {
+    "name": "Pexels Music",
+    "cat": "免费素材",
+    "url": "https://www.pexels.com",
+    "guide": "https://www.pexels.com",
+    "desc": "免费视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费视频"
+  },
+  {
+    "name": "Coverr Download",
+    "cat": "免费视频",
+    "url": "https://coverr.co",
+    "guide": "https://coverr.co",
+    "desc": "免费视频下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费视频下载"
+  },
+  {
+    "name": "Videezy",
+    "cat": "免费视频",
+    "url": "https://www.videezy.com",
+    "guide": "https://www.videezy.com",
+    "desc": "免费视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费视频"
+  },
+  {
+    "name": "Life of Vids",
+    "cat": "免费视频",
+    "url": "https://www.lifeofvids.com",
+    "guide": "https://www.lifeofvids.com",
+    "desc": "免费视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费视频"
+  },
+  {
+    "name": "Distill",
+    "cat": "视频素材",
+    "url": "https://wedistill.io",
+    "guide": "https://wedistill.io",
+    "desc": "免费视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费视频"
+  },
+  {
+    "name": "Motion Places",
+    "cat": "视频素材",
+    "url": "https://www.motionplaces.com",
+    "guide": "https://www.motionplaces.com",
+    "desc": "免费视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "免费视频"
+  },
+  {
+    "name": "Rumble",
+    "cat": "视频",
+    "url": "https://rumble.com",
+    "guide": "https://rumble.com",
+    "desc": "视频平台",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "视频平台"
+  },
+  {
+    "name": "Odysee",
+    "cat": "视频",
+    "url": "https://odysee.com",
+    "guide": "https://odysee.com",
+    "desc": "去中心视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "去中心视频"
+  },
+  {
+    "name": "BitChute",
+    "cat": "视频",
+    "url": "https://www.bitchute.com",
+    "guide": "https://www.bitchute.com",
+    "desc": "视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "视频"
+  },
+  {
+    "name": "PeerTube",
+    "cat": "视频",
+    "url": "https://joinpeertube.org",
+    "guide": "https://joinpeertube.org",
+    "desc": "联邦视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "联邦视频"
+  },
+  {
+    "name": "Dailymotion",
+    "cat": "视频",
+    "url": "https://www.dailymotion.com",
+    "guide": "https://www.dailymotion.com",
+    "desc": "视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "视频"
+  },
+  {
+    "name": "Vimeo",
+    "cat": "视频",
+    "url": "https://vimeo.com",
+    "guide": "https://vimeo.com",
+    "desc": "视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "视频"
+  },
+  {
+    "name": "Twitch Clips",
+    "cat": "直播切片",
+    "url": "https://www.twitch.tv",
+    "guide": "https://www.twitch.tv",
+    "desc": "直播切片",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "直播切片"
+  },
+  {
+    "name": "Kick Clips",
+    "cat": "直播",
+    "url": "https://kick.com",
+    "guide": "https://kick.com",
+    "desc": "直播",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "直播"
+  },
+  {
+    "name": "Facebook Watch",
+    "cat": "视频",
+    "url": "https://www.facebook.com/watch",
+    "guide": "https://www.facebook.com/watch",
+    "desc": "脸书视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "脸书视频"
+  },
+  {
+    "name": "IGTV",
+    "cat": "视频",
+    "url": "https://www.instagram.com",
+    "guide": "https://www.instagram.com",
+    "desc": "ins 视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "ins 视频"
+  },
+  {
+    "name": "Xiaohongshu",
+    "cat": "小红书",
+    "url": "https://www.xiaohongshu.com",
+    "guide": "https://www.xiaohongshu.com",
+    "desc": "图文视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "图文视频"
+  },
+  {
+    "name": "Kuaishou",
+    "cat": "快手",
+    "url": "https://www.kuaishou.com",
+    "guide": "https://www.kuaishou.com",
+    "desc": "快手",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "快手"
+  },
+  {
+    "name": "Douyin",
+    "cat": "抖音",
+    "url": "https://www.douyin.com",
+    "guide": "https://www.douyin.com",
+    "desc": "抖音",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "抖音"
+  },
+  {
+    "name": "Weibo",
+    "cat": "微博",
+    "url": "https://weibo.com",
+    "guide": "https://weibo.com",
+    "desc": "微博",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "微博"
+  },
+  {
+    "name": "X Videos",
+    "cat": "推特视频",
+    "url": "https://x.com",
+    "guide": "https://x.com",
+    "desc": "X 视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "X 视频"
+  },
+  {
+    "name": "Telegram",
+    "cat": "文件",
+    "url": "https://telegram.org",
+    "guide": "https://telegram.org",
+    "desc": "文件传输",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件传输"
+  },
+  {
+    "name": "MEGA",
+    "cat": "网盘",
+    "url": "https://mega.nz",
+    "guide": "https://mega.nz",
+    "desc": "大文件网盘",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "大文件网盘"
+  },
+  {
+    "name": "MediaFire",
+    "cat": "网盘",
+    "url": "https://www.mediafire.com",
+    "guide": "https://www.mediafire.com",
+    "desc": "文件分享",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件分享"
+  },
+  {
+    "name": "GoFile",
+    "cat": "网盘",
+    "url": "https://gofile.io",
+    "guide": "https://gofile.io",
+    "desc": "临时网盘",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "临时网盘"
+  },
+  {
+    "name": "Pixeldrain",
+    "cat": "网盘",
+    "url": "https://pixeldrain.com",
+    "guide": "https://pixeldrain.com",
+    "desc": "文件分享",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件分享"
+  },
+  {
+    "name": "Catbox",
+    "cat": "网盘",
+    "url": "https://catbox.moe",
+    "guide": "https://catbox.moe",
+    "desc": "文件分享",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件分享"
+  },
+  {
+    "name": "Litterbox",
+    "cat": "临时文件",
+    "url": "https://litterbox.catbox.moe",
+    "guide": "https://litterbox.catbox.moe",
+    "desc": "临时文件",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "临时文件"
+  },
+  {
+    "name": "Anonfiles",
+    "cat": "网盘",
+    "url": "https://anonfiles.com",
+    "guide": "https://anonfiles.com",
+    "desc": "匿名文件",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "匿名文件"
+  },
+  {
+    "name": "Workupload",
+    "cat": "网盘",
+    "url": "https://workupload.com",
+    "guide": "https://workupload.com",
+    "desc": "文件分享",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件分享"
+  },
+  {
+    "name": "Krakenfiles",
+    "cat": "网盘",
+    "url": "https://krakenfiles.com",
+    "guide": "https://krakenfiles.com",
+    "desc": "文件分享",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件分享"
+  },
+  {
+    "name": "Filecrypt",
+    "cat": "网盘跳转",
+    "url": "https://filecrypt.cc",
+    "guide": "https://filecrypt.cc",
+    "desc": "网盘跳转",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "网盘跳转"
+  },
+  {
+    "name": "Multiup",
+    "cat": "网盘聚合",
+    "url": "https://multiup.io",
+    "guide": "https://multiup.io",
+    "desc": "多网盘",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "多网盘"
+  },
+  {
+    "name": "Mirrored",
+    "cat": "网盘",
+    "url": "https://mirrored.to",
+    "guide": "https://mirrored.to",
+    "desc": "多网盘",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "多网盘"
+  },
+  {
+    "name": "1fichier",
+    "cat": "网盘",
+    "url": "https://1fichier.com",
+    "guide": "https://1fichier.com",
+    "desc": "文件托管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件托管"
+  },
+  {
+    "name": "Rapidgator",
+    "cat": "网盘",
+    "url": "https://rapidgator.net",
+    "guide": "https://rapidgator.net",
+    "desc": "文件托管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件托管"
+  },
+  {
+    "name": "Uploaded",
+    "cat": "网盘",
+    "url": "https://uploaded.net",
+    "guide": "https://uploaded.net",
+    "desc": "文件托管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件托管"
+  },
+  {
+    "name": "Nitroflare",
+    "cat": "网盘",
+    "url": "https://nitroflare.com",
+    "guide": "https://nitroflare.com",
+    "desc": "文件托管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件托管"
+  },
+  {
+    "name": "Katfile",
+    "cat": "网盘",
+    "url": "https://katfile.com",
+    "guide": "https://katfile.com",
+    "desc": "文件托管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件托管"
+  },
+  {
+    "name": "Ddownload",
+    "cat": "网盘",
+    "url": "https://ddownload.com",
+    "guide": "https://ddownload.com",
+    "desc": "文件托管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件托管"
+  },
+  {
+    "name": "Clicknupload",
+    "cat": "网盘",
+    "url": "https://clicknupload.org",
+    "guide": "https://clicknupload.org",
+    "desc": "文件托管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件托管"
+  },
+  {
+    "name": "Userscloud",
+    "cat": "网盘",
+    "url": "https://userscloud.com",
+    "guide": "https://userscloud.com",
+    "desc": "文件托管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件托管"
+  },
+  {
+    "name": "Uptobox",
+    "cat": "网盘",
+    "url": "https://uptobox.com",
+    "guide": "https://uptobox.com",
+    "desc": "文件托管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件托管"
+  },
+  {
+    "name": "1Cloudfile",
+    "cat": "网盘",
+    "url": "https://1cloudfile.com",
+    "guide": "https://1cloudfile.com",
+    "desc": "文件托管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件托管"
+  },
+  {
+    "name": "Fikper",
+    "cat": "网盘",
+    "url": "https://fikper.com",
+    "guide": "https://fikper.com",
+    "desc": "文件托管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件托管"
+  },
+  {
+    "name": "Qiwi",
+    "cat": "网盘",
+    "url": "https://qiwi.gg",
+    "guide": "https://qiwi.gg",
+    "desc": "文件托管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件托管"
+  },
+  {
+    "name": "Gofile Direct",
+    "cat": "直链",
+    "url": "https://gofile.io",
+    "guide": "https://gofile.io",
+    "desc": "直链下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "直链下载"
+  },
+  {
+    "name": "Transfer.sh",
+    "cat": "命令行传文件",
+    "url": "https://transfer.sh",
+    "guide": "https://transfer.sh",
+    "desc": "临时传文件",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "临时传文件"
+  },
+  {
+    "name": "File.io",
+    "cat": "阅后即焚",
+    "url": "https://www.file.io",
+    "guide": "https://www.file.io",
+    "desc": "临时文件",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "临时文件"
+  },
+  {
+    "name": "WeTransfer",
+    "cat": "传文件",
+    "url": "https://wetransfer.com",
+    "guide": "https://wetransfer.com",
+    "desc": "大文件传输",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "大文件传输"
+  },
+  {
+    "name": "Smash",
+    "cat": "传文件",
+    "url": "https://fromsmash.com",
+    "guide": "https://fromsmash.com",
+    "desc": "大文件",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "大文件"
+  },
+  {
+    "name": "Send Anywhere",
+    "cat": "传文件",
+    "url": "https://send-anywhere.com",
+    "guide": "https://send-anywhere.com",
+    "desc": "点对点传文件",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "点对点传文件"
+  },
+  {
+    "name": "Snapdrop",
+    "cat": "局域网传",
+    "url": "https://snapdrop.net",
+    "guide": "https://snapdrop.net",
+    "desc": "同网传文件",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "同网传文件"
+  },
+  {
+    "name": "Localsend",
+    "cat": "局域网传",
+    "url": "https://localsend.org",
+    "guide": "https://localsend.org",
+    "desc": "开源互传",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源互传"
+  },
+  {
+    "name": "Syncthing",
+    "cat": "同步",
+    "url": "https://syncthing.net",
+    "guide": "https://syncthing.net",
+    "desc": "文件夹同步",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "文件夹同步"
+  },
+  {
+    "name": "Resilio",
+    "cat": "同步",
+    "url": "https://www.resilio.com",
+    "guide": "https://www.resilio.com",
+    "desc": "同步",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "同步"
+  },
+  {
+    "name": "Nextcloud",
+    "cat": "私有云",
+    "url": "https://nextcloud.com",
+    "guide": "https://nextcloud.com",
+    "desc": "自建网盘",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自建网盘"
+  },
+  {
+    "name": "ownCloud",
+    "cat": "私有云",
+    "url": "https://owncloud.com",
+    "guide": "https://owncloud.com",
+    "desc": "自建网盘",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自建网盘"
+  },
+  {
+    "name": "Seafile",
+    "cat": "私有云",
+    "url": "https://www.seafile.com",
+    "guide": "https://www.seafile.com",
+    "desc": "自建网盘",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自建网盘"
+  },
+  {
+    "name": "Filebrowser",
+    "cat": "文件管理",
+    "url": "https://filebrowser.org",
+    "guide": "https://filebrowser.org",
+    "desc": "网页文件管理",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "网页文件管理"
+  },
+  {
+    "name": "Alist",
+    "cat": "网盘聚合",
+    "url": "https://alist.nn.ci",
+    "guide": "https://alist.nn.ci",
+    "desc": "多网盘挂载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "多网盘挂载"
+  },
+  {
+    "name": "Cloudreve",
+    "cat": "网盘",
+    "url": "https://cloudreve.org",
+    "guide": "https://cloudreve.org",
+    "desc": "自建网盘",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自建网盘"
+  },
+  {
+    "name": "Kodbox",
+    "cat": "网盘",
+    "url": "https://kodcloud.com",
+    "guide": "https://kodcloud.com",
+    "desc": "可道云",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "可道云"
+  },
+  {
+    "name": "Lantern",
+    "cat": "网盘",
+    "url": "https://github.com/getlantern/lantern",
+    "guide": "https://github.com/getlantern/lantern",
+    "desc": "代理",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "代理"
+  },
+  {
+    "name": "qBittorrent Search",
+    "cat": "磁力插件",
+    "url": "https://github.com/qbittorrent/search-plugins",
+    "guide": "https://github.com/qbittorrent/search-plugins",
+    "desc": "磁力搜索插件",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力搜索插件"
+  },
+  {
+    "name": "Jackett",
+    "cat": "磁力聚合",
+    "url": "https://github.com/Jackett/Jackett",
+    "guide": "https://github.com/Jackett/Jackett",
+    "desc": "索引聚合",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "索引聚合"
+  },
+  {
+    "name": "Prowlarr",
+    "cat": "索引管理",
+    "url": "https://wiki.servarr.com/prowlarr",
+    "guide": "https://wiki.servarr.com/prowlarr",
+    "desc": "索引管理",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "索引管理"
+  },
+  {
+    "name": "Sonarr",
+    "cat": "剧集",
+    "url": "https://sonarr.tv",
+    "guide": "https://sonarr.tv",
+    "desc": "剧集自动下",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "剧集自动下"
+  },
+  {
+    "name": "Radarr",
+    "cat": "电影",
+    "url": "https://radarr.video",
+    "guide": "https://radarr.video",
+    "desc": "电影自动下",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "电影自动下"
+  },
+  {
+    "name": "Lidarr",
+    "cat": "音乐",
+    "url": "https://lidarr.audio",
+    "guide": "https://lidarr.audio",
+    "desc": "音乐自动下",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "音乐自动下"
+  },
+  {
+    "name": "Bazarr",
+    "cat": "字幕",
+    "url": "https://www.bazarr.media",
+    "guide": "https://www.bazarr.media",
+    "desc": "字幕自动下",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字幕自动下"
+  },
+  {
+    "name": "Unpackerr",
+    "cat": "解压",
+    "url": "https://github.com/Unpackerr/unpackerr",
+    "guide": "https://github.com/Unpackerr/unpackerr",
+    "desc": "自动解压",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自动解压"
+  },
+  {
+    "name": "Tautulli",
+    "cat": "媒体统计",
+    "url": "https://tautulli.com",
+    "guide": "https://tautulli.com",
+    "desc": "Plex 统计",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Plex 统计"
+  },
+  {
+    "name": "Overseerr",
+    "cat": "点播",
+    "url": "https://overseerr.dev",
+    "guide": "https://overseerr.dev",
+    "desc": "媒体点播",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "媒体点播"
+  },
+  {
+    "name": "Jellyseerr",
+    "cat": "点播",
+    "url": "https://github.com/Fallenbagel/jellyseerr",
+    "guide": "https://github.com/Fallenbagel/jellyseerr",
+    "desc": "Jellyfin 点播",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Jellyfin 点播"
+  },
+  {
+    "name": "Stremio",
+    "cat": "聚合播放",
+    "url": "https://www.stremio.com",
+    "guide": "https://www.stremio.com",
+    "desc": "插件播放",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "插件播放"
+  },
+  {
+    "name": "Torrentio",
+    "cat": "播放插件",
+    "url": "https://torrentio.strem.fun",
+    "guide": "https://torrentio.strem.fun",
+    "desc": "Stremio 磁力插件",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "Stremio 磁力插件"
+  },
+  {
+    "name": "Webtor",
+    "cat": "在线磁力",
+    "url": "https://webtor.io",
+    "guide": "https://webtor.io",
+    "desc": "在线播放磁力",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "在线播放磁力"
+  },
+  {
+    "name": "Magnet Player",
+    "cat": "在线磁力",
+    "url": "https://magnetplayer.com",
+    "guide": "https://magnetplayer.com",
+    "desc": "磁力在线",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力在线"
+  },
+  {
+    "name": "BTDigg",
+    "cat": "磁力搜索",
+    "url": "https://btdig.com",
+    "guide": "https://btdig.com",
+    "desc": "磁力搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力搜索"
+  },
+  {
+    "name": "LimeTorrents",
+    "cat": "磁力搜索",
+    "url": "https://www.limetorrents.info",
+    "guide": "https://www.limetorrents.info",
+    "desc": "磁力搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力搜索"
+  },
+  {
+    "name": "TorrentGalaxy",
+    "cat": "磁力搜索",
+    "url": "https://torrentgalaxy.to",
+    "guide": "https://torrentgalaxy.to",
+    "desc": "磁力搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力搜索"
+  },
+  {
+    "name": "Knaben",
+    "cat": "磁力搜索",
+    "url": "https://knaben.org",
+    "guide": "https://knaben.org",
+    "desc": "磁力聚合",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力聚合"
+  },
+  {
+    "name": "Solid Torrents",
+    "cat": "磁力搜索",
+    "url": "https://solidtorrents.to",
+    "guide": "https://solidtorrents.to",
+    "desc": "磁力搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力搜索"
+  },
+  {
+    "name": "Bitsearch",
+    "cat": "磁力搜索",
+    "url": "https://bitsearch.to",
+    "guide": "https://bitsearch.to",
+    "desc": "磁力搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力搜索"
+  },
+  {
+    "name": "Torlock",
+    "cat": "磁力搜索",
+    "url": "https://www.torlock.com",
+    "guide": "https://www.torlock.com",
+    "desc": "磁力搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力搜索"
+  },
+  {
+    "name": "YourBittorrent",
+    "cat": "磁力搜索",
+    "url": "https://yourbittorrent.com",
+    "guide": "https://yourbittorrent.com",
+    "desc": "磁力搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力搜索"
+  },
+  {
+    "name": "Zooqle",
+    "cat": "磁力搜索",
+    "url": "https://zooqle.com",
+    "guide": "https://zooqle.com",
+    "desc": "磁力搜索",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力搜索"
+  },
+  {
+    "name": "ItaTorrent",
+    "cat": "意语磁力",
+    "url": "https://itorrent.org",
+    "guide": "https://itorrent.org",
+    "desc": "磁力",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "磁力"
+  },
+  {
+    "name": "SubsPlease RSS",
+    "cat": "动漫订阅",
+    "url": "https://subsplease.org",
+    "guide": "https://subsplease.org",
+    "desc": "动漫 RSS",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫 RSS"
+  },
+  {
+    "name": "Tokyo Insider",
+    "cat": "动漫",
+    "url": "https://www.tokyoinsider.com",
+    "guide": "https://www.tokyoinsider.com",
+    "desc": "动漫下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫下载"
+  },
+  {
+    "name": "AnimeTosho",
+    "cat": "动漫",
+    "url": "https://animetosho.org",
+    "guide": "https://animetosho.org",
+    "desc": "动漫种子",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫种子"
+  },
+  {
+    "name": "Hi10Anime",
+    "cat": "动漫",
+    "url": "https://hi10anime.com",
+    "guide": "https://hi10anime.com",
+    "desc": "动漫",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫"
+  },
+  {
+    "name": "Judas",
+    "cat": "动漫",
+    "url": "https://judas.tv",
+    "guide": "https://judas.tv",
+    "desc": "动漫",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫"
+  },
+  {
+    "name": "EMBER",
+    "cat": "动漫",
+    "url": "https://ember.animebytes.tv",
+    "guide": "https://ember.animebytes.tv",
+    "desc": "动漫",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫"
+  },
+  {
+    "name": "AnimeBytes",
+    "cat": "动漫",
+    "url": "https://animebytes.tv",
+    "guide": "https://animebytes.tv",
+    "desc": "动漫",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫"
+  },
+  {
+    "name": "BakaBT",
+    "cat": "动漫",
+    "url": "https://bakabt.me",
+    "guide": "https://bakabt.me",
+    "desc": "动漫",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫"
+  },
+  {
+    "name": "U2",
+    "cat": "动漫",
+    "url": "https://u2.dmhy.org",
+    "guide": "https://u2.dmhy.org",
+    "desc": "动漫",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫"
+  },
+  {
+    "name": "Mikan",
+    "cat": "动漫",
+    "url": "https://mikanani.me",
+    "guide": "https://mikanani.me",
+    "desc": "蜜柑计划",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "蜜柑计划"
+  },
+  {
+    "name": "DMHY",
+    "cat": "动漫",
+    "url": "https://share.dmhy.org",
+    "guide": "https://share.dmhy.org",
+    "desc": "动漫花园",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫花园"
+  },
+  {
+    "name": "ACGNX",
+    "cat": "动漫",
+    "url": "https://share.acgnx.se",
+    "guide": "https://share.acgnx.se",
+    "desc": "动漫分享",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫分享"
+  },
+  {
+    "name": "KissAnime",
+    "cat": "动漫",
+    "url": "https://kissanime.com.ru",
+    "guide": "https://kissanime.com.ru",
+    "desc": "动漫在线",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫在线"
+  },
+  {
+    "name": "9anime",
+    "cat": "动漫",
+    "url": "https://9animetv.to",
+    "guide": "https://9animetv.to",
+    "desc": "动漫在线",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫在线"
+  },
+  {
+    "name": "Gogoanime",
+    "cat": "动漫",
+    "url": "https://gogoanime.hu",
+    "guide": "https://gogoanime.hu",
+    "desc": "动漫在线",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫在线"
+  },
+  {
+    "name": "AniWatch",
+    "cat": "动漫",
+    "url": "https://aniwatch.to",
+    "guide": "https://aniwatch.to",
+    "desc": "动漫在线",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫在线"
+  },
+  {
+    "name": "Zoro",
+    "cat": "动漫",
+    "url": "https://aniwatch.to",
+    "guide": "https://aniwatch.to",
+    "desc": "动漫在线",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫在线"
+  },
+  {
+    "name": "AllAnime",
+    "cat": "动漫",
+    "url": "https://allanime.to",
+    "guide": "https://allanime.to",
+    "desc": "动漫",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫"
+  },
+  {
+    "name": "AnimePahe",
+    "cat": "动漫",
+    "url": "https://animepahe.ru",
+    "guide": "https://animepahe.ru",
+    "desc": "动漫",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫"
+  },
+  {
+    "name": "AnimeKAI",
+    "cat": "动漫",
+    "url": "https://animekai.to",
+    "guide": "https://animekai.to",
+    "desc": "动漫",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫"
+  },
+  {
+    "name": "HiAnime",
+    "cat": "动漫",
+    "url": "https://hianime.to",
+    "guide": "https://hianime.to",
+    "desc": "动漫",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "动漫"
+  },
+  {
+    "name": "Crunchyroll",
+    "cat": "正版动漫",
+    "url": "https://www.crunchyroll.com",
+    "guide": "https://www.crunchyroll.com",
+    "desc": "正版动漫",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "正版动漫"
+  },
+  {
+    "name": "Netflix",
+    "cat": "正版影视",
+    "url": "https://www.netflix.com",
+    "guide": "https://www.netflix.com",
+    "desc": "正版影视",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "正版影视"
+  },
+  {
+    "name": "Disney Plus",
+    "cat": "正版影视",
+    "url": "https://www.disneyplus.com",
+    "guide": "https://www.disneyplus.com",
+    "desc": "正版影视",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "正版影视"
+  },
+  {
+    "name": "Prime Video",
+    "cat": "正版影视",
+    "url": "https://www.primevideo.com",
+    "guide": "https://www.primevideo.com",
+    "desc": "正版影视",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "正版影视"
+  },
+  {
+    "name": "HBO Max",
+    "cat": "正版影视",
+    "url": "https://www.max.com",
+    "guide": "https://www.max.com",
+    "desc": "正版影视",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "正版影视"
+  },
+  {
+    "name": "Hulu",
+    "cat": "正版影视",
+    "url": "https://www.hulu.com",
+    "guide": "https://www.hulu.com",
+    "desc": "正版影视",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "正版影视"
+  },
+  {
+    "name": "iQIYI",
+    "cat": "爱奇艺",
+    "url": "https://www.iqiyi.com",
+    "guide": "https://www.iqiyi.com",
+    "desc": "正版影视",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "正版影视"
+  },
+  {
+    "name": "Tencent Video",
+    "cat": "腾讯视频",
+    "url": "https://v.qq.com",
+    "guide": "https://v.qq.com",
+    "desc": "正版影视",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "正版影视"
+  },
+  {
+    "name": "Youku",
+    "cat": "优酷",
+    "url": "https://www.youku.com",
+    "guide": "https://www.youku.com",
+    "desc": "正版影视",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "正版影视"
+  },
+  {
+    "name": "Mango TV",
+    "cat": "芒果",
+    "url": "https://www.mgtv.com",
+    "guide": "https://www.mgtv.com",
+    "desc": "正版影视",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "正版影视"
+  },
+  {
+    "name": "Bilibili Cinema",
+    "cat": "哔哩影视",
+    "url": "https://www.bilibili.com/cinema",
+    "guide": "https://www.bilibili.com/cinema",
+    "desc": "影视",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "影视"
+  },
+  {
+    "name": "1905",
+    "cat": "电影",
+    "url": "https://www.1905.com",
+    "guide": "https://www.1905.com",
+    "desc": "电影网",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "电影网"
+  },
+  {
+    "name": "Mtime",
+    "cat": "电影",
+    "url": "https://www.mtime.com",
+    "guide": "https://www.mtime.com",
+    "desc": "时光网",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "时光网"
+  },
+  {
+    "name": "Douban",
+    "cat": "电影",
+    "url": "https://movie.douban.com",
+    "guide": "https://movie.douban.com",
+    "desc": "豆瓣电影",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "豆瓣电影"
+  },
+  {
+    "name": "IMDb",
+    "cat": "电影",
+    "url": "https://www.imdb.com",
+    "guide": "https://www.imdb.com",
+    "desc": "电影资料",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "电影资料"
+  },
+  {
+    "name": "TMDB",
+    "cat": "电影",
+    "url": "https://www.themoviedb.org",
+    "guide": "https://www.themoviedb.org",
+    "desc": "电影资料",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "电影资料"
+  },
+  {
+    "name": "Trakt",
+    "cat": "追剧",
+    "url": "https://trakt.tv",
+    "guide": "https://trakt.tv",
+    "desc": "追剧记录",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "追剧记录"
+  },
+  {
+    "name": "Simkl",
+    "cat": "追剧",
+    "url": "https://simkl.com",
+    "guide": "https://simkl.com",
+    "desc": "追剧",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "追剧"
+  },
+  {
+    "name": "TV Time",
+    "cat": "追剧",
+    "url": "https://www.tvtime.com",
+    "guide": "https://www.tvtime.com",
+    "desc": "追剧",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "追剧"
+  },
+  {
+    "name": "JustWatch",
+    "cat": "哪里能看",
+    "url": "https://www.justwatch.com",
+    "guide": "https://www.justwatch.com",
+    "desc": "正版片源",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "正版片源"
+  },
+  {
+    "name": "Reelgood",
+    "cat": "哪里能看",
+    "url": "https://reelgood.com",
+    "guide": "https://reelgood.com",
+    "desc": "正版片源",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "正版片源"
+  },
+  {
+    "name": "Can I Stream",
+    "cat": "哪里能看",
+    "url": "https://www.canistream.it",
+    "guide": "https://www.canistream.it",
+    "desc": "正版片源",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "正版片源"
+  },
+  {
+    "name": "Subspedia",
+    "cat": "字幕",
+    "url": "https://subspedia.eu",
+    "guide": "https://subspedia.eu",
+    "desc": "字幕",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字幕"
+  },
+  {
+    "name": "Addic7ed",
+    "cat": "字幕",
+    "url": "https://www.addic7ed.com",
+    "guide": "https://www.addic7ed.com",
+    "desc": "美剧字幕",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "美剧字幕"
+  },
+  {
+    "name": "Podnapisi",
+    "cat": "字幕",
+    "url": "https://www.podnapisi.net",
+    "guide": "https://www.podnapisi.net",
+    "desc": "字幕",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字幕"
+  },
+  {
+    "name": "YIFY Subtitles",
+    "cat": "字幕",
+    "url": "https://yifysubtitles.ch",
+    "guide": "https://yifysubtitles.ch",
+    "desc": "字幕",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字幕"
+  },
+  {
+    "name": "OpenSubtitles COM",
+    "cat": "字幕",
+    "url": "https://www.opensubtitles.com",
+    "guide": "https://www.opensubtitles.com",
+    "desc": "字幕",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字幕"
+  },
+  {
+    "name": "Subtitle Cat",
+    "cat": "字幕",
+    "url": "https://subtitlecat.com",
+    "guide": "https://subtitlecat.com",
+    "desc": "字幕翻译",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字幕翻译"
+  },
+  {
+    "name": "Subf2m",
+    "cat": "字幕",
+    "url": "https://subf2m.co",
+    "guide": "https://subf2m.co",
+    "desc": "字幕",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字幕"
+  },
+  {
+    "name": "Chinese Subtitle",
+    "cat": "中文字幕",
+    "url": "https://www.zimuku.org",
+    "guide": "https://www.zimuku.org",
+    "desc": "中文字幕",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "中文字幕"
+  },
+  {
+    "name": "A4k Subtitle",
+    "cat": "中文字幕",
+    "url": "https://www.a4k.net",
+    "guide": "https://www.a4k.net",
+    "desc": "中文字幕",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "中文字幕"
+  },
+  {
+    "name": "SubHD",
+    "cat": "字幕",
+    "url": "https://subhd.tv",
+    "guide": "https://subhd.tv",
+    "desc": "字幕",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字幕"
+  },
+  {
+    "name": "PS字幕",
+    "cat": "字幕",
+    "url": "https://sub.makedie.me",
+    "guide": "https://sub.makedie.me",
+    "desc": "字幕",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "字幕"
+  },
+  {
+    "name": "LRC Get",
+    "cat": "歌词下载",
+    "url": "https://www.megalobiz.com",
+    "guide": "https://www.megalobiz.com",
+    "desc": "歌词下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "歌词下载"
+  },
+  {
+    "name": "Syair",
+    "cat": "歌词",
+    "url": "https://www.syair.info",
+    "guide": "https://www.syair.info",
+    "desc": "歌词",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "歌词"
+  },
+  {
+    "name": "LRC123",
+    "cat": "歌词",
+    "url": "https://www.lrc123.com",
+    "guide": "https://www.lrc123.com",
+    "desc": "歌词",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "歌词"
+  },
+  {
+    "name": "QQ歌词",
+    "cat": "歌词",
+    "url": "https://y.qq.com",
+    "guide": "https://y.qq.com",
+    "desc": "歌词",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "歌词"
+  },
+  {
+    "name": "NetEase Lyrics",
+    "cat": "歌词",
+    "url": "https://music.163.com",
+    "guide": "https://music.163.com",
+    "desc": "歌词",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "歌词"
+  },
+  {
+    "name": "Spotify Lyrics",
+    "cat": "歌词",
+    "url": "https://open.spotify.com",
+    "guide": "https://open.spotify.com",
+    "desc": "歌词",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "歌词"
+  },
+  {
+    "name": "Musixmatch App",
+    "cat": "歌词",
+    "url": "https://www.musixmatch.com",
+    "guide": "https://www.musixmatch.com",
+    "desc": "歌词",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "歌词"
+  },
+  {
+    "name": "Genius Export",
+    "cat": "歌词",
+    "url": "https://genius.com",
+    "guide": "https://genius.com",
+    "desc": "歌词",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "歌词"
+  },
+  {
+    "name": "LRCLIB API",
+    "cat": "歌词",
+    "url": "https://lrclib.net",
+    "guide": "https://lrclib.net",
+    "desc": "开源歌词库",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源歌词库"
+  },
+  {
+    "name": "MusicBrainz",
+    "cat": "音乐资料",
+    "url": "https://musicbrainz.org",
+    "guide": "https://musicbrainz.org",
+    "desc": "音乐元数据",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "音乐元数据"
+  },
+  {
+    "name": "Discogs",
+    "cat": "唱片",
+    "url": "https://www.discogs.com",
+    "guide": "https://www.discogs.com",
+    "desc": "唱片资料",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "唱片资料"
+  },
+  {
+    "name": "RateYourMusic",
+    "cat": "乐评",
+    "url": "https://rateyourmusic.com",
+    "guide": "https://rateyourmusic.com",
+    "desc": "乐评",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "乐评"
+  },
+  {
+    "name": "Last.fm",
+    "cat": "听歌记录",
+    "url": "https://www.last.fm",
+    "guide": "https://www.last.fm",
+    "desc": "听歌",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "听歌"
+  },
+  {
+    "name": "ListenBrainz",
+    "cat": "听歌记录",
+    "url": "https://listenbrainz.org",
+    "guide": "https://listenbrainz.org",
+    "desc": "开源听歌",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源听歌"
+  },
+  {
+    "name": "Libre.fm",
+    "cat": "听歌",
+    "url": "https://libre.fm",
+    "guide": "https://libre.fm",
+    "desc": "开源听歌",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源听歌"
+  },
+  {
+    "name": "Funkwhale",
+    "cat": "自建音乐",
+    "url": "https://funkwhale.audio",
+    "guide": "https://funkwhale.audio",
+    "desc": "自建音乐站",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自建音乐站"
+  },
+  {
+    "name": "Navidrome",
+    "cat": "自建音乐",
+    "url": "https://www.navidrome.org",
+    "guide": "https://www.navidrome.org",
+    "desc": "自建音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自建音乐"
+  },
+  {
+    "name": "Ampache",
+    "cat": "自建音乐",
+    "url": "https://ampache.org",
+    "guide": "https://ampache.org",
+    "desc": "自建音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自建音乐"
+  },
+  {
+    "name": "Koel",
+    "cat": "自建音乐",
+    "url": "https://koel.dev",
+    "guide": "https://koel.dev",
+    "desc": "自建音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自建音乐"
+  },
+  {
+    "name": "Mstream",
+    "cat": "自建音乐",
+    "url": "https://mstream.io",
+    "guide": "https://mstream.io",
+    "desc": "自建音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自建音乐"
+  },
+  {
+    "name": "Beets",
+    "cat": "音乐整理",
+    "url": "https://beets.io",
+    "guide": "https://beets.io",
+    "desc": "音乐库整理",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "音乐库整理"
+  },
+  {
+    "name": "MusicBee",
+    "cat": "音乐播放",
+    "url": "https://www.getmusicbee.com",
+    "guide": "https://www.getmusicbee.com",
+    "desc": "本地音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "本地音乐"
+  },
+  {
+    "name": "Foobar2000",
+    "cat": "音乐播放",
+    "url": "https://www.foobar2000.org",
+    "guide": "https://www.foobar2000.org",
+    "desc": "本地音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "本地音乐"
+  },
+  {
+    "name": "AIMP",
+    "cat": "音乐播放",
+    "url": "https://www.aimp.ru",
+    "guide": "https://www.aimp.ru",
+    "desc": "本地音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "本地音乐"
+  },
+  {
+    "name": "Strawberry",
+    "cat": "音乐播放",
+    "url": "https://www.strawberrymusicplayer.org",
+    "guide": "https://www.strawberrymusicplayer.org",
+    "desc": "开源播放",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源播放"
+  },
+  {
+    "name": "Clementine",
+    "cat": "音乐播放",
+    "url": "https://www.clementine-player.org",
+    "guide": "https://www.clementine-player.org",
+    "desc": "开源播放",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源播放"
+  },
+  {
+    "name": "Rhythmbox",
+    "cat": "音乐播放",
+    "url": "https://wiki.gnome.org/Apps/Rhythmbox",
+    "guide": "https://wiki.gnome.org/Apps/Rhythmbox",
+    "desc": "开源播放",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源播放"
+  },
+  {
+    "name": "VLC Music",
+    "cat": "播放",
+    "url": "https://www.videolan.org",
+    "guide": "https://www.videolan.org",
+    "desc": "也能放音乐",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "也能放音乐"
+  },
+  {
+    "name": "Poweramp",
+    "cat": "安卓音乐",
+    "url": "https://powerampapp.com",
+    "guide": "https://powerampapp.com",
+    "desc": "安卓播放",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "安卓播放"
+  },
+  {
+    "name": "BlackPlayer",
+    "cat": "安卓音乐",
+    "url": "https://blackplayer.net",
+    "guide": "https://blackplayer.net",
+    "desc": "安卓播放",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "安卓播放"
+  },
+  {
+    "name": "RetroMusic",
+    "cat": "安卓音乐",
+    "url": "https://retromusic.app",
+    "guide": "https://retromusic.app",
+    "desc": "开源播放",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源播放"
+  },
+  {
+    "name": "Vinyl Music",
+    "cat": "安卓音乐",
+    "url": "https://github.com/VinylMusicPlayer/VinylMusicPlayer",
+    "guide": "https://github.com/VinylMusicPlayer/VinylMusicPlayer",
+    "desc": "开源播放",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源播放"
+  },
+  {
+    "name": "Seal App",
+    "cat": "安卓下载",
+    "url": "https://github.com/JunkFood02/Seal/releases",
+    "guide": "https://github.com/JunkFood02/Seal/releases",
+    "desc": "安卓下载器",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "安卓下载器"
+  },
+  {
+    "name": "NewPipe Releases",
+    "cat": "安卓",
+    "url": "https://github.com/TeamNewPipe/NewPipe/releases",
+    "guide": "https://github.com/TeamNewPipe/NewPipe/releases",
+    "desc": "安卓油管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "安卓油管"
+  },
+  {
+    "name": "LibreTube Releases",
+    "cat": "安卓",
+    "url": "https://github.com/libre-tube/LibreTube/releases",
+    "guide": "https://github.com/libre-tube/LibreTube/releases",
+    "desc": "安卓油管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "安卓油管"
+  },
+  {
+    "name": "yt-dlp Releases",
+    "cat": "下载器",
+    "url": "https://github.com/yt-dlp/yt-dlp/releases",
+    "guide": "https://github.com/yt-dlp/yt-dlp/releases",
+    "desc": "下载器发布",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "下载器发布"
+  },
+  {
+    "name": "BBDown Releases",
+    "cat": "哔哩",
+    "url": "https://github.com/nilaoda/BBDown/releases",
+    "guide": "https://github.com/nilaoda/BBDown/releases",
+    "desc": "哔哩下载器",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "哔哩下载器"
+  },
+  {
+    "name": "Downkyi Releases",
+    "cat": "哔哩",
+    "url": "https://github.com/leiurayer/downkyi/releases",
+    "guide": "https://github.com/leiurayer/downkyi/releases",
+    "desc": "哔哩客户端",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "哔哩客户端"
+  },
+  {
+    "name": "lux Releases",
+    "cat": "多站",
+    "url": "https://github.com/iawia002/lux/releases",
+    "guide": "https://github.com/iawia002/lux/releases",
+    "desc": "多站下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "多站下载"
+  },
+  {
+    "name": "you-get Releases",
+    "cat": "国内站",
+    "url": "https://github.com/soimort/you-get/releases",
+    "guide": "https://github.com/soimort/you-get/releases",
+    "desc": "国内视频",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "国内视频"
+  },
+  {
+    "name": "Motrix Releases",
+    "cat": "下载器",
+    "url": "https://github.com/agalwood/Motrix/releases",
+    "guide": "https://github.com/agalwood/Motrix/releases",
+    "desc": "开源下载器",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源下载器"
+  },
+  {
+    "name": "AriaNg",
+    "cat": "下载面板",
+    "url": "https://github.com/mayswind/AriaNg",
+    "guide": "https://github.com/mayswind/AriaNg",
+    "desc": "aria2 面板",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "aria2 面板"
+  },
+  {
+    "name": "qBittorrent Enhanced",
+    "cat": "磁力",
+    "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition",
+    "guide": "https://github.com/c0re100/qBittorrent-Enhanced-Edition",
+    "desc": "增强版磁力",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "增强版磁力"
+  },
+  {
+    "name": "Stremio Desktop",
+    "cat": "播放",
+    "url": "https://www.stremio.com/downloads",
+    "guide": "https://www.stremio.com/downloads",
+    "desc": "桌面播放",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "桌面播放"
+  },
+  {
+    "name": "Webtor App",
+    "cat": "在线磁力",
+    "url": "https://webtor.io",
+    "guide": "https://webtor.io",
+    "desc": "网页磁力",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "网页磁力"
+  },
+  {
+    "name": "Cobalt GitHub",
+    "cat": "开源下载",
+    "url": "https://github.com/imputnet/cobalt",
+    "guide": "https://github.com/imputnet/cobalt",
+    "desc": "开源下载站源码",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "开源下载站源码"
+  },
+  {
+    "name": "Metube",
+    "cat": "自建下载",
+    "url": "https://github.com/alexta69/metube",
+    "guide": "https://github.com/alexta69/metube",
+    "desc": "自建 yt-dlp 站",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自建 yt-dlp 站"
+  },
+  {
+    "name": "Alltube",
+    "cat": "自建下载",
+    "url": "https://github.com/Rudloff/alltube",
+    "guide": "https://github.com/Rudloff/alltube",
+    "desc": "自建下载站",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自建下载站"
+  },
+  {
+    "name": "youtube-dl-web",
+    "cat": "自建下载",
+    "url": "https://github.com/dsymbol/youtube-dl-web",
+    "guide": "https://github.com/dsymbol/youtube-dl-web",
+    "desc": "自建下载页",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "自建下载页"
+  },
+  {
+    "name": "Tartube",
+    "cat": "图形下载",
+    "url": "https://github.com/axcore/tartube",
+    "guide": "https://github.com/axcore/tartube",
+    "desc": "yt-dlp 图形界面",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "yt-dlp 图形界面"
+  },
+  {
+    "name": "Open Video Downloader",
+    "cat": "图形下载",
+    "url": "https://github.com/jely2002/youtube-dl-gui",
+    "guide": "https://github.com/jely2002/youtube-dl-gui",
+    "desc": "图形下载器",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "图形下载器"
+  },
+  {
+    "name": "MediaHuman",
+    "cat": "油管下载",
+    "url": "https://www.mediahuman.com/youtube-downloader",
+    "guide": "https://www.mediahuman.com/youtube-downloader",
+    "desc": "油管音乐下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管音乐下载"
+  },
+  {
+    "name": "4K Video Downloader",
+    "cat": "油管下载",
+    "url": "https://www.4kdownload.com",
+    "guide": "https://www.4kdownload.com",
+    "desc": "油管下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管下载"
+  },
+  {
+    "name": "aTube Catcher",
+    "cat": "油管下载",
+    "url": "https://www.atube.me",
+    "guide": "https://www.atube.me",
+    "desc": "油管下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管下载"
+  },
+  {
+    "name": "ByClick",
+    "cat": "油管下载",
+    "url": "https://www.byclickdownloader.com",
+    "guide": "https://www.byclickdownloader.com",
+    "desc": "油管下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "油管下载"
+  },
+  {
+    "name": "Videoder",
+    "cat": "安卓下载",
+    "url": "https://www.videoder.com",
+    "guide": "https://www.videoder.com",
+    "desc": "安卓视频下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "安卓视频下载"
+  },
+  {
+    "name": "SnapTube",
+    "cat": "安卓下载",
+    "url": "https://www.snaptubeapp.com",
+    "guide": "https://www.snaptubeapp.com",
+    "desc": "安卓视频下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "安卓视频下载"
+  },
+  {
+    "name": "VidMate",
+    "cat": "安卓下载",
+    "url": "https://vidmate.bet",
+    "guide": "https://vidmate.bet",
+    "desc": "安卓视频下载",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "安卓视频下载"
+  },
+  {
+    "name": "TubeMate",
+    "cat": "安卓下载",
+    "url": "https://tubemate.net",
+    "guide": "https://tubemate.net",
+    "desc": "安卓油管",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "安卓油管"
+  },
+  {
+    "name": "Documents",
+    "cat": "文件",
+    "url": "https://www.apple.com",
+    "guide": "https://www.apple.com",
+    "desc": "系统文件",
+    "how": "打开页面粘贴链接或按站内说明下载",
+    "free": true,
+    "desc_en": "系统文件"
+  }
+]
