@@ -34,7 +34,7 @@ html[data-theme="dark"] .search.stuck{background:#070910;box-shadow:0 0 0 100vma
 <header class="top" style="position:relative">
   <div><h1 id="brand" data-i18n="brand">全球优选AI导航</h1></div>
   <div class="acts">
-    <a class="chip" href="./usdt-earn.html">拿分成</a>
+    <a class="chip" href="#" id="earnChip">拿分成</a>
     <a class="chip" href="./face-translate.html" data-i18n="translate">翻译</a>
     <a class="chip" href="./fraud.html" data-i18n="fraud">防骗</a>
     <button id="lang" type="button">Lang</button>
@@ -58,5 +58,15 @@ html[data-theme="dark"] .search.stuck{background:#070910;box-shadow:0 0 0 100vma
 <script>(function(){var sc=document.getElementById("scroll"),f=document.getElementById("sf");if(!sc||!f)return;function u(){var st=sc.scrollTop>0&&f.getBoundingClientRect().top-sc.getBoundingClientRect().top<=parseFloat(getComputedStyle(sc).paddingTop)+1;f.classList.toggle("stuck",st);}sc.addEventListener("scroll",u,{passive:true});window.addEventListener("resize",u);u();})();</script>
 <script src="tabbar.js?v=285"></script>
 <script src="navapply.js?v=5"></script>
+
+<script>
+document.getElementById('earnChip')&&document.getElementById('earnChip').addEventListener('click',function(e){
+  e.preventDefault();
+  var q=document.getElementById('q');
+  if(q){q.value='分成';q.focus();}
+  var f=document.getElementById('sf');
+  if(f)f.dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}));
+});
+</script>
 </body>
 </html>
