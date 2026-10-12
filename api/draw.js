@@ -20,8 +20,8 @@ module.exports = async function handler(req, res) {
     method: "POST", headers,
     body: JSON.stringify({
       prompt: prompt,
-      params: { width: w, height: h, steps: 20, n: 1, sampler_name: "k_euler" },
-      models: ["AlbedoBase XL (SDXL)"],
+      params: { width: w, height: h, steps: 8, n: 1, sampler_name: "k_euler", cfg_scale: 1 },
+      models: ["Krea2-Turbo_fp8"],
       nsfw: false,
       censor_nsfw: true,
       r2: true
