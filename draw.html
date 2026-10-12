@@ -86,7 +86,7 @@ document.getElementById("go").onclick=async function(){
   var shape=SHAPES[st.shape], style=STYLES[st.style][1], n=COUNTS[st.count];
   for(var i=0;i<n;i++){
     var tile=document.createElement("div"); tile.className="shot"; tile.innerHTML='<div class="st">生成中</div>'; box.appendChild(tile);
-    var url="/api/draw?p="+encodeURIComponent(style+", "+text)+"&w="+shape[1]+"&h="+shape[2]+"&seed="+(Date.now()+i);
+    var url="https://image.pollinations.ai/prompt/"+encodeURIComponent(style+", "+text)+"?width="+shape[1]+"&height="+shape[2]+"&nologo=true&model=flux&seed="+(Date.now()+i);
     await new Promise(function(res){
       var img=new Image();
       img.onload=function(){tile.innerHTML="";tile.appendChild(img);var m=document.createElement("div");m.className="meta";m.innerHTML="<b></b><button type='button'>复制</button>";m.querySelector("b").textContent=text.slice(0,12);m.querySelector("button").onclick=function(){navigator.clipboard.writeText(text);this.textContent="已复制";};tile.appendChild(m);res();};
