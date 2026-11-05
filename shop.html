@@ -6,102 +6,108 @@
 <title>AI资源商店</title>
 <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <style>
-html,body{margin:0;background:#f3f0ea;color:#111;font-family:-apple-system,"PingFang SC",sans-serif}
-.w{padding:12px 12px 88px;max-width:560px;margin:0 auto}
-h1{margin:6px 0 4px;font-size:18px}
-.tip{color:#6b7280;font-size:13px;margin:0 0 12px}
-.list{display:flex;flex-direction:column;gap:10px}
-.card{background:#fff;border-radius:12px;padding:12px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
-.card b{display:block;font-size:15px}
-.card em{display:block;margin:4px 0 8px;font-style:normal;color:#6b7280;font-size:12px}
-.price{font-weight:700}
-.btn{display:inline-block;margin-top:8px;padding:8px 14px;background:#111;color:#fff;border-radius:8px;text-decoration:none;font-size:13px;font-weight:700;border:0;cursor:pointer}
-.pay{margin-top:16px;background:#fff;border-radius:12px;padding:14px;font-size:13px}
-.addr{word-break:break-all;background:#f3f4f6;padding:8px;border-radius:8px;font-family:monospace;margin:8px 0}
-.copy,.submit{padding:6px 12px;background:#2563eb;color:#fff;border:0;border-radius:6px;font-size:12px;margin-top:6px}
-input{width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;margin:6px 0;box-sizing:border-box}
-.result{margin-top:10px;padding:10px;background:#f0fdf4;border-radius:8px;display:none}
-html[data-theme=dark],html[data-theme=dark] body{background:#05060a;color:#e6edf3}
-html[data-theme=dark] .card,html[data-theme=dark] .pay{background:#161b22}
-html[data-theme=dark] .addr{background:#21262d}
+*{box-sizing:border-box}
+html,body{margin:0;background:#f7f6f3;color:#111;font-family:-apple-system,"PingFang SC",sans-serif}
+.w{padding:16px 16px 90px;max-width:480px;margin:0 auto}
+h1{margin:0 0 4px;font-size:20px;font-weight:700}
+.sub{color:#6b7280;font-size:13px;margin:0 0 16px}
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.card h3{margin:0 0 4px;font-size:16px}
+.card p{margin:0 0 10px;color:#6b7280;font-size:13px;line-height:1.4}
+.price{font-size:20px;font-weight:700;color:#111}
+.btn{display:block;width:100%;height:44px;border:0;border-radius:12px;background:#111;color:#fff;font-size:15px;font-weight:600;margin-top:10px;cursor:pointer}
+.paybox{background:#fff;border-radius:16px;padding:16px;margin-top:8px}
+.addr-wrap{background:#f3f4f6;border-radius:12px;padding:12px;margin:10px 0;position:relative}
+.addr{font-family:ui-monospace,monospace;font-size:13px;word-break:break-all;line-height:1.4}
+.copy{position:absolute;right:8px;top:8px;padding:4px 10px;background:#2563eb;color:#fff;border:0;border-radius:6px;font-size:12px}
+.form{margin-top:14px;display:none}
+input{width:100%;height:44px;border:1px solid #e5e7eb;border-radius:10px;padding:0 12px;font-size:15px;margin:8px 0}
+.submit{background:#2563eb}
+.result{margin-top:12px;padding:12px;background:#f0fdf4;border-radius:10px;font-size:14px;display:none}
+.trust{display:flex;gap:12px;margin-top:14px;font-size:12px;color:#6b7280}
+.trust span{display:flex;align-items:center;gap:4px}
+html[data-theme=dark],html[data-theme=dark] body{background:#0d1117;color:#e6edf3}
+html[data-theme=dark] .card,html[data-theme=dark] .paybox{background:#161b22}
+html[data-theme=dark] .addr-wrap{background:#21262d}
 </style>
 </head>
 <body>
 <div class="w">
 <h1>AI资源商店</h1>
-<p class="tip">USDT-TRC20 付款 · 填TXID自动发货</p>
-<div class="list">
-  <div class="card">
-    <b>免费API合集使用手册</b>
-    <em>52分类 · 2000+接口 · 含调用示例</em>
-    <div class="price">9.9 USDT</div>
-    <button class="btn" onclick="buy('manual',9.9)">购买</button>
-  </div>
-  <div class="card">
-    <b>短视频口播模板包</b>
-    <em>15s AI工具教程口播 + 分镜（20套）</em>
-    <div class="price">19.9 USDT</div>
-    <button class="btn" onclick="buy('templates',19.9)">购买</button>
-  </div>
-  <div class="card">
-    <b>AI提示词合集</b>
-    <em>绘画 / 视频 / 办公高转化提示词</em>
-    <div class="price">29.9 USDT</div>
-    <button class="btn" onclick="buy('prompts',29.9)">购买</button>
-  </div>
-  <div class="card">
-    <b>三件套打包</b>
-    <em>手册 + 模板包 + 提示词合集</em>
-    <div class="price">49 USDT</div>
-    <button class="btn" onclick="buy('bundle',49)">购买</button>
-  </div>
+<p class="sub">USDT-TRC20 即时到账 · 填TXID自动发货</p>
+
+<div class="card">
+  <h3>免费API合集使用手册</h3>
+  <p>52分类 · 2000+接口 · 含调用示例与筛选技巧</p>
+  <div class="price">9.9 USDT</div>
+  <button class="btn" onclick="buy('manual',9.9,'API手册')">立即购买</button>
 </div>
-<div class="pay">
-  <b>USDT-TRC20 收款地址</b>
-  <div class="addr" id="addr">TG9nQjKuGgKkcnnwQ73HGZxqWd1tS64F2c</div>
-  <button class="copy" onclick="navigator.clipboard.writeText(document.getElementById('addr').innerText);this.innerText='已复制'">复制地址</button>
-  <div id="form" style="display:none;margin-top:12px">
-    <div>产品：<b id="prodName"></b> · <b id="prodPrice"></b> USDT</div>
-    <input id="txid" placeholder="粘贴TXID（64位）" maxlength="64"/>
-    <button class="submit" onclick="verify()">验证并领取</button>
+<div class="card">
+  <h3>短视频口播模板包</h3>
+  <p>15s AI工具教程口播文案 + 分镜提示词（20套）</p>
+  <div class="price">19.9 USDT</div>
+  <button class="btn" onclick="buy('templates',19.9,'口播模板')">立即购买</button>
+</div>
+<div class="card">
+  <h3>AI提示词合集</h3>
+  <p>绘画 / 视频 / 办公高转化提示词包</p>
+  <div class="price">29.9 USDT</div>
+  <button class="btn" onclick="buy('prompts',29.9,'提示词合集')">立即购买</button>
+</div>
+<div class="card">
+  <h3>三件套打包</h3>
+  <p>手册 + 模板包 + 提示词合集</p>
+  <div class="price">49 USDT</div>
+  <button class="btn" onclick="buy('bundle',49,'三件套')">立即购买</button>
+</div>
+
+<div class="paybox" id="paybox">
+  <b>USDT-TRC20 收款</b>
+  <div class="addr-wrap">
+    <div class="addr" id="addr">TG9nQjKuGgKkcnnwQ73HGZxqWd1tS64F2c</div>
+    <button class="copy" onclick="copy()">复制</button>
+  </div>
+  <div class="form" id="form">
+    <div style="font-size:14px">购买：<b id="pname"></b> · <b id="pprice"></b> USDT</div>
+    <input id="txid" placeholder="粘贴转账TXID（64位）" maxlength="64"/>
+    <button class="btn submit" onclick="verify()">验证并领取</button>
     <div class="result" id="result"></div>
   </div>
+  <div class="trust">
+    <span>✓ 链上核验</span>
+    <span>✓ 自动发货</span>
+    <span>✓ Telegram通知</span>
+  </div>
 </div>
-<p style="margin-top:20px"><a href="tools.html">← 返回导航</a></p>
 </div>
 <script>
-let current = null;
-function buy(key, price) {
-  current = { key, price };
-  document.getElementById('prodName').innerText = {manual:'API手册',templates:'口播模板',prompts:'提示词合集',bundle:'三件套'}[key];
-  document.getElementById('prodPrice').innerText = price;
-  document.getElementById('form').style.display = 'block';
+let cur=null;
+function buy(key,price,name){
+  cur={key,price,name};
+  document.getElementById('pname').innerText=name;
+  document.getElementById('pprice').innerText=price;
+  document.getElementById('form').style.display='block';
   document.getElementById('txid').focus();
-  document.getElementById('result').style.display = 'none';
+  document.getElementById('result').style.display='none';
+  document.getElementById('paybox').scrollIntoView({behavior:'smooth'});
 }
-async function verify() {
-  const txid = document.getElementById('txid').value.trim();
-  if (!txid || txid.length !== 64) return alert('请输入正确的64位TXID');
-  const btn = event.target;
-  btn.disabled = true; btn.innerText = '验证中...';
-  try {
-    const r = await fetch('/api/shop', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ txid, product: current.key })
-    });
-    const j = await r.json();
-    const box = document.getElementById('result');
-    box.style.display = 'block';
-    if (j.ok) {
-      box.innerHTML = '支付成功！<br><a href="'+j.download+'" target="_blank" style="color:#2563eb">点击下载</a>';
-    } else {
-      box.innerHTML = '未找到匹配付款，请确认金额和地址后重试。';
-    }
-  } catch(e) {
-    alert('验证失败，请稍后重试');
-  }
-  btn.disabled = false; btn.innerText = '验证并领取';
+function copy(){
+  navigator.clipboard.writeText(document.getElementById('addr').innerText);
+  event.target.innerText='已复制';
+  setTimeout(()=>event.target.innerText='复制',1500);
+}
+async function verify(){
+  const txid=document.getElementById('txid').value.trim();
+  if(!/^[0-9a-fA-F]{64}$/.test(txid))return alert('请输入正确的64位TXID');
+  const btn=event.target;btn.disabled=true;btn.innerText='验证中...';
+  try{
+    const r=await fetch('/api/shop',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({txid,product:cur.key})});
+    const j=await r.json();
+    const box=document.getElementById('result');
+    box.style.display='block';
+    box.innerHTML=j.ok?`支付成功<br><a href="${j.download}" target="_blank" style="color:#2563eb;font-weight:600">点击下载</a>`:'未找到匹配付款，请确认金额与地址后重试';
+  }catch(e){alert('验证失败')}
+  btn.disabled=false;btn.innerText='验证并领取';
 }
 </script>
 <script src="tabbar.js?v=285"></script>
