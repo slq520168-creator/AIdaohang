@@ -32,7 +32,7 @@
     {id:'movie',href:'./movie.html?v=319',img:'./img/tab-movie.jpg?v=292',p:'M4 7h16v10H4zM8 7l-3-3M16 7l3-3M10 12h4'},
     {id:'home',href:'./tools.html?home=1',img:'./img/tab-home.jpg?v=292',p:'M4 11l8-7 8 7v9H4z'},
     {id:'xiaonuan',href:XN,img:'./img/xiaonuan-tab.jpg?v=292',p:'M5 9h11v5a5 5 0 01-5 5h-1a5 5 0 01-5-5zM16 10h2a2 2 0 010 4h-2M8 3v3M12 3v3'},
-    {id:'order',href:'./order.html?v=319',img:'./img/tab-order.jpg?v=292',p:'M7 7h10v12H7zM9 11h6M9 15h4'},
+    {id:'order',href:'./shop.html',img:'./img/tab-order.jpg?v=292',p:'M7 7h10v12H7zM9 11h6M9 15h4'},
     {id:'near',href:'./near.html',img:'./img/tab-near.jpg?v=292',p:'M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11zM12 11a1.5 1.5 0 110-3 1.5 1.5 0 010 3z'}
   ];
   var file=(location.pathname.split('/').pop()||'').replace(/\.html$/,'');
